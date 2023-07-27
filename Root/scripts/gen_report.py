@@ -16,14 +16,17 @@ import re
 
 PATH_TO_METRICS_DATA = "_data"
 PATH_TO_METADATA = "_metadata"
+PATH_TO_MOCK_DATA = "_mockData"
 # PATH_TO_METRICS_POSTS = "_posts"
 WEEKLY_MIN_DIFFERENCE = 6 # In Days
 MONTHLY_MIN_DIFFERENCE = 27 # In Days
 
-
-
-# TODO  Finish getting the 2 most recent  files from a given repo in a given org. 
-def get_metrics_files(project, MIN_DIFFERENCE):
+"""
+    Input: project: repo directory 
+           Weeks refers to the number of files we want.  weeks we wa
+    Returns a list of file names listed from most recent to least recent.
+"""
+def get_metrics_files(project, weeks):
     # Get the latest two metrics for this project which are MIN_DIFFERENCE days apart
     re_metrics = re.compile(r"METRICS-\d{4}-\d{2}-\d{2}.json")
     all_metrics = []
@@ -33,10 +36,15 @@ def get_metrics_files(project, MIN_DIFFERENCE):
             all_metrics.append(filename)
     heapq.heapify(all_metrics)
     metric_files = len(all_metrics)
-    if metric_files < 2:
+    if metric_files < 2 or metric_files < weeks:
         return False, {}, {}
-    latest_metrics = heapq.heappop(all_metrics)
-    previous_metrics = heapq.heappop(all_metrics)
+    files_data = []
+    for _ in range(weeks):
+        week = heapq.heappop(all_metrics)
+        with open(PATH_TO_MOCK_DATA + "/" + week, "r") as file:
+            week_data = file.read()
+        files_data.append(week_data)
+    return files_data
 
 
 """
@@ -47,7 +55,7 @@ def get_metrics_files(project, MIN_DIFFERENCE):
 """
 def get_highlight_score(latest, previous):
     modulo_flag = False
-    modulo_number = 0 # The highlight number crossed by the metric
+    modulo_number = 0 
     #  check if we passed the threshold
     if latest // 100 != previous // 100:
         modulo_flag = True
@@ -58,6 +66,16 @@ def get_highlight_score(latest, previous):
     if latest // 10000 != previous  // 10000:
         modulo_flag = True
         modulo_number = max(latest, previous) - max(latest, previous) % 10000
-
     return modulo_flag, modulo_number
 
+
+# calculates the difference between this week/monthly versus last  week/monthly per metric
+def calculate_weekly_diff(files):
+    pass
+
+def calculate_we_sum(files):
+    pass
+        
+weekly_files = get_metrics_files(PATH_TO_MOCK_DATA, 2)
+latest, previous = weekly_files
+print(latest, previous)
