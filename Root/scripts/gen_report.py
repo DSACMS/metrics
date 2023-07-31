@@ -1,11 +1,5 @@
 from glob import glob
 from datetime import datetime
-"""
-Create WEEKLY-REPORT-<DATE>.json for all the orgs and projects,
-and save then inside _data directory.
-Similarly for MONTHLY report as well.
-Also call report_posts.py module to create _posts reflecting the reports.
-"""
 
 from glob import glob
 import heapq
@@ -17,14 +11,19 @@ import re
 PATH_TO_METRICS_DATA = "_data"
 PATH_TO_METADATA = "_metadata"
 PATH_TO_MOCK_DATA = "_mockData"
-# PATH_TO_METRICS_POSTS = "_posts"
-WEEKLY_MIN_DIFFERENCE = 6 # In Days
-MONTHLY_MIN_DIFFERENCE = 27 # In Days
+PATH_TO_METRICS_POSTS = "_posts"
+DATESTAMP = datetime.now().date().isoformat()
+
 github_metrics = ['commits_count', 'issues_count', 'open_issues_count', 
                   'closed_issues_count', 'pull_requests_count', 'open_pull_requests_count',
                     'merged_pull_requests_count', 'closed_pull_requests_count', 'forks_count', 
                     'stargazers_count', 'watchers_count']
 
+with open("_metadata/projects_tracked.json", "r") as file:
+            projects = file.read()
+            PROJECTS_TRACKED = json.loads(projects)
+print("PROJECTS_TRACKED", PROJECTS_TRACKED)
+        
 """
     Input: project: repo directory 
            Weeks refers to the number of files we want.  weeks we wa
@@ -36,10 +35,8 @@ def get_metrics_files(project, weeks):
     all_metrics = []
 
     for filename in os.listdir(project):
-        # print(filename)
         if re_metrics.match(filename):
             datestamp = datetime.strptime(filename,"METRICS-%Y-%m-%d.json")
-            # print(file_date)
             timestamp_float = datestamp.timestamp()
             timestamp_int = int(timestamp_float) * -1 
             all_metrics.append((timestamp_int, filename))
@@ -58,7 +55,11 @@ def get_metrics_files(project, weeks):
     return files_data
 
 
-# calculates the difference between this week/monthly versus last week/monthly per metric
+"""
+    Calculates the difference between this week/monthly versus last week/monthly per metric
+    Input: file  type: list of two dictionaries, representing the two most recent weekly data
+    Return: {},  dictionary containing the Github metrics weekly difference
+"""
 def calculate_weekly_diff(files):
     if len(files) > 2:
         return False, {}
@@ -73,9 +74,10 @@ def calculate_weekly_diff(files):
     return weekly_difference
 
 """
+    Gives the highlests for a given week or month.
     Input:
-      latest type: [int] a specific  metric count from this week 
-      previous: [int] a specific metric count from last week
+      latest type: [int] a specific  metric count from this week/month
+      previous: [int] a specific metric count from last week/month 
     Output: Returns a boolean and modulo number that represents the highest multiple we passed
 """
 def get_highlight_score(metric, latest_file, previous_file):
@@ -98,10 +100,8 @@ def get_highlight_score(metric, latest_file, previous_file):
         modulo_number = max(latest, previous) - max(latest, previous) % 10000
     return modulo_flag, modulo_number
 
-
 """
-Given two files of type dict, it will calculate the difference 
-between latest and previous per each metric
+Given two files of type dict, it will calculate the higlights 
  Input: latest_file: dict {}
         previous_file: dict {}
  Return: highlights: dict {} representing all the highlights per 
@@ -110,7 +110,7 @@ between latest and previous per each metric
 def get_repo_highlights(latest_file, previous_file):
     highlights = {}
     for metric in github_metrics:
-        highlights[metric] = get_highlight_score(metric, latest, previous)
+        highlights[metric] = get_highlight_score(metric, latest_file, previous_file)
     return highlights
 
 """
@@ -131,12 +131,40 @@ def calculate_monthly_sum(files):
                     monthly_report[metric] += file[metric]
     return monthly_report
 
-weekly_files = get_metrics_files(PATH_TO_MOCK_DATA, 2)
-monthly_files = get_metrics_files(PATH_TO_MOCK_DATA, 4)
-latest, previous = weekly_files
-WEEKLY_DIFFERENCE = calculate_weekly_diff(weekly_files)
-WEEKLY_HIGHLIGHTS = get_repo_highlights(latest, previous)
+"""
+Given a organization, returns the weekly differences and weekly highlights per project
+ Input: org: str
+ Return: weekly_data: {Project: {weekly_difference: {}, weekly_highlights: {}}, ..Project...}
+"""
+def genWeeklyDataJson(org):
+    list_of_org_projects = PROJECTS_TRACKED['Open Source Projects'][org]
+    weekly_data = {}
+    for repo in list_of_org_projects:
+        #TODO Change PATH_TO_MOCK_DATA to the path of the repo _data/<org>/repo
+        weekly_files = get_metrics_files(PATH_TO_MOCK_DATA, 2)
+        latest, previous = weekly_files
+        weekly_difference = calculate_weekly_diff(weekly_files)
+        weekly_highlights = get_repo_highlights(latest, previous)
+        weekly_data[repo] = {"WEEKLY_DIFFERENCE": weekly_difference, "WEEKLY_HIGHLIGHTS": weekly_highlights}
+    return weekly_data
 
-WEEKLY_DATA_JSON = {"WEEKLY_DIFFERENCE": WEEKLY_DIFFERENCE, "WEEKLY_HIGHLIGHTS": WEEKLY_HIGHLIGHTS}
+"""
+dumpProjectsByORG will upload a weekly projects report folder in _Post for a specified organization,
+if a weekly folder for the specified organization doesn't exist in _Post, it will create a new folder.
+Input: org type: string 
+Return: None
+"""
+def dumpProjectsByORG(org):
+        weekly_json  = genWeeklyDataJson(org)
+        # Creates directory if it doesn't exist for a given repo
+        owner_dir_path = "{}/{}".format(PATH_TO_METRICS_POSTS, org)
+        weekly_dir_path = "{}/{}".format(owner_dir_path, "WEEKLY-REPORT")
+        os.makedirs(weekly_dir_path, exist_ok=True)
 
+        # Save the json file with a timestamp
+        file_name = "WEEKLY-" + DATESTAMP + ".json"
+        with open(weekly_dir_path + "/" + file_name, "w+") as f:
+            json.dump(weekly_json, f)
+        print("LOG: Saving", file_name, "for", org)
 
+dumpProjectsByORG("DSACMS")
