@@ -1,7 +1,4 @@
 from glob import glob
-from datetime import datetime
-
-from glob import glob
 import heapq
 from datetime import datetime
 import json
@@ -149,12 +146,12 @@ def genWeeklyDataJson(org):
     return weekly_data
 
 """
-dumpProjectsByORG will upload a weekly projects report folder in _Post for a specified organization,
+dumpWeeklyProjectsByORG will upload a weekly projects report folder in _Post for a specified organization,
 if a weekly folder for the specified organization doesn't exist in _Post, it will create a new folder.
 Input: org type: string 
 Return: None
 """
-def dumpProjectsByORG(org):
+def dumpWeeklyProjectsByORG(org):
         weekly_json  = genWeeklyDataJson(org)
         # Creates directory if it doesn't exist for a given repo
         owner_dir_path = "{}/{}".format(PATH_TO_METRICS_POSTS, org)
@@ -167,4 +164,4 @@ def dumpProjectsByORG(org):
             json.dump(weekly_json, f)
         print("LOG: Saving", file_name, "for", org)
 
-dumpProjectsByORG("DSACMS")
+dumpWeeklyProjectsByORG("DSACMS")
