@@ -7,7 +7,8 @@ import requests
 #  Constructs our POST Request
 token = os.getenv("GITHUB_TOKEN")
 headers = {"Authorization": f"bearer {token}"}
-with open("graphql_queries.graphql", "r") as file:
+BASE_PATH = os.path.dirname(os.path.abspath(__file__))
+with open(os.path.join(BASE_PATH, "graphql_queries.graphql"), "r") as file:
     query = file.read()
 url = "https://api.github.com/graphql"
 response = requests.post(url, headers=headers, json={"query": query})
@@ -108,12 +109,8 @@ DATA_JSON["DSACMS"] = all_repo_metrics_info
 PROJECTS_TRACKED['orgs'] = ["DSACMS"]
 PROJECTS_TRACKED['Open Source Projects'] = {"DSACMS": list(repos_tracked)}
 
-#TODO Fix the bug thats preventing one from adding folders outsides of scripts
-# print(os.listdir())
-# https://www.reddit.com/r/learnprogramming/comments/sitnof/python_filenotfounderror_errno_2_no_such_file_or/
-with open(os.path.join(PATH_TO_METADATA, "projects_tracked.json"), "w+") as f:
+with open(os.path.join(BASE_PATH, PATH_TO_METADATA + "/" + "projects_tracked.json"), "w+") as f:
     json.dump(PROJECTS_TRACKED, f)
-
 
 """
   Create a new json file Labeled METRICS-DATESTAMP.json
