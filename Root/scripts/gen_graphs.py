@@ -1,36 +1,59 @@
 from glob import glob
-import heapq
-from datetime import datetime
 import json
 import os
 import re
-from pathlib import Path
 import pygal
 
 PATH = "_dataVis"
 os.chdir(PATH)
         
-"""
-    Input: project: repo directory 
-           Weeks refers to the number of files we want.  weeks we wa
-    Returns a list of file names listed from most recent to least recent.
-"""
-def main():
-    # Get the latest two metrics for this project which are MIN_DIFFERENCE days apart
+def genOverview():
     treemap = pygal.Treemap()
-    treemap.title = 'Binary TreeMap'
+    treemap.title = 'DSACMS Project Overview Binary TreeMap'
 
     for file in os.listdir():
-        f = open(file)
-        data = json.load(f)
-        d = []
-        for key in data:
-            d.append(data[key])
-        d.pop(0)
-        words = file.split("-METRICS")
-        treemap.add(words[0], d)
+        try:
+            f = open(file)
+            data = json.load(f)
+            d = []
+            for key in data:
+                d.append(data[key])
+            d.pop(0)
+            words = file.split("-METRICS")
+
+            treemap.add(words[0], d)
+        except:
+            invalid = []
+            invalid.append(file)
     
-    treemap.render_to_file('output.svg')
+    treemap.render_to_file('overview.svg')
+
+def repoSpecific():
+    treemap = pygal.Treemap()
+
+    for file in os.listdir():
+        try:
+            f = open(file)
+            data = json.load(f)
+            del data["datetime"]
+
+            for key in data:
+                if(data[key] != 0):
+                    treemap.add(key, data[key])
+            
+            words = file.split("-METRICS")
+            treemap.title = words[0] + "Binary TreeMap"
+            treemap.render_to_file(words[0] + "-graph.svg")
+
+        except:
+            invalid = []
+            invalid.append(file)
+
+        treemap.render_to_file('overview.svg')
+
+def main():
+    genOverview()
+    repoSpecific()
 
 
 if __name__ == "__main__":
