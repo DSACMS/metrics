@@ -17,7 +17,8 @@ def genOverview():
             data = json.load(f)
             d = []
             for key in data:
-                d.append(data[key])
+                if(data[key] != 0 and data[key] != None):
+                    d.append(data[key])
             d.pop(0)
             words = file.split("-METRICS")
 
@@ -29,27 +30,25 @@ def genOverview():
     treemap.render_to_file('overview.svg')
 
 def repoSpecific():
-    treemap = pygal.Treemap()
-
     for file in os.listdir():
         try:
+            treemap = pygal.Treemap()
             f = open(file)
             data = json.load(f)
             del data["datetime"]
 
             for key in data:
-                if(data[key] != 0):
+                if(data[key] != 0 and data[key] != None):
                     treemap.add(key, data[key])
             
             words = file.split("-METRICS")
             treemap.title = words[0] + "Binary TreeMap"
             treemap.render_to_file(words[0] + "-graph.svg")
+            data.clear()
 
         except:
             invalid = []
             invalid.append(file)
-
-        treemap.render_to_file('overview.svg')
 
 def main():
     genOverview()
