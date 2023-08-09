@@ -16,11 +16,12 @@ def genOverview():
             f = open(file)
             data = json.load(f)
             d = []
+            words = file.split("-METRICS")
+
             for key in data:
                 if(data[key] != 0 and data[key] != None):
                     d.append(data[key])
             d.pop(0)
-            words = file.split("-METRICS")
 
             treemap.add(words[0], d)
         except:
