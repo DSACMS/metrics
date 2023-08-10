@@ -43,7 +43,7 @@ def repoSpecific():
                     treemap.add(key, data[key])
             
             words = file.split("-METRICS")
-            treemap.title = words[0] + "Binary TreeMap"
+            treemap.title = words[0] + " Binary TreeMap"
             treemap.render_to_file(words[0] + "-graph.svg")
             data.clear()
 
