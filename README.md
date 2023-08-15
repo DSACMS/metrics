@@ -1,18 +1,14 @@
 <!--- # NOTE: Modify sections marked with `TODO` and then rename the file.-->
 
-# TODO Project Name
-
-TODO: Project Description (could match GitHub.com Repo Description)
+# Metrics Dashboard for CMS Open Source Projects
+The Metrics Dashboard webpage shows a weekly and monthly overview across open source projects within a specified organization. This webpage is meant to be used by developers and program managers interested in strategy and web presence within CMS open source projects
 
 ## Getting Started
-
-TODO: Example Sections
-
-### Agency Mission
-
-### Team Mission
+To run the server, make sure that your computer has npm installed.
+Once npm is installed run `npm start`
 
 ### Project Vision
+A metrics web page that automatically pulls github repo data each week to produce numerical and visual statistics to aid developers and PMs in monitoring project health. 
 
 ### Project Information
 <!-- Example Innersource Project Info
@@ -23,7 +19,10 @@ TODO: Example Sections
  * [Project Tools/Hosting/Deployment:](https://confluence.cms.gov)
  * Project Keyword(s) for Search: KEYWORD1, KEYWORD2
  * Project Members:
-    * Team Lead, PO, Delivery Lead, Approvers, Trusted Committers etc.
+    * Team Lead: Remy
+    * Fullstack intern: Nicole
+    * Fullstack intern: Shweta
+    PO, Delivery Lead, Approvers, Trusted Committers etc.
 -->
 
 <!-- Example Open Source Info
@@ -35,34 +34,11 @@ TODO: Example Sections
 
 ### Installation
 
-<!--- Example Install Instructions
-
 1. Clone the repo
 
-    `git clone https://github.com/cmsgov/PROJECT_REPO.git`
+    `git clone https://github.com/DSACMS/metrics.git`
 
-1. Setup your development environment
 
-    `python -m venv venv`
-
-1. Install project dependencies
-
-    `pip install -r requirements.txt`
-
-    `yarn install package.json`
-
-1. Run the test suite
-    
-    `pytest tests/tox.ini`
-
-1. Start the webserver
-
-    `make start`
-
-1. Visit [localhost:9001](https://localhost:9001) to view the server
--->
-
-### Testing
 
 ## Contributing
 
