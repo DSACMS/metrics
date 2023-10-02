@@ -13,7 +13,7 @@ with open(os.path.join(BASE_PATH, "graphql_queries.graphql"), "r") as file:
 url = "https://api.github.com/graphql"
 response = requests.post(url, headers=headers, json={"query": query})
 public_repo_data = json.loads(response.text)
- 
+
 # Folder Names to send over our projects tracked data
 PATH_TO_METRICS_DATA = "_data"
 PATH_TO_METADATA = "_metadata"
@@ -24,7 +24,7 @@ DATESTAMP = datetime.datetime.now().date().isoformat()
 all_orgs = []  # Track orgs and all its repos e.g. DSACMS
 all_repos = []  # Track specific repositories e.g. ['dsacms.github.io']
 
-# PROJECTS_TRACKED makes a json file that stores the list of orgs and their 
+# PROJECTS_TRACKED makes a json file that stores the list of orgs and their
 # repos that we will be collecting metrics for
 PROJECTS_TRACKED = {}
 orgs_tracked = set()
@@ -39,10 +39,12 @@ Input: Requires a repository name defined from graphql_queries
 Returns: json dict of repo data
 """
 repos = {}
+
+
 def repo_data_to_json(repositories):
-     for repo in repositories:
-          repo_json = json.loads(repo)
-          repos[repo] = repo_json
+    for repo in repositories:
+        repo_json = json.loads(repo)
+        repos[repo] = repo_json
 
 
 """
@@ -52,11 +54,13 @@ Returns a dictionary that contains the total counts for commit,
 issue, open issues,closed issues, pull requests, open pull  requests, 
 merged pull requests, closed pull requests, forks, stargazers & watchers
 """
+
+
 def output_repository_info(repositories):
     commits_count = repo["defaultBranchRef"]["commits"]["history"]["totalCount"]
     issues_count = repo["issues"]["totalCount"]
     open_issues_count = repo["openIssues"]["totalCount"]
-    closed_issues_count =  repo["closedIssues"]["totalCount"]
+    closed_issues_count = repo["closedIssues"]["totalCount"]
     pull_requests_count = repo["pullRequests"]["totalCount"]
     open_pull_requests_count = repo["openPullRequests"]["totalCount"]
     merged_pull_requests_count = repo["mergedPullRequests"]["totalCount"]
@@ -64,18 +68,18 @@ def output_repository_info(repositories):
     forks_count = repo["forkCount"]
     stargazers_count = repo.get("startgazers", {}).get("totalCount")
     watchers_count = repo["watchers"]["totalCount"]
-    return { "datetime": DATESTAMP,
-             "commits_count": commits_count,
-             "issues_count": issues_count, 
-             "open_issues_count": open_issues_count,
-             "closed_issues_count": closed_issues_count, 
-             "pull_requests_count": pull_requests_count, 
-             "open_pull_requests_count": open_pull_requests_count,
-             "merged_pull_requests_count": merged_pull_requests_count, 
-             "closed_pull_requests_count": closed_pull_requests_count,
-             "forks_count": forks_count, "stargazers_count": stargazers_count,
-             "watchers_count": watchers_count
-             }
+    return {"datetime": DATESTAMP,
+            "commits_count": commits_count,
+            "issues_count": issues_count,
+            "open_issues_count": open_issues_count,
+            "closed_issues_count": closed_issues_count,
+            "pull_requests_count": pull_requests_count,
+            "open_pull_requests_count": open_pull_requests_count,
+            "merged_pull_requests_count": merged_pull_requests_count,
+            "closed_pull_requests_count": closed_pull_requests_count,
+            "forks_count": forks_count, "stargazers_count": stargazers_count,
+            "watchers_count": watchers_count
+            }
 
 
 # Filter for DSACMS organization dataset
@@ -90,10 +94,10 @@ DATA_JSON = {}
 #  Capture the metric data  from DSACMS
 #  Returns a nested dictionary
 for repo in original_organization_data:
-     name = repo["name"]
-     repos_tracked.add(name)
-     repo_metric_info = output_repository_info(repo)
-     all_repo_metrics_info[name] = repo_metric_info
+    name = repo["name"]
+    repos_tracked.add(name)
+    repo_metric_info = output_repository_info(repo)
+    all_repo_metrics_info[name] = repo_metric_info
 
 # print(all_repo_metrics_info)
 print(original_organization_data)
@@ -118,7 +122,7 @@ with open(os.path.join(BASE_PATH, PATH_TO_METADATA + "/" + "projects_tracked.jso
   it currently does not exist.
 """
 list_of_org_projects = PROJECTS_TRACKED['Open Source Projects']["DSACMS"]
-given_org_data =  DATA_JSON["DSACMS"]
+given_org_data = DATA_JSON["DSACMS"]
 print("given_org_data", given_org_data)
 for repo in list_of_org_projects:
     repo_metric_data = given_org_data.get(repo)
