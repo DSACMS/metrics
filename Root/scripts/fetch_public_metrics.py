@@ -4,21 +4,22 @@ import json
 import os
 import requests
 
-#  Constructs our POST Request
-token = os.getenv("GITHUB_TOKEN")
-headers = {"Authorization": f"bearer {token}"}
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
-with open(os.path.join(BASE_PATH, "graphql_queries.graphql"), "r") as file:
-    query = file.read()
-url = "https://api.github.com/graphql"
-response = requests.post(url, headers=headers, json={"query": query})
-public_repo_data = json.loads(response.text)
-
 # Folder Names to send over our projects tracked data
 PATH_TO_METRICS_DATA = "_data"
 PATH_TO_METADATA = "_metadata"
 DATESTAMP = datetime.datetime.now().date().isoformat()
 
+#TODO: Where is this file coming from and what is generating it? Is this just unfinished.
+with open(os.path.join(BASE_PATH, "graphql_queries.graphql"), "r") as file:
+    query = file.read()
+
+#  Constructs our POST Request
+token = os.getenv("GITHUB_TOKEN")
+headers = {"Authorization": f"bearer {token}"}
+url = "https://api.github.com/graphql"
+response = requests.post(url, headers=headers, json={"query": query})
+public_repo_data = json.loads(response.text)
 
 # TODO: Create a read repos-to-include.txt
 all_orgs = []  # Track orgs and all its repos e.g. DSACMS
