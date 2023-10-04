@@ -13,6 +13,12 @@ Relevant: https://www.markdownguide.org/extended-syntax/
 
 Lists the repos along with surface metrics. The Contributor and commit sparklines will be shown next to the repo icon with the contributor sparklines hidden if it is a small repo.
 
+Simple endpoints:
+    Github graphql !!
+    Augur forks and fork count
+    Annual Commit Count Ranked Repos (Has net commits in response)
+    Issues Active
+
 # Weekly Page
 
 Shows various weekly statistics by group and then by repo when the user scrolls down the page. See below for specifics.
