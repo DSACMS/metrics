@@ -111,8 +111,8 @@ DATA_JSON["DSACMS"] = all_repo_metrics_info
 PROJECTS_TRACKED['orgs'] = ["DSACMS"]
 PROJECTS_TRACKED['Open Source Projects'] = {"DSACMS": list(repos_tracked)}
 
-with open(os.path.join(BASE_PATH, PATH_TO_METADATA + "/" + "projects_tracked.json"), "w+") as f:
-    json.dump(PROJECTS_TRACKED, f)
+#with open(os.path.join(BASE_PATH, PATH_TO_METADATA + "/" + "projects_tracked.json"), "w+") as f:
+#    json.dump(PROJECTS_TRACKED, f)
 
 """
   Create a new json file Labeled METRICS-DATESTAMP.json
