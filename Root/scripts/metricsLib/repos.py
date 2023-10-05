@@ -14,6 +14,7 @@ class Repository:
         #Use all raw dict items as attributes of the repo.
         for field, metric in basic_info.items():
             #self.field = metric
+            #print(f"field: {field}, metric: {metric}")
             setattr(self,field,metric)
         
         for field, metric in advanced_info.items():
