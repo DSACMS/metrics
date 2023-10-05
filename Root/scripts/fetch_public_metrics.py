@@ -17,11 +17,6 @@ from metricsLib.constants import *
 #response = requests.post(url, headers=headers, json={"query": query})
 #public_repo_data = json.loads(response.text)
 
-
-# TODO: Create a read repos-to-include.txt
-all_orgs = []  # Track orgs and all its repos e.g. DSACMS
-all_repos = []  # Track specific repositories e.g. ['dsacms.github.io']
-
 # PROJECTS_TRACKED makes a json file that stores the list of orgs and their
 # repos that we will be collecting metrics for
 PROJECTS_TRACKED = {}
@@ -53,7 +48,8 @@ issue, open issues,closed issues, pull requests, open pull  requests,
 merged pull requests, closed pull requests, forks, stargazers & watchers
 """
 
-
+"""
+DEPRECATED
 def output_repository_info(repositories):
     commits_count = repo["defaultBranchRef"]["commits"]["history"]["totalCount"]
     issues_count = repo["issues"]["totalCount"]
@@ -78,7 +74,7 @@ def output_repository_info(repositories):
             "forks_count": forks_count, "stargazers_count": stargazers_count,
             "watchers_count": watchers_count
             }
-
+"""
 
 # Filter for DSACMS organization dataset
 original_organization_data = public_repo_data["data"]["organization"]["original"]["nodes"]
