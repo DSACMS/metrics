@@ -10,22 +10,23 @@ from .constants import *
 class SimpleMetric:
     #Url format should be in the vein of 'https://api.github.com/repos/{owner}/{repo}/issues?state=all'
     #then url.format(**data)
-    def __init__(self,name,endpoint_url,return_values,params = None,token = None):
+    def __init__(self,name,endpoint_url,return_values,token = None):
         self.name = name
         self.return_values = return_values
-
-        if params:
-            self.url = endpoint_url.format(**params)
-        else:
-            self.url = endpoint_url
-        
+        self.url = endpoint_url
 
         if token:
             self.headers = {"Authorization": f"bearer {TOKEN}"}
         else:
             self.headers = None
     
-    def get_values(self):
+    def get_values(self, params = None):
+        if params:
+            self.url = self.url.format(**params)
+        else:
+            self.url = self.url
+        
+
         if self.headers:
             response = requests.post(self.url,self.headers)
         else:
@@ -46,27 +47,26 @@ class SimpleMetric:
 
 #Rest Api is worse than graphql for github.
 
-class GraphqlMetric:
+class GraphqlMetric(SimpleMetric):
     #Return value is a dict of lists of strings that match to the keys of the dict.
     """EX:
     {
         commits_count: ["defaultBranchRef","commits","history","totalCount"]
     }
     """
-    def __init__(self,name,query,return_values, params = None, token = None, url = "https://api.github.com/graphql"):
-        super().__init__(name,url,return_values,params = None, token = token)
-        self.params = params
+    def __init__(self,name,query,return_values, token = None, url = "https://api.github.com/graphql"):
+        super().__init__(name,url,return_values, token = token)
         self.query = query
     
-    def get_values(self):
+    def get_values(self,params = None):
         json_dict = {
             'query' : self.query
         }
 
         #If there are bind variables bind them to the query here.
-        if self.params:
+        if params:
 
-            json_dict['variables'] = self.params
+            json_dict['variables'] = params
             json_dict['variables'] = json_dict['variables']
             #print(json_dict['variables'])
         
@@ -79,7 +79,7 @@ class GraphqlMetric:
 
         toReturn = {}
 
-        for val, keySequence in self.params.items():
+        for val, keySequence in params.items():
             # Extract the nested data and store it in a flat dict to return to the user
             toReturn[val] = reduce(operator.getitem,keySequence,response_json)
         
