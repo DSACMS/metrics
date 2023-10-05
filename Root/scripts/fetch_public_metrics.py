@@ -8,17 +8,6 @@ from metricsLib.constants import *
 from metricsLib.repos import Repository
 import re
 
-#TODO: Where is this file coming from and what is generating it? Is this just unfinished.
-#with open(os.path.join(BASE_PATH, "graphql_queries.graphql"), "r") as file:
-#    query = file.read()
-
-#  Constructs our POST Request
-#headers = {"Authorization": f"bearer {TOKEN}"}
-#
-#url = "https://api.github.com/graphql"
-#response = requests.post(url, headers=headers, json={"query": query})
-#public_repo_data = json.loads(response.text)
-
 # PROJECTS_TRACKED makes a json file that stores the list of orgs and their
 # repos that we will be collecting metrics for
 PROJECTS_TRACKED = {}
@@ -63,41 +52,7 @@ def get_repo_owner_and_name(repo_http_url):
     repo = capturing_groups[1]
 
     return owner, repo
-"""
-Purpose: Simplifies the format of the  json file to include only the desired metrics
-Input: Requires a repository name defined from graphql_queries that is in json format
-Returns a dictionary that contains the total counts for commit, 
-issue, open issues,closed issues, pull requests, open pull  requests, 
-merged pull requests, closed pull requests, forks, stargazers & watchers
-"""
 
-"""
-DEPRECATED
-def output_repository_info(repositories):
-    commits_count = repo["defaultBranchRef"]["commits"]["history"]["totalCount"]
-    issues_count = repo["issues"]["totalCount"]
-    open_issues_count = repo["openIssues"]["totalCount"]
-    closed_issues_count = repo["closedIssues"]["totalCount"]
-    pull_requests_count = repo["pullRequests"]["totalCount"]
-    open_pull_requests_count = repo["openPullRequests"]["totalCount"]
-    merged_pull_requests_count = repo["mergedPullRequests"]["totalCount"]
-    closed_pull_requests_count = repo["closedPullRequests"]["totalCount"]
-    forks_count = repo["forkCount"]
-    stargazers_count = repo.get("startgazers", {}).get("totalCount")
-    watchers_count = repo["watchers"]["totalCount"]
-    return {"datetime": DATESTAMP,
-            "commits_count": commits_count,
-            "issues_count": issues_count,
-            "open_issues_count": open_issues_count,
-            "closed_issues_count": closed_issues_count,
-            "pull_requests_count": pull_requests_count,
-            "open_pull_requests_count": open_pull_requests_count,
-            "merged_pull_requests_count": merged_pull_requests_count,
-            "closed_pull_requests_count": closed_pull_requests_count,
-            "forks_count": forks_count, "stargazers_count": stargazers_count,
-            "watchers_count": watchers_count
-            }
-"""
 
 # Filter for DSACMS organization dataset
 #original_organization_data = public_repo_data["data"]["organization"]["original"]["nodes"]
@@ -112,9 +67,9 @@ DATA_JSON = {}
 #  Returns a nested dictionary
 for repo in ALL_REPOS:
     #prepare all of the parameters needed for each metric.
-    owner, repo = get_repo_owner_and_name(repo)
+    owner, name = get_repo_owner_and_name(repo)
     needed_params = {
-        "repo" : repo,
+        "repo" : name,
         "owner" : owner
     }
 
@@ -137,7 +92,8 @@ for repo in ALL_REPOS:
     all_repo_metrics_info[repo] = repoInfo
 
 # print(all_repo_metrics_info)
-print(all_repo_metrics_info)
+for info, obj in all_repo_metrics_info.items():
+    print(obj.commits_count)
 print(type(all_repo_metrics_info))
 
 #DATA_JSON["DSACMS"] = all_repo_metrics_info

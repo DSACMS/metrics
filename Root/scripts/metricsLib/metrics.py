@@ -1,6 +1,7 @@
 import os
 import json
 import requests
+from requests import exceptions
 import datetime
 from functools import reduce
 import operator
@@ -81,7 +82,10 @@ class GraphqlMetric(SimpleMetric):
 
         toReturn = {}
 
-        print(response_json)
+        #print(response_json['errors'][0]['message'])
+        if "data" not in response_json.keys():
+            raise requests.exceptions.InvalidJSONError(response_json['errors'][0]['message'])
+
         for val, keySequence in self.return_values.items():
             # Extract the nested data and store it in a flat dict to return to the user
             toReturn[val] = reduce(operator.getitem,keySequence,response_json)
