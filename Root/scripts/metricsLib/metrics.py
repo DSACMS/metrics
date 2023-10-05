@@ -10,10 +10,12 @@ from .constants import *
 class SimpleMetric:
     #Url format should be in the vein of 'https://api.github.com/repos/{owner}/{repo}/issues?state=all'
     #then url.format(**data)
-    def __init__(self,name,endpoint_url,return_values,token = None):
+    def __init__(self,name,needed_parameters,endpoint_url,return_values,token = None):
         self.name = name
         self.return_values = return_values
         self.url = endpoint_url
+
+        self.needed_parameters = needed_parameters
 
         if token:
             self.headers = {"Authorization": f"bearer {TOKEN}"}
@@ -21,7 +23,7 @@ class SimpleMetric:
             self.headers = None
     
     def get_values(self, params = None):
-        if params:
+        if params and len(params) > 0:
             self.url = self.url.format(**params)
         else:
             self.url = self.url
@@ -54,8 +56,8 @@ class GraphqlMetric(SimpleMetric):
         commits_count: ["defaultBranchRef","commits","history","totalCount"]
     }
     """
-    def __init__(self,name,query,return_values, token = None, url = "https://api.github.com/graphql"):
-        super().__init__(name,url,return_values, token = token)
+    def __init__(self,name,needed_parameters,query,return_values, token = None, url = "https://api.github.com/graphql"):
+        super().__init__(name,needed_parameters,url,return_values, token = token)
         self.query = query
     
     def get_values(self,params = None):

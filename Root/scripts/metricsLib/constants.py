@@ -11,10 +11,18 @@ TOKEN = os.getenv("GITHUB_TOKEN")
 #The general procedure is to execute all metrics against all repos and orgs
 
 # TODO: Create a read repos-to-include.txt
-ALL_ORGS = []  # Track orgs and all its repos e.g. DSACMS
-ALL_REPOS = []  # Track specific repositories e.g. ['dsacms.github.io']
+with open(os.path.join(PATH_TO_METADATA, "projects_tracked.json"), "r") as file:
+    tracking_file = json.load(file)
 
-ALL_METRICS = []
+
+ALL_ORGS = tracking_file["orgs"]  # Track orgs and all its repos e.g. DSACMS
+
+ALL_REPOS = [] # Track specific repositories e.g. ['dsacms.github.io']
+
+for _, repo_list in tracking_file["Open Source Projects"]:
+    ALL_REPOS.extend(repo_list)
+
+SIMPLE_METRICS = []
 
 githubGraphqlQuery = """
     query ($repo: String!, $owner: String!) {
@@ -72,7 +80,7 @@ githubGraphqlQuery = """
 """
 
 
-ALL_METRICS.append(GraphqlMetric("githubGraphqlSimpleCounts",githubGraphqlQuery,
+SIMPLE_METRICS.append(GraphqlMetric("githubGraphqlSimpleCounts",["repo","owner"],githubGraphqlQuery,
             {"datetime": DATESTAMP,
             "commits_count": ["data","repository","defaultBranchRef","target","history","totalCount"],
             "issues_count": ["data","repository","issues","totalCount"],
