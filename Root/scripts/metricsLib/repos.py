@@ -9,7 +9,7 @@ from .constants import *
 class Repository:
     def __init__(self,repo_git_url,basic_info, advanced_info):
         
-        self.name = repo_git
+        self.name = repo_git_url
 
         #Use all raw dict items as attributes of the repo.
         for field, metric in basic_info.items():

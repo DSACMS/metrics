@@ -118,6 +118,7 @@ for repo in ALL_REPOS:
         "owner" : owner
     }
 
+    print(needed_params)
     repo_simple_metrics = {}
     repo_advanced_metrics = {}
     
