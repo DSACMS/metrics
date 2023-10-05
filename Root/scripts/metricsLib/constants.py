@@ -1,5 +1,6 @@
 import datetime, os
-from metrics import SimpleMetric, GraphqlMetric
+from .metrics import SimpleMetric, GraphqlMetric
+import json
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 # Folder Names to send over our projects tracked data
@@ -19,70 +20,73 @@ ALL_ORGS = tracking_file["orgs"]  # Track orgs and all its repos e.g. DSACMS
 
 ALL_REPOS = [] # Track specific repositories e.g. ['dsacms.github.io']
 
-for _, repo_list in tracking_file["Open Source Projects"]:
+for _, repo_list in tracking_file["Open Source Projects"].items():
     ALL_REPOS.extend(repo_list)
 
 SIMPLE_METRICS = []
 
 githubGraphqlQuery = """
-    query ($repo: String!, $owner: String!) {
-      repository(name: $repo, owner: $owner) {
-        description,
-        forkCount,
-        forkingAllowed,
-        stargazerCount,
-
-        pullRequests(first: 1)
+query ($repo: String!, $owner: String!) {
+  repository(name: $repo, owner: $owner) {
+    description,
+    forkCount,
+    forkingAllowed,
+    stargazerCount,
+    
+    pullRequests(first: 1)
+    {
+      totalCount
+    },
+    mergedPullRequests: pullRequests(first: 1, states: MERGED)
+    {
+      totalCount
+    },
+    closedPullRequests: pullRequests(first: 1, states: CLOSED)
+    {
+      totalCount
+    },
+    openPullRequests: pullRequests(first: 1, states: OPEN)
+    {
+      totalCount
+    },
+    issues(first: 1)
+    {
+      totalCount
+    },
+    openIssues: issues(first: 1, states: OPEN)
+    {
+      totalCount
+    },
+    closedIssues: issues(first: 1, states: CLOSED)
+    {
+      totalCount
+    },
+    watchers(first: 1)
+    {
+      totalCount
+    }
+    defaultBranchRef
+    {
+      name,
+      target
+      {
+        ... on Commit
         {
-          totalCount
-        },
-        mergedPullRequests: pullRequests(first: 1, states: MERGED)
-        {
-          totalCount
-        },
-        closedPullRequests: pullRequests(first: 1, states: CLOSED)
-        {
-          totalCount
-        },
-        openPullRequests: pullRequests(first: 1, states: OPEN)
-        {
-          totalCount
-        },
-        issues(first: 1)
-        {
-          totalCount
-        },
-        open_issues: issues(first: 1, states: OPEN)
-        {
-          totalCount
-        },
-        closed_issues: issues(first: 1, states: CLOSED)
-        {
-          totalCount
-        },
-        defaultBranchRef
-        {
-          name,
-          target
+          history(first: 1)
           {
-            ... on Commit
-            {
-              history(first: 1)
-              {
-                totalCount
-              }
-
-            }
+            totalCount
           }
+          
         }
       }
     }
+  }
+}
 """
 
 
 SIMPLE_METRICS.append(GraphqlMetric("githubGraphqlSimpleCounts",["repo","owner"],githubGraphqlQuery,
-            {"datetime": DATESTAMP,
-            "commits_count": ["data","repository","defaultBranchRef","target","history","totalCount"],
+            {"commits_count": ["data","repository","defaultBranchRef","target","history","totalCount"],
             "issues_count": ["data","repository","issues","totalCount"],
             "open_issues_count": ["data","repository","openIssues","totalCount"],
             "closed_issues_count": ["data","repository","closedIssues","totalCount"],

@@ -18,7 +18,7 @@ class SimpleMetric:
         self.needed_parameters = needed_parameters
 
         if token:
-            self.headers = {"Authorization": f"bearer {TOKEN}"}
+            self.headers = {"Authorization": f"bearer {token}"}
         else:
             self.headers = None
     
@@ -77,11 +77,12 @@ class GraphqlMetric(SimpleMetric):
         else:
             response = requests.post(self.url,json=json_dict)
         
-        response_json = json.loads(response.txt)
+        response_json = json.loads(response.text)
 
         toReturn = {}
 
-        for val, keySequence in params.items():
+        print(response_json)
+        for val, keySequence in self.return_values.items():
             # Extract the nested data and store it in a flat dict to return to the user
             toReturn[val] = reduce(operator.getitem,keySequence,response_json)
         
