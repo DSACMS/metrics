@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>{{ title | default: page.title | default: site.title }}</title>
+<meta name="description" content="{{ description | default: page.description | default: site.description }}">
+<meta name="author" content="{{ site.author }}">
+
+<link rel="canonical" href="{% if canonical %}{{ canonical }}{% else %}{{ site.url}}{{ page.url }}{% endif %}">
+
+<meta property="og:title" content="{{ title | default: page.title | default: site.title }}">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:description" content="{{ description | default: page.description | default: site.description }}">
+<meta property="og:type" content="{{ site.type }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ site.url }}/img/social.png">
+<meta property="og:image:alt" content="{{ title | default: page.title | default: site.title }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title | default: page.title | default: site.title }}">
+{% if site.twitterAuthor %}
+  <meta name="twitter:creator" content="{{ site.twitterAuthor }}">
+{% endif %}
+<meta name="twitter:description" content="{{ description | default: page.description | default: site.description }}">
+<meta name="twitter:image:src" content="{{ site.url }}/img/social.png">
+<meta name="twitter:image:alt" content="{{ title | default: page.title | default: site.title }}">
+
+<link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}{% resizeImage './src/img/icon.png', '16x16' %}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}{% resizeImage './src/img/icon.png', '32x32' %}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}{% resizeImage './src/img/icon.png', '180x180' %}">
+<link rel="manifest" href="{{ site.url }}/manifest.json">
+<meta name="theme-color" content="#ffffff">
