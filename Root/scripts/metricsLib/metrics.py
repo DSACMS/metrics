@@ -36,8 +36,8 @@ class SimpleMetric:
         response_json = json.loads(response.text)
         toReturn = {}
 
-        for val in self.return_values:
-            toReturn[val] = response_json[val]
+        for returnLabel, apiLabel in self.return_values:
+            toReturn[returnLabel] = response_json[apiLabel]
         
         return toReturn
 
@@ -109,7 +109,7 @@ class RangeMetric(SimpleMetric):
         response_json = json.loads(response.text)
         toReturn = {}
 
-        for val in self.return_values:
-            toReturn[val] = sum([item[val] for item in response_json])
+        for returnLabel, apiLabel in self.return_values:
+            toReturn[returnLabel] = sum([item[apiLabel] for item in response_json])
 
         return toReturn
