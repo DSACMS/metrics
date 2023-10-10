@@ -26,16 +26,14 @@ class SimpleMetric:
     def get_values(self, params = None):
         if params and len(params) > 0:
             self.url = self.url.format(**params)
-        else:
-            self.url = self.url
         
 
         if self.headers:
             response = requests.post(self.url,self.headers)
         else:
-            resposnse = requests.post(self.url)
+            response = requests.post(self.url)
         
-        response_json = json.loads(response.txt)
+        response_json = json.loads(response.text)
         toReturn = {}
 
         for val in self.return_values:
@@ -92,4 +90,26 @@ class GraphqlMetric(SimpleMetric):
         
         return toReturn
 
+#A metric that returns a single value from a list of values
+#Used for endpoints that return an iterable.
+class RangeMetric(SimpleMetric):
+    def __init__(self,name,needed_parameters,endpoint_url,return_values, token = None):
+        super().__init__(name,needed_parameters,endpoint_url,return_values,token=token)
+    
+    def get_values(self,params = None):
+        if params and len(params) > 0:
+            self.url = self.url.format(**params)
+        
 
+        if self.headers:
+            response = requests.post(self.url,self.headers)
+        else:
+            response = requests.post(self.url)
+        
+        response_json = json.loads(response.text)
+        toReturn = {}
+
+        for val in self.return_values:
+            toReturn[val] = sum([item[val] for item in response_json])
+
+        return toReturn
