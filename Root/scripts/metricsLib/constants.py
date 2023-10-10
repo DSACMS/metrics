@@ -36,6 +36,9 @@ SIMPLE_METRICS = []
 #Weekly, monthly metrics.
 PERIODIC_METRICS = []
 
+#Classification metrics
+ADVANCED_METRICS = []
+
 githubGraphqlQuery = """
 query ($repo: String!, $owner: String!) {
   repository(name: $repo, owner: $owner) {
