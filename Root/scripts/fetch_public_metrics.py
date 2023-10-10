@@ -30,29 +30,6 @@ def repo_data_to_json(repositories):
         repo_json = json.loads(repo)
         repos[repo] = repo_json
 
-def get_repo_owner_and_name(repo_http_url):
-    """ Gets the owner and repo from a url.
-
-        Args:
-            url: Github url
-
-        Returns:
-            Tuple of owner and repo. Or a tuple of None and None if the url is invalid.
-    """
-        
-    result = re.search(r"https?:\/\/github\.com\/([A-Za-z0-9 \- _]+)\/([A-Za-z0-9 \- _ \.]+)(.git)?\/?$", repo_http_url)
-
-    if not result:
-        return None, None
-
-    capturing_groups = result.groups()
-
-
-    owner = capturing_groups[0]
-    repo = capturing_groups[1]
-
-    return owner, repo
-
 
 # Filter for DSACMS organization dataset
 #original_organization_data = public_repo_data["data"]["organization"]["original"]["nodes"]
@@ -67,15 +44,15 @@ DATA_JSON = {}
 #  Returns a nested dictionary
 for repo in ALL_REPOS:
     #prepare all of the parameters needed for each metric.
-    owner, name = get_repo_owner_and_name(repo)
     needed_params = {
-        "repo" : name,
-        "owner" : owner
+        "repo" : repo.name,
+        "owner" : repo.repo_owner,
+        "repo_id" : repo.repo_id,
+        "repo_group_id": repo.repo_group_id
     }
 
     print(needed_params)
-    repo_simple_metrics = {}
-    repo_advanced_metrics = {}
+    metrics_results = {}
     
     #Get info from all metrics for each repo
     for metric in SIMPLE_METRICS:
@@ -85,11 +62,11 @@ for repo in ALL_REPOS:
         for param in metric.needed_parameters:
             params[param] = needed_params[param]
         
-        repo_simple_metrics.update(metric.get_values(params))
+        metrics_results.update(metric.get_values(params))
     #repo_metric_info = output_repository_info(repo)
 
-    repoInfo = Repository(repo,repo_simple_metrics,repo_advanced_metrics)
-    all_repo_metrics_info[repo] = repoInfo
+    repo.store_metrics(metrics_results)
+    all_repo_metrics_info[repo.url] = repo
 
 # print(all_repo_metrics_info)
 for info, obj in all_repo_metrics_info.items():

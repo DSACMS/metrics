@@ -1,5 +1,6 @@
 import datetime, os
 from .metrics import SimpleMetric, GraphqlMetric
+from .repos import Repository
 import json
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
@@ -18,12 +19,22 @@ with open(os.path.join(PATH_TO_METADATA, "projects_tracked.json"), "r") as file:
 
 ALL_ORGS = tracking_file["orgs"]  # Track orgs and all its repos e.g. DSACMS
 
-ALL_REPOS = [] # Track specific repositories e.g. ['dsacms.github.io']
+repo_urls = [] # Track specific repositories e.g. ['dsacms.github.io']
 
 for _, repo_list in tracking_file["Open Source Projects"].items():
-    ALL_REPOS.extend(repo_list)
+    repo_urls.extend(repo_list)
+
+ALL_REPOS = []
+#Create repo objects
+for repo_url in repo_urls:
+  repo_obj = Repository(repo_url)
+  ALL_REPOS.append(repo_obj)
+
 
 SIMPLE_METRICS = []
+
+#Weekly, monthly metrics.
+PERIODIC_METRICS = []
 
 githubGraphqlQuery = """
 query ($repo: String!, $owner: String!) {
@@ -98,3 +109,7 @@ SIMPLE_METRICS.append(GraphqlMetric("githubGraphqlSimpleCounts",["repo","owner"]
             "stargazers_count": ["data","repository","stargazerCount"],
             "watchers_count": ["data","repository","watchers","totalCount"]
             },token=TOKEN))
+
+newContributorsofCommits = "https://ai.chaoss.io/api/unstable/repos/{repo_id}/pull-requests-merge-contributor-new?period={period}&begin_date={begin_date}&end_date={end_date}"
+PERIODIC_METRICS.append(RangeMetric("newContributorsofCommits", ["repo_id","period","begin_date","end_date"],newContributorsofCommits,
+  {"new_commit_contributor" : "count"} ))
