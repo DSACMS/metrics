@@ -2,7 +2,6 @@ const fs = require("fs")
 const path = require("path")
 const Image = require("@11ty/eleventy-img")
 const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite")
-const { EleventyHtmlBasePlugin } = require("@11ty/eleventy")
 
 async function resizeImage(src, sizes, outputFormat = "png") {
   const stats = await Image(src, {
@@ -20,6 +19,7 @@ module.exports = function (eleventyConfig) {
   const markdownItLinkAttributes = require("markdown-it-link-attributes")
 
   // Set target="_blank" and rel="noopener noreferrer" on external links
+  // Opens in a new tab
   const markdownLib = markdownIt({
     html: true,
   }).use(markdownItLinkAttributes, {
@@ -38,51 +38,10 @@ module.exports = function (eleventyConfig) {
   // This allows Eleventy to watch for file changes during local development.
   eleventyConfig.setUseGitIgnore(false)
 
-  eleventyConfig.addShortcode(
-    "image",
-    async function (src, alt, sizes = "100vw") {
-      const metadata = await Image(src, {
-        widths: [600, 800],
-        formats: ["webp", "jpeg"],
-        outputDir: "./site/img",
-      })
-      const lowsrc = metadata.jpeg[0]
-      const highsrc = metadata.jpeg[metadata.jpeg.length - 1]
-      return `<picture>
-      ${Object.values(metadata)
-        .map((imageFormat) => {
-          return `  <source type="${
-            imageFormat[0].sourceType
-          }" srcset="${imageFormat
-            .map((entry) => entry.srcset)
-            .join(", ")}" sizes="${sizes}">`
-        })
-        .join("\n")}
-				<img
-					src="${lowsrc.url}"
-					width="${highsrc.width}"
-					height="${highsrc.height}"
-					alt="${alt}"
-					loading="lazy"
-					decoding="async">
-    </picture>`
-    }
-  )
-  eleventyConfig.addNunjucksAsyncShortcode("resizeImage", resizeImage)
   eleventyConfig.addLiquidShortcode("resizeImage", resizeImage)
   eleventyConfig.addFilter("resizeImage", resizeImage)
 
-  // Used to avoid nunjucks escaping includes of imported CSS
-  // cssnano was converting media queries with ID values to "{#"
-  // Can also be used for nunjucks-style import within 11ty.js files
-  eleventyConfig.addShortcode("includefile", function (filename) {
-    return fs.readFileSync(
-      path.join(__dirname, "site", "_includes", filename),
-      "utf8"
-    )
-  })
-
-  // format a URL for concise user display, e.g. https://www.example.gov/foo/
+  // Format a URL for concise user display, e.g. https://www.example.gov/foo/
   // becomes example.gov/foo. The returned URL *should* be equivalent, but it
   // might not be for broken sites (and won't be HTTPS in any case); don't use
   // the output of this function as the href, only for user display.
@@ -107,13 +66,7 @@ module.exports = function (eleventyConfig) {
   })
 
   eleventyConfig.setLiquidOptions({ outputEscape: "escape" })
-
-  //TODO: update with correct production URL
-  const pathPrefix = process.env.NODE_ENV == "production" ? "/" : "/" 
-
-  eleventyConfig.addPlugin(EleventyVitePlugin, {
-    viteOptions: { base: pathPrefix },
-  })
+  eleventyConfig.addPlugin(EleventyVitePlugin)
 
   return {
     dir: {
@@ -123,8 +76,6 @@ module.exports = function (eleventyConfig) {
       layouts: "_layouts",
     },
     templateFormats: ["html", "md", "liquid", "11ty.js"],
-    htmlTemplateEngine: "njk",
     passthroughFileCopy: true,
-    pathPrefix,
   }
 }

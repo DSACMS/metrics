@@ -18,15 +18,6 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ title | default: page.title | default: site.title }}">
-{% if site.twitterAuthor %}
-  <meta name="twitter:creator" content="{{ site.twitterAuthor }}">
-{% endif %}
-<meta name="twitter:description" content="{{ description | default: page.description | default: site.description }}">
-<meta name="twitter:image:src" content="{{ site.url }}/img/social.png">
-<meta name="twitter:image:alt" content="{{ title | default: page.title | default: site.title }}">
-
 <link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}{% resizeImage './src/img/icon.png', '16x16' %}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}{% resizeImage './src/img/icon.png', '32x32' %}">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}{% resizeImage './src/img/icon.png', '180x180' %}">
