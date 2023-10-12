@@ -6,7 +6,9 @@ import pygal
 
 PATH = "_dataVis"
 os.chdir(PATH)
-        
+
+
+# TODO: Just get these metrics from augur instead of storing them in json.
 def genOverview():
     treemap = pygal.Treemap()
     treemap.title = 'DSACMS Project Overview Binary TreeMap'
@@ -19,7 +21,7 @@ def genOverview():
             words = file.split("-METRICS")
 
             for key in data:
-                if(data[key] != 0 and data[key] != None):
+                if (data[key] != 0 and data[key] != None):
                     d.append(data[key])
             d.pop(0)
 
@@ -27,8 +29,9 @@ def genOverview():
         except:
             invalid = []
             invalid.append(file)
-    
+
     treemap.render_to_file('overview.svg')
+
 
 def repoSpecific():
     for file in os.listdir():
@@ -39,9 +42,9 @@ def repoSpecific():
             del data["datetime"]
 
             for key in data:
-                if(data[key] != 0 and data[key] != None):
+                if (data[key] != 0 and data[key] != None):
                     treemap.add(key, data[key])
-            
+
             words = file.split("-METRICS")
             treemap.title = words[0] + " Binary TreeMap"
             treemap.render_to_file(words[0] + "-graph.svg")
@@ -50,6 +53,7 @@ def repoSpecific():
         except:
             invalid = []
             invalid.append(file)
+
 
 def main():
     genOverview()
