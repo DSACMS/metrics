@@ -7,7 +7,7 @@ const baseurl = production ? "" : ""
 
 module.exports = {
   name: "CMS Open Source Repo Metrics",
-  title: "CMS Open Source Metrics",
+  title: "CMS Open Source Repo Metrics",
   description: "Website containing reports and visualizations on repositories in CMSgov github organization.",
   type: "website",
   baseurl,
@@ -16,5 +16,4 @@ module.exports = {
   production,
   robots: production,
   locale: "en-US",
-  nav: [{ url: "/about/", label: "About" }],
 }
