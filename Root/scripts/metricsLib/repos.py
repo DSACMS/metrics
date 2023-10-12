@@ -23,8 +23,12 @@ class Repository:
         response = requests.post(augur_util_endpoint)
         response_json = json.loads(response.text)
 
-        self.repo_id = response_json[0]["repo_id"]
-        self.repo_group_id = response_json[0]["repo_group_id"]
+        try:
+            self.repo_id = response_json[0]["repo_id"]
+            self.repo_group_id = response_json[0]["repo_group_id"]
+        except Exception as e:
+            self.repo_id = None
+            self.repo_group_id = None
 
     def get_repo_owner_and_name(self,repo_http_url):
         """ Gets the owner and repo from a url.
@@ -49,7 +53,7 @@ class Repository:
 
         return owner, repo
 
-    def store_metrics(self,info)
+    def store_metrics(self,info):
         #Use all raw dict items as attributes of the repo.
         for field, metric in info.items():
             #self.field = metric
