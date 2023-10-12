@@ -7,7 +7,7 @@ const baseurl = production ? "" : ""
 
 module.exports = {
   name: "CMS Open Source Repo Metrics",
-  title: "CMS Open Source Repo Metrics",
+  title: "CMS Open Source Metrics",
   description: "Website containing reports and visualizations on repositories in CMSgov github organization.",
   type: "website",
   baseurl,
