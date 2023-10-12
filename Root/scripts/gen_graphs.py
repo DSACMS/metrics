@@ -8,7 +8,7 @@ PATH = "_dataVis"
 os.chdir(PATH)
 
 
-#TODO: Just get these metrics from augur instead of storing them in json.
+# TODO: Just get these metrics from augur instead of storing them in json.
 def genOverview():
     treemap = pygal.Treemap()
     treemap.title = 'DSACMS Project Overview Binary TreeMap'
