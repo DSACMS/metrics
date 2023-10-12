@@ -1,5 +1,5 @@
 import datetime, os
-from .metrics import SimpleMetric, GraphqlMetric
+from .metrics import SimpleMetric, GraphqlMetric, RangeMetric
 from .repos import Repository
 import json
 
