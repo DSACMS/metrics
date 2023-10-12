@@ -108,7 +108,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setLiquidOptions({ outputEscape: "escape" })
 
-  const pathPrefix = process.env.NODE_ENV == "production" ? "/open" : "/"
+  //TODO: update with correct production URL
+  const pathPrefix = process.env.NODE_ENV == "production" ? "/" : "/" 
 
   eleventyConfig.addPlugin(EleventyVitePlugin, {
     viteOptions: { base: pathPrefix },
