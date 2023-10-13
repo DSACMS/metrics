@@ -3,6 +3,7 @@ const production = process.env.NODE_ENV === "production"
 const host = production ? process.env.SITE_HOST : "http://0.0.0.0:8080"
 
 // For modifying the <base> tag
+// TODO: Update once we decide on website url
 const baseurl = production ? "" : ""
 
 module.exports = {
