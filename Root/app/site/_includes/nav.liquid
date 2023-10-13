@@ -1,0 +1,33 @@
+<div class="usa-overlay"></div>
+<header class="usa-header usa-header--basic">
+  <div class="usa-nav-container">
+    <div class="usa-navbar">
+      <div class="usa-logo">
+        <em class="usa-logo__text">
+          <a href="/" title="{{site.title}}">{{ site.title }}</a>
+        </em>
+      </div>
+      <button type="button" class="usa-menu-btn">Menu</button>
+    </div>
+    <nav aria-label="Primary navigation" class="usa-nav">
+      <button type="button" class="usa-nav__close">
+        <img src="/assets/img/usa-icons/close.svg" role="img" alt="Close">
+      </button>
+      <ul class="usa-nav__primary usa-accordion">
+        <li class="usa-nav__primary-item">
+          <a href="{{ "/" | url}}" class="usa-nav-link {% if page.url == "/" %}usa-current{% endif %}">
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a
+            href="{{ "/metrics/" | url}}"
+            class="usa-nav-link {% if page.url contains "/metrics/" %}usa-current{% endif %}"
+          >
+            <span>Metrics</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

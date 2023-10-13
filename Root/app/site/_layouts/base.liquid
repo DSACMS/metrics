@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="{{ site.locale }}">
+  <head>
+    {% include 'metadata.liquid' %}
+    {% include 'assets.liquid' %}
+  </head>
+  <body>
+    {% include 'banner.liquid' %}
+    {% include 'nav.liquid' %}
+    {{ content | raw }}
+    {% include 'footer.liquid' %}
+  </body>
+</html>
