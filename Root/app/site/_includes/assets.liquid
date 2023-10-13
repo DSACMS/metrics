@@ -1,0 +1,31 @@
+<script>
+  // uswds-init, inlined here so it runs immediately without waiting for
+  // scripts to load - its job is to allow USWDS's fallback no-JS styles
+  // to show eventually without making them briefly show up for all users
+
+  // Copied from USWDS v3.5.0 (CC0 1.0 Universal)
+  ;(function uswdsInit() {
+    'use strict'
+
+    var loadingClass = 'usa-js-loading'
+    var fallback
+
+    document.documentElement.classList.add(loadingClass)
+    function revertClass() {
+      document.documentElement.classList.remove(loadingClass)
+    }
+
+    fallback = setTimeout(revertClass, 8000)
+
+    function verifyLoaded() {
+      if (window.uswdsPresent) {
+        clearTimeout(fallback)
+        revertClass()
+        window.removeEventListener('load', verifyLoaded, true)
+      }
+    }
+
+    window.addEventListener('load', verifyLoaded, true)
+  })()
+</script>
+<script type="module" src="/assets/js/index.js"></script>
