@@ -38,7 +38,8 @@ Activity Metrics:
 
 We should probably calculate highlights on our end since it should be specialized to our use case.
 
-Project Category Metrics:
+Project Category Metrics: https://project-types.github.io/
+
     This is a single metric that categorizes each repo into a type based on user growth and contributor growth. Time period should be around a
     year. Maybe six months.
 
