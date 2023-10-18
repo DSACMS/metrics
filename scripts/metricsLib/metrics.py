@@ -84,10 +84,14 @@ class GraphqlMetric(SimpleMetric):
 
         toReturn = {}
 
-        # print(response_json['errors'][0]['message'])
+        print(response_json)
         if "data" not in response_json.keys():
-            raise requests.exceptions.InvalidJSONError(
-                response_json['errors'][0]['message'])
+            if "message" not in response_json.keys():
+                raise requests.exceptions.InvalidJSONError(
+                    response_json['errors'][0]['message'])
+            else:
+                raise requests.exceptions.InvalidJSONError(
+                    response_json['message'])
 
         for val, keySequence in self.return_values.items():
             # Extract the nested data and store it in a flat dict to return to the user

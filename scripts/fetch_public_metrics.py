@@ -46,7 +46,7 @@ DATA_JSON = {}
 #  Returns a nested dictionary
 for repo in ALL_REPOS:
 
-    print(repo.needed_params)
+    print(repo.needed_parameters)
     metrics_results = {}
 
     # Get info from all metrics for each repo
@@ -55,7 +55,7 @@ for repo in ALL_REPOS:
         params = {}
         # Get the parameter for this metric
         for param in metric.needed_parameters:
-            params[param] = repo.needed_params[param]
+            params[param] = repo.needed_parameters[param]
 
         metrics_results.update(metric.get_values(params))
     # repo_metric_info = output_repository_info(repo)
