@@ -40,7 +40,10 @@ PERIODIC_METRICS = []
 # Classification metrics
 ADVANCED_METRICS = []
 
-githubGraphqlQuery = """
+#Metrics gathered by org instead of by repo
+ORG_METRICS = []
+
+repoGithubGraphqlQuery = """
 query ($repo: String!, $owner: String!) {
   repository(name: $repo, owner: $owner) {
     description,
@@ -100,7 +103,7 @@ query ($repo: String!, $owner: String!) {
 """
 
 
-SIMPLE_METRICS.append(GraphqlMetric("githubGraphqlSimpleCounts", ["repo", "owner"], githubGraphqlQuery,
+SIMPLE_METRICS.append(GraphqlMetric("githubGraphqlSimpleCounts", ["repo", "owner"], repoGithubGraphqlQuery,
                                     {"commits_count": ["data", "repository", "defaultBranchRef", "target", "history", "totalCount"],
                                      "issues_count": ["data", "repository", "issues", "totalCount"],
                                      "open_issues_count": ["data", "repository", "openIssues", "totalCount"],
@@ -117,3 +120,31 @@ SIMPLE_METRICS.append(GraphqlMetric("githubGraphqlSimpleCounts", ["repo", "owner
 newContributorsofCommits = "https://ai.chaoss.io/api/unstable/repos/{repo_id}/pull-requests-merge-contributor-new?period={period}&begin_date={begin_date}&end_date={end_date}"
 PERIODIC_METRICS.append(RangeMetric("newContributorsofCommits", ["repo_id", "period", "begin_date", "end_date"], newContributorsofCommits,
                                     {"new_commit_contributor": "count"}))
+
+orgGithubGraphqlQuery = """
+query {
+  organization(login: "DSACMS") {
+    createdAt,
+    avatarUrl,
+    description,
+    email,
+    isVerified,
+    location,
+    twitterUsername
+    repositories(first: 1)
+    {
+      totalCount
+    }
+  }
+}
+"""
+ORG_METRICS.append(GraphqlMetric("githubGraphqlOrgSimple", ["org_login"], orgGithubGraphqlQuery,
+                                {"timestampCreatedAt" : ["data", "organization", "createdAt"],
+                                 "avatar_url" : ["data", "organization", "avatarUrl"],
+                                 "description" : ["data", "organization", "description"],
+                                 "email" : ["data", "organization", "email"],
+                                 "is_verified" : ["data", "organization", "isVerified"],
+                                 "location" : ["data", "organization", "location"],
+                                 "twitter_username" : ["data", "organization", "twitterUsername"],
+                                 "repo_count" : ["data", "organization", "repositories", "totalCount"]
+                                }, token=TOKEN))
