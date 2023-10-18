@@ -126,8 +126,8 @@ PERIODIC_METRICS.append(RangeMetric("newContributorsofCommits", ["repo_id", "per
                                     {"new_commit_contributor": "count"}))
 
 orgGithubGraphqlQuery = """
-query {
-  organization(login: "DSACMS") {
+query ($org_login: String!) {
+  organization(login: $org_login) {
     createdAt,
     avatarUrl,
     description,
