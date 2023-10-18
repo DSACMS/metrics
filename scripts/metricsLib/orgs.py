@@ -19,11 +19,11 @@ class GithubOrg:
         self.login = organization_login
 
         #Get the group id from augur
-        augur_util_endpoint = f"https://ai.chaoss.io/api/unstable/repo_groups"
+        augur_util_endpoint = f"https://ai.chaoss.io/api/unstable/repo-groups"
 
-        response = requests.post(augur_util_endpoint)
+        response = requests.get(augur_util_endpoint)
 
-        response = requests.post(augur_util_endpoint)
+        response = requests.get(augur_util_endpoint)
         response_dict = json.loads(response.text)
 
         try:
@@ -31,6 +31,8 @@ class GithubOrg:
                 if group["rg_name"] == self.login:
                     self.repo_group_id = group["repo_group_id"]
                     break
+            
+            self.repo_group_id = None
         
         except Exception as e:
             self.repo_group_id = None
