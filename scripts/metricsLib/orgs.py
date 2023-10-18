@@ -19,7 +19,7 @@ class GithubOrg:
         self.login = organization_login
 
         #Get the group id from augur
-        augur_util_endpoint = f"https://ai.chaoss.io/api/unstable/owner/repo_groups"
+        augur_util_endpoint = f"https://ai.chaoss.io/api/unstable/repo_groups"
 
         response = requests.post(augur_util_endpoint)
 
