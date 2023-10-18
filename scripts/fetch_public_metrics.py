@@ -65,7 +65,7 @@ for repo in ALL_REPOS:
 
 # print(all_repo_metrics_info)
 for info, obj in all_repo_metrics_info.items():
-    print(obj.metric_data)
+    print(obj)
 print(type(all_repo_metrics_info))
 
 # Capture all metric data from all Github orgs
@@ -77,7 +77,7 @@ for org in ALL_ORGS:
         params = {}
 
         for param in metric.needed_parameters:
-            params[param] = repo.needed_parameters[param]
+            params[param] = org.needed_params[param]
         
         metrics_results.update(metric.get_values(params))
     
@@ -85,7 +85,7 @@ for org in ALL_ORGS:
     all_org_metrics_info[org.login] = org.metric_data
 
 for info, obj in all_org_metrics_info.items():
-    print(obj.metric_data)
+    print(obj)
 print(type(all_org_metrics_info))
 
 # DATA_JSON["DSACMS"] = all_repo_metrics_info
