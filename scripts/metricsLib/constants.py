@@ -2,6 +2,7 @@ import datetime
 import os
 from .metrics import SimpleMetric, GraphqlMetric, RangeMetric
 from .repos import Repository
+from .orgs import GithubOrg
 import json
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
@@ -18,7 +19,10 @@ with open(os.path.join(PATH_TO_METADATA, "projects_tracked.json"), "r") as file:
     tracking_file = json.load(file)
 
 
-ALL_ORGS = tracking_file["orgs"]  # Track orgs and all its repos e.g. DSACMS
+ALL_ORGS = []
+for org in tracking_file["orgs"]:
+  # Track orgs and all its repos e.g. DSACMS
+  ALL_ORGS.append(GithubOrg(org))
 
 repo_urls = []  # Track specific repositories e.g. ['dsacms.github.io']
 

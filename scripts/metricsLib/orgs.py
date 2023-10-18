@@ -4,9 +4,9 @@ import requests
 
 from .constants import *
 
-"""This class is used like a json object in that it acts as a dictionary to
-store all metrics that also has a constructor and methods for encapsulation
-and ease. 
+"""This class serves to manage the parameter and metric data of a GithubOrg.
+It stores parameter and metric data in two seperate dictionaries for easy JSON 
+conversion.
 
 GithubOrg's main purpose as a real python class is to encapsulate the mapping
 of db ids in CHAOSS/augur to the orgs we are trying to gather metrics for.
@@ -17,7 +17,6 @@ Arguments:
 class GithubOrg:
     def __init__(self, organization_login):
         self.login = organization_login
-        self
 
         #Get the group id from augur
         augur_util_endpoint = f"https://ai.chaoss.io/api/unstable/owner/repo_groups"
@@ -35,7 +34,18 @@ class GithubOrg:
         
         except Exception as e:
             self.repo_group_id = None
+        
+
+        self.needed_params = {
+            "org_login" : self.login,
+            "repo_group_id": self.repo_group_id
+        }
+
+        self.metric_data = {
+            "login" : self.login,
+            "rg_id" : self.repo_group_id
+        }
 
     def store_metrics(self,info):
-        for field,metric in info.items():
-            setattr(self,field,metric)
+        for field, metric in info.items():
+            self.metric_data[field] = metric

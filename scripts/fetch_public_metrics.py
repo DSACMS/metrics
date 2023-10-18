@@ -38,21 +38,15 @@ def repo_data_to_json(repositories):
 
 # Store  the name of repo and the counts for desired Github metrics
 all_repo_metrics_info = {}
+all_org_metrics_info = {}
 # Holds an org name as key and all the metrics per repo in that org
 DATA_JSON = {}
 
 #  Capture the metric data  from all repos
 #  Returns a nested dictionary
 for repo in ALL_REPOS:
-    # prepare all of the parameters needed for each metric.
-    needed_params = {
-        "repo": repo.name,
-        "owner": repo.repo_owner,
-        "repo_id": repo.repo_id,
-        "repo_group_id": repo.repo_group_id
-    }
 
-    print(needed_params)
+    print(repo.needed_params)
     metrics_results = {}
 
     # Get info from all metrics for each repo
@@ -61,20 +55,38 @@ for repo in ALL_REPOS:
         params = {}
         # Get the parameter for this metric
         for param in metric.needed_parameters:
-            params[param] = needed_params[param]
+            params[param] = repo.needed_params[param]
 
         metrics_results.update(metric.get_values(params))
     # repo_metric_info = output_repository_info(repo)
 
     repo.store_metrics(metrics_results)
-    all_repo_metrics_info[repo.url] = repo
+    all_repo_metrics_info[repo.url] = repo.metric_data
 
 # print(all_repo_metrics_info)
 for info, obj in all_repo_metrics_info.items():
-    print(obj.commits_count)
+    print(obj.metric_data)
 print(type(all_repo_metrics_info))
 
+# Capture all metric data from all Github orgs
+for org in ALL_ORGS:
+    
+    metrics_results = {}
 
+    for metric in ORG_METRICS:
+        params = {}
+
+        for param in metric.needed_parameters:
+            params[param] = repo.needed_parameters[param]
+        
+        metrics_results.update(metric.get_values(params))
+    
+    org.store_metrics(metrics_results)
+    all_org_metrics_info[org.login] = org.metric_data
+
+for info, obj in all_org_metrics_info.items():
+    print(obj.metric_data)
+print(type(all_org_metrics_info))
 
 # DATA_JSON["DSACMS"] = all_repo_metrics_info
 #
