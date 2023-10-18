@@ -6,7 +6,16 @@ import re
 
 from .constants import *
 
+"""This class is used like a json object in that it acts as a dictionary to
+store all metrics that also has a constructor and methods for encapsulation
+and ease. 
 
+Repository's main purpose as a real python class is to encapsulate the mapping
+of the db ids in augur to the repos we are trying to gather metrics for.
+
+Arguments:
+    repo_git_url: Github url
+"""
 class Repository:
     def __init__(self, repo_git_url):
 

@@ -4,10 +4,20 @@ import requests
 
 from .constants import *
 
+"""This class is used like a json object in that it acts as a dictionary to
+store all metrics that also has a constructor and methods for encapsulation
+and ease. 
 
+GithubOrg's main purpose as a real python class is to encapsulate the mapping
+of db ids in CHAOSS/augur to the orgs we are trying to gather metrics for.
+
+Arguments:
+    organization_login: Github org login i.e. 'DSACMS'
+"""
 class GithubOrg:
     def __init__(self, organization_login):
         self.login = organization_login
+        self
 
         #Get the group id from augur
         augur_util_endpoint = f"https://ai.chaoss.io/api/unstable/owner/repo_groups"
