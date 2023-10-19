@@ -13,32 +13,40 @@ from .constants import *
 class SimpleMetric:
     # Url format should be in the vein of 'https://api.github.com/repos/{owner}/{repo}/issues?state=all'
     # then url.format(**data)
-    def __init__(self, name, needed_parameters, endpoint_url, return_values, token=None):
+    def __init__(self, name, needed_parameters, endpoint_url, return_values, token=None, method = 'GET'):
         self.name = name
         self.return_values = return_values
         self.url = endpoint_url
 
         self.needed_parameters = needed_parameters
-
+        self.method = method
         if token:
             self.headers = {"Authorization": f"bearer {token}"}
         else:
             self.headers = None
 
-    def get_values(self, params=None):
-        if params and len(params) > 0:
+    def hit_metric(self,params=None):
+        requestParams = params
+        if params and len(params) > 0 and method == 'GET':
             self.url = self.url.format(**params)
+            requestParams = None
 
         if self.headers:
-            response = requests.post(self.url, self.headers)
+            response = requests.request(self.method,self.url,params=requestParams,headers=self.headers)
         else:
-            response = requests.post(self.url)
+            response = requests.request(self.method,self.url,params=requestParams)
 
         response_json = json.loads(response.text)
+
+        return response_json
+
+    def get_values(self, params=None):
+        
+        metric_json = self.hit_metric(params=params)
         toReturn = {}
 
         for returnLabel, apiLabel in self.return_values:
-            toReturn[returnLabel] = response_json[apiLabel]
+            toReturn[returnLabel] = metric_json[apiLabel]
 
         return toReturn
 
@@ -105,23 +113,16 @@ class GraphqlMetric(SimpleMetric):
 
 
 class RangeMetric(SimpleMetric):
-    def __init__(self, name, needed_parameters, endpoint_url, return_values, token=None):
-        super().__init__(name, needed_parameters, endpoint_url, return_values, token=token)
+    def __init__(self, name, needed_parameters, endpoint_url, return_values, token=None, method = 'GET'):
+        super().__init__(name, needed_parameters, endpoint_url, return_values, token=token,method=method)
 
     def get_values(self, params=None):
-        if params and len(params) > 0:
-            self.url = self.url.format(**params)
+        metric_json = self.hit_metric(params=params)
 
-        if self.headers:
-            response = requests.post(self.url, self.headers)
-        else:
-            response = requests.post(self.url)
-
-        response_json = json.loads(response.text)
         toReturn = {}
 
         for returnLabel, apiLabel in self.return_values:
             toReturn[returnLabel] = sum([item[apiLabel]
-                                        for item in response_json])
+                                        for item in metric_json])
 
         return toReturn
