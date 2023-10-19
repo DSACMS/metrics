@@ -27,14 +27,12 @@ class GithubOrg:
         response_dict = json.loads(response.text)
 
         try:
-            for group in response_dict:
-                if group["rg_name"] == self.login:
-                    self.repo_group_id = group["repo_group_id"]
-                    break
+            #Get the item in the list that matches the login of the github org
+            group_id = next((item for item in response_dict if item["rg_name"] == self.login),None)
             
-            self.repo_group_id = None
+            self.repo_group_id = group_id
         
-        except Exception as e:
+        except ValueError as e:
             self.repo_group_id = None
         
 
