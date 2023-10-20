@@ -22,8 +22,6 @@ class GithubOrg:
         augur_util_endpoint = f"https://ai.chaoss.io/api/unstable/repo-groups"
 
         response = requests.get(augur_util_endpoint)
-
-        response = requests.get(augur_util_endpoint)
         response_dict = json.loads(response.text)
 
         try:
