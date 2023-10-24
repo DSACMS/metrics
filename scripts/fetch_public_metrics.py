@@ -17,7 +17,16 @@ orgs_tracked = set()
 # Tracks of all the public repositories within our DSACMS organization
 repos_tracked = set()
 
+"""This method serves to iterate through previously collected metric
+data that is associated with a repo and derive the cumulative metric data
+for the whole organization instead of the repository. 
 
+This is mainly to avoid using more api calls than we have to.
+
+Arguments:
+    repo_list: List of all repos with metrics
+    org: The github org to add metrics to
+"""
 def add_info_to_org_from_list_of_repos(repo_list, org):
      
     #Define counts to update based on tracked repositories. 
@@ -37,7 +46,7 @@ def add_info_to_org_from_list_of_repos(repo_list, org):
     #Add repo data to org that repo is a part of
     for repo in repo_list:
         #Check for membership
-        if repo.needed_parameters["repo_group_id"] == org.needed_parameters["repo_group_id"]:
+        if repo.needed_parameters["repo_group_id"] == org.needed_params["repo_group_id"]:
             #Add metric data.
             for key in org_counts.keys():
                 raw_count = repo.metric_data.get(key)
