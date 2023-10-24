@@ -2,6 +2,7 @@ import datetime
 import os
 from .metrics import SimpleMetric, GraphqlMetric, RangeMetric
 from .repos import Repository
+from .orgs import GithubOrg
 import json
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
@@ -18,7 +19,10 @@ with open(os.path.join(PATH_TO_METADATA, "projects_tracked.json"), "r") as file:
     tracking_file = json.load(file)
 
 
-ALL_ORGS = tracking_file["orgs"]  # Track orgs and all its repos e.g. DSACMS
+ALL_ORGS = []
+for org in tracking_file["orgs"]:
+  # Track orgs and all its repos e.g. DSACMS
+  ALL_ORGS.append(GithubOrg(org))
 
 repo_urls = []  # Track specific repositories e.g. ['dsacms.github.io']
 
@@ -40,7 +44,10 @@ PERIODIC_METRICS = []
 # Classification metrics
 ADVANCED_METRICS = []
 
-githubGraphqlQuery = """
+#Metrics gathered by org instead of by repo
+ORG_METRICS = []
+
+repoGithubGraphqlQuery = """
 query ($repo: String!, $owner: String!) {
   repository(name: $repo, owner: $owner) {
     description,
@@ -100,7 +107,7 @@ query ($repo: String!, $owner: String!) {
 """
 
 
-SIMPLE_METRICS.append(GraphqlMetric("githubGraphqlSimpleCounts", ["repo", "owner"], githubGraphqlQuery,
+SIMPLE_METRICS.append(GraphqlMetric("githubGraphqlSimpleCounts", ["repo", "owner"], repoGithubGraphqlQuery,
                                     {"commits_count": ["data", "repository", "defaultBranchRef", "target", "history", "totalCount"],
                                      "issues_count": ["data", "repository", "issues", "totalCount"],
                                      "open_issues_count": ["data", "repository", "openIssues", "totalCount"],
@@ -117,3 +124,31 @@ SIMPLE_METRICS.append(GraphqlMetric("githubGraphqlSimpleCounts", ["repo", "owner
 newContributorsofCommits = "https://ai.chaoss.io/api/unstable/repos/{repo_id}/pull-requests-merge-contributor-new?period={period}&begin_date={begin_date}&end_date={end_date}"
 PERIODIC_METRICS.append(RangeMetric("newContributorsofCommits", ["repo_id", "period", "begin_date", "end_date"], newContributorsofCommits,
                                     {"new_commit_contributor": "count"}))
+
+orgGithubGraphqlQuery = """
+query ($org_login: String!) {
+  organization(login: $org_login) {
+    createdAt,
+    avatarUrl,
+    description,
+    email,
+    isVerified,
+    location,
+    twitterUsername
+    repositories(first: 1)
+    {
+      totalCount
+    }
+  }
+}
+"""
+ORG_METRICS.append(GraphqlMetric("githubGraphqlOrgSimple", ["org_login"], orgGithubGraphqlQuery,
+                                {"timestampCreatedAt" : ["data", "organization", "createdAt"],
+                                 "avatar_url" : ["data", "organization", "avatarUrl"],
+                                 "description" : ["data", "organization", "description"],
+                                 "email" : ["data", "organization", "email"],
+                                 "is_verified" : ["data", "organization", "isVerified"],
+                                 "location" : ["data", "organization", "location"],
+                                 "twitter_username" : ["data", "organization", "twitterUsername"],
+                                 "repo_count" : ["data", "organization", "repositories", "totalCount"]
+                                }, token=TOKEN))
