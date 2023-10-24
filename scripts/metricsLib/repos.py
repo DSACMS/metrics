@@ -6,7 +6,16 @@ import re
 
 from .constants import *
 
+"""This class serves to manage the parameter and metric data of a Repository.
+It stores parameter and metric data in two seperate dictionaries for easy JSON 
+conversion.
 
+Repository's main purpose as a real python class is to encapsulate the mapping
+of the db ids in augur to the repos we are trying to gather metrics for.
+
+Arguments:
+    repo_git_url: Github url
+"""
 class Repository:
     def __init__(self, repo_git_url):
 
@@ -29,6 +38,21 @@ class Repository:
         except Exception as e:
             self.repo_id = None
             self.repo_group_id = None
+        
+
+        #Prepare params
+        self.needed_parameters = {
+            "repo": self.name,
+            "owner": self.repo_owner,
+            "repo_id": self.repo_id,
+            "repo_group_id": self.repo_group_id
+        }
+
+        #Prepare dict of metric data.
+        self.metric_data = {
+            "url" : self.url,
+            "owner": self.repo_owner
+        }
 
     def get_repo_owner_and_name(self, repo_http_url):
         """ Gets the owner and repo from a url.
@@ -54,8 +78,6 @@ class Repository:
         return owner, repo
 
     def store_metrics(self, info):
-        # Use all raw dict items as attributes of the repo.
+        
         for field, metric in info.items():
-            # self.field = metric
-            # print(f"field: {field}, metric: {metric}")
-            setattr(self, field, metric)
+            self.metric_data[field] = metric
