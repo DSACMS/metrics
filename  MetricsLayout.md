@@ -25,16 +25,10 @@ Shows various weekly statistics by group and then by repo when the user scrolls 
 
 The monthly page can show the same metrics over a month. 
 
-# Good Augur endpoints to use in the future for metrics and reports.
+# Conditional Metrics
 
-Weekly Diff endpoints:
-    1. https://oss-augur.readthedocs.io/en/dev/rest-api/api.html#operation/New%20Contributors%20of%20Commits%20(Repo)
-    2. https://oss-augur.readthedocs.io/en/dev/rest-api/api.html#operation/Issues%20New%20(Repo)
-    3. pull_request_average_commit_counts
-    4. pull_request_average_time_to_responses_and_close 
-    5. https://oss-augur.readthedocs.io/en/dev/rest-api/api.html#operation/New%20Contributors%20(Repo%20Group)
-    6. https://oss-augur.readthedocs.io/en/dev/rest-api/api.html#operation/New%20Contributor%20Counts%20Bar%20Chart
-
-:. Note: It Seems that there is no diff endpoint for pull requests created in Augur at the moment.
-
-We should probably calculate highlights on our end since it should be specialized to our use case.
+Some metrics should only be displayed or fetched on a conditional basis.
+For example if a repo has more than 5 stars on github then they are 
+considered to be actually using github for collaboration and then things
+like pull requests, issues, new contributors can have more advanced useful
+metrics.
