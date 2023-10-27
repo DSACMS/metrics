@@ -1,0 +1,57 @@
+---
+layout: base
+---
+    {% comment %} <script type="module" src="/assets/js/projects.js"></script> {% endcomment %}
+    <div class="grid-container">
+      <p>
+        The Centers for Medicare and Medicaid Services develops or supports many open-source projects. Here are some of
+        them:
+      </p>
+      {% comment %} <div class="margin-bottom-2">
+        <label class="usa-label" for="filter-input">Filter</label>
+        <div class="usa-input-group width-full maxw-none">
+          <div class="usa-input-prefix" aria-hidden="true">
+            <svg aria-hidden="true" role="img" focusable="false" class="usa-icon">
+              <use xlink:href="/assets/img/sprite.svg#search"></use>
+            </svg>
+          </div>
+          <input class="usa-input" id="filter-input" name="filter-input">
+        </div>
+      </div> {% endcomment %}
+      <ul class="usa-card-group flex-align-stretch">
+        {% for repo in data.data.user.repositories.nodes %}
+          <li class="usa-card project-card tablet:grid-col-8">
+            <div class="usa-card__container">
+              <div class="usa-card__header">
+                <h2 class="usa-card__heading">
+                {% comment %} {{repo.owner.login}}/ {% endcomment %}
+                  <a href="{{repo.name}}/" class="text-no-underline">{{ repo.name }}</a>
+                  {% comment %} {% if repo.category %}
+                    <span class="usa-tag bg-{{repo.categoryColor}} usa-tag--big">{{ repo.categoryName }}</span>
+                  {% endif %} {% endcomment %}
+                </h2>
+              </div>
+              <div class="usa-card__body">
+                <div>{{ repo.description }}</div>
+              </div>
+              <div class="usa-card__footer" style="display: inline-block;">
+                <div class="cmsopen-star-count">
+                  <svg class="usa-icon" aria-labelledby="star-count-{{repo.name}}-title" role="img">
+                    <title id="github-{{repo.name}}-title"> Star Count</title>
+                    <use xlink:href="/assets/img/sprite.svg#star"></use>
+                  </svg>
+                  <span> {{ repo.stargazerCount }} </span>
+                </div>
+                <div class="cmsopen-fork-count">
+                    <svg class="usa-icon" aria-labelledby="fork-count-{{repo.name}}-title" role="img">
+                      <title id="github-{{repo.name}}-title"> Fork Count</title>
+                      {% lucide "git-fork" %}
+                    </svg>
+                    <span> {{ repo.forkCount }} </span>
+                  </div>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
