@@ -70,8 +70,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyVitePlugin)
   eleventyConfig.addPlugin(lucideIcons, {
     "class": "custom-class",
-    "width": 16,
-    "height": 16,
+    "width": 18,
+    "height": 18,
     "stroke": "currentColor",
     "stroke-width": 2
 });
