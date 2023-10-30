@@ -4,8 +4,7 @@ layout: base
     {% comment %} <script type="module" src="/assets/js/projects.js"></script> {% endcomment %}
     <div class="grid-container">
       <p>
-        The Centers for Medicare and Medicaid Services develops or supports many open-source projects. Here are some of
-        them:
+        The Centers for Medicare and Medicaid Services develops and supports many open-source projects found in our various GitHub Organizations.
       </p>
       {% comment %} <div class="margin-bottom-2">
         <label class="usa-label" for="filter-input">Filter</label>
@@ -20,7 +19,7 @@ layout: base
       </div> {% endcomment %}
       <ul class="usa-card-group flex-align-stretch">
         {% for repo in data.data.user.repositories.nodes %}
-          <li class="usa-card project-card tablet:grid-col-8">
+          <li class="usa-card project-card tablet:grid-col-12">
             <div class="usa-card__container">
               <div class="usa-card__header">
                 <h2 class="usa-card__heading">
@@ -34,21 +33,21 @@ layout: base
               <div class="usa-card__body">
                 <div>{{ repo.description }}</div>
               </div>
-              <div class="usa-card__footer" style="display: inline-block;">
-                <div class="cmsopen-star-count">
+              <div class="usa-card__footer">
+                <span class="cmsopen-star-count" style="margin-right: 10px;">
                   <svg class="usa-icon" aria-labelledby="star-count-{{repo.name}}-title" role="img">
                     <title id="github-{{repo.name}}-title"> Star Count</title>
-                    <use xlink:href="/assets/img/sprite.svg#star"></use>
+                    {% lucide "star" %}
                   </svg>
                   <span> {{ repo.stargazerCount }} </span>
-                </div>
-                <div class="cmsopen-fork-count">
+                </span>
+                <span class="cmsopen-fork-count">
                     <svg class="usa-icon" aria-labelledby="fork-count-{{repo.name}}-title" role="img">
                       <title id="github-{{repo.name}}-title"> Fork Count</title>
                       {% lucide "git-fork" %}
                     </svg>
                     <span> {{ repo.forkCount }} </span>
-                  </div>
+                  </span>
               </div>
             </div>
           </li>
