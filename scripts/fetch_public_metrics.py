@@ -17,6 +17,45 @@ orgs_tracked = set()
 # Tracks of all the public repositories within our DSACMS organization
 repos_tracked = set()
 
+"""This method serves to iterate through previously collected metric
+data that is associated with a repo and derive the cumulative metric data
+for the whole organization instead of the repository. 
+
+This is mainly to avoid using more api calls than we have to.
+
+Arguments:
+    repo_list: List of all repos with metrics
+    org: The github org to add metrics to
+"""
+def add_info_to_org_from_list_of_repos(repo_list, org):
+     
+    #Define counts to update based on tracked repositories. 
+    org_counts = {"commits_count": 0,
+                 "issues_count": 0,
+                 "open_issues_count": 0,
+                 "closed_issues_count": 0,
+                 "pull_requests_count": 0,
+                 "open_pull_requests_count": 0,
+                 "merged_pull_requests_count": 0,
+                 "closed_pull_requests_count": 0,
+                 "forks_count": 0,
+                 "stargazers_count": 0,
+                 "watchers_count": 0
+                 }
+
+    #Add repo data to org that repo is a part of
+    for repo in repo_list:
+        #Check for membership
+        if repo.needed_parameters["repo_group_id"] == org.needed_params["repo_group_id"]:
+            #Add metric data.
+            for key in org_counts.keys():
+                raw_count = repo.metric_data.get(key)
+                if raw_count:
+                    org_counts[key] += raw_count
+    
+    org.store_metrics(org_counts)
+
+
 """
 Purpose: repo_data_to_json will convert data from string to json format such that we can 
 access the counts for the desired metrics in a repo
@@ -24,7 +63,6 @@ Input: Requires a repository name defined from graphql_queries
 Returns: json dict of repo data
 """
 repos = {}
-
 
 def repo_data_to_json(repositories):
     for repo in repositories:
@@ -68,7 +106,7 @@ for info, obj in all_repo_metrics_info.items():
     print(obj)
 print(type(all_repo_metrics_info))
 
-# Capture all metric data from all Github orgs
+# Capture all metric data for all Github orgs
 for org in ALL_ORGS:
     
     metrics_results = {}
@@ -82,7 +120,10 @@ for org in ALL_ORGS:
         metrics_results.update(metric.get_values(params))
     
     org.store_metrics(metrics_results)
+
+    add_info_to_org_from_list_of_repos(ALL_REPOS,org) 
     all_org_metrics_info[org.login] = org.metric_data
+
 
 for info, obj in all_org_metrics_info.items():
     print(obj)
