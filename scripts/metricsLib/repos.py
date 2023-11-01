@@ -4,8 +4,6 @@ import requests
 import datetime
 import re
 
-from .constants import *
-
 """This class serves to manage the parameter and metric data of a Repository.
 It stores parameter and metric data in two seperate dictionaries for easy JSON 
 conversion.
