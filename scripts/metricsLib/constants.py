@@ -1,14 +1,15 @@
 import datetime
 import json
 import os
+from pathlib import Path
 from metricsLib import repos
 from metricsLib import orgs
 from metricsLib.metrics import GraphqlMetric, RangeMetric
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 # Folder Names to send over our projects tracked data
-PATH_TO_METRICS_DATA = "_data"
-PATH_TO_METADATA = "_metadata"
+PATH_TO_METRICS_DATA = (Path(__file__).parent / "../../app/site/_data").resolve()
+PATH_TO_METADATA = Path("_metadata").resolve()
 DATESTAMP = datetime.datetime.now().date().isoformat()
 TOKEN = os.getenv("GITHUB_TOKEN")
 
