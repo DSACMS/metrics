@@ -1,36 +1,18 @@
-name: Update data
-
-on:
-  workflow_dispatch: {}
-  schedule:
-    # Run Mondays at 2:15 am
-    - cron: "15 2 * * 0"
-
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
 jobs:
-  update:
+  Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      # update stats
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-      - name: cache pip
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-      - run: pip install -r requirements.txt
-      - run: ./update.sh
-        env:
-          OAUTH_TOKEN: ${{ secrets.GH_API_TOKEN }}
-          GH_USERNAME: ${{ secrets.GH_USERNAME }}
-      - run: |
-          git config user.name 'GitHub Actions'
-          git config user.email 'actions@users.noreply.github.com'
-          git add -A
-          timestamp=$(date -u)
-          git commit -m "update data: ${timestamp}" || exit 0
-          git push
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}.
