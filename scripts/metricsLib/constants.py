@@ -1,9 +1,9 @@
 import datetime
 import json
 import os
-from repos import Repository
-from orgs import GithubOrg
-from metrics import GraphqlMetric, RangeMetric
+from metricsLib import repos
+from metricsLib import orgs
+from metricsLib.metrics import GraphqlMetric, RangeMetric
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 # Folder Names to send over our projects tracked data
