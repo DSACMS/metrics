@@ -9,14 +9,6 @@ from metricsLib.repos import Repository
 from metricsLib.orgs import GithubOrg
 import re
 
-# PROJECTS_TRACKED makes a json file that stores the list of orgs and their
-# repos that we will be collecting metrics for
-PROJECTS_TRACKED = {}
-orgs_tracked = set()
-
-# Tracks of all the public repositories within our DSACMS organization
-repos_tracked = set()
-
 """This method serves to iterate through previously collected metric
 data that is associated with a repo and derive the cumulative metric data
 for the whole organization instead of the repository. 
@@ -70,64 +62,65 @@ def repo_data_to_json(repositories):
         repos[repo] = repo_json
 
 
-# Filter for DSACMS organization dataset
-# original_organization_data = public_repo_data["data"]["organization"]["original"]["nodes"]
-# print(original_organization_data)
+def get_all_parsed_data(org_name_list, repo_name_list):
 
-# Store  the name of repo and the counts for desired Github metrics
-all_repo_metrics_info = {}
-all_org_metrics_info = {}
-# Holds an org name as key and all the metrics per repo in that org
-DATA_JSON = {}
+    all_orgs = []
+    for org in org_name_list:
+        # Track orgs and all its repos e.g. DSACMS
+        all_orgs.append(GithubOrg(org))
 
-#  Capture the metric data  from all repos
-#  Returns a nested dictionary
-for repo in ALL_REPOS:
+    all_repos = []
+    # Create repo objects
+    for repo_url in repo_name_list:
+        repo_obj = Repository(repo_url)
+        all_repos.append(repo_obj)
 
-    print(repo.needed_parameters)
-    metrics_results = {}
+    #  Capture the metric data  from all repos
+    #  Returns a nested dictionary
+    for repo in all_repos:
 
-    # Get info from all metrics for each repo
-    for metric in SIMPLE_METRICS:
+        print(repo.needed_parameters)
+        metrics_results = {}
 
-        params = {}
-        # Get the parameter for this metric
-        for param in metric.needed_parameters:
-            params[param] = repo.needed_parameters[param]
+        # Get info from all metrics for each repo
+        for metric in SIMPLE_METRICS:
 
-        metrics_results.update(metric.get_values(params))
-    # repo_metric_info = output_repository_info(repo)
+            params = {}
+            # Get the parameter for this metric
+            for param in metric.needed_parameters:
+                params[param] = repo.needed_parameters[param]
 
-    repo.store_metrics(metrics_results)
-    all_repo_metrics_info[repo.url] = repo.metric_data
+            metrics_results.update(metric.get_values(params))
+        # repo_metric_info = output_repository_info(repo)
 
-# print(all_repo_metrics_info)
-for info, obj in all_repo_metrics_info.items():
-    print(obj)
-print(type(all_repo_metrics_info))
+        repo.store_metrics(metrics_results)
 
-# Capture all metric data for all Github orgs
-for org in ALL_ORGS:
+    # print(all_repo_metrics_info)
+    for obj in all_repos:
+        print(obj.metric_data)
+
+    # Capture all metric data for all Github orgs
+    for org in all_orgs:
+
+        metrics_results = {}
+
+        for metric in ORG_METRICS:
+            params = {}
+
+            for param in metric.needed_parameters:
+                params[param] = org.needed_params[param]
+
+            metrics_results.update(metric.get_values(params))
+
+        org.store_metrics(metrics_results)
+
+        add_info_to_org_from_list_of_repos(all_repos,org)
+
+
+    for obj in all_orgs:
+        print(obj.metric_data)
     
-    metrics_results = {}
-
-    for metric in ORG_METRICS:
-        params = {}
-
-        for param in metric.needed_parameters:
-            params[param] = org.needed_params[param]
-        
-        metrics_results.update(metric.get_values(params))
-    
-    org.store_metrics(metrics_results)
-
-    add_info_to_org_from_list_of_repos(ALL_REPOS,org) 
-    all_org_metrics_info[org.login] = org.metric_data
-
-
-for info, obj in all_org_metrics_info.items():
-    print(obj)
-print(type(all_org_metrics_info))
+    return all_orgs, all_repos
 
 # DATA_JSON["DSACMS"] = all_repo_metrics_info
 #
