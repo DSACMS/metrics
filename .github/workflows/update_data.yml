@@ -1,10 +1,7 @@
 name: Update data
 
 on:
-  workflow_dispatch: {}
-  schedule:
-    # Run Mondays at 2:15 am
-    - cron: "15 2 * * 0"
+  [push]
 
 jobs:
   update:
@@ -25,7 +22,7 @@ jobs:
       - run: pip install -r requirements.txt
       - run: ./update.sh
         env:
-          OAUTH_TOKEN: ${{ secrets.GH_API_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USERNAME: ${{ secrets.GH_USERNAME }}
       - run: |
           git config user.name 'GitHub Actions'
