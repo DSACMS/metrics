@@ -1,9 +1,9 @@
 import datetime
-import os
-from .metrics import SimpleMetric, GraphqlMetric, RangeMetric
-from .repos import Repository
-from .orgs import GithubOrg
 import json
+import os
+from repos import Repository
+from orgs import GithubOrg
+from metrics import GraphqlMetric, RangeMetric
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 # Folder Names to send over our projects tracked data
@@ -13,27 +13,6 @@ DATESTAMP = datetime.datetime.now().date().isoformat()
 TOKEN = os.getenv("GITHUB_TOKEN")
 
 # The general procedure is to execute all metrics against all repos and orgs
-
-# TODO: Create a read repos-to-include.txt
-with open(os.path.join(PATH_TO_METADATA, "projects_tracked.json"), "r") as file:
-    tracking_file = json.load(file)
-
-
-ALL_ORGS = []
-for org in tracking_file["orgs"]:
-  # Track orgs and all its repos e.g. DSACMS
-  ALL_ORGS.append(GithubOrg(org))
-
-repo_urls = []  # Track specific repositories e.g. ['dsacms.github.io']
-
-for _, repo_list in tracking_file["Open Source Projects"].items():
-    repo_urls.extend(repo_list)
-
-ALL_REPOS = []
-# Create repo objects
-for repo_url in repo_urls:
-    repo_obj = Repository(repo_url)
-    ALL_REPOS.append(repo_obj)
 
 
 SIMPLE_METRICS = []
@@ -47,7 +26,7 @@ ADVANCED_METRICS = []
 #Metrics gathered by org instead of by repo
 ORG_METRICS = []
 
-repoGithubGraphqlQuery = """
+REPO_GITHUB_GRAPHQL_QUERY = """
 query ($repo: String!, $owner: String!) {
   repository(name: $repo, owner: $owner) {
     description,
@@ -107,7 +86,7 @@ query ($repo: String!, $owner: String!) {
 """
 
 
-SIMPLE_METRICS.append(GraphqlMetric("githubGraphqlSimpleCounts", ["repo", "owner"], repoGithubGraphqlQuery,
+SIMPLE_METRICS.append(GraphqlMetric("githubGraphqlSimpleCounts", ["repo", "owner"], REPO_GITHUB_GRAPHQL_QUERY,
                                     {"commits_count": ["data", "repository", "defaultBranchRef", "target", "history", "totalCount"],
                                      "issues_count": ["data", "repository", "issues", "totalCount"],
                                      "open_issues_count": ["data", "repository", "openIssues", "totalCount"],

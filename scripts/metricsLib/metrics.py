@@ -5,7 +5,6 @@ from requests import exceptions
 import datetime
 from functools import reduce
 import operator
-from .constants import *
 
 # Simple metric that can be represented by a count or value.
 
@@ -27,7 +26,7 @@ class SimpleMetric:
 
     def hit_metric(self,params=None):
         requestParams = params
-        if params and len(params) > 0 and method == 'GET':
+        if params and len(params) > 0 and self.method == 'GET':
             self.url = self.url.format(**params)
             requestParams = None
 
