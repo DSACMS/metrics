@@ -1,9 +1,7 @@
-import datetime
-import json
 import os
 import shutil
 
-from metricsLib.constants import BASE_PATH, PATH_TO_METRICS_DATA
+from metricsLib.constants import PATH_TO_METRICS_DATA
 
 
 def clear_json_data():
