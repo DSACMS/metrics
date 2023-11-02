@@ -29,7 +29,6 @@ jobs:
       - run: ./update.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_USERNAME: ${{ secrets.GH_USERNAME }}
       - run: |
           git config user.name 'GitHub Actions'
           git config user.email 'actions@users.noreply.github.com'
