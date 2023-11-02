@@ -7,10 +7,11 @@ org: DSACMS
 reportID: REPORT-2023-11-01
 datestampThisWeek: 2023-11-01
 datestampLastWeek: 2023-10-25
+# TODO: Update front matter fields & data above once we have data/graphs for reports.
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
-    <h2> Table with Summary Statistics </h2>
+    <h2> Summary Table </h2>
     <thead>
       <tr>
         <th scope="col">Metric</th>
