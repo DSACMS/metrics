@@ -1,20 +1,22 @@
-import os
+import re
 import json
 import requests
-import datetime
-import re
 
-"""This class serves to manage the parameter and metric data of a Repository.
-It stores parameter and metric data in two seperate dictionaries for easy JSON 
-conversion.
 
-Repository's main purpose as a real python class is to encapsulate the mapping
-of the db ids in augur to the repos we are trying to gather metrics for.
 
-Arguments:
-    repo_git_url: Github url
-"""
 class Repository:
+    """
+    This class serves to manage the parameter and metric data of a Repository.
+    It stores parameter and metric data in two seperate dictionaries for easy JSON 
+    conversion.
+    
+    Repository's main purpose as a real python class is to encapsulate the mapping
+    of the db ids in augur to the repos we are trying to gather metrics for.
+    
+    Arguments:
+        repo_git_url: Github url
+    
+    """
     def __init__(self, repo_git_url):
 
         self.url = repo_git_url

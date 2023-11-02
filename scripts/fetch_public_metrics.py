@@ -1,26 +1,20 @@
-import datetime
-
-import json
-import os
-import requests
-
-from metricsLib.constants import *
+from metricsLib.constants import SIMPLE_METRICS, ORG_METRICS
 from metricsLib.repos import Repository
 from metricsLib.orgs import GithubOrg
-import re
 
-"""This method serves to iterate through previously collected metric
-data that is associated with a repo and derive the cumulative metric data
-for the whole organization instead of the repository. 
 
-This is mainly to avoid using more api calls than we have to.
-
-Arguments:
-    repo_list: List of all repos with metrics
-    org: The github org to add metrics to
-"""
 def add_info_to_org_from_list_of_repos(repo_list, org):
-     
+    """
+    This method serves to iterate through previously collected metric
+    data that is associated with a repo and derive the cumulative metric data
+    for the whole organization instead of the repository. 
+
+    This is mainly to avoid using more api calls than we have to.
+
+    Arguments:
+        repo_list: List of all repos with metrics
+        org: The github org to add metrics to
+    """
     #Define counts to update based on tracked repositories. 
     org_counts = {"commits_count": 0,
                  "issues_count": 0,
@@ -46,20 +40,6 @@ def add_info_to_org_from_list_of_repos(repo_list, org):
                     org_counts[key] += raw_count
     
     org.store_metrics(org_counts)
-
-
-"""
-Purpose: repo_data_to_json will convert data from string to json format such that we can 
-access the counts for the desired metrics in a repo
-Input: Requires a repository name defined from graphql_queries
-Returns: json dict of repo data
-"""
-repos = {}
-
-def repo_data_to_json(repositories):
-    for repo in repositories:
-        repo_json = json.loads(repo)
-        repos[repo] = repo_json
 
 
 def get_all_parsed_data(org_name_list, repo_name_list):
