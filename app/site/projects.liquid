@@ -6,12 +6,12 @@ layout: base
         The Centers for Medicare and Medicaid Services develops and supports many open-source projects found in our various GitHub Organizations.
       </p>
       <ul class="usa-card-group flex-align-stretch">
-        {% for repo in data.data.user.repositories.nodes %}
+        {% for repo in projects %}
           <li class="usa-card project-card tablet:grid-col-12">
             <div class="usa-card__container">
               <div class="usa-card__header">
                 <h2 class="usa-card__heading">
-                  <a href="{{repo.name}}/" class="text-no-underline">{{ repo.name }}</a>
+                  <a href="{{repo.org}}/{{repo.name}}" class="text-no-underline">{{ repo.name }}</a>
                 </h2>
               </div>
               <div class="usa-card__body">
