@@ -2,9 +2,8 @@ import os
 import json
 import requests
 
-from .constants import *
-
-"""This class serves to manage the parameter and metric data of a GithubOrg.
+"""
+This class serves to manage the parameter and metric data of a GithubOrg.
 It stores parameter and metric data in two seperate dictionaries for easy JSON 
 conversion.
 
@@ -19,7 +18,7 @@ class GithubOrg:
         self.login = organization_login
 
         #Get the group id from augur
-        augur_util_endpoint = f"https://ai.chaoss.io/api/unstable/repo-groups"
+        augur_util_endpoint = "https://ai.chaoss.io/api/unstable/repo-groups"
 
         response = requests.get(augur_util_endpoint)
         response_dict = json.loads(response.text)

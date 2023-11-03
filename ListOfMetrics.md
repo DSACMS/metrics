@@ -7,7 +7,7 @@ Simple metrics:
 1. githubGraphqlSimpleCounts - Gets counts of things like commits, issues, pull requests, forks, etc. for a repo. A simple fetch operation
 
 
-## Augur metrics
+## Perioidic metrics
 
 Weekly Diff endpoints:
 
