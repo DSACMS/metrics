@@ -1,2 +1,4 @@
-echo "Use Python 3"
-python3 scripts/fetch_public_metrics.py
+#!/bin/bash
+pwd
+cd scripts
+python3 refresh_metrics.py
