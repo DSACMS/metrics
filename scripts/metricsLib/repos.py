@@ -1,7 +1,7 @@
 import re
 import json
 import requests
-
+from metricsLib.constants import AUGUR_HOST
 
 
 class Repository:
@@ -27,7 +27,7 @@ class Repository:
         self.name = repo_name
 
         # Get the repo_id and group_id.
-        augur_util_endpoint = f"https://ai.chaoss.io/api/unstable/owner/{self.repo_owner}/repo/{self.name}"
+        augur_util_endpoint = f"{AUGUR_HOST}/owner/{self.repo_owner}/repo/{self.name}"
 
         response = requests.post(augur_util_endpoint)
         response_json = json.loads(response.text)

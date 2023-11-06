@@ -9,6 +9,7 @@ PATH_TO_METRICS_DATA = (Path(__file__).parent / "../../app/site/_data").resolve(
 PATH_TO_METADATA = Path("_metadata").resolve()
 DATESTAMP = datetime.datetime.now().date().isoformat()
 TOKEN = os.getenv("GITHUB_TOKEN")
+AUGUR_HOST = os.getenv("AUGUR_HOST")
 
 # The general procedure is to execute all metrics against all repos and orgs
 
@@ -98,7 +99,7 @@ SIMPLE_METRICS.append(GraphqlMetric("githubGraphqlSimpleCounts", ["repo", "owner
                                      "watchers_count": ["data", "repository", "watchers", "totalCount"]
                                      }, token=TOKEN))
 
-newContributorsofCommits = "https://ai.chaoss.io/api/unstable/repos/{repo_id}/pull-requests-merge-contributor-new?period={period}&begin_date={begin_date}&end_date={end_date}"
+newContributorsofCommits = AUGUR_HOST + "/repos/{repo_id}/pull-requests-merge-contributor-new?period={period}&begin_date={begin_date}&end_date={end_date}"
 PERIODIC_METRICS.append(RangeMetric("newContributorsofCommits", ["repo_id", "period", "begin_date", "end_date"], newContributorsofCommits,
                                     {"new_commit_contributor": "count"}))
 
