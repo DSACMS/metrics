@@ -3,9 +3,13 @@ from metricsLib.constants import REPO_REPORT_TEMPLATE
 
 def calc_percent_difference(latest,prev):
     absDiff = abs(latest - prev)
-    dec = absDiff/((latest + prev)/2)
 
-    return dec * 100
+    try:
+        dec = absDiff/((latest + prev)/2)
+    except ZeroDivisionError:
+        dec = 0
+
+    return int(dec * 100)
 
 def generate_repo_report_files(repos):
 
@@ -32,11 +36,16 @@ def generate_repo_report_files(repos):
         ]
 
         for heading in metric_table_headings:
+            prevRecord = 0
+
+            if heading in repo.previous_metric_data.keys():
+                prevRecord = repo.previous_metric_data[heading]
+
             reportValues.update({
                 f"latest_{heading}": repo.metric_data[heading],
-                f"previous_{heading}": repo.previous_metric_data[heading],
-                f"{heading}_diff": repo.metric_data[heading] - repo.previous_metric_data[heading],
-                f"{heading}_diff_percent": calc_percent_difference(repo.metric_data[heading], repo.previous_metric_data[heading])
+                f"previous_{heading}": prevRecord,
+                f"{heading}_diff": repo.metric_data[heading] - prevRecord,
+                f"{heading}_diff_percent": calc_percent_difference(repo.metric_data[heading], prevRecord)
             })
 
         rawReport = REPO_REPORT_TEMPLATE.format(**reportValues)
