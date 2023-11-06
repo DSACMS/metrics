@@ -1,6 +1,10 @@
 import re
 import json
+import os
 import requests
+import pathlib
+from metricsLib.constants import PATH_TO_METRICS_DATA, PATH_TO_REPORTS_DATA
+#// TODO: ADD NAME AND DESC.
 
 
 
@@ -54,6 +58,8 @@ class Repository:
             "owner": self.repo_owner
         }
 
+        self.previous_metric_data = {}
+
     def get_repo_owner_and_name(self, repo_http_url):
         """ Gets the owner and repo from a url.
 
@@ -78,6 +84,16 @@ class Repository:
         return owner, repo
 
     def store_metrics(self, info):
-        
-        for field, metric in info.items():
-            self.metric_data[field] = metric
+        self.metric_data.update(info)
+
+    def get_path_to_data(self,parent_path):
+        parentPath = os.path.join(parent_path, f"{self.repo_owner}/{self.name}")
+        pathlib.Path(parentPath).mkdir(parents=True, exist_ok=True)
+
+        return os.path.join(parent_path, f"{self.repo_owner}/{self.name}/{self.name}_data.json")
+
+    def get_path_to_json_data(self):
+        return self.get_path_to_data(PATH_TO_METRICS_DATA)
+    
+    def get_path_to_report_data(self):
+        return self.get_path_to_data(PATH_TO_REPORTS_DATA)
