@@ -1,3 +1,4 @@
+import json
 from metricsLib.constants import SIMPLE_METRICS, ORG_METRICS
 from metricsLib.repos import Repository
 from metricsLib.orgs import GithubOrg
@@ -42,7 +43,7 @@ def add_info_to_org_from_list_of_repos(repo_list, org):
     org.store_metrics(org_counts)
 
 
-def get_all_parsed_data(org_name_list, repo_name_list):
+def fetch_all_new_metric_data(org_name_list, repo_name_list):
 
     all_orgs = []
     for org in org_name_list:
@@ -101,6 +102,17 @@ def get_all_parsed_data(org_name_list, repo_name_list):
         print(obj.metric_data)
     
     return all_orgs, all_repos
+
+def read_previous_metric_data(repos, orgs):
+    for org in orgs:
+        with open(org.get_path_to_json_data(), "r") as file:
+            prevData = json.load(file)
+            org.previous_metric_data.update(prevData)
+
+    for repo in repos:
+        with open(repo.get_path_to_json_data(), "r") as file:
+            prevData = json.load(file)
+            repo.previous_metric_data.update(prevData)
 
 # DATA_JSON["DSACMS"] = all_repo_metrics_info
 #

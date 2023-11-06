@@ -1,6 +1,8 @@
 import os
 import json
 import requests
+import pathlib
+from metricsLib.constants import PATH_TO_METRICS_DATA
 
 """
 This class serves to manage the parameter and metric data of a GithubOrg.
@@ -43,6 +45,14 @@ class GithubOrg:
             "rg_id" : self.repo_group_id
         }
 
+        self.previous_metric_data = {}
+
     def store_metrics(self,info):
-        for field, metric in info.items():
-            self.metric_data[field] = metric
+        self.metric_data.update(info)
+    
+    def get_path_to_json_data(self):
+        parentPath = os.path.join(PATH_TO_METRICS_DATA, f"{self.login}")
+        pathlib.Path(parentPath).mkdir(parents=True, exist_ok=True)
+        orgPath = os.path.join(parentPath, f"{self.login}_data.json")
+
+        return orgPath
