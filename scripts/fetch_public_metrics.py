@@ -105,14 +105,20 @@ def fetch_all_new_metric_data(org_name_list, repo_name_list):
 
 def read_previous_metric_data(repos, orgs):
     for org in orgs:
-        with open(org.get_path_to_json_data(), "r") as file:
-            prevData = json.load(file)
-            org.previous_metric_data.update(prevData)
+        try:
+            with open(org.get_path_to_json_data(), "r") as file:
+                prevData = json.load(file)
+                org.previous_metric_data.update(prevData)
+        except FileNotFoundError:
+            print(f"Could not find previous data for records for org {org.login}")
 
     for repo in repos:
-        with open(repo.get_path_to_json_data(), "r") as file:
-            prevData = json.load(file)
-            repo.previous_metric_data.update(prevData)
+        try:
+            with open(repo.get_path_to_json_data(), "r") as file:
+                prevData = json.load(file)
+                repo.previous_metric_data.update(prevData)
+        except FileNotFoundError:
+            print(f"Could not find previous data for records for repo {repo.name}")
 
 # DATA_JSON["DSACMS"] = all_repo_metrics_info
 #
