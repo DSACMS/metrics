@@ -1,6 +1,7 @@
 import os
 import json
 import requests
+from metricsLib.constants import AUGUR_HOST
 
 """
 This class serves to manage the parameter and metric data of a GithubOrg.
@@ -18,7 +19,7 @@ class GithubOrg:
         self.login = organization_login
 
         #Get the group id from augur
-        augur_util_endpoint = "https://ai.chaoss.io/api/unstable/repo-groups"
+        augur_util_endpoint = f"{AUGUR_HOST}/repo-groups"
 
         response = requests.get(augur_util_endpoint)
         response_dict = json.loads(response.text)
