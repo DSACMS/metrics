@@ -85,7 +85,8 @@ query ($repo: String!, $owner: String!) {
 
 
 SIMPLE_METRICS.append(GraphqlMetric("githubGraphqlSimpleCounts", ["repo", "owner"], REPO_GITHUB_GRAPHQL_QUERY,
-                                    {"commits_count": ["data", "repository", "defaultBranchRef", "target", "history", "totalCount"],
+                                    {"description": ["data", "repository", "description"],
+                                     "commits_count": ["data", "repository", "defaultBranchRef", "target", "history", "totalCount"],
                                      "issues_count": ["data", "repository", "issues", "totalCount"],
                                      "open_issues_count": ["data", "repository", "openIssues", "totalCount"],
                                      "closed_issues_count": ["data", "repository", "closedIssues", "totalCount"],
