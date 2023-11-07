@@ -5,14 +5,22 @@ layout: base
       <p>
         The Centers for Medicare and Medicaid Services is comprised of many GitHub Organizations.
       </p>
-      <ul class="usa-card-group flex-align-stretch">
+      <ul class="usa-card-group">
         {% for org in organizations %}
-          <li class="usa-card project-card tablet:grid-col-12">
+          <li class="usa-card usa-card--flag desktop:grid-col-6">
             <div class="usa-card__container">
               <div class="usa-card__header">
                 <h2 class="usa-card__heading">
-                  <a href="{{org.login}}" class="text-no-underline">{{ org.login }}</a>
+                  <a href="../{{org.login}}" class="text-no-underline">{{ org.login }}</a>
                 </h2>
+              </div>
+              <div class="usa-card__media usa-card__media--exdent">
+                <div class="usa-card__img">
+                  <img
+                    src="{{org.avatar_url}}"
+                    alt="Organization Avatar"
+                  />
+                </div>
               </div>
               <div class="usa-card__body">
                 <div>{{ org.description }}</div>
