@@ -2,6 +2,7 @@ const fs = require("fs")
 const path = require("path")
 const Image = require("@11ty/eleventy-img")
 const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite")
+const lucideIcons = require("@grimlink/eleventy-plugin-lucide-icons");
 
 async function resizeImage(src, sizes, outputFormat = "png") {
   const stats = await Image(src, {
@@ -67,6 +68,13 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setLiquidOptions({ outputEscape: "escape" })
   eleventyConfig.addPlugin(EleventyVitePlugin)
+  eleventyConfig.addPlugin(lucideIcons, {
+    "class": "custom-class",
+    "width": 17,
+    "height": 17,
+    "stroke": "currentColor",
+    "stroke-width": 2
+});
 
   return {
     dir: {
