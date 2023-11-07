@@ -4,8 +4,6 @@ import os
 import requests
 import pathlib
 from metricsLib.constants import PATH_TO_METRICS_DATA, PATH_TO_REPORTS_DATA
-#// TODO: ADD NAME AND DESC.
-
 
 
 class Repository:
