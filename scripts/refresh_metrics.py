@@ -3,7 +3,6 @@ import pathlib
 import json
 from metricsLib.constants import BASE_PATH, PATH_TO_METADATA, PATH_TO_METRICS_DATA
 from fetch_public_metrics import fetch_all_new_metric_data, read_previous_metric_data
-from clear_old_metrics import clear_all_data
 from gen_reports import generate_repo_report_files
 
 os.umask(0)
@@ -21,9 +20,6 @@ all_orgs, all_repos = fetch_all_new_metric_data(tracking_file["orgs"], repo_urls
 
 #Update objects to also hold old metrics
 read_previous_metric_data(all_repos, all_orgs)
-
-#Delete old data
-clear_all_data()
 
 
 #Save all metrics to files
