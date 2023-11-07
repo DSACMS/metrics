@@ -51,7 +51,8 @@ class Repository:
         #Prepare dict of metric data.
         self.metric_data = {
             "url" : self.url,
-            "owner": self.repo_owner
+            "owner": self.repo_owner,
+            "name": self.name
         }
 
     def get_repo_owner_and_name(self, repo_http_url):
