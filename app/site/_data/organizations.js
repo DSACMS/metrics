@@ -21,7 +21,7 @@ module.exports = function () {
           dataFileName
         );
 
-        // Find and add $project-name_data.json file in the organization directory
+        // Find and add $org-name_data.json file in the organization directory
         if (fs.existsSync(orgDataFilePath)) {
           const orgData = JSON.parse(
             fs.readFileSync(orgDataFilePath, "utf8")
