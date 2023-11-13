@@ -4,6 +4,7 @@ import json
 from metricsLib.constants import BASE_PATH, PATH_TO_METADATA, PATH_TO_METRICS_DATA
 from fetch_public_metrics import fetch_all_new_metric_data, read_previous_metric_data
 from gen_reports import generate_repo_report_files
+from gen_graphs import generate_repo_solid_guage_issue_graph
 
 os.umask(0)
 # TODO: Create a read repos-to-include.txt
@@ -24,6 +25,7 @@ read_previous_metric_data(all_repos, all_orgs)
 
 #Save all metrics to files
 generate_repo_report_files(all_repos)
+generate_repo_solid_guage_issue_graph(all_repos)
 
 for org in all_orgs:
     org_metric_data = json.dumps(org.metric_data,indent=4)
