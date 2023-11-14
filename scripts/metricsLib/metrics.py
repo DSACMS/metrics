@@ -161,6 +161,7 @@ def parse_commits_by_month(*args, **kwargs):
 
     commits_by_month = {}
 
+    #print(metric_json)
     for commit in metric_json:
         #Get the month and year of the commit
         datetime_str = commit['commit']['author']['date']

@@ -142,4 +142,4 @@ ORG_METRICS.append(GraphqlMetric("githubGraphqlOrgSimple", ["org_login"], orgGit
 
 
 commits_endpoint = "https://api.github.com/repos/{owner}/{repo}/commits"
-SIMPLE_METRICS.append(CustomMetric("getCommitsByMonth", ['owner', 'repo'], commits_endpoint,parse_commits_by_month))
+SIMPLE_METRICS.append(CustomMetric("getCommitsByMonth", ['owner', 'repo'], commits_endpoint,parse_commits_by_month, token=TOKEN))

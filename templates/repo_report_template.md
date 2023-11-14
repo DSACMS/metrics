@@ -105,7 +105,7 @@ date_stampLastWeek: {date_stamp}
     </figure>
     <!--- Contributor Activity Line Graph -->
     <figure>
-      <embed type="image/svg+xml" src="/INSERT_PATH_HERE.svg" />
+      <embed type="image/svg+xml" src="_graphs/{repo_owner}/{repo_name}/commit_sparklines_{repo_name}_data.svg" />
     </figure>
   </div>
 </div>
