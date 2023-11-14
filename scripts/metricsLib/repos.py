@@ -1,7 +1,9 @@
 import re
 import json
+import os
 import requests
-from metricsLib.constants import AUGUR_HOST
+import pathlib
+from metricsLib.constants import AUGUR_HOST, PATH_TO_METRICS_DATA, PATH_TO_REPORTS_DATA
 
 
 class Repository:
@@ -55,6 +57,8 @@ class Repository:
             "name": self.name
         }
 
+        self.previous_metric_data = {}
+
     def get_repo_owner_and_name(self, repo_http_url):
         """ Gets the owner and repo from a url.
 
@@ -79,6 +83,16 @@ class Repository:
         return owner, repo
 
     def store_metrics(self, info):
-        
-        for field, metric in info.items():
-            self.metric_data[field] = metric
+        self.metric_data.update(info)
+
+    def get_path_to_data(self,parent_path,extension):
+        parentPath = os.path.join(parent_path, f"{self.repo_owner}/{self.name}")
+        pathlib.Path(parentPath).mkdir(parents=True, exist_ok=True)
+
+        return os.path.join(parent_path, f"{self.repo_owner}/{self.name}/{self.name}_data.{extension}")
+
+    def get_path_to_json_data(self):
+        return self.get_path_to_data(PATH_TO_METRICS_DATA,"json")
+    
+    def get_path_to_report_data(self):
+        return self.get_path_to_data(PATH_TO_REPORTS_DATA,"md")
