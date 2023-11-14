@@ -4,7 +4,59 @@ import os
 import re
 import pygal
 
+
+def write_repo_chart_to_file(repo,chart,chart_name, custom_func=None):
+    """
+    This function's purpose is to save a pygals chart to a path derived from the 
+    repository object passed in.
+
+    Arguments:
+        repo: the Repository object that the chart is about
+        chart: the pygals chart object
+        chart_name: the name to save the chart as
+        custom_func: an optional custom function to render the pygals chart with
+    """
+
+    with open(repo.get_path_to_graph_data(chart_name), "wb+") as file:
+        try:
+            if not custom_func:
+                file.write(chart.render())
+            else:
+                file.write(custom_func())
+        except ZeroDivisionError:
+            print(f"Repo {repo.name} has a division by zero error when trying to make graph")
+    #issues_guage.render_to_file(repo.get_path_to_graph_data("issue_guage"))
+
+
+
+def generate_repo_sparklines(repos):
+    """
+    This function generates pygals sparklines graphs for a set of Repository objects.
+
+    Arguments:
+        repos: the set of Repository objects
+    """
+    for repo in repos:
+        chart = pygal.Line(interpolate='cubic')
+        chart.add('', list(repo.metric_data["commits_by_month"].values()))
+
+        #print("SPARKLINES")
+        #print(chart.render_sparkline())
+        
+        #I have to do this because sparklinees don't have their own subclass and instead
+        #are rendered through a special method of the Line object.
+        #TODO: file a pygals issue to make sparklines their own object
+        write_repo_chart_to_file(repo, chart, "commit_sparklines",custom_func=chart.render_sparkline)
+
+
 def generate_repo_solid_guage_issue_graph(repos):
+    """
+    This function generates pygals solid guage issue/pr graphs for a set of Repository objects.
+
+    Arguments:
+        repos: the set of Repository objects
+    """
+
     for repo in repos:
         issues_guage = pygal.SolidGauge(inner_radius=0.70)
         percent_formatter = lambda x: '{:.10g}%'.format(x)
@@ -31,13 +83,9 @@ def generate_repo_solid_guage_issue_graph(repos):
                 {'value': merged_pr_percent * 100, 'max_value': 100},
                 {'value': closed_pr_percent * 100, 'max_value': 100}])
         
-        with open(repo.get_path_to_graph_data("issue_guage"), "wb+") as file:
-            try:
-                file.write(issues_guage.render())
-            except ZeroDivisionError:
-                print(f"Repo {repo.name} has a division by zero error when trying to make graph")
-        #issues_guage.render_to_file(repo.get_path_to_graph_data("issue_guage"))
-
+        write_repo_chart_to_file(repo, issues_guage, "issue_guage")
+        
+        
 # TODO: Just get these metrics from augur instead of storing them in json.
 def genOverview():
     treemap = pygal.Treemap()
