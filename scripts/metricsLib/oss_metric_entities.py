@@ -8,7 +8,7 @@ import json
 import os
 import pathlib
 import requests
-from metricsLib.constants import PATH_TO_METRICS_DATA, PATH_TO_REPORTS_DATA
+from metricsLib.constants import PATH_TO_METRICS_DATA, PATH_TO_REPORTS_DATA, TIMEOUT_IN_SECONDS
 
 
 class OSSEntity:
@@ -109,7 +109,7 @@ class Repository(OSSEntity):
 
         super().__init__(repo_name,f"https://ai.chaoss.io/api/unstable/owner/{self.repo_owner}/repo/{repo_name}")
 
-        response = requests.post(self.augur_util_endpoint)
+        response = requests.post(self.augur_util_endpoint,timeout=TIMEOUT_IN_SECONDS)
         response_json = json.loads(response.text)
 
         try:
@@ -205,7 +205,7 @@ class GithubOrg(OSSEntity):
         self.login = organization_login
 
         super().__init__(self.login, "https://ai.chaoss.io/api/unstable/repo-groups")
-        response = requests.get(self.augur_util_endpoint)
+        response = requests.get(self.augur_util_endpoint,timeout=TIMEOUT_IN_SECONDS)
         response_dict = json.loads(response.text)
 
         try:
@@ -214,7 +214,7 @@ class GithubOrg(OSSEntity):
             
             self.repo_group_id = group_id
         
-        except ValueError as e:
+        except ValueError:
             self.repo_group_id = None
         
 
