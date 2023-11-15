@@ -1,3 +1,8 @@
+"""
+Module that defines objects to model oss metric entities. i.e. objects that
+store data and have methods concerning the concept of entities that we would
+like to gather metric data for. 
+"""
 import re
 import json
 import os
@@ -7,6 +12,37 @@ from metricsLib.constants import PATH_TO_METRICS_DATA, PATH_TO_REPORTS_DATA
 
 
 class OSSEntity:
+    """
+    This serves as the base class to define an OSSEntity. An OSSEntity is an 
+    object that represents some open source thing that we want to get
+    information about. For example a Github Repository
+
+    ...
+
+    Attributes
+    ----------
+    name : str
+        name of the entity
+    augur_endpoint : str
+        endpoint to use to connect to the corresponding object in the augur db
+    needed_parameters : dict
+        Dictionary holding parameters that are needed to hit a metric
+    metric_data: dict
+        The dictionary that actually stores data returned by metrics
+    previous_metric_data: dict
+        The dictionary that stores the previous data from the previous metric JSON
+
+    Methods
+    -------
+    store_metrics(info={}):
+        Alias to update the metric_data dict with metric data
+    get_parameters_for_metric(metric):
+        Get a sub directory of the needed_parameters dict that only holds the parameters
+        needed by a metric
+    apply_metric_and_store_data(metric):
+        Pass needed parameters into a metric, hit the metric, and then store the result in
+        the metric_data dict.
+    """
     def __init__(self,name, augur_endpoint):
         self.name = name
         self.augur_util_endpoint = augur_endpoint
@@ -18,6 +54,7 @@ class OSSEntity:
     def store_metrics(self, info):
         self.metric_data.update(info)
     
+    #TODO: should this logic be moved to the hit_metric method?
     def get_parameters_for_metric(self,metric):
         params = {}
 
@@ -41,8 +78,25 @@ class Repository(OSSEntity):
     Repository's main purpose as a real python class is to encapsulate the mapping
     of the db ids in augur to the repos we are trying to gather metrics for.
     
-    Arguments:
-        repo_git_url: Github url
+    ...
+
+    Attributes
+    ----------
+    url : str
+        url where the repository is hosted.
+    repo_owner : str
+        Org that owns the repo, also could be a User
+    repo_id : int
+        database id of the repo in Augur
+    repo_group_id: int
+        id for the org that owns the repo in Augur
+
+    Methods
+    -------
+    get_repo_owner_and_name(repo_http_url=""):
+        Returns the repo owner and name from the url
+    get_repo_owner_and_name(repo_http_url=""):
+        Returns the repo owner and name from the url
     
     """
     def __init__(self, repo_git_url):
@@ -61,7 +115,7 @@ class Repository(OSSEntity):
         try:
             self.repo_id = response_json[0]["repo_id"]
             self.repo_group_id = response_json[0]["repo_group_id"]
-        except Exception as e:
+        except Exception:
             self.repo_id = None
             self.repo_group_id = None
         
@@ -130,8 +184,22 @@ class GithubOrg(OSSEntity):
     GithubOrg's main purpose as a real python class is to encapsulate the mapping
     of db ids in CHAOSS/augur to the orgs we are trying to gather metrics for.
 
-    Arguments:
-        organization_login: Github org login i.e. 'DSACMS'
+    ...
+
+    Attributes
+    ----------
+    login : str
+        login of the org
+    repo_group_id: int
+        id for the org that owns the repo in Augur
+
+    Methods
+    -------
+    get_repo_owner_and_name(repo_http_url=""):
+        Returns the repo owner and name from the url
+    get_repo_owner_and_name(repo_http_url=""):
+        Returns the repo owner and name from the url
+    
     """
     def __init__(self, organization_login):
         self.login = organization_login
@@ -162,9 +230,6 @@ class GithubOrg(OSSEntity):
 
         self.previous_metric_data = {}
 
-    def store_metrics(self,info):
-        self.metric_data.update(info)
-    
     def get_path_to_json_data(self):
         parentPath = os.path.join(PATH_TO_METRICS_DATA, f"{self.login}")
         pathlib.Path(parentPath).mkdir(parents=True, exist_ok=True)
