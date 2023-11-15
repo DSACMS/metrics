@@ -3,7 +3,7 @@ import json
 import os
 import requests
 import pathlib
-from metricsLib.constants import PATH_TO_METRICS_DATA, PATH_TO_REPORTS_DATA
+from metricsLib.constants import PATH_TO_METRICS_DATA, PATH_TO_REPORTS_DATA, PATH_TO_GRAPHS_DATA
 
 
 class Repository:
@@ -96,3 +96,10 @@ class Repository:
     
     def get_path_to_report_data(self):
         return self.get_path_to_data(PATH_TO_REPORTS_DATA,"md")
+    
+    def get_path_to_graph_data(self,graph_name):
+        parentPath = os.path.join(PATH_TO_GRAPHS_DATA, f"{self.repo_owner}/{self.name}")
+        #pathlib.Path(PATH_TO_GRAPHS_DATA).mkdir(parents=True, exist_ok=True)
+        pathlib.Path(parentPath).mkdir(parents=True,exist_ok=True)
+
+        return os.path.join(PATH_TO_GRAPHS_DATA, f"{self.repo_owner}/{self.name}/{graph_name}_{self.name}_data.svg")
