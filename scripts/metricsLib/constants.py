@@ -2,11 +2,14 @@ import datetime
 import os
 from pathlib import Path
 from metricsLib.metrics import GraphqlMetric, RangeMetric
+from metricsLib.metrics import CustomMetric, parse_commits_by_month
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 # Folder Names to send over our projects tracked data
 PATH_TO_METRICS_DATA = (Path(__file__).parent / "../../app/site/_data").resolve()
 PATH_TO_REPORTS_DATA = (Path(__file__).parent / "../../app/site/_posts").resolve()
+PATH_TO_GRAPHS_DATA = (Path(__file__).parent / "../../app/site/_graphs").resolve()
+
 PATH_TO_METADATA = Path("_metadata").resolve()
 DATESTAMP = datetime.datetime.now().date().isoformat()
 TOKEN = os.getenv("GITHUB_TOKEN")
@@ -137,3 +140,7 @@ ORG_METRICS.append(GraphqlMetric("githubGraphqlOrgSimple", ["org_login"], orgGit
                                  "twitter_username" : ["data", "organization", "twitterUsername"],
                                  "repo_count" : ["data", "organization", "repositories", "totalCount"]
                                 }, token=TOKEN))
+
+
+commits_endpoint = "https://api.github.com/repos/{owner}/{repo}/commits"
+SIMPLE_METRICS.append(CustomMetric("getCommitsByMonth", ['owner', 'repo'], commits_endpoint,parse_commits_by_month, token=TOKEN))

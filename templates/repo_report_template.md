@@ -99,17 +99,13 @@ date_stampLastWeek: {date_stamp}
   <br>
   <h2>Activity Graphs</h2>
   <div class="row">
-    <!--- Issues Status Breakdown Graph -->
+    <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="/INSERT_PATH_HERE.svg" />
-    </figure>
-    <!--- PRs Status Breakdown Graph -->
-    <figure>
-      <embed type="image/svg+xml" src="/INSERT_PATH_HERE.svg" />
+      <embed type="image/svg+xml" src="_graphs/{repo_owner}/{repo_name}/issue_guage_{repo_name}_data.svg" />
     </figure>
     <!--- Contributor Activity Line Graph -->
     <figure>
-      <embed type="image/svg+xml" src="/INSERT_PATH_HERE.svg" />
+      <embed type="image/svg+xml" src="_graphs/{repo_owner}/{repo_name}/commit_sparklines_{repo_name}_data.svg" />
     </figure>
   </div>
 </div>
