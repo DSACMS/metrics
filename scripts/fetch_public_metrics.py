@@ -1,7 +1,6 @@
 import json
 from metricsLib.constants import SIMPLE_METRICS, ORG_METRICS
-from metricsLib.repos import Repository
-from metricsLib.orgs import GithubOrg
+from metricsLib.oss_metric_entities import Repository, GithubOrg
 
 
 def add_info_to_org_from_list_of_repos(repo_list, org):
@@ -43,18 +42,7 @@ def add_info_to_org_from_list_of_repos(repo_list, org):
     org.store_metrics(org_counts)
 
 
-def fetch_all_new_metric_data(org_name_list, repo_name_list):
-
-    all_orgs = []
-    for org in org_name_list:
-        # Track orgs and all its repos e.g. DSACMS
-        all_orgs.append(GithubOrg(org))
-
-    all_repos = []
-    # Create repo objects
-    for repo_url in repo_name_list:
-        repo_obj = Repository(repo_url)
-        all_repos.append(repo_obj)
+def fetch_all_new_metric_data(all_orgs, all_repos):
 
     #  Capture the metric data  from all repos
     #  Returns a nested dictionary
@@ -65,16 +53,7 @@ def fetch_all_new_metric_data(org_name_list, repo_name_list):
 
         # Get info from all metrics for each repo
         for metric in SIMPLE_METRICS:
-
-            params = {}
-            # Get the parameter for this metric
-            for param in metric.needed_parameters:
-                params[param] = repo.needed_parameters[param]
-
-            metrics_results.update(metric.get_values(params))
-        # repo_metric_info = output_repository_info(repo)
-
-        repo.store_metrics(metrics_results)
+            repo.apply_metric_and_store_data(metric)
 
     # print(all_repo_metrics_info)
     for obj in all_repos:
@@ -86,22 +65,13 @@ def fetch_all_new_metric_data(org_name_list, repo_name_list):
         metrics_results = {}
 
         for metric in ORG_METRICS:
-            params = {}
-
-            for param in metric.needed_parameters:
-                params[param] = org.needed_params[param]
-
-            metrics_results.update(metric.get_values(params))
-
-        org.store_metrics(metrics_results)
+            org.apply_metric_and_store_data(metric)
 
         add_info_to_org_from_list_of_repos(all_repos,org)
 
 
     for obj in all_orgs:
         print(obj.metric_data)
-    
-    return all_orgs, all_repos
 
 def read_previous_metric_data(repos, orgs):
     for org in orgs:
