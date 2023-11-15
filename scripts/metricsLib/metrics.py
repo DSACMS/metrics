@@ -125,3 +125,54 @@ class RangeMetric(SimpleMetric):
                                         for item in metric_json])
 
         return toReturn
+
+class ListMetric(SimpleMetric):
+    def __init__(self, name, needed_parameters, endpoint_url, return_values, token=None, method = 'GET'):
+        super().__init__(name, needed_parameters, endpoint_url, return_values, token=token,method=method)
+
+    def get_values(self, params=None):
+        metric_json = self.hit_metric(params=params)
+
+        toReturn = {}
+
+        for returnLabel, apiLabel in self.return_values:
+            toReturn[returnLabel] = [item[apiLabel]
+                                        for item in metric_json]
+
+        return toReturn
+
+class CustomMetric(SimpleMetric):
+    def __init__(self, name, needed_parameters, endpoint_url,func, token=None, method = 'GET'):
+        super().__init__(name, needed_parameters, endpoint_url, None, token=token,method=method)
+        self.parse_function = func
+    
+    def get_values(self,params=None):
+        metric_json = self.hit_metric(params=params)
+
+        return self.parse_function(metric_json=metric_json,return_values=self.return_values)
+
+
+
+#Custom parse functions
+def parse_commits_by_month(*args, **kwargs):
+
+    return_values = kwargs['return_values']
+    metric_json = kwargs['metric_json']
+
+    commits_by_month = {}
+
+    #print(metric_json)
+    for commit in metric_json:
+        #Get the month and year of the commit
+        datetime_str = commit['commit']['author']['date']
+        date_obj = datetime.datetime.strptime(datetime_str, '%Y-%m-%dT%H:%M:%SZ')
+        month = f"{date_obj.year}/{date_obj.month}"
+        #print(month)
+
+        #Add up the commits for each month and return
+        if commits_by_month.get(month):
+            commits_by_month[month] += 1
+        else:
+            commits_by_month[month] = 1
+
+    return {"commits_by_month": commits_by_month}
