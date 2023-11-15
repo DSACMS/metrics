@@ -65,11 +65,26 @@ def generate_repo_report_files(repos):
             if heading in repo.previous_metric_data.keys():
                 prev_record = repo.previous_metric_data[heading]
 
+            percent_difference = calc_percent_difference(repo.metric_data[heading], prev_record)
+            raw_diff = repo.metric_data[heading] - prev_record
+
+            #Black color
+            diff_color = '#000000'
+
+            if(raw_diff > 0):
+                #Green color
+                diff_color = '#45c527'
+            elif (raw_diff < 0):
+                #Red color
+                diff_color = '#d31c08'
+
             report_values.update({
                 f"latest_{heading}": repo.metric_data[heading],
                 f"previous_{heading}": prev_record,
-                f"{heading}_diff": repo.metric_data[heading] - prev_record,
-                f"{heading}_diff_percent": calc_percent_difference(repo.metric_data[heading], prev_record)
+                f"{heading}_diff": raw_diff,
+                f"{heading}_diff_percent": percent_difference,
+                f"{heading}_diff_color": diff_color,
+                f"{heading}_diff_percent_color": diff_color
             })
 
         raw_report = REPO_REPORT_TEMPLATE.format(**report_values)
