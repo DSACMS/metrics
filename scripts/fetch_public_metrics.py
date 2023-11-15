@@ -5,6 +5,17 @@ entity objects.
 import json
 from metricsLib.constants import SIMPLE_METRICS, ORG_METRICS
 
+def get_all_data(all_orgs,all_repos):
+    """
+    Call relevant methods on orgs and repos
+
+    Arguments:
+        all_orgs: List of all orgs to gather metrics for
+        all_repos: List of all repos to gather metrics for
+    """
+    fetch_all_new_metric_data(all_orgs, all_repos)
+    read_previous_metric_data(all_repos, all_orgs)
+    write_metric_data_json_to_file(all_orgs,all_repos)
 
 def add_info_to_org_from_list_of_repos(repo_list, org):
     """
@@ -97,3 +108,25 @@ def read_previous_metric_data(repos, orgs):
                 repo.previous_metric_data.update(prev_data)
         except FileNotFoundError:
             print(f"Could not find previous data for records for repo {repo.name}")
+
+
+def write_metric_data_json_to_file(orgs,repos):
+    """
+    Write all metric data to json files.
+
+    Arguments:
+        orgs: orgs to write to file
+        repos: repos to write to file
+    """
+
+    for org in orgs:
+        org_metric_data = json.dumps(org.metric_data,indent=4)
+
+        with open(org.get_path_to_json_data(), "w+",encoding="utf-8") as file:
+            file.write(org_metric_data)
+
+    for repo in repos:
+        repo_metric_data = json.dumps(repo.metric_data, indent=4)
+
+        with open(repo.get_path_to_json_data(), "w+",encoding="utf-8") as file:
+            file.write(repo_metric_data)
