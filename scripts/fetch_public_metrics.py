@@ -71,12 +71,14 @@ def fetch_all_new_metric_data(all_orgs, all_repos):
     #  Capture the metric data  from all repos
     #  Returns a nested dictionary
     for repo in all_repos:
+        print(f"Fetching metrics for repo {repo.name}.")
         # Get info from all metrics for each repo
         for metric in SIMPLE_METRICS:
             repo.apply_metric_and_store_data(metric)
 
     # Capture all metric data for all Github orgs
     for org in all_orgs:
+        print(f"Fetching metrics for org {org.name}")
         for metric in ORG_METRICS:
             org.apply_metric_and_store_data(metric)
         add_info_to_org_from_list_of_repos(all_repos,org)
