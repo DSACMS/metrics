@@ -32,7 +32,7 @@ def add_info_to_org_from_list_of_repos(repo_list, org):
     #Add repo data to org that repo is a part of
     for repo in repo_list:
         #Check for membership
-        if repo.needed_parameters["repo_group_id"] == org.needed_parameters["repo_group_id"]:
+        if repo.needed_parameters["repo_group_id"] == org.needed_params["repo_group_id"]:
             #Add metric data.
             for key in org_counts.keys():
                 raw_count = repo.metric_data.get(key)
@@ -47,9 +47,17 @@ def fetch_all_new_metric_data(all_orgs, all_repos):
     #  Capture the metric data  from all repos
     #  Returns a nested dictionary
     for repo in all_repos:
+
+        print(repo.needed_parameters)
+        metrics_results = {}
+
         # Get info from all metrics for each repo
         for metric in SIMPLE_METRICS:
             repo.apply_metric_and_store_data(metric)
+
+    # print(all_repo_metrics_info)
+    for obj in all_repos:
+        print(obj.metric_data)
 
     # Capture all metric data for all Github orgs
     for org in all_orgs:
@@ -61,6 +69,9 @@ def fetch_all_new_metric_data(all_orgs, all_repos):
 
         add_info_to_org_from_list_of_repos(all_repos,org)
 
+
+    for obj in all_orgs:
+        print(obj.metric_data)
 
 def read_previous_metric_data(repos, orgs):
     for org in orgs:
