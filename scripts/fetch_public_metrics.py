@@ -1,6 +1,9 @@
+"""
+Module to define methods that fetch data to store in the oss metric
+entity objects.
+"""
 import json
 from metricsLib.constants import SIMPLE_METRICS, ORG_METRICS
-from metricsLib.oss_metric_entities import Repository, GithubOrg
 
 
 def add_info_to_org_from_list_of_repos(repo_list, org):
@@ -43,6 +46,16 @@ def add_info_to_org_from_list_of_repos(repo_list, org):
 
 
 def fetch_all_new_metric_data(all_orgs, all_repos):
+    """
+    This method applies all desired methods to all desired repos 
+    and orgs. It applies and stores all the metrics
+
+    This is mainly to avoid using more api calls than we have to.
+
+    Arguments:
+        all_orgs: List of all orgs to gather metrics for
+        all_repos: List of all repos to gather metrics for
+    """
 
     #  Capture the metric data  from all repos
     #  Returns a nested dictionary
@@ -53,65 +66,34 @@ def fetch_all_new_metric_data(all_orgs, all_repos):
 
     # Capture all metric data for all Github orgs
     for org in all_orgs:
-
-        metrics_results = {}
-
         for metric in ORG_METRICS:
             org.apply_metric_and_store_data(metric)
-
         add_info_to_org_from_list_of_repos(all_repos,org)
 
 
 def read_previous_metric_data(repos, orgs):
+    """
+    This method reads the previously gathered metric data and 
+    stores it in the OSSEntity objects passed in.
+
+    This is for the reports that compare changes since last collection.
+
+    Arguments:
+        repos: List of all orgs to read metrics for
+        orgs: List of all repos to read metrics for
+    """
     for org in orgs:
         try:
-            with open(org.get_path_to_json_data(), "r") as file:
-                prevData = json.load(file)
-                org.previous_metric_data.update(prevData)
+            with open(org.get_path_to_json_data(), "r",encoding="utf-8") as file:
+                prev_data = json.load(file)
+                org.previous_metric_data.update(prev_data)
         except FileNotFoundError:
             print(f"Could not find previous data for records for org {org.login}")
 
     for repo in repos:
         try:
-            with open(repo.get_path_to_json_data(), "r") as file:
-                prevData = json.load(file)
-                repo.previous_metric_data.update(prevData)
+            with open(repo.get_path_to_json_data(), "r",encoding="utf-8") as file:
+                prev_data = json.load(file)
+                repo.previous_metric_data.update(prev_data)
         except FileNotFoundError:
             print(f"Could not find previous data for records for repo {repo.name}")
-
-# DATA_JSON["DSACMS"] = all_repo_metrics_info
-#
-# Update _metadata/projects_tracked.json
-# """
-#    Updates the projects_tracked.json file to have all the Github metric data
-#    for the desired orgs and repos
-# """
-# TODO Apply all the orgs and there assigned repos in projects tracked
-# PROJECTS_TRACKED['orgs'] = ["DSACMS"]
-# PROJECTS_TRACKED['Open Source Projects'] = {"DSACMS": list(repos_tracked)}
-#
-# with open(os.path.join(BASE_PATH, PATH_TO_METADATA + "/" + "projects_tracked.json"), "w+") as f:
-# json.dump(PROJECTS_TRACKED, f)
-#
-# """
-#  Create a new json file Labeled METRICS-DATESTAMP.json
-#  Will create a new folder for the given repo and org if
-#  it currently does not exist.
-# """
-# list_of_org_projects = PROJECTS_TRACKED['Open Source Projects']["DSACMS"]
-# given_org_data = DATA_JSON["DSACMS"]
-# print("given_org_data", given_org_data)
-# for repo in list_of_org_projects:
-#    repo_metric_data = given_org_data.get(repo)
-#    print("repo_metric_data", repo_metric_data, "\n")
-#
-#    # creates directory if it doesn't exist for a given repo
-#    owner_dir_path = "{}/{}".format(PATH_TO_METRICS_DATA, "DSACMS")
-#    repo_dir_path = "{}/{}".format(owner_dir_path, repo)
-#    os.makedirs(repo_dir_path, exist_ok=True)
-#
-#    #   # Save the json file with a timestamp
-#    file_name = "METRICS-" + DATESTAMP + ".json"
-#    with open(repo_dir_path + "/" + file_name, "w+") as f:
-#        json.dump(repo_metric_data, f)
-#    print("LOG: Saving", file_name, "for", repo)
