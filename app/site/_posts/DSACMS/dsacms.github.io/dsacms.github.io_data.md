@@ -1,12 +1,12 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for DSACMS | REPORT-2023-11-07
+title: Open Source at CMS Metrics Report for DSACMS | REPORT-2023-11-15
 permalink: /metrics/repos/DSACMS/dsacms.github.io
 
 org: DSACMS
-reportID: REPORT-2023-11-07
-date_stampThisWeek: 2023-11-07
-date_stampLastWeek: 2023-11-07
+reportID: REPORT-2023-11-15
+date_stampThisWeek: 2023-11-15
+date_stampLastWeek: 2023-11-15
 # TODO: Update front matter fields & data above once we have data/graphs for reports.
 ---
 <div class="summary-table">
@@ -31,17 +31,17 @@ date_stampLastWeek: 2023-11-07
       </tr>
       <tr>
         <th scope="row">Issues</th>
+        <td>1</td>
         <td>0</td>
-        <td>0</td>
-        <td style="color: #45c527" >0</td>
-        <td style="color: #45c527" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >200%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>1</td>
         <td>0</td>
-        <td>0</td>
-        <td style="color: #d31c08" >0</td>
-        <td style="color: #d31c08" >0%</td>
+        <td style="color: #d31c08" >1</td>
+        <td style="color: #d31c08" >200%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
