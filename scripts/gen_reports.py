@@ -1,7 +1,24 @@
+"""
+Module to define methods to create reports
+"""
 from datetime import date
 from metricsLib.constants import REPO_REPORT_TEMPLATE
 
 def calc_percent_difference(latest,prev):
+    """
+    This function calculates the percent difference between
+    two numbers
+
+    Arguments:
+        latest: float
+            new number 
+        prev: float
+            old number to compare to new number
+    
+    Returns:
+        Integer between 0 and 100 corresponding to the percent 
+        difference.
+    """
     absDiff = abs(latest - prev)
 
     try:
@@ -12,10 +29,17 @@ def calc_percent_difference(latest,prev):
     return int(dec * 100)
 
 def generate_repo_report_files(repos):
+    """
+    This function generates reports for each repo and writes them to file.
 
+    Arguments:
+        repos:
+            list of repositories to generate reports for.
+    """
     for repo in repos:
+        print(f"Generating repo report for repo {repo.name}")
         #Create a dictionary of values to calculate for the report
-        reportValues = {
+        report_values = {
             "date_stamp": date.today(),
             "repo_owner": repo.repo_owner,
             "repo_name": repo.name,
@@ -36,13 +60,13 @@ def generate_repo_report_files(repos):
         ]
 
         for heading in metric_table_headings:
-            prevRecord = 0
+            prev_record = 0
 
             if heading in repo.previous_metric_data.keys():
-                prevRecord = repo.previous_metric_data[heading]
+                prev_record = repo.previous_metric_data[heading]
 
-            percent_difference = calc_percent_difference(repo.metric_data[heading], prevRecord)
-            raw_diff = repo.metric_data[heading] - prevRecord
+            percent_difference = calc_percent_difference(repo.metric_data[heading], prev_record)
+            raw_diff = repo.metric_data[heading] - prev_record
 
             #Black color
             diff_color = '#000000'
@@ -54,15 +78,15 @@ def generate_repo_report_files(repos):
                 #Red color
                 diff_color = '#d31c08'
 
-            reportValues.update({
+            report_values.update({
                 f"latest_{heading}": repo.metric_data[heading],
-                f"previous_{heading}": prevRecord,
+                f"previous_{heading}": prev_record,
                 f"{heading}_diff": raw_diff,
                 f"{heading}_diff_percent": percent_difference,
                 f"{heading}_diff_color": diff_color,
                 f"{heading}_diff_percent_color": diff_color
             })
 
-        rawReport = REPO_REPORT_TEMPLATE.format(**reportValues)
-        with open(repo.get_path_to_report_data(), "w+") as file:
-            file.write(rawReport)
+        raw_report = REPO_REPORT_TEMPLATE.format(**report_values)
+        with open(repo.get_path_to_report_data(), "w+",encoding="utf-8") as file:
+            file.write(raw_report)
