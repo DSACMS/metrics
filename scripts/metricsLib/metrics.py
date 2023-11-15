@@ -2,6 +2,7 @@
 Module to define classes of metrics that gather data given parameters
 """
 import json
+import datetime
 from functools import reduce
 import operator
 import requests
