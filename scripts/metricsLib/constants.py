@@ -1,9 +1,8 @@
 import datetime
 import os
 from pathlib import Path
-from metricsLib.metrics import GraphqlMetric, RangeMetric
-from metricsLib.metrics import CustomMetric, parse_commits_by_month
 
+TIMEOUT_IN_SECONDS = 60
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 # Folder Names to send over our projects tracked data
 PATH_TO_METRICS_DATA = (Path(__file__).parent / "../../app/site/_data").resolve()
@@ -16,11 +15,12 @@ TOKEN = os.getenv("GITHUB_TOKEN")
 
 PATH_TO_TEMPLATES = (Path(__file__).parent / "../../templates").resolve()
 
-with open(os.path.join(PATH_TO_TEMPLATES, "repo_report_template.md"), "r") as file:
+with open(os.path.join(PATH_TO_TEMPLATES, "repo_report_template.md"), "r",encoding="utf-8") as file:
   REPO_REPORT_TEMPLATE = file.read()
 
 # The general procedure is to execute all metrics against all repos and orgs
-
+from metricsLib.metrics import GraphQLMetric, RangeMetric
+from metricsLib.metrics import CustomMetric, parse_commits_by_month
 
 SIMPLE_METRICS = []
 
@@ -93,7 +93,7 @@ query ($repo: String!, $owner: String!) {
 """
 
 
-SIMPLE_METRICS.append(GraphqlMetric("githubGraphqlSimpleCounts", ["repo", "owner"], REPO_GITHUB_GRAPHQL_QUERY,
+SIMPLE_METRICS.append(GraphQLMetric("githubGraphqlSimpleCounts", ["repo", "owner"], REPO_GITHUB_GRAPHQL_QUERY,
                                     {"description": ["data", "repository", "description"],
                                      "commits_count": ["data", "repository", "defaultBranchRef", "target", "history", "totalCount"],
                                      "issues_count": ["data", "repository", "issues", "totalCount"],
@@ -129,7 +129,7 @@ query ($org_login: String!) {
   }
 }
 """
-ORG_METRICS.append(GraphqlMetric("githubGraphqlOrgSimple", ["org_login"], orgGithubGraphqlQuery,
+ORG_METRICS.append(GraphQLMetric("githubGraphqlOrgSimple", ["org_login"], orgGithubGraphqlQuery,
                                 {"timestampCreatedAt" : ["data", "organization", "createdAt"],
                                  "avatar_url" : ["data", "organization", "avatarUrl"],
                                  "description" : ["data", "organization", "description"],

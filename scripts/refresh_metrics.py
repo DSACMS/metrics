@@ -1,41 +1,48 @@
+"""
+Script to run all metrics collection and update operations
+"""
 import os
-import pathlib
 import json
-from metricsLib.constants import BASE_PATH, PATH_TO_METADATA, PATH_TO_METRICS_DATA
-from fetch_public_metrics import fetch_all_new_metric_data, read_previous_metric_data
+from metricsLib.oss_metric_entities import GithubOrg, Repository
+from metricsLib.constants import PATH_TO_METADATA
+from fetch_public_metrics import get_all_data
 from gen_reports import generate_repo_report_files
-from gen_graphs import generate_repo_solid_guage_issue_graph, generate_repo_sparklines
+from gen_graphs import generate_all_graphs_for_repos
 
-os.umask(0)
-# TODO: Create a read repos-to-include.txt
-with open(os.path.join(PATH_TO_METADATA, "projects_tracked.json"), "r") as file:
-    tracking_file = json.load(file)
+def parse_repos_and_orgs_into_objects(org_name_list, repo_name_list):
+    """
+    This function parses lists of strings into oss metric entities and
+    returns lists of corresponding oss metric entitiy objects.
 
-repo_urls = []  # Track specific repositories e.g. ['dsacms.github.io']
+    Arguments:
+        org_name_list: list of logins for github orgs
+        repo_name_list: list of urls for git repositories
+    
+    Returns:
+        Tuple of lists of oss metric entity objects
+    """
+    orgs = [GithubOrg(org) for org in org_name_list]
 
-for _, repo_list in tracking_file["Open Source Projects"].items():
-    repo_urls.extend(repo_list)
+    repos = [Repository(repo_url) for repo_url in repo_name_list]
 
-#Get two lists of objects that hold all the new metrics
-all_orgs, all_repos = fetch_all_new_metric_data(tracking_file["orgs"], repo_urls)
-
-#Update objects to also hold old metrics
-read_previous_metric_data(all_repos, all_orgs)
+    return orgs, repos
 
 
-#Save all metrics to files
-generate_repo_report_files(all_repos)
-generate_repo_solid_guage_issue_graph(all_repos)
-generate_repo_sparklines(all_repos)
+if __name__ == "__main__":
+    os.umask(0)
+    # TODO: Create a read repos-to-include.txt
+    with open(os.path.join(PATH_TO_METADATA, "projects_tracked.json"), "r",encoding="utf-8") as file:
+        tracking_file = json.load(file)
 
-for org in all_orgs:
-    org_metric_data = json.dumps(org.metric_data,indent=4)
+    repo_urls = []  # Track specific repositories e.g. ['dsacms.github.io']
 
-    with open(org.get_path_to_json_data(), "w+") as file:
-        file.write(org_metric_data)
+    for _, repo_list in tracking_file["Open Source Projects"].items():
+        repo_urls.extend(repo_list)
 
-for repo in all_repos:
-    repo_metric_data = json.dumps(repo.metric_data, indent=4)
+    #Get two lists of objects that will hold all the new metrics
+    all_orgs, all_repos = parse_repos_and_orgs_into_objects(tracking_file["orgs"], repo_urls)
 
-    with open(repo.get_path_to_json_data(), "w+") as file:
-        file.write(repo_metric_data)
+    #Generate json data, report data, and graph data.
+    get_all_data(all_orgs, all_repos)
+    generate_repo_report_files(all_repos)
+    generate_all_graphs_for_repos(all_repos)
