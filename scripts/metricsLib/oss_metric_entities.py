@@ -52,10 +52,28 @@ class OSSEntity:
         self.previous_metric_data = {}
     
     def store_metrics(self, info):
+        """
+        Alias to update the metric data dict with metric data.
+        
+        Args:
+            info: dict
+                Dictionary containing the metric to update the
+                metric data with.
+        """
         self.metric_data.update(info)
     
     #TODO: should this logic be moved to the hit_metric method?
     def get_parameters_for_metric(self,metric):
+        """
+        Get a sub directory of the needed_parameters dict that only holds the parameters
+        needed by a metric
+
+        Args:
+            metric: SimpleMetric
+        
+        Returns:
+            Dictionary containing the parameters needed for the given metric
+        """
         params = {}
 
         #get the parameter for this metric
@@ -65,6 +83,13 @@ class OSSEntity:
         return params
     
     def apply_metric_and_store_data(self,metric):
+        """
+        Pass needed parameters into a metric, hit the metric, and then store the result in
+        the metric_data dict.
+
+        Args:
+            metric: SimpleMetric
+        """
         params = self.get_parameters_for_metric(metric)
 
         self.store_metrics(metric.get_values(params))
@@ -95,9 +120,15 @@ class Repository(OSSEntity):
     -------
     get_repo_owner_and_name(repo_http_url=""):
         Returns the repo owner and name from the url
-    get_repo_owner_and_name(repo_http_url=""):
-        Returns the repo owner and name from the url
-    
+    get_path_to_data(parent_path="",extension=""):
+        Returns the path to store data given extension
+        and parent path
+    get_path_to_json_data():
+        Derive the path for json data using json parent
+        path and extension
+    get_path_to_report_data():
+        Derive the path for markdown data using markdown
+        parent path and extension
     """
     def __init__(self, repo_git_url):
         
@@ -161,15 +192,40 @@ class Repository(OSSEntity):
         return owner, repo
 
     def get_path_to_data(self,parent_path,extension):
+        """
+        Returns the path to store data given extension
+        and parent path
+
+        Args:
+            parent_path: parent path to store data
+            extension: File extension to use for data format
+
+        Returns:
+            String path to data.
+        """
         parentPath = os.path.join(parent_path, f"{self.repo_owner}/{self.name}")
         pathlib.Path(parentPath).mkdir(parents=True, exist_ok=True)
 
         return os.path.join(parent_path, f"{self.repo_owner}/{self.name}/{self.name}_data.{extension}")
 
     def get_path_to_json_data(self):
+        """
+        Derive the path for json data using json parent
+        path and extension
+
+        Returns:
+            String path to data.
+        """
         return self.get_path_to_data(PATH_TO_METRICS_DATA,"json")
     
     def get_path_to_report_data(self):
+        """
+        Derive the path for markdown data using markdown
+        parent path and extension
+
+        Returns:
+            String path to data.
+        """
         return self.get_path_to_data(PATH_TO_REPORTS_DATA,"md")
 
 
@@ -195,11 +251,9 @@ class GithubOrg(OSSEntity):
 
     Methods
     -------
-    get_repo_owner_and_name(repo_http_url=""):
-        Returns the repo owner and name from the url
-    get_repo_owner_and_name(repo_http_url=""):
-        Returns the repo owner and name from the url
-    
+    get_path_to_json_data():
+        Derive the path for json data using json parent
+        path and extension
     """
     def __init__(self, organization_login):
         self.login = organization_login
@@ -231,6 +285,13 @@ class GithubOrg(OSSEntity):
         self.previous_metric_data = {}
 
     def get_path_to_json_data(self):
+        """
+        Derive the path for json data using json parent
+        path and extension
+
+        Returns:
+            String path to data.
+        """
         parentPath = os.path.join(PATH_TO_METRICS_DATA, f"{self.login}")
         pathlib.Path(parentPath).mkdir(parents=True, exist_ok=True)
         orgPath = os.path.join(parentPath, f"{self.login}_data.json")
