@@ -53,7 +53,7 @@ class Repository(OSSEntity):
 
         self.repo_owner = owner
 
-        super().__init__(repo_name,f"https://ai.chaoss.io/api/unstable/owner/{self.repo_owner}/repo/{repo_name}")
+        super().__init__(repo_name,f"https://ai.chaoss.io/api/unstable/owner/{self.repo_owner}/repo/{self.name}")
 
         response = requests.post(self.augur_util_endpoint)
         response_json = json.loads(response.text)
@@ -150,7 +150,7 @@ class GithubOrg(OSSEntity):
             self.repo_group_id = None
         
 
-        self.needed_parameters = {
+        self.needed_params = {
             "org_login" : self.login,
             "repo_group_id": self.repo_group_id
         }
