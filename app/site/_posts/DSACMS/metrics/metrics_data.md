@@ -1,12 +1,12 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for DSACMS | REPORT-2023-11-07
+title: Open Source at CMS Metrics Report for DSACMS | REPORT-2023-11-15
 permalink: /metrics/repos/DSACMS/metrics
 
 org: DSACMS
-reportID: REPORT-2023-11-07
-date_stampThisWeek: 2023-11-07
-date_stampLastWeek: 2023-11-07
+reportID: REPORT-2023-11-15
+date_stampThisWeek: 2023-11-15
+date_stampLastWeek: 2023-11-15
 # TODO: Update front matter fields & data above once we have data/graphs for reports.
 ---
 <div class="summary-table">
@@ -24,73 +24,73 @@ date_stampLastWeek: 2023-11-07
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>163</td>
         <td>115</td>
-        <td>105</td>
-        <td style="color: #45c527" >10</td>
-        <td style="color: #45c527" >9%</td>
+        <td style="color: #45c527" >48</td>
+        <td style="color: #45c527" >34%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
+        <td>9</td>
         <td>8</td>
-        <td>8</td>
-        <td style="color: #45c527" >0</td>
-        <td style="color: #45c527" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >11%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>8</td>
         <td>7</td>
-        <td>7</td>
-        <td style="color: #d31c08" >0</td>
-        <td style="color: #d31c08" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >13%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
         <td>1</td>
         <td>1</td>
-        <td style="color: #45c527" >0</td>
-        <td style="color: #45c527" >0%</td>
+        <td style="color: #000000" >0</td>
+        <td style="color: #000000" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>2</td>
+        <td>1</td>
         <td>3</td>
-        <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >40%</td>
+        <td style="color: #d31c08" >-2</td>
+        <td style="color: #d31c08" >100%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>18</td>
         <td>12</td>
-        <td>10</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >18%</td>
+        <td style="color: #45c527" >6</td>
+        <td style="color: #45c527" >40%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>0</td>
         <td>0</td>
-        <td style="color: #45c527" >0</td>
-        <td style="color: #45c527" >0%</td>
+        <td style="color: #000000" >0</td>
+        <td style="color: #000000" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
         <td>0</td>
         <td>0</td>
-        <td style="color: #45c527" >0</td>
-        <td style="color: #45c527" >0%</td>
+        <td style="color: #000000" >0</td>
+        <td style="color: #000000" >0%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
         <td>1</td>
         <td>1</td>
-        <td style="color: #45c527" >0</td>
-        <td style="color: #45c527" >0%</td>
+        <td style="color: #000000" >0</td>
+        <td style="color: #000000" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
         <td>3</td>
         <td>3</td>
-        <td style="color: #45c527" >0</td>
-        <td style="color: #45c527" >0%</td>
+        <td style="color: #000000" >0</td>
+        <td style="color: #000000" >0%</td>
       </tr>
     </tbody>
   </table>
@@ -99,17 +99,13 @@ date_stampLastWeek: 2023-11-07
   <br>
   <h2>Activity Graphs</h2>
   <div class="row">
-    <!--- Issues Status Breakdown Graph -->
+    <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="/INSERT_PATH_HERE.svg" />
-    </figure>
-    <!--- PRs Status Breakdown Graph -->
-    <figure>
-      <embed type="image/svg+xml" src="/INSERT_PATH_HERE.svg" />
+      <embed type="image/svg+xml" src="_graphs/DSACMS/metrics/issue_guage_metrics_data.svg" />
     </figure>
     <!--- Contributor Activity Line Graph -->
     <figure>
-      <embed type="image/svg+xml" src="/INSERT_PATH_HERE.svg" />
+      <embed type="image/svg+xml" src="_graphs/DSACMS/metrics/commit_sparklines_metrics_data.svg" />
     </figure>
   </div>
 </div>
