@@ -13,7 +13,7 @@ TOKEN = os.getenv("GITHUB_TOKEN")
 
 PATH_TO_TEMPLATES = (Path(__file__).parent / "../../templates").resolve()
 
-with open(os.path.join(PATH_TO_TEMPLATES, "repo_report_template.md"), "r") as file:
+with open(os.path.join(PATH_TO_TEMPLATES, "repo_report_template.md"), "r",encoding="utf-8") as file:
   REPO_REPORT_TEMPLATE = file.read()
 
 # The general procedure is to execute all metrics against all repos and orgs

@@ -49,5 +49,5 @@ def generate_repo_report_files(repos):
             })
 
         rawReport = REPO_REPORT_TEMPLATE.format(**reportValues)
-        with open(repo.get_path_to_report_data(), "w+") as file:
+        with open(repo.get_path_to_report_data(), "w+",encoding="utf-8") as file:
             file.write(rawReport)

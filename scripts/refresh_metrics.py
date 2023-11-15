@@ -16,7 +16,7 @@ def parse_repos_and_orgs_into_objects(org_name_list, repo_name_list):
 
 os.umask(0)
 # TODO: Create a read repos-to-include.txt
-with open(os.path.join(PATH_TO_METADATA, "projects_tracked.json"), "r") as file:
+with open(os.path.join(PATH_TO_METADATA, "projects_tracked.json"), "r",encoding="utf-8") as file:
     tracking_file = json.load(file)
 
 repo_urls = []  # Track specific repositories e.g. ['dsacms.github.io']
@@ -39,11 +39,11 @@ generate_repo_report_files(all_repos)
 for org in all_orgs:
     org_metric_data = json.dumps(org.metric_data,indent=4)
 
-    with open(org.get_path_to_json_data(), "w+") as file:
+    with open(org.get_path_to_json_data(), "w+",encoding="utf-8") as file:
         file.write(org_metric_data)
 
 for repo in all_repos:
     repo_metric_data = json.dumps(repo.metric_data, indent=4)
 
-    with open(repo.get_path_to_json_data(), "w+") as file:
+    with open(repo.get_path_to_json_data(), "w+",encoding="utf-8") as file:
         file.write(repo_metric_data)
