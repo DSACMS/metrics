@@ -8,7 +8,7 @@ import json
 import os
 import pathlib
 import requests
-from metricsLib.constants import PATH_TO_METRICS_DATA, PATH_TO_REPORTS_DATA, TIMEOUT_IN_SECONDS
+from metricsLib.constants import PATH_TO_METRICS_DATA, PATH_TO_REPORTS_DATA, TIMEOUT_IN_SECONDS, PATH_TO_GRAPHS_DATA
 
 
 class OSSEntity:
@@ -129,6 +129,9 @@ class Repository(OSSEntity):
     get_path_to_report_data():
         Derive the path for markdown data using markdown
         parent path and extension
+    get_path_to_graph_data():
+        Derive the path for svg data using svg parent path
+        and extension
     """
     def __init__(self, repo_git_url):
         
@@ -227,6 +230,20 @@ class Repository(OSSEntity):
             String path to data.
         """
         return self.get_path_to_data(PATH_TO_REPORTS_DATA,"md")
+
+    def get_path_to_graph_data(self,graph_name):
+        """
+        Derive the path for graph data using svg
+        parent path and extension
+
+        Returns:
+            String path to data.
+        """
+        parentPath = os.path.join(PATH_TO_GRAPHS_DATA, f"{self.repo_owner}/{self.name}")
+        #pathlib.Path(PATH_TO_GRAPHS_DATA).mkdir(parents=True, exist_ok=True)
+        pathlib.Path(parentPath).mkdir(parents=True,exist_ok=True)
+
+        return os.path.join(PATH_TO_GRAPHS_DATA, f"{self.repo_owner}/{self.name}/{graph_name}_{self.name}_data.svg") 
 
 
 

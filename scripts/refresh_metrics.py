@@ -7,6 +7,7 @@ from metricsLib.oss_metric_entities import GithubOrg, Repository
 from metricsLib.constants import PATH_TO_METADATA
 from fetch_public_metrics import get_all_data
 from gen_reports import generate_repo_report_files
+from gen_graphs import generate_repo_solid_guage_issue_graph, generate_repo_sparklines
 
 def parse_repos_and_orgs_into_objects(org_name_list, repo_name_list):
     """
@@ -45,3 +46,5 @@ if __name__ == "__main__":
 
     #Save all metrics to files
     generate_repo_report_files(all_repos)
+    generate_repo_solid_guage_issue_graph(all_repos)
+    generate_repo_sparklines(all_repos)
