@@ -59,7 +59,7 @@ def generate_repo_solid_guage_issue_graph(repos):
 
     for repo in repos:
         issues_guage = pygal.SolidGauge(inner_radius=0.70)
-        percent_formatter = lambda x: '{:.10g}%'.format(x)
+        percent_formatter = lambda x: '{:0.2f}%'.format(x)
         issues_guage.value_formatter = percent_formatter
 
         try:
