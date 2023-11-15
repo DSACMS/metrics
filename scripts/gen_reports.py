@@ -37,6 +37,7 @@ def generate_repo_report_files(repos):
             list of repositories to generate reports for.
     """
     for repo in repos:
+        print(f"Generating repo report for repo {repo.name}")
         #Create a dictionary of values to calculate for the report
         report_values = {
             "date_stamp": date.today(),
