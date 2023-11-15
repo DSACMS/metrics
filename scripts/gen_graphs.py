@@ -1,9 +1,17 @@
-from glob import glob
 import json
 import os
-import re
 import pygal
 
+def generate_all_graphs_for_repos(all_repos):
+    """
+    Function to generate and save all graphs for the input
+    repos.
+
+    Arguments:
+        all_repos: Repos to generate graphs for.
+    """
+    generate_repo_solid_guage_issue_graph(all_repos)
+    generate_repo_sparklines(all_repos)
 
 def write_repo_chart_to_file(repo,chart,chart_name, custom_func=None):
     """
