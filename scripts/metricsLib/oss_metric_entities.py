@@ -181,6 +181,11 @@ class Repository(OSSEntity):
                 Tuple of owner and repo. Or a tuple of None and None if the url is invalid.
         """
 
+
+        #Regular expression to parse a GitHub URL into two groups
+        #The first group contains the owner of the github repo extracted from the url
+        #The second group contains the name of the github repo extracted from the url
+        #'But what is a regular expression?' ----> https://docs.python.org/3/howto/regex.html
         result = re.search(
             r"https?:\/\/github\.com\/([A-Za-z0-9 \- _]+)\/([A-Za-z0-9 \- _ \.]+)(.git)?\/?$", repo_http_url)
 
