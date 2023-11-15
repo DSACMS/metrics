@@ -19,7 +19,7 @@ with open(os.path.join(PATH_TO_TEMPLATES, "repo_report_template.md"), "r",encodi
   REPO_REPORT_TEMPLATE = file.read()
 
 # The general procedure is to execute all metrics against all repos and orgs
-from metricsLib.metrics import GraphqlMetric, RangeMetric
+from metricsLib.metrics import GraphQLMetric, RangeMetric
 from metricsLib.metrics import CustomMetric, parse_commits_by_month
 
 SIMPLE_METRICS = []
@@ -93,7 +93,7 @@ query ($repo: String!, $owner: String!) {
 """
 
 
-SIMPLE_METRICS.append(GraphqlMetric("githubGraphqlSimpleCounts", ["repo", "owner"], REPO_GITHUB_GRAPHQL_QUERY,
+SIMPLE_METRICS.append(GraphQLMetric("githubGraphqlSimpleCounts", ["repo", "owner"], REPO_GITHUB_GRAPHQL_QUERY,
                                     {"description": ["data", "repository", "description"],
                                      "commits_count": ["data", "repository", "defaultBranchRef", "target", "history", "totalCount"],
                                      "issues_count": ["data", "repository", "issues", "totalCount"],
@@ -129,7 +129,7 @@ query ($org_login: String!) {
   }
 }
 """
-ORG_METRICS.append(GraphqlMetric("githubGraphqlOrgSimple", ["org_login"], orgGithubGraphqlQuery,
+ORG_METRICS.append(GraphQLMetric("githubGraphqlOrgSimple", ["org_login"], orgGithubGraphqlQuery,
                                 {"timestampCreatedAt" : ["data", "organization", "createdAt"],
                                  "avatar_url" : ["data", "organization", "avatarUrl"],
                                  "description" : ["data", "organization", "description"],

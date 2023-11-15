@@ -98,7 +98,7 @@ class SimpleMetric:
         return to_return
 
 
-class GraphqlMetric(SimpleMetric):
+class GraphQLMetric(SimpleMetric):
     """
     Class to define a metric that gets data from a graphql endpoint.
 
