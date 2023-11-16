@@ -1,10 +1,9 @@
 ---
-layout: repo-report
-title: Open Source at CMS Metrics Report for {repo_name} | REPORT-{date_stamp}
-permalink: /{repo_owner}/{repo_name}
+layout: org-report
+title: Open Source at CMS Metrics Report for {repo_owner} | REPORT-{date_stamp}
+permalink: /{repo_owner}
 
 org: {repo_owner}
-repo: {repo_name}
 reportID: REPORT-{date_stamp}
 date_stampThisWeek: {date_stamp}
 date_stampLastWeek: {date_stamp}
@@ -101,11 +100,7 @@ date_stampLastWeek: {date_stamp}
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../assets/img/graphs/{repo_owner}/{repo_name}/issue_guage_{repo_name}_data.svg" />
-    </figure>
-    <!--- Contributor Activity Line Graph -->
-    <figure>
-      <embed type="image/svg+xml" src="../assets/img/graphs/{repo_owner}/{repo_name}/commit_sparklines_{repo_name}_data.svg" />
+      <embed type="image/svg+xml" src="../assets/img/graphs/{repo_owner}/issue_guage_{repo_name}_data.svg" />
     </figure>
   </div>
 </div>
