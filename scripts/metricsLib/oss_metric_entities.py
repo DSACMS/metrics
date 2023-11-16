@@ -8,7 +8,8 @@ import json
 import os
 import pathlib
 import requests
-from metricsLib.constants import PATH_TO_METRICS_DATA, PATH_TO_REPORTS_DATA, TIMEOUT_IN_SECONDS, PATH_TO_GRAPHS_DATA
+from metricsLib.constants import PATH_TO_METRICS_DATA, PATH_TO_REPORTS_DATA
+from metricsLib.constants import TIMEOUT_IN_SECONDS, PATH_TO_GRAPHS_DATA
 
 
 class OSSEntity:
@@ -43,46 +44,47 @@ class OSSEntity:
         Pass needed parameters into a metric, hit the metric, and then store the result in
         the metric_data dict.
     """
-    def __init__(self,name, augur_endpoint):
+
+    def __init__(self, name, augur_endpoint):
         self.name = name
         self.augur_util_endpoint = augur_endpoint
 
         self.needed_parameters = {}
         self.metric_data = {}
         self.previous_metric_data = {}
-    
+
     def store_metrics(self, info):
         """
         Alias to update the metric data dict with metric data.
-        
+
         Args:
             info: dict
                 Dictionary containing the metric to update the
                 metric data with.
         """
         self.metric_data.update(info)
-    
-    #TODO: should this logic be moved to the hit_metric method?
-    def get_parameters_for_metric(self,metric):
+
+    # TODO: should this logic be moved to the hit_metric method?
+    def get_parameters_for_metric(self, metric):
         """
         Get a sub directory of the needed_parameters dict that only holds the parameters
         needed by a metric
 
         Args:
             metric: SimpleMetric
-        
+
         Returns:
             Dictionary containing the parameters needed for the given metric
         """
         params = {}
 
-        #get the parameter for this metric
+        # get the parameter for this metric
         for param in metric.needed_parameters:
             params[param] = self.needed_parameters[param]
-        
+
         return params
-    
-    def apply_metric_and_store_data(self,metric):
+
+    def apply_metric_and_store_data(self, metric):
         """
         Pass needed parameters into a metric, hit the metric, and then store the result in
         the metric_data dict.
@@ -94,15 +96,16 @@ class OSSEntity:
 
         self.store_metrics(metric.get_values(params))
 
+
 class Repository(OSSEntity):
     """
     This class serves to manage the parameter and metric data of a Repository.
     It stores parameter and metric data in two seperate dictionaries for easy JSON 
     conversion.
-    
+
     Repository's main purpose as a real python class is to encapsulate the mapping
     of the db ids in augur to the repos we are trying to gather metrics for.
-    
+
     ...
 
     Attributes
@@ -133,17 +136,20 @@ class Repository(OSSEntity):
         Derive the path for svg data using svg parent path
         and extension
     """
+
     def __init__(self, repo_git_url):
-        
+
         self.url = repo_git_url
 
         owner, repo_name = self.get_repo_owner_and_name(self.url)
 
         self.repo_owner = owner
 
-        super().__init__(repo_name,f"https://ai.chaoss.io/api/unstable/owner/{self.repo_owner}/repo/{repo_name}")
+        endpoint = f"https://ai.chaoss.io/api/unstable/owner/{self.repo_owner}/repo/{repo_name}"
+        super().__init__(repo_name,endpoint)
 
-        response = requests.post(self.augur_util_endpoint,timeout=TIMEOUT_IN_SECONDS)
+        response = requests.post(
+            self.augur_util_endpoint, timeout=TIMEOUT_IN_SECONDS)
         response_json = json.loads(response.text)
 
         try:
@@ -152,9 +158,8 @@ class Repository(OSSEntity):
         except Exception:
             self.repo_id = None
             self.repo_group_id = None
-        
 
-        #Prepare params
+        # Prepare params
         self.needed_parameters = {
             "repo": self.name,
             "owner": self.repo_owner,
@@ -162,9 +167,9 @@ class Repository(OSSEntity):
             "repo_group_id": self.repo_group_id
         }
 
-        #Prepare dict of metric data.
+        # Prepare dict of metric data.
         self.metric_data = {
-            "url" : self.url,
+            "url": self.url,
             "owner": self.repo_owner,
             "name": self.name
         }
@@ -181,13 +186,12 @@ class Repository(OSSEntity):
                 Tuple of owner and repo. Or a tuple of None and None if the url is invalid.
         """
 
-
-        #Regular expression to parse a GitHub URL into two groups
-        #The first group contains the owner of the github repo extracted from the url
-        #The second group contains the name of the github repo extracted from the url
-        #'But what is a regular expression?' ----> https://docs.python.org/3/howto/regex.html
-        result = re.search(
-            r"https?:\/\/github\.com\/([A-Za-z0-9 \- _]+)\/([A-Za-z0-9 \- _ \.]+)(.git)?\/?$", repo_http_url)
+        # Regular expression to parse a GitHub URL into two groups
+        # The first group contains the owner of the github repo extracted from the url
+        # The second group contains the name of the github repo extracted from the url
+        # 'But what is a regular expression?' ----> https://docs.python.org/3/howto/regex.html
+        regex = r"https?:\/\/github\.com\/([A-Za-z0-9 \- _]+)\/([A-Za-z0-9 \- _ \.]+)(.git)?\/?$"
+        result = re.search(regex, repo_http_url)
 
         if not result:
             return None, None
@@ -199,7 +203,7 @@ class Repository(OSSEntity):
 
         return owner, repo
 
-    def get_path_to_data(self,parent_path,extension):
+    def get_path_to_data(self, parent_path, extension):
         """
         Returns the path to store data given extension
         and parent path
@@ -211,10 +215,12 @@ class Repository(OSSEntity):
         Returns:
             String path to data.
         """
-        parentPath = os.path.join(parent_path, f"{self.repo_owner}/{self.name}")
-        pathlib.Path(parentPath).mkdir(parents=True, exist_ok=True)
+        data_path = os.path.join(
+            parent_path, f"{self.repo_owner}/{self.name}")
+        pathlib.Path(data_path).mkdir(parents=True, exist_ok=True)
 
-        return os.path.join(parent_path, f"{self.repo_owner}/{self.name}/{self.name}_data.{extension}")
+        filename = f"{self.repo_owner}/{self.name}/{self.name}_data.{extension}"
+        return os.path.join(parent_path, filename)
 
     def get_path_to_json_data(self):
         """
@@ -224,8 +230,8 @@ class Repository(OSSEntity):
         Returns:
             String path to data.
         """
-        return self.get_path_to_data(PATH_TO_METRICS_DATA,"json")
-    
+        return self.get_path_to_data(PATH_TO_METRICS_DATA, "json")
+
     def get_path_to_report_data(self):
         """
         Derive the path for markdown data using markdown
@@ -234,9 +240,9 @@ class Repository(OSSEntity):
         Returns:
             String path to data.
         """
-        return self.get_path_to_data(PATH_TO_REPORTS_DATA,"md")
+        return self.get_path_to_data(PATH_TO_REPORTS_DATA, "md")
 
-    def get_path_to_graph_data(self,graph_name):
+    def get_path_to_graph_data(self, graph_name):
         """
         Derive the path for graph data using svg
         parent path and extension
@@ -244,13 +250,12 @@ class Repository(OSSEntity):
         Returns:
             String path to data.
         """
-        parentPath = os.path.join(PATH_TO_GRAPHS_DATA, f"{self.repo_owner}/{self.name}")
-        #pathlib.Path(PATH_TO_GRAPHS_DATA).mkdir(parents=True, exist_ok=True)
-        pathlib.Path(parentPath).mkdir(parents=True,exist_ok=True)
+        id_str = f"{self.repo_owner}/{self.name}"
+        data_path = os.path.join(PATH_TO_GRAPHS_DATA, id_str)
+        pathlib.Path(data_path).mkdir(parents=True, exist_ok=True)
 
-        return os.path.join(PATH_TO_GRAPHS_DATA, f"{self.repo_owner}/{self.name}/{graph_name}_{self.name}_data.svg") 
-
-
+        fname = f"{self.repo_owner}/{self.name}/{graph_name}_{self.name}_data.svg"
+        return os.path.join(PATH_TO_GRAPHS_DATA, fname)
 
 
 class GithubOrg(OSSEntity):
@@ -277,31 +282,33 @@ class GithubOrg(OSSEntity):
         Derive the path for json data using json parent
         path and extension
     """
+
     def __init__(self, organization_login):
         self.login = organization_login
 
         super().__init__(self.login, "https://ai.chaoss.io/api/unstable/repo-groups")
-        response = requests.get(self.augur_util_endpoint,timeout=TIMEOUT_IN_SECONDS)
+        response = requests.get(self.augur_util_endpoint,
+                                timeout=TIMEOUT_IN_SECONDS)
         response_dict = json.loads(response.text)
 
         try:
-            #Get the item in the list that matches the login of the github org
-            group_id = next((item for item in response_dict if item["rg_name"] == self.login),None)
-            
+            # Get the item in the list that matches the login of the github org
+            group_id = next(
+                (item for item in response_dict if item["rg_name"] == self.login), None)
+
             self.repo_group_id = group_id
-        
+
         except ValueError:
             self.repo_group_id = None
-        
 
         self.needed_parameters = {
-            "org_login" : self.login,
+            "org_login": self.login,
             "repo_group_id": self.repo_group_id
         }
 
         self.metric_data = {
-            "login" : self.login,
-            "rg_id" : self.repo_group_id
+            "login": self.login,
+            "rg_id": self.repo_group_id
         }
 
         self.previous_metric_data = {}
@@ -314,8 +321,8 @@ class GithubOrg(OSSEntity):
         Returns:
             String path to data.
         """
-        parentPath = os.path.join(PATH_TO_METRICS_DATA, f"{self.login}")
-        pathlib.Path(parentPath).mkdir(parents=True, exist_ok=True)
-        orgPath = os.path.join(parentPath, f"{self.login}_data.json")
+        parent_path = os.path.join(PATH_TO_METRICS_DATA, f"{self.login}")
+        pathlib.Path(parent_path).mkdir(parents=True, exist_ok=True)
+        org_path = os.path.join(parent_path, f"{self.login}_data.json")
 
-        return orgPath
+        return org_path
