@@ -19,6 +19,7 @@ PATH_TO_METADATA = Path("_metadata").resolve()
 DATESTAMP = datetime.datetime.now().date().isoformat()
 TOKEN = os.getenv("GITHUB_TOKEN")
 GH_GQL_ENDPOINT = "https://api.github.com/graphql"
+AUGUR_HOST = os.getenv("AUGUR_HOST")
 
 PATH_TO_TEMPLATES = (Path(__file__).parent / "../../templates").resolve()
 

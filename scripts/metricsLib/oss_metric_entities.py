@@ -8,7 +8,7 @@ import json
 import os
 import pathlib
 import requests
-from metricsLib.constants import PATH_TO_METRICS_DATA, PATH_TO_REPORTS_DATA
+from metricsLib.constants import PATH_TO_METRICS_DATA, PATH_TO_REPORTS_DATA, AUGUR_HOST
 from metricsLib.constants import TIMEOUT_IN_SECONDS, PATH_TO_GRAPHS_DATA
 
 
@@ -145,7 +145,7 @@ class Repository(OSSEntity):
 
         self.repo_owner = owner
 
-        endpoint = f"https://ai.chaoss.io/api/unstable/owner/{self.repo_owner}/repo/{repo_name}"
+        endpoint = f"{AUGUR_HOST}/owner/{self.repo_owner}/repo/{repo_name}"
         super().__init__(repo_name,endpoint)
 
         response = requests.post(
@@ -286,9 +286,8 @@ class GithubOrg(OSSEntity):
     def __init__(self, organization_login):
         self.login = organization_login
 
-        super().__init__(self.login, "https://ai.chaoss.io/api/unstable/repo-groups")
-        response = requests.get(self.augur_util_endpoint,
-                                timeout=TIMEOUT_IN_SECONDS)
+        super().__init__(self.login, f"{AUGUR_HOST}/repo-groups")
+        response = requests.get(self.augur_util_endpoint,timeout=TIMEOUT_IN_SECONDS)
         response_dict = json.loads(response.text)
 
         try:
