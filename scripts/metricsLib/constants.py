@@ -12,6 +12,7 @@ PATH_TO_GRAPHS_DATA = (Path(__file__).parent / "../../app/site/_graphs").resolve
 PATH_TO_METADATA = Path("_metadata").resolve()
 DATESTAMP = datetime.datetime.now().date().isoformat()
 TOKEN = os.getenv("GITHUB_TOKEN")
+AUGUR_HOST = os.getenv("AUGUR_HOST")
 
 PATH_TO_TEMPLATES = (Path(__file__).parent / "../../templates").resolve()
 
@@ -108,7 +109,7 @@ SIMPLE_METRICS.append(GraphQLMetric("githubGraphqlSimpleCounts", ["repo", "owner
                                      "watchers_count": ["data", "repository", "watchers", "totalCount"]
                                      }, token=TOKEN))
 
-newContributorsofCommits = "https://ai.chaoss.io/api/unstable/repos/{repo_id}/pull-requests-merge-contributor-new?period={period}&begin_date={begin_date}&end_date={end_date}"
+newContributorsofCommits = AUGUR_HOST + "/repos/{repo_id}/pull-requests-merge-contributor-new?period={period}&begin_date={begin_date}&end_date={end_date}"
 PERIODIC_METRICS.append(RangeMetric("newContributorsofCommits", ["repo_id", "period", "begin_date", "end_date"], newContributorsofCommits,
                                     {"new_commit_contributor": "count"}))
 
