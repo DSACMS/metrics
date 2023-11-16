@@ -2,7 +2,7 @@
 Definitions of specific metrics for metricsLib
 """
 from metricsLib.metrics_data_structures import CustomMetric, parse_commits_by_month
-from metricsLib.metrics_data_structures import GraphQLMetric, RangeMetric
+from metricsLib.metrics_data_structures import GraphQLMetric, RangeMetric, SumMetric
 from metricsLib.constants import TOKEN
 
 # The general procedure is to execute all metrics against all repos and orgs
@@ -99,10 +99,6 @@ PERIODIC_METRICS.append(RangeMetric("newContributorsofCommits", ["repo_id", "per
   "https://ai.chaoss.io/api/unstable/repos/{repo_id}/pull-requests-merge-contributor-new?period={period}&begin_date={begin_date}&end_date={end_date}",
   {"new_commit_contributor": "count"}))
 
-#TODO: followers org name added
-#TODO: minor formatting on graphs
-#TODO: add org report
-
 ORG_GITHUB_GRAPHQL_QUERY = """
 query ($org_login: String!) {
   organization(login: $org_login) {
@@ -131,6 +127,10 @@ ORG_METRICS.append(GraphQLMetric("githubGraphqlOrgSimple", ["org_login"], ORG_GI
                                   "repo_count": ["data", "organization", "repositories", "totalCount"]
                                   }, token=TOKEN))
 
+FOLLOWERS_ENDPOINT = "https://api.github.com/users/{org_login}/followers"
+ORG_METRICS.append(
+  SumMetric("orgFollowers", ["org_login"], FOLLOWERS_ENDPOINT, "followers_count",token=TOKEN)
+)
 
 COMMITS_ENDPOINT = "https://api.github.com/repos/{owner}/{repo}/commits"
 SIMPLE_METRICS.append(CustomMetric("getCommitsByMonth", [

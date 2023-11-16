@@ -312,6 +312,21 @@ class GithubOrg(OSSEntity):
 
         self.previous_metric_data = {}
 
+    def get_path_to_data(self,super_parent_path,extension):
+        """
+        Derive the path for data using parent
+        path and extension
+
+        Returns:
+            String path to data.
+        """
+        parent_path = os.path.join(super_parent_path, f"{self.login}")
+        pathlib.Path(parent_path).mkdir(parents=True, exist_ok=True)
+        org_path = os.path.join(parent_path, f"{self.login}_data.{extension}")
+
+        return org_path
+
+
     def get_path_to_json_data(self):
         """
         Derive the path for json data using json parent
@@ -320,8 +335,26 @@ class GithubOrg(OSSEntity):
         Returns:
             String path to data.
         """
-        parent_path = os.path.join(PATH_TO_METRICS_DATA, f"{self.login}")
-        pathlib.Path(parent_path).mkdir(parents=True, exist_ok=True)
-        org_path = os.path.join(parent_path, f"{self.login}_data.json")
+        return self.get_path_to_data(PATH_TO_METRICS_DATA, "json")
+    
+    def get_path_to_report_data(self):
+        """
+        Derive the path for report data using parent
+        path and extension
 
-        return org_path
+        Returns:
+            String path to data.
+        """
+        return self.get_path_to_data(PATH_TO_REPORTS_DATA, "md")
+
+    def get_path_to_graph_data(self):
+        """
+        Derive the path for graph data using parent
+        path and extension
+
+        Returns:
+            String path to data.
+        """
+        return self.get_path_to_data(PATH_TO_GRAPHS_DATA, "svg")
+
+
