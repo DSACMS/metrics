@@ -63,6 +63,7 @@ module.exports = function (eleventyConfig) {
     "src/img": "assets/img",
     "site/img": "assets/img",
     "src/js": "assets/js",
+    "site/_graphs": "assets/img/graphs",
     "node_modules/@uswds/uswds/dist/img": "assets/img",
   })
 
