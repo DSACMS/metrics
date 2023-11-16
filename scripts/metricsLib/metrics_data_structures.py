@@ -6,12 +6,12 @@ import datetime
 from functools import reduce
 import operator
 import requests
-from metricsLib.constants import TIMEOUT_IN_SECONDS
+from metricsLib.constants import TIMEOUT_IN_SECONDS, GH_GQL_ENDPOINT
 
 # Simple metric that can be represented by a count or value.
 
 
-class SimpleMetric:
+class BaseMetric:
     """
     This serves as the base class to define a metric.
     A metric accepts parameters and returns data with the
@@ -46,19 +46,20 @@ class SimpleMetric:
         Fetch data from url using parameters and format the data
         before returning it.
     """
-    def __init__(self, name, needed_parameters, endpoint_url, return_values, token=None, method = 'GET'):
+
+    def __init__(self, name, needed_params, endpoint_url, return_values, token=None, method='GET'):
         self.name = name
         self.return_values = return_values
         self.url = endpoint_url
 
-        self.needed_parameters = needed_parameters
+        self.needed_parameters = needed_params
         self.method = method
         if token:
             self.headers = {"Authorization": f"bearer {token}"}
         else:
             self.headers = None
 
-    def hit_metric(self,params=None):
+    def hit_metric(self, params=None):
         """
         Format the url with parameters and fetch the data from it.
 
@@ -72,9 +73,16 @@ class SimpleMetric:
             request_params = None
 
         if self.headers:
-            response = requests.request(self.method,self.url,params=request_params,headers=self.headers, timeout=TIMEOUT_IN_SECONDS)
+            _args_ = (self.method, self.url)
+            _kwargs_ = {
+                "params": request_params,
+                "headers": self.headers,
+                "timeout": TIMEOUT_IN_SECONDS
+            }
+            response = requests.request(*_args_,**_kwargs_ )
         else:
-            response = requests.request(self.method,self.url,params=request_params, timeout=TIMEOUT_IN_SECONDS)
+            response = requests.request(
+                self.method, self.url, params=request_params, timeout=TIMEOUT_IN_SECONDS)
 
         response_json = json.loads(response.text)
 
@@ -98,7 +106,7 @@ class SimpleMetric:
         return to_return
 
 
-class GraphQLMetric(SimpleMetric):
+class GraphQLMetric(BaseMetric):
     """
     Class to define a metric that gets data from a graphql endpoint.
 
@@ -123,8 +131,9 @@ class GraphQLMetric(SimpleMetric):
         before returning it.
     """
     # Return value is a dict of lists of strings that match to the keys of the dict.
-    def __init__(self, name, needed_parameters, query, return_values, token=None, url="https://api.github.com/graphql"):
-        super().__init__(name, needed_parameters, url, return_values, token=token)
+
+    def __init__(self, name, needed_params, query, return_vals, token=None, url=GH_GQL_ENDPOINT):
+        super().__init__(name, needed_params, url, return_vals, token=token)
         self.query = query
 
     def get_values(self, params=None):
@@ -149,13 +158,14 @@ class GraphQLMetric(SimpleMetric):
 
         if self.headers:
             response = requests.post(
-                self.url, headers=self.headers, json=json_dict,timeout=TIMEOUT_IN_SECONDS)
+                self.url, headers=self.headers, json=json_dict, timeout=TIMEOUT_IN_SECONDS)
         else:
-            response = requests.post(self.url, json=json_dict,timeout=TIMEOUT_IN_SECONDS)
+            response = requests.post(
+                self.url, json=json_dict, timeout=TIMEOUT_IN_SECONDS)
 
         response_json = json.loads(response.text)
 
-        toReturn = {}
+        to_return = {}
 
         if "data" not in response_json.keys():
             if "message" not in response_json.keys():
@@ -165,21 +175,17 @@ class GraphQLMetric(SimpleMetric):
                 raise requests.exceptions.InvalidJSONError(
                     response_json['message'])
 
-        for val, keySequence in self.return_values.items():
+        for val, key_sequence in self.return_values.items():
             # Extract the nested data and store it in a flat dict to return to the user
-            toReturn[val] = reduce(
-                operator.getitem, keySequence, response_json)
+            to_return[val] = reduce(
+                operator.getitem, key_sequence, response_json)
 
-        return toReturn
+        return to_return
 
-# A metric that returns a single value from a list of values
-# Used for endpoints that return an iterable.
-
-
-class RangeMetric(SimpleMetric):
+class ListMetric(BaseMetric):
     """
-    Class to define a metric that returns the sum of a returned list 
-    from and endpoint
+    Class to define a metric that returns a returned list 
+    from an endpoint
     ...
 
     Methods
@@ -188,73 +194,121 @@ class RangeMetric(SimpleMetric):
         Fetch data from url using parameters, format and sum the data
         before returning it.
     """
-    def __init__(self, name, needed_parameters, endpoint_url, return_values, token=None, method = 'GET'):
-        super().__init__(name, needed_parameters, endpoint_url, return_values, token=token,method=method)
+    def __init__(self, name, needed_params, endpoint_url, return_values, token=None, method='GET'):
+        super().__init__(name, needed_params, endpoint_url,
+                         return_values, token=token, method=method)
+
+    def get_values(self, params=None):
+        metric_json = self.hit_metric(params=params)
+
+        to_return = {}
+
+        for return_label, api_label in self.return_values:
+            to_return[return_label] = [item[api_label]
+                                     for item in metric_json]
+
+        return to_return
+
+
+
+
+class RangeMetric(ListMetric):
+    """
+    Class to define a metric that returns the sum of a returned list 
+    from an endpoint
+    ...
+
+    Methods
+    -------
+    get_values(params={}):
+        Fetch data from url using parameters, format and sum the data
+        before returning it.
+    """
+
+    def __init__(self, name, needed_params, endpoint_url, return_values, token=None, method='GET'):
+        super().__init__(name, needed_params, endpoint_url,
+                         return_values, token=token, method=method)
 
     def get_values(self, params=None):
         """
         Fetch data from url using parameters and format the data
         before returning it.
 
+        Sums up the result lists of ListMetric's get_values method
+        and returns
+
         Args:
             params: dict
                 Dictionary of parameters to apply to endpoint.
+        
+        Returns:
+            Dictionary containing the desired values in the requested mapping
         """
 
-        metric_json = self.hit_metric(params=params)
+        return_dict = super().get_values(params=params)#self.hit_metric(params=params)
 
-        toReturn = {}
+        to_return = {}
 
-        for returnLabel, apiLabel in self.return_values:
-            toReturn[returnLabel] = sum([item[apiLabel]
-                                        for item in metric_json])
+        for return_label, _ in return_dict.items():
+            to_return[return_label] = sum(return_dict[return_label])
 
-        return toReturn
+        return to_return
 
-class ListMetric(SimpleMetric):
-    def __init__(self, name, needed_parameters, endpoint_url, return_values, token=None, method = 'GET'):
-        super().__init__(name, needed_parameters, endpoint_url, return_values, token=token,method=method)
+
+class CustomMetric(BaseMetric):
+    """
+    Class to define a metric that is parsed in a custom way defined
+    by a function that takes the metric_json returned by the endpoint as
+    an argument. 
+
+    ...
+
+    Methods
+    -------
+    get_values(params={}):
+        Fetch data from url using parameters, format and sum the data
+        before returning it. Using the custom parsing function passed in.
+    """
+    def __init__(self, name, needed_parameters, endpoint_url, func, token=None, method='GET'):
+        super().__init__(name, needed_parameters,
+                         endpoint_url, None, token=token, method=method)
+        self.parse_function = func
 
     def get_values(self, params=None):
         metric_json = self.hit_metric(params=params)
 
-        toReturn = {}
+        return self.parse_function(metric_json=metric_json, return_values=self.return_values)
 
-        for returnLabel, apiLabel in self.return_values:
-            toReturn[returnLabel] = [item[apiLabel]
-                                        for item in metric_json]
 
-        return toReturn
+# Custom parse functions
+def parse_commits_by_month(**kwargs):
+    """
+    Parse the raw json returned by the commits endpoint into
+    a dictionary that groups commit counts for a repository by
+    month.
 
-class CustomMetric(SimpleMetric):
-    def __init__(self, name, needed_parameters, endpoint_url,func, token=None, method = 'GET'):
-        super().__init__(name, needed_parameters, endpoint_url, None, token=token,method=method)
-        self.parse_function = func
+    Args:
+        kwargs: dict
+            Keyword arguments used by the parsing function,
     
-    def get_values(self,params=None):
-        metric_json = self.hit_metric(params=params)
+    Returns:
+        Dictionary containing the desired values in the requested mapping
+    """
 
-        return self.parse_function(metric_json=metric_json,return_values=self.return_values)
-
-
-
-#Custom parse functions
-def parse_commits_by_month(*args, **kwargs):
-
-    return_values = kwargs['return_values']
     metric_json = kwargs['metric_json']
 
     commits_by_month = {}
 
-    #print(metric_json)
+    # print(metric_json)
     for commit in metric_json:
-        #Get the month and year of the commit
+        # Get the month and year of the commit
         datetime_str = commit['commit']['author']['date']
-        date_obj = datetime.datetime.strptime(datetime_str, '%Y-%m-%dT%H:%M:%SZ')
+        date_obj = datetime.datetime.strptime(
+            datetime_str, '%Y-%m-%dT%H:%M:%SZ')
         month = f"{date_obj.year}/{date_obj.month}"
-        #print(month)
+        # print(month)
 
-        #Add up the commits for each month and return
+        # Add up the commits for each month and return
         if commits_by_month.get(month):
             commits_by_month[month] += 1
         else:
