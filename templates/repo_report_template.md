@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for DSACMS | REPORT-{date_stamp}
-permalink: /metrics/repos/{repo_owner}/{repo_name}
+title: Open Source at CMS Metrics Report for {repo_name} | REPORT-{date_stamp}
+permalink: /{repo_owner}/{repo_name}
 
-org: DSACMS
+org: {repo_owner}
+repo: {repo_name}
 reportID: REPORT-{date_stamp}
 date_stampThisWeek: {date_stamp}
 date_stampLastWeek: {date_stamp}
-# TODO: Update front matter fields & data above once we have data/graphs for reports.
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -101,11 +101,11 @@ date_stampLastWeek: {date_stamp}
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="_graphs/{repo_owner}/{repo_name}/issue_guage_{repo_name}_data.svg" />
+      <embed type="image/svg+xml" src="../assets/img/graphs/{repo_owner}/{repo_name}/issue_guage_{repo_name}_data.svg" />
     </figure>
     <!--- Contributor Activity Line Graph -->
     <figure>
-      <embed type="image/svg+xml" src="_graphs/{repo_owner}/{repo_name}/commit_sparklines_{repo_name}_data.svg" />
+      <embed type="image/svg+xml" src="../assets/img/graphs/{repo_owner}/{repo_name}/commit_sparklines_{repo_name}_data.svg" />
     </figure>
   </div>
 </div>
