@@ -3,9 +3,10 @@ Module to define methods that fetch data to store in the oss metric
 entity objects.
 """
 import json
-from metricsLib.constants import SIMPLE_METRICS, ORG_METRICS
+from metricsLib.metrics_definitions import SIMPLE_METRICS, ORG_METRICS
 
-def get_all_data(all_orgs,all_repos):
+
+def get_all_data(all_orgs, all_repos):
     """
     Call relevant methods on orgs and repos
 
@@ -15,7 +16,8 @@ def get_all_data(all_orgs,all_repos):
     """
     fetch_all_new_metric_data(all_orgs, all_repos)
     read_previous_metric_data(all_repos, all_orgs)
-    write_metric_data_json_to_file(all_orgs,all_repos)
+    write_metric_data_json_to_file(all_orgs, all_repos)
+
 
 def add_info_to_org_from_list_of_repos(repo_list, org):
     """
@@ -29,30 +31,30 @@ def add_info_to_org_from_list_of_repos(repo_list, org):
         repo_list: List of all repos with metrics
         org: The github org to add metrics to
     """
-    #Define counts to update based on tracked repositories. 
+    # Define counts to update based on tracked repositories.
     org_counts = {"commits_count": 0,
-                 "issues_count": 0,
-                 "open_issues_count": 0,
-                 "closed_issues_count": 0,
-                 "pull_requests_count": 0,
-                 "open_pull_requests_count": 0,
-                 "merged_pull_requests_count": 0,
-                 "closed_pull_requests_count": 0,
-                 "forks_count": 0,
-                 "stargazers_count": 0,
-                 "watchers_count": 0
-                 }
+                  "issues_count": 0,
+                  "open_issues_count": 0,
+                  "closed_issues_count": 0,
+                  "pull_requests_count": 0,
+                  "open_pull_requests_count": 0,
+                  "merged_pull_requests_count": 0,
+                  "closed_pull_requests_count": 0,
+                  "forks_count": 0,
+                  "stargazers_count": 0,
+                  "watchers_count": 0
+                  }
 
-    #Add repo data to org that repo is a part of
+    # Add repo data to org that repo is a part of
     for repo in repo_list:
-        #Check for membership
+        # Check for membership
         if repo.needed_parameters["repo_group_id"] == org.needed_parameters["repo_group_id"]:
-            #Add metric data.
-            for key in org_counts.keys():
+            # Add metric data.
+            for key, _ in org_counts.items():
                 raw_count = repo.metric_data.get(key)
                 if raw_count:
                     org_counts[key] += raw_count
-    
+
     org.store_metrics(org_counts)
 
 
@@ -81,7 +83,7 @@ def fetch_all_new_metric_data(all_orgs, all_repos):
         print(f"Fetching metrics for org {org.name}")
         for metric in ORG_METRICS:
             org.apply_metric_and_store_data(metric)
-        add_info_to_org_from_list_of_repos(all_repos,org)
+        add_info_to_org_from_list_of_repos(all_repos, org)
 
 
 def read_previous_metric_data(repos, orgs):
@@ -97,7 +99,7 @@ def read_previous_metric_data(repos, orgs):
     """
     for org in orgs:
         try:
-            with open(org.get_path_to_json_data(), "r",encoding="utf-8") as file:
+            with open(org.get_path_to_json_data(), "r", encoding="utf-8") as file:
                 prev_data = json.load(file)
                 org.previous_metric_data.update(prev_data)
         except FileNotFoundError:
@@ -105,14 +107,14 @@ def read_previous_metric_data(repos, orgs):
 
     for repo in repos:
         try:
-            with open(repo.get_path_to_json_data(), "r",encoding="utf-8") as file:
+            with open(repo.get_path_to_json_data(), "r", encoding="utf-8") as file:
                 prev_data = json.load(file)
                 repo.previous_metric_data.update(prev_data)
         except FileNotFoundError:
             print(f"Could not find previous data for records for repo {repo.name}")
 
 
-def write_metric_data_json_to_file(orgs,repos):
+def write_metric_data_json_to_file(orgs, repos):
     """
     Write all metric data to json files.
 
@@ -122,13 +124,13 @@ def write_metric_data_json_to_file(orgs,repos):
     """
 
     for org in orgs:
-        org_metric_data = json.dumps(org.metric_data,indent=4)
+        org_metric_data = json.dumps(org.metric_data, indent=4)
 
-        with open(org.get_path_to_json_data(), "w+",encoding="utf-8") as file:
+        with open(org.get_path_to_json_data(), "w+", encoding="utf-8") as file:
             file.write(org_metric_data)
 
     for repo in repos:
         repo_metric_data = json.dumps(repo.metric_data, indent=4)
 
-        with open(repo.get_path_to_json_data(), "w+",encoding="utf-8") as file:
+        with open(repo.get_path_to_json_data(), "w+", encoding="utf-8") as file:
             file.write(repo_metric_data)
