@@ -11,7 +11,7 @@ from metricsLib.constants import TIMEOUT_IN_SECONDS, GH_GQL_ENDPOINT
 # Simple metric that can be represented by a count or value.
 
 
-class SimpleMetric:
+class BaseMetric:
     """
     This serves as the base class to define a metric.
     A metric accepts parameters and returns data with the
@@ -106,7 +106,7 @@ class SimpleMetric:
         return to_return
 
 
-class GraphQLMetric(SimpleMetric):
+class GraphQLMetric(BaseMetric):
     """
     Class to define a metric that gets data from a graphql endpoint.
 
@@ -182,7 +182,7 @@ class GraphQLMetric(SimpleMetric):
 
         return to_return
 
-class ListMetric(SimpleMetric):
+class ListMetric(BaseMetric):
     """
     Class to define a metric that returns a returned list 
     from an endpoint
@@ -255,7 +255,7 @@ class RangeMetric(ListMetric):
         return to_return
 
 
-class CustomMetric(SimpleMetric):
+class CustomMetric(BaseMetric):
     """
     Class to define a metric that is parsed in a custom way defined
     by a function that takes the metric_json returned by the endpoint as

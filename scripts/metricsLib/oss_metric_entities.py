@@ -71,7 +71,7 @@ class OSSEntity:
         needed by a metric
 
         Args:
-            metric: SimpleMetric
+            metric: BaseMetric
 
         Returns:
             Dictionary containing the parameters needed for the given metric
@@ -90,7 +90,7 @@ class OSSEntity:
         the metric_data dict.
 
         Args:
-            metric: SimpleMetric
+            metric: BaseMetric
         """
         params = self.get_parameters_for_metric(metric)
 
