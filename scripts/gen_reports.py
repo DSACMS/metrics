@@ -62,7 +62,7 @@ def generate_repo_report_files(repos):
         ]
 
         for heading in metric_table_headings:
-            prev_record = 0
+            prev_record = repo.metric_data[heading]
 
             if heading in repo.previous_metric_data.keys():
                 prev_record = repo.previous_metric_data[heading]
