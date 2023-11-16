@@ -2,7 +2,8 @@
 Module to define methods to create reports
 """
 from datetime import date
-from metricsLib.constants import REPO_REPORT_TEMPLATE
+from metricsLib.constants import REPO_REPORT_TEMPLATE, ORG_REPORT_TEMPLATE
+
 
 
 def calc_percent_difference(latest, prev):
@@ -28,6 +29,12 @@ def calc_percent_difference(latest, prev):
         dec = 0
 
     return int(dec * 100)
+
+
+def generate_org_report_files(orgs):
+
+    for org in orgs:
+        print(f"Generating report for org {org.name}")
 
 
 def generate_repo_report_files(repos):
