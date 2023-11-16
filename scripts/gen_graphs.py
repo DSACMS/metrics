@@ -3,6 +3,7 @@ Module to define methods to create pygals graphs
 """
 import pygal
 
+#TODO: minor formatting on graphs
 
 def generate_all_graphs_for_repos(all_repos):
     """
@@ -18,7 +19,7 @@ def generate_all_graphs_for_repos(all_repos):
         generate_repo_sparklines(repo)
 
 
-def write_repo_chart_to_file(repo, chart, chart_name, custom_func=None):
+def write_repo_chart_to_file(repo, chart, chart_name, custom_func=None, custom_func_params={}):
     """
     This function's purpose is to save a pygals chart to a path derived from the 
     repository object passed in.
@@ -35,7 +36,7 @@ def write_repo_chart_to_file(repo, chart, chart_name, custom_func=None):
             if not custom_func:
                 file.write(chart.render())
             else:
-                file.write(custom_func())
+                file.write(custom_func(**custom_func_params))
         except ZeroDivisionError:
             print(
                 f"Repo {repo.name} has a division by zero error when trying to make graph")
@@ -51,14 +52,20 @@ def generate_repo_sparklines(repo):
     """
     chart = pygal.Line(interpolate='cubic')
     chart.add('', list(repo.metric_data["commits_by_month"].values()))
+    chart.x_labels = list(repo.metric_data["commits_by_month"].keys())
 
     # print("SPARKLINES")
     # print(chart.render_sparkline())
     # I have to do this because sparklinees don't have their own subclass and instead
     # are rendered through a special method of the Line object.
     # TODO: file a pygals issue to make sparklines their own object
+    _kwargs_ = {
+        "show_x_labels": True,
+        "show_y_labels": True,
+        "margin": 10
+    }
     write_repo_chart_to_file(
-        repo, chart, "commit_sparklines", custom_func=chart.render_sparkline)
+        repo, chart, "commit_sparklines", custom_func=chart.render_sparkline,custom_func_params=_kwargs_)
 
 
 def generate_repo_solid_guage_issue_graph(repo):
@@ -69,7 +76,7 @@ def generate_repo_solid_guage_issue_graph(repo):
         repos: the set of Repository objects
     """
 
-    issues_guage = pygal.SolidGauge(inner_radius=0.70)
+    issues_guage = pygal.SolidGauge(inner_radius=0.70,legend_at_bottom=True)
     def percent_formatter(x):
         return '{:0.2f}%'.format(x)
     issues_guage.value_formatter = percent_formatter
