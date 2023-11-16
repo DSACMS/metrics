@@ -68,7 +68,6 @@ def generate_repo_report_files(repos):
             percent_difference = calc_percent_difference(repo.metric_data[heading], prev_record)
             raw_diff = repo.metric_data[heading] - prev_record
 
-            #Black color
             diff_color = ''
 
             if(raw_diff > 0):
