@@ -99,6 +99,10 @@ PERIODIC_METRICS.append(RangeMetric("newContributorsofCommits", ["repo_id", "per
   "https://ai.chaoss.io/api/unstable/repos/{repo_id}/pull-requests-merge-contributor-new?period={period}&begin_date={begin_date}&end_date={end_date}",
   {"new_commit_contributor": "count"}))
 
+#TODO: followers org name added
+#TODO: minor formatting on graphs
+#TODO: add org report
+
 ORG_GITHUB_GRAPHQL_QUERY = """
 query ($org_login: String!) {
   organization(login: $org_login) {
