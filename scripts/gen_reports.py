@@ -69,14 +69,14 @@ def generate_repo_report_files(repos):
             raw_diff = repo.metric_data[heading] - prev_record
 
             #Black color
-            diff_color = '#000000'
+            diff_color = ''
 
             if(raw_diff > 0):
                 #Green color
-                diff_color = '#45c527'
+                diff_color = 'color: #45c527'
             elif (raw_diff < 0):
                 #Red color
-                diff_color = '#d31c08'
+                diff_color = 'color: #d31c08'
 
             report_values.update({
                 f"latest_{heading}": repo.metric_data[heading],
