@@ -87,7 +87,8 @@ def generate_org_report_files(orgs):
             'closed_pull_requests_count',
             'forks_count',
             'stargazers_count',
-            'watchers_count'
+            'watchers_count',
+            'followers_count'
         ]
 
         report_values.update(get_heading_report_values(org_metric_table_headings, org))
