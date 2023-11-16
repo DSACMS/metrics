@@ -347,7 +347,7 @@ class GithubOrg(OSSEntity):
         """
         return self.get_path_to_data(PATH_TO_REPORTS_DATA, "md")
 
-    def get_path_to_graph_data(self):
+    def get_path_to_graph_data(self,chart_name):
         """
         Derive the path for graph data using parent
         path and extension
@@ -355,6 +355,11 @@ class GithubOrg(OSSEntity):
         Returns:
             String path to data.
         """
-        return self.get_path_to_data(PATH_TO_GRAPHS_DATA, "svg")
+        
+        parent_path = os.path.join(PATH_TO_GRAPHS_DATA, f"{self.login}")
+        pathlib.Path(parent_path).mkdir(parents=True, exist_ok=True)
+        org_path = os.path.join(parent_path, f"{self.login}_{chart_name}.svg")
+
+        return org_path
 
 

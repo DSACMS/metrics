@@ -3,7 +3,6 @@ Module to define methods to create pygals graphs
 """
 import pygal
 
-#TODO: minor formatting on graphs
 
 def generate_all_graphs_for_repos(all_repos):
     """
@@ -15,8 +14,13 @@ def generate_all_graphs_for_repos(all_repos):
     """
     for repo in all_repos:
         print(f"Generating graphs for repo {repo.name}")
-        generate_repo_solid_guage_issue_graph(repo)
+        generate_solid_guage_issue_graph(repo)
         generate_repo_sparklines(repo)
+
+def generate_all_graphs_for_orgs(all_orgs):
+    for org in all_orgs:
+        print(f"Generating graphs for org {org.name}")
+        generate_solid_guage_issue_graph(org)
 
 
 def write_repo_chart_to_file(repo, chart, chart_name, custom_func=None, custom_func_params={}):
@@ -68,12 +72,12 @@ def generate_repo_sparklines(repo):
         repo, chart, "commit_sparklines", custom_func=chart.render_sparkline,custom_func_params=_kwargs_)
 
 
-def generate_repo_solid_guage_issue_graph(repo):
+def generate_solid_guage_issue_graph(oss_entity):
     """
     This function generates pygals solid guage issue/pr graphs for a set of Repository objects.
 
     Arguments:
-        repos: the set of Repository objects
+        oss_entity: the OSSEntity to create a graph for.
     """
 
     issues_guage = pygal.SolidGauge(inner_radius=0.70,legend_at_bottom=True)
@@ -82,20 +86,20 @@ def generate_repo_solid_guage_issue_graph(repo):
     issues_guage.value_formatter = percent_formatter
 
     try:
-        open_issue_percent = repo.metric_data['open_issues_count'] / \
-            repo.metric_data['issues_count']
+        open_issue_percent = oss_entity.metric_data['open_issues_count'] / \
+            oss_entity.metric_data['issues_count']
     except ZeroDivisionError:
         open_issue_percent = 0
     issues_guage.add(
         'Open Issues', [{'value': open_issue_percent * 100, 'max_value': 100}])
 
     try:
-        open_pr_percent = repo.metric_data['open_pull_requests_count'] / \
-            repo.metric_data['pull_requests_count']
-        merged_pr_percent = repo.metric_data['merged_pull_requests_count'] / \
-            repo.metric_data['pull_requests_count']
-        closed_pr_percent = repo.metric_data['closed_pull_requests_count'] / \
-            repo.metric_data['pull_requests_count']
+        open_pr_percent = oss_entity.metric_data['open_pull_requests_count'] / \
+            oss_entity.metric_data['pull_requests_count']
+        merged_pr_percent = oss_entity.metric_data['merged_pull_requests_count'] / \
+            oss_entity.metric_data['pull_requests_count']
+        closed_pr_percent = oss_entity.metric_data['closed_pull_requests_count'] / \
+            oss_entity.metric_data['pull_requests_count']
     except ZeroDivisionError:
         open_pr_percent = 0
         merged_pr_percent = 0
@@ -108,7 +112,7 @@ def generate_repo_solid_guage_issue_graph(repo):
             {'value': merged_pr_percent * 100, 'max_value': 100},
             {'value': closed_pr_percent * 100, 'max_value': 100}])
 
-    write_repo_chart_to_file(repo, issues_guage, "issue_guage")
+    write_repo_chart_to_file(oss_entity, issues_guage, "issue_guage")
 
 
 # TODO: Just get these metrics from augur instead of storing them in json.
