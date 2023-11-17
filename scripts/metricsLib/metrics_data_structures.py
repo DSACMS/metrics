@@ -182,6 +182,27 @@ class GraphQLMetric(BaseMetric):
 
         return to_return
 
+class SumMetric(BaseMetric):
+    """
+    Class to define a metric that returns a returned list 
+    from an endpoint
+    ...
+
+    Methods
+    -------
+    get_values(params={}):
+        Fetch data from url using parameters, format and sum the data
+        before returning it.
+    """
+    def __init__(self, name, needed_params, endpoint_url,return_val, token=None, method='GET'):
+        super().__init__(name, needed_params, endpoint_url,
+                         return_val, token=token, method=method)
+
+    def get_values(self, params=None):
+        return {self.return_values: len(self.hit_metric(params=params))}
+
+
+
 class ListMetric(BaseMetric):
     """
     Class to define a metric that returns a returned list 
@@ -253,6 +274,7 @@ class RangeMetric(ListMetric):
             to_return[return_label] = sum(return_dict[return_label])
 
         return to_return
+
 
 
 class CustomMetric(BaseMetric):
