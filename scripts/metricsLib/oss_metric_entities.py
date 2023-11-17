@@ -328,6 +328,7 @@ class GithubOrg(OSSEntity):
     def __init__(self, organization_login):
         self.login = organization_login
 
+        print(f"AUGUR_HOST: {AUGUR_HOST}")
         super().__init__(self.login, f"{AUGUR_HOST}/repo-groups")
         response = requests.get(self.augur_util_endpoint,timeout=TIMEOUT_IN_SECONDS)
         response_dict = json.loads(response.text)
@@ -354,6 +355,21 @@ class GithubOrg(OSSEntity):
 
         self.previous_metric_data = {}
 
+    def get_path_to_data(self,super_parent_path,extension):
+        """
+        Derive the path for data using parent
+        path and extension
+
+        Returns:
+            String path to data.
+        """
+        parent_path = os.path.join(super_parent_path, f"{self.login}")
+        pathlib.Path(parent_path).mkdir(parents=True, exist_ok=True)
+        org_path = os.path.join(parent_path, f"{self.login}_data.{extension}")
+
+        return org_path
+
+
     def get_path_to_json_data(self):
         """
         Derive the path for json data using json parent
@@ -362,8 +378,31 @@ class GithubOrg(OSSEntity):
         Returns:
             String path to data.
         """
-        parent_path = os.path.join(PATH_TO_METRICS_DATA, f"{self.login}")
+        return self.get_path_to_data(PATH_TO_METRICS_DATA, "json")
+    
+    def get_path_to_report_data(self):
+        """
+        Derive the path for report data using parent
+        path and extension
+
+        Returns:
+            String path to data.
+        """
+        return self.get_path_to_data(PATH_TO_REPORTS_DATA, "md")
+
+    def get_path_to_graph_data(self,chart_name):
+        """
+        Derive the path for graph data using parent
+        path and extension
+
+        Returns:
+            String path to data.
+        """
+        
+        parent_path = os.path.join(PATH_TO_GRAPHS_DATA, f"{self.login}")
         pathlib.Path(parent_path).mkdir(parents=True, exist_ok=True)
-        org_path = os.path.join(parent_path, f"{self.login}_data.json")
+        org_path = os.path.join(parent_path, f"{self.login}_{chart_name}.svg")
 
         return org_path
+
+

@@ -175,12 +175,35 @@ class GraphQLMetric(BaseMetric):
                 raise requests.exceptions.InvalidJSONError(
                     response_json['message'])
 
+        print(f"Response_JSON: {response_json}")
+        print(f"Return values: {self.return_values}")
         for val, key_sequence in self.return_values.items():
             # Extract the nested data and store it in a flat dict to return to the user
             to_return[val] = reduce(
                 operator.getitem, key_sequence, response_json)
 
         return to_return
+
+class SumMetric(BaseMetric):
+    """
+    Class to define a metric that returns a returned list 
+    from an endpoint
+    ...
+
+    Methods
+    -------
+    get_values(params={}):
+        Fetch data from url using parameters, format and sum the data
+        before returning it.
+    """
+    def __init__(self, name, needed_params, endpoint_url,return_val, token=None, method='GET'):
+        super().__init__(name, needed_params, endpoint_url,
+                         return_val, token=token, method=method)
+
+    def get_values(self, params=None):
+        return {self.return_values: len(self.hit_metric(params=params))}
+
+
 
 class ListMetric(BaseMetric):
     """
@@ -253,6 +276,7 @@ class RangeMetric(ListMetric):
             to_return[return_label] = sum(return_dict[return_label])
 
         return to_return
+
 
 
 class CustomMetric(BaseMetric):

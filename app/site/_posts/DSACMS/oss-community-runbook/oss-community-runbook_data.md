@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for DSACMS | REPORT-2023-11-15
-permalink: /metrics/repos/DSACMS/oss-community-runbook
+title: Open Source at CMS Metrics Report for oss-community-runbook | REPORT-2023-11-17
+permalink: /DSACMS/oss-community-runbook
 
 org: DSACMS
-reportID: REPORT-2023-11-15
-date_stampThisWeek: 2023-11-15
-date_stampLastWeek: 2023-11-15
-# TODO: Update front matter fields & data above once we have data/graphs for reports.
+repo: oss-community-runbook
+reportID: REPORT-2023-11-17
+date_stampThisWeek: 2023-11-17
+date_stampLastWeek: 2023-11-17
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -26,71 +26,71 @@ date_stampLastWeek: 2023-11-15
         <th scope="row">Commits</th>
         <td>1</td>
         <td>1</td>
-        <td style="color: #000000" >0</td>
-        <td style="color: #000000" >0%</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
         <td>0</td>
         <td>0</td>
-        <td style="color: #000000" >0</td>
-        <td style="color: #000000" >0%</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
         <td>0</td>
         <td>0</td>
-        <td style="color: #000000" >0</td>
-        <td style="color: #000000" >0%</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
         <td>0</td>
         <td>0</td>
-        <td style="color: #000000" >0</td>
-        <td style="color: #000000" >0%</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>0</td>
         <td>0</td>
-        <td style="color: #000000" >0</td>
-        <td style="color: #000000" >0%</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>0</td>
         <td>0</td>
-        <td style="color: #000000" >0</td>
-        <td style="color: #000000" >0%</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>0</td>
         <td>0</td>
-        <td style="color: #000000" >0</td>
-        <td style="color: #000000" >0%</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
         <td>0</td>
         <td>0</td>
-        <td style="color: #000000" >0</td>
-        <td style="color: #000000" >0%</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
         <td>2</td>
         <td>2</td>
-        <td style="color: #000000" >0</td>
-        <td style="color: #000000" >0%</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
         <td>2</td>
         <td>2</td>
-        <td style="color: #000000" >0</td>
-        <td style="color: #000000" >0%</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>
@@ -101,11 +101,12 @@ date_stampLastWeek: 2023-11-15
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="_graphs/DSACMS/oss-community-runbook/issue_guage_oss-community-runbook_data.svg" />
+      <embed type="image/svg+xml" src="../assets/img/graphs/DSACMS/oss-community-runbook/issue_guage_oss-community-runbook_data.svg" />
     </figure>
     <!--- Contributor Activity Line Graph -->
+    <h3>Commits by Month</h3>
     <figure>
-      <embed type="image/svg+xml" src="_graphs/DSACMS/oss-community-runbook/commit_sparklines_oss-community-runbook_data.svg" />
+      <embed type="image/svg+xml" src="../assets/img/graphs/DSACMS/oss-community-runbook/commit_sparklines_oss-community-runbook_data.svg" />
     </figure>
   </div>
 </div>
