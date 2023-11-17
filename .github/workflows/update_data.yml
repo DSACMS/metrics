@@ -6,8 +6,13 @@ on:
     # Run Mondays at 2:15 am
     - cron: "15 2 * * 0"
 
+
+#Organization variables can only be used by public repositories on your plan.
+
+#If you would like to use organization variables in a private repository, you will need to upgrade your plan.
+
 env:
-  AUGUR_HOST: $AUGUR_HOST
+  AUGUR_HOST: ${{ vars.AUGUR_HOST }}
 
 jobs:
   update:
