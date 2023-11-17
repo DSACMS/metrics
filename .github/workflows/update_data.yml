@@ -6,6 +6,8 @@ on:
     # Run Mondays at 2:15 am
     - cron: "15 2 * * 0"
 
+env:
+  AUGUR_HOST: AUGUR_HOST
 
 jobs:
   update:
