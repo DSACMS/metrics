@@ -1,7 +1,7 @@
 ---
 layout: org-report
 title: Open Source at CMS Metrics Report for {repo_owner} | REPORT-{date_stamp}
-permalink: /{repo_owner}
+permalink: /{repo_owner}/
 
 org: {repo_owner}
 reportID: REPORT-{date_stamp}
@@ -107,7 +107,7 @@ date_stampLastWeek: {date_stamp}
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../assets/img/graphs/{repo_owner}/issue_guage_{repo_owner}_data.svg" />
+      <embed type="image/svg+xml" src="../assets/img/graphs/{repo_owner}/issue_gauge_{repo_owner}_data.svg" />
     </figure>
   </div>
 </div>
