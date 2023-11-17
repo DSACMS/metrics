@@ -24,10 +24,10 @@ date_stampLastWeek: 2023-11-17
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>210</td>
         <td>207</td>
-        <td>163</td>
-        <td style="color: #45c527" >44</td>
-        <td style="color: #45c527" >23%</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >1%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -53,16 +53,16 @@ date_stampLastWeek: 2023-11-17
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>0</td>
-        <td>1</td>
-        <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >200%</td>
+        <td>0</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>23</td>
-        <td>18</td>
-        <td style="color: #45c527" >5</td>
-        <td style="color: #45c527" >24%</td>
+        <td>23</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
