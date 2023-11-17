@@ -6,6 +6,8 @@ like to gather metric data for.
 import re
 import json
 import os
+import subprocess
+import datetime
 import pathlib
 import requests
 from metricsLib.constants import PATH_TO_METRICS_DATA, PATH_TO_REPORTS_DATA, AUGUR_HOST
@@ -95,6 +97,46 @@ class OSSEntity:
         params = self.get_parameters_for_metric(metric)
 
         self.store_metrics(metric.get_values(params))
+
+    def get_commit_hashes_by_date(self):
+        commit_hashes_by_date = {}
+
+        #command to get a list of commit hashes that were made by Github Actions user.
+        get_action_commit_history = subprocess.Popen(["git log "
+            " --pretty=format:\"%h%x09%an%x09%ad%x09%s\""
+            " | grep 'GitHub Actions' |  awk '{print $1;}'"] ,
+            stdout=subprocess.PIPE, shell=True)
+        
+        #Read result of command
+        action_commit_history = get_action_commit_history.stdout.read().decode("utf-8").split('\n')
+
+        #Command to get a list of dates for those same commit hashes in the corresponding order
+        get_action_commit_history_timestamps = subprocess.Popen(["git log "
+            " --pretty=format:\"%h%x09%an%x09%ad%x09%s\""
+            " | grep 'GitHub Actions' |  "
+            "awk {'print $4 \" \" $5 \" \" $6 \" \" $7 \" \" $8 \" \" $9'}"] ,
+            stdout=subprocess.PIPE, shell=True)
+        
+        action_commit_history_timestamps = get_action_commit_history_timestamps.stdout.read().decode("utf-8").split('\n')
+
+        for commit_index, _ in enumerate(action_commit_history):
+            try:
+                #Parse data into string
+                date_obj = datetime.datetime.strptime(action_commit_history_timestamps[commit_index], '%a %b %d %H:%M:%S %Y %z')
+                date = f"{date_obj.year}/{date_obj.month}/{date_obj.day}"
+
+                commit_hashes_by_date[date] = action_commit_history[commit_index]
+            except ValueError:
+                continue
+        
+        return commit_hashes_by_date
+
+        
+    
+    def get_metrics_at_given_date(self, given_date):
+        commits_by_date = self.get_commit_hashes_by_date()
+
+        
 
 
 class Repository(OSSEntity):
