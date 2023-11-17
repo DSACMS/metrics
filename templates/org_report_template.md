@@ -95,7 +95,7 @@ date_stampLastWeek: {date_stamp}
         <th scope="row">Followers</th>
         <td>{latest_followers_count}</td>
         <td>{previous_followers_count}</td>
-        <td style="{followers_count_diff_color}" >{watchers_count_diff}</td>
+        <td style="{followers_count_diff_color}" >{followers_count_diff}</td>
         <td style="{followers_count_diff_percent_color}" >{followers_count_diff_percent}%</td>
       </tr>
     </tbody>
