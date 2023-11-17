@@ -286,6 +286,7 @@ class GithubOrg(OSSEntity):
     def __init__(self, organization_login):
         self.login = organization_login
 
+        print(f"AUGUR_HOST: {AUGUR_HOST}")
         super().__init__(self.login, f"{AUGUR_HOST}/repo-groups")
         response = requests.get(self.augur_util_endpoint,timeout=TIMEOUT_IN_SECONDS)
         response_dict = json.loads(response.text)
