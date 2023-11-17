@@ -6,8 +6,8 @@ import json
 from metricsLib.oss_metric_entities import GithubOrg, Repository
 from metricsLib.constants import PATH_TO_METADATA
 from fetch_public_metrics import get_all_data
-from gen_reports import generate_repo_report_files
-from gen_graphs import generate_all_graphs_for_repos
+from gen_reports import generate_repo_report_files, generate_org_report_files
+from gen_graphs import generate_all_graphs_for_repos, generate_all_graphs_for_orgs
 
 
 def parse_repos_and_orgs_into_objects(org_name_list, repo_name_list):
@@ -48,4 +48,6 @@ if __name__ == "__main__":
     # Generate json data, report data, and graph data.
     get_all_data(all_orgs, all_repos)
     generate_repo_report_files(all_repos)
+    generate_org_report_files(all_orgs)
     generate_all_graphs_for_repos(all_repos)
+    generate_all_graphs_for_orgs(all_orgs)
