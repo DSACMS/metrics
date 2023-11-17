@@ -175,6 +175,8 @@ class GraphQLMetric(BaseMetric):
                 raise requests.exceptions.InvalidJSONError(
                     response_json['message'])
 
+        print(f"Response_JSON: {response_json}")
+        print(f"Return values: {self.return_values}")
         for val, key_sequence in self.return_values.items():
             # Extract the nested data and store it in a flat dict to return to the user
             to_return[val] = reduce(
