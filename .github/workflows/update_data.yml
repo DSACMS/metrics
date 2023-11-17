@@ -8,7 +8,7 @@ on:
 
 jobs:
   update:
-    permissions: read-all
+    permissions: write-all
     name: update
     runs-on: ubuntu-latest
     steps:
@@ -27,7 +27,7 @@ jobs:
       - run: pip install -r requirements.txt
       - run: ./update.sh
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.METRICS_GITHUB_TOKEN }}
           AUGUR_HOST: ${{ vars.AUGUR_HOST }}
       - run: |
           git config user.name 'GitHub Actions'
