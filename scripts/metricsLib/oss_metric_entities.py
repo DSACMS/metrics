@@ -9,10 +9,43 @@ import os
 import subprocess
 import datetime
 import pathlib
+from pathlib import Path
 import requests
 from metricsLib.constants import PATH_TO_METRICS_DATA, PATH_TO_REPORTS_DATA, AUGUR_HOST
-from metricsLib.constants import TIMEOUT_IN_SECONDS, PATH_TO_GRAPHS_DATA
+from metricsLib.constants import TIMEOUT_IN_SECONDS, PATH_TO_GRAPHS_DATA, BASE_PATH
 
+def get_commit_hashes_by_date():
+    commit_hashes_by_date = {}
+
+    #command to get a list of commit hashes that were made by Github Actions user.
+    get_action_commit_history = subprocess.Popen(["git log "
+        " --pretty=format:\"%h%x09%an%x09%ad%x09%s\""
+        " | grep 'GitHub Actions' |  awk '{print $1;}'"] ,
+        stdout=subprocess.PIPE, shell=True)
+    
+    #Read result of command
+    action_commit_history = get_action_commit_history.stdout.read().decode("utf-8").split('\n')
+
+    #Command to get a list of dates for those same commit hashes in the corresponding order
+    get_action_commit_history_timestamps = subprocess.Popen(["git log "
+        " --pretty=format:\"%h%x09%an%x09%ad%x09%s\""
+        " | grep 'GitHub Actions' |  "
+        "awk {'print $4 \" \" $5 \" \" $6 \" \" $7 \" \" $8 \" \" $9'}"] ,
+        stdout=subprocess.PIPE, shell=True)
+    
+    action_commit_history_timestamps = get_action_commit_history_timestamps.stdout.read().decode("utf-8").split('\n')
+
+    for commit_index, _ in enumerate(action_commit_history):
+        try:
+            #Parse data into string
+            date_obj = datetime.datetime.strptime(action_commit_history_timestamps[commit_index], '%a %b %d %H:%M:%S %Y %z')
+            date = f"{date_obj.year}/{date_obj.month}/{date_obj.day}"
+
+            commit_hashes_by_date[date] = action_commit_history[commit_index]
+        except ValueError:
+            continue
+    
+    return commit_hashes_by_date
 
 class OSSEntity:
     """
@@ -98,43 +131,78 @@ class OSSEntity:
 
         self.store_metrics(metric.get_values(params))
 
-    def get_commit_hashes_by_date(self):
-        commit_hashes_by_date = {}
+    def get_path_to_data(self, parent_path, extension):
+        """
+        Returns the path to store data given extension
+        and parent path
 
-        #command to get a list of commit hashes that were made by Github Actions user.
-        get_action_commit_history = subprocess.Popen(["git log "
-            " --pretty=format:\"%h%x09%an%x09%ad%x09%s\""
-            " | grep 'GitHub Actions' |  awk '{print $1;}'"] ,
-            stdout=subprocess.PIPE, shell=True)
-        
-        #Read result of command
-        action_commit_history = get_action_commit_history.stdout.read().decode("utf-8").split('\n')
+        Args:
+            parent_path: parent path to store data
+            extension: File extension to use for data format
 
-        #Command to get a list of dates for those same commit hashes in the corresponding order
-        get_action_commit_history_timestamps = subprocess.Popen(["git log "
-            " --pretty=format:\"%h%x09%an%x09%ad%x09%s\""
-            " | grep 'GitHub Actions' |  "
-            "awk {'print $4 \" \" $5 \" \" $6 \" \" $7 \" \" $8 \" \" $9'}"] ,
-            stdout=subprocess.PIPE, shell=True)
-        
-        action_commit_history_timestamps = get_action_commit_history_timestamps.stdout.read().decode("utf-8").split('\n')
+        Returns:
+            String path to data.
+        """
+        raise NotImplementedError
 
-        for commit_index, _ in enumerate(action_commit_history):
-            try:
-                #Parse data into string
-                date_obj = datetime.datetime.strptime(action_commit_history_timestamps[commit_index], '%a %b %d %H:%M:%S %Y %z')
-                date = f"{date_obj.year}/{date_obj.month}/{date_obj.day}"
+    def get_path_to_json_data(self):
+        """
+        Derive the path for json data using json parent
+        path and extension
 
-                commit_hashes_by_date[date] = action_commit_history[commit_index]
-            except ValueError:
-                continue
-        
-        return commit_hashes_by_date
+        Returns:
+            String path to data.
+        """
+        raise NotImplementedError
 
-        
+    def get_path_to_report_data(self):
+        """
+        Derive the path for markdown data using markdown
+        parent path and extension
+
+        Returns:
+            String path to data.
+        """
+        raise NotImplementedError
+
+    def get_path_to_graph_data(self, graph_name):
+        """
+        Derive the path for graph data using svg
+        parent path and extension
+
+        Returns:
+            String path to data.
+        """
+        raise NotImplementedError      
     
-    def get_metrics_at_given_date(self, given_date):
-        commits_by_date = self.get_commit_hashes_by_date()
+    def get_metrics_at_given_date(self, given_date, path_to_metric):
+        assert isinstance(given_date, datetime.date)
+
+        commits_by_date = get_commit_hashes_by_date()
+        try:
+            relevant_commit = commits_by_date[f"{given_date.year}/{given_date.month}/{given_date.day}"]
+        except KeyError:
+            print(f"No commit found for given date! \n Given date: {given_date}")
+            return
+        
+        git_path = os.path.relpath(path_to_metric,BASE_PATH)
+        get_action_commit_history = subprocess.Popen(["git "
+        f"show {relevant_commit}:{git_path}"] ,
+        stdout=subprocess.PIPE, shell=True)
+
+        return get_action_commit_history.stdout.read().decode("utf-8")
+    
+    def get_json_data_at_given_date(self,given_date):
+        return self.get_metrics_at_given_date(given_date, self.get_path_to_json_data())
+    
+    def get_graph_data_at_given_date(self,given_date,graph_name):
+        return self.get_metrics_at_given_date(given_date,self.get_path_to_graph_data(graph_name))
+    
+    def get_report_data_at_given_date(self,given_date):
+        return self.get_metrics_at_given_date(given_date, self.get_path_to_report_data())
+        
+        
+
 
         
 

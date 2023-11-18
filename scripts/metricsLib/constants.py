@@ -6,7 +6,7 @@ import os
 from pathlib import Path
 
 TIMEOUT_IN_SECONDS = 60
-BASE_PATH = os.path.dirname(os.path.abspath(__file__))
+BASE_PATH = (Path(__file__).parent.parent.parent).resolve()
 # Folder Names to send over our projects tracked data
 PATH_TO_METRICS_DATA = (Path(__file__).parent /
                         "../../app/site/_data").resolve()
