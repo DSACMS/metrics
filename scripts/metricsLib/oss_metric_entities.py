@@ -308,6 +308,7 @@ class GithubOrg(OSSEntity):
 
         self.metric_data = {
             "login": self.login,
+            "name": self.name,
             "rg_id": self.repo_group_id
         }
 
