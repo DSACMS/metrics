@@ -148,9 +148,12 @@ class Repository(OSSEntity):
         endpoint = f"{AUGUR_HOST}/owner/{self.repo_owner}/repo/{repo_name}"
         super().__init__(repo_name,endpoint)
 
-        response = requests.post(
-            self.augur_util_endpoint, timeout=TIMEOUT_IN_SECONDS)
-        response_json = json.loads(response.text)
+        try:
+            response = requests.post(
+                self.augur_util_endpoint, timeout=TIMEOUT_IN_SECONDS)
+            response_json = json.loads(response.text)
+        except TimeoutError:
+            reponse_dict = {}
 
         try:
             self.repo_id = response_json[0]["repo_id"]
@@ -288,8 +291,13 @@ class GithubOrg(OSSEntity):
 
         print(f"AUGUR_HOST: {AUGUR_HOST}")
         super().__init__(self.login, f"{AUGUR_HOST}/repo-groups")
-        response = requests.get(self.augur_util_endpoint,timeout=TIMEOUT_IN_SECONDS)
-        response_dict = json.loads(response.text)
+
+        try:
+            response = requests.get(self.augur_util_endpoint,timeout=TIMEOUT_IN_SECONDS)
+            response_dict = json.loads(response.text)
+        except TimeoutError:
+            print(f"It looks like Augur is down! Not able to get Augur data!")
+            response_dict = {}
 
         try:
             # Get the item in the list that matches the login of the github org

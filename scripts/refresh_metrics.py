@@ -44,7 +44,7 @@ if __name__ == "__main__":
     # Get two lists of objects that will hold all the new metrics
     all_orgs, all_repos = parse_repos_and_orgs_into_objects(
         tracking_file["orgs"], repo_urls)
-
+    
     # Generate json data, report data, and graph data.
     get_all_data(all_orgs, all_repos)
     generate_repo_report_files(all_repos)
