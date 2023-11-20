@@ -57,6 +57,10 @@ module.exports = function (eleventyConfig) {
     return array.find(item => item["name"] === value);
   });
 
+  eleventyConfig.addFilter("findProjectsInOrg", function(array, value) {
+    return array.filter(item => item["owner"] === value);
+  });
+
   // Create a collection of items without permalinks so that we can reference them
   // in a separate shortcode to pull in partial content directly
   eleventyConfig.addCollection("partials", (collectionApi) =>
