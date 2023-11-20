@@ -2,11 +2,108 @@
 layout: base
 ---
 <div class="grid-container">
-  <h1>Report for
-    <a target="_blank" href="https://github.com/{{ org }}/{{ repo }}">{{ repo }}</a>
-  </h1>
-  {% comment %} TODO: Add GitHub Stats here {% endcomment %}
-  <div class="post">
-    {{ content | raw }}
+
+  {% assign project = projects | findObject: repo %}
+
+  <div class="report_heading">
+    <h1>Report for
+      <a target="_blank" href="https://github.com/{{ org }}/{{ repo }}">{{ repo }}</a>
+    </h1>
+  </div>
+
+  <div class="report_container">
+    {% if project %}
+      <h2>Repo Stats</h2>
+      <div class="github-information">
+        <div class="stat-container" id="stars">
+          <div class="stars-heading">
+            <h4>
+              Stars
+              <span>
+                <svg
+                  class="usa-icon"
+                  aria-labelledby="star-count"
+                  role="img">
+                  {% lucide "star" %}
+                </svg>
+              </span>
+            </h4>
+          </div>
+          <p>{{ project.stargazers_count }}</p>
+        </div>
+        <div class="stat-container" id="forks">
+          <div class="forks-heading">
+            <h4>
+              Forks
+              <span>
+                <svg
+                  class="usa-icon"
+                  aria-labelledby="fork-count"
+                  role="img">
+                  {% lucide "git-fork" %}
+                </svg>
+              </span>
+            </h4>
+          </div>
+          <p>{{ project.forks_count }}</p>
+        </div>
+        <div class="stat-container" id="issues">
+          <div class="issues-heading">
+            <h4>
+              Issues
+              <span>
+                <svg
+                  class="usa-icon"
+                  aria-labelledby="fork-count"
+                  role="img">
+                  {% lucide "circle-dot" %}
+                </svg>
+              </span>
+            </h4>
+          </div>
+          <p>{{ project.issues_count }}</p>
+        </div>
+        <div class="stat-container" id="watchers">
+          <div class="watchers-heading">
+            <h4>
+              Watchers
+              <span>
+                <svg
+                  class="usa-icon"
+                  aria-labelledby="watchers-count"
+                  role="img">
+                  {% lucide "eye" %}
+                </svg>
+              </span>
+            </h4>
+          </div>
+          <p>{{ project.watchers_count }}</p>
+        </div>
+        <div class="stat-container" id="pull-requests">
+          <div class="pull-requests-heading">
+            <h4>
+              Pull Requests
+              <span>
+                <svg
+                  class="usa-icon"
+                  aria-labelledby="pull-requests-count"
+                  role="img">
+                  {% lucide "git-pull-request" %}
+                </svg>
+              </span>
+            </h4>
+          </div>
+          <p>{{ project.pull_requests_count }}</p>
+        </div>
+      </div>
+    {% else project %}
+      <p>
+        Error Occurred: Object Not Found
+      </p>
+    {% endif %}
+    <br>
+    <div class="post">
+      {{ content | raw }}
+    </div>
   </div>
 </div>

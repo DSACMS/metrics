@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for metrics | REPORT-2023-11-17
+title: Open Source at CMS Metrics Report for metrics | REPORT-2023-11-19
 permalink: /DSACMS/metrics
 
 org: DSACMS
 repo: metrics
-reportID: REPORT-2023-11-17
-date_stampThisWeek: 2023-11-17
-date_stampLastWeek: 2023-11-17
+reportID: REPORT-2023-11-19
+date_stampThisWeek: 2023-11-19
+date_stampLastWeek: 2023-11-19
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2023-11-17
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>211</td>
         <td>210</td>
-        <td>207</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >1%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,10 +52,10 @@ date_stampLastWeek: 2023-11-17
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>2</td>
         <td>0</td>
-        <td>0</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >200%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
