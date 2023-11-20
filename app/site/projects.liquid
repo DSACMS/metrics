@@ -5,8 +5,21 @@ layout: base
       <p>
         The Centers for Medicare and Medicaid Services develops and supports many open-source projects found in our various GitHub Organizations.
       </p>
-      <ul class="usa-card-group flex-align-stretch">
-        {% for repo in projects %}
+
+      {% for org in organizations %}
+        <div class="report_heading">
+          <h2>
+            {{ org.name }}
+            <img
+              src="{{org.avatar_url}}"
+              alt="Organization Avatar"
+              width="20" />
+          </h2>
+        </div>
+
+      <ul class="usa-card-group flex-align-stretch">        
+        {% assign orgProjects = projects | findProjectsInOrg: org.name %}
+        {% for repo in orgProjects %}
           <li class="usa-card project-card tablet:grid-col-12">
             <div class="usa-card__container">
               <div class="usa-card__header">
@@ -58,4 +71,5 @@ layout: base
           </li>
         {% endfor %}
       </ul>
+    {% endfor %}
     </div>
