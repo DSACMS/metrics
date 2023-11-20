@@ -25,23 +25,23 @@ date_stampLastWeek: 2023-11-20
       <tr>
         <th scope="row">Commits</th>
         <td>147</td>
-        <td>143</td>
-        <td style="color: #45c527" >4</td>
-        <td style="color: #45c527" >2%</td>
+        <td>147</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
         <td>9</td>
-        <td>1</td>
-        <td style="color: #45c527" >8</td>
-        <td style="color: #45c527" >160%</td>
+        <td>9</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
         <td>9</td>
-        <td>1</td>
-        <td style="color: #45c527" >8</td>
-        <td style="color: #45c527" >160%</td>
+        <td>9</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -53,23 +53,23 @@ date_stampLastWeek: 2023-11-20
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>0</td>
-        <td>1</td>
-        <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >200%</td>
+        <td>0</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>16</td>
-        <td>14</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >13%</td>
+        <td>16</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>10</td>
-        <td>9</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >10%</td>
+        <td>10</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
