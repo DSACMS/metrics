@@ -53,6 +53,10 @@ module.exports = function (eleventyConfig) {
     return url
   })
 
+  eleventyConfig.addFilter("findObject", function(array, value) {
+    return array.find(item => item["name"] === value);
+  });
+
   // Create a collection of items without permalinks so that we can reference them
   // in a separate shortcode to pull in partial content directly
   eleventyConfig.addCollection("partials", (collectionApi) =>
@@ -63,6 +67,7 @@ module.exports = function (eleventyConfig) {
     "src/img": "assets/img",
     "site/img": "assets/img",
     "src/js": "assets/js",
+    "src/css": "css",
     "site/_graphs": "assets/img/graphs",
     "node_modules/@uswds/uswds/dist/img": "assets/img",
   })
