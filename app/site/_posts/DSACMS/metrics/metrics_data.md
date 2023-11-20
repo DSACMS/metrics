@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for metrics | REPORT-2023-11-19
+title: Open Source at CMS Metrics Report for metrics | REPORT-2023-11-20
 permalink: /DSACMS/metrics
 
 org: DSACMS
 repo: metrics
-reportID: REPORT-2023-11-19
-date_stampThisWeek: 2023-11-19
-date_stampLastWeek: 2023-11-19
+reportID: REPORT-2023-11-20
+date_stampThisWeek: 2023-11-20
+date_stampLastWeek: 2023-11-20
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2023-11-19
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>224</td>
         <td>211</td>
-        <td>210</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0%</td>
+        <td style="color: #45c527" >13</td>
+        <td style="color: #45c527" >5%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2023-11-19
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>2</td>
         <td>0</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >200%</td>
+        <td>2</td>
+        <td style="color: #d31c08" >-2</td>
+        <td style="color: #d31c08" >200%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>26</td>
         <td>23</td>
-        <td>23</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >12%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>1</td>
         <td>0</td>
-        <td>0</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >200%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -101,7 +101,7 @@ date_stampLastWeek: 2023-11-19
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../assets/img/graphs/DSACMS/metrics/issue_guage_metrics_data.svg" />
+      <embed type="image/svg+xml" src="../assets/img/graphs/DSACMS/metrics/issue_gauge_metrics_data.svg" />
     </figure>
     <!--- Contributor Activity Line Graph -->
     <h3>Commits by Month</h3>

@@ -152,7 +152,7 @@ class Repository(OSSEntity):
             response = requests.post(
                 self.augur_util_endpoint, timeout=TIMEOUT_IN_SECONDS)
             response_json = json.loads(response.text)
-        except TimeoutError:
+        except Exception:
             reponse_dict = {}
 
         try:
@@ -295,7 +295,7 @@ class GithubOrg(OSSEntity):
         try:
             response = requests.get(self.augur_util_endpoint,timeout=TIMEOUT_IN_SECONDS)
             response_dict = json.loads(response.text)
-        except TimeoutError:
+        except Exception:
             print(f"It looks like Augur is down! Not able to get Augur data!")
             response_dict = {}
 
