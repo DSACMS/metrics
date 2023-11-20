@@ -107,7 +107,7 @@ date_stampLastWeek: {date_stamp}
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../assets/img/graphs/{repo_owner}/issue_gauge_{repo_owner}_data.svg" />
+      <embed type="image/svg+xml" src="../assets/img/graphs/{repo_owner}/{repo_owner}_issue_gauge.svg" />
     </figure>
   </div>
 </div>
