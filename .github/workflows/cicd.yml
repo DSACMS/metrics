@@ -45,6 +45,9 @@ jobs:
 
       - name: Build project
         run: npm run build
+        env: 
+          SITE_HOST: ${{ vars.SITE_HOST }}
+        
 
       - name: Setup GitHub pages
         uses: actions/configure-pages@v3
