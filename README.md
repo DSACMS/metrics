@@ -4,8 +4,18 @@
 The Metrics Dashboard webpage shows a weekly and monthly overview across open source projects within a specified organization. This webpage is meant to be used by developers and program managers interested in strategy and web presence within CMS open source projects
 
 ## Getting Started
+To collect metrics, first make sure you have set the following environment variables:
+    - GITHUB_TOKEN - The github api key that you are using to collect data
+    - AUGUR_HOST - The api domain corresponding to an instance of [CHAOSS/Augur](https://github.com/chaoss/augur/)
+
+Then, install the dependencies in requirements.txt.
+
+Once the env is set up, either run the 'update data' GitHub Action in .github/workflows/update_data.yml or execute the update.sh shell
+script.
+
+
 To run the server, make sure that your computer has npm installed.
-Once npm is installed run `npm start`
+Once npm is installed run `npm install` and `npm start` in the app/ directory.
 
 ### Project Vision
 A metrics web page that automatically pulls github repo data each week to produce numerical and visual statistics to aid developers and PMs in monitoring project health. 
@@ -38,7 +48,14 @@ A metrics web page that automatically pulls github repo data each week to produc
 
     `git clone https://github.com/DSACMS/metrics.git`
 
+2. Install the required packages in requirements.txt (preferably in a virtual env)
 
+    `pip3 install -r requirements.txt`
+    
+
+3. Install node dependencies
+
+    `cd app && npm install && cd ..`
 
 ## Contributing
 
