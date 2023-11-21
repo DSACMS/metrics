@@ -11,6 +11,8 @@ module.exports = {
               "./site/**/*.html",
               "./site/**/*.md",
               "./src/**/*.js",
+              "./.11ty-vite/**/*.html",
+              "./.11ty-vite/**/*.js"
             ],
             safelist: ["usa-js-loading"],
             extractors: [
