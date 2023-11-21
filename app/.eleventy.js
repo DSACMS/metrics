@@ -14,7 +14,7 @@ async function resizeImage(src, sizes, outputFormat = "png") {
   })
 
   const props = stats[outputFormat].slice(-1)[0]
-  return `${baseurl}${props.url}`
+  return props.url
 }
 
 module.exports = function (eleventyConfig) {
@@ -88,6 +88,8 @@ module.exports = function (eleventyConfig) {
     "stroke-width": 2
 });
 
+  const pathPrefix = process.env.NODE_ENV == "production" ? "/metrics" : "/"
+
   return {
     dir: {
       input: "site/",
@@ -97,5 +99,6 @@ module.exports = function (eleventyConfig) {
     },
     templateFormats: ["html", "md", "liquid", "11ty.js"],
     passthroughFileCopy: true,
+    pathPrefix,
   }
 }
