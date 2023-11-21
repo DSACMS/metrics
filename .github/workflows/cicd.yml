@@ -9,10 +9,6 @@ on:
     - cron: "15 5 * * 0"
   workflow_dispatch:
 
-defaults:
- run:
-  working-directory: ./app
-
 permissions:
   contents: read
   pages: write
@@ -23,10 +19,12 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-
   deploy:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
+    defaults:
+      run:
+        working-directory: ./app
     steps:
       - uses: actions/checkout@v3
 
@@ -54,7 +52,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./dist
+          path: app/dist
 
       - name: Deploy to GitHub pages
         uses: actions/deploy-pages@v2
