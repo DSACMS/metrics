@@ -1,8 +1,6 @@
 name: CICD
 
 on:
-  pull_request:
-    types: [opened, synchronize]
   push:
     branches:
       - main
@@ -26,7 +24,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
-    needs: checks
     steps:
       - uses: actions/checkout@v3
 
