@@ -3,6 +3,8 @@ const path = require("path")
 const Image = require("@11ty/eleventy-img")
 const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite")
 const lucideIcons = require("@grimlink/eleventy-plugin-lucide-icons");
+const { baseurl } = require("./site/_data/site");
+require("dotenv").config()
 
 async function resizeImage(src, sizes, outputFormat = "png") {
   const stats = await Image(src, {
@@ -12,7 +14,7 @@ async function resizeImage(src, sizes, outputFormat = "png") {
   })
 
   const props = stats[outputFormat].slice(-1)[0]
-  return props.url
+  return `${baseurl}${props.url}`
 }
 
 module.exports = function (eleventyConfig) {
