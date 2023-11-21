@@ -71,7 +71,7 @@ Disclosure Policies, see [SECURITY.md](SECURITY.md).
 ## Authors and Maintainers
 
 For more information about our Authors and maintainers, see [MAINTAINERS.md](MAINTAINERS.md).
-A full list of contributors can be found on [https://github.cms.gov/$USERNAME/$REPONAME/graphs/contributors](https://github.cms.gov/$USERNAME/$REPONAME/graphs/contributors).
+A full list of contributors can be found on [https://github.com/DSACMS/metrics/graphs/contributors](https://github.com/DSACMS/metrics/graphs/contributors).
 
 ## Public domain
 
