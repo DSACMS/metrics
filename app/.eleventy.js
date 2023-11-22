@@ -3,6 +3,8 @@ const path = require("path")
 const Image = require("@11ty/eleventy-img")
 const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite")
 const lucideIcons = require("@grimlink/eleventy-plugin-lucide-icons");
+const { baseurl } = require("./site/_data/site");
+require("dotenv").config()
 
 async function resizeImage(src, sizes, outputFormat = "png") {
   const stats = await Image(src, {
@@ -86,6 +88,8 @@ module.exports = function (eleventyConfig) {
     "stroke-width": 2
 });
 
+  const pathPrefix = process.env.NODE_ENV == "production" ? "/metrics" : "/"
+
   return {
     dir: {
       input: "site/",
@@ -95,5 +99,6 @@ module.exports = function (eleventyConfig) {
     },
     templateFormats: ["html", "md", "liquid", "11ty.js"],
     passthroughFileCopy: true,
+    pathPrefix,
   }
 }
