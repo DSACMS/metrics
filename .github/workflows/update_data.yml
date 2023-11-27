@@ -35,8 +35,8 @@ jobs:
           git add -A
           timestamp=$(date -u)
           git commit -m "update data: ${timestamp}" || exit 0
-      - name: Push to main
+      - name: Push to ${{ github.ref_name }}
         uses: CasperWA/push-protected@v2
         with:
           token: ${{ secrets.METRICS_GITHUB_TOKEN }}
-          branch: main
+          branch: ${{ github.ref_name }}
