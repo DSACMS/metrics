@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for drive2gource | REPORT-2023-11-21
-permalink: /DSACMS/drive2gource
+title: Open Source at CMS Metrics Report for drive2gource | REPORT-2023-11-27
+permalink: /DSACMS/drive2gource/
 
 org: DSACMS
 repo: drive2gource
-reportID: REPORT-2023-11-21
-date_stampThisWeek: 2023-11-21
-date_stampLastWeek: 2023-11-21
+reportID: REPORT-2023-11-27
+date_stampThisWeek: 2023-11-27
+date_stampLastWeek: 2023-11-27
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -101,12 +101,12 @@ date_stampLastWeek: 2023-11-21
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../assets/img/graphs/DSACMS/drive2gource/issue_gauge_drive2gource_data.svg" />
+      <embed type="image/svg+xml" src="../../assets/img/graphs/DSACMS/drive2gource/issue_gauge_drive2gource_data.svg" />
     </figure>
     <!--- Contributor Activity Line Graph -->
     <h3>Commits by Month</h3>
     <figure>
-      <embed type="image/svg+xml" src="../assets/img/graphs/DSACMS/drive2gource/commit_sparklines_drive2gource_data.svg" />
+      <embed type="image/svg+xml" src="../../assets/img/graphs/DSACMS/drive2gource/commit_sparklines_drive2gource_data.svg" />
     </figure>
   </div>
 </div>
