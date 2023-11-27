@@ -29,7 +29,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_GITHUB_TOKEN }}
           AUGUR_HOST: ${{ vars.AUGUR_HOST }}
-      - uses: CasperWA/push-protected@v2
+      - name: Push to protected branch
+        uses: CasperWA/push-protected@v2
         with:
           token: ${{ secrets.METRICS_GITHUB_TOKEN }}
           branch: protected
