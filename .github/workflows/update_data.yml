@@ -35,7 +35,6 @@ jobs:
           git add -A
           timestamp=$(date -u)
           git commit -m "update data: ${timestamp}" || exit 0
-          git push
       - name: Push to main
         uses: CasperWA/push-protected@v2
         with:
