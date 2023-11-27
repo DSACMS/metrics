@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for repo-scaffolder | REPORT-2023-11-21
-permalink: /DSACMS/repo-scaffolder
+title: Open Source at CMS Metrics Report for repo-scaffolder | REPORT-2023-11-27
+permalink: /DSACMS/repo-scaffolder/
 
 org: DSACMS
 repo: repo-scaffolder
-reportID: REPORT-2023-11-21
-date_stampThisWeek: 2023-11-21
-date_stampLastWeek: 2023-11-21
+reportID: REPORT-2023-11-27
+date_stampThisWeek: 2023-11-27
+date_stampLastWeek: 2023-11-27
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,24 +24,24 @@ date_stampLastWeek: 2023-11-21
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>177</td>
         <td>147</td>
-        <td>147</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >30</td>
+        <td style="color: #45c527" >18%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
+        <td>12</td>
         <td>9</td>
-        <td>9</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >28%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>12</td>
         <td>9</td>
-        <td>9</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >28%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -101,12 +101,12 @@ date_stampLastWeek: 2023-11-21
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../assets/img/graphs/DSACMS/repo-scaffolder/issue_gauge_repo-scaffolder_data.svg" />
+      <embed type="image/svg+xml" src="../../assets/img/graphs/DSACMS/repo-scaffolder/issue_gauge_repo-scaffolder_data.svg" />
     </figure>
     <!--- Contributor Activity Line Graph -->
     <h3>Commits by Month</h3>
     <figure>
-      <embed type="image/svg+xml" src="../assets/img/graphs/DSACMS/repo-scaffolder/commit_sparklines_repo-scaffolder_data.svg" />
+      <embed type="image/svg+xml" src="../../assets/img/graphs/DSACMS/repo-scaffolder/commit_sparklines_repo-scaffolder_data.svg" />
     </figure>
   </div>
 </div>
