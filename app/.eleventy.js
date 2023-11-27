@@ -1,6 +1,7 @@
 const fs = require("fs")
 const path = require("path")
 const Image = require("@11ty/eleventy-img")
+const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite");
 const lucideIcons = require("@grimlink/eleventy-plugin-lucide-icons");
 const { baseurl } = require("./site/_data/site");
 require("dotenv").config()
@@ -78,6 +79,7 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.setLiquidOptions({ outputEscape: "escape" })
+  eleventyConfig.addPlugin(EleventyVitePlugin)
   eleventyConfig.addPlugin(lucideIcons, {
     "class": "custom-class",
     "width": 17,
@@ -85,8 +87,6 @@ module.exports = function (eleventyConfig) {
     "stroke": "currentColor",
     "stroke-width": 2
 });
-
-  const pathPrefix = process.env.NODE_ENV == "production" ? "/metrics" : "/"
 
   return {
     dir: {
@@ -97,6 +97,5 @@ module.exports = function (eleventyConfig) {
     },
     templateFormats: ["html", "md", "liquid", "11ty.js"],
     passthroughFileCopy: true,
-    pathPrefix
   }
 }
