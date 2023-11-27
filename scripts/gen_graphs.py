@@ -109,8 +109,8 @@ def generate_solid_gauge_issue_graph(oss_entity):
                      {'value': open_pr_percent * 100, 'max_value': 100}])
     issues_gauge.add(
         'Closed and Merged Pull Requests', [
-            {'value': merged_pr_percent * 100, 'max_value': 100},
-            {'value': closed_pr_percent * 100, 'max_value': 100}])
+            {'label': "Merged Pull Requests",'value': merged_pr_percent * 100, 'max_value': 100},
+            {'label': "Closed Pull Requests", 'value': closed_pr_percent * 100, 'max_value': 100}])
 
     write_repo_chart_to_file(oss_entity, issues_gauge, "issue_gauge")
 
