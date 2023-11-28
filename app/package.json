@@ -12,7 +12,7 @@
     "build:clean": "rm -rf dist",
     "build:rollup": "rollup --config rollup.config.mjs --bundleConfigAsCjs",
     "build:postcss": "postcss ./src/css -d ./site/_includes/css",
-    "build:eleventy": "eleventy --serve"
+    "build:eleventy": "eleventy"
   },
   "keywords": [],
   "author": "",
