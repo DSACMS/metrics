@@ -1,4 +1,3 @@
-import "@uswds/uswds/css/uswds.min.css"
 import { accordion, banner, navigation } from "@uswds/uswds/js"
 
 // This is part of the "uswds-init" machinery to handle failure to load JS
