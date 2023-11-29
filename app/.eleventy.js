@@ -87,6 +87,8 @@ module.exports = function (eleventyConfig) {
     "stroke-width": 2
 });
 
+  const pathPrefix = process.env.NODE_ENV === "production" ? "/metrics" : "";
+
   return {
     dir: {
       input: "site/",
@@ -96,5 +98,6 @@ module.exports = function (eleventyConfig) {
     },
     templateFormats: ["html", "md", "liquid", "11ty.js"],
     passthroughFileCopy: true,
+    pathPrefix
   }
 }
