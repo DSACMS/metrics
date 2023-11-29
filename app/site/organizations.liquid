@@ -11,7 +11,7 @@ layout: base
             <div class="usa-card__container">
               <div class="usa-card__header">
                 <h2 class="usa-card__heading">
-                  <a href="../{{org.login}}/" class="text-no-underline">{{ org.login }}</a>
+                  <a href="../{{org.name}}/" class="text-no-underline">{{ org.name }}</a>
                 </h2>
               </div>
               <div class="usa-card__media" style="display: flex; justify-content: center;">
@@ -27,15 +27,15 @@ layout: base
               </div>
               <div class="usa-card__footer">
                 <span class="star-count" style="margin-right: 15px;">
-                  <svg class="usa-icon" aria-labelledby="star-count-{{org.login}}-title" role="img">
-                    <title id="github-{{org.login}}-title"> Repo Count</title>
+                  <svg class="usa-icon" aria-labelledby="star-count-{{org.name}}-title" role="img">
+                    <title id="github-{{org.name}}-title"> Repo Count</title>
                     {% lucide "folder-git-2" %}
                   </svg>
                   <span> {{ org.repo_count }} </span>
                 </span>
                 <span class="fork-count" style="margin-right: 15px;">
-                    <svg class="usa-icon" aria-labelledby="fork-count-{{org.login}}-title" role="img">
-                      <title id="github-{{org.login}}-title"> Follower Count</title>
+                    <svg class="usa-icon" aria-labelledby="fork-count-{{org.name}}-title" role="img">
+                      <title id="github-{{org.name}}-title"> Follower Count</title>
                       {% lucide "users-2" %}
                     </svg>
                     <span> {{ org.stargazers_count }} </span>
