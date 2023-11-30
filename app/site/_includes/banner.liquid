@@ -12,7 +12,7 @@
           <img
             aria-hidden="true"
             class="usa-banner__header-flag"
-            src="/assets/img/us_flag_small.png"
+            src="{{ "/assets/img/us_flag_small.png" | url}}"
             alt=""
           >
         </div>
@@ -26,7 +26,8 @@
           aria-expanded="false"
           aria-controls="gov-banner-default-default"
         >
-          <span class="usa-banner__button-text">Here’s how you know</span>
+        {% comment %} TODO: Fix CSS of banner {% endcomment %}
+          {% comment %} <span class="usa-banner__button-text">Here’s how you know</span> {% endcomment %}
         </button>
       </div>
     </header>
@@ -38,7 +39,7 @@
         <div class="usa-banner__guidance tablet:grid-col-6">
           <img
             class="usa-banner__icon usa-media-block__img"
-            src="/assets/img/icon-dot-gov.svg"
+            src= "{{ "/assets/img/icon-dot-gov.svg" | url}}"
             role="img"
             alt=""
             aria-hidden="true"
@@ -53,7 +54,7 @@
         <div class="usa-banner__guidance tablet:grid-col-6">
           <img
             class="usa-banner__icon usa-media-block__img"
-            src="/assets/img/icon-https.svg"
+            src= "{{ "/assets/img/icon-https.svg" | url}}"
             role="img"
             alt=""
             aria-hidden="true"
