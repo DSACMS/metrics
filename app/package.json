@@ -4,8 +4,15 @@
   "description": "",
   "main": ".eleventy.js",
   "scripts": {
-    "start": "NODE_ENV=development eleventy --serve",
-    "build": "NODE_ENV=production eleventy"
+    "start": "NODE_ENV=development run-p -l start:*",
+    "start:eleventy": "eleventy --serve",
+    "start:rollup": "rollup --config rollup.config.mjs -w",
+    "start:postcss": "postcss ./src/css -d ./site/_includes/css -w",
+    "build": "NODE_ENV=production run-s -l build:*",
+    "build:clean": "rm -rf dist",
+    "build:rollup": "rollup --config rollup.config.mjs --bundleConfigAsCjs",
+    "build:postcss": "postcss ./src/css -d ./site/_includes/css",
+    "build:eleventy": "eleventy"
   },
   "keywords": [],
   "author": "",
@@ -16,13 +23,22 @@
     "@11ty/eleventy-plugin-vite": "^4.0.0",
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "@grimlink/eleventy-plugin-lucide-icons": "^1.0.5",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
     "@uswds/uswds": "^3.6.1",
     "autoprefixer": "^10.4.16",
     "cssnano": "^6.0.1",
     "dotenv": "^16.3.1",
     "markdown-it": "^13.0.2",
     "markdown-it-link-attributes": "^4.0.1",
+    "npm-run-all": "^4.1.5",
     "postcss-import": "^15.1.0",
     "purgecss-from-html": "^6.0.0-alpha.0"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0"
   }
 }

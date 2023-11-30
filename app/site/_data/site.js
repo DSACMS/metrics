@@ -1,9 +1,9 @@
 const production = process.env.NODE_ENV === "production"
 
-const host = production ? process.env.SITE_HOST : "http://0.0.0.0:8080"
+const host = production ? "https://dsacms.github.io" : "http://0.0.0.0:8080"
 
 // For modifying the <base> tag
-const baseurl = production ? "" : ""
+const baseurl = production ? "/metrics" : ""
 
 module.exports = {
   name: "Open Source at CMS",

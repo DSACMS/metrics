@@ -71,10 +71,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "src/img": "assets/img",
     "site/img": "assets/img",
-    "src/js": "assets/js",
-    "src/css": "css",
+    "site/_includes/css": "css",
+    "site/_includes/js": "assets/js",
     "site/_graphs": "assets/img/graphs",
     "node_modules/@uswds/uswds/dist/img": "assets/img",
+    "node_modules/@uswds/uswds/dist/fonts": "fonts"
   });
 
   eleventyConfig.setLiquidOptions({ outputEscape: "escape" })
@@ -86,7 +87,7 @@ module.exports = function (eleventyConfig) {
     "stroke-width": 2
 });
 
-  const pathPrefix = process.env.NODE_ENV == "production" ? "/metrics" : "/"
+  const pathPrefix = process.env.NODE_ENV === "production" ? "/metrics" : "";
 
   return {
     dir: {

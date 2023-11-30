@@ -84,8 +84,10 @@ def generate_solid_gauge_issue_graph(oss_entity):
     def percent_formatter(x):
         return '{:0.2f}%'.format(x)
     issues_gauge.value_formatter = percent_formatter
-
+    
+    #Generate graph to measure percentage of issues that are open
     try:
+        #calculate portion of issues that are open.
         open_issue_percent = oss_entity.metric_data['open_issues_count'] / \
             oss_entity.metric_data['issues_count']
     except ZeroDivisionError:
@@ -93,7 +95,9 @@ def generate_solid_gauge_issue_graph(oss_entity):
     issues_gauge.add(
         'Open Issues', [{'value': open_issue_percent * 100, 'max_value': 100}])
 
+
     try:
+        #calculate portion of pull requests that are open, merged, and closed
         open_pr_percent = oss_entity.metric_data['open_pull_requests_count'] / \
             oss_entity.metric_data['pull_requests_count']
         merged_pr_percent = oss_entity.metric_data['merged_pull_requests_count'] / \
@@ -105,12 +109,15 @@ def generate_solid_gauge_issue_graph(oss_entity):
         merged_pr_percent = 0
         closed_pr_percent = 0
 
+    #Generate graph to measure portion of pull requests that are open
     issues_gauge.add('Open Pull Requests', [
                      {'value': open_pr_percent * 100, 'max_value': 100}])
+    
+    #Generate graph to measure portion of pull requests that are merged or closed.
     issues_gauge.add(
         'Closed and Merged Pull Requests', [
-            {'value': merged_pr_percent * 100, 'max_value': 100},
-            {'value': closed_pr_percent * 100, 'max_value': 100}])
+            {'label': "Merged Pull Requests",'value': merged_pr_percent * 100, 'max_value': 100},
+            {'label': "Closed Pull Requests", 'value': closed_pr_percent * 100, 'max_value': 100}])
 
     write_repo_chart_to_file(oss_entity, issues_gauge, "issue_gauge")
 
