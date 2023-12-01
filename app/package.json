@@ -12,7 +12,8 @@
     "build:clean": "rm -rf dist",
     "build:rollup": "rollup --config rollup.config.mjs --bundleConfigAsCjs",
     "build:postcss": "postcss ./src/css -d ./site/_includes/css",
-    "build:eleventy": "eleventy"
+    "build:eleventy": "eleventy",
+    "build:deploy": "cd dist && touch .nojekyll"
   },
   "keywords": [],
   "author": "",
