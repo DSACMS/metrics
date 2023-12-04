@@ -8,6 +8,7 @@ import json
 import os
 import pathlib
 import requests
+import datetime
 from metricsLib.constants import PATH_TO_METRICS_DATA, PATH_TO_REPORTS_DATA, AUGUR_HOST
 from metricsLib.constants import TIMEOUT_IN_SECONDS, PATH_TO_GRAPHS_DATA
 
@@ -162,6 +163,19 @@ class Repository(OSSEntity):
             self.repo_id = None
             self.repo_group_id = None
 
+        # Get timeboxed metrics
+        today = datetime.date.today()
+        week_ago = today - datetime.timedelta(days=7)
+        month_ago = today - datetime.timedelta(weeks=4)
+
+        #Perpare params for weekly timebox
+        periodic_params = {
+            "period": "day",
+            "begin_date": today,
+            "end_week": week_ago,
+            "end_month": month_ago
+        }
+
         # Prepare params
         self.needed_parameters = {
             "repo": self.name,
@@ -169,6 +183,8 @@ class Repository(OSSEntity):
             "repo_id": self.repo_id,
             "repo_group_id": self.repo_group_id
         }
+
+        self.needed_parameters.update(periodic_params)
 
         # Prepare dict of metric data.
         self.metric_data = {
