@@ -146,36 +146,39 @@ class Repository(OSSEntity):
 
         self.repo_owner = owner
 
-        endpoint = f"{AUGUR_HOST}/owner/{self.repo_owner}/repo/{repo_name}"
+        endpoint = f"{AUGUR_HOST}/repos"
         super().__init__(repo_name,endpoint)
 
-        try:
-            response = requests.post(
-                self.augur_util_endpoint, timeout=TIMEOUT_IN_SECONDS)
-            response_json = json.loads(response.text)
-        except Exception:
-            reponse_dict = {}
+        
+        response = requests.get(
+            self.augur_util_endpoint, timeout=TIMEOUT_IN_SECONDS)
+        response_json = json.loads(response.text)
+        #print(response_json)
 
         try:
-            self.repo_id = response_json[0]["repo_id"]
-            self.repo_group_id = response_json[0]["repo_group_id"]
+            len(response_json)
+            repo_val = next(x for x in response_json if x['repo_name'] == repo_name and x['rg_name'] == owner)
+            #print(repo_val)
+            self.repo_id = repo_val['repo_id']
+            self.repo_group_id = repo_val['repo_group_id']
         except Exception:
             self.repo_id = None
             self.repo_group_id = None
 
         # Get timeboxed metrics
         today = datetime.date.today()
-        week_ago = today - datetime.timedelta(days=7)
-        month_ago = today - datetime.timedelta(weeks=4)
+        week_ago = today - datetime.timedelta(weeks=4)
+        month_ago = today - datetime.timedelta(weeks=24)
 
         #Perpare params for weekly timebox
         periodic_params = {
             "period": "day",
-            "begin_date": today,
-            "end_week": week_ago,
-            "end_month": month_ago
+            "end_date": today.strftime('%Y/%m/%d'),
+            "begin_week": week_ago.strftime('%Y/%m/%d'),
+            "begin_month": month_ago.strftime('%Y/%m/%d')
         }
-
+        
+        #print(f"BEGIN: {today.strftime('%Y/%m/%d')}")
         # Prepare params
         self.needed_parameters = {
             "repo": self.name,
