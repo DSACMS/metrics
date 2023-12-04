@@ -2,8 +2,9 @@
 Definitions of specific metrics for metricsLib
 """
 from metricsLib.metrics_data_structures import CustomMetric, parse_commits_by_month
-from metricsLib.metrics_data_structures import GraphQLMetric, RangeMetric, SumMetric
-from metricsLib.constants import TOKEN
+from metricsLib.metrics_data_structures import GraphQLMetric, SumMetric
+from metricsLib.metrics_data_structures import ListMetric
+from metricsLib.constants import TOKEN, AUGUR_HOST
 
 # The general procedure is to execute all metrics against all repos and orgs
 
@@ -95,9 +96,13 @@ github_graphql_simple_counts_metric_map = {
 SIMPLE_METRICS.append(GraphQLMetric("githubGraphqlSimpleCounts", ["repo", "owner"],
  REPO_GITHUB_GRAPHQL_QUERY, github_graphql_simple_counts_metric_map, token=TOKEN))
 
-PERIODIC_METRICS.append(RangeMetric("newContributorsofCommits", ["repo_id", "period", "begin_date", "end_date"],
-  "https://ai.chaoss.io/api/unstable/repos/{repo_id}/pull-requests-merge-contributor-new?period={period}&begin_date={begin_date}&end_date={end_date}",
-  {"new_commit_contributor": "count"}))
+PERIODIC_METRICS.append(ListMetric("newContributorsofCommitsWeekly", ["repo_id", "period", "begin_date", "end_week"],
+  AUGUR_HOST + "/repos/{repo_id}/pull-requests-merge-contributor-new?period={period}&begin_date={begin_date}&end_date={end_date}",
+  {"new_commit_contributors_by_day_over_last_week": "count"}))
+
+PERIODIC_METRICS.append(ListMetric("newContributorsofCommitsMonthly", ["repo_id", "period", "begin_date", "end_month"],
+  AUGUR_HOST + "/repos/{repo_id}/pull-requests-merge-contributor-new?period={period}&begin_date={begin_date}&end_date={end_date}",
+  {"new_commit_contributors_by_day_over_last_month": "count"}))
 
 ORG_GITHUB_GRAPHQL_QUERY = """
 query ($org_login: String!) {
