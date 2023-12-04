@@ -185,8 +185,8 @@ class GraphQLMetric(BaseMetric):
                 raise requests.exceptions.InvalidJSONError(
                     response_json['message'])
 
-        print(f"Response_JSON: {response_json}")
-        print(f"Return values: {self.return_values}")
+        #print(f"Response_JSON: {response_json}")
+        #print(f"Return values: {self.return_values}")
         for val, key_sequence in self.return_values.items():
             # Extract the nested data and store it in a flat dict to return to the user
             to_return[val] = reduce(
@@ -236,6 +236,7 @@ class ListMetric(BaseMetric):
 
         to_return = {}
 
+        #print(f"URL: {self.url}")
         for return_label, api_label in self.return_values.items():
             #Allow for multiple keys of each returned element to be stored.
             #EX: storing the date and count of each time the amount of followers
@@ -354,7 +355,7 @@ def parse_commits_by_month(**kwargs):
     metric_json = kwargs['metric_json']
 
     commits_by_month = {}
-    print(metric_json)
+    #print(metric_json)
 
     # print(metric_json)
     for commit in metric_json:

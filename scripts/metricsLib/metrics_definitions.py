@@ -96,6 +96,12 @@ github_graphql_simple_counts_metric_map = {
 SIMPLE_METRICS.append(GraphQLMetric("githubGraphqlSimpleCounts", ["repo", "owner"],
  REPO_GITHUB_GRAPHQL_QUERY, github_graphql_simple_counts_metric_map, token=TOKEN))
 
+ORG_METRICS.append(ListMetric("topCommitters", ["repo_group_id"],
+  AUGUR_HOST + "/repo-groups/{repo_group_id}/top-committers",
+  {"top_committers": ["email", "commits"]}))
+
+
+
 PERIODIC_METRICS.append(ListMetric("newContributorsofCommitsWeekly", ["repo_id", "period", "begin_week", "end_date"],
   AUGUR_HOST + "/repos/{repo_id}/pull-requests-merge-contributor-new?period={period}&begin_date={begin_week}&end_date={end_date}",
   {"new_commit_contributors_by_day_over_last_month": ["commit_date", "count"]}))
