@@ -98,11 +98,19 @@ SIMPLE_METRICS.append(GraphQLMetric("githubGraphqlSimpleCounts", ["repo", "owner
 
 PERIODIC_METRICS.append(ListMetric("newContributorsofCommitsWeekly", ["repo_id", "period", "begin_week", "end_date"],
   AUGUR_HOST + "/repos/{repo_id}/pull-requests-merge-contributor-new?period={period}&begin_date={begin_week}&end_date={end_date}",
-  {"new_commit_contributors_by_day_over_last_week": "count"}))
+  {"new_commit_contributors_by_day_over_last_month": ["commit_date", "count"]}))
 
 PERIODIC_METRICS.append(ListMetric("newContributorsofCommitsMonthly", ["repo_id", "period", "begin_month", "end_date"],
   AUGUR_HOST + "/repos/{repo_id}/pull-requests-merge-contributor-new?period={period}&begin_date={begin_month}&end_date={end_date}",
-  {"new_commit_contributors_by_day_over_last_month": ["commit_date", "count"]}))
+  {"new_commit_contributors_by_day_over_last_six_months": ["commit_date", "count"]}))
+
+PERIODIC_METRICS.append(ListMetric("issuesNewWeekly", ["repo_id", "period", "begin_week", "end_date"],
+  AUGUR_HOST + "/repos/{repo_id}/issues-new?period={period}&begin_date={begin_week}&end_date={end_date}",
+  {"new_issues_by_day_over_last_month": ["date", "issues"]}))
+
+PERIODIC_METRICS.append(ListMetric("issuesNewMonthly", ["repo_id", "period", "begin_month", "end_date"],
+  AUGUR_HOST + "/repos/{repo_id}/issues-new?period={period}&begin_date={begin_month}&end_date={end_date}",
+  {"new_issues_by_day_over_last_six_months": ["date", "issues"]}))
 
 ORG_GITHUB_GRAPHQL_QUERY = """
 query ($org_login: String!) {
