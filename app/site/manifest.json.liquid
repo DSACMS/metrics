@@ -1,0 +1,25 @@
+---
+layout: null
+permalink: /manifest.json
+sizes:
+  - 48x48
+  - 192x192
+  - 512x512
+eleventyExcludeFromCollections: true
+---
+{
+  "name": "{{ site.title }}",
+  "short_name": "{{ site.title }}",
+  "icons": [
+    {% for size in sizes %}
+    {
+      "sizes": "{{ size }}",
+      "src": "/assets{% resizeImage './src/img/icon.png', size %}",
+      "type": "image/png"
+    }{%- if not loop.last -%},{%- endif -%}
+    {% endfor %}
+  ],
+  "theme_color": "#b3ddf2",
+  "background_color": "#b3ddf2",
+  "display": "standalone"
+}
