@@ -323,7 +323,7 @@ class GithubOrg(OSSEntity):
             group_id = next(
                 (item for item in response_dict if item["rg_name"] == self.login), None)
 
-            self.repo_group_id = group_id
+            self.repo_group_id = group_id['repo_group_id']
 
         except ValueError:
             self.repo_group_id = None
