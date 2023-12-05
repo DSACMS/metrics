@@ -1,5 +1,7 @@
 name: "run-linting-checks"
-on: [push]
+on:
+  pull_request:
+    branches: [main, dev]
 
 jobs:
   run-pylint:
@@ -38,6 +40,6 @@ jobs:
           status: completed
           conclusion: ${{ job.status }}
           output: |
-            {"summary":"${{job.status}}" , "text_description": "Job has finished "}
+            {"summary":"Pylint Report Generation ran with status: ${{job.status}}" , "text_description": "Pylint Issues are listed below."}
           annotations: |
             ${{ env.PYLINT_REPORT }}
