@@ -32,4 +32,6 @@ jobs:
           name: Run Pylint
           conclusion: ${{ job.status }}
           output: |
-            {"summary":"${{job.status}}" , "text_description": "${{ env.PYLINT_REPORT }}"}
+            {"summary":"${{job.status}}" , "text_description": "Job has finished"}
+          annotations: |
+            ${{ env.PYLINT_REPORT }}
