@@ -28,5 +28,9 @@ def run_pylint():
         if item['end_column'] is None:
             item.pop('end_column')
         item['title'] = item.pop('symbol')
+
+        item.pop('module')
+        item.pop('obj')
+        item.pop('message-id')
     
     print(json.dumps(pylint_list, indent=2))
