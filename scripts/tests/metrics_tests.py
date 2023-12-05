@@ -23,5 +23,10 @@ def run_pylint():
             item.pop('end_line')
 
         item['start_line'] = item.pop('line')
+        item['start_column'] = item.pop('column')
+        item['end_column'] = item.pop('endColumn')
+        if item['end_column'] is None:
+            item.pop('end_column')
+        item['title'] = item.pop('symbol')
     
-    print(json.dumps(pylint_list))
+    print(json.dumps(pylint_list, indent=2))
