@@ -20,7 +20,8 @@ jobs:
             ${{ runner.os }}-pip-
       - run: pip install -r requirements.txt
       - run: |
-        echo "PYLINT_REPORT=$(pylint --init-hook='import sys; sys.path.append(\'scripts/\')' scripts/* || echo 'Pylint Errors detected above!')" >> $GITHUB_ENV
+      SCRIPT_INIT_HOOK="import sys; sys.path.append('scripts/')""
+      echo "PYLINT_REPORT=$(pylint --init-hook='$SCRIPT_INIT_HOOK' scripts/* || echo 'Pylint Errors detected above!')"
             
       - uses: LouisBrunner/checks-action@v1.6.1
         if: always()
