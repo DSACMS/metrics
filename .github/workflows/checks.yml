@@ -20,7 +20,7 @@ jobs:
       - run: pip install -r requirements.txt
       - name: GitHub Action for pylint
         uses: cclauss/GitHub-Action-for-pylint@0.7.0
-        args: pylint --init-hook="import sys; sys.path.append('scripts/')" scripts/*
+        run: pylint --init-hook="import sys; sys.path.append('scripts/')" scripts/*
             
       - uses: LouisBrunner/checks-action@v1.6.1
         if: always()
