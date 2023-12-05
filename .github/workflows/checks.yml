@@ -18,7 +18,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
       - run: pip install -r requirements.txt
-      - uses: cclauss/GitHub-Action-for-pylint@0.7.0
       - run: pylint --init-hook="import sys; sys.path.append('scripts/')" scripts/*
             
       - uses: LouisBrunner/checks-action@v1.6.1
