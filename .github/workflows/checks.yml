@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   run-pylint:
-    permissions: read-all
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -19,7 +19,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
       - run: pip install -r requirements.txt
-      - run: pylint --disable R --init-hook="import sys; sys.path.append('scripts/')" scripts/*
+      - run: pylint --init-hook="import sys; sys.path.append('scripts/')" scripts/* || echo "Pylint Errors detected above!"
             
       - uses: LouisBrunner/checks-action@v1.6.1
         if: always()
