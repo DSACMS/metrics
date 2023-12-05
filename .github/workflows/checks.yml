@@ -27,7 +27,7 @@ jobs:
         if: always()
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          name: Test XYZ
+          name: Run Pylint
           conclusion: ${{ job.status }}
           output: |
-            {"summary":"${{ steps.test.outputs.summary }}   ${{ env.PYLINT_REPORT}}"}
+            {"summary":"${{job.status}}" , "text_description": "${{ env.PYLINT_REPORT}}"}
