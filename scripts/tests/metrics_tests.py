@@ -20,13 +20,13 @@ def run_pylint():
             item['annotation_level'] = 'warning'
         item['end_line'] = item.pop('endLine')
         if item['end_line'] is None:
-            item['end_line'] = -1
+            item['end_line'] = item['line']
 
         item['start_line'] = item.pop('line')
         item['start_column'] = item.pop('column')
         item['end_column'] = item.pop('endColumn')
         if item['end_column'] is None:
-            item['end_column'] = -1
+            item['end_column'] = item['column']
         item['title'] = item.pop('symbol')
 
         item.pop('module')
