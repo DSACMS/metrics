@@ -1,13 +1,17 @@
 name: "run-linting-checks"
-on:
-  pull_request:
-    branches: [main, dev]
+on: [push]
 
 jobs:
   run-pylint:
     permissions: write-all
     runs-on: ubuntu-latest
     steps:
+      - uses: LouisBrunner/checks-action@v1.6.1
+        id: init
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          name: Pylint Report
+          status: in_progress
       - uses: actions/checkout@v4
       # update stats
       - uses: actions/setup-python@v4
@@ -28,10 +32,10 @@ jobs:
           echo 'EOF' >> $GITHUB_ENV
             
       - uses: LouisBrunner/checks-action@v1.6.1
-        if: always()
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          name: Pylint Report
+          check_id: ${{ steps.init.outputs.check_id }}
+          status: completed
           conclusion: ${{ job.status }}
           output: |
             {"summary":"${{job.status}}" , "text_description": "Job has finished "}
