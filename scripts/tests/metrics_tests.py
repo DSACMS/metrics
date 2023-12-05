@@ -20,7 +20,7 @@ def run_pylint():
             item['annotation_level'] = 'warning'
         item['end_line'] = item.pop('endLine')
         if item['end_line'] is None:
-            item.pop('end_line')
+            item['end_line'] = -1
 
         item['start_line'] = item.pop('line')
         item['start_column'] = item.pop('column')
