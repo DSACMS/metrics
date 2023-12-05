@@ -20,7 +20,7 @@ jobs:
             ${{ runner.os }}-pip-
       - run: pip install -r requirements.txt
       - run: |
-          PYLINT_REPORT=$(pylint --init-hook="import sys; sys.path.append('scripts/')"" scripts/*)
+          PYLINT_REPORT=$(pylint --init-hook="import sys; sys.path.append('scripts/')" scripts/*)
           echo "PYLINT_REPORT=$PYLINT_REPORT" >> $GITHUB_ENV
             
       - uses: LouisBrunner/checks-action@v1.6.1
