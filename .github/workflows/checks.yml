@@ -19,7 +19,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
       - run: pip install -r requirements.txt
-      - run: pylint --init-hook="import sys; sys.path.append('scripts/')" scripts/* || echo "Pylint Errors detected above!"
+      - run: |
+        echo "PYLINT_REPORT=$(pylint --init-hook='import sys; sys.path.append(\'scripts/\')' scripts/* || echo 'Pylint Errors detected above!')" >> $GITHUB_ENV
             
       - uses: LouisBrunner/checks-action@v1.6.1
         if: always()
@@ -28,4 +29,4 @@ jobs:
           name: Test XYZ
           conclusion: ${{ job.status }}
           output: |
-            {"summary":"${{ steps.test.outputs.summary }}"}
+            {"summary":"${{ steps.test.outputs.summary }}   ${{ env.PYLINT_REPORT}}"}
