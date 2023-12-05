@@ -22,8 +22,6 @@ jobs:
       - run: |
           SCRIPT_INIT_HOOK="import sys; sys.path.append('scripts/')"
           echo "PYLINT_REPORT=$(pylint --init-hook=$SCRIPT_INIT_HOOK scripts/*)" >> $GITHUB_ENV
-
-          echo $GITHUB_ENV
             
       - uses: LouisBrunner/checks-action@v1.6.1
         if: always()
