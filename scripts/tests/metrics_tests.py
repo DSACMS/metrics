@@ -26,7 +26,7 @@ def run_pylint():
         item['start_column'] = item.pop('column')
         item['end_column'] = item.pop('endColumn')
         if item['end_column'] is None:
-            item['end_column'] = item['column']
+            item['end_column'] = item['start_column']
         item['title'] = item.pop('symbol')
 
         item.pop('module')
