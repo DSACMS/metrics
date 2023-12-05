@@ -21,7 +21,9 @@ jobs:
       - run: pip install -r requirements.txt
       - run: |
           PYLINT_REPORT=$(./run_pylint.sh)
-          echo "PYLINT_REPORT=$PYLINT_REPORT" >> $GITHUB_ENV
+          echo "PYLINT_REPORT<<EOF" >> $GITHUB_ENV
+          echo "$PYLINT_REPORT" >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
             
       - uses: LouisBrunner/checks-action@v1.6.1
         if: always()
