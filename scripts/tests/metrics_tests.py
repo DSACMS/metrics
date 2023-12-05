@@ -13,7 +13,15 @@ def run_pylint():
 
     for item in pylint_list:
         item['annotation_level'] = item.pop('type')
+
+        if item['annotation_level'] == "convention":
+            item['annotation_level'] = 'notice'
+        elif item['annotation_level'] == "refactor":
+            item['annotation_level'] = 'warning'
         item['end_line'] = item.pop('endLine')
+        if item['end_line'] is None:
+            item.pop('end_line')
+
         item['start_line'] = item.pop('line')
     
     print(json.dumps(pylint_list))
