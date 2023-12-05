@@ -1,5 +1,7 @@
 name: "run-linting-checks"
-on: [push]
+on:
+  pull_request:
+    branches: [main, dev]
 
 jobs:
   run-pylint:
@@ -29,7 +31,7 @@ jobs:
         if: always()
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          name: Run Pylint
+          name: Pylint Report
           conclusion: ${{ job.status }}
           output: |
             {"summary":"${{job.status}}" , "text_description": "Job has finished "}
