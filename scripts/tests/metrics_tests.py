@@ -29,6 +29,9 @@ def run_pylint():
             item['end_column'] = item['start_column']
         item['title'] = item.pop('symbol')
 
+        if item['start_line'] != item['end_line']:
+            item.pop('start_column')
+            item.pop('end_column')
         item.pop('module')
         item.pop('obj')
         item.pop('message-id')
