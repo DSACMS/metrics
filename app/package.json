@@ -4,6 +4,7 @@
   "description": "",
   "main": ".eleventy.js",
   "scripts": {
+    "format": "prettier --write .",
     "start": "NODE_ENV=development run-p -l start:*",
     "start:eleventy": "eleventy --serve",
     "start:rollup": "rollup --config rollup.config.mjs -w",
@@ -13,7 +14,8 @@
     "build:rollup": "rollup --config rollup.config.mjs --bundleConfigAsCjs",
     "build:postcss": "postcss ./src/css -d ./site/_includes/css",
     "build:eleventy": "eleventy",
-    "build:deploy": "cd dist && touch .nojekyll"
+    "build:deploy": "cd dist && touch .nojekyll",
+    "style": "prettier --check src/**/**.{js,css}"
   },
   "keywords": [],
   "author": "",
@@ -33,13 +35,25 @@
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
+    "@shopify/prettier-plugin-liquid": "^1.4.0",
     "autoprefixer": "^10.4.16",
     "cssnano": "^6.0.1",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
+    "prettier": "^3.1.0",
     "purgecss-from-html": "^6.0.0-alpha.0",
     "rollup": "^4.7.0"
+  },
+  "prettier": {
+    "endOfLine": "lf",
+    "semi": false,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "plugins": [
+      "@shopify/prettier-plugin-liquid"
+    ]
   }
 }
