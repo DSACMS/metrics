@@ -3,7 +3,7 @@ Module to define methods that fetch data to store in the oss metric
 entity objects.
 """
 import json
-from metricsLib.metrics_definitions import SIMPLE_METRICS, ORG_METRICS
+from metricsLib.metrics_definitions import SIMPLE_METRICS, ORG_METRICS, PERIODIC_METRICS
 
 
 def get_all_data(all_orgs, all_repos):
@@ -76,6 +76,9 @@ def fetch_all_new_metric_data(all_orgs, all_repos):
         print(f"Fetching metrics for repo {repo.name}.")
         # Get info from all metrics for each repo
         for metric in SIMPLE_METRICS:
+            repo.apply_metric_and_store_data(metric)
+
+        for metric in PERIODIC_METRICS:
             repo.apply_metric_and_store_data(metric)
 
     # Capture all metric data for all Github orgs

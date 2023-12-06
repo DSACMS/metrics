@@ -2,6 +2,7 @@
 Module to define classes of metrics that gather data given parameters
 """
 import json
+from json.decoder import JSONDecodeError
 import datetime
 from functools import reduce
 import operator
@@ -83,8 +84,11 @@ class BaseMetric:
         else:
             response = requests.request(
                 self.method, self.url, params=request_params, timeout=TIMEOUT_IN_SECONDS)
-
-        response_json = json.loads(response.text)
+        
+        try:
+            response_json = json.loads(response.text)
+        except JSONDecodeError:
+            response_json = {}
 
         return response_json
 
@@ -101,7 +105,13 @@ class BaseMetric:
         to_return = {}
 
         for return_label, api_label in self.return_values:
-            to_return[return_label] = metric_json[api_label]
+            try:
+                list(api_label)
+                to_return[return_label] = []
+                for sub_label in api_label:
+                    to_return[return_label].append(metric_json[sub_label])
+            except TypeError:
+                to_return[return_label] = metric_json[api_label]
 
         return to_return
 
@@ -175,8 +185,8 @@ class GraphQLMetric(BaseMetric):
                 raise requests.exceptions.InvalidJSONError(
                     response_json['message'])
 
-        print(f"Response_JSON: {response_json}")
-        print(f"Return values: {self.return_values}")
+        #print(f"Response_JSON: {response_json}")
+        #print(f"Return values: {self.return_values}")
         for val, key_sequence in self.return_values.items():
             # Extract the nested data and store it in a flat dict to return to the user
             to_return[val] = reduce(
@@ -226,9 +236,32 @@ class ListMetric(BaseMetric):
 
         to_return = {}
 
-        for return_label, api_label in self.return_values:
-            to_return[return_label] = [item[api_label]
+        #print(f"URL: {self.url}")
+        for return_label, api_label in self.return_values.items():
+            #Allow for multiple keys of each returned element to be stored.
+            #EX: storing the date and count of each time the amount of followers
+            #increased.
+            try:
+                list(api_label)
+
+                #initialize each label as an empty list
+                to_return[return_label] = []
+
+                for item in metric_json:
+
+                    #extract each key in returned json and add to sublist
+                    elem = []
+                    for sub_label in api_label:
+                        elem.append(item[sub_label])
+                    
+                    #Add up sublists and assign to return label key
+                    to_return[return_label].append(elem)
+            except TypeError:
+                #return_label key is assigned to list of extracted api_label value
+                to_return[return_label] = [item[api_label]
                                      for item in metric_json]
+
+            
 
         return to_return
 
@@ -322,6 +355,7 @@ def parse_commits_by_month(**kwargs):
     metric_json = kwargs['metric_json']
 
     commits_by_month = {}
+    #print(metric_json)
 
     # print(metric_json)
     for commit in metric_json:

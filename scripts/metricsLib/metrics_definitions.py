@@ -2,8 +2,9 @@
 Definitions of specific metrics for metricsLib
 """
 from metricsLib.metrics_data_structures import CustomMetric, parse_commits_by_month
-from metricsLib.metrics_data_structures import GraphQLMetric, RangeMetric, SumMetric
-from metricsLib.constants import TOKEN
+from metricsLib.metrics_data_structures import GraphQLMetric, SumMetric
+from metricsLib.metrics_data_structures import ListMetric
+from metricsLib.constants import TOKEN, AUGUR_HOST
 
 # The general procedure is to execute all metrics against all repos and orgs
 
@@ -95,9 +96,27 @@ github_graphql_simple_counts_metric_map = {
 SIMPLE_METRICS.append(GraphQLMetric("githubGraphqlSimpleCounts", ["repo", "owner"],
  REPO_GITHUB_GRAPHQL_QUERY, github_graphql_simple_counts_metric_map, token=TOKEN))
 
-PERIODIC_METRICS.append(RangeMetric("newContributorsofCommits", ["repo_id", "period", "begin_date", "end_date"],
-  "https://ai.chaoss.io/api/unstable/repos/{repo_id}/pull-requests-merge-contributor-new?period={period}&begin_date={begin_date}&end_date={end_date}",
-  {"new_commit_contributor": "count"}))
+ORG_METRICS.append(ListMetric("topCommitters", ["repo_group_id"],
+  AUGUR_HOST + "/repo-groups/{repo_group_id}/top-committers",
+  {"top_committers": ["email", "commits"]}))
+
+
+
+PERIODIC_METRICS.append(ListMetric("newContributorsofCommitsWeekly", ["repo_id", "period", "begin_week", "end_date"],
+  AUGUR_HOST + "/repos/{repo_id}/pull-requests-merge-contributor-new?period={period}&begin_date={begin_week}&end_date={end_date}",
+  {"new_commit_contributors_by_day_over_last_month": ["commit_date", "count"]}))
+
+PERIODIC_METRICS.append(ListMetric("newContributorsofCommitsMonthly", ["repo_id", "period", "begin_month", "end_date"],
+  AUGUR_HOST + "/repos/{repo_id}/pull-requests-merge-contributor-new?period={period}&begin_date={begin_month}&end_date={end_date}",
+  {"new_commit_contributors_by_day_over_last_six_months": ["commit_date", "count"]}))
+
+PERIODIC_METRICS.append(ListMetric("issuesNewWeekly", ["repo_id", "period", "begin_week", "end_date"],
+  AUGUR_HOST + "/repos/{repo_id}/issues-new?period={period}&begin_date={begin_week}&end_date={end_date}",
+  {"new_issues_by_day_over_last_month": ["date", "issues"]}))
+
+PERIODIC_METRICS.append(ListMetric("issuesNewMonthly", ["repo_id", "period", "begin_month", "end_date"],
+  AUGUR_HOST + "/repos/{repo_id}/issues-new?period={period}&begin_date={begin_month}&end_date={end_date}",
+  {"new_issues_by_day_over_last_six_months": ["date", "issues"]}))
 
 ORG_GITHUB_GRAPHQL_QUERY = """
 query ($org_login: String!) {

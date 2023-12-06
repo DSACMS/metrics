@@ -4,15 +4,15 @@
 
 Simple metrics:
     
-1. githubGraphqlSimpleCounts - Gets counts of things like commits, issues, pull requests, forks, etc. for a repo. A simple fetch operation
+1. githubGraphqlSimpleCounts - Gets counts of things like commits, issues, pull requests, forks, etc. for a repo. A simple fetch operation - [x]
 
 
 ## Perioidic metrics
 
 Weekly Diff endpoints:
 
-1. https://oss-augur.readthedocs.io/en/dev/rest-api/api.html#operation/New%20Contributors%20of%20Commits%20(Repo)
-2. https://oss-augur.readthedocs.io/en/dev/rest-api/api.html#operation/Issues%20New%20(Repo)
+1. https://oss-augur.readthedocs.io/en/dev/rest-api/api.html#operation/New%20Contributors%20of%20Commits%20(Repo) [x]
+2. https://oss-augur.readthedocs.io/en/dev/rest-api/api.html#operation/Issues%20New%20(Repo) [x]
 3. pull_request_average_commit_counts
 4. pull_request_average_time_to_responses_and_close 
 5. https://oss-augur.readthedocs.io/en/dev/rest-api/api.html#operation/New%20Contributors%20(Repo%20Group)
@@ -21,7 +21,7 @@ Weekly Diff endpoints:
 
 ## Activity Metrics:
 
-1. Top Committers (Both Repo and Repo group) - https://oss-augur.readthedocs.io/en/main/rest-api/api.html#operation/Top%20Committers%20(Repo%20Group)
+1. Top Committers (Both Repo and Repo group) - https://oss-augur.readthedocs.io/en/main/rest-api/api.html#operation/Top%20Committers%20(Repo%20Group) [x]
 
 2. Predominant languages and License info
 
