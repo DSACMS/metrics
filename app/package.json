@@ -15,6 +15,7 @@
     "build:postcss": "postcss ./src/css -d ./site/_includes/css",
     "build:eleventy": "eleventy",
     "build:deploy": "cd dist && touch .nojekyll",
+    "lint": "eslint ./src/js/**/*.js",
     "style": "prettier --check src/**/**.{js,css}"
   },
   "keywords": [],
@@ -40,11 +41,33 @@
     "npm-run-all": "^4.1.5",
     "postcss-import": "^15.1.0",
     "prettier": "^3.1.0",
+    "prettier-eslint": "^16.1.2",
     "purgecss-from-html": "^6.0.0-alpha.0"
   },
   "devDependencies": {
+    "eslint": "^8.55.0",
+    "eslint-plugin-import": "^2.29.0",
     "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended"
+    ],
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "node": true
+    },
+    "plugins": [
+      "import"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "requireConfigFile": false
+    }
   },
   "prettier": {
     "endOfLine": "lf",
