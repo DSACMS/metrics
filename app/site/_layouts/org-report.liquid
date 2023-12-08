@@ -2,16 +2,17 @@
 layout: base
 ---
 <div class="grid-container">
-
   {% assign organization = organizations | findObject: org %}
 
   <div class="report_heading">
-    <h1>Report for
+    <h1>
+      Report for
       <a target="_blank" href="https://github.com/{{ org }}">{{ org }}</a>
       <img
         src="{{organization.avatar_url}}"
         alt="Organization Avatar"
-        width="25" />
+        width="25"
+      >
     </h1>
   </div>
 
@@ -27,7 +28,8 @@ layout: base
                 <svg
                   class="usa-icon"
                   aria-labelledby="projects-count"
-                  role="img">
+                  role="img"
+                >
                   {% lucide "folder-git-2" %}
                 </svg>
               </span>
@@ -43,7 +45,8 @@ layout: base
                 <svg
                   class="usa-icon"
                   aria-labelledby="followers-count"
-                  role="img">
+                  role="img"
+                >
                   {% lucide "users-2" %}
                 </svg>
               </span>
@@ -52,10 +55,8 @@ layout: base
           <p>{{ organization.followers_count }}</p>
         </div>
       </div>
-    {% else project %}
-      <p>
-        Error Occurred: Object Not Found
-      </p>
+    {% else %}
+      <p>Error Occurred: Object Not Found</p>
     {% endif %}
     <br>
     <div class="post">
