@@ -44,4 +44,6 @@ def run_pylint():
         item.pop('obj')
         item.pop('message-id')
     
-    print(json.dumps(pylint_list, indent=2))
+    to_return = json.dumps(pylint_list, indent=2)
+    #Print max of 50 terms since thats the max for GitHub
+    print(to_return[:50])
