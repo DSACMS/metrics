@@ -61,7 +61,7 @@ High user growth is defined as > ~5 over six months?
 ## For v1
 
 Utilize Existing Augur visualizations
-    First response for closed pr https://oss-augur.readthedocs.io/en/main/rest-api/api.html#operation/Days%20to%20First%20Response%20for%20Closed%20Pull%20Requests%20Based%20on%20Merged%20Status - NOT WORKING
+    First response for closed pr https://oss-augur.readthedocs.io/en/main/rest-api/api.html#operation/Days%20to%20First%20Response%20for%20Closed%20Pull%20Requests%20Based%20on%20Merged%20Status - ONLY WORKS FOR SOME REPOS
 
 
 Total Lines https://oss-augur.readthedocs.io/en/main/rest-api/api.html#operation/Total%20Lines%20(repo) - NOT WORKING
