@@ -1,14 +1,13 @@
 """
 Module to define classes of metrics that gather data given parameters
 """
-import shutil
 import json
 from json.decoder import JSONDecodeError
 import datetime
 from functools import reduce
 import operator
 import requests
-from metricsLib.constants import TIMEOUT_IN_SECONDS, GH_GQL_ENDPOINT, PATH_TO_GRAPHS_DATA
+from metricsLib.constants import TIMEOUT_IN_SECONDS, GH_GQL_ENDPOINT
 
 # Simple metric that can be represented by a count or value.
 
@@ -81,11 +80,10 @@ class BaseMetric:
                 "headers": self.headers,
                 "timeout": TIMEOUT_IN_SECONDS
             }
-            response = requests.request(*_args_,**_kwargs_ )
+            response = requests.request(*_args_, **_kwargs_)
         else:
             response = requests.request(
                 self.method, self.url, params=request_params, timeout=TIMEOUT_IN_SECONDS)
-        
         try:
             response_json = json.loads(response.text)
         except JSONDecodeError:
@@ -116,6 +114,7 @@ class BaseMetric:
 
         return to_return
 
+
 class ResourceMetric(BaseMetric):
     """ 
     Class to define a metric that gets data from an endpoint that returns data
@@ -133,11 +132,12 @@ class ResourceMetric(BaseMetric):
     -------
     hit_metric(params={}):
         Fetch data from url using parameters
-    
+
     get_values(repo,params={}):
         Fetch data and save it in desired path and format
     """
-    def __init__(self, name, needed_params, url, fmt='png',token=None):
+
+    def __init__(self, name, needed_params, url, fmt='png', token=None):
         super().__init__(name, needed_params, url, {}, token=token)
         self.format = fmt
 
@@ -160,28 +160,26 @@ class ResourceMetric(BaseMetric):
                 "params": request_params,
                 "headers": self.headers,
                 "timeout": TIMEOUT_IN_SECONDS,
-                "stream" : True
+                "stream": True
             }
-            response = requests.request(*_args_,**_kwargs_)
+            response = requests.request(*_args_, **_kwargs_)
         else:
             response = requests.request(
                 self.method, self.url, params=request_params, timeout=TIMEOUT_IN_SECONDS)
-        
-        #return response
+        # return response
         return response
 
-    def get_values(self,oss_entity, params=None):
+    def get_values(self, oss_entity, params=None):
         r = self.hit_metric(params=params)
 
-        path = oss_entity.get_path_to_resource_data(self.name,fmt=self.format)
+        path = oss_entity.get_path_to_resource_data(self.name, fmt=self.format)
 
         if r.status_code == 200:
-            with open(path,"wb+") as f:
+            with open(path, "wb+") as f:
                 f.write(r.content)
         else:
             print(f"Status code: {r.status_code}")
         return {}
-
 
 
 class GraphQLMetric(BaseMetric):
@@ -253,14 +251,15 @@ class GraphQLMetric(BaseMetric):
                 raise requests.exceptions.InvalidJSONError(
                     response_json['message'])
 
-        #print(f"Response_JSON: {response_json}")
-        #print(f"Return values: {self.return_values}")
+        # print(f"Response_JSON: {response_json}")
+        # print(f"Return values: {self.return_values}")
         for val, key_sequence in self.return_values.items():
             # Extract the nested data and store it in a flat dict to return to the user
             to_return[val] = reduce(
                 operator.getitem, key_sequence, response_json)
 
         return to_return
+
 
 class SumMetric(BaseMetric):
     """
@@ -274,13 +273,13 @@ class SumMetric(BaseMetric):
         Fetch data from url using parameters, format and sum the data
         before returning it.
     """
-    def __init__(self, name, needed_params, endpoint_url,return_val, token=None, method='GET'):
+
+    def __init__(self, name, needed_params, endpoint_url, return_val, token=None, method='GET'):
         super().__init__(name, needed_params, endpoint_url,
                          return_val, token=token, method=method)
 
     def get_values(self, params=None):
         return {self.return_values: len(self.hit_metric(params=params))}
-
 
 
 class ListMetric(BaseMetric):
@@ -295,6 +294,7 @@ class ListMetric(BaseMetric):
         Fetch data from url using parameters, format and sum the data
         before returning it.
     """
+
     def __init__(self, name, needed_params, endpoint_url, return_values, token=None, method='GET'):
         super().__init__(name, needed_params, endpoint_url,
                          return_values, token=token, method=method)
@@ -304,36 +304,31 @@ class ListMetric(BaseMetric):
 
         to_return = {}
 
-        #print(f"URL: {self.url}")
+        # print(f"URL: {self.url}")
         for return_label, api_label in self.return_values.items():
-            #Allow for multiple keys of each returned element to be stored.
-            #EX: storing the date and count of each time the amount of followers
-            #increased.
+            # Allow for multiple keys of each returned element to be stored.
+            # EX: storing the date and count of each time the amount of followers
+            # increased.
             try:
                 list(api_label)
 
-                #initialize each label as an empty list
+                # initialize each label as an empty list
                 to_return[return_label] = []
 
                 for item in metric_json:
 
-                    #extract each key in returned json and add to sublist
+                    # extract each key in returned json and add to sublist
                     elem = []
                     for sub_label in api_label:
                         elem.append(item[sub_label])
-                    
-                    #Add up sublists and assign to return label key
+                    # Add up sublists and assign to return label key
                     to_return[return_label].append(elem)
             except TypeError:
-                #return_label key is assigned to list of extracted api_label value
+                # return_label key is assigned to list of extracted api_label value
                 to_return[return_label] = [item[api_label]
-                                     for item in metric_json]
-
-            
+                                           for item in metric_json]
 
         return to_return
-
-
 
 
 class RangeMetric(ListMetric):
@@ -364,12 +359,12 @@ class RangeMetric(ListMetric):
         Args:
             params: dict
                 Dictionary of parameters to apply to endpoint.
-        
+
         Returns:
             Dictionary containing the desired values in the requested mapping
         """
 
-        return_dict = super().get_values(params=params)#self.hit_metric(params=params)
+        return_dict = super().get_values(params=params)  # self.hit_metric(params=params)
 
         to_return = {}
 
@@ -377,7 +372,6 @@ class RangeMetric(ListMetric):
             to_return[return_label] = sum(return_dict[return_label])
 
         return to_return
-
 
 
 class CustomMetric(BaseMetric):
@@ -394,6 +388,7 @@ class CustomMetric(BaseMetric):
         Fetch data from url using parameters, format and sum the data
         before returning it. Using the custom parsing function passed in.
     """
+
     def __init__(self, name, needed_parameters, endpoint_url, func, token=None, method='GET'):
         super().__init__(name, needed_parameters,
                          endpoint_url, None, token=token, method=method)
@@ -415,7 +410,7 @@ def parse_commits_by_month(**kwargs):
     Args:
         kwargs: dict
             Keyword arguments used by the parsing function,
-    
+
     Returns:
         Dictionary containing the desired values in the requested mapping
     """
@@ -423,7 +418,7 @@ def parse_commits_by_month(**kwargs):
     metric_json = kwargs['metric_json']
 
     commits_by_month = {}
-    #print(metric_json)
+    # print(metric_json)
 
     # print(metric_json)
     for commit in metric_json:

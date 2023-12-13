@@ -3,7 +3,8 @@ Module to define methods that fetch data to store in the oss metric
 entity objects.
 """
 import json
-from metricsLib.metrics_definitions import SIMPLE_METRICS, ORG_METRICS, PERIODIC_METRICS, RESOURCE_METRICS
+from metricsLib.metrics_definitions import SIMPLE_METRICS, ORG_METRICS
+from metricsLib.metrics_definitions import PERIODIC_METRICS, RESOURCE_METRICS
 
 
 def get_all_data(all_orgs, all_repos):
@@ -80,9 +81,9 @@ def fetch_all_new_metric_data(all_orgs, all_repos):
 
         for metric in PERIODIC_METRICS:
             repo.apply_metric_and_store_data(metric)
-        
+
         for metric in RESOURCE_METRICS:
-            repo.apply_metric_and_store_data(metric,repo)
+            repo.apply_metric_and_store_data(metric, repo)
 
     # Capture all metric data for all Github orgs
     for org in all_orgs:
@@ -109,7 +110,8 @@ def read_previous_metric_data(repos, orgs):
                 prev_data = json.load(file)
                 org.previous_metric_data.update(prev_data)
         except FileNotFoundError:
-            print(f"Could not find previous data for records for org {org.login}")
+            print("Could not find previous data for records for org" +
+                  f"{org.login}")
 
     for repo in repos:
         try:
@@ -117,7 +119,8 @@ def read_previous_metric_data(repos, orgs):
                 prev_data = json.load(file)
                 repo.previous_metric_data.update(prev_data)
         except FileNotFoundError:
-            print(f"Could not find previous data for records for repo {repo.name}")
+            print("Could not find previous data for records for repo" +
+                  repo.name)
 
 
 def write_metric_data_json_to_file(orgs, repos):
