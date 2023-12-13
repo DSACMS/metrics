@@ -159,6 +159,14 @@ ORG_METRICS.append(
   SumMetric("orgFollowers", ["org_login"], FOLLOWERS_ENDPOINT, "followers_count",token=TOKEN)
 )
 
+ORG_METRICS.append(ListMetric("issuesNewWeekly", ["repo_group_id", "period", "begin_week", "end_date"],
+  AUGUR_HOST + "/repo-groups/{repo_group_id}/issues-new?period={period}&begin_date={begin_week}&end_date={end_date}",
+  {"new_issues_by_day_over_last_month": ["date", "issues"]}))
+
+ORG_METRICS.append(ListMetric("issuesNewMonthly", ["repo_group_id", "period", "begin_month", "end_date"],
+  AUGUR_HOST + "/repo-groups/{repo_group_id}/issues-new?period={period}&begin_date={begin_month}&end_date={end_date}",
+  {"new_issues_by_day_over_last_six_months": ["date", "issues"]}))
+
 COMMITS_ENDPOINT = "https://api.github.com/repos/{owner}/{repo}/commits"
 SIMPLE_METRICS.append(CustomMetric("getCommitsByMonth", [
                       'owner', 'repo'], COMMITS_ENDPOINT, parse_commits_by_month, token=TOKEN))

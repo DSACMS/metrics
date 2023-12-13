@@ -39,7 +39,21 @@ def get_repo_owner_and_name(repo_http_url):
 
     return owner, repo
 
+def get_timebox_timestamps():
+    # Get timeboxed metrics
+    today = datetime.date.today()
+    week_ago = today - datetime.timedelta(weeks=4)
+    month_ago = today - datetime.timedelta(weeks=24)
 
+    #Perpare params for weekly timebox
+    periodic_params = {
+        "period": "day",
+        "end_date": today.strftime('%Y/%m/%d'),
+        "begin_week": week_ago.strftime('%Y/%m/%d'),
+        "begin_month": month_ago.strftime('%Y/%m/%d')
+    }
+
+    return periodic_params
 class OSSEntity:
     """
     This serves as the base class to define an OSSEntity. An OSSEntity is an 
@@ -203,19 +217,6 @@ class Repository(OSSEntity):
             self.repo_group_id = None
 
         
-
-        # Get timeboxed metrics
-        today = datetime.date.today()
-        week_ago = today - datetime.timedelta(weeks=4)
-        month_ago = today - datetime.timedelta(weeks=24)
-
-        #Perpare params for weekly timebox
-        periodic_params = {
-            "period": "day",
-            "end_date": today.strftime('%Y/%m/%d'),
-            "begin_week": week_ago.strftime('%Y/%m/%d'),
-            "begin_month": month_ago.strftime('%Y/%m/%d')
-        }
         
         #print(f"BEGIN: {today.strftime('%Y/%m/%d')}")
         # Prepare params
@@ -226,7 +227,7 @@ class Repository(OSSEntity):
             "repo_group_id": self.repo_group_id
         }
 
-        self.needed_parameters.update(periodic_params)
+        self.needed_parameters.update(get_timebox_timestamps())
 
         # Prepare dict of metric data.
         self.metric_data = {
@@ -356,6 +357,8 @@ class GithubOrg(OSSEntity):
             "org_login": self.login,
             "repo_group_id": self.repo_group_id
         }
+
+        self.needed_parameters.update(get_timebox_timestamps())
 
         self.metric_data = {
             "login": self.login,
