@@ -1,13 +1,15 @@
 """
 Module to define classes of metrics that gather data given parameters
 """
+import os
+import pathlib
 import json
 from json.decoder import JSONDecodeError
 import datetime
 from functools import reduce
 import operator
 import requests
-from metricsLib.constants import TIMEOUT_IN_SECONDS, GH_GQL_ENDPOINT
+from metricsLib.constants import TIMEOUT_IN_SECONDS, GH_GQL_ENDPOINT, PATH_TO_GRAPHS_DATA
 
 # Simple metric that can be represented by a count or value.
 
@@ -114,6 +116,71 @@ class BaseMetric:
                 to_return[return_label] = metric_json[api_label]
 
         return to_return
+
+class ResourceMetric(BaseMetric):
+    """ 
+    Class to define a metric that gets data from an endpoint that returns data
+    that isn't supposed to be parsed through like a png image or a svg graph.
+
+    Attributes
+    ----------
+    name : str
+        Filename to save the resource as.
+
+    format: str
+        File format to use
+
+    Methods
+    -------
+    hit_metric(params={}):
+        Fetch data from url using parameters
+    
+    get_values(repo,params={}):
+        Fetch data and save it in desired path and format
+    """
+    def __init__(self, name, needed_params, url, fmt='png',token=None):
+        super().__init__(name, needed_params, url, {}, token=token)
+        self.format = fmt
+
+    def hit_metric(self, params=None):
+        """
+        Format the url with parameters and fetch the data from it.
+
+        Args:
+            params: dict
+                Dictionary of parameters to apply to endpoint.
+        """
+        request_params = params
+        if params and len(params) > 0 and self.method == 'GET':
+            self.url = self.url.format(**params)
+            request_params = None
+
+        if self.headers:
+            _args_ = (self.method, self.url)
+            _kwargs_ = {
+                "params": request_params,
+                "headers": self.headers,
+                "timeout": TIMEOUT_IN_SECONDS
+            }
+            response = requests.request(*_args_,**_kwargs_ )
+        else:
+            response = requests.request(
+                self.method, self.url, params=request_params, timeout=TIMEOUT_IN_SECONDS)
+        
+        #return response
+        return response
+
+    def get_values(self,oss_entity, params=None):
+        r = self.hit_metric(params=params)
+
+        path = oss_entity.get_path_to_resource_data(self.name,fmt=self.format)
+
+        with open(path,"wb+") as f:
+            for chunk in r.iter_content(1024):
+                f.write(chunk)
+        
+        return {}
+
 
 
 class GraphQLMetric(BaseMetric):

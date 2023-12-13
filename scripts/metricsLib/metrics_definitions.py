@@ -2,7 +2,7 @@
 Definitions of specific metrics for metricsLib
 """
 from metricsLib.metrics_data_structures import CustomMetric, parse_commits_by_month
-from metricsLib.metrics_data_structures import GraphQLMetric, SumMetric
+from metricsLib.metrics_data_structures import GraphQLMetric, SumMetric, ResourceMetric
 from metricsLib.metrics_data_structures import ListMetric
 from metricsLib.constants import TOKEN, AUGUR_HOST
 
@@ -117,6 +117,11 @@ PERIODIC_METRICS.append(ListMetric("issuesNewWeekly", ["repo_id", "period", "beg
 PERIODIC_METRICS.append(ListMetric("issuesNewMonthly", ["repo_id", "period", "begin_month", "end_date"],
   AUGUR_HOST + "/repos/{repo_id}/issues-new?period={period}&begin_date={begin_month}&end_date={end_date}",
   {"new_issues_by_day_over_last_six_months": ["date", "issues"]}))
+
+#First response for closed pr visualization
+PERIODIC_METRICS.append(ResourceMetric("firstResponseForClosedPR", ["repo_id", "period", "begin_month", "end_date"],
+  AUGUR_HOST + "/pull_request_reports/PR_time_to_first_response/?repo_id={repo_id}&start_date={begin_month}&end_date={end_date}"))
+
 
 ORG_GITHUB_GRAPHQL_QUERY = """
 query ($org_login: String!) {

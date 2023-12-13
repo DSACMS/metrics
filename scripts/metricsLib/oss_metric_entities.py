@@ -264,6 +264,21 @@ class Repository(OSSEntity):
         """
         return self.get_path_to_data(PATH_TO_REPORTS_DATA, "md")
 
+    def get_path_to_resource_data(self,resource_name,fmt="png"):
+        """
+        Derive the path for resource data using svg
+        parent path and extension
+
+        Returns:
+            String path to data.
+        """
+
+        id_str = f"{self.repo_owner}/{self.name}"
+        data_path = os.path.join(PATH_TO_GRAPHS_DATA, id_str)
+        pathlib.Path(data_path).mkdir(parents=True, exist_ok=True)
+        fname = f"{self.repo_owner}/{self.name}/{resource_name}_{self.name}_data.{fmt}"
+        return os.path.join(PATH_TO_GRAPHS_DATA, fname)
+
     def get_path_to_graph_data(self, graph_name):
         """
         Derive the path for graph data using svg
@@ -272,12 +287,8 @@ class Repository(OSSEntity):
         Returns:
             String path to data.
         """
-        id_str = f"{self.repo_owner}/{self.name}"
-        data_path = os.path.join(PATH_TO_GRAPHS_DATA, id_str)
-        pathlib.Path(data_path).mkdir(parents=True, exist_ok=True)
 
-        fname = f"{self.repo_owner}/{self.name}/{graph_name}_{self.name}_data.svg"
-        return os.path.join(PATH_TO_GRAPHS_DATA, fname)
+        return self.get_path_to_resource_data(graph_name,fmt="svg")
 
 
 class GithubOrg(OSSEntity):
@@ -376,6 +387,21 @@ class GithubOrg(OSSEntity):
         """
         return self.get_path_to_data(PATH_TO_REPORTS_DATA, "md")
 
+    def get_path_to_resource_data(self,resource_name,fmt="png"):
+        """
+        Derive the path for graph data using parent
+        path and extension
+
+        Returns:
+            String path to data.
+        """
+
+        parent_path = os.path.join(PATH_TO_GRAPHS_DATA, f"{self.login}")
+        pathlib.Path(parent_path).mkdir(parents=True, exist_ok=True)
+        org_path = os.path.join(parent_path, f"{self.login}_{resource_name}.{fmt}")
+
+        return org_path
+    
     def get_path_to_graph_data(self,chart_name):
         """
         Derive the path for graph data using parent
@@ -385,10 +411,6 @@ class GithubOrg(OSSEntity):
             String path to data.
         """
         
-        parent_path = os.path.join(PATH_TO_GRAPHS_DATA, f"{self.login}")
-        pathlib.Path(parent_path).mkdir(parents=True, exist_ok=True)
-        org_path = os.path.join(parent_path, f"{self.login}_{chart_name}.svg")
-
-        return org_path
+        return self.get_path_to_resource_data(chart_name,fmt="svg")
 
 
