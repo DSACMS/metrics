@@ -3,7 +3,7 @@ Script to run all metrics collection and update operations
 """
 import os
 import json
-from metricsLib.oss_metric_entities import GithubOrg, Repository
+from metricsLib.oss_metric_entities import GithubOrg, Repository, get_repo_owner_and_name
 from metricsLib.constants import PATH_TO_METADATA
 from fetch_public_metrics import get_all_data
 from gen_reports import generate_repo_report_files, generate_org_report_files
@@ -17,15 +17,23 @@ def parse_repos_and_orgs_into_objects(org_name_list, repo_name_list):
 
     Arguments:
         org_name_list: list of logins for github orgs
-        repo_name_list: list of urls for git repositories
+        repo_name_list: list of urls for git repositories with groups labeled
 
     Returns:
         Tuple of lists of oss metric entity objects
     """
     orgs = [GithubOrg(org) for org in org_name_list]
 
-    repos = [Repository(repo_url) for repo_url in repo_name_list]
+    repos = []#[Repository(repo_url) for repo_url in repo_name_list]
 
+    for owner, repo_urls in repo_name_list.items():
+
+        #search for matching org
+        org_id = next((x.repo_group_id for x in orgs if x.login.lower() == owner.lower()),None)
+
+        #print(f"!!{org_id}")
+        for repo_url in repo_urls:
+            repos.append(Repository(repo_url,org_id))
     return orgs, repos
 
 
@@ -36,10 +44,7 @@ if __name__ == "__main__":
     with open(metadata_path, "r", encoding="utf-8") as file:
         tracking_file = json.load(file)
 
-    repo_urls = []  # Track specific repositories e.g. ['dsacms.github.io']
-
-    for _, repo_list in tracking_file["Open Source Projects"].items():
-        repo_urls.extend(repo_list)
+    repo_urls = tracking_file["Open Source Projects"]  # Track specific repositories e.g. ['dsacms.github.io']
 
     # Get two lists of objects that will hold all the new metrics
     all_orgs, all_repos = parse_repos_and_orgs_into_objects(

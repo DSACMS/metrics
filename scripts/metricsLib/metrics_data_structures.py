@@ -1,8 +1,7 @@
 """
 Module to define classes of metrics that gather data given parameters
 """
-import os
-import pathlib
+import shutil
 import json
 from json.decoder import JSONDecodeError
 import datetime
@@ -160,9 +159,10 @@ class ResourceMetric(BaseMetric):
             _kwargs_ = {
                 "params": request_params,
                 "headers": self.headers,
-                "timeout": TIMEOUT_IN_SECONDS
+                "timeout": TIMEOUT_IN_SECONDS,
+                "stream" : True
             }
-            response = requests.request(*_args_,**_kwargs_ )
+            response = requests.request(*_args_,**_kwargs_)
         else:
             response = requests.request(
                 self.method, self.url, params=request_params, timeout=TIMEOUT_IN_SECONDS)
@@ -175,10 +175,11 @@ class ResourceMetric(BaseMetric):
 
         path = oss_entity.get_path_to_resource_data(self.name,fmt=self.format)
 
-        with open(path,"wb+") as f:
-            for chunk in r.iter_content(1024):
-                f.write(chunk)
-        
+        if r.status_code == 200:
+            with open(path,"wb+") as f:
+                f.write(r.content)
+        else:
+            print(f"Status code: {r.status_code}")
         return {}
 
 

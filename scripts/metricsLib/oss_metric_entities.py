@@ -12,6 +12,33 @@ import datetime
 from metricsLib.constants import PATH_TO_METRICS_DATA, PATH_TO_REPORTS_DATA, AUGUR_HOST
 from metricsLib.constants import TIMEOUT_IN_SECONDS, PATH_TO_GRAPHS_DATA
 
+def get_repo_owner_and_name(repo_http_url):
+    """ Gets the owner and repo from a url.
+
+        Args:
+            url: Github url
+
+        Returns:
+            Tuple of owner and repo. Or a tuple of None and None if the url is invalid.
+    """
+
+    # Regular expression to parse a GitHub URL into two groups
+    # The first group contains the owner of the github repo extracted from the url
+    # The second group contains the name of the github repo extracted from the url
+    # 'But what is a regular expression?' ----> https://docs.python.org/3/howto/regex.html
+    regex = r"https?:\/\/github\.com\/([A-Za-z0-9 \- _]+)\/([A-Za-z0-9 \- _ \.]+)(.git)?\/?$"
+    result = re.search(regex, repo_http_url)
+
+    if not result:
+        return None, None
+
+    capturing_groups = result.groups()
+
+    owner = capturing_groups[0]
+    repo = capturing_groups[1]
+
+    return owner, repo
+
 
 class OSSEntity:
     """
@@ -85,7 +112,7 @@ class OSSEntity:
 
         return params
 
-    def apply_metric_and_store_data(self, metric):
+    def apply_metric_and_store_data(self, metric, *args, **kwargs):
         """
         Pass needed parameters into a metric, hit the metric, and then store the result in
         the metric_data dict.
@@ -95,7 +122,7 @@ class OSSEntity:
         """
         params = self.get_parameters_for_metric(metric)
 
-        self.store_metrics(metric.get_values(params))
+        self.store_metrics(metric.get_values(params=params,*args,**kwargs))
 
 
 class Repository(OSSEntity):
@@ -122,8 +149,6 @@ class Repository(OSSEntity):
 
     Methods
     -------
-    get_repo_owner_and_name(repo_http_url=""):
-        Returns the repo owner and name from the url
     get_path_to_data(parent_path="",extension=""):
         Returns the path to store data given extension
         and parent path
@@ -138,15 +163,19 @@ class Repository(OSSEntity):
         and extension
     """
 
-    def __init__(self, repo_git_url):
+    def __init__(self, repo_git_url,owner_id):
 
         self.url = repo_git_url
 
-        owner, repo_name = self.get_repo_owner_and_name(self.url)
+        #print(f"!!!!{self.url}")
+        owner, repo_name = get_repo_owner_and_name(self.url)
 
         self.repo_owner = owner
 
-        endpoint = f"{AUGUR_HOST}/repos"
+        if owner_id is None:
+            endpoint = f"{AUGUR_HOST}/repos"
+        else:
+            endpoint = f"{AUGUR_HOST}/repo-groups/{owner_id}/repos"
         super().__init__(repo_name,endpoint)
 
         
@@ -157,13 +186,23 @@ class Repository(OSSEntity):
 
         try:
             len(response_json)
-            repo_val = next(x for x in response_json if x['repo_name'] == repo_name and x['rg_name'] == owner)
+            repo_val = next(x for x in response_json if x['repo_name'].lower() == repo_name.lower())
+
+            #print(f"!!!{repo_val}")
+            #for x in response_json:
+            #    print(f"|{x['repo_name'].lower()}=={repo_name.lower()}|")
             #print(repo_val)
             self.repo_id = repo_val['repo_id']
-            self.repo_group_id = repo_val['repo_group_id']
+
+            if owner_id is not None:
+                self.repo_group_id = owner_id
+            else:
+                self.repo_group_id = repo_val['repo_group_id']
         except Exception:
             self.repo_id = None
             self.repo_group_id = None
+
+        
 
         # Get timeboxed metrics
         today = datetime.date.today()
@@ -197,33 +236,6 @@ class Repository(OSSEntity):
         }
 
         self.previous_metric_data = {}
-
-    def get_repo_owner_and_name(self, repo_http_url):
-        """ Gets the owner and repo from a url.
-
-            Args:
-                url: Github url
-
-            Returns:
-                Tuple of owner and repo. Or a tuple of None and None if the url is invalid.
-        """
-
-        # Regular expression to parse a GitHub URL into two groups
-        # The first group contains the owner of the github repo extracted from the url
-        # The second group contains the name of the github repo extracted from the url
-        # 'But what is a regular expression?' ----> https://docs.python.org/3/howto/regex.html
-        regex = r"https?:\/\/github\.com\/([A-Za-z0-9 \- _]+)\/([A-Za-z0-9 \- _ \.]+)(.git)?\/?$"
-        result = re.search(regex, repo_http_url)
-
-        if not result:
-            return None, None
-
-        capturing_groups = result.groups()
-
-        owner = capturing_groups[0]
-        repo = capturing_groups[1]
-
-        return owner, repo
 
     def get_path_to_data(self, parent_path, extension):
         """
@@ -330,9 +342,10 @@ class GithubOrg(OSSEntity):
             response_dict = {}
 
         try:
+            print(self.login)
             # Get the item in the list that matches the login of the github org
             group_id = next(
-                (item for item in response_dict if item["rg_name"] == self.login), None)
+                (item for item in response_dict if item["rg_name"].lower() == self.login.lower()), None)
 
             self.repo_group_id = group_id['repo_group_id']
 

@@ -19,6 +19,9 @@ ADVANCED_METRICS = []
 # Metrics gathered by org instead of by repo
 ORG_METRICS = []
 
+#Metrics that save a resource to a file
+RESOURCE_METRICS = []
+
 REPO_GITHUB_GRAPHQL_QUERY = """
 query ($repo: String!, $owner: String!) {
   repository(name: $repo, owner: $owner) {
@@ -118,8 +121,8 @@ PERIODIC_METRICS.append(ListMetric("issuesNewMonthly", ["repo_id", "period", "be
   AUGUR_HOST + "/repos/{repo_id}/issues-new?period={period}&begin_date={begin_month}&end_date={end_date}",
   {"new_issues_by_day_over_last_six_months": ["date", "issues"]}))
 
-#First response for closed pr visualization
-PERIODIC_METRICS.append(ResourceMetric("firstResponseForClosedPR", ["repo_id", "period", "begin_month", "end_date"],
+#TODO: Ask Sean why this endpoint isn't working for any repo except for augur. might just be lack of data.
+RESOURCE_METRICS.append(ResourceMetric("firstResponseForClosedPR", ["repo_id", "period", "begin_month", "end_date"],
   AUGUR_HOST + "/pull_request_reports/PR_time_to_first_response/?repo_id={repo_id}&start_date={begin_month}&end_date={end_date}"))
 
 
