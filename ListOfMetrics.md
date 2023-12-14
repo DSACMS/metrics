@@ -56,3 +56,20 @@ The final badge will be calculated based on thresholding these measures into qua
 High contributor growth is defined as > ~5 over six months?
 
 High user growth is defined as > ~5 over six months?
+
+
+## For v1
+
+Utilize Existing Augur visualizations
+    First response for closed pr https://oss-augur.readthedocs.io/en/main/rest-api/api.html#operation/Days%20to%20First%20Response%20for%20Closed%20Pull%20Requests%20Based%20on%20Merged%20Status - ONLY WORKS FOR SOME REPOS
+
+
+Total Lines https://oss-augur.readthedocs.io/en/main/rest-api/api.html#operation/Total%20Lines%20(repo) - NOT WORKING
+Comment Lines https://oss-augur.readthedocs.io/en/main/rest-api/api.html#operation/Total%20Comment%20Lines%20(repo) - NOT FOUND
+
+https://ai.chaoss.io/api/unstable/complexity/project_lines/repos/1 - Is not found
+
+Blank Lines https://oss-augur.readthedocs.io/en/main/rest-api/api.html#operation/Total%20Blank%20Lines%20(repo)
+ - NOT FOUND (Same as above)
+
+New Issues https://oss-augur.readthedocs.io/en/dev/rest-api/api.html#operation/Issues%20New%20(Repo) - WORKING - [x]
