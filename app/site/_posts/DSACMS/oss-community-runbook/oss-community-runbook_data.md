@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for oss-community-runbook | REPORT-2023-12-17
+title: Open Source at CMS Metrics Report for oss-community-runbook | REPORT-2023-12-24
 permalink: /DSACMS/oss-community-runbook/
 
 org: DSACMS
 repo: oss-community-runbook
-reportID: REPORT-2023-12-17
-date_stampThisWeek: 2023-12-17
-date_stampLastWeek: 2023-12-17
+reportID: REPORT-2023-12-24
+date_stampThisWeek: 2023-12-24
+date_stampLastWeek: 2023-12-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
