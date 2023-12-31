@@ -1,12 +1,12 @@
 ---
 layout: org-report
-title: Open Source at CMS Metrics Report for DSACMS | REPORT-2023-12-24
+title: Open Source at CMS Metrics Report for DSACMS | REPORT-2023-12-31
 permalink: /DSACMS/
 
 org: DSACMS
-reportID: REPORT-2023-12-24
-date_stampThisWeek: 2023-12-24
-date_stampLastWeek: 2023-12-24
+reportID: REPORT-2023-12-31
+date_stampThisWeek: 2023-12-31
+date_stampLastWeek: 2023-12-31
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -23,24 +23,24 @@ date_stampLastWeek: 2023-12-24
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>625</td>
         <td>624</td>
-        <td>597</td>
-        <td style="color: #45c527" >27</td>
-        <td style="color: #45c527" >4%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
+        <td>59</td>
         <td>58</td>
-        <td>55</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >5%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >1%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>52</td>
         <td>51</td>
-        <td>48</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >6%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >1%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -59,9 +59,9 @@ date_stampLastWeek: 2023-12-24
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>87</td>
-        <td>79</td>
-        <td style="color: #45c527" >8</td>
-        <td style="color: #45c527" >9%</td>
+        <td>87</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
