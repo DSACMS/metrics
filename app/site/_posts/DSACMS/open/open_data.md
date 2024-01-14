@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for open | REPORT-2024-01-07
+title: Open Source at CMS Metrics Report for open | REPORT-2024-01-14
 permalink: /DSACMS/open/
 
 org: DSACMS
 repo: open
-reportID: REPORT-2024-01-07
-date_stampThisWeek: 2024-01-07
-date_stampLastWeek: 2024-01-07
+reportID: REPORT-2024-01-14
+date_stampThisWeek: 2024-01-14
+date_stampLastWeek: 2024-01-14
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
