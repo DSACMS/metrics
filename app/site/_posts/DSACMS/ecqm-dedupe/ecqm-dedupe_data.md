@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ecqm-dedupe | REPORT-2024-01-14
+title: Open Source at CMS Metrics Report for ecqm-dedupe | REPORT-2024-01-21
 permalink: /DSACMS/ecqm-dedupe/
 
 org: DSACMS
 repo: ecqm-dedupe
-reportID: REPORT-2024-01-14
-date_stampThisWeek: 2024-01-14
-date_stampLastWeek: 2024-01-14
+reportID: REPORT-2024-01-21
+date_stampThisWeek: 2024-01-21
+date_stampLastWeek: 2024-01-21
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -52,17 +52,17 @@ date_stampLastWeek: 2024-01-14
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>2</td>
         <td>0</td>
-        <td>1</td>
-        <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >200%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >200%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>8</td>
         <td>5</td>
-        <td>3</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >50%</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >46%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
