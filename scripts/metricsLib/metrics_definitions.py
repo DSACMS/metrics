@@ -2,7 +2,7 @@
 Definitions of specific metrics for metricsLib
 """
 from metricsLib.metrics_data_structures import CustomMetric, parse_commits_by_month
-from metricsLib.metrics_data_structures import GraphQLMetric, SumMetric, ResourceMetric
+from metricsLib.metrics_data_structures import GraphQLMetric, SumMetric
 from metricsLib.metrics_data_structures import ListMetric
 from metricsLib.constants import TOKEN, AUGUR_HOST
 
@@ -138,9 +138,9 @@ PERIODIC_METRICS.append(ListMetric("issuesNewMonthly", sixMonthsParams,
 
 # TODO: Ask Sean why this endpoint isn't working for any repo except for augur.
 # might just be lack of data.
-RESOURCE_METRICS.append(ResourceMetric("firstResponseForClosedPR", sixMonthsParams,
-                                AUGUR_HOST + "/pull_request_reports/PR_time_to_first_response/" +
-                                "?repo_id={repo_id}&start_date={begin_month}&end_date={end_date}"))
+#RESOURCE_METRICS.append(ResourceMetric("firstResponseForClosedPR", sixMonthsParams,
+#                                AUGUR_HOST + "/pull_request_reports/PR_time_to_first_response/" +
+#                                "?repo_id={repo_id}&start_date={begin_month}&end_date={end_date}"))
 
 
 ORG_GITHUB_GRAPHQL_QUERY = """
@@ -177,17 +177,17 @@ ORG_METRICS.append(
               FOLLOWERS_ENDPOINT, "followers_count", token=TOKEN)
 )
 
-ORG_METRICS.append(ListMetric("issueNewWeekly", ["repo_group_id","period","begin_week","end_date"],
-                              AUGUR_HOST +
-                              "/repo-groups/{repo_group_id}/issues-new" +
-                              "?period={period}&begin_date={begin_week}&end_date={end_date}",
-                              {"new_issues_by_day_over_last_month": ["date", "issues"]}))
+#ORG_METRICS.append(ListMetric("issueNewWeekly", ["repo_group_id","period","begin_week","end_date"],
+#                              AUGUR_HOST +
+#                              "/repo-groups/{repo_group_id}/issues-new" +
+#                              "?period={period}&begin_date={begin_week}&end_date={end_date}",
+#                              {"new_issues_by_day_over_last_month": ["date", "issues"]}))
 
-ORG_METRICS.append(ListMetric("issueNewMonthly",["repo_group_id","period","begin_month","end_date"],
-                              AUGUR_HOST +
-                              "/repo-groups/{repo_group_id}/issues-new" +
-                              "?period={period}&begin_date={begin_month}&end_date={end_date}",
-                              {"new_issues_by_day_over_last_six_months": ["date", "issues"]}))
+#ORG_METRICS.append(ListMetric("issueNewMonthly",["repo_group_id","period","begin_month","end_date"],
+#                              AUGUR_HOST +
+#                              "/repo-groups/{repo_group_id}/issues-new" +
+#                              "?period={period}&begin_date={begin_month}&end_date={end_date}",
+#                              {"new_issues_by_day_over_last_six_months": ["date", "issues"]}))
 
 COMMITS_ENDPOINT = "https://api.github.com/repos/{owner}/{repo}/commits"
 SIMPLE_METRICS.append(CustomMetric("getCommitsByMonth", [

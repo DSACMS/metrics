@@ -218,7 +218,7 @@ class Repository(OSSEntity):
             repo_val = next(
                 x for x in response_json if x['repo_name'] and x['repo_name'].lower() == repo_name.lower())
         except StopIteration:
-            print(f"Could not find repo in group {owner_id}")
+            print(f"Could not find repo {repo_git_url} in group {owner_id}")
             repo_val = {
                 'repo_id': None
             }
