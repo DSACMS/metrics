@@ -17,15 +17,24 @@ def parse_repos_and_orgs_into_objects(org_name_list, repo_name_list):
 
     Arguments:
         org_name_list: list of logins for github orgs
-        repo_name_list: list of urls for git repositories
+        repo_name_list: list of urls for git repositories with groups labeled
 
     Returns:
         Tuple of lists of oss metric entity objects
     """
     orgs = [GithubOrg(org) for org in org_name_list]
 
-    repos = [Repository(repo_url) for repo_url in repo_name_list]
+    repos = []  # [Repository(repo_url) for repo_url in repo_name_list]
 
+    for owner, urls in repo_name_list.items():
+        print(owner)
+        # search for matching org
+        org_id = next(
+            (x.repo_group_id for x in orgs if x.login.lower() == owner.lower()), None)
+
+        # print(f"!!{org_id}")
+        for repo_url in urls:
+            repos.append(Repository(repo_url, org_id))
     return orgs, repos
 
 
@@ -36,15 +45,13 @@ if __name__ == "__main__":
     with open(metadata_path, "r", encoding="utf-8") as file:
         tracking_file = json.load(file)
 
-    repo_urls = []  # Track specific repositories e.g. ['dsacms.github.io']
-
-    for _, repo_list in tracking_file["Open Source Projects"].items():
-        repo_urls.extend(repo_list)
+    # Track specific repositories e.g. ['dsacms.github.io']
+    repo_urls = tracking_file["Open Source Projects"]
 
     # Get two lists of objects that will hold all the new metrics
     all_orgs, all_repos = parse_repos_and_orgs_into_objects(
         tracking_file["orgs"], repo_urls)
-    
+
     # Generate json data, report data, and graph data.
     get_all_data(all_orgs, all_repos)
     generate_repo_report_files(all_repos)

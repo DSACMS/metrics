@@ -4,15 +4,15 @@
 
 Simple metrics:
     
-1. githubGraphqlSimpleCounts - Gets counts of things like commits, issues, pull requests, forks, etc. for a repo. A simple fetch operation
+1. githubGraphqlSimpleCounts - Gets counts of things like commits, issues, pull requests, forks, etc. for a repo. A simple fetch operation - [x]
 
 
 ## Perioidic metrics
 
 Weekly Diff endpoints:
 
-1. https://oss-augur.readthedocs.io/en/dev/rest-api/api.html#operation/New%20Contributors%20of%20Commits%20(Repo)
-2. https://oss-augur.readthedocs.io/en/dev/rest-api/api.html#operation/Issues%20New%20(Repo)
+1. https://oss-augur.readthedocs.io/en/dev/rest-api/api.html#operation/New%20Contributors%20of%20Commits%20(Repo) [x]
+2. https://oss-augur.readthedocs.io/en/dev/rest-api/api.html#operation/Issues%20New%20(Repo) [x]
 3. pull_request_average_commit_counts
 4. pull_request_average_time_to_responses_and_close 
 5. https://oss-augur.readthedocs.io/en/dev/rest-api/api.html#operation/New%20Contributors%20(Repo%20Group)
@@ -21,7 +21,7 @@ Weekly Diff endpoints:
 
 ## Activity Metrics:
 
-1. Top Committers (Both Repo and Repo group) - https://oss-augur.readthedocs.io/en/main/rest-api/api.html#operation/Top%20Committers%20(Repo%20Group)
+1. Top Committers (Both Repo and Repo group) - https://oss-augur.readthedocs.io/en/main/rest-api/api.html#operation/Top%20Committers%20(Repo%20Group) [x]
 
 2. Predominant languages and License info
 
@@ -56,3 +56,20 @@ The final badge will be calculated based on thresholding these measures into qua
 High contributor growth is defined as > ~5 over six months?
 
 High user growth is defined as > ~5 over six months?
+
+
+## For v1
+
+Utilize Existing Augur visualizations
+    First response for closed pr https://oss-augur.readthedocs.io/en/main/rest-api/api.html#operation/Days%20to%20First%20Response%20for%20Closed%20Pull%20Requests%20Based%20on%20Merged%20Status - ONLY WORKS FOR SOME REPOS
+
+
+Total Lines https://oss-augur.readthedocs.io/en/main/rest-api/api.html#operation/Total%20Lines%20(repo) - NOT WORKING
+Comment Lines https://oss-augur.readthedocs.io/en/main/rest-api/api.html#operation/Total%20Comment%20Lines%20(repo) - NOT FOUND
+
+https://ai.chaoss.io/api/unstable/complexity/project_lines/repos/1 - Is not found
+
+Blank Lines https://oss-augur.readthedocs.io/en/main/rest-api/api.html#operation/Total%20Blank%20Lines%20(repo)
+ - NOT FOUND (Same as above)
+
+New Issues https://oss-augur.readthedocs.io/en/dev/rest-api/api.html#operation/Issues%20New%20(Repo) - WORKING - [x]
