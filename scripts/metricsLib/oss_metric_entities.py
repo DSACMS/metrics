@@ -321,7 +321,7 @@ class GithubOrg(OSSEntity):
         try:
             # Get the item in the list that matches the login of the github org
             group_id = next(
-                (item for item in response_dict if item["rg_name"] == self.login), None)
+                (item for item in response_dict if item["rg_name"] == self.login.lower()), None)
 
             self.repo_group_id = group_id['repo_group_id']
 
