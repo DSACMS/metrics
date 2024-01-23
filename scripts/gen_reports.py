@@ -10,7 +10,7 @@ def calc_percent_difference(latest, prev):
     two numbers
 
     Arguments:
-        latestVal: float
+        latest: float
             new number 
         prev: float
             old number to compare to new number
