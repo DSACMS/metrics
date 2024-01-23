@@ -179,8 +179,14 @@ class GraphQLMetric(BaseMetric):
         print(f"Return values: {self.return_values}")
         for val, key_sequence in self.return_values.items():
             # Extract the nested data and store it in a flat dict to return to the user
-            to_return[val] = reduce(
-                operator.getitem, key_sequence, response_json)
+
+            try:
+                to_return[val] = reduce(
+                    operator.getitem, key_sequence, response_json)
+            except TypeError as e:
+                print(f"Ran into error for {val} " +
+                    f"when parsing data for repo {self.name}!: \n\n {e}\n\n")
+                to_return[val] = None
 
         return to_return
 
