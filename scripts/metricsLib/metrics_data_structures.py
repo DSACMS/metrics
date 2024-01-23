@@ -149,12 +149,14 @@ class GraphQLMetric(BaseMetric):
             'query': self.query
         }
 
+        #print(params)
+
         # If there are bind variables bind them to the query here.
         if params:
 
             json_dict['variables'] = params
             json_dict['variables'] = json_dict['variables']
-            # print(json_dict['variables'])
+            #print(json_dict['variables'])
 
         if self.headers:
             response = requests.post(
@@ -175,8 +177,8 @@ class GraphQLMetric(BaseMetric):
                 raise requests.exceptions.InvalidJSONError(
                     response_json['message'])
 
-        print(f"Response_JSON: {response_json}")
-        print(f"Return values: {self.return_values}")
+        #print(f"Response_JSON: {response_json}")
+        #print(f"Return values: {self.return_values}")
         for val, key_sequence in self.return_values.items():
             # Extract the nested data and store it in a flat dict to return to the user
 

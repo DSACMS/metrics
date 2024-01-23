@@ -145,19 +145,26 @@ class Repository(OSSEntity):
 
         self.repo_owner = owner
 
-        endpoint = f"{AUGUR_HOST}/owner/{self.repo_owner}/repo/{repo_name}"
-        super().__init__(repo_name,endpoint)
+        endpoint = f"{AUGUR_HOST}/repos"
+        super().__init__(repo_name, endpoint)
+
+        response = requests.get(
+            self.augur_util_endpoint, timeout=TIMEOUT_IN_SECONDS)
+        response_json = json.loads(response.text)
 
         try:
-            response = requests.post(
-                self.augur_util_endpoint, timeout=TIMEOUT_IN_SECONDS)
-            response_json = json.loads(response.text)
-        except Exception:
-            reponse_dict = {}
+            len(response_json)
+            repo_val = next(
+                x for x in response_json if x['repo_name'].upper() == repo_name.upper())
 
-        try:
-            self.repo_id = response_json[0]["repo_id"]
-            self.repo_group_id = response_json[0]["repo_group_id"]
+            # print(f"!!!{repo_val}")
+            # for x in response_json:
+            #    print(f"|{x['repo_name'].lower()}=={repo_name.lower()}|")
+            # print(repo_val)
+            self.repo_id = repo_val['repo_id']
+
+            
+            self.repo_group_id = repo_val['repo_group_id']
         except Exception:
             self.repo_id = None
             self.repo_group_id = None
@@ -169,6 +176,8 @@ class Repository(OSSEntity):
             "repo_id": self.repo_id,
             "repo_group_id": self.repo_group_id
         }
+
+        #print(self.needed_parameters)
 
         # Prepare dict of metric data.
         self.metric_data = {
@@ -295,24 +304,23 @@ class GithubOrg(OSSEntity):
         try:
             response = requests.get(self.augur_util_endpoint,timeout=TIMEOUT_IN_SECONDS)
             response_dict = json.loads(response.text)
-        except Exception:
-            print(f"It looks like Augur is down! Not able to get Augur data!")
+            #print(response_dict)
+        except Exception as e:
+            print(f"It looks like Augur is down! Not able to get Augur data!\n {e}\n")
             response_dict = {}
 
-        try:
-            # Get the item in the list that matches the login of the github org
-            group_id = next(
-                (item for item in response_dict if item["rg_name"] == self.login), None)
 
-            self.repo_group_id = group_id
+        # Get the item in the list that matches the login of the github org
+        group_id = next(
+            (item for item in response_dict if item["rg_name"].upper() == self.login.upper()), None)
 
-        except ValueError:
-            self.repo_group_id = None
+        self.repo_group_id = group_id['repo_group_id']
 
         self.needed_parameters = {
             "org_login": self.login,
             "repo_group_id": self.repo_group_id
         }
+        print(self.needed_parameters)
 
         self.metric_data = {
             "login": self.login,
