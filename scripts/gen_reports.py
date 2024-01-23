@@ -4,7 +4,7 @@ Module to define methods to create reports
 from datetime import date
 from metricsLib.constants import REPO_REPORT_TEMPLATE, ORG_REPORT_TEMPLATE
 
-def calc_percent_difference(latestVal, prevVal):
+def calc_percent_difference(latest, prev):
     """
     This function calculates the percent difference between
     two numbers
@@ -19,16 +19,6 @@ def calc_percent_difference(latestVal, prevVal):
         Integer between 0 and 100 corresponding to the percent 
         difference.
     """
-
-    latest = latestVal
-    prev = prevVal
-
-    #Treat None as 0 for this purpose.
-    if latest is None:
-        latest = 0
-
-    if prev is None:
-        prev = 0
 
     abs_diff = abs(latest - prev)
 
@@ -54,10 +44,6 @@ def get_heading_report_values(headings,oss_entity):
         if oss_entity.metric_data[heading] is None:
             next_record = 0
         
-        print(next_record)
-        print(prev_record)
-
-
         percent_difference = calc_percent_difference(
             next_record, prev_record)
         
