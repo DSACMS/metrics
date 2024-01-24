@@ -1,17 +1,17 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for dsacms.github.io | REPORT-2024-01-21
+title: Open Source at CMS Metrics Report for dsacms.github.io | REPORT-2024-01-24
 permalink: /DSACMS/dsacms.github.io/
 
 org: DSACMS
 repo: dsacms.github.io
-<<<<<<< HEAD
 reportID: REPORT-2024-01-24
 date_stampThisWeek: 2024-01-24
 date_stampLastWeek: 2024-01-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
+    <h2> Summary Table </h2>
     <thead>
       <tr>
         <th scope="col">Metric</th>
