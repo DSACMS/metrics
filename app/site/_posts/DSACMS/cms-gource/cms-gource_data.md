@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for cms-gource | REPORT-2024-01-23
+title: Open Source at CMS Metrics Report for cms-gource | REPORT-2024-01-24
 permalink: /DSACMS/cms-gource/
 
 org: DSACMS
 repo: cms-gource
-reportID: REPORT-2024-01-23
-date_stampThisWeek: 2024-01-23
-date_stampLastWeek: 2024-01-23
+reportID: REPORT-2024-01-24
+date_stampThisWeek: 2024-01-24
+date_stampLastWeek: 2024-01-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

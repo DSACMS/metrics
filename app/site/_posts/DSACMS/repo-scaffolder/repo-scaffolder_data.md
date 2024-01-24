@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for repo-scaffolder | REPORT-2024-01-23
+title: Open Source at CMS Metrics Report for repo-scaffolder | REPORT-2024-01-24
 permalink: /DSACMS/repo-scaffolder/
 
 org: DSACMS
 repo: repo-scaffolder
-reportID: REPORT-2024-01-23
-date_stampThisWeek: 2024-01-23
-date_stampLastWeek: 2024-01-23
+reportID: REPORT-2024-01-24
+date_stampThisWeek: 2024-01-24
+date_stampLastWeek: 2024-01-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
