@@ -49,6 +49,8 @@ def add_info_to_org_from_list_of_repos(repo_list, org):
     # Add repo data to org that repo is a part of
     for repo in repo_list:
         # Check for membership
+        #print(repo.needed_parameters["repo_group_id"])
+        #print(org.needed_parameters["repo_group_id"])
         if repo.needed_parameters["repo_group_id"] == org.needed_parameters["repo_group_id"]:
             # Add metric data.
             for key, _ in org_counts.items():

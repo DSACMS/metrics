@@ -27,7 +27,7 @@ def parse_repos_and_orgs_into_objects(org_name_list, repo_name_list):
     repos = []  # [Repository(repo_url) for repo_url in repo_name_list]
 
     for owner, urls in repo_name_list.items():
-
+        print(owner)
         # search for matching org
         org_id = next(
             (x.repo_group_id for x in orgs if x.login.lower() == owner.lower()), None)

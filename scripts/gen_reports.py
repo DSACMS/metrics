@@ -20,6 +20,7 @@ def calc_percent_difference(latest, prev):
         Integer between 0 and 100 corresponding to the percent 
         difference.
     """
+
     abs_diff = abs(latest - prev)
 
     try:
@@ -37,10 +38,18 @@ def get_heading_report_values(headings, oss_entity):
 
         if heading in oss_entity.previous_metric_data.keys():
             prev_record = oss_entity.previous_metric_data[heading]
-
+        if prev_record is None:
+            #Cast None to 0 for diff calc
+            prev_record = 0
+        
+        next_record = oss_entity.metric_data[heading]
+        if oss_entity.metric_data[heading] is None:
+            next_record = 0
+        
         percent_difference = calc_percent_difference(
-            oss_entity.metric_data[heading], prev_record)
-        raw_diff = oss_entity.metric_data[heading] - prev_record
+            next_record, prev_record)
+        
+        raw_diff = next_record - prev_record
 
         diff_color = ''
 

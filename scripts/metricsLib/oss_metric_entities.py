@@ -193,10 +193,12 @@ class Repository(OSSEntity):
 
         self.url = repo_git_url
 
-        # print(f"!!!!{self.url}")
         owner, repo_name = get_repo_owner_and_name(self.url)
 
         self.repo_owner = owner
+
+        #print(f"owner id: {owner_id}")
+        #print(repo_git_url)
 
         if owner_id is None:
             endpoint = f"{AUGUR_HOST}/repos"
@@ -207,26 +209,31 @@ class Repository(OSSEntity):
         response = requests.get(
             self.augur_util_endpoint, timeout=TIMEOUT_IN_SECONDS)
         response_json = json.loads(response.text)
-        # print(response_json)
 
+        #(response_json)
         try:
-            len(response_json)
+            repo_name.lower()
+
+
             repo_val = next(
-                x for x in response_json if x['repo_name'].lower() == repo_name.lower())
+                x for x in response_json if x['repo_name'] and x['repo_name'].lower() == repo_name.lower())
+        except StopIteration:
+            print(f"Could not find repo {repo_git_url} in group {owner_id}")
+            repo_val = {
+                'repo_id': None
+            }
 
-            # print(f"!!!{repo_val}")
-            # for x in response_json:
-            #    print(f"|{x['repo_name'].lower()}=={repo_name.lower()}|")
-            # print(repo_val)
-            self.repo_id = repo_val['repo_id']
+        # print(f"!!!{repo_val}")
+        # for x in response_json:
+        #    print(f"|{x['repo_name'].lower()}=={repo_name.lower()}|")
+        # print(repo_val)
+        self.repo_id = repo_val['repo_id']
 
-            if owner_id is not None:
-                self.repo_group_id = owner_id
-            else:
-                self.repo_group_id = repo_val['repo_group_id']
-        except Exception:
-            self.repo_id = None
-            self.repo_group_id = None
+        if owner_id is not None:
+            self.repo_group_id = owner_id
+        else:
+            self.repo_group_id = repo_val['repo_group_id']
+
 
         # print(f"BEGIN: {today.strftime('%Y/%m/%d')}")
         # Prepare params
@@ -360,14 +367,14 @@ class GithubOrg(OSSEntity):
             group_id = next(gen, None)
 
             self.repo_group_id = group_id['repo_group_id']
-
-        except ValueError:
+        except Exception:
             self.repo_group_id = None
 
         self.needed_parameters = {
             "org_login": self.login,
             "repo_group_id": self.repo_group_id
         }
+        print(self.needed_parameters)
 
         self.needed_parameters.update(get_timebox_timestamps())
 
