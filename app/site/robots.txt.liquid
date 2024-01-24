@@ -1,0 +1,12 @@
+---
+permalink: "/robots.txt"
+layout: null
+eleventyExcludeFromCollections: true
+---
+{% if site.robots %}
+User-agent: *
+Disallow:
+{% else %}
+User-agent: *
+Disallow: /
+{% endif %}
