@@ -2,11 +2,11 @@
 layout: base
 ---
 <div class="grid-container">
+
   {% assign project = projects | findObject: repo %}
 
   <div class="report_heading">
-    <h1>
-      Report for
+    <h1>Report for
       <a target="_blank" href="https://github.com/{{ org }}/{{ repo }}">{{ repo }}</a>
     </h1>
   </div>
@@ -23,8 +23,7 @@ layout: base
                 <svg
                   class="usa-icon"
                   aria-labelledby="star-count"
-                  role="img"
-                >
+                  role="img">
                   {% lucide "star" %}
                 </svg>
               </span>
@@ -40,8 +39,7 @@ layout: base
                 <svg
                   class="usa-icon"
                   aria-labelledby="fork-count"
-                  role="img"
-                >
+                  role="img">
                   {% lucide "git-fork" %}
                 </svg>
               </span>
@@ -57,8 +55,7 @@ layout: base
                 <svg
                   class="usa-icon"
                   aria-labelledby="fork-count"
-                  role="img"
-                >
+                  role="img">
                   {% lucide "circle-dot" %}
                 </svg>
               </span>
@@ -74,8 +71,7 @@ layout: base
                 <svg
                   class="usa-icon"
                   aria-labelledby="watchers-count"
-                  role="img"
-                >
+                  role="img">
                   {% lucide "eye" %}
                 </svg>
               </span>
@@ -91,8 +87,7 @@ layout: base
                 <svg
                   class="usa-icon"
                   aria-labelledby="pull-requests-count"
-                  role="img"
-                >
+                  role="img">
                   {% lucide "git-pull-request" %}
                 </svg>
               </span>
@@ -101,8 +96,10 @@ layout: base
           <p>{{ project.pull_requests_count }}</p>
         </div>
       </div>
-    {% else %}
-      <p>Error Occurred: Object Not Found</p>
+    {% else project %}
+      <p>
+        Error Occurred: Object Not Found
+      </p>
     {% endif %}
     <br>
     <div class="post">

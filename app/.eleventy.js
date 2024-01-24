@@ -1,5 +1,9 @@
+const fs = require("fs")
+const path = require("path")
 const Image = require("@11ty/eleventy-img")
-const lucideIcons = require("@grimlink/eleventy-plugin-lucide-icons")
+const lucideIcons = require("@grimlink/eleventy-plugin-lucide-icons");
+const { baseurl } = require("./site/_data/site");
+require("dotenv").config()
 
 async function resizeImage(src, sizes, outputFormat = "png") {
   const stats = await Image(src, {
@@ -50,13 +54,13 @@ module.exports = function (eleventyConfig) {
     return url
   })
 
-  eleventyConfig.addFilter("findObject", function (array, value) {
-    return array.find((item) => item["name"] === value)
-  })
+  eleventyConfig.addFilter("findObject", function(array, value) {
+    return array.find(item => item["name"] === value);
+  });
 
-  eleventyConfig.addFilter("findProjectsInOrg", function (array, value) {
-    return array.filter((item) => item["owner"] === value)
-  })
+  eleventyConfig.addFilter("findProjectsInOrg", function(array, value) {
+    return array.filter(item => item["owner"] === value);
+  });
 
   // Create a collection of items without permalinks so that we can reference them
   // in a separate shortcode to pull in partial content directly
@@ -71,19 +75,19 @@ module.exports = function (eleventyConfig) {
     "site/_includes/js": "assets/js",
     "site/_graphs": "assets/img/graphs",
     "node_modules/@uswds/uswds/dist/img": "assets/img",
-    "node_modules/@uswds/uswds/dist/fonts": "fonts",
-  })
+    "node_modules/@uswds/uswds/dist/fonts": "fonts"
+  });
 
   eleventyConfig.setLiquidOptions({ outputEscape: "escape" })
   eleventyConfig.addPlugin(lucideIcons, {
-    class: "custom-class",
-    width: 17,
-    height: 17,
-    stroke: "currentColor",
-    "stroke-width": 2,
-  })
+    "class": "custom-class",
+    "width": 17,
+    "height": 17,
+    "stroke": "currentColor",
+    "stroke-width": 2
+});
 
-  const pathPrefix = process.env.NODE_ENV === "production" ? "/metrics" : ""
+  const pathPrefix = process.env.NODE_ENV === "production" ? "/metrics" : "";
 
   return {
     dir: {
@@ -94,6 +98,6 @@ module.exports = function (eleventyConfig) {
     },
     templateFormats: ["html", "md", "liquid", "11ty.js"],
     passthroughFileCopy: true,
-    pathPrefix,
+    pathPrefix
   }
 }

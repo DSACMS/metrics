@@ -6,64 +6,10 @@ like to gather metric data for.
 import re
 import json
 import os
-import datetime
 import pathlib
 import requests
 from metricsLib.constants import PATH_TO_METRICS_DATA, PATH_TO_REPORTS_DATA, AUGUR_HOST
 from metricsLib.constants import TIMEOUT_IN_SECONDS, PATH_TO_GRAPHS_DATA
-
-
-def get_repo_owner_and_name(repo_http_url):
-    """ Gets the owner and repo from a url.
-
-        Args:
-            url: Github url
-
-        Returns:
-            Tuple of owner and repo. Or a tuple of None and None if the url is invalid.
-    """
-
-    # Regular expression to parse a GitHub URL into two groups
-    # The first group contains the owner of the github repo extracted from the url
-    # The second group contains the name of the github repo extracted from the url
-    # 'But what is a regular expression?' ----> https://docs.python.org/3/howto/regex.html
-    regex = r"https?:\/\/github\.com\/([A-Za-z0-9 \- _]+)\/([A-Za-z0-9 \- _ \.]+)(.git)?\/?$"
-    result = re.search(regex, repo_http_url)
-
-    if not result:
-        return None, None
-
-    capturing_groups = result.groups()
-
-    owner = capturing_groups[0]
-    repo = capturing_groups[1]
-
-    return owner, repo
-
-
-def get_timebox_timestamps():
-    """ 
-        Gets timeboxed timestamps for the time the 
-        function was ran.
-
-        Returns:
-            Dictionary of key timestamps and the desired period
-            for metrics
-    """
-    # Get timeboxed metrics
-    today = datetime.date.today()
-    week_ago = today - datetime.timedelta(weeks=4)
-    month_ago = today - datetime.timedelta(weeks=24)
-
-    # Perpare params for weekly timebox
-    periodic_params = {
-        "period": "day",
-        "end_date": today.strftime('%Y/%m/%d'),
-        "begin_week": week_ago.strftime('%Y/%m/%d'),
-        "begin_month": month_ago.strftime('%Y/%m/%d')
-    }
-
-    return periodic_params
 
 
 class OSSEntity:
@@ -138,7 +84,7 @@ class OSSEntity:
 
         return params
 
-    def apply_metric_and_store_data(self, metric, *args, **kwargs):
+    def apply_metric_and_store_data(self, metric):
         """
         Pass needed parameters into a metric, hit the metric, and then store the result in
         the metric_data dict.
@@ -148,7 +94,7 @@ class OSSEntity:
         """
         params = self.get_parameters_for_metric(metric)
 
-        self.store_metrics(metric.get_values(params=params, *args, **kwargs))
+        self.store_metrics(metric.get_values(params))
 
 
 class Repository(OSSEntity):
@@ -175,6 +121,8 @@ class Repository(OSSEntity):
 
     Methods
     -------
+    get_repo_owner_and_name(repo_http_url=""):
+        Returns the repo owner and name from the url
     get_path_to_data(parent_path="",extension=""):
         Returns the path to store data given extension
         and parent path
@@ -189,53 +137,31 @@ class Repository(OSSEntity):
         and extension
     """
 
-    def __init__(self, repo_git_url, owner_id):
+    def __init__(self, repo_git_url):
 
         self.url = repo_git_url
 
-        owner, repo_name = get_repo_owner_and_name(self.url)
+        owner, repo_name = self.get_repo_owner_and_name(self.url)
 
         self.repo_owner = owner
 
-        #print(f"owner id: {owner_id}")
-        #print(repo_git_url)
+        endpoint = f"{AUGUR_HOST}/owner/{self.repo_owner}/repo/{repo_name}"
+        super().__init__(repo_name,endpoint)
 
-        if owner_id is None:
-            endpoint = f"{AUGUR_HOST}/repos"
-        else:
-            endpoint = f"{AUGUR_HOST}/repo-groups/{owner_id}/repos"
-        super().__init__(repo_name, endpoint)
-
-        response = requests.get(
-            self.augur_util_endpoint, timeout=TIMEOUT_IN_SECONDS)
-        response_json = json.loads(response.text)
-
-        #(response_json)
         try:
-            repo_name.lower()
+            response = requests.post(
+                self.augur_util_endpoint, timeout=TIMEOUT_IN_SECONDS)
+            response_json = json.loads(response.text)
+        except Exception:
+            reponse_dict = {}
 
+        try:
+            self.repo_id = response_json[0]["repo_id"]
+            self.repo_group_id = response_json[0]["repo_group_id"]
+        except Exception:
+            self.repo_id = None
+            self.repo_group_id = None
 
-            repo_val = next(
-                x for x in response_json if x['repo_name'] and x['repo_name'].lower() == repo_name.lower())
-        except StopIteration:
-            print(f"Could not find repo {repo_git_url} in group {owner_id}")
-            repo_val = {
-                'repo_id': None
-            }
-
-        # print(f"!!!{repo_val}")
-        # for x in response_json:
-        #    print(f"|{x['repo_name'].lower()}=={repo_name.lower()}|")
-        # print(repo_val)
-        self.repo_id = repo_val['repo_id']
-
-        if owner_id is not None:
-            self.repo_group_id = owner_id
-        else:
-            self.repo_group_id = repo_val['repo_group_id']
-
-
-        # print(f"BEGIN: {today.strftime('%Y/%m/%d')}")
         # Prepare params
         self.needed_parameters = {
             "repo": self.name,
@@ -243,8 +169,6 @@ class Repository(OSSEntity):
             "repo_id": self.repo_id,
             "repo_group_id": self.repo_group_id
         }
-
-        self.needed_parameters.update(get_timebox_timestamps())
 
         # Prepare dict of metric data.
         self.metric_data = {
@@ -254,6 +178,33 @@ class Repository(OSSEntity):
         }
 
         self.previous_metric_data = {}
+
+    def get_repo_owner_and_name(self, repo_http_url):
+        """ Gets the owner and repo from a url.
+
+            Args:
+                url: Github url
+
+            Returns:
+                Tuple of owner and repo. Or a tuple of None and None if the url is invalid.
+        """
+
+        # Regular expression to parse a GitHub URL into two groups
+        # The first group contains the owner of the github repo extracted from the url
+        # The second group contains the name of the github repo extracted from the url
+        # 'But what is a regular expression?' ----> https://docs.python.org/3/howto/regex.html
+        regex = r"https?:\/\/github\.com\/([A-Za-z0-9 \- _]+)\/([A-Za-z0-9 \- _ \.]+)(.git)?\/?$"
+        result = re.search(regex, repo_http_url)
+
+        if not result:
+            return None, None
+
+        capturing_groups = result.groups()
+
+        owner = capturing_groups[0]
+        repo = capturing_groups[1]
+
+        return owner, repo
 
     def get_path_to_data(self, parent_path, extension):
         """
@@ -294,21 +245,6 @@ class Repository(OSSEntity):
         """
         return self.get_path_to_data(PATH_TO_REPORTS_DATA, "md")
 
-    def get_path_to_resource_data(self, resource_name, fmt="png"):
-        """
-        Derive the path for resource data using svg
-        parent path and extension
-
-        Returns:
-            String path to data.
-        """
-
-        id_str = f"{self.repo_owner}/{self.name}"
-        data_path = os.path.join(PATH_TO_GRAPHS_DATA, id_str)
-        pathlib.Path(data_path).mkdir(parents=True, exist_ok=True)
-        fname = f"{self.repo_owner}/{self.name}/{resource_name}_{self.name}_data.{fmt}"
-        return os.path.join(PATH_TO_GRAPHS_DATA, fname)
-
     def get_path_to_graph_data(self, graph_name):
         """
         Derive the path for graph data using svg
@@ -317,8 +253,12 @@ class Repository(OSSEntity):
         Returns:
             String path to data.
         """
+        id_str = f"{self.repo_owner}/{self.name}"
+        data_path = os.path.join(PATH_TO_GRAPHS_DATA, id_str)
+        pathlib.Path(data_path).mkdir(parents=True, exist_ok=True)
 
-        return self.get_path_to_resource_data(graph_name, fmt="svg")
+        fname = f"{self.repo_owner}/{self.name}/{graph_name}_{self.name}_data.svg"
+        return os.path.join(PATH_TO_GRAPHS_DATA, fname)
 
 
 class GithubOrg(OSSEntity):
@@ -353,30 +293,26 @@ class GithubOrg(OSSEntity):
         super().__init__(self.login, f"{AUGUR_HOST}/repo-groups")
 
         try:
-            response = requests.get(
-                self.augur_util_endpoint, timeout=TIMEOUT_IN_SECONDS)
+            response = requests.get(self.augur_util_endpoint,timeout=TIMEOUT_IN_SECONDS)
             response_dict = json.loads(response.text)
         except Exception:
-            print("It looks like Augur is down! Not able to get Augur data!")
+            print(f"It looks like Augur is down! Not able to get Augur data!")
             response_dict = {}
 
         try:
-            print(self.login)
             # Get the item in the list that matches the login of the github org
-            gen = (item for item in response_dict if item["rg_name"].lower() == self.login.lower())
-            group_id = next(gen, None)
+            group_id = next(
+                (item for item in response_dict if item["rg_name"] == self.login), None)
 
-            self.repo_group_id = group_id['repo_group_id']
-        except Exception:
+            self.repo_group_id = group_id
+
+        except ValueError:
             self.repo_group_id = None
 
         self.needed_parameters = {
             "org_login": self.login,
             "repo_group_id": self.repo_group_id
         }
-        print(self.needed_parameters)
-
-        self.needed_parameters.update(get_timebox_timestamps())
 
         self.metric_data = {
             "login": self.login,
@@ -386,7 +322,7 @@ class GithubOrg(OSSEntity):
 
         self.previous_metric_data = {}
 
-    def get_path_to_data(self, super_parent_path, extension):
+    def get_path_to_data(self,super_parent_path,extension):
         """
         Derive the path for data using parent
         path and extension
@@ -400,6 +336,7 @@ class GithubOrg(OSSEntity):
 
         return org_path
 
+
     def get_path_to_json_data(self):
         """
         Derive the path for json data using json parent
@@ -409,7 +346,7 @@ class GithubOrg(OSSEntity):
             String path to data.
         """
         return self.get_path_to_data(PATH_TO_METRICS_DATA, "json")
-
+    
     def get_path_to_report_data(self):
         """
         Derive the path for report data using parent
@@ -420,7 +357,7 @@ class GithubOrg(OSSEntity):
         """
         return self.get_path_to_data(PATH_TO_REPORTS_DATA, "md")
 
-    def get_path_to_resource_data(self, resource_name, fmt="png"):
+    def get_path_to_graph_data(self,chart_name):
         """
         Derive the path for graph data using parent
         path and extension
@@ -428,21 +365,11 @@ class GithubOrg(OSSEntity):
         Returns:
             String path to data.
         """
-
+        
         parent_path = os.path.join(PATH_TO_GRAPHS_DATA, f"{self.login}")
         pathlib.Path(parent_path).mkdir(parents=True, exist_ok=True)
-        fname = f"{self.login}_{resource_name}.{fmt}"
-        org_path = os.path.join(parent_path, fname)
+        org_path = os.path.join(parent_path, f"{self.login}_{chart_name}.svg")
 
         return org_path
 
-    def get_path_to_graph_data(self, chart_name):
-        """
-        Derive the path for graph data using parent
-        path and extension
 
-        Returns:
-            String path to data.
-        """
-
-        return self.get_path_to_resource_data(chart_name, fmt="svg")
