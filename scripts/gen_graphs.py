@@ -19,6 +19,12 @@ def generate_all_graphs_for_repos(all_repos):
 
 
 def generate_all_graphs_for_orgs(all_orgs):
+    """
+    Function to iterate through all orgs and generate graphs for each of them
+
+    Arguments:
+        all_orgs: Orgs to generate graphs for.
+    """
     for org in all_orgs:
         print(f"Generating graphs for org {org.name}")
         generate_solid_gauge_issue_graph(org)
@@ -70,7 +76,8 @@ def generate_repo_sparklines(repo):
         "margin": 10
     }
     write_repo_chart_to_file(
-        repo, chart, "commit_sparklines", custom_func=chart.render_sparkline, custom_func_params=_kwargs_)
+        repo, chart, "commit_sparklines",
+        custom_func=chart.render_sparkline, custom_func_params=_kwargs_)
 
 
 def generate_solid_gauge_issue_graph(oss_entity):
