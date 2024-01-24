@@ -2,9 +2,8 @@
 Definitions of specific metrics for metricsLib
 """
 from metricsLib.metrics_data_structures import CustomMetric, parse_commits_by_month
-from metricsLib.metrics_data_structures import GraphQLMetric, SumMetric
-from metricsLib.metrics_data_structures import ListMetric
-from metricsLib.constants import TOKEN, AUGUR_HOST
+from metricsLib.metrics_data_structures import GraphQLMetric, RangeMetric, SumMetric
+from metricsLib.constants import TOKEN
 
 # The general procedure is to execute all metrics against all repos and orgs
 
@@ -18,9 +17,6 @@ ADVANCED_METRICS = []
 
 # Metrics gathered by org instead of by repo
 ORG_METRICS = []
-
-# Metrics that save a resource to a file
-RESOURCE_METRICS = []
 
 REPO_GITHUB_GRAPHQL_QUERY = """
 query ($repo: String!, $owner: String!) {
@@ -83,65 +79,25 @@ query ($repo: String!, $owner: String!) {
 
 
 github_graphql_simple_counts_metric_map = {
-    "description": ["data", "repository", "description"],
-    "commits_count": ["data", "repository", "defaultBranchRef", "target", "history", "totalCount"],
-    "issues_count": ["data", "repository", "issues", "totalCount"],
-    "open_issues_count": ["data", "repository", "openIssues", "totalCount"],
-    "closed_issues_count": ["data", "repository", "closedIssues", "totalCount"],
-    "pull_requests_count": ["data", "repository", "pullRequests", "totalCount"],
-    "open_pull_requests_count": ["data", "repository", "openPullRequests", "totalCount"],
-    "merged_pull_requests_count": ["data", "repository", "mergedPullRequests", "totalCount"],
-    "closed_pull_requests_count": ["data", "repository", "closedPullRequests", "totalCount"],
-    "forks_count": ["data", "repository", "forkCount"],
-    "stargazers_count": ["data", "repository", "stargazerCount"],
-    "watchers_count": ["data", "repository", "watchers", "totalCount"]
+  "description": ["data", "repository", "description"],
+  "commits_count": ["data", "repository", "defaultBranchRef", "target", "history", "totalCount"],
+  "issues_count": ["data", "repository", "issues", "totalCount"],
+  "open_issues_count": ["data", "repository", "openIssues", "totalCount"],
+  "closed_issues_count": ["data", "repository", "closedIssues", "totalCount"],
+  "pull_requests_count": ["data", "repository", "pullRequests", "totalCount"],
+  "open_pull_requests_count": ["data", "repository", "openPullRequests", "totalCount"],
+  "merged_pull_requests_count": ["data", "repository", "mergedPullRequests", "totalCount"],
+  "closed_pull_requests_count": ["data", "repository", "closedPullRequests", "totalCount"],
+  "forks_count": ["data", "repository", "forkCount"],
+  "stargazers_count": ["data", "repository", "stargazerCount"],
+  "watchers_count": ["data", "repository", "watchers", "totalCount"]
 }
 SIMPLE_METRICS.append(GraphQLMetric("githubGraphqlSimpleCounts", ["repo", "owner"],
-                                    REPO_GITHUB_GRAPHQL_QUERY,
-                                    github_graphql_simple_counts_metric_map, token=TOKEN))
+ REPO_GITHUB_GRAPHQL_QUERY, github_graphql_simple_counts_metric_map, token=TOKEN))
 
-ORG_METRICS.append(ListMetric("topCommitters", ["repo_group_id"],
-                              AUGUR_HOST +
-                              "/repo-groups/{repo_group_id}/top-committers",
-                              {"top_committers": ["email", "commits"]}))
-
-
-CONTRIBS_LABEL_LAST_MONTH = "new_commit_contributors_by_day_over_last_month"
-PERIODIC_METRICS.append(ListMetric("newContributorsofCommitsWeekly",
-                                   ["repo_id", "period", "begin_week", "end_date"],
-                                   AUGUR_HOST + "/repos/{repo_id}" +
-                                   "/pull-requests-merge-contributor-new" +
-                                   "?period={period}&begin_date={begin_week}&end_date={end_date}",
-                                   {
-                                    CONTRIBS_LABEL_LAST_MONTH: ["commit_date", "count"]
-                                    }))
-
-sixMonthsParams = ["repo_id", "period", "begin_month", "end_date"]
-LABEL = "new_commit_contributors_by_day_over_last_six_months"
-PERIODIC_METRICS.append(ListMetric("newContributorsofCommitsMonthly", sixMonthsParams,
-                                   AUGUR_HOST +
-                                   "/repos/{repo_id}/pull-requests-merge-contributor-new" +
-                                   "?period={period}&begin_date={begin_month}&end_date={end_date}",
-                                   {LABEL: ["commit_date", "count"]}))
-
-PERIODIC_METRICS.append(ListMetric("issuesNewWeekly", ["repo_id","period","begin_week","end_date"],
-                                   AUGUR_HOST +
-                                   "/repos/{repo_id}/issues-new" +
-                                   "?period={period}&begin_date={begin_week}&end_date={end_date}",
-                                   {"new_issues_by_day_over_last_month": ["date", "issues"]}))
-
-PERIODIC_METRICS.append(ListMetric("issuesNewMonthly", sixMonthsParams,
-                                   AUGUR_HOST +
-                                   "/repos/{repo_id}/issues-new?" +
-                                   "period={period}&begin_date={begin_month}&end_date={end_date}",
-                                   {"new_issues_by_day_over_last_six_months": ["date", "issues"]}))
-
-# TODO: Ask Sean why this endpoint isn't working for any repo except for augur.
-# might just be lack of data.
-#RESOURCE_METRICS.append(ResourceMetric("firstResponseForClosedPR", sixMonthsParams,
-#                                AUGUR_HOST + "/pull_request_reports/PR_time_to_first_response/" +
-#                                "?repo_id={repo_id}&start_date={begin_month}&end_date={end_date}"))
-
+PERIODIC_METRICS.append(RangeMetric("newContributorsofCommits", ["repo_id", "period", "begin_date", "end_date"],
+  "https://ai.chaoss.io/api/unstable/repos/{repo_id}/pull-requests-merge-contributor-new?period={period}&begin_date={begin_date}&end_date={end_date}",
+  {"new_commit_contributor": "count"}))
 
 ORG_GITHUB_GRAPHQL_QUERY = """
 query ($org_login: String!) {
@@ -168,26 +124,13 @@ ORG_METRICS.append(GraphQLMetric("githubGraphqlOrgSimple", ["org_login"], ORG_GI
                                   "is_verified": ["data", "organization", "isVerified"],
                                   "location": ["data", "organization", "location"],
                                   "twitter_username": ["data", "organization", "twitterUsername"],
-                                  "repo_count": ["data","organization","repositories","totalCount"]
+                                  "repo_count": ["data", "organization", "repositories", "totalCount"]
                                   }, token=TOKEN))
 
 FOLLOWERS_ENDPOINT = "https://api.github.com/users/{org_login}/followers"
 ORG_METRICS.append(
-    SumMetric("orgFollowers", ["org_login"],
-              FOLLOWERS_ENDPOINT, "followers_count", token=TOKEN)
+  SumMetric("orgFollowers", ["org_login"], FOLLOWERS_ENDPOINT, "followers_count",token=TOKEN)
 )
-
-#ORG_METRICS.append(ListMetric("issueNewWeekly", ["repo_group_id","period","begin_week","end_date"],
-#                              AUGUR_HOST +
-#                              "/repo-groups/{repo_group_id}/issues-new" +
-#                              "?period={period}&begin_date={begin_week}&end_date={end_date}",
-#                              {"new_issues_by_day_over_last_month": ["date", "issues"]}))
-
-#ORG_METRICS.append(ListMetric("issueNewMonthly",["repo_group_id","period","begin_month","end_date"],
-#                              AUGUR_HOST +
-#                              "/repo-groups/{repo_group_id}/issues-new" +
-#                              "?period={period}&begin_date={begin_month}&end_date={end_date}",
-#                              {"new_issues_by_day_over_last_six_months": ["date", "issues"]}))
 
 COMMITS_ENDPOINT = "https://api.github.com/repos/{owner}/{repo}/commits"
 SIMPLE_METRICS.append(CustomMetric("getCommitsByMonth", [

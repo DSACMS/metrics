@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ecqm-dedupe | REPORT-2024-01-24
+title: Open Source at CMS Metrics Report for ecqm-dedupe | REPORT-2024-01-21
 permalink: /DSACMS/ecqm-dedupe/
 
 org: DSACMS
 repo: ecqm-dedupe
-reportID: REPORT-2024-01-24
-date_stampThisWeek: 2024-01-24
-date_stampLastWeek: 2024-01-24
+reportID: REPORT-2024-01-21
+date_stampThisWeek: 2024-01-21
+date_stampLastWeek: 2024-01-21
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -31,15 +31,15 @@ date_stampLastWeek: 2024-01-24
       </tr>
       <tr>
         <th scope="row">Issues</th>
-        <td>6</td>
-        <td>6</td>
+        <td>5</td>
+        <td>5</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
-        <td>6</td>
-        <td>6</td>
+        <td>5</td>
+        <td>5</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
@@ -54,15 +54,21 @@ date_stampLastWeek: 2024-01-24
         <th scope="row">Open Pull Requests</th>
         <td>5</td>
         <td>2</td>
+<<<<<<< HEAD
         <td style="color: #45c527" >3</td>
         <td style="color: #45c527" >85%</td>
+=======
+        <td>0</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >200%</td>
+>>>>>>> parent of a805720 (Merge pull request #77 from DSACMS/fix-add-more-repos)
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>8</td>
-        <td>8</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td>5</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >46%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
