@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for metrics | REPORT-2023-11-21
-permalink: /DSACMS/metrics
+title: Open Source at CMS Metrics Report for metrics | REPORT-2024-01-24
+permalink: /DSACMS/metrics/
 
 org: DSACMS
 repo: metrics
-reportID: REPORT-2023-11-21
-date_stampThisWeek: 2023-11-21
-date_stampLastWeek: 2023-11-21
+reportID: REPORT-2024-01-24
+date_stampThisWeek: 2024-01-24
+date_stampLastWeek: 2024-01-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,15 +24,15 @@ date_stampLastWeek: 2023-11-21
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>227</td>
-        <td>225</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >0%</td>
+        <td>381</td>
+        <td>297</td>
+        <td style="color: #45c527" >84</td>
+        <td style="color: #45c527" >24%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
-        <td>9</td>
-        <td>9</td>
+        <td>12</td>
+        <td>12</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
@@ -45,43 +45,43 @@ date_stampLastWeek: 2023-11-21
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
-        <td>1</td>
-        <td>1</td>
+        <td>4</td>
+        <td>4</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>0</td>
-        <td>0</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td>1</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >200%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>26</td>
-        <td>26</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td>59</td>
+        <td>58</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >1%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
-        <td>1</td>
-        <td>1</td>
+        <td>6</td>
+        <td>6</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
-        <td>0</td>
-        <td>0</td>
+        <td>1</td>
+        <td>1</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
-        <td>1</td>
-        <td>1</td>
+        <td>2</td>
+        <td>2</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
@@ -101,12 +101,12 @@ date_stampLastWeek: 2023-11-21
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../assets/img/graphs/DSACMS/metrics/issue_gauge_metrics_data.svg" />
+      <embed type="image/svg+xml" src="../../assets/img/graphs/DSACMS/metrics/issue_gauge_metrics_data.svg" />
     </figure>
     <!--- Contributor Activity Line Graph -->
     <h3>Commits by Month</h3>
     <figure>
-      <embed type="image/svg+xml" src="../assets/img/graphs/DSACMS/metrics/commit_sparklines_metrics_data.svg" />
+      <embed type="image/svg+xml" src="../../assets/img/graphs/DSACMS/metrics/commit_sparklines_metrics_data.svg" />
     </figure>
   </div>
 </div>

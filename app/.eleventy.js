@@ -1,8 +1,5 @@
-const fs = require("fs")
-const path = require("path")
 const Image = require("@11ty/eleventy-img")
-const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite")
-const lucideIcons = require("@grimlink/eleventy-plugin-lucide-icons");
+const lucideIcons = require("@grimlink/eleventy-plugin-lucide-icons")
 
 async function resizeImage(src, sizes, outputFormat = "png") {
   const stats = await Image(src, {
@@ -53,13 +50,13 @@ module.exports = function (eleventyConfig) {
     return url
   })
 
-  eleventyConfig.addFilter("findObject", function(array, value) {
-    return array.find(item => item["name"] === value);
-  });
+  eleventyConfig.addFilter("findObject", function (array, value) {
+    return array.find((item) => item["name"] === value)
+  })
 
-  eleventyConfig.addFilter("findProjectsInOrg", function(array, value) {
-    return array.filter(item => item["owner"] === value);
-  });
+  eleventyConfig.addFilter("findProjectsInOrg", function (array, value) {
+    return array.filter((item) => item["owner"] === value)
+  })
 
   // Create a collection of items without permalinks so that we can reference them
   // in a separate shortcode to pull in partial content directly
@@ -70,21 +67,23 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "src/img": "assets/img",
     "site/img": "assets/img",
-    "src/js": "assets/js",
-    "src/css": "css",
+    "site/_includes/css": "css",
+    "site/_includes/js": "assets/js",
     "site/_graphs": "assets/img/graphs",
     "node_modules/@uswds/uswds/dist/img": "assets/img",
+    "node_modules/@uswds/uswds/dist/fonts": "fonts",
   })
 
   eleventyConfig.setLiquidOptions({ outputEscape: "escape" })
-  eleventyConfig.addPlugin(EleventyVitePlugin)
   eleventyConfig.addPlugin(lucideIcons, {
-    "class": "custom-class",
-    "width": 17,
-    "height": 17,
-    "stroke": "currentColor",
-    "stroke-width": 2
-});
+    class: "custom-class",
+    width: 17,
+    height: 17,
+    stroke: "currentColor",
+    "stroke-width": 2,
+  })
+
+  const pathPrefix = process.env.NODE_ENV === "production" ? "/metrics" : ""
 
   return {
     dir: {
@@ -95,5 +94,6 @@ module.exports = function (eleventyConfig) {
     },
     templateFormats: ["html", "md", "liquid", "11ty.js"],
     passthroughFileCopy: true,
+    pathPrefix,
   }
 }

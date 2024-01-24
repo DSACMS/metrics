@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for dsacms.github.io | REPORT-2023-11-21
-permalink: /DSACMS/dsacms.github.io
+title: Open Source at CMS Metrics Report for dsacms.github.io | REPORT-2024-01-24
+permalink: /DSACMS/dsacms.github.io/
 
 org: DSACMS
 repo: dsacms.github.io
-reportID: REPORT-2023-11-21
-date_stampThisWeek: 2023-11-21
-date_stampLastWeek: 2023-11-21
+reportID: REPORT-2024-01-24
+date_stampThisWeek: 2024-01-24
+date_stampLastWeek: 2024-01-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -101,12 +101,12 @@ date_stampLastWeek: 2023-11-21
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../assets/img/graphs/DSACMS/dsacms.github.io/issue_gauge_dsacms.github.io_data.svg" />
+      <embed type="image/svg+xml" src="../../assets/img/graphs/DSACMS/dsacms.github.io/issue_gauge_dsacms.github.io_data.svg" />
     </figure>
     <!--- Contributor Activity Line Graph -->
     <h3>Commits by Month</h3>
     <figure>
-      <embed type="image/svg+xml" src="../assets/img/graphs/DSACMS/dsacms.github.io/commit_sparklines_dsacms.github.io_data.svg" />
+      <embed type="image/svg+xml" src="../../assets/img/graphs/DSACMS/dsacms.github.io/commit_sparklines_dsacms.github.io_data.svg" />
     </figure>
   </div>
 </div>
