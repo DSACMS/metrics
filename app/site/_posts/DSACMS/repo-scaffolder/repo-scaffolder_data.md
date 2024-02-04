@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for repo-scaffolder | REPORT-2024-01-28
+title: Open Source at CMS Metrics Report for repo-scaffolder | REPORT-2024-02-04
 permalink: /DSACMS/repo-scaffolder/
 
 org: DSACMS
 repo: repo-scaffolder
-reportID: REPORT-2024-01-28
-date_stampThisWeek: 2024-01-28
-date_stampLastWeek: 2024-01-28
+reportID: REPORT-2024-02-04
+date_stampThisWeek: 2024-02-04
+date_stampLastWeek: 2024-02-04
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -31,17 +31,17 @@ date_stampLastWeek: 2024-01-28
       </tr>
       <tr>
         <th scope="row">Issues</th>
+        <td>15</td>
         <td>14</td>
-        <td>14</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >6%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>15</td>
         <td>14</td>
-        <td>14</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >6%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -80,10 +80,10 @@ date_stampLastWeek: 2024-01-28
       </tr>
       <tr>
         <th scope="row">Stars</th>
+        <td>10</td>
         <td>7</td>
-        <td>7</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >35%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
