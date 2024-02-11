@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ecqm-dedupe | REPORT-2024-02-04
+title: Open Source at CMS Metrics Report for ecqm-dedupe | REPORT-2024-02-11
 permalink: /DSACMS/ecqm-dedupe/
 
 org: DSACMS
 repo: ecqm-dedupe
-reportID: REPORT-2024-02-04
-date_stampThisWeek: 2024-02-04
-date_stampLastWeek: 2024-02-04
+reportID: REPORT-2024-02-11
+date_stampThisWeek: 2024-02-11
+date_stampLastWeek: 2024-02-11
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,23 +25,23 @@ date_stampLastWeek: 2024-02-04
       <tr>
         <th scope="row">Commits</th>
         <td>42</td>
-        <td>30</td>
-        <td style="color: #45c527" >12</td>
-        <td style="color: #45c527" >33%</td>
+        <td>42</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
         <td>7</td>
-        <td>6</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >15%</td>
+        <td>7</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
         <td>7</td>
-        <td>6</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >15%</td>
+        <td>7</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -53,16 +53,16 @@ date_stampLastWeek: 2024-02-04
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>2</td>
-        <td>5</td>
-        <td style="color: #d31c08" >-3</td>
-        <td style="color: #d31c08" >85%</td>
+        <td>2</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>21</td>
-        <td>13</td>
-        <td style="color: #45c527" >8</td>
-        <td style="color: #45c527" >47%</td>
+        <td>21</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
