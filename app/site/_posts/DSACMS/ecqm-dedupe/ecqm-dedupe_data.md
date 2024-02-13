@@ -1,23 +1,13 @@
 ---
 layout: repo-report
-<<<<<<< HEAD
 title: Open Source at CMS Metrics Report for ecqm-dedupe | REPORT-2024-02-11
-=======
-title: Open Source at CMS Metrics Report for ecqm-dedupe | REPORT-2024-01-24
->>>>>>> parent of cbbd52b (Revert "Merge pull request #77 from DSACMS/fix-add-more-repos")
 permalink: /DSACMS/ecqm-dedupe/
 
 org: DSACMS
 repo: ecqm-dedupe
-<<<<<<< HEAD
 reportID: REPORT-2024-02-11
 date_stampThisWeek: 2024-02-11
 date_stampLastWeek: 2024-02-11
-=======
-reportID: REPORT-2024-01-24
-date_stampThisWeek: 2024-01-24
-date_stampLastWeek: 2024-01-24
->>>>>>> parent of cbbd52b (Revert "Merge pull request #77 from DSACMS/fix-add-more-repos")
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -41,25 +31,15 @@ date_stampLastWeek: 2024-01-24
       </tr>
       <tr>
         <th scope="row">Issues</th>
-<<<<<<< HEAD
         <td>7</td>
         <td>7</td>
-=======
-        <td>6</td>
-        <td>6</td>
->>>>>>> parent of cbbd52b (Revert "Merge pull request #77 from DSACMS/fix-add-more-repos")
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
-<<<<<<< HEAD
         <td>7</td>
         <td>7</td>
-=======
-        <td>6</td>
-        <td>6</td>
->>>>>>> parent of cbbd52b (Revert "Merge pull request #77 from DSACMS/fix-add-more-repos")
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
@@ -73,7 +53,6 @@ date_stampLastWeek: 2024-01-24
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>2</td>
-<<<<<<< HEAD
         <td>2</td>
         <td style="" >0</td>
         <td style="" >0%</td>
@@ -82,15 +61,6 @@ date_stampLastWeek: 2024-01-24
         <th scope="row">Merged Pull Requests</th>
         <td>21</td>
         <td>21</td>
-=======
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >85%</td>
-      </tr>
-      <tr>
-        <th scope="row">Merged Pull Requests</th>
-        <td>8</td>
-        <td>8</td>
->>>>>>> parent of cbbd52b (Revert "Merge pull request #77 from DSACMS/fix-add-more-repos")
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>

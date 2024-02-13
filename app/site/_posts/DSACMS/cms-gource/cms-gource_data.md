@@ -1,23 +1,13 @@
 ---
 layout: repo-report
-<<<<<<< HEAD
 title: Open Source at CMS Metrics Report for cms-gource | REPORT-2024-02-11
-=======
-title: Open Source at CMS Metrics Report for cms-gource | REPORT-2024-01-24
->>>>>>> parent of cbbd52b (Revert "Merge pull request #77 from DSACMS/fix-add-more-repos")
 permalink: /DSACMS/cms-gource/
 
 org: DSACMS
 repo: cms-gource
-<<<<<<< HEAD
 reportID: REPORT-2024-02-11
 date_stampThisWeek: 2024-02-11
 date_stampLastWeek: 2024-02-11
-=======
-reportID: REPORT-2024-01-24
-date_stampThisWeek: 2024-01-24
-date_stampLastWeek: 2024-01-24
->>>>>>> parent of cbbd52b (Revert "Merge pull request #77 from DSACMS/fix-add-more-repos")
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
