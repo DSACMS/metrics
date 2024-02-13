@@ -32,6 +32,20 @@ def calc_percent_difference(latest, prev):
 
 
 def get_heading_report_values(headings, oss_entity):
+    """
+    Generates a dictionary of statistics for each 'heading' where
+    a heading is a type of data point. i.e. commits_diff versus pull_request_count_diff.
+
+    Arguments:
+        headings: collection
+            Collection of data point types i.e. 'commits'
+        oss_entity: OssEntity
+            Data structure representing the entity that the data corresponds to
+    
+    Returns:
+        A dictionary of statistics with many keys for each heading.
+    """
+
     report_values = {}
     for heading in headings:
         prev_record = oss_entity.metric_data[heading]
@@ -41,14 +55,14 @@ def get_heading_report_values(headings, oss_entity):
         if prev_record is None:
             #Cast None to 0 for diff calc
             prev_record = 0
-        
+
         next_record = oss_entity.metric_data[heading]
         if oss_entity.metric_data[heading] is None:
             next_record = 0
-        
+
         percent_difference = calc_percent_difference(
             next_record, prev_record)
-        
+
         raw_diff = next_record - prev_record
 
         diff_color = ''
@@ -73,12 +87,31 @@ def get_heading_report_values(headings, oss_entity):
 
 
 def write_report_to_file(report_template, report_values, oss_entity):
+    """
+    Writes a report markdown file to disc after formatting the values provided through 
+    a python dictionary.
+
+    Arguments:
+        report_template: str
+            String that contains unformatted text for the markdown report
+        report_values: dict
+            Dictionary that contains values to format the text with
+        oss_entity: OssEntity
+            Oss entity that the report corresponds to the report
+    """
     raw_report = report_template.format(**report_values)
     with open(oss_entity.get_path_to_report_data(), "w+", encoding="utf-8") as file:
         file.write(raw_report)
 
 
 def generate_org_report_files(orgs):
+    """
+    Generate reports for orgs
+
+    Arguments:
+        orgs: collection
+            List of orgs to generate reports for
+    """
 
     for org in orgs:
         print(f"Generating report for org {org.name}")
