@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-tf-utility-belt-irsa | REPORT-2024-01-24
+title: Open Source at CMS Metrics Report for batcave-tf-utility-belt-irsa | REPORT-2024-02-13
 permalink: /CMS-Enterprise/batcave-tf-utility-belt-irsa/
 
 org: CMS-Enterprise
 repo: batcave-tf-utility-belt-irsa
-reportID: REPORT-2024-01-24
-date_stampThisWeek: 2024-01-24
-date_stampLastWeek: 2024-01-24
+reportID: REPORT-2024-02-13
+date_stampThisWeek: 2024-02-13
+date_stampLastWeek: 2024-02-13
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-01-24
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>6</td>
         <td>4</td>
-        <td>4</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >40%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -59,10 +59,10 @@ date_stampLastWeek: 2024-01-24
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>5</td>
         <td>3</td>
-        <td>3</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >50%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -87,10 +87,10 @@ date_stampLastWeek: 2024-01-24
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>5</td>
         <td>4</td>
-        <td>4</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >22%</td>
       </tr>
     </tbody>
   </table>
