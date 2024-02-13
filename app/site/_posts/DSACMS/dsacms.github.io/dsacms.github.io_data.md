@@ -101,12 +101,12 @@ date_stampLastWeek: 2024-02-13
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/DSACMS/dsacms.github.io/issue_gauge_dsacms.github.io_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/DSACMS/dsacms.github.io/issue_gauge_dsacms.github.io_data.svg" | url }}" />
     </figure>
     <!--- Contributor Activity Line Graph -->
     <h3>Commits by Month</h3>
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/DSACMS/dsacms.github.io/commit_sparklines_dsacms.github.io_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/DSACMS/dsacms.github.io/commit_sparklines_dsacms.github.io_data.svg" | url }}" />
     </figure>
   </div>
 </div>

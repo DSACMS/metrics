@@ -101,12 +101,12 @@ date_stampLastWeek: 2024-02-13
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/DSACMS/cms-gource/issue_gauge_cms-gource_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/DSACMS/cms-gource/issue_gauge_cms-gource_data.svg" | url }}" />
     </figure>
     <!--- Contributor Activity Line Graph -->
     <h3>Commits by Month</h3>
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/DSACMS/cms-gource/commit_sparklines_cms-gource_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/DSACMS/cms-gource/commit_sparklines_cms-gource_data.svg" | url }}" />
     </figure>
   </div>
 </div>

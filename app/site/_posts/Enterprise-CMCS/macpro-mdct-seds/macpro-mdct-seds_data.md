@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Commits</th>
         <td>2558</td>
-        <td>2533</td>
-        <td style="color: #45c527" >25</td>
-        <td style="color: #45c527" >0%</td>
+        <td>2558</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -53,23 +53,23 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>4</td>
-        <td>10</td>
-        <td style="color: #d31c08" >-6</td>
-        <td style="color: #d31c08" >85%</td>
+        <td>4</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>704</td>
-        <td>689</td>
-        <td style="color: #45c527" >15</td>
-        <td style="color: #45c527" >2%</td>
+        <td>704</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>144</td>
-        <td>136</td>
-        <td style="color: #45c527" >8</td>
-        <td style="color: #45c527" >5%</td>
+        <td>144</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -81,16 +81,16 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Stars</th>
         <td>2</td>
-        <td>1</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >66%</td>
+        <td>2</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
         <td>9</td>
-        <td>10</td>
-        <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >10%</td>
+        <td>9</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>
@@ -101,12 +101,12 @@ date_stampLastWeek: 2024-02-13
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/Enterprise-CMCS/macpro-mdct-seds/issue_gauge_macpro-mdct-seds_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-mdct-seds/issue_gauge_macpro-mdct-seds_data.svg" | url }}" />
     </figure>
     <!--- Contributor Activity Line Graph -->
     <h3>Commits by Month</h3>
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/Enterprise-CMCS/macpro-mdct-seds/commit_sparklines_macpro-mdct-seds_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-mdct-seds/commit_sparklines_macpro-mdct-seds_data.svg" | url }}" />
     </figure>
   </div>
 </div>

@@ -101,12 +101,12 @@ date_stampLastWeek: 2024-02-13
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/Enterprise-CMCS/macpro-auth/issue_gauge_macpro-auth_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-auth/issue_gauge_macpro-auth_data.svg" | url }}" />
     </figure>
     <!--- Contributor Activity Line Graph -->
     <h3>Commits by Month</h3>
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/Enterprise-CMCS/macpro-auth/commit_sparklines_macpro-auth_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-auth/commit_sparklines_macpro-auth_data.svg" | url }}" />
     </figure>
   </div>
 </div>

@@ -53,9 +53,9 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>9</td>
-        <td>8</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >11%</td>
+        <td>9</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
@@ -67,9 +67,9 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>153</td>
-        <td>146</td>
-        <td style="color: #45c527" >7</td>
-        <td style="color: #45c527" >4%</td>
+        <td>153</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -101,12 +101,12 @@ date_stampLastWeek: 2024-02-13
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/Enterprise-CMCS/macpro-security-hub-sync/issue_gauge_macpro-security-hub-sync_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-security-hub-sync/issue_gauge_macpro-security-hub-sync_data.svg" | url }}" />
     </figure>
     <!--- Contributor Activity Line Graph -->
     <h3>Commits by Month</h3>
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/Enterprise-CMCS/macpro-security-hub-sync/commit_sparklines_macpro-security-hub-sync_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-security-hub-sync/commit_sparklines_macpro-security-hub-sync_data.svg" | url }}" />
     </figure>
   </div>
 </div>

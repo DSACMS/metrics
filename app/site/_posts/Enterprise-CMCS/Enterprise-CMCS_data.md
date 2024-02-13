@@ -24,23 +24,23 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Commits</th>
         <td>27317</td>
-        <td>27129</td>
-        <td style="color: #45c527" >188</td>
-        <td style="color: #45c527" >0%</td>
+        <td>27317</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
         <td>3206</td>
-        <td>3205</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0%</td>
+        <td>3206</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
         <td>314</td>
-        <td>313</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0%</td>
+        <td>314</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -51,24 +51,24 @@ date_stampLastWeek: 2024-02-13
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>166</td>
         <td>164</td>
-        <td>172</td>
-        <td style="color: #d31c08" >-8</td>
-        <td style="color: #d31c08" >4%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >1%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>11057</td>
-        <td>10883</td>
-        <td style="color: #45c527" >174</td>
-        <td style="color: #45c527" >1%</td>
+        <td>11057</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>2902</td>
-        <td>2826</td>
-        <td style="color: #45c527" >76</td>
-        <td style="color: #45c527" >2%</td>
+        <td>2902</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -80,23 +80,23 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Stars</th>
         <td>163</td>
-        <td>158</td>
-        <td style="color: #45c527" >5</td>
-        <td style="color: #45c527" >3%</td>
+        <td>163</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>202</td>
         <td>203</td>
-        <td>208</td>
-        <td style="color: #d31c08" >-5</td>
-        <td style="color: #d31c08" >2%</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >0%</td>
       </tr>
       <tr>
         <th scope="row">Followers</th>
         <td>7</td>
-        <td>6</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >15%</td>
+        <td>7</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>
@@ -107,7 +107,7 @@ date_stampLastWeek: 2024-02-13
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../assets/img/graphs/Enterprise-CMCS/Enterprise-CMCS_issue_gauge.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/Enterprise-CMCS_issue_gauge.svg" | url }}" />
     </figure>
   </div>
 </div>

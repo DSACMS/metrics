@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Commits</th>
         <td>6</td>
-        <td>5</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >18%</td>
+        <td>6</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -88,9 +88,9 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Watchers</th>
         <td>6</td>
-        <td>5</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >18%</td>
+        <td>6</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>
@@ -101,12 +101,12 @@ date_stampLastWeek: 2024-02-13
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/CMS-Enterprise/batcave-tf-dynamodb/issue_gauge_batcave-tf-dynamodb_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/CMS-Enterprise/batcave-tf-dynamodb/issue_gauge_batcave-tf-dynamodb_data.svg" | url }}" />
     </figure>
     <!--- Contributor Activity Line Graph -->
     <h3>Commits by Month</h3>
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/CMS-Enterprise/batcave-tf-dynamodb/commit_sparklines_batcave-tf-dynamodb_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/CMS-Enterprise/batcave-tf-dynamodb/commit_sparklines_batcave-tf-dynamodb_data.svg" | url }}" />
     </figure>
   </div>
 </div>

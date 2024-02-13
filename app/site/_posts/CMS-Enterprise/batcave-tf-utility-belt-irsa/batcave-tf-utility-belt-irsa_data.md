@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Commits</th>
         <td>6</td>
-        <td>4</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >40%</td>
+        <td>6</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -60,9 +60,9 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>5</td>
-        <td>3</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >50%</td>
+        <td>5</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -88,9 +88,9 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Watchers</th>
         <td>5</td>
-        <td>4</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >22%</td>
+        <td>5</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>
@@ -101,12 +101,12 @@ date_stampLastWeek: 2024-02-13
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/CMS-Enterprise/batcave-tf-utility-belt-irsa/issue_gauge_batcave-tf-utility-belt-irsa_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/CMS-Enterprise/batcave-tf-utility-belt-irsa/issue_gauge_batcave-tf-utility-belt-irsa_data.svg" | url }}" />
     </figure>
     <!--- Contributor Activity Line Graph -->
     <h3>Commits by Month</h3>
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/CMS-Enterprise/batcave-tf-utility-belt-irsa/commit_sparklines_batcave-tf-utility-belt-irsa_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/CMS-Enterprise/batcave-tf-utility-belt-irsa/commit_sparklines_batcave-tf-utility-belt-irsa_data.svg" | url }}" />
     </figure>
   </div>
 </div>

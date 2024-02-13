@@ -53,9 +53,9 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>1</td>
-        <td>0</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >200%</td>
+        <td>1</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
@@ -88,9 +88,9 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Watchers</th>
         <td>8</td>
-        <td>7</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >13%</td>
+        <td>8</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>
@@ -101,12 +101,12 @@ date_stampLastWeek: 2024-02-13
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/CMS-Enterprise/batcave-knight-light/issue_gauge_batcave-knight-light_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/CMS-Enterprise/batcave-knight-light/issue_gauge_batcave-knight-light_data.svg" | url }}" />
     </figure>
     <!--- Contributor Activity Line Graph -->
     <h3>Commits by Month</h3>
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/CMS-Enterprise/batcave-knight-light/commit_sparklines_batcave-knight-light_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/CMS-Enterprise/batcave-knight-light/commit_sparklines_batcave-knight-light_data.svg" | url }}" />
     </figure>
   </div>
 </div>

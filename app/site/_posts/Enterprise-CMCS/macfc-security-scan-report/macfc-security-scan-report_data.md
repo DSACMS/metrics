@@ -25,23 +25,23 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Commits</th>
         <td>212</td>
-        <td>204</td>
-        <td style="color: #45c527" >8</td>
-        <td style="color: #45c527" >3%</td>
+        <td>212</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
         <td>4</td>
-        <td>3</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >28%</td>
+        <td>4</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
         <td>4</td>
-        <td>3</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >28%</td>
+        <td>4</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -53,23 +53,23 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>2</td>
-        <td>5</td>
-        <td style="color: #d31c08" >-3</td>
-        <td style="color: #d31c08" >85%</td>
+        <td>2</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>22</td>
-        <td>18</td>
-        <td style="color: #45c527" >4</td>
-        <td style="color: #45c527" >20%</td>
+        <td>22</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>7</td>
-        <td>6</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >15%</td>
+        <td>7</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -101,12 +101,12 @@ date_stampLastWeek: 2024-02-13
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/Enterprise-CMCS/macfc-security-scan-report/issue_gauge_macfc-security-scan-report_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/macfc-security-scan-report/issue_gauge_macfc-security-scan-report_data.svg" | url }}" />
     </figure>
     <!--- Contributor Activity Line Graph -->
     <h3>Commits by Month</h3>
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/Enterprise-CMCS/macfc-security-scan-report/commit_sparklines_macfc-security-scan-report_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/macfc-security-scan-report/commit_sparklines_macfc-security-scan-report_data.svg" | url }}" />
     </figure>
   </div>
 </div>

@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Commits</th>
         <td>149</td>
-        <td>42</td>
-        <td style="color: #45c527" >107</td>
-        <td style="color: #45c527" >112%</td>
+        <td>149</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -53,16 +53,16 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>0</td>
-        <td>2</td>
-        <td style="color: #d31c08" >-2</td>
-        <td style="color: #d31c08" >200%</td>
+        <td>0</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>25</td>
-        <td>21</td>
-        <td style="color: #45c527" >4</td>
-        <td style="color: #45c527" >17%</td>
+        <td>25</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -81,9 +81,9 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Stars</th>
         <td>3</td>
-        <td>0</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >200%</td>
+        <td>3</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
@@ -101,12 +101,12 @@ date_stampLastWeek: 2024-02-13
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/DSACMS/ecqm-dedupe/issue_gauge_ecqm-dedupe_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/DSACMS/ecqm-dedupe/issue_gauge_ecqm-dedupe_data.svg" | url }}" />
     </figure>
     <!--- Contributor Activity Line Graph -->
     <h3>Commits by Month</h3>
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/DSACMS/ecqm-dedupe/commit_sparklines_ecqm-dedupe_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/DSACMS/ecqm-dedupe/commit_sparklines_ecqm-dedupe_data.svg" | url }}" />
     </figure>
   </div>
 </div>

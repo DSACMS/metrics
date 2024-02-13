@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-02-13
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>401</td>
         <td>396</td>
-        <td>387</td>
-        <td style="color: #45c527" >9</td>
-        <td style="color: #45c527" >2%</td>
+        <td style="color: #45c527" >5</td>
+        <td style="color: #45c527" >1%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -59,10 +59,10 @@ date_stampLastWeek: 2024-02-13
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>64</td>
         <td>63</td>
-        <td>61</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >3%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >1%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -101,12 +101,12 @@ date_stampLastWeek: 2024-02-13
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/DSACMS/metrics/issue_gauge_metrics_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/DSACMS/metrics/issue_gauge_metrics_data.svg" | url }}" />
     </figure>
     <!--- Contributor Activity Line Graph -->
     <h3>Commits by Month</h3>
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/DSACMS/metrics/commit_sparklines_metrics_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/DSACMS/metrics/commit_sparklines_metrics_data.svg" | url }}" />
     </figure>
   </div>
 </div>

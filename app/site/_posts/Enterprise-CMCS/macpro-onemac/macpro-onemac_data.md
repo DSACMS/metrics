@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Commits</th>
         <td>1890</td>
-        <td>1889</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0%</td>
+        <td>1890</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -53,23 +53,23 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>13</td>
-        <td>12</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >8%</td>
+        <td>13</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>1093</td>
-        <td>1091</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >0%</td>
+        <td>1093</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>343</td>
-        <td>338</td>
-        <td style="color: #45c527" >5</td>
-        <td style="color: #45c527" >1%</td>
+        <td>343</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -101,12 +101,12 @@ date_stampLastWeek: 2024-02-13
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/Enterprise-CMCS/macpro-onemac/issue_gauge_macpro-onemac_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-onemac/issue_gauge_macpro-onemac_data.svg" | url }}" />
     </figure>
     <!--- Contributor Activity Line Graph -->
     <h3>Commits by Month</h3>
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/Enterprise-CMCS/macpro-onemac/commit_sparklines_macpro-onemac_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-onemac/commit_sparklines_macpro-onemac_data.svg" | url }}" />
     </figure>
   </div>
 </div>

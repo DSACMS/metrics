@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Commits</th>
         <td>1721</td>
-        <td>1684</td>
-        <td style="color: #45c527" >37</td>
-        <td style="color: #45c527" >2%</td>
+        <td>1721</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -53,23 +53,23 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>7</td>
-        <td>10</td>
-        <td style="color: #d31c08" >-3</td>
-        <td style="color: #d31c08" >35%</td>
+        <td>7</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>1688</td>
-        <td>1653</td>
-        <td style="color: #45c527" >35</td>
-        <td style="color: #45c527" >2%</td>
+        <td>1688</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>557</td>
-        <td>538</td>
-        <td style="color: #45c527" >19</td>
-        <td style="color: #45c527" >3%</td>
+        <td>557</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -101,12 +101,12 @@ date_stampLastWeek: 2024-02-13
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/Enterprise-CMCS/managed-care-review/issue_gauge_managed-care-review_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/managed-care-review/issue_gauge_managed-care-review_data.svg" | url }}" />
     </figure>
     <!--- Contributor Activity Line Graph -->
     <h3>Commits by Month</h3>
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/Enterprise-CMCS/managed-care-review/commit_sparklines_managed-care-review_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/managed-care-review/commit_sparklines_managed-care-review_data.svg" | url }}" />
     </figure>
   </div>
 </div>

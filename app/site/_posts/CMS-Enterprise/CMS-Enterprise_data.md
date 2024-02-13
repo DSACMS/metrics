@@ -24,9 +24,9 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Commits</th>
         <td>724</td>
-        <td>552</td>
-        <td style="color: #45c527" >172</td>
-        <td style="color: #45c527" >26%</td>
+        <td>724</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,30 +52,30 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>14</td>
-        <td>9</td>
-        <td style="color: #45c527" >5</td>
-        <td style="color: #45c527" >43%</td>
+        <td>14</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>364</td>
-        <td>345</td>
-        <td style="color: #45c527" >19</td>
-        <td style="color: #45c527" >5%</td>
+        <td>364</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>40</td>
-        <td>38</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >5%</td>
+        <td>40</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
         <td>7</td>
-        <td>5</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >33%</td>
+        <td>7</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
@@ -87,16 +87,16 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Watchers</th>
         <td>234</td>
-        <td>205</td>
-        <td style="color: #45c527" >29</td>
-        <td style="color: #45c527" >13%</td>
+        <td>234</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Followers</th>
         <td>7</td>
-        <td>6</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >15%</td>
+        <td>7</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>
@@ -107,7 +107,7 @@ date_stampLastWeek: 2024-02-13
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../assets/img/graphs/CMS-Enterprise/CMS-Enterprise_issue_gauge.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/CMS-Enterprise/CMS-Enterprise_issue_gauge.svg" | url }}" />
     </figure>
   </div>
 </div>

@@ -23,10 +23,10 @@ date_stampLastWeek: 2024-02-13
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>866</td>
         <td>861</td>
-        <td>745</td>
-        <td style="color: #45c527" >116</td>
-        <td style="color: #45c527" >14%</td>
+        <td style="color: #45c527" >5</td>
+        <td style="color: #45c527" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,16 +52,16 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>1</td>
-        <td>3</td>
-        <td style="color: #d31c08" >-2</td>
-        <td style="color: #d31c08" >100%</td>
+        <td>1</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>116</td>
         <td>115</td>
-        <td>109</td>
-        <td style="color: #45c527" >6</td>
-        <td style="color: #45c527" >5%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -80,9 +80,9 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Stars</th>
         <td>25</td>
-        <td>22</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >12%</td>
+        <td>25</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
@@ -107,7 +107,7 @@ date_stampLastWeek: 2024-02-13
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../assets/img/graphs/DSACMS/DSACMS_issue_gauge.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/DSACMS/DSACMS_issue_gauge.svg" | url }}" />
     </figure>
   </div>
 </div>

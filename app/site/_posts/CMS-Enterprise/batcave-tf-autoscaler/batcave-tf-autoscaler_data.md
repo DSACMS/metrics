@@ -88,9 +88,9 @@ date_stampLastWeek: 2024-02-13
       <tr>
         <th scope="row">Watchers</th>
         <td>11</td>
-        <td>10</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >9%</td>
+        <td>11</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>
@@ -101,12 +101,12 @@ date_stampLastWeek: 2024-02-13
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/CMS-Enterprise/batcave-tf-autoscaler/issue_gauge_batcave-tf-autoscaler_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/CMS-Enterprise/batcave-tf-autoscaler/issue_gauge_batcave-tf-autoscaler_data.svg" | url }}" />
     </figure>
     <!--- Contributor Activity Line Graph -->
     <h3>Commits by Month</h3>
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/CMS-Enterprise/batcave-tf-autoscaler/commit_sparklines_batcave-tf-autoscaler_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/CMS-Enterprise/batcave-tf-autoscaler/commit_sparklines_batcave-tf-autoscaler_data.svg" | url }}" />
     </figure>
   </div>
 </div>
