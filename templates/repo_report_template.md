@@ -101,12 +101,12 @@ date_stampLastWeek: {date_stamp}
   <div class="row">
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/{repo_owner}/{repo_name}/issue_gauge_{repo_name}_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/{repo_owner}/{repo_name}/issue_gauge_{repo_name}_data.svg" | url }}" />
     </figure>
     <!--- Contributor Activity Line Graph -->
     <h3>Commits by Month</h3>
     <figure>
-      <embed type="image/svg+xml" src="../../assets/img/graphs/{repo_owner}/{repo_name}/commit_sparklines_{repo_name}_data.svg" />
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/{repo_owner}/{repo_name}/commit_sparklines_{repo_name}_data.svg" | url }}" />
     </figure>
   </div>
 </div>
