@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for repo-scaffolder | REPORT-2024-01-24
+title: Open Source at CMS Metrics Report for repo-scaffolder | REPORT-2024-02-11
 permalink: /DSACMS/repo-scaffolder/
 
 org: DSACMS
 repo: repo-scaffolder
-reportID: REPORT-2024-01-24
-date_stampThisWeek: 2024-01-24
-date_stampLastWeek: 2024-01-24
+reportID: REPORT-2024-02-11
+date_stampThisWeek: 2024-02-11
+date_stampLastWeek: 2024-02-11
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,22 +24,22 @@ date_stampLastWeek: 2024-01-24
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>201</td>
-        <td>201</td>
+        <td>202</td>
+        <td>202</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
-        <td>14</td>
-        <td>14</td>
+        <td>15</td>
+        <td>15</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
-        <td>14</td>
-        <td>14</td>
+        <td>15</td>
+        <td>15</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
@@ -80,8 +80,8 @@ date_stampLastWeek: 2024-01-24
       </tr>
       <tr>
         <th scope="row">Stars</th>
-        <td>7</td>
-        <td>7</td>
+        <td>10</td>
+        <td>10</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>

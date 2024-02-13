@@ -2,57 +2,54 @@
 layout: base
 ---
 <div class="grid-container">
-  <h1>Repo Metrics Website</h1>
-  <p>
-    Welcome! This website is intended for program managers and developers interested in learning about the status and
-    activity of open source projects within the CMS organization.
-  </p>
-  <ul class="usa-card-group">
-    <li class="usa-card tablet:grid-col-6">
-      <div class="usa-card__container">
-        <div class="usa-card__header">
-          <h2 class="usa-card__heading">
-            <svg class="usa-icon" aria-labelledby="organizations" role="img">
-              <title id="organizations-category"> Organizations </title>
-              {% lucide "building-2" %}
-            </svg>
-            <a href="{{ "/organizations/" | url}}" class="text-no-underline"
-              >Organizations
-              <span class="chevrons-right">
-                <svg class="usa-icon usa-icon--size-2" aria-hidden="true" focusable="false" role="img">
-                  <use xlink:href="/assets/img/sprite.svg#navigate_far_next"></use>
-                </svg>
-              </span>
-            </a>
-          </h2>
-        </div>
-        <div class="usa-card__body">
-          <p>View Metrics on our GitHub Organizations</p>
-        </div>
-      </div>
-    </li>
-    <li class="usa-card tablet:grid-col-6">
-      <div class="usa-card__container">
-        <div class="usa-card__header">
-          <h2 class="usa-card__heading">
-            <svg class="usa-icon" aria-labelledby="projects" role="img">
-              <title id="projects-category"> Projects </title>
-              {% lucide "folder-git-2" %}
-            </svg>
-            <a href="{{ "/projects/" | url}}" class="text-no-underline"
-              >Projects
-              <span class="chevrons-right">
-                <svg class="usa-icon usa-icon--size-2" aria-hidden="true" focusable="false" role="img">
-                  <use xlink:href="/assets/img/sprite.svg#navigate_far_next"></use>
-                </svg>
-              </span>
-            </a>
-          </h2>
-        </div>
-        <div class="usa-card__body">
-          <p>View Metrics on our {{ projects.length }}+ Repositories</p>
-        </div>
-      </div>
-    </li>
-  </ul>
+    <h1>Repo Metrics Website</h1>
+    <p>
+        Welcome! This website is intended for program managers and developers interested in learning about the status and activity of open source projects within the CMS organization.
+    </p>
+    <ul class="usa-card-group">
+        <li class="usa-card tablet:grid-col-6">
+          <div class="usa-card__container">
+              <div class="usa-card__header">
+                  <h2 class="usa-card__heading">
+                    <svg class="usa-icon" aria-labelledby="organizations" role="img">
+                      <title id="organizations-category"> Organizations </title>
+                      {% lucide "building-2" %}
+                    </svg>
+                      <a href="{{ "/organizations/" | url}}" class="text-no-underline">Organizations
+                        <span class="chevrons-right">
+                            <svg class="usa-icon usa-icon--size-2" aria-hidden="true" focusable="false" role="img">
+                                <use xlink:href="/assets/img/sprite.svg#navigate_far_next"></use>
+                            </svg>
+                        </span>
+                      </a>
+                  </h2>
+              </div>
+              <div class="usa-card__body">
+                  <p> View Metrics on our GitHub Organizations</p>
+              </div>
+          </div>
+        </li>
+        <li class="usa-card tablet:grid-col-6">
+            <div class="usa-card__container">
+                <div class="usa-card__header">
+                    <h2 class="usa-card__heading">
+                      <svg class="usa-icon" aria-labelledby="projects" role="img">
+                        <title id="projects-category"> Projects </title>
+                        {% lucide "folder-git-2" %}
+                      </svg>
+                        <a href="{{ "/projects/" | url}}" class="text-no-underline">Projects
+                            <span class="chevrons-right">
+                                <svg class="usa-icon usa-icon--size-2" aria-hidden="true" focusable="false" role="img">
+                                    <use xlink:href="/assets/img/sprite.svg#navigate_far_next"></use>
+                                </svg>
+                            </span>
+                        </a>
+                    </h2>
+                </div>
+                <div class="usa-card__body">
+                    <p> View Metrics on our {{projects.length}}+ Repositories </p>
+                </div>
+            </div>
+        </li>
+    </ul>
 </div>
