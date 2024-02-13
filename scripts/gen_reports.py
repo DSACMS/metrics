@@ -4,6 +4,7 @@ Module to define methods to create reports
 from datetime import date
 from metricsLib.constants import REPO_REPORT_TEMPLATE, ORG_REPORT_TEMPLATE
 
+
 def calc_percent_difference(latest, prev):
     """
     This function calculates the percent difference between
@@ -19,6 +20,7 @@ def calc_percent_difference(latest, prev):
         Integer between 0 and 100 corresponding to the percent 
         difference.
     """
+
     abs_diff = abs(latest - prev)
 
     try:
@@ -28,17 +30,26 @@ def calc_percent_difference(latest, prev):
 
     return int(dec * 100)
 
-def get_heading_report_values(headings,oss_entity):
+
+def get_heading_report_values(headings, oss_entity):
     report_values = {}
     for heading in headings:
         prev_record = oss_entity.metric_data[heading]
 
         if heading in oss_entity.previous_metric_data.keys():
             prev_record = oss_entity.previous_metric_data[heading]
-
+        if prev_record is None:
+            #Cast None to 0 for diff calc
+            prev_record = 0
+        
+        next_record = oss_entity.metric_data[heading]
+        if oss_entity.metric_data[heading] is None:
+            next_record = 0
+        
         percent_difference = calc_percent_difference(
-            oss_entity.metric_data[heading], prev_record)
-        raw_diff = oss_entity.metric_data[heading] - prev_record
+            next_record, prev_record)
+        
+        raw_diff = next_record - prev_record
 
         diff_color = ''
 
@@ -57,12 +68,13 @@ def get_heading_report_values(headings,oss_entity):
             f"{heading}_diff_color": diff_color,
             f"{heading}_diff_percent_color": diff_color
         })
-    
+
     return report_values
 
-def write_report_to_file(report_template,report_values,oss_entity):
+
+def write_report_to_file(report_template, report_values, oss_entity):
     raw_report = report_template.format(**report_values)
-    with open(oss_entity.get_path_to_report_data(),"w+", encoding="utf-8") as file:
+    with open(oss_entity.get_path_to_report_data(), "w+", encoding="utf-8") as file:
         file.write(raw_report)
 
 
@@ -91,9 +103,9 @@ def generate_org_report_files(orgs):
             'followers_count'
         ]
 
-        report_values.update(get_heading_report_values(org_metric_table_headings, org))
+        report_values.update(get_heading_report_values(
+            org_metric_table_headings, org))
         write_report_to_file(ORG_REPORT_TEMPLATE, report_values, org)
-
 
 
 def generate_repo_report_files(repos):
@@ -127,6 +139,7 @@ def generate_repo_report_files(repos):
             'watchers_count'
         ]
 
-        report_values.update(get_heading_report_values(metric_table_headings, repo))
+        report_values.update(get_heading_report_values(
+            metric_table_headings, repo))
 
         write_report_to_file(REPO_REPORT_TEMPLATE, report_values, repo)
