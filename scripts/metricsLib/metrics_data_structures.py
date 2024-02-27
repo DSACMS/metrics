@@ -177,6 +177,8 @@ class ResourceMetric(BaseMetric):
         if r.status_code == 200:
             with open(path, "wb+") as f:
                 f.write(r.content)
+            
+            print(f"Path: {path}")
         else:
             print(f"Status code: {r.status_code}")
         return {}
