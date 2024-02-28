@@ -149,13 +149,15 @@ class ResourceMetric(BaseMetric):
             params: dict
                 Dictionary of parameters to apply to endpoint.
         """
+
+        endpoint_to_hit = self.url
         request_params = params
         if params and len(params) > 0 and self.method == 'GET':
-            self.url = self.url.format(**params)
+            endpoint_to_hit = self.url.format(**params)
             request_params = None
 
         if self.headers:
-            _args_ = (self.method, self.url)
+            _args_ = (self.method, endpoint_to_hit)
             _kwargs_ = {
                 "params": request_params,
                 "headers": self.headers,
@@ -165,7 +167,7 @@ class ResourceMetric(BaseMetric):
             response = requests.request(*_args_, **_kwargs_)
         else:
             response = requests.request(
-                self.method, self.url, params=request_params, timeout=TIMEOUT_IN_SECONDS)
+                self.method, endpoint_to_hit, params=request_params, timeout=TIMEOUT_IN_SECONDS)
         # return response
         return response
 
@@ -175,6 +177,9 @@ class ResourceMetric(BaseMetric):
         path = oss_entity.get_path_to_resource_data(self.name, fmt=self.format)
 
         if r.status_code == 200:
+            if r.text == (errtext := "There is no data for this repo, in the database you are accessing"):
+                print(errtext)
+
             with open(path, "wb+") as f:
                 f.write(r.content)
             

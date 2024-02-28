@@ -138,7 +138,7 @@ PERIODIC_METRICS.append(ListMetric("issuesNewMonthly", sixMonthsParams,
 
 RESOURCE_METRICS.append(ResourceMetric("firstResponseForClosedPR", sixMonthsParams,
                                 AUGUR_HOST + "/pull_request_reports/PR_time_to_first_response/" +
-                                "?repo_id={repo_id}&start_date={begin_month}&end_date={end_date}"))
+                                "?repo_id={repo_id}"))
 
 
 ORG_GITHUB_GRAPHQL_QUERY = """
