@@ -179,6 +179,7 @@ class ResourceMetric(BaseMetric):
         if r.status_code == 200:
             if r.text == (errtext := "There is no data for this repo, in the database you are accessing"):
                 print(errtext)
+                return {}
 
             with open(path, "wb+") as f:
                 f.write(r.content)
@@ -319,7 +320,7 @@ class ListMetric(BaseMetric):
 
         to_return = {}
 
-        # print(f"URL: {self.url}")
+        #print(f"URL: {self.url}")
         for return_label, api_label in self.return_values.items():
             # Allow for multiple keys of each returned element to be stored.
             # EX: storing the date and count of each time the amount of followers
