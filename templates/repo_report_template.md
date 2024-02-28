@@ -108,8 +108,10 @@ date_stampLastWeek: {date_stamp}
     <figure>
       <embed type="image/svg+xml" src="{{{{ "/assets/img/graphs/{repo_owner}/{repo_name}/commit_sparklines_{repo_name}_data.svg" | url }}}}" />
     </figure>
-    <figure>
-      <img alt="firstResponseForClosedPR" src="{{{{ "/assets/img/graphs/{repo_owner}/{repo_name}/commit_sparklines_{repo_name}_data.svg" | url }}}}" />
-    </figure>
+    <div class="firstResponsePRCrop">
+      <figure>
+        <img alt="firstResponseForClosedPR" src="{{{{ "/assets/img/graphs/{repo_owner}/{repo_name}/firstResponseForClosedPR_{repo_name}_data.png" | url }}}}" />
+      </figure>
+    </div>
   </div>
 </div>

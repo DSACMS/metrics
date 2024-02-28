@@ -69,12 +69,14 @@ class BaseMetric:
                 Dictionary of parameters to apply to endpoint.
         """
         request_params = params
+        endpoint_to_hit = self.url
+
         if params and len(params) > 0 and self.method == 'GET':
-            self.url = self.url.format(**params)
+            endpoint_to_hit = self.url.format(**params)
             request_params = None
 
         if self.headers:
-            _args_ = (self.method, self.url)
+            _args_ = (self.method, endpoint_to_hit)
             _kwargs_ = {
                 "params": request_params,
                 "headers": self.headers,
@@ -83,7 +85,7 @@ class BaseMetric:
             response = requests.request(*_args_, **_kwargs_)
         else:
             response = requests.request(
-                self.method, self.url, params=request_params, timeout=TIMEOUT_IN_SECONDS)
+                self.method, endpoint_to_hit, params=request_params, timeout=TIMEOUT_IN_SECONDS)
         try:
             response_json = json.loads(response.text)
         except JSONDecodeError:
@@ -439,7 +441,11 @@ def parse_commits_by_month(**kwargs):
     # print(metric_json)
     for commit in metric_json:
         # Get the month and year of the commit
-        datetime_str = commit['commit']['author']['date']
+        try:
+            datetime_str = commit['commit']['author']['date']
+        except TypeError:
+            print(commit)
+            continue
         date_obj = datetime.datetime.strptime(
             datetime_str, '%Y-%m-%dT%H:%M:%SZ')
         month = f"{date_obj.year}/{date_obj.month}"
