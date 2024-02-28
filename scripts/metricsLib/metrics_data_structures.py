@@ -179,13 +179,14 @@ class ResourceMetric(BaseMetric):
         path = oss_entity.get_path_to_resource_data(self.name, fmt=self.format)
 
         if r.status_code == 200:
-            if r.text == (errtext := "There is no data for this repo, in the database you are accessing"):
+            errtext = "There is no data for this repo, in the database you are accessing"
+            if r.text == errtext:
                 print(errtext)
                 return {}
 
             with open(path, "wb+") as f:
                 f.write(r.content)
-            
+
             print(f"Path: {path}")
         else:
             print(f"Status code: {r.status_code}")
