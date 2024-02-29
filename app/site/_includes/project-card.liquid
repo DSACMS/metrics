@@ -1,0 +1,49 @@
+<li class="usa-card project-card tablet:grid-col-12" org-name="{{ repo.owner }}">
+    <div class="usa-card__container">
+      <div class="usa-card__header">
+        <h2 class="usa-card__heading">
+          <a href={{ repo.link | url }} class="text-no-underline">{{ repo.name }}</a>
+        </h2>
+      </div>
+      <div class="usa-card__body">
+        <div>{{ repo.description }}</div>
+      </div>
+      <div class="usa-card__footer">
+        <span class="star-count" style="margin-right: 15px;">
+          <svg class="usa-icon" aria-labelledby="star-count-{{repo.name}}-title" role="img">
+            <title id="github-{{repo.name}}-title"> Star Count</title>
+            {% lucide "star" %}
+          </svg>
+          <span> {{ repo.stargazers_count }} </span>
+        </span>
+        <span class="fork-count" style="margin-right: 15px;">
+          <svg class="usa-icon" aria-labelledby="fork-count-{{repo.name}}-title" role="img">
+            <title id="github-{{repo.name}}-title"> Fork Count</title>
+            {% lucide "git-fork" %}
+          </svg>
+          <span> {{ repo.forks_count }} </span>
+        </span>
+        <span class="issue-count" style="margin-right: 15px;">
+          <svg class="usa-icon" aria-labelledby="issue-count-{{ repo.name }}-title" role="img">
+            <title id="github-{{repo.name}}-title"> Issue Count</title>
+            {% lucide "circle-dot" %}
+          </svg>
+          <span> {{ repo.issues_count }} </span>
+        </span>
+        <span class="pull-request-count" style="margin-right: 15px;">
+          <svg class="usa-icon" aria-labelledby="pull-request-count-{{repo.name}}-title" role="img">
+            <title id="github-{{repo.name}}-title"> Pull Request Count</title>
+            {% lucide "git-pull-request" %}
+          </svg>
+          <span> {{ repo.pull_requests_count }} </span>
+        </span>
+        <span class="watchers-count">
+          <svg class="usa-icon" aria-labelledby="watchers-count-{{repo.name}}-title" role="img">
+            <title id="github-{{repo.name}}-title"> Watchers Count</title>
+            {% lucide "eye" %}
+          </svg>
+          <span> {{ repo.watchers_count }} </span>
+        </span>
+      </div>
+    </div>
+  </li>
