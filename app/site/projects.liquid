@@ -1,11 +1,24 @@
 ---
 layout: base
 ---
+<script type="module" src="/assets/js/projects.js"></script>
 <div class="grid-container">
   <p>
     The Centers for Medicare and Medicaid Services develops and supports many open-source projects found in our various
     GitHub Organizations.
   </p>
+
+  <div class="margin-bottom-2">
+    <label class="usa-label" for="filter-input">Search</label>
+    <div class="usa-input-group width-full maxw-none">
+      <div class="usa-input-prefix" aria-hidden="true">
+        <svg aria-hidden="true" role="img" focusable="false" class="usa-icon">
+          <use xlink:href="/assets/img/sprite.svg#search"></use>
+        </svg>
+      </div>
+      <input class="usa-input" id="filter-input" name="filter-input">
+    </div>
+  </div>
 
   {% for org in organizations %}
     <div class="report_heading">
