@@ -1,7 +1,7 @@
 ---
 layout: base
 ---
-<script type="module" src="/assets/js/projects.js"></script>
+<script type="module" src="{{ "/assets/js/projects.js" | url}}"></script>
 <div class="grid-container">
   <p>
     The Centers for Medicare and Medicaid Services develops and supports many open-source projects found in our various
@@ -35,7 +35,7 @@ layout: base
     <ul class="usa-card-group flex-align-stretch">
       {% assign orgProjects = projects | findProjectsInOrg: org.name %}
       {% for repo in orgProjects %}
-        <li class="usa-card project-card tablet:grid-col-12">
+        <li class="usa-card project-card tablet:grid-col-12" org-name="{{ org.name }}">
           <div class="usa-card__container">
             <div class="usa-card__header">
               <h2 class="usa-card__heading">
