@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for seatool-connectors | REPORT-2024-02-25
+title: Open Source at CMS Metrics Report for seatool-connectors | REPORT-2024-03-03
 permalink: /Enterprise-CMCS/seatool-connectors/
 
 org: Enterprise-CMCS
 repo: seatool-connectors
-reportID: REPORT-2024-02-25
-date_stampThisWeek: 2024-02-25
-date_stampLastWeek: 2024-02-25
+reportID: REPORT-2024-03-03
+date_stampThisWeek: 2024-03-03
+date_stampLastWeek: 2024-03-03
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,9 +24,9 @@ date_stampLastWeek: 2024-02-25
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>190</td>
         <td>187</td>
-        <td>185</td>
-        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >3</td>
         <td style="color: #45c527" >1%</td>
       </tr>
       <tr>
@@ -52,17 +52,17 @@ date_stampLastWeek: 2024-02-25
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>1</td>
         <td>2</td>
-        <td>2</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >66%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>68</td>
         <td>62</td>
-        <td>61</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >1%</td>
+        <td style="color: #45c527" >6</td>
+        <td style="color: #45c527" >9%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>

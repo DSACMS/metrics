@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-workflow-engine | REPORT-2024-02-25
+title: Open Source at CMS Metrics Report for batcave-workflow-engine | REPORT-2024-03-03
 permalink: /CMS-Enterprise/batcave-workflow-engine/
 
 org: CMS-Enterprise
 repo: batcave-workflow-engine
-reportID: REPORT-2024-02-25
-date_stampThisWeek: 2024-02-25
-date_stampLastWeek: 2024-02-25
+reportID: REPORT-2024-03-03
+date_stampThisWeek: 2024-03-03
+date_stampLastWeek: 2024-03-03
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-02-25
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>108</td>
         <td>96</td>
-        <td>91</td>
-        <td style="color: #45c527" >5</td>
-        <td style="color: #45c527" >5%</td>
+        <td style="color: #45c527" >12</td>
+        <td style="color: #45c527" >11%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,17 +52,17 @@ date_stampLastWeek: 2024-02-25
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>1</td>
         <td>2</td>
-        <td>0</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >200%</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >66%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>12</td>
         <td>11</td>
-        <td>10</td>
         <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >9%</td>
+        <td style="color: #45c527" >8%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>

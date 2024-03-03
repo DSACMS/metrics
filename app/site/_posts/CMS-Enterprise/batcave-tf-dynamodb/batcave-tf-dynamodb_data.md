@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-tf-dynamodb | REPORT-2024-02-25
+title: Open Source at CMS Metrics Report for batcave-tf-dynamodb | REPORT-2024-03-03
 permalink: /CMS-Enterprise/batcave-tf-dynamodb/
 
 org: CMS-Enterprise
 repo: batcave-tf-dynamodb
-reportID: REPORT-2024-02-25
-date_stampThisWeek: 2024-02-25
-date_stampLastWeek: 2024-02-25
+reportID: REPORT-2024-03-03
+date_stampThisWeek: 2024-03-03
+date_stampLastWeek: 2024-03-03
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-02-25
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>12</td>
         <td>9</td>
-        <td>6</td>
         <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >40%</td>
+        <td style="color: #45c527" >28%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
