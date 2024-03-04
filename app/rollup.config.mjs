@@ -10,6 +10,11 @@ export default [
       file: "site/_includes/js/index.js",
       format: "esm",
     },
+    input: "src/js/projects.js",
+    output: {
+      file: "site/_includes/js/projects.js",
+      format: "esm",
+    },
     plugins: [
       resolve(),
       babel(),
