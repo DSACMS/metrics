@@ -1,8 +1,9 @@
+{% capture new_link_var %}/{{ repo.owner }}/{{ repo.name }}/{% endcapture %}
 <li class="usa-card project-card tablet:grid-col-12" org-name="{{ repo.owner }}">
     <div class="usa-card__container">
       <div class="usa-card__header">
         <h2 class="usa-card__heading">
-          <a href={{ repo.link | url }} class="text-no-underline">{{ repo.name }}</a>
+          <a href={{ new_link_var | url }} class="text-no-underline">{{ repo.name }}</a>
         </h2>
       </div>
       <div class="usa-card__body">
