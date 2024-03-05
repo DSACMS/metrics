@@ -229,6 +229,7 @@ class Repository(OSSEntity):
         # print(repo_val)
         self.repo_id = repo_val['repo_id']
 
+        #print(f"repo id: {self.repo_id}")
         if owner_id is not None:
             self.repo_group_id = owner_id
         else:
