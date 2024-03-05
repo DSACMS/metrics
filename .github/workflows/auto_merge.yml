@@ -23,5 +23,5 @@ jobs:
       - name: Push to dev
         uses: CasperWA/push-protected@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.METRICS_GITHUB_TOKEN }}
           branch: dev
