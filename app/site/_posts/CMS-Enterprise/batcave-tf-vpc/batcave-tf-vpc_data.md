@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-tf-vpc | REPORT-2024-03-03
+title: Open Source at CMS Metrics Report for batcave-tf-vpc | REPORT-2024-03-05
 permalink: /CMS-Enterprise/batcave-tf-vpc/
 
 org: CMS-Enterprise
 repo: batcave-tf-vpc
-reportID: REPORT-2024-03-03
-date_stampThisWeek: 2024-03-03
-date_stampLastWeek: 2024-03-03
+reportID: REPORT-2024-03-05
+date_stampThisWeek: 2024-03-05
+date_stampLastWeek: 2024-03-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -108,5 +108,11 @@ date_stampLastWeek: 2024-03-03
     <figure>
       <embed type="image/svg+xml" src="{{ "/assets/img/graphs/CMS-Enterprise/batcave-tf-vpc/commit_sparklines_batcave-tf-vpc_data.svg" | url }}" />
     </figure>
+    <!--- First Response For Closed PR Scatterplot -->
+    <div class="firstResponsePRCrop">
+      <figure>
+        <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/CMS-Enterprise/batcave-tf-vpc/firstResponseForClosedPR_batcave-tf-vpc_data.png" | url }}" />
+      </figure>
+    </div>
   </div>
 </div>

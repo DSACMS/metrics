@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-tf-misc-modules | REPORT-2024-03-03
+title: Open Source at CMS Metrics Report for batcave-tf-misc-modules | REPORT-2024-03-05
 permalink: /CMS-Enterprise/batcave-tf-misc-modules/
 
 org: CMS-Enterprise
 repo: batcave-tf-misc-modules
-reportID: REPORT-2024-03-03
-date_stampThisWeek: 2024-03-03
-date_stampLastWeek: 2024-03-03
+reportID: REPORT-2024-03-05
+date_stampThisWeek: 2024-03-05
+date_stampLastWeek: 2024-03-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -108,5 +108,11 @@ date_stampLastWeek: 2024-03-03
     <figure>
       <embed type="image/svg+xml" src="{{ "/assets/img/graphs/CMS-Enterprise/batcave-tf-misc-modules/commit_sparklines_batcave-tf-misc-modules_data.svg" | url }}" />
     </figure>
+    <!--- First Response For Closed PR Scatterplot -->
+    <div class="firstResponsePRCrop">
+      <figure>
+        <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/CMS-Enterprise/batcave-tf-misc-modules/firstResponseForClosedPR_batcave-tf-misc-modules_data.png" | url }}" />
+      </figure>
+    </div>
   </div>
 </div>

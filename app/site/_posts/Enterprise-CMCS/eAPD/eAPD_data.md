@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for eAPD | REPORT-2024-03-03
+title: Open Source at CMS Metrics Report for eAPD | REPORT-2024-03-05
 permalink: /Enterprise-CMCS/eAPD/
 
 org: Enterprise-CMCS
 repo: eAPD
-reportID: REPORT-2024-03-03
-date_stampThisWeek: 2024-03-03
-date_stampLastWeek: 2024-03-03
+reportID: REPORT-2024-03-05
+date_stampThisWeek: 2024-03-05
+date_stampLastWeek: 2024-03-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -80,17 +80,17 @@ date_stampLastWeek: 2024-03-03
       </tr>
       <tr>
         <th scope="row">Stars</th>
+        <td>56</td>
         <td>57</td>
-        <td>58</td>
         <td style="color: #d31c08" >-1</td>
         <td style="color: #d31c08" >1%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>13</td>
         <td>14</td>
-        <td>14</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >7%</td>
       </tr>
     </tbody>
   </table>
@@ -108,5 +108,11 @@ date_stampLastWeek: 2024-03-03
     <figure>
       <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/eAPD/commit_sparklines_eAPD_data.svg" | url }}" />
     </figure>
+    <!--- First Response For Closed PR Scatterplot -->
+    <div class="firstResponsePRCrop">
+      <figure>
+        <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/Enterprise-CMCS/eAPD/firstResponseForClosedPR_eAPD_data.png" | url }}" />
+      </figure>
+    </div>
   </div>
 </div>

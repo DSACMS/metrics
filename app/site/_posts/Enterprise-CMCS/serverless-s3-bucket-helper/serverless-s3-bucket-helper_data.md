@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for serverless-s3-bucket-helper | REPORT-2024-03-03
+title: Open Source at CMS Metrics Report for serverless-s3-bucket-helper | REPORT-2024-03-05
 permalink: /Enterprise-CMCS/serverless-s3-bucket-helper/
 
 org: Enterprise-CMCS
 repo: serverless-s3-bucket-helper
-reportID: REPORT-2024-03-03
-date_stampThisWeek: 2024-03-03
-date_stampLastWeek: 2024-03-03
+reportID: REPORT-2024-03-05
+date_stampThisWeek: 2024-03-05
+date_stampLastWeek: 2024-03-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -108,5 +108,11 @@ date_stampLastWeek: 2024-03-03
     <figure>
       <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/serverless-s3-bucket-helper/commit_sparklines_serverless-s3-bucket-helper_data.svg" | url }}" />
     </figure>
+    <!--- First Response For Closed PR Scatterplot -->
+    <div class="firstResponsePRCrop">
+      <figure>
+        <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/Enterprise-CMCS/serverless-s3-bucket-helper/firstResponseForClosedPR_serverless-s3-bucket-helper_data.png" | url }}" />
+      </figure>
+    </div>
   </div>
 </div>

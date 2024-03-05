@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-mdct-mcr | REPORT-2024-03-03
+title: Open Source at CMS Metrics Report for macpro-mdct-mcr | REPORT-2024-03-05
 permalink: /Enterprise-CMCS/macpro-mdct-mcr/
 
 org: Enterprise-CMCS
 repo: macpro-mdct-mcr
-reportID: REPORT-2024-03-03
-date_stampThisWeek: 2024-03-03
-date_stampLastWeek: 2024-03-03
+reportID: REPORT-2024-03-05
+date_stampThisWeek: 2024-03-05
+date_stampLastWeek: 2024-03-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,9 +24,9 @@ date_stampLastWeek: 2024-03-03
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>1249</td>
         <td>1248</td>
-        <td>1242</td>
-        <td style="color: #45c527" >6</td>
+        <td style="color: #45c527" >1</td>
         <td style="color: #45c527" >0%</td>
       </tr>
       <tr>
@@ -53,23 +53,23 @@ date_stampLastWeek: 2024-03-03
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>4</td>
-        <td>2</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >66%</td>
+        <td>4</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>1016</td>
         <td>1015</td>
-        <td>1005</td>
-        <td style="color: #45c527" >10</td>
+        <td style="color: #45c527" >1</td>
         <td style="color: #45c527" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>210</td>
-        <td>209</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0%</td>
+        <td>210</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -108,5 +108,11 @@ date_stampLastWeek: 2024-03-03
     <figure>
       <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-mdct-mcr/commit_sparklines_macpro-mdct-mcr_data.svg" | url }}" />
     </figure>
+    <!--- First Response For Closed PR Scatterplot -->
+    <div class="firstResponsePRCrop">
+      <figure>
+        <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-mdct-mcr/firstResponseForClosedPR_macpro-mdct-mcr_data.png" | url }}" />
+      </figure>
+    </div>
   </div>
 </div>

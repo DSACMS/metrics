@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-wt-sdl-reporting | REPORT-2024-03-03
+title: Open Source at CMS Metrics Report for batcave-wt-sdl-reporting | REPORT-2024-03-05
 permalink: /CMS-Enterprise/batcave-wt-sdl-reporting/
 
 org: CMS-Enterprise
 repo: batcave-wt-sdl-reporting
-reportID: REPORT-2024-03-03
-date_stampThisWeek: 2024-03-03
-date_stampLastWeek: 2024-03-03
+reportID: REPORT-2024-03-05
+date_stampThisWeek: 2024-03-05
+date_stampLastWeek: 2024-03-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -108,5 +108,11 @@ date_stampLastWeek: 2024-03-03
     <figure>
       <embed type="image/svg+xml" src="{{ "/assets/img/graphs/CMS-Enterprise/batcave-wt-sdl-reporting/commit_sparklines_batcave-wt-sdl-reporting_data.svg" | url }}" />
     </figure>
+    <!--- First Response For Closed PR Scatterplot -->
+    <div class="firstResponsePRCrop">
+      <figure>
+        <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/CMS-Enterprise/batcave-wt-sdl-reporting/firstResponseForClosedPR_batcave-wt-sdl-reporting_data.png" | url }}" />
+      </figure>
+    </div>
   </div>
 </div>

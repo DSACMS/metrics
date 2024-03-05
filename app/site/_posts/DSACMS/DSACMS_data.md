@@ -1,12 +1,12 @@
 ---
 layout: org-report
-title: Open Source at CMS Metrics Report for DSACMS | REPORT-2024-03-03
+title: Open Source at CMS Metrics Report for DSACMS | REPORT-2024-03-05
 permalink: /DSACMS/
 
 org: DSACMS
-reportID: REPORT-2024-03-03
-date_stampThisWeek: 2024-03-03
-date_stampLastWeek: 2024-03-03
+reportID: REPORT-2024-03-05
+date_stampThisWeek: 2024-03-05
+date_stampLastWeek: 2024-03-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -23,24 +23,24 @@ date_stampLastWeek: 2024-03-03
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>937</td>
         <td>895</td>
-        <td>892</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >0%</td>
+        <td style="color: #45c527" >42</td>
+        <td style="color: #45c527" >4%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
+        <td>71</td>
         <td>69</td>
-        <td>69</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >2%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>64</td>
         <td>62</td>
-        <td>62</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >3%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -51,17 +51,17 @@ date_stampLastWeek: 2024-03-03
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>5</td>
         <td>8</td>
-        <td>4</td>
-        <td style="color: #45c527" >4</td>
-        <td style="color: #45c527" >66%</td>
+        <td style="color: #d31c08" >-3</td>
+        <td style="color: #d31c08" >46%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>134</td>
         <td>126</td>
-        <td>125</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0%</td>
+        <td style="color: #45c527" >8</td>
+        <td style="color: #45c527" >6%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -73,9 +73,9 @@ date_stampLastWeek: 2024-03-03
       <tr>
         <th scope="row">Forks</th>
         <td>6</td>
-        <td>5</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >18%</td>
+        <td>6</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>

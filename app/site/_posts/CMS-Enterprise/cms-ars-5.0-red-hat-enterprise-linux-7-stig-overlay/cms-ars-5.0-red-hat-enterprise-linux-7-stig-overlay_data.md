@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for cms-ars-5.0-red-hat-enterprise-linux-7-stig-overlay | REPORT-2024-03-03
+title: Open Source at CMS Metrics Report for cms-ars-5.0-red-hat-enterprise-linux-7-stig-overlay | REPORT-2024-03-05
 permalink: /CMS-Enterprise/cms-ars-5.0-red-hat-enterprise-linux-7-stig-overlay/
 
 org: CMS-Enterprise
 repo: cms-ars-5.0-red-hat-enterprise-linux-7-stig-overlay
-reportID: REPORT-2024-03-03
-date_stampThisWeek: 2024-03-03
-date_stampLastWeek: 2024-03-03
+reportID: REPORT-2024-03-05
+date_stampThisWeek: 2024-03-05
+date_stampLastWeek: 2024-03-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -108,5 +108,11 @@ date_stampLastWeek: 2024-03-03
     <figure>
       <embed type="image/svg+xml" src="{{ "/assets/img/graphs/CMS-Enterprise/cms-ars-5.0-red-hat-enterprise-linux-7-stig-overlay/commit_sparklines_cms-ars-5.0-red-hat-enterprise-linux-7-stig-overlay_data.svg" | url }}" />
     </figure>
+    <!--- First Response For Closed PR Scatterplot -->
+    <div class="firstResponsePRCrop">
+      <figure>
+        <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/CMS-Enterprise/cms-ars-5.0-red-hat-enterprise-linux-7-stig-overlay/firstResponseForClosedPR_cms-ars-5.0-red-hat-enterprise-linux-7-stig-overlay_data.png" | url }}" />
+      </figure>
+    </div>
   </div>
 </div>
