@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for eAPD | REPORT-2024-02-13
+title: Open Source at CMS Metrics Report for eAPD | REPORT-2024-03-03
 permalink: /Enterprise-CMCS/eAPD/
 
 org: Enterprise-CMCS
 repo: eAPD
-reportID: REPORT-2024-02-13
-date_stampThisWeek: 2024-02-13
-date_stampLastWeek: 2024-02-13
+reportID: REPORT-2024-03-03
+date_stampThisWeek: 2024-03-03
+date_stampLastWeek: 2024-03-03
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -73,17 +73,17 @@ date_stampLastWeek: 2024-02-13
       </tr>
       <tr>
         <th scope="row">Forks</th>
-        <td>28</td>
-        <td>28</td>
+        <td>25</td>
+        <td>25</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
+        <td>57</td>
         <td>58</td>
-        <td>58</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >1%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
