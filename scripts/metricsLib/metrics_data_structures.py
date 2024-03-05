@@ -69,12 +69,14 @@ class BaseMetric:
                 Dictionary of parameters to apply to endpoint.
         """
         request_params = params
+        endpoint_to_hit = self.url
+
         if params and len(params) > 0 and self.method == 'GET':
-            self.url = self.url.format(**params)
+            endpoint_to_hit = self.url.format(**params)
             request_params = None
 
         if self.headers:
-            _args_ = (self.method, self.url)
+            _args_ = (self.method, endpoint_to_hit)
             _kwargs_ = {
                 "params": request_params,
                 "headers": self.headers,
@@ -83,7 +85,7 @@ class BaseMetric:
             response = requests.request(*_args_, **_kwargs_)
         else:
             response = requests.request(
-                self.method, self.url, params=request_params, timeout=TIMEOUT_IN_SECONDS)
+                self.method, endpoint_to_hit, params=request_params, timeout=TIMEOUT_IN_SECONDS)
         try:
             response_json = json.loads(response.text)
         except JSONDecodeError:
@@ -149,13 +151,15 @@ class ResourceMetric(BaseMetric):
             params: dict
                 Dictionary of parameters to apply to endpoint.
         """
+
+        endpoint_to_hit = self.url
         request_params = params
         if params and len(params) > 0 and self.method == 'GET':
-            self.url = self.url.format(**params)
+            endpoint_to_hit = self.url.format(**params)
             request_params = None
 
         if self.headers:
-            _args_ = (self.method, self.url)
+            _args_ = (self.method, endpoint_to_hit)
             _kwargs_ = {
                 "params": request_params,
                 "headers": self.headers,
@@ -165,7 +169,7 @@ class ResourceMetric(BaseMetric):
             response = requests.request(*_args_, **_kwargs_)
         else:
             response = requests.request(
-                self.method, self.url, params=request_params, timeout=TIMEOUT_IN_SECONDS)
+                self.method, endpoint_to_hit, params=request_params, timeout=TIMEOUT_IN_SECONDS)
         # return response
         return response
 
@@ -175,8 +179,15 @@ class ResourceMetric(BaseMetric):
         path = oss_entity.get_path_to_resource_data(self.name, fmt=self.format)
 
         if r.status_code == 200:
+            errtext = "There is no data for this repo, in the database you are accessing"
+            if r.text == errtext:
+                print(errtext)
+                return {}
+
             with open(path, "wb+") as f:
                 f.write(r.content)
+
+            print(f"Path: {path}")
         else:
             print(f"Status code: {r.status_code}")
         return {}
@@ -312,7 +323,7 @@ class ListMetric(BaseMetric):
 
         to_return = {}
 
-        # print(f"URL: {self.url}")
+        #print(f"URL: {self.url}")
         for return_label, api_label in self.return_values.items():
             # Allow for multiple keys of each returned element to be stored.
             # EX: storing the date and count of each time the amount of followers
@@ -431,7 +442,11 @@ def parse_commits_by_month(**kwargs):
     # print(metric_json)
     for commit in metric_json:
         # Get the month and year of the commit
-        datetime_str = commit['commit']['author']['date']
+        try:
+            datetime_str = commit['commit']['author']['date']
+        except TypeError:
+            print(commit)
+            continue
         date_obj = datetime.datetime.strptime(
             datetime_str, '%Y-%m-%dT%H:%M:%SZ')
         month = f"{date_obj.year}/{date_obj.month}"
