@@ -28,6 +28,7 @@ def generate_all_graphs_for_orgs(all_orgs):
     for org in all_orgs:
         print(f"Generating graphs for org {org.name}")
         generate_solid_gauge_issue_graph(org)
+        generate_time_xy_issue_graph(org, "new_issues_by_day_over_last_six_months")
 
 
 def write_repo_chart_to_file(repo, chart, chart_name, custom_func=None, custom_func_params={}):
@@ -78,6 +79,27 @@ def generate_repo_sparklines(repo):
     write_repo_chart_to_file(
         repo, chart, "commit_sparklines",
         custom_func=chart.render_sparkline, custom_func_params=_kwargs_)
+
+
+def generate_time_xy_issue_graph(oss_entity,data_key):
+    """
+    This function generates pygals xy time graph for new issue creation over a time period.
+
+    Arguments:
+        oss_entity: the OSSEntity to create a graph for
+        data_key: key of the dictionary to use to generate the time graph
+    """
+
+    graph_data_dict = oss_entity.metric_data[data_key]
+    dates_list = [record[0] for record in graph_data_dict]
+    issues_list = [record[1] for record in graph_data_dict]
+
+    xy_time_issue_chart = pygal.Line(x_label_rotation=20)
+    xy_time_issue_chart.x_labels = dates_list
+    xy_time_issue_chart.add("Issues", issues_list)
+
+    write_repo_chart_to_file(oss_entity, xy_time_issue_chart, data_key)
+
 
 
 def generate_solid_gauge_issue_graph(oss_entity):
