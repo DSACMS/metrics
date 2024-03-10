@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-onemac | REPORT-2024-03-05
+title: Open Source at CMS Metrics Report for macpro-onemac | REPORT-2024-03-10
 permalink: /Enterprise-CMCS/macpro-onemac/
 
 org: Enterprise-CMCS
 repo: macpro-onemac
-reportID: REPORT-2024-03-05
-date_stampThisWeek: 2024-03-05
-date_stampLastWeek: 2024-03-05
+reportID: REPORT-2024-03-10
+date_stampThisWeek: 2024-03-10
+date_stampLastWeek: 2024-03-10
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -52,10 +52,10 @@ date_stampLastWeek: 2024-03-05
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>18</td>
         <td>15</td>
-        <td>15</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >18%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
