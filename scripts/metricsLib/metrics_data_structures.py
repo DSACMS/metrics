@@ -107,7 +107,6 @@ class BaseMetric:
 
         for return_label, api_label in self.return_values:
             try:
-                _ = [element for element in api_label]
                 to_return[return_label] = []
                 for sub_label in api_label:
                     to_return[return_label].append(metric_json[sub_label])
@@ -280,9 +279,9 @@ class GraphQLMetric(BaseMetric):
         return to_return
 
 
-class SumMetric(BaseMetric):
+class LengthMetric(BaseMetric):
     """
-    Class to define a metric that returns a returned list 
+    Class to define a metric that returns the length of a returned list 
     from an endpoint
     ...
 
@@ -340,8 +339,9 @@ class ListMetric(BaseMetric):
                     elem = []
                     for sub_label in api_label:
                         elem.append(item[sub_label])
+                    #print(elem)
                     # Add up sublists and assign to return label key
-                    to_return[return_label].append(elem)
+                    to_return[return_label].extend(elem)
             except TypeError:
                 # return_label key is assigned to list of extracted api_label value
                 to_return[return_label] = [item[api_label]
@@ -387,8 +387,9 @@ class RangeMetric(ListMetric):
 
         to_return = {}
 
-        for return_label, api_label in return_dict.items():
-            to_return[return_label] = sum(return_dict[api_label])
+        print(return_dict)
+        for return_label, _ in return_dict.items():
+            to_return[return_label] = sum(return_dict[return_label])
 
         return to_return
 
