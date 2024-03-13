@@ -107,7 +107,7 @@ class BaseMetric:
 
         for return_label, api_label in self.return_values:
             try:
-                list(api_label)
+                _ = [element for element in api_label]
                 to_return[return_label] = []
                 for sub_label in api_label:
                     to_return[return_label].append(metric_json[sub_label])
@@ -387,8 +387,8 @@ class RangeMetric(ListMetric):
 
         to_return = {}
 
-        for return_label, _ in return_dict.items():
-            to_return[return_label] = sum(return_dict[return_label])
+        for return_label, api_label in return_dict.items():
+            to_return[return_label] = sum(return_dict[api_label])
 
         return to_return
 

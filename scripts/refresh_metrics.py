@@ -54,7 +54,7 @@ if __name__ == "__main__":
 
     # Generate json data, report data, and graph data.
     get_all_data(all_orgs, all_repos)
-    generate_repo_report_files(all_repos)
-    generate_org_report_files(all_orgs)
-    generate_all_graphs_for_repos(all_repos)
-    generate_all_graphs_for_orgs(all_orgs)
+    #generate_repo_report_files(all_repos)
+    #generate_org_report_files(all_orgs)
+    #generate_all_graphs_for_repos(all_repos)
+    #generate_all_graphs_for_orgs(all_orgs)

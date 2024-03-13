@@ -1,7 +1,7 @@
 """
 Definitions of specific metrics for metricsLib
 """
-from metricsLib.metrics_data_structures import CustomMetric, parse_commits_by_month
+from metricsLib.metrics_data_structures import CustomMetric, parse_commits_by_month, RangeMetric
 from metricsLib.metrics_data_structures import GraphQLMetric, SumMetric, ResourceMetric
 from metricsLib.metrics_data_structures import ListMetric
 from metricsLib.constants import TOKEN, AUGUR_HOST
@@ -99,6 +99,10 @@ github_graphql_simple_counts_metric_map = {
 SIMPLE_METRICS.append(GraphQLMetric("githubGraphqlSimpleCounts", ["repo", "owner"],
                                     REPO_GITHUB_GRAPHQL_QUERY,
                                     github_graphql_simple_counts_metric_map, token=TOKEN))
+
+SIMPLE_METRICS.append(RangeMetric("totalRepoLines",["repo"], AUGUR_HOST + 
+                                 "/complexity/project_lines?repo_id={repo_id}",
+                                 {"total_project_lines": "total_lines"}))
 
 ORG_METRICS.append(ListMetric("topCommitters", ["repo_group_id"],
                               AUGUR_HOST +

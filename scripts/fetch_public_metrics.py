@@ -81,18 +81,18 @@ def fetch_all_new_metric_data(all_orgs, all_repos):
         for metric in SIMPLE_METRICS:
             repo.apply_metric_and_store_data(metric)
 
-        for metric in PERIODIC_METRICS:
-            repo.apply_metric_and_store_data(metric)
+        #for metric in PERIODIC_METRICS:
+        #    repo.apply_metric_and_store_data(metric)
 
-        for metric in RESOURCE_METRICS:
-            repo.apply_metric_and_store_data(metric, repo)
+        #for metric in RESOURCE_METRICS:
+        #    repo.apply_metric_and_store_data(metric, repo)
 
     # Capture all metric data for all Github orgs
-    for org in all_orgs:
-        print(f"Fetching metrics for org {org.name} id #{org.repo_group_id}")
-        for metric in ORG_METRICS:
-            org.apply_metric_and_store_data(metric)
-        add_info_to_org_from_list_of_repos(all_repos, org)
+    #for org in all_orgs:
+    #    print(f"Fetching metrics for org {org.name} id #{org.repo_group_id}")
+    #    for metric in ORG_METRICS:
+    #        org.apply_metric_and_store_data(metric)
+    #    add_info_to_org_from_list_of_repos(all_repos, org)
 
 
 def read_previous_metric_data(repos, orgs):
