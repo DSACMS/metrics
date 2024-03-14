@@ -100,17 +100,17 @@ SIMPLE_METRICS.append(GraphQLMetric("githubGraphqlSimpleCounts", ["repo", "owner
                                     REPO_GITHUB_GRAPHQL_QUERY,
                                     github_graphql_simple_counts_metric_map, token=TOKEN))
 
-SIMPLE_METRICS.append(RangeMetric("totalRepoLines",["repo_id"], AUGUR_HOST + 
+SIMPLE_METRICS.append(RangeMetric("totalRepoLines",["repo_id"], AUGUR_HOST +
                                  "/complexity/project_lines?repo_id={repo_id}",
                                  {"total_project_lines": ["total_lines"],
                                  "average_project_lines": ["average_lines"]}))
 
-SIMPLE_METRICS.append(RangeMetric("totalRepoCommentLines",["repo_id"], AUGUR_HOST + 
+SIMPLE_METRICS.append(RangeMetric("totalRepoCommentLines",["repo_id"], AUGUR_HOST +
                                  "/complexity/project_comment_lines?repo_id={repo_id}",
                                  {"total_project_comment_lines": ["comment_lines"],
                                  "average_project_comment_lines": ["avg_comment_lines"]}))
 
-SIMPLE_METRICS.append(RangeMetric("totalRepoBlankLines",["repo_id"], AUGUR_HOST + 
+SIMPLE_METRICS.append(RangeMetric("totalRepoBlankLines",["repo_id"], AUGUR_HOST +
                                  "/complexity/project_blank_lines?repo_id={repo_id}",
                                  {"total_project_blank_lines": ["blank_lines"],
                                  "average_blank_lines": ["avg_blank_lines"]}))
