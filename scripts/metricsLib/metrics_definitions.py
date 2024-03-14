@@ -1,8 +1,8 @@
 """
 Definitions of specific metrics for metricsLib
 """
-from metricsLib.metrics_data_structures import CustomMetric, parse_commits_by_month
-from metricsLib.metrics_data_structures import GraphQLMetric, SumMetric, ResourceMetric
+from metricsLib.metrics_data_structures import CustomMetric, parse_commits_by_month, RangeMetric
+from metricsLib.metrics_data_structures import GraphQLMetric, LengthMetric, ResourceMetric
 from metricsLib.metrics_data_structures import ListMetric
 from metricsLib.constants import TOKEN, AUGUR_HOST
 
@@ -100,6 +100,21 @@ SIMPLE_METRICS.append(GraphQLMetric("githubGraphqlSimpleCounts", ["repo", "owner
                                     REPO_GITHUB_GRAPHQL_QUERY,
                                     github_graphql_simple_counts_metric_map, token=TOKEN))
 
+SIMPLE_METRICS.append(RangeMetric("totalRepoLines",["repo_id"], AUGUR_HOST +
+                                 "/complexity/project_lines?repo_id={repo_id}",
+                                 {"total_project_lines": ["total_lines"],
+                                 "average_project_lines": ["average_lines"]}))
+
+SIMPLE_METRICS.append(RangeMetric("totalRepoCommentLines",["repo_id"], AUGUR_HOST +
+                                 "/complexity/project_comment_lines?repo_id={repo_id}",
+                                 {"total_project_comment_lines": ["comment_lines"],
+                                 "average_project_comment_lines": ["avg_comment_lines"]}))
+
+SIMPLE_METRICS.append(RangeMetric("totalRepoBlankLines",["repo_id"], AUGUR_HOST +
+                                 "/complexity/project_blank_lines?repo_id={repo_id}",
+                                 {"total_project_blank_lines": ["blank_lines"],
+                                 "average_blank_lines": ["avg_blank_lines"]}))
+
 ORG_METRICS.append(ListMetric("topCommitters", ["repo_group_id"],
                               AUGUR_HOST +
                               "/repo-groups/{repo_group_id}/top-committers",
@@ -171,7 +186,7 @@ ORG_METRICS.append(GraphQLMetric("githubGraphqlOrgSimple", ["org_login"], ORG_GI
 
 FOLLOWERS_ENDPOINT = "https://api.github.com/users/{org_login}/followers"
 ORG_METRICS.append(
-    SumMetric("orgFollowers", ["org_login"],
+    LengthMetric("orgFollowers", ["org_login"],
               FOLLOWERS_ENDPOINT, "followers_count", token=TOKEN)
 )
 
