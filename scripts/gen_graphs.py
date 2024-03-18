@@ -16,6 +16,7 @@ def generate_all_graphs_for_repos(all_repos):
         print(f"Generating graphs for repo {repo.name}")
         generate_solid_gauge_issue_graph(repo)
         generate_repo_sparklines(repo)
+        generate_donut_graph_line_complexity_graph(repo)
 
 
 def generate_all_graphs_for_orgs(all_orgs):
@@ -100,6 +101,31 @@ def generate_time_xy_issue_graph(oss_entity,data_key):
 
     write_repo_chart_to_file(oss_entity, xy_time_issue_chart, data_key)
 
+
+def generate_donut_graph_line_complexity_graph(oss_entity):
+    """
+    This function generates pygals line complexitydonut graph
+    for a set of Repository objects.
+
+    Arguments:
+        oss_entity: The OSSEntity to create a graph for.
+    """
+
+    donut_lines_graph = pygal.Pie(inner_radius=0.65)
+    donut_lines_graph.title = "Composition of Lines of Code"
+
+
+    num_blank_lines = oss_entity.metric_data['total_project_blank_lines']
+    donut_lines_graph.add('Total Blank Lines', num_blank_lines)
+
+    num_comment_lines = oss_entity.metric_data['total_project_comment_lines']
+    donut_lines_graph.add('Total Comment Lines', num_comment_lines)
+
+    num_total_lines = oss_entity.metric_data['total_project_lines']
+    num_remaining_lines = (num_total_lines - num_comment_lines) - num_blank_lines
+    donut_lines_graph.add('Total Other Lines', num_remaining_lines)
+
+    write_repo_chart_to_file(oss_entity, donut_lines_graph, "total_line_makeup")
 
 
 def generate_solid_gauge_issue_graph(oss_entity):
