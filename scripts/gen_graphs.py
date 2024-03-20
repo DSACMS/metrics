@@ -92,6 +92,7 @@ def generate_time_xy_issue_graph(oss_entity,data_key):
     """
 
     graph_data_dict = oss_entity.metric_data[data_key]
+    print(graph_data_dict)
     dates_list = [record[0] for record in graph_data_dict]
     issues_list = [record[1] for record in graph_data_dict]
 

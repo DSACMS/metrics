@@ -48,6 +48,7 @@ def get_heading_report_values(headings, oss_entity):
 
     report_values = {}
     for heading in headings:
+        print(oss_entity.metric_data)
         prev_record = oss_entity.metric_data[heading]
 
         if heading in oss_entity.previous_metric_data.keys():

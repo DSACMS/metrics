@@ -316,6 +316,8 @@ class ListMetric(BaseMetric):
     def __init__(self, name, needed_params, endpoint_url, return_values, token=None, method='GET'):
         super().__init__(name, needed_params, endpoint_url,
                          return_values, token=token, method=method)
+        
+        self.tuple_flag = True
 
     def get_values(self, params=None):
         metric_json = self.hit_metric(params=params)
@@ -341,7 +343,10 @@ class ListMetric(BaseMetric):
                         elem.append(item[sub_label])
                     #print(elem)
                     # Add up sublists and assign to return label key
-                    to_return[return_label].extend(elem)
+                    if not self.tuple_flag:
+                        to_return[return_label].extend(elem)
+                    else:
+                        to_return[return_label].append(elem)
             except TypeError:
                 # return_label key is assigned to list of extracted api_label value
                 to_return[return_label] = [item[api_label]
@@ -366,6 +371,8 @@ class RangeMetric(ListMetric):
     def __init__(self, name, needed_params, endpoint_url, return_values, token=None, method='GET'):
         super().__init__(name, needed_params, endpoint_url,
                          return_values, token=token, method=method)
+        
+        self.tuple_flag = False
 
     def get_values(self, params=None):
         """
