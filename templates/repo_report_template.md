@@ -114,5 +114,10 @@ date_stampLastWeek: {date_stamp}
         <img alt="firstResponseForClosedPR" src="{{{{ "/assets/img/graphs/{repo_owner}/{repo_name}/firstResponseForClosedPR_{repo_name}_data.png" | url }}}}" />
       </figure>
     </div>
+    <!--- Line Complexity Graphs -->
+    <h3>Line Complexity</h3>
+    <figure>
+      <embed type="image/svg+xml" src="{{{{ "/assets/img/graphs/{repo_owner}/{repo_name}/total_line_makeup_{repo_name}_data.svg" | url }}}}" />
+    </figure>
   </div>
 </div>
