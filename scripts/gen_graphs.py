@@ -114,7 +114,7 @@ def generate_donut_graph_line_complexity_graph(oss_entity):
             a repository or an organization.
     """
 
-    donut_lines_graph = pygal.Pie(inner_radius=0.65)
+    donut_lines_graph = pygal.Pie(inner_radius=0.65,legend_at_bottom=True)
     donut_lines_graph.title = "Composition of Lines of Code"
 
 
