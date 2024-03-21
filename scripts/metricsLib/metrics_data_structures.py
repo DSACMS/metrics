@@ -316,7 +316,7 @@ class ListMetric(BaseMetric):
     def __init__(self, name, needed_params, endpoint_url, return_values, token=None, method='GET'):
         super().__init__(name, needed_params, endpoint_url,
                          return_values, token=token, method=method)
-        
+
         self.tuple_flag = True
 
     def get_values(self, params=None):
@@ -371,7 +371,7 @@ class RangeMetric(ListMetric):
     def __init__(self, name, needed_params, endpoint_url, return_values, token=None, method='GET'):
         super().__init__(name, needed_params, endpoint_url,
                          return_values, token=token, method=method)
-        
+
         self.tuple_flag = False
 
     def get_values(self, params=None):

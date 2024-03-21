@@ -92,7 +92,7 @@ def generate_time_xy_issue_graph(oss_entity,data_key):
     """
 
     graph_data_dict = oss_entity.metric_data[data_key]
-    
+
     dates_list = [record[0] for record in graph_data_dict]
     issues_list = [record[1] for record in graph_data_dict]
 
@@ -180,51 +180,3 @@ def generate_solid_gauge_issue_graph(oss_entity):
             {'label': "Closed Pull Requests", 'value': closed_pr_percent * 100, 'max_value': 100}])
 
     write_repo_chart_to_file(oss_entity, issues_gauge, "issue_gauge")
-
-
-# TODO: Just get these metrics from augur instead of storing them in json.
-
-# def genOverview():
-#    treemap = pygal.Treemap()
-#    treemap.title = 'DSACMS Project Overview Binary TreeMap'
-#
-#    for file in os.listdir():
-#        try:
-#            f = open(file)
-#            data = json.load(f)
-#            d = []
-#            words = file.split("-METRICS")
-#
-#            for key in data:
-#                if (data[key] != 0 and data[key] != None):
-#                    d.append(data[key])
-#            d.pop(0)
-#
-#            treemap.add(words[0], d)
-#        except:
-#            invalid = []
-#            invalid.append(file)
-#
-#    treemap.render_to_file('overview.svg')
-#
-#
-# def repoSpecific():
-#    for file in os.listdir():
-#        try:
-#            treemap = pygal.Treemap()
-#            f = open(file)
-#            data = json.load(f)
-#            del data["datetime"]
-#
-#            for key in data:
-#                if (data[key] != 0 and data[key] != None):
-#                    treemap.add(key, data[key])
-#
-#            words = file.split("-METRICS")
-#            treemap.title = words[0] + " Binary TreeMap"
-#            treemap.render_to_file(words[0] + "-graph.svg")
-#            data.clear()
-#
-#        except:
-#            invalid = []
-#            invalid.append(file)
