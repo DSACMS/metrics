@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ecqm-dedupe | REPORT-2024-03-10
+title: Open Source at CMS Metrics Report for ecqm-dedupe | REPORT-2024-03-24
 permalink: /DSACMS/ecqm-dedupe/
 
 org: DSACMS
 repo: ecqm-dedupe
-reportID: REPORT-2024-03-10
-date_stampThisWeek: 2024-03-10
-date_stampLastWeek: 2024-03-10
+reportID: REPORT-2024-03-24
+date_stampThisWeek: 2024-03-24
+date_stampLastWeek: 2024-03-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -38,29 +38,29 @@ date_stampLastWeek: 2024-03-10
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>4</td>
         <td>7</td>
-        <td>7</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #d31c08" >-3</td>
+        <td style="color: #d31c08" >54%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
+        <td>3</td>
         <td>0</td>
-        <td>0</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >200%</td>
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>1</td>
-        <td>2</td>
-        <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >66%</td>
+        <td>1</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>27</td>
         <td>26</td>
-        <td>25</td>
         <td style="color: #45c527" >1</td>
         <td style="color: #45c527" >3%</td>
       </tr>

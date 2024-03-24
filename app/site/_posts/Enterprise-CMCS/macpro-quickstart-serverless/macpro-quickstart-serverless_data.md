@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-quickstart-serverless | REPORT-2024-03-10
+title: Open Source at CMS Metrics Report for macpro-quickstart-serverless | REPORT-2024-03-24
 permalink: /Enterprise-CMCS/macpro-quickstart-serverless/
 
 org: Enterprise-CMCS
 repo: macpro-quickstart-serverless
-reportID: REPORT-2024-03-10
-date_stampThisWeek: 2024-03-10
-date_stampLastWeek: 2024-03-10
+reportID: REPORT-2024-03-24
+date_stampThisWeek: 2024-03-24
+date_stampLastWeek: 2024-03-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -80,17 +80,17 @@ date_stampLastWeek: 2024-03-10
       </tr>
       <tr>
         <th scope="row">Stars</th>
+        <td>17</td>
         <td>16</td>
-        <td>16</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >6%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>11</td>
         <td>10</td>
-        <td>10</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >9%</td>
       </tr>
     </tbody>
   </table>
