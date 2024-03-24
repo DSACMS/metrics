@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-tf-lambda | REPORT-2024-03-10
+title: Open Source at CMS Metrics Report for batcave-tf-lambda | REPORT-2024-03-24
 permalink: /CMS-Enterprise/batcave-tf-lambda/
 
 org: CMS-Enterprise
 repo: batcave-tf-lambda
-reportID: REPORT-2024-03-10
-date_stampThisWeek: 2024-03-10
-date_stampLastWeek: 2024-03-10
+reportID: REPORT-2024-03-24
+date_stampThisWeek: 2024-03-24
+date_stampLastWeek: 2024-03-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-03-10
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>10</td>
         <td>6</td>
-        <td>6</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >4</td>
+        <td style="color: #45c527" >50%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -59,10 +59,10 @@ date_stampLastWeek: 2024-03-10
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>1</td>
         <td>0</td>
-        <td>0</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >200%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
