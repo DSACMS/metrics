@@ -428,6 +428,44 @@ class CustomMetric(BaseMetric):
 
 
 # Custom parse functions
+def parse_nadia_label_into_badge(**kwargs):
+    """
+    Parse the json returned by the augur nadia badging 
+    endpoint and return a url to the appropriate badge
+
+    Args: 
+        kwargs: dict
+            Keyword arguments used by the parsing function.
+
+    Returns:
+        Dictionary containing the url of the badge
+    """
+
+    metric_json = kwargs['metric_json']
+
+    try:
+        badge_name = metric_json[0]['nadia_badge_label']
+    except KeyError:
+        return {}
+
+    if badge_name == "club":
+        color = "ff69b4"
+    elif badge_name == "toy":
+        color = "blue"
+    elif badge_name == "stadium":
+        color = "orange"
+    elif badge_name == "federation":
+        color = "brightgreen"
+    else:
+        color = "red"
+        badge_name = "Midsize"
+
+    url = f"https://img.shields.io/static/v1?label=project+type&message={badge_name}&color={color}"
+
+    #return the url for the website to link to rather than waste time and space downloading
+    #  the svg tag and saving it
+    return {"nadia_shields_badge_url": url}
+
 def parse_commits_by_month(**kwargs):
     """
     Parse the raw json returned by the commits endpoint into
