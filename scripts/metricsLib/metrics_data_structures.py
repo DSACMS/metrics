@@ -448,15 +448,17 @@ def parse_nadia_label_into_badge(**kwargs):
     except KeyError:
         return {}
 
-    if badge_name == "club":
-        color = "ff69b4"
-    elif badge_name == "toy":
-        color = "blue"
-    elif badge_name == "stadium":
-        color = "orange"
-    elif badge_name == "federation":
-        color = "brightgreen"
-    else:
+
+    color_map = {
+        "club" : "ff69b4",
+        "toy" : "blue",
+        "stadium": "orange",
+        "federation": "brightgreen"
+    }
+
+    color = color_map.get(badge_name)
+
+    if not color:
         color = "red"
         badge_name = "Midsize"
 
