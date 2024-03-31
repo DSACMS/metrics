@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-knight-light | REPORT-2024-03-24
+title: Open Source at CMS Metrics Report for batcave-knight-light | REPORT-2024-03-31
 permalink: /CMS-Enterprise/batcave-knight-light/
 
 org: CMS-Enterprise
 repo: batcave-knight-light
-reportID: REPORT-2024-03-24
-date_stampThisWeek: 2024-03-24
-date_stampLastWeek: 2024-03-24
+reportID: REPORT-2024-03-31
+date_stampThisWeek: 2024-03-31
+date_stampLastWeek: 2024-03-31
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,52 +24,52 @@ date_stampLastWeek: 2024-03-24
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>137</td>
         <td>135</td>
-        <td>115</td>
-        <td style="color: #45c527" >20</td>
-        <td style="color: #45c527" >16%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >1%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
         <td>1</td>
-        <td>0</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >200%</td>
+        <td>1</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>0</td>
+        <td>1</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >200%</td>
+      </tr>
+      <tr>
+        <th scope="row">Closed Issues</th>
         <td>1</td>
         <td>0</td>
         <td style="color: #45c527" >1</td>
         <td style="color: #45c527" >200%</td>
       </tr>
       <tr>
-        <th scope="row">Closed Issues</th>
-        <td>0</td>
-        <td>0</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <th scope="row">Open Pull Requests</th>
+        <td>5</td>
+        <td>6</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >18%</td>
       </tr>
       <tr>
-        <th scope="row">Open Pull Requests</th>
+        <th scope="row">Merged Pull Requests</th>
         <td>6</td>
         <td>5</td>
         <td style="color: #45c527" >1</td>
         <td style="color: #45c527" >18%</td>
       </tr>
       <tr>
-        <th scope="row">Merged Pull Requests</th>
-        <td>5</td>
-        <td>2</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >85%</td>
-      </tr>
-      <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>5</td>
         <td>3</td>
-        <td>1</td>
         <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >100%</td>
+        <td style="color: #45c527" >50%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
