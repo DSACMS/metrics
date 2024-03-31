@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for mac-fc-security-hub-collector | REPORT-2024-03-24
+title: Open Source at CMS Metrics Report for mac-fc-security-hub-collector | REPORT-2024-03-31
 permalink: /Enterprise-CMCS/mac-fc-security-hub-collector/
 
 org: Enterprise-CMCS
 repo: mac-fc-security-hub-collector
-reportID: REPORT-2024-03-24
-date_stampThisWeek: 2024-03-24
-date_stampLastWeek: 2024-03-24
+reportID: REPORT-2024-03-31
+date_stampThisWeek: 2024-03-31
+date_stampLastWeek: 2024-03-31
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -81,16 +81,16 @@ date_stampLastWeek: 2024-03-24
       <tr>
         <th scope="row">Stars</th>
         <td>5</td>
-        <td>4</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >22%</td>
+        <td>5</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
         <td>10</td>
-        <td>9</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >10%</td>
+        <td>10</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>
