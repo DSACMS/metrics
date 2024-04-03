@@ -1,10 +1,10 @@
-window.showGraph = function(graphId) {
-    const graphs = document.querySelectorAll(".graph");
+window.showGraph = function(selectedGraphId, className, buttonName) {
+    const graphs = document.querySelectorAll("." + className);
     
     graphs.forEach(graph => {
-      const button = document.querySelector("#button-" + graph.id);
+      const button = document.querySelector("#" + buttonName + graph.id);
 
-      if (graph.id == graphId && button.classList.contains("usa-button--outline")) {
+      if (graph.id == selectedGraphId && button.classList.contains("usa-button--outline")) {
         // Shows selected graph
         graph.style.display = 'block';
         button.classList.remove("usa-button--outline");
