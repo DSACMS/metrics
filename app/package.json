@@ -14,7 +14,7 @@
     "build:postcss": "postcss ./src/css -d ./site/_includes/css",
     "build:eleventy": "eleventy",
     "build:deploy": "cd dist && touch .nojekyll",
-    "lint": "eslint ./src/js/**/*.js",
+    "lint": "eslint ./**.js",
     "lint:fix": "eslint --quiet --fix \"**.js\"",
     "prettier": "prettier --check ./**.{js,css}",
     "prettier:fix": "prettier --write \"./**.{js,css}\""

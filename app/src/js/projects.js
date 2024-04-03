@@ -5,7 +5,7 @@ filterBox.addEventListener("input", () => {
   const query = filterBox.value.toLowerCase()
 
   // Iterate through each section
-  projectSections.forEach(section => {
+  projectSections.forEach((section) => {
     var queryMatchCheck = false
     const projectCards = section.querySelectorAll(".project-card")
 
@@ -15,7 +15,7 @@ filterBox.addEventListener("input", () => {
         query == "" || card.textContent.toLowerCase().includes(query)
       )
 
-      if(!card.hidden) {
+      if (!card.hidden) {
         queryMatchCheck = true
       }
     })
