@@ -13,10 +13,14 @@
     {% endfor %}
 </div>
 
-<ul class="usa-button-group usa-button-group--segmented">
+<ul class="usa-button-group ">
     {% for option in options %}
         <li class="usa-button-group__item">
-        <button type="button" class="usa-button" onclick="showGraph({{ forloop.index0 }})">{{ option }}</button>
+        {% if forloop.first %}
+            <button type="button" id={{ "button-" | append: forloop.index0 }} class="usa-button" onclick="showGraph({{ forloop.index0 }})">{{ option }}</button>
+        {% else %}
+            <button type="button" id={{ "button-" | append: forloop.index0 }} class="usa-button usa-button--outline" onclick="showGraph({{ forloop.index0 }})">{{ option }}</button>
+        {% endif %}
         </li>
     {% endfor %}
 </ul>
