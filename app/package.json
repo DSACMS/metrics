@@ -4,7 +4,6 @@
   "description": "",
   "main": ".eleventy.js",
   "scripts": {
-    "format": "prettier --write .",
     "start": "NODE_ENV=development run-p -l start:*",
     "start:eleventy": "eleventy --serve",
     "start:rollup": "rollup --config rollup.config.mjs -w",
@@ -16,7 +15,9 @@
     "build:eleventy": "eleventy",
     "build:deploy": "cd dist && touch .nojekyll",
     "lint": "eslint ./src/js/**/*.js",
-    "style": "prettier --check src/**/**.{js,css}"
+    "lint:fix": "eslint --quiet --fix \"**.js\"",
+    "prettier": "prettier --check ./**.{js,css}",
+    "prettier:fix": "prettier --write \"./**.{js,css}\""
   },
   "keywords": [],
   "author": "",
