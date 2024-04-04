@@ -173,7 +173,11 @@ class ResourceMetric(BaseMetric):
         return response
 
     def get_values(self, oss_entity, params=None):
-        r = self.hit_metric(params=params)
+        try:
+            r = self.hit_metric(params=params)
+        except TimeoutError as e:
+            print(f"Request timeout out  for metric {self.name}: {e}")
+            return {}
 
         path = oss_entity.get_path_to_resource_data(self.name, fmt=self.format)
 

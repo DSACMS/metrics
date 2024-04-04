@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-tf-irsa | REPORT-2024-03-24
+title: Open Source at CMS Metrics Report for batcave-tf-irsa | REPORT-2024-04-04
 permalink: /CMS-Enterprise/batcave-tf-irsa/
 
 org: CMS-Enterprise
 repo: batcave-tf-irsa
-reportID: REPORT-2024-03-24
-date_stampThisWeek: 2024-03-24
-date_stampLastWeek: 2024-03-24
+reportID: REPORT-2024-04-04
+date_stampThisWeek: 2024-04-04
+date_stampLastWeek: 2024-04-04
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-03-24
       <tr>
         <th scope="row">Commits</th>
         <td>17</td>
-        <td>16</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >6%</td>
+        <td>17</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,17 +52,17 @@ date_stampLastWeek: 2024-03-24
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>2</td>
         <td>1</td>
-        <td>1</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >66%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>16</td>
-        <td>15</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >6%</td>
+        <td>16</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -80,10 +80,10 @@ date_stampLastWeek: 2024-03-24
       </tr>
       <tr>
         <th scope="row">Stars</th>
-        <td>1</td>
         <td>0</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >200%</td>
+        <td>1</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >200%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
@@ -114,5 +114,10 @@ date_stampLastWeek: 2024-03-24
         <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/CMS-Enterprise/batcave-tf-irsa/firstResponseForClosedPR_batcave-tf-irsa_data.png" | url }}" />
       </figure>
     </div>
+    <!--- Line Complexity Graphs -->
+    <h3>Line Complexity</h3>
+    <figure>
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/CMS-Enterprise/batcave-tf-irsa/total_line_makeup_batcave-tf-irsa_data.svg" | url }}" />
+    </figure>
   </div>
 </div>

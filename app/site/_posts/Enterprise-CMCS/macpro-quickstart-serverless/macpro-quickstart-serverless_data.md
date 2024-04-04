@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-quickstart-serverless | REPORT-2024-03-24
+title: Open Source at CMS Metrics Report for macpro-quickstart-serverless | REPORT-2024-04-04
 permalink: /Enterprise-CMCS/macpro-quickstart-serverless/
 
 org: Enterprise-CMCS
 repo: macpro-quickstart-serverless
-reportID: REPORT-2024-03-24
-date_stampThisWeek: 2024-03-24
-date_stampLastWeek: 2024-03-24
+reportID: REPORT-2024-04-04
+date_stampThisWeek: 2024-04-04
+date_stampLastWeek: 2024-04-04
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -81,16 +81,16 @@ date_stampLastWeek: 2024-03-24
       <tr>
         <th scope="row">Stars</th>
         <td>17</td>
-        <td>16</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >6%</td>
+        <td>17</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
         <td>11</td>
-        <td>10</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >9%</td>
+        <td>11</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>
@@ -114,5 +114,10 @@ date_stampLastWeek: 2024-03-24
         <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-quickstart-serverless/firstResponseForClosedPR_macpro-quickstart-serverless_data.png" | url }}" />
       </figure>
     </div>
+    <!--- Line Complexity Graphs -->
+    <h3>Line Complexity</h3>
+    <figure>
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-quickstart-serverless/total_line_makeup_macpro-quickstart-serverless_data.svg" | url }}" />
+    </figure>
   </div>
 </div>

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-security-hub-sync | REPORT-2024-03-24
+title: Open Source at CMS Metrics Report for macpro-security-hub-sync | REPORT-2024-04-04
 permalink: /Enterprise-CMCS/macpro-security-hub-sync/
 
 org: Enterprise-CMCS
 repo: macpro-security-hub-sync
-reportID: REPORT-2024-03-24
-date_stampThisWeek: 2024-03-24
-date_stampLastWeek: 2024-03-24
+reportID: REPORT-2024-04-04
+date_stampThisWeek: 2024-04-04
+date_stampLastWeek: 2024-04-04
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-03-24
       <tr>
         <th scope="row">Commits</th>
         <td>47</td>
-        <td>45</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >4%</td>
+        <td>47</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -60,9 +60,9 @@ date_stampLastWeek: 2024-03-24
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>36</td>
-        <td>34</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >5%</td>
+        <td>36</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -114,5 +114,10 @@ date_stampLastWeek: 2024-03-24
         <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-security-hub-sync/firstResponseForClosedPR_macpro-security-hub-sync_data.png" | url }}" />
       </figure>
     </div>
+    <!--- Line Complexity Graphs -->
+    <h3>Line Complexity</h3>
+    <figure>
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-security-hub-sync/total_line_makeup_macpro-security-hub-sync_data.svg" | url }}" />
+    </figure>
   </div>
 </div>

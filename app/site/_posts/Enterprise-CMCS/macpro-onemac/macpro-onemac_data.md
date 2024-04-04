@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-onemac | REPORT-2024-03-24
+title: Open Source at CMS Metrics Report for macpro-onemac | REPORT-2024-04-04
 permalink: /Enterprise-CMCS/macpro-onemac/
 
 org: Enterprise-CMCS
 repo: macpro-onemac
-reportID: REPORT-2024-03-24
-date_stampThisWeek: 2024-03-24
-date_stampLastWeek: 2024-03-24
+reportID: REPORT-2024-04-04
+date_stampThisWeek: 2024-04-04
+date_stampLastWeek: 2024-04-04
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-03-24
       <tr>
         <th scope="row">Commits</th>
         <td>1891</td>
-        <td>1890</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0%</td>
+        <td>1891</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,17 +52,17 @@ date_stampLastWeek: 2024-03-24
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>25</td>
-        <td>18</td>
-        <td style="color: #45c527" >7</td>
-        <td style="color: #45c527" >32%</td>
+        <td>26</td>
+        <td>26</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>1095</td>
-        <td>1094</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0%</td>
+        <td>1095</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -114,5 +114,10 @@ date_stampLastWeek: 2024-03-24
         <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-onemac/firstResponseForClosedPR_macpro-onemac_data.png" | url }}" />
       </figure>
     </div>
+    <!--- Line Complexity Graphs -->
+    <h3>Line Complexity</h3>
+    <figure>
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-onemac/total_line_makeup_macpro-onemac_data.svg" | url }}" />
+    </figure>
   </div>
 </div>

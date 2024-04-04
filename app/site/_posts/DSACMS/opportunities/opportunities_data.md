@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for opportunities | REPORT-2024-03-24
+title: Open Source at CMS Metrics Report for opportunities | REPORT-2024-04-04
 permalink: /DSACMS/opportunities/
 
 org: DSACMS
 repo: opportunities
-reportID: REPORT-2024-03-24
-date_stampThisWeek: 2024-03-24
-date_stampLastWeek: 2024-03-24
+reportID: REPORT-2024-04-04
+date_stampThisWeek: 2024-04-04
+date_stampLastWeek: 2024-04-04
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -114,5 +114,10 @@ date_stampLastWeek: 2024-03-24
         <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/DSACMS/opportunities/firstResponseForClosedPR_opportunities_data.png" | url }}" />
       </figure>
     </div>
+    <!--- Line Complexity Graphs -->
+    <h3>Line Complexity</h3>
+    <figure>
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/DSACMS/opportunities/total_line_makeup_opportunities_data.svg" | url }}" />
+    </figure>
   </div>
 </div>

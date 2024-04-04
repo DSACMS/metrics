@@ -1,12 +1,12 @@
 ---
 layout: org-report
-title: Open Source at CMS Metrics Report for Enterprise-CMCS | REPORT-2024-03-24
+title: Open Source at CMS Metrics Report for Enterprise-CMCS | REPORT-2024-04-04
 permalink: /Enterprise-CMCS/
 
 org: Enterprise-CMCS
-reportID: REPORT-2024-03-24
-date_stampThisWeek: 2024-03-24
-date_stampLastWeek: 2024-03-24
+reportID: REPORT-2024-04-04
+date_stampThisWeek: 2024-04-04
+date_stampLastWeek: 2024-04-04
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -23,9 +23,9 @@ date_stampLastWeek: 2024-03-24
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>27771</td>
-        <td>27614</td>
-        <td style="color: #45c527" >157</td>
+        <td>27867</td>
+        <td>27829</td>
+        <td style="color: #45c527" >38</td>
         <td style="color: #45c527" >0%</td>
       </tr>
       <tr>
@@ -51,45 +51,45 @@ date_stampLastWeek: 2024-03-24
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>158</td>
-        <td>152</td>
+        <td>156</td>
+        <td>150</td>
         <td style="color: #45c527" >6</td>
         <td style="color: #45c527" >3%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>11502</td>
-        <td>11342</td>
-        <td style="color: #45c527" >160</td>
-        <td style="color: #45c527" >1%</td>
+        <td>11605</td>
+        <td>11568</td>
+        <td style="color: #45c527" >37</td>
+        <td style="color: #45c527" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
-        <td>3011</td>
-        <td>2975</td>
-        <td style="color: #45c527" >36</td>
-        <td style="color: #45c527" >1%</td>
+        <td>3042</td>
+        <td>3036</td>
+        <td style="color: #45c527" >6</td>
+        <td style="color: #45c527" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
         <td>79</td>
-        <td>78</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >1%</td>
+        <td>79</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
         <td>162</td>
-        <td>155</td>
-        <td style="color: #45c527" >7</td>
-        <td style="color: #45c527" >4%</td>
+        <td>162</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
         <td>201</td>
-        <td>198</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >1%</td>
+        <td>201</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Followers</th>
@@ -108,6 +108,9 @@ date_stampLastWeek: 2024-03-24
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
       <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/Enterprise-CMCS_issue_gauge.svg" | url }}" />
+    </figure>
+    <figure>
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/Enterprise-CMCS_new_issues_by_day_over_last_six_months.svg" | url }}" />
     </figure>
   </div>
 </div>

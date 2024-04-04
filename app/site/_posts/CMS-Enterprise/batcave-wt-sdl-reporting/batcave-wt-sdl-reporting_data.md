@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-wt-sdl-reporting | REPORT-2024-03-24
+title: Open Source at CMS Metrics Report for batcave-wt-sdl-reporting | REPORT-2024-04-04
 permalink: /CMS-Enterprise/batcave-wt-sdl-reporting/
 
 org: CMS-Enterprise
 repo: batcave-wt-sdl-reporting
-reportID: REPORT-2024-03-24
-date_stampThisWeek: 2024-03-24
-date_stampLastWeek: 2024-03-24
+reportID: REPORT-2024-04-04
+date_stampThisWeek: 2024-04-04
+date_stampLastWeek: 2024-04-04
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -114,5 +114,10 @@ date_stampLastWeek: 2024-03-24
         <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/CMS-Enterprise/batcave-wt-sdl-reporting/firstResponseForClosedPR_batcave-wt-sdl-reporting_data.png" | url }}" />
       </figure>
     </div>
+    <!--- Line Complexity Graphs -->
+    <h3>Line Complexity</h3>
+    <figure>
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/CMS-Enterprise/batcave-wt-sdl-reporting/total_line_makeup_batcave-wt-sdl-reporting_data.svg" | url }}" />
+    </figure>
   </div>
 </div>
