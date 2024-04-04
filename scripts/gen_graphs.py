@@ -17,6 +17,8 @@ def generate_all_graphs_for_repos(all_repos):
         generate_solid_gauge_issue_graph(repo)
         generate_repo_sparklines(repo)
         generate_donut_graph_line_complexity_graph(repo)
+        generate_time_xy_issue_graph(repo, "new_commit_contributors_by_day_over_last_month")
+        generate_time_xy_issue_graph(repo, "new_commit_contributors_by_day_over_last_six_months")
 
 
 def generate_all_graphs_for_orgs(all_orgs):
@@ -30,6 +32,7 @@ def generate_all_graphs_for_orgs(all_orgs):
         print(f"Generating graphs for org {org.name}")
         generate_solid_gauge_issue_graph(org)
         generate_time_xy_issue_graph(org, "new_issues_by_day_over_last_six_months")
+        generate_time_xy_issue_graph(org, "new_issues_by_day_over_last_month")
 
 
 def write_repo_chart_to_file(repo, chart, chart_name, custom_func=None, custom_func_params={}):
