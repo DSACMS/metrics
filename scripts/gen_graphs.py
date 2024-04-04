@@ -16,6 +16,9 @@ def generate_all_graphs_for_repos(all_repos):
         print(f"Generating graphs for repo {repo.name}")
         generate_solid_gauge_issue_graph(repo)
         generate_repo_sparklines(repo)
+        generate_donut_graph_line_complexity_graph(repo)
+        generate_time_xy_issue_graph(repo, "new_commit_contributors_by_day_over_last_month")
+        generate_time_xy_issue_graph(repo, "new_commit_contributors_by_day_over_last_six_months")
 
 
 def generate_all_graphs_for_orgs(all_orgs):
@@ -28,6 +31,8 @@ def generate_all_graphs_for_orgs(all_orgs):
     for org in all_orgs:
         print(f"Generating graphs for org {org.name}")
         generate_solid_gauge_issue_graph(org)
+        generate_time_xy_issue_graph(org, "new_issues_by_day_over_last_six_months")
+        generate_time_xy_issue_graph(org, "new_issues_by_day_over_last_month")
 
 
 def write_repo_chart_to_file(repo, chart, chart_name, custom_func=None, custom_func_params={}):
@@ -80,6 +85,55 @@ def generate_repo_sparklines(repo):
         custom_func=chart.render_sparkline, custom_func_params=_kwargs_)
 
 
+def generate_time_xy_issue_graph(oss_entity,data_key):
+    """
+    This function generates pygals xy time graph for new issue creation over a time period.
+
+    Arguments:
+        oss_entity: the OSSEntity to create a graph for
+        data_key: key of the dictionary to use to generate the time graph
+    """
+
+    graph_data_dict = oss_entity.metric_data[data_key]
+
+    dates_list = [record[0] for record in graph_data_dict]
+    issues_list = [record[1] for record in graph_data_dict]
+
+    xy_time_issue_chart = pygal.Line(x_label_rotation=20)
+    xy_time_issue_chart.x_labels = dates_list
+    xy_time_issue_chart.add("Issues", issues_list)
+
+    write_repo_chart_to_file(oss_entity, xy_time_issue_chart, data_key)
+
+
+def generate_donut_graph_line_complexity_graph(oss_entity):
+    """
+    This function generates pygals line complexity donut graph
+    for a set of Repository objects.
+
+    Arguments:
+        oss_entity: The OSSEntity to create a graph for. an 
+            OSSEntity is a data structure that is typically
+            a repository or an organization.
+    """
+
+    donut_lines_graph = pygal.Pie(inner_radius=0.65,legend_at_bottom=True)
+    donut_lines_graph.title = "Composition of Lines of Code"
+
+
+    num_blank_lines = oss_entity.metric_data['total_project_blank_lines']
+    donut_lines_graph.add('Total Blank Lines', num_blank_lines)
+
+    num_comment_lines = oss_entity.metric_data['total_project_comment_lines']
+    donut_lines_graph.add('Total Comment Lines', num_comment_lines)
+
+    num_total_lines = oss_entity.metric_data['total_project_lines']
+    num_remaining_lines = (num_total_lines - num_comment_lines) - num_blank_lines
+    donut_lines_graph.add('Total Other Lines', num_remaining_lines)
+
+    write_repo_chart_to_file(oss_entity, donut_lines_graph, "total_line_makeup")
+
+
 def generate_solid_gauge_issue_graph(oss_entity):
     """
     This function generates pygals solid gauge issue/pr graphs for a set of Repository objects.
@@ -129,51 +183,3 @@ def generate_solid_gauge_issue_graph(oss_entity):
             {'label': "Closed Pull Requests", 'value': closed_pr_percent * 100, 'max_value': 100}])
 
     write_repo_chart_to_file(oss_entity, issues_gauge, "issue_gauge")
-
-
-# TODO: Just get these metrics from augur instead of storing them in json.
-
-# def genOverview():
-#    treemap = pygal.Treemap()
-#    treemap.title = 'DSACMS Project Overview Binary TreeMap'
-#
-#    for file in os.listdir():
-#        try:
-#            f = open(file)
-#            data = json.load(f)
-#            d = []
-#            words = file.split("-METRICS")
-#
-#            for key in data:
-#                if (data[key] != 0 and data[key] != None):
-#                    d.append(data[key])
-#            d.pop(0)
-#
-#            treemap.add(words[0], d)
-#        except:
-#            invalid = []
-#            invalid.append(file)
-#
-#    treemap.render_to_file('overview.svg')
-#
-#
-# def repoSpecific():
-#    for file in os.listdir():
-#        try:
-#            treemap = pygal.Treemap()
-#            f = open(file)
-#            data = json.load(f)
-#            del data["datetime"]
-#
-#            for key in data:
-#                if (data[key] != 0 and data[key] != None):
-#                    treemap.add(key, data[key])
-#
-#            words = file.split("-METRICS")
-#            treemap.title = words[0] + " Binary TreeMap"
-#            treemap.render_to_file(words[0] + "-graph.svg")
-#            data.clear()
-#
-#        except:
-#            invalid = []
-#            invalid.append(file)

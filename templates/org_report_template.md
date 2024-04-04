@@ -109,5 +109,8 @@ date_stampLastWeek: {date_stamp}
     <figure>
       <embed type="image/svg+xml" src="{{{{ "/assets/img/graphs/{repo_owner}/{repo_owner}_issue_gauge.svg" | url }}}}" />
     </figure>
+    <figure>
+      <embed type="image/svg+xml" src="{{{{ "/assets/img/graphs/{repo_owner}/{repo_owner}_new_issues_by_day_over_last_six_months.svg" | url }}}}" />
+    </figure>
   </div>
 </div>

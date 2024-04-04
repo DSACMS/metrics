@@ -107,7 +107,6 @@ class BaseMetric:
 
         for return_label, api_label in self.return_values:
             try:
-                list(api_label)
                 to_return[return_label] = []
                 for sub_label in api_label:
                     to_return[return_label].append(metric_json[sub_label])
@@ -174,7 +173,11 @@ class ResourceMetric(BaseMetric):
         return response
 
     def get_values(self, oss_entity, params=None):
-        r = self.hit_metric(params=params)
+        try:
+            r = self.hit_metric(params=params)
+        except TimeoutError as e:
+            print(f"Request timeout out  for metric {self.name}: {e}")
+            return {}
 
         path = oss_entity.get_path_to_resource_data(self.name, fmt=self.format)
 
@@ -280,9 +283,9 @@ class GraphQLMetric(BaseMetric):
         return to_return
 
 
-class SumMetric(BaseMetric):
+class LengthMetric(BaseMetric):
     """
-    Class to define a metric that returns a returned list 
+    Class to define a metric that returns the length of a returned list 
     from an endpoint
     ...
 
@@ -318,6 +321,8 @@ class ListMetric(BaseMetric):
         super().__init__(name, needed_params, endpoint_url,
                          return_values, token=token, method=method)
 
+        self.tuple_flag = True
+
     def get_values(self, params=None):
         metric_json = self.hit_metric(params=params)
 
@@ -340,8 +345,12 @@ class ListMetric(BaseMetric):
                     elem = []
                     for sub_label in api_label:
                         elem.append(item[sub_label])
+                    #print(elem)
                     # Add up sublists and assign to return label key
-                    to_return[return_label].append(elem)
+                    if not self.tuple_flag:
+                        to_return[return_label].extend(elem)
+                    else:
+                        to_return[return_label].append(elem)
             except TypeError:
                 # return_label key is assigned to list of extracted api_label value
                 to_return[return_label] = [item[api_label]
@@ -367,6 +376,8 @@ class RangeMetric(ListMetric):
         super().__init__(name, needed_params, endpoint_url,
                          return_values, token=token, method=method)
 
+        self.tuple_flag = False
+
     def get_values(self, params=None):
         """
         Fetch data from url using parameters and format the data
@@ -387,6 +398,7 @@ class RangeMetric(ListMetric):
 
         to_return = {}
 
+        print(return_dict)
         for return_label, _ in return_dict.items():
             to_return[return_label] = sum(return_dict[return_label])
 
