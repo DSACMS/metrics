@@ -1,12 +1,12 @@
 ---
 layout: org-report
-title: Open Source at CMS Metrics Report for Enterprise-CMCS | REPORT-2024-03-31
+title: Open Source at CMS Metrics Report for Enterprise-CMCS | REPORT-2024-04-04
 permalink: /Enterprise-CMCS/
 
 org: Enterprise-CMCS
-reportID: REPORT-2024-03-31
-date_stampThisWeek: 2024-03-31
-date_stampLastWeek: 2024-03-31
+reportID: REPORT-2024-04-04
+date_stampThisWeek: 2024-04-04
+date_stampLastWeek: 2024-04-04
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -23,9 +23,9 @@ date_stampLastWeek: 2024-03-31
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>27867</td>
         <td>27829</td>
-        <td>27771</td>
-        <td style="color: #45c527" >58</td>
+        <td style="color: #45c527" >38</td>
         <td style="color: #45c527" >0%</td>
       </tr>
       <tr>
@@ -51,23 +51,23 @@ date_stampLastWeek: 2024-03-31
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>156</td>
         <td>150</td>
-        <td>158</td>
-        <td style="color: #d31c08" >-8</td>
-        <td style="color: #d31c08" >5%</td>
+        <td style="color: #45c527" >6</td>
+        <td style="color: #45c527" >3%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>11605</td>
         <td>11568</td>
-        <td>11502</td>
-        <td style="color: #45c527" >66</td>
+        <td style="color: #45c527" >37</td>
         <td style="color: #45c527" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>3042</td>
         <td>3036</td>
-        <td>3011</td>
-        <td style="color: #45c527" >25</td>
+        <td style="color: #45c527" >6</td>
         <td style="color: #45c527" >0%</td>
       </tr>
       <tr>
@@ -108,6 +108,9 @@ date_stampLastWeek: 2024-03-31
     <!--- Issues/PRs Status Breakdown Graph -->
     <figure>
       <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/Enterprise-CMCS_issue_gauge.svg" | url }}" />
+    </figure>
+    <figure>
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/Enterprise-CMCS_new_issues_by_day_over_last_six_months.svg" | url }}" />
     </figure>
   </div>
 </div>
