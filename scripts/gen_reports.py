@@ -156,6 +156,8 @@ def generate_repo_report_files(repos):
             "date_stamp": date.today(),
             "repo_owner": repo.repo_owner,
             "repo_name": repo.name,
+            "repo_nadia_badge_name": repo.metric_data['nadia_badge_name'],
+            "repo_nadia_badge_color": repo.metric_data['nadia_badge_color']
         }
 
         metric_table_headings = [
