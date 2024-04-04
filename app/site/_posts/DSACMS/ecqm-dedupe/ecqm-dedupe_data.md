@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ecqm-dedupe | REPORT-2024-03-31
+title: Open Source at CMS Metrics Report for ecqm-dedupe | REPORT-2024-04-04
 permalink: /DSACMS/ecqm-dedupe/
 
 org: DSACMS
 repo: ecqm-dedupe
-reportID: REPORT-2024-03-31
-date_stampThisWeek: 2024-03-31
-date_stampLastWeek: 2024-03-31
+reportID: REPORT-2024-04-04
+date_stampThisWeek: 2024-04-04
+date_stampLastWeek: 2024-04-04
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -52,17 +52,17 @@ date_stampLastWeek: 2024-03-31
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>0</td>
         <td>1</td>
-        <td>1</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >200%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>28</td>
         <td>27</td>
-        <td>27</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >3%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -114,5 +114,10 @@ date_stampLastWeek: 2024-03-31
         <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/DSACMS/ecqm-dedupe/firstResponseForClosedPR_ecqm-dedupe_data.png" | url }}" />
       </figure>
     </div>
+    <!--- Line Complexity Graphs -->
+    <h3>Line Complexity</h3>
+    <figure>
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/DSACMS/ecqm-dedupe/total_line_makeup_ecqm-dedupe_data.svg" | url }}" />
+    </figure>
   </div>
 </div>
