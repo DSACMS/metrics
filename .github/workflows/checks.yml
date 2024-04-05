@@ -28,7 +28,6 @@ jobs:
         - uses: actions/setup-node@v3
           with:
             node-version: "18.13"
-            cache: 'yarn'
 
         - name: Cache dependencies
           uses: actions/cache@v3
