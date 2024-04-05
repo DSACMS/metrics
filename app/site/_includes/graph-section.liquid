@@ -1,0 +1,11 @@
+{% assign devPath = "site/_graphs"| append: path %}
+{% assign distPath = "assets/img/graphs" | append: path %}
+
+{% if devPath | fileExists %}
+    <div class="graph-container">
+        <h3>{{ title }}</h3>
+        <figure>
+        <embed type="image/svg+xml" src={{ distPath | url }} />
+        </figure>
+    </div>
+{% endif %}
