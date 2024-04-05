@@ -38,7 +38,7 @@ jobs:
               npm-
 
         - name: Install dependencies
-          run: npm ci --prefer-offline --no-audit
+          run: npm install
 
         - name: Run linter
           uses: reviewdog/action-eslint@v1
@@ -49,6 +49,6 @@ jobs:
         - name: Check code style
           uses: EPMatt/reviewdog-action-prettier@v1
           with:
-            github_token: ${{ secrets.github_token }}
+            github_token: ${{ secrets.GITHUB_TOKEN }}
             reporter: github-pr-review
             level: warning
