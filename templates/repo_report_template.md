@@ -107,7 +107,7 @@ date_stampLastWeek: {date_stamp}
     {% render "graph-section" path: "/{repo_owner}/{repo_name}/firstResponseForClosedPR_{repo_name}_data.png", title: "First Response For Closed PR" %}
     <!--- Line Complexity Graphs -->
     {% render "graph-section" path: "/{repo_owner}/{repo_name}/total_line_makeup_{repo_name}_data.svg", title: "Line Complexity" %}
-    <!--- Time Toggle Testing -->
+    <!--- New Commit Contributors by Day over Last Month and Last 6 Months -->
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/{repo_owner}/{repo_name}/new_commit_contributors_by_day_over_last_month_{repo_name}_data.svg, /{repo_owner}/{repo_name}/new_commit_contributors_by_day_over_last_six_months_{repo_name}_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
