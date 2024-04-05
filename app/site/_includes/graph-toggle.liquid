@@ -21,10 +21,10 @@
             {% else %}
                 <div class={{ graphName }} id="{{ forloop.index0 }}" style="display: none;">
             {% endif %}
-            {% assign distPath = "assets/img/graphs" | append: graph %}
-            {% capture url %}{{ baseurl }}{{ distPath | strip }}{% endcapture %}
+            {% assign graphPath = graph | strip %}
+            {% assign distPath = baseurl | append: "/assets/img/graphs" | append: graphPath %}
             <figure>
-                <img src="{{ url }}" />
+                <img src="{{ distPath }}" />
             </figure>
             </div>
         {% endfor %}

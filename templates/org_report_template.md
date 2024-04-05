@@ -106,8 +106,8 @@ date_stampLastWeek: {date_stamp}
   <h2>Activity Graphs</h2>
   <div class="all-graphs">
     <!--- Issues/PRs Status Breakdown Graph -->
-    {% render "graph-section" path: "/{repo_owner}/{repo_owner}_issue_gauge.svg", title: "Issues & PRs Status Breakdown" %}
+    {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_owner}_issue_gauge.svg", title: "Issues & PRs Status Breakdown" %}}
     <!-- New Issues over Last 6 Months -->
-    {% render "graph-section" path: "/{repo_owner}/{repo_owner}_new_issues_by_day_over_last_six_months.svg", title: "New Issues over Last 6 Months" %}
+    {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_owner}_new_issues_by_day_over_last_six_months.svg", title: "New Issues over Last 6 Months" %}}
   </div>
 </div>

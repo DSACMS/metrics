@@ -100,15 +100,15 @@ date_stampLastWeek: {date_stamp}
   <h2>Activity Graphs</h2>
   <div class="all-graphs">
     <!--- Issues/PRs Status Breakdown Graph -->
-    {% render "graph-section" path: "/{repo_owner}/{repo_name}/issue_gauge_{repo_name}_data.svg", title: "Issues & PRs Status Breakdown" %}
+    {{% render "graph-section"  baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/issue_gauge_{repo_name}_data.svg", title: "Issues & PRs Status Breakdown" %}}
     <!--- Contributor Activity Line Graph -->
-    {% render "graph-section" path: "/{repo_owner}/{repo_name}/commit_sparklines_{repo_name}_data.svg", title: "Commits by Month" %}
+    {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/commit_sparklines_{repo_name}_data.svg", title: "Commits by Month" %}}
     <!--- First Response For Closed PR Scatterplot -->
-    {% render "graph-section" path: "/{repo_owner}/{repo_name}/firstResponseForClosedPR_{repo_name}_data.png", title: "First Response For Closed PR" %}
+    {{% render "graph-section" baseurl: site.baseurl, class: "firstResponsePRCrop", path: "/{repo_owner}/{repo_name}/firstResponseForClosedPR_{repo_name}_data.png", title: "First Response For Closed PR" %}}
     <!--- Line Complexity Graphs -->
-    {% render "graph-section" path: "/{repo_owner}/{repo_name}/total_line_makeup_{repo_name}_data.svg", title: "Line Complexity" %}
+    {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/total_line_makeup_{repo_name}_data.svg", title: "Line Complexity" %}}
     <!--- New Commit Contributors by Day over Last Month and Last 6 Months -->
-      {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
-      {% assign graphsArray = '/{repo_owner}/{repo_name}/new_commit_contributors_by_day_over_last_month_{repo_name}_data.svg, /{repo_owner}/{repo_name}/new_commit_contributors_by_day_over_last_six_months_{repo_name}_data.svg' | split: ',' %}
-      {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+      {{% assign optionsArray = '1 Month, 6 Month' | split: ',' %}}
+      {{% assign graphsArray = '/{repo_owner}/{repo_name}/new_commit_contributors_by_day_over_last_month_{repo_name}_data.svg, /{repo_owner}/{repo_name}/new_commit_contributors_by_day_over_last_six_months_{repo_name}_data.svg' | split: ',' %}}
+      {{% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}}
 </div>

@@ -1,11 +1,12 @@
+{% assign className = class | default: "graph-container" %}
 {% assign devPath = "site/_graphs"| append: path %}
-{% assign distPath = "assets/img/graphs" | append: path %}
+{% assign distPath = baseurl | append: "/assets/img/graphs" | append: path %}
 
 {% if devPath | fileExists %}
-    <div class="graph-container">
+    <div class="{{ className }}">
         <h3>{{ title }}</h3>
         <figure>
-            <img src="{{ distPath }}" />
+            <img src="{{ distPath }}"/>
         </figure>
     </div>
 {% endif %}
