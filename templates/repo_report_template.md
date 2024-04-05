@@ -98,28 +98,15 @@ date_stampLastWeek: {date_stamp}
 <div class="graph-container">
   <br>
   <h2>Activity Graphs</h2>
-  <div class="row">
+  <div class="all-graphs">
     <!--- Issues/PRs Status Breakdown Graph -->
-    <figure>
-      <embed type="image/svg+xml" src="{{{{ "/assets/img/graphs/{repo_owner}/{repo_name}/issue_gauge_{repo_name}_data.svg" | url }}}}" />
-    </figure>
+    {% render "graph-section" path: "/{repo_owner}/{repo_name}/issue_gauge_{repo_name}_data.svg" title: "Issues & PRs Status Breakdown" %}
     <!--- Contributor Activity Line Graph -->
-    <h3>Commits by Month</h3>
-    <figure>
-      <embed type="image/svg+xml" src="{{{{ "/assets/img/graphs/{repo_owner}/{repo_name}/commit_sparklines_{repo_name}_data.svg" | url }}}}" />
-    </figure>
+    {% render "graph-section" path: "/{repo_owner}/{repo_name}/commit_sparklines_{repo_name}_data.svg" title: "Commits by Month" %}
     <!--- First Response For Closed PR Scatterplot -->
-    <div class="firstResponsePRCrop">
-      <figure>
-        <img alt="firstResponseForClosedPR" src="{{{{ "/assets/img/graphs/{repo_owner}/{repo_name}/firstResponseForClosedPR_{repo_name}_data.png" | url }}}}" />
-      </figure>
-    </div>
+    {% render "graph-section" path: "/{repo_owner}/{repo_name}/firstResponseForClosedPR_{repo_name}_data.png" title: "First Response For Closed PR" %}
     <!--- Line Complexity Graphs -->
-    <h3>Line Complexity</h3>
-    <figure>
-      <embed type="image/svg+xml" src="{{{{ "/assets/img/graphs/{repo_owner}/{repo_name}/total_line_makeup_{repo_name}_data.svg" | url }}}}" />
-    </figure>
-  </div>
+    {% render "graph-section" path: "/{repo_owner}/{repo_name}/total_line_makeup_{repo_name}_data.svg" title: "Line Complexity" %}
     <!--- Time Toggle Testing -->
     <h3>Number of Contributors Joining per Interval</h3>
     <div class="timeToggle">
