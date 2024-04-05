@@ -1,12 +1,17 @@
 {% assign className = class | default: "graph-container" %}
 {% assign devPath = "site/_graphs"| append: path %}
 {% assign distPath = baseurl | append: "/assets/img/graphs" | append: path %}
+{% assign fileExtension = path | split: '.' | last %}
 
 {% if devPath | fileExists %}
     <div class="{{ className }}">
         <h3>{{ title }}</h3>
         <figure>
+        {% if fileExtension == 'svg' %}
+            <embed type="image/svg+xml" src="{{ distPath }}" />
+        {% else %}
             <img src="{{ distPath }}"/>
+        {% endif %}
         </figure>
     </div>
 {% endif %}
