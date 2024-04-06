@@ -172,7 +172,7 @@ class ResourceMetric(BaseMetric):
         # return response
         return response
 
-    def get_values(self, oss_entity, params=None):
+    def get_values(self,params=None, oss_entity=None):
         try:
             r = self.hit_metric(params=params)
         except TimeoutError as e:
@@ -448,7 +448,7 @@ def parse_nadia_label_into_badge(**kwargs):
     metric_json = kwargs['metric_json']
 
     try:
-        badge_name = metric_json[0]['nadia_badge_label']
+        badge_name = metric_json[0]['nadia_badge_level']
     except KeyError:
         return {}
 

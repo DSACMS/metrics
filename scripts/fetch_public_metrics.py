@@ -85,10 +85,10 @@ def fetch_all_new_metric_data(all_orgs, all_repos):
             repo.apply_metric_and_store_data(metric)
 
         for metric in RESOURCE_METRICS:
-            repo.apply_metric_and_store_data(metric, repo)
+            repo.apply_metric_and_store_data(metric, oss_entity=repo)
 
         for metric in ADVANCED_METRICS:
-            repo.apply_metric_and_store_data(metric,repo)
+            repo.apply_metric_and_store_data(metric)
 
     # Capture all metric data for all Github orgs
     for org in all_orgs:
