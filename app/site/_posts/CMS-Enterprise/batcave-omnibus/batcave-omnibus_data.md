@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-omnibus | REPORT-2024-04-04
+title: Open Source at CMS Metrics Report for batcave-omnibus | REPORT-2024-04-07
 permalink: /CMS-Enterprise/batcave-omnibus/
 
 org: CMS-Enterprise
 repo: batcave-omnibus
-reportID: REPORT-2024-04-04
-date_stampThisWeek: 2024-04-04
-date_stampLastWeek: 2024-04-04
+reportID: REPORT-2024-04-07
+date_stampThisWeek: 2024-04-07
+date_stampLastWeek: 2024-04-07
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-04-04
       <tr>
         <th scope="row">Commits</th>
         <td>155</td>
-        <td>151</td>
-        <td style="color: #45c527" >4</td>
-        <td style="color: #45c527" >2%</td>
+        <td>155</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
