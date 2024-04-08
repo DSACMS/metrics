@@ -58,10 +58,10 @@ module.exports = function (eleventyConfig) {
     return array.filter((item) => item["owner"] === value)
   })
 
-  eleventyConfig.addFilter('fileExists', function(filePath) {
-    const fs = require('fs');
-    return fs.existsSync(filePath);
-  });
+  eleventyConfig.addFilter("fileExists", function (filePath) {
+    const fs = require("fs")
+    return fs.existsSync(filePath)
+  })
 
   // Create a collection of items without permalinks so that we can reference them
   // in a separate shortcode to pull in partial content directly
