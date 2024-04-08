@@ -17,7 +17,7 @@ def calc_percent_difference(latest, prev):
             old number to compare to new number
 
     Returns:
-        Integer between 0 and 100 corresponding to the percent 
+        Float between 0 and 100 corresponding to the percent 
         difference.
     """
 
@@ -28,7 +28,25 @@ def calc_percent_difference(latest, prev):
     except ZeroDivisionError:
         dec = 0
 
-    return int(dec * 100)
+    return dec * 100
+
+def round_to_significant_figures(n, significant_figures):
+    """
+    Returns the input rounded to the desired number of significant figures
+
+    Arguments:
+        n: number
+
+        significant_figures: int
+            The number of significant figures to round to.
+    
+    Returns:
+        String of the number formatted to the desired number of significant figures.
+    """
+
+    formatted = '{:g}'.format(float('{:.{p}g}'.format(n, p=significant_figures)))
+
+    return formatted
 
 
 def get_heading_report_values(headings, oss_entity):
@@ -78,7 +96,7 @@ def get_heading_report_values(headings, oss_entity):
             f"latest_{heading}": oss_entity.metric_data[heading],
             f"previous_{heading}": prev_record,
             f"{heading}_diff": raw_diff,
-            f"{heading}_diff_percent": percent_difference,
+            f"{heading}_diff_percent": round_to_significant_figures(percent_difference, 2),
             f"{heading}_diff_color": diff_color,
             f"{heading}_diff_percent_color": diff_color
         })
