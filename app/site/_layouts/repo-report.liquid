@@ -12,8 +12,8 @@ layout: base
     </h1>
   </div>
 
-  <div class="tag_row">
-    <img src="{{ project.nadia_shields_badge_url }}" alt="Project Type" />
+  <div class="tags_row">
+    {% render "project-type-tag", type: project.nadia_badge_name, color: project.nadia_color, link: project.nadia_shields_badge_url%}
   </div>
   
   <div class="report_container">
