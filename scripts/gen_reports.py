@@ -47,7 +47,7 @@ def get_heading_report_values(headings, oss_entity):
     """
 
     report_values = {}
-    for heading, behavior in headings:
+    for heading, behavior in headings.items():
         prev_record = oss_entity.metric_data[heading]
 
         if heading in oss_entity.previous_metric_data.keys():
