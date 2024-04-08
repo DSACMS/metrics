@@ -454,17 +454,17 @@ def parse_nadia_label_into_badge(**kwargs):
 
 
     color_map = {
-        "club" : "#ff69b4",
-        "toy" : "#0000ff",
-        "stadium": "#ffa500",
-        "federation": "#66ff00"
+        "club" : "ff69b4",
+        "toy" : "0000ff",
+        "stadium": "ffa500",
+        "federation": "66ff00"
     }
 
     color = color_map.get(badge_name)
 
     if not color:
-        color = "#ff0000"
-        badge_name = "Midsize"
+        color = "ff0000"
+        badge_name = "midsize"
 
     url = f"https://img.shields.io/static/v1?label=project+type&message={badge_name}&color={color}"
 
