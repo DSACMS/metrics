@@ -191,10 +191,21 @@ def generate_repo_report_files(repos):
     for repo in repos:
         print(f"Generating repo report for repo {repo.name}")
         # Create a dictionary of values to calculate for the report
+
+
+        badge_name = repo.metric_data.get('nadia_badge_name')
+        badge_color = repo.metric_data.get('nadia_color')
+
+        if not badge_name or not badge_color:
+            badge_color = "#ff0000"
+            badge_name = "Unknown"
+
         report_values = {
             "date_stamp": date.today(),
             "repo_owner": repo.repo_owner,
             "repo_name": repo.name,
+            "repo_nadia_badge_name": badge_name,
+            "repo_nadia_badge_color": badge_color
         }
 
         #Define headings as key value pairs where
