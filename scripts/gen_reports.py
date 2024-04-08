@@ -87,7 +87,7 @@ def get_heading_report_values(headings, oss_entity):
             if raw_diff < 0:
                 # Red color
                 diff_color = 'color: #d31c08'
-        elif and_conditional or raw_diff < 0:
+        elif and_conditional or (raw_diff < 0 and not and_conditional):
             # Green color
             diff_color = 'color: #45c527'
 
@@ -138,20 +138,24 @@ def generate_org_report_files(orgs):
             "repo_owner": org.login
         }
 
-        org_metric_table_headings = [
-            'commits_count',
-            'issues_count',
-            'open_issues_count',
-            'closed_issues_count',
-            'pull_requests_count',
-            'open_pull_requests_count',
-            'merged_pull_requests_count',
-            'closed_pull_requests_count',
-            'forks_count',
-            'stargazers_count',
-            'watchers_count',
-            'followers_count'
-        ]
+        #Define headings as key value pairs where
+        #   key -> value = heading -> desired_behavior
+        #
+        # DesiredReportBehavior.VALUE_INCREASE means you want the value to go up
+        org_metric_table_headings = {
+            'commits_count': DesiredReportBehavior.VALUE_INCREASE.value,
+            'issues_count': DesiredReportBehavior.VALUE_INCREASE.value,
+            'open_issues_count': DesiredReportBehavior.VALUE_DECREASE.value,
+            'closed_issues_count': DesiredReportBehavior.VALUE_INCREASE.value,
+            'pull_requests_count': DesiredReportBehavior.VALUE_INCREASE.value,
+            'open_pull_requests_count': DesiredReportBehavior.VALUE_DECREASE.value,
+            'merged_pull_requests_count': DesiredReportBehavior.VALUE_INCREASE.value,
+            'closed_pull_requests_count': DesiredReportBehavior.VALUE_DECREASE.value,
+            'forks_count': DesiredReportBehavior.VALUE_INCREASE.value,
+            'stargazers_count': DesiredReportBehavior.VALUE_INCREASE.value,
+            'watchers_count': DesiredReportBehavior.VALUE_INCREASE.value,
+            'followers_count': DesiredReportBehavior.VALUE_INCREASE.value
+        }
 
         report_values.update(get_heading_report_values(
             org_metric_table_headings, org))
