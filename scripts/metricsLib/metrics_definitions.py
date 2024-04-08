@@ -208,4 +208,5 @@ SIMPLE_METRICS.append(CustomMetric("getCommitsByMonth", [
 
 
 NADIA_ENDPOINT = AUGUR_HOST + "/repos/{repo_id}/nadia-project-labeling-badge/"
-ADVANCED_METRICS.append(CustomMetric("getNadiaBadgeURL",["repo_id"],NADIA_ENDPOINT, parse_nadia_label_into_badge))
+ADVANCED_METRICS.append(CustomMetric("getNadiaBadgeURL",[
+  "repo_id"],NADIA_ENDPOINT, parse_nadia_label_into_badge))
