@@ -263,9 +263,9 @@ class GraphQLMetric(BaseMetric):
             if "message" not in response_json.keys():
                 raise requests.exceptions.InvalidJSONError(
                     response_json['errors'][0]['message'])
-            else:
-                raise requests.exceptions.InvalidJSONError(
-                    response_json['message'])
+
+            raise requests.exceptions.InvalidJSONError(
+                response_json['message'])
 
         # print(f"Response_JSON: {response_json}")
         # print(f"Return values: {self.return_values}")
