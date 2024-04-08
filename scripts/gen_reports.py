@@ -68,16 +68,16 @@ def get_heading_report_values(headings, oss_entity):
         diff_color = ''
 
 
-#        Truth Table:
-#
-#        +--------------+--------------------------------------+---+-------------------+
-#        | raw_diff > 0 | DesiredReportBehavior.VALUE_INCREASE | _ |      Result       |
-#        +--------------+--------------------------------------+---+-------------------+
-#        |            0 |                                    1 | _ | Red if negative   |
-#        |            1 |                                    0 | _ | Red if negative   |
-#        |            1 |                                    1 |   | Green             |
-#        |            0 |                                    0 | - | Green if negative |
-#        +--------------+--------------------------------------+---+-------------------+
+        #        Truth Table:
+        #
+        #        +--------------+--------------------------------------+---+-------------------+
+        #        | raw_diff > 0 | DesiredReportBehavior.VALUE_INCREASE | _ |      Result       |
+        #        +--------------+--------------------------------------+---+-------------------+
+        #        |            0 |                                    1 | _ | Red if negative   |
+        #        |            1 |                                    0 | _ | Red if negative   |
+        #        |            1 |                                    1 |   | Green             |
+        #        |            0 |                                    0 | - | Green if negative |
+        #        +--------------+--------------------------------------+---+-------------------+
 
 
         and_conditional = (raw_diff > 0 and 
