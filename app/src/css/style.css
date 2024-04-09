@@ -10,18 +10,9 @@
   flex-direction: column;
   align-items: center;
 }
-
-/*
-This is so that augur visualizations have the buttons cropped out.
-*/
-.firstResponsePRCrop {
-  width: 900px;
-  height: 600px;
-  overflow: hidden;
-}
-
+/* This is so that augur visualizations have the buttons cropped out. */
 .firstResponsePRCrop img {
   width: 900px;
-  height: 632px;
-  margin: -55px 0 0 0;
+  height: 550px;
+  object-fit: cover;
 }

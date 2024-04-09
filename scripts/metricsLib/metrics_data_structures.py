@@ -172,7 +172,7 @@ class ResourceMetric(BaseMetric):
         # return response
         return response
 
-    def get_values(self, oss_entity, params=None):
+    def get_values(self,params=None, oss_entity=None):
         try:
             r = self.hit_metric(params=params)
         except TimeoutError as e:
@@ -263,9 +263,9 @@ class GraphQLMetric(BaseMetric):
             if "message" not in response_json.keys():
                 raise requests.exceptions.InvalidJSONError(
                     response_json['errors'][0]['message'])
-            else:
-                raise requests.exceptions.InvalidJSONError(
-                    response_json['message'])
+
+            raise requests.exceptions.InvalidJSONError(
+                response_json['message'])
 
         # print(f"Response_JSON: {response_json}")
         # print(f"Return values: {self.return_values}")
@@ -432,6 +432,50 @@ class CustomMetric(BaseMetric):
 
 
 # Custom parse functions
+def parse_nadia_label_into_badge(**kwargs):
+    """
+    Parse the json returned by the augur nadia badging 
+    endpoint and return a url to the appropriate badge
+
+    Args: 
+        kwargs: dict
+            Keyword arguments used by the parsing function.
+
+    Returns:
+        Dictionary containing the url of the badge
+    """
+
+    metric_json = kwargs['metric_json']
+
+    try:
+        badge_name = metric_json[0]['nadia_badge_level']
+    except KeyError:
+        return {}
+
+
+    color_map = {
+        "club" : "ff69b4",
+        "toy" : "0000ff",
+        "stadium": "ffa500",
+        "federation": "66ff00"
+    }
+
+    color = color_map.get(badge_name)
+
+    if not color:
+        color = "ff0000"
+        badge_name = "midsize"
+
+    url = f"https://img.shields.io/static/v1?label=project+type&message={badge_name}&color={color}"
+
+    #return the url for the website to link to rather than waste time and space downloading
+    #  the svg tag and saving it
+    return {
+        "nadia_shields_badge_url": url,
+        "nadia_color": color,
+        "nadia_badge_name": badge_name
+    }
+
 def parse_commits_by_month(**kwargs):
     """
     Parse the raw json returned by the commits endpoint into

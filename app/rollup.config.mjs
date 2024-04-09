@@ -15,6 +15,11 @@ export default [
       file: "site/_includes/js/projects.js",
       format: "esm",
     },
+    input: "src/js/graphs.js",
+    output: {
+      file: "site/_includes/js/graphs.js",
+      format: "esm",
+    },
     plugins: [
       resolve(),
       babel(),

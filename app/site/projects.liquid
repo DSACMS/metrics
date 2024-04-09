@@ -36,7 +36,7 @@ layout: base
       <ul class="usa-card-group flex-align-stretch">
         {% assign orgProjects = projects | findProjectsInOrg: org.name %}
         {% for repo in orgProjects %}
-          {% render "project-card", repo: repo, base_url: site.baseurl %}
+          {% render 'project-card', repo: repo, base_url: site.baseurl %}
         {% endfor %}
       </ul>
     </div>

@@ -3,7 +3,7 @@ Definitions of specific metrics for metricsLib
 """
 from metricsLib.metrics_data_structures import CustomMetric, parse_commits_by_month, RangeMetric
 from metricsLib.metrics_data_structures import GraphQLMetric, LengthMetric, ResourceMetric
-from metricsLib.metrics_data_structures import ListMetric
+from metricsLib.metrics_data_structures import ListMetric, parse_nadia_label_into_badge
 from metricsLib.constants import TOKEN, AUGUR_HOST
 
 # The general procedure is to execute all metrics against all repos and orgs
@@ -205,3 +205,8 @@ ORG_METRICS.append(ListMetric("issueNewMonthly",["repo_group_id","period","begin
 COMMITS_ENDPOINT = "https://api.github.com/repos/{owner}/{repo}/commits"
 SIMPLE_METRICS.append(CustomMetric("getCommitsByMonth", [
                       'owner', 'repo'], COMMITS_ENDPOINT, parse_commits_by_month, token=TOKEN))
+
+
+NADIA_ENDPOINT = AUGUR_HOST + "/repos/{repo_id}/nadia-project-labeling-badge/"
+ADVANCED_METRICS.append(CustomMetric("getNadiaBadgeURL",[
+  "repo_id"],NADIA_ENDPOINT, parse_nadia_label_into_badge))
