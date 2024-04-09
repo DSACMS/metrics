@@ -23,6 +23,7 @@
             {% endif %}
             {% assign graphPath = graph | strip %}
             {% assign distPath = baseurl | append: "/assets/img/graphs" | append: graphPath %}
+            {% assign fileExtension = path | split: '.' | last %}
             <figure>
             {% if fileExtension == 'svg' %}
                 <embed type="image/svg+xml" src="{{ distPath }}" />
