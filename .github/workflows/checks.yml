@@ -51,5 +51,6 @@ jobs:
           uses: EPMatt/reviewdog-action-prettier@v1
           with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
+            workdir: app/
             reporter: github-pr-review
             level: warning
