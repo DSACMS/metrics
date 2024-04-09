@@ -148,7 +148,8 @@ class OSSEntity:
         """
         params = self.get_parameters_for_metric(metric)
 
-        self.store_metrics(metric.get_values(params=params, *args, **kwargs))
+        kwargs['params'] = params
+        self.store_metrics(metric.get_values(*args, **kwargs))
 
 
 class Repository(OSSEntity):
@@ -216,7 +217,8 @@ class Repository(OSSEntity):
 
 
             repo_val = next(
-                x for x in response_json if x['repo_name'] and x['repo_name'].lower() == repo_name.lower())
+                x for x in
+                response_json if x['repo_name'] and x['repo_name'].lower() == repo_name.lower())
         except StopIteration:
             print(f"Could not find repo {repo_git_url} in group {owner_id}")
             repo_val = {

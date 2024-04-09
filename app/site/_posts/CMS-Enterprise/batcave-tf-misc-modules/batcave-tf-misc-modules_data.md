@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-tf-misc-modules | REPORT-2024-03-31
+title: Open Source at CMS Metrics Report for batcave-tf-misc-modules | REPORT-2024-04-07
 permalink: /CMS-Enterprise/batcave-tf-misc-modules/
 
 org: CMS-Enterprise
 repo: batcave-tf-misc-modules
-reportID: REPORT-2024-03-31
-date_stampThisWeek: 2024-03-31
-date_stampLastWeek: 2024-03-31
+reportID: REPORT-2024-04-07
+date_stampThisWeek: 2024-04-07
+date_stampLastWeek: 2024-04-07
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -52,8 +52,8 @@ date_stampLastWeek: 2024-03-31
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>2</td>
-        <td>2</td>
+        <td>3</td>
+        <td>3</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
@@ -114,5 +114,10 @@ date_stampLastWeek: 2024-03-31
         <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/CMS-Enterprise/batcave-tf-misc-modules/firstResponseForClosedPR_batcave-tf-misc-modules_data.png" | url }}" />
       </figure>
     </div>
+    <!--- Line Complexity Graphs -->
+    <h3>Line Complexity</h3>
+    <figure>
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/CMS-Enterprise/batcave-tf-misc-modules/total_line_makeup_batcave-tf-misc-modules_data.svg" | url }}" />
+    </figure>
   </div>
 </div>

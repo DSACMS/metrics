@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-mdct-seds | REPORT-2024-03-31
+title: Open Source at CMS Metrics Report for macpro-mdct-seds | REPORT-2024-04-07
 permalink: /Enterprise-CMCS/macpro-mdct-seds/
 
 org: Enterprise-CMCS
 repo: macpro-mdct-seds
-reportID: REPORT-2024-03-31
-date_stampThisWeek: 2024-03-31
-date_stampLastWeek: 2024-03-31
+reportID: REPORT-2024-04-07
+date_stampThisWeek: 2024-04-07
+date_stampLastWeek: 2024-04-07
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,9 +24,9 @@ date_stampLastWeek: 2024-03-31
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>2590</td>
-        <td>2584</td>
-        <td style="color: #45c527" >6</td>
+        <td>2599</td>
+        <td>2592</td>
+        <td style="color: #45c527" >7</td>
         <td style="color: #45c527" >0%</td>
       </tr>
       <tr>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2024-03-31
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>3</td>
         <td>5</td>
-        <td>6</td>
-        <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >18%</td>
+        <td style="color: #d31c08" >-2</td>
+        <td style="color: #d31c08" >50%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>739</td>
-        <td>732</td>
+        <td>747</td>
+        <td>740</td>
         <td style="color: #45c527" >7</td>
         <td style="color: #45c527" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
-        <td>146</td>
-        <td>144</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >1%</td>
+        <td>147</td>
+        <td>147</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -114,5 +114,10 @@ date_stampLastWeek: 2024-03-31
         <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-mdct-seds/firstResponseForClosedPR_macpro-mdct-seds_data.png" | url }}" />
       </figure>
     </div>
+    <!--- Line Complexity Graphs -->
+    <h3>Line Complexity</h3>
+    <figure>
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-mdct-seds/total_line_makeup_macpro-mdct-seds_data.svg" | url }}" />
+    </figure>
   </div>
 </div>

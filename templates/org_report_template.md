@@ -104,13 +104,10 @@ date_stampLastWeek: {date_stamp}
 <div class="graph-container">
   <br>
   <h2>Activity Graphs</h2>
-  <div class="row">
+  <div class="all-graphs">
     <!--- Issues/PRs Status Breakdown Graph -->
-    <figure>
-      <embed type="image/svg+xml" src="{{{{ "/assets/img/graphs/{repo_owner}/{repo_owner}_issue_gauge.svg" | url }}}}" />
-    </figure>
-    <figure>
-      <embed type="image/svg+xml" src="{{{{ "/assets/img/graphs/{repo_owner}/{repo_owner}_new_issues_by_day_over_last_six_months.svg" | url }}}}" />
-    </figure>
+    {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_owner}_issue_gauge.svg", title: "Issues & PRs Status Breakdown" %}}
+    <!-- New Issues over Last 6 Months -->
+    {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_owner}_new_issues_by_day_over_last_six_months.svg", title: "New Issues over Last 6 Months" %}}
   </div>
 </div>

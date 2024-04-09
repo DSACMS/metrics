@@ -4,8 +4,9 @@ Defines constants for use in metricsLib
 import datetime
 import os
 from pathlib import Path
+from enum import Enum
 
-TIMEOUT_IN_SECONDS = 5
+TIMEOUT_IN_SECONDS = 20
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 # Folder Names to send over our projects tracked data
 PATH_TO_METRICS_DATA = (Path(__file__).parent /
@@ -29,3 +30,11 @@ with open(template_path, "r", encoding="utf-8") as file:
 
 with open(os.path.join(PATH_TO_TEMPLATES, "org_report_template.md"), "r", encoding="utf-8") as file:
     ORG_REPORT_TEMPLATE = file.read()
+
+class DesiredReportBehavior(Enum):
+    """
+    Enumeration class to define constants for report
+    heading generation behavior
+    """
+    VALUE_INCREASE = 1
+    VALUE_DECREASE = -1

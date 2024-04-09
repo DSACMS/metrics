@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for mac-fc-security-hub-visibility | REPORT-2024-03-31
+title: Open Source at CMS Metrics Report for mac-fc-security-hub-visibility | REPORT-2024-04-07
 permalink: /Enterprise-CMCS/mac-fc-security-hub-visibility/
 
 org: Enterprise-CMCS
 repo: mac-fc-security-hub-visibility
-reportID: REPORT-2024-03-31
-date_stampThisWeek: 2024-03-31
-date_stampLastWeek: 2024-03-31
+reportID: REPORT-2024-04-07
+date_stampThisWeek: 2024-04-07
+date_stampLastWeek: 2024-04-07
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -66,10 +66,10 @@ date_stampLastWeek: 2024-03-31
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>7</td>
         <td>6</td>
-        <td>6</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >15%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -114,5 +114,10 @@ date_stampLastWeek: 2024-03-31
         <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/Enterprise-CMCS/mac-fc-security-hub-visibility/firstResponseForClosedPR_mac-fc-security-hub-visibility_data.png" | url }}" />
       </figure>
     </div>
+    <!--- Line Complexity Graphs -->
+    <h3>Line Complexity</h3>
+    <figure>
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/mac-fc-security-hub-visibility/total_line_makeup_mac-fc-security-hub-visibility_data.svg" | url }}" />
+    </figure>
   </div>
 </div>

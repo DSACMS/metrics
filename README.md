@@ -1,6 +1,8 @@
 <!--- # NOTE: Modify sections marked with `TODO` and then rename the file.-->
 
 # Metrics Dashboard for CMS Open Source Projects
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/DSACMS/metrics/badge)](https://securityscorecards.dev/viewer/?uri=github.com/DSACMS/metrics)
+
 The Metrics Dashboard webpage shows a weekly and monthly overview across open source projects within a specified organization. This webpage is meant to be used by developers and program managers interested in strategy and web presence within CMS open source projects
 
 ## Getting Started

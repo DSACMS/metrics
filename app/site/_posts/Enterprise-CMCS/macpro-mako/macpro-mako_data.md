@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-mako | REPORT-2024-03-31
+title: Open Source at CMS Metrics Report for macpro-mako | REPORT-2024-04-07
 permalink: /Enterprise-CMCS/macpro-mako/
 
 org: Enterprise-CMCS
 repo: macpro-mako
-reportID: REPORT-2024-03-31
-date_stampThisWeek: 2024-03-31
-date_stampLastWeek: 2024-03-31
+reportID: REPORT-2024-04-07
+date_stampThisWeek: 2024-04-07
+date_stampLastWeek: 2024-04-07
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,8 +24,8 @@ date_stampLastWeek: 2024-03-31
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>1189</td>
-        <td>1184</td>
+        <td>1201</td>
+        <td>1196</td>
         <td style="color: #45c527" >5</td>
         <td style="color: #45c527" >0%</td>
       </tr>
@@ -52,22 +52,22 @@ date_stampLastWeek: 2024-03-31
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>14</td>
-        <td>14</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td>8</td>
+        <td>10</td>
+        <td style="color: #d31c08" >-2</td>
+        <td style="color: #d31c08" >22%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>364</td>
-        <td>356</td>
-        <td style="color: #45c527" >8</td>
-        <td style="color: #45c527" >2%</td>
+        <td>381</td>
+        <td>377</td>
+        <td style="color: #45c527" >4</td>
+        <td style="color: #45c527" >1%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
-        <td>79</td>
-        <td>78</td>
+        <td>84</td>
+        <td>83</td>
         <td style="color: #45c527" >1</td>
         <td style="color: #45c527" >1%</td>
       </tr>
@@ -114,5 +114,10 @@ date_stampLastWeek: 2024-03-31
         <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-mako/firstResponseForClosedPR_macpro-mako_data.png" | url }}" />
       </figure>
     </div>
+    <!--- Line Complexity Graphs -->
+    <h3>Line Complexity</h3>
+    <figure>
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-mako/total_line_makeup_macpro-mako_data.svg" | url }}" />
+    </figure>
   </div>
 </div>

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-mdct-qmr | REPORT-2024-03-31
+title: Open Source at CMS Metrics Report for macpro-mdct-qmr | REPORT-2024-04-07
 permalink: /Enterprise-CMCS/macpro-mdct-qmr/
 
 org: Enterprise-CMCS
 repo: macpro-mdct-qmr
-reportID: REPORT-2024-03-31
-date_stampThisWeek: 2024-03-31
-date_stampLastWeek: 2024-03-31
+reportID: REPORT-2024-04-07
+date_stampThisWeek: 2024-04-07
+date_stampLastWeek: 2024-04-07
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,9 +24,9 @@ date_stampLastWeek: 2024-03-31
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>4232</td>
-        <td>4216</td>
-        <td style="color: #45c527" >16</td>
+        <td>4240</td>
+        <td>4237</td>
+        <td style="color: #45c527" >3</td>
         <td style="color: #45c527" >0%</td>
       </tr>
       <tr>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2024-03-31
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>5</td>
         <td>10</td>
-        <td style="color: #d31c08" >-5</td>
-        <td style="color: #d31c08" >66%</td>
+        <td>6</td>
+        <td style="color: #45c527" >4</td>
+        <td style="color: #45c527" >50%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>1248</td>
-        <td>1232</td>
-        <td style="color: #45c527" >16</td>
-        <td style="color: #45c527" >1%</td>
+        <td>1256</td>
+        <td>1253</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>212</td>
         <td>211</td>
-        <td>208</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >1%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -114,5 +114,10 @@ date_stampLastWeek: 2024-03-31
         <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-mdct-qmr/firstResponseForClosedPR_macpro-mdct-qmr_data.png" | url }}" />
       </figure>
     </div>
+    <!--- Line Complexity Graphs -->
+    <h3>Line Complexity</h3>
+    <figure>
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-mdct-qmr/total_line_makeup_macpro-mdct-qmr_data.svg" | url }}" />
+    </figure>
   </div>
 </div>

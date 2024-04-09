@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for metrics | REPORT-2024-03-31
+title: Open Source at CMS Metrics Report for metrics | REPORT-2024-04-07
 permalink: /DSACMS/metrics/
 
 org: DSACMS
 repo: metrics
-reportID: REPORT-2024-03-31
-date_stampThisWeek: 2024-03-31
-date_stampLastWeek: 2024-03-31
+reportID: REPORT-2024-04-07
+date_stampThisWeek: 2024-04-07
+date_stampLastWeek: 2024-04-07
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,17 +24,17 @@ date_stampLastWeek: 2024-03-31
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>440</td>
-        <td>439</td>
+        <td>464</td>
+        <td>463</td>
         <td style="color: #45c527" >1</td>
         <td style="color: #45c527" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
+        <td>15</td>
         <td>14</td>
-        <td>14</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >6%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
@@ -45,24 +45,24 @@ date_stampLastWeek: 2024-03-31
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
+        <td>5</td>
         <td>4</td>
-        <td>4</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >22%</td>
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>2</td>
-        <td>1</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >66%</td>
+        <td>4</td>
+        <td>4</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>75</td>
-        <td>75</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td>78</td>
+        <td>77</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >1%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -81,9 +81,9 @@ date_stampLastWeek: 2024-03-31
       <tr>
         <th scope="row">Stars</th>
         <td>5</td>
-        <td>3</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >50%</td>
+        <td>5</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
@@ -114,5 +114,10 @@ date_stampLastWeek: 2024-03-31
         <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/DSACMS/metrics/firstResponseForClosedPR_metrics_data.png" | url }}" />
       </figure>
     </div>
+    <!--- Line Complexity Graphs -->
+    <h3>Line Complexity</h3>
+    <figure>
+      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/DSACMS/metrics/total_line_makeup_metrics_data.svg" | url }}" />
+    </figure>
   </div>
 </div>

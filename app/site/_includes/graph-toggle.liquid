@@ -1,0 +1,48 @@
+{% assign graphName = name| append: "-graph" %}
+{% assign buttonName = name | append: "-button-" %}
+{% assign graphsCheck = true %}
+
+{% comment %} Check for file existence of graphs {% endcomment %}
+{% for path in graphs %}
+    {% assign devPath = "site/_graphs"| append: path %}
+    {% unless devPath | fileExists %}
+      {% capture graphsCheck %}false{% endcapture %}
+      {% break %}
+    {% endunless %}
+{% endfor %}
+
+{% comment %} Render components accordingly {% endcomment %}  
+{% if graphsCheck %}
+    <div class="graph-container">
+        <h3>{{ title }}</h3>
+        {% for graph in graphs %}
+            {% if forloop.first %}
+                <div class={{ graphName }} id="{{ forloop.index0 }}">
+            {% else %}
+                <div class={{ graphName }} id="{{ forloop.index0 }}" style="display: none;">
+            {% endif %}
+            {% assign graphPath = graph | strip %}
+            {% assign distPath = baseurl | append: "/assets/img/graphs" | append: graphPath %}
+            <figure>
+            {% if fileExtension == 'svg' %}
+                <embed type="image/svg+xml" src="{{ distPath }}" />
+            {% else %}
+                <img src="{{ distPath }}"/>
+            {% endif %}
+            </figure>
+            </div>
+        {% endfor %}
+
+        <ul class="usa-button-group ">
+            {% for option in options %}
+                <li class="usa-button-group__item">
+                {% if forloop.first %}
+                    <button type="button" id={{ buttonName | append: forloop.index0 }} class="usa-button" onclick="showGraph({{ forloop.index0 }}, '{{ graphName }}','{{ buttonName }}')">{{ option }}</button>
+                {% else %}
+                    <button type="button" id={{ buttonName | append: forloop.index0 }} class="usa-button usa-button--outline" onclick="showGraph({{ forloop.index0 }}, '{{ graphName }}','{{ buttonName }}')">{{ option }}</button>
+                {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
