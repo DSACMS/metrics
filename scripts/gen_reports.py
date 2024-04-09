@@ -98,14 +98,13 @@ def get_heading_report_values(headings, oss_entity):
         #        +--------------+--------------------------------------+---+-------------------+
 
 
-        and_conditional = (raw_diff > 0 and 
-            (behavior == DesiredReportBehavior.VALUE_INCREASE.value))
+        and_conditional = ((raw_diff>0) and (behavior == DesiredReportBehavior.VALUE_INCREASE.value))
         #Use a XOR by using the != operator
-        if raw_diff > 0 != (behavior == DesiredReportBehavior.VALUE_INCREASE.value):
+        if (raw_diff > 0) != (behavior == DesiredReportBehavior.VALUE_INCREASE.value):
             if raw_diff < 0:
                 # Red color
                 diff_color = 'color: #d31c08'
-        elif and_conditional or (raw_diff < 0 and not and_conditional):
+        elif and_conditional or ((raw_diff < 0) and not and_conditional):
             # Green color
             diff_color = 'color: #45c527'
 
