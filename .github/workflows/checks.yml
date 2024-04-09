@@ -17,3 +17,40 @@ jobs:
           level: warning
           glob_pattern: "**/*.py"
           filter_mode: "file"
+  frontend-checks:
+      runs-on: ubuntu-latest
+      defaults:
+        run:
+          working-directory: ./app
+      steps:
+        - uses: actions/checkout@v3
+
+        - uses: actions/setup-node@v3
+          with:
+            node-version: "18.13"
+
+        - name: Cache dependencies
+          uses: actions/cache@v3
+          with:
+            path: ~/.npm
+            key: npm-${{ hashFiles('**/package-lock.json') }}
+            restore-keys: |
+              npm-
+
+        - name: Install dependencies
+          run: npm install
+
+        - name: Run linter
+          uses: reviewdog/action-eslint@v1
+          with:	
+            github_token: ${{ secrets.GITHUB_TOKEN }}	
+            reporter: github-pr-review
+            workdir: app/
+
+        - name: Check code style
+          uses: EPMatt/reviewdog-action-prettier@v1
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            workdir: app/
+            reporter: github-pr-review
+            level: warning
