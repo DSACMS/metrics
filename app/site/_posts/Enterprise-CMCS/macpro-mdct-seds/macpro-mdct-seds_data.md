@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-mdct-seds | REPORT-2024-04-07
+title: Open Source at CMS Metrics Report for macpro-mdct-seds | REPORT-2024-04-09
 permalink: /Enterprise-CMCS/macpro-mdct-seds/
 
 org: Enterprise-CMCS
 repo: macpro-mdct-seds
-reportID: REPORT-2024-04-07
-date_stampThisWeek: 2024-04-07
-date_stampLastWeek: 2024-04-07
+reportID: REPORT-2024-04-09
+date_stampThisWeek: 2024-04-09
+date_stampLastWeek: 2024-04-09
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-04-07
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>2602</td>
         <td>2599</td>
-        <td>2592</td>
-        <td style="color: #45c527" >7</td>
-        <td style="color: #45c527" >0%</td>
+        <td style="" >3</td>
+        <td style="" >0.12%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -53,16 +53,16 @@ date_stampLastWeek: 2024-04-07
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>3</td>
-        <td>5</td>
-        <td style="color: #d31c08" >-2</td>
-        <td style="color: #d31c08" >50%</td>
+        <td>3</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>750</td>
         <td>747</td>
-        <td>740</td>
-        <td style="color: #45c527" >7</td>
-        <td style="color: #45c527" >0%</td>
+        <td style="" >3</td>
+        <td style="" >0.4%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -98,26 +98,17 @@ date_stampLastWeek: 2024-04-07
 <div class="graph-container">
   <br>
   <h2>Activity Graphs</h2>
-  <div class="row">
+  <div class="all-graphs">
     <!--- Issues/PRs Status Breakdown Graph -->
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-mdct-seds/issue_gauge_macpro-mdct-seds_data.svg" | url }}" />
-    </figure>
+    {% render "graph-section"  baseurl: site.baseurl, path: "/Enterprise-CMCS/macpro-mdct-seds/issue_gauge_macpro-mdct-seds_data.svg", title: "Issues & PRs Status Breakdown" %}
     <!--- Contributor Activity Line Graph -->
-    <h3>Commits by Month</h3>
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-mdct-seds/commit_sparklines_macpro-mdct-seds_data.svg" | url }}" />
-    </figure>
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/macpro-mdct-seds/commit_sparklines_macpro-mdct-seds_data.svg", title: "Commits by Month" %}
     <!--- First Response For Closed PR Scatterplot -->
-    <div class="firstResponsePRCrop">
-      <figure>
-        <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-mdct-seds/firstResponseForClosedPR_macpro-mdct-seds_data.png" | url }}" />
-      </figure>
-    </div>
+    {% render "graph-section" baseurl: site.baseurl, class: "firstResponsePRCrop", path: "/Enterprise-CMCS/macpro-mdct-seds/firstResponseForClosedPR_macpro-mdct-seds_data.png", title: "First Response For Closed PR" %}
     <!--- Line Complexity Graphs -->
-    <h3>Line Complexity</h3>
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/macpro-mdct-seds/total_line_makeup_macpro-mdct-seds_data.svg" | url }}" />
-    </figure>
-  </div>
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/macpro-mdct-seds/total_line_makeup_macpro-mdct-seds_data.svg", title: "Line Complexity" %}
+    <!--- New Commit Contributors by Day over Last Month and Last 6 Months -->
+      {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
+      {% assign graphsArray = '/Enterprise-CMCS/macpro-mdct-seds/new_commit_contributors_by_day_over_last_month_macpro-mdct-seds_data.svg, /Enterprise-CMCS/macpro-mdct-seds/new_commit_contributors_by_day_over_last_six_months_macpro-mdct-seds_data.svg' | split: ',' %}
+      {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
 </div>

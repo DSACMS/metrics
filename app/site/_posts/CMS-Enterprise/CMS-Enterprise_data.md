@@ -1,12 +1,12 @@
 ---
 layout: org-report
-title: Open Source at CMS Metrics Report for CMS-Enterprise | REPORT-2024-04-07
+title: Open Source at CMS Metrics Report for CMS-Enterprise | REPORT-2024-04-09
 permalink: /CMS-Enterprise/
 
 org: CMS-Enterprise
-reportID: REPORT-2024-04-07
-date_stampThisWeek: 2024-04-07
-date_stampLastWeek: 2024-04-07
+reportID: REPORT-2024-04-09
+date_stampThisWeek: 2024-04-09
+date_stampLastWeek: 2024-04-09
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -51,10 +51,10 @@ date_stampLastWeek: 2024-04-07
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>41</td>
         <td>40</td>
-        <td>40</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >1</td>
+        <td style="" >2.5%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
@@ -104,13 +104,10 @@ date_stampLastWeek: 2024-04-07
 <div class="graph-container">
   <br>
   <h2>Activity Graphs</h2>
-  <div class="row">
+  <div class="all-graphs">
     <!--- Issues/PRs Status Breakdown Graph -->
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/CMS-Enterprise/CMS-Enterprise_issue_gauge.svg" | url }}" />
-    </figure>
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/CMS-Enterprise/CMS-Enterprise_new_issues_by_day_over_last_six_months.svg" | url }}" />
-    </figure>
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/CMS-Enterprise_issue_gauge.svg", title: "Issues & PRs Status Breakdown" %}
+    <!-- New Issues over Last 6 Months -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/CMS-Enterprise_new_issues_by_day_over_last_six_months.svg", title: "New Issues over Last 6 Months" %}
   </div>
 </div>

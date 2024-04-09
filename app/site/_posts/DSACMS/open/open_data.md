@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for open | REPORT-2024-04-07
+title: Open Source at CMS Metrics Report for open | REPORT-2024-04-09
 permalink: /DSACMS/open/
 
 org: DSACMS
 repo: open
-reportID: REPORT-2024-04-07
-date_stampThisWeek: 2024-04-07
-date_stampLastWeek: 2024-04-07
+reportID: REPORT-2024-04-09
+date_stampThisWeek: 2024-04-09
+date_stampLastWeek: 2024-04-09
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -98,26 +98,17 @@ date_stampLastWeek: 2024-04-07
 <div class="graph-container">
   <br>
   <h2>Activity Graphs</h2>
-  <div class="row">
+  <div class="all-graphs">
     <!--- Issues/PRs Status Breakdown Graph -->
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/DSACMS/open/issue_gauge_open_data.svg" | url }}" />
-    </figure>
+    {% render "graph-section"  baseurl: site.baseurl, path: "/DSACMS/open/issue_gauge_open_data.svg", title: "Issues & PRs Status Breakdown" %}
     <!--- Contributor Activity Line Graph -->
-    <h3>Commits by Month</h3>
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/DSACMS/open/commit_sparklines_open_data.svg" | url }}" />
-    </figure>
+    {% render "graph-section" baseurl: site.baseurl, path: "/DSACMS/open/commit_sparklines_open_data.svg", title: "Commits by Month" %}
     <!--- First Response For Closed PR Scatterplot -->
-    <div class="firstResponsePRCrop">
-      <figure>
-        <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/DSACMS/open/firstResponseForClosedPR_open_data.png" | url }}" />
-      </figure>
-    </div>
+    {% render "graph-section" baseurl: site.baseurl, class: "firstResponsePRCrop", path: "/DSACMS/open/firstResponseForClosedPR_open_data.png", title: "First Response For Closed PR" %}
     <!--- Line Complexity Graphs -->
-    <h3>Line Complexity</h3>
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/DSACMS/open/total_line_makeup_open_data.svg" | url }}" />
-    </figure>
-  </div>
+    {% render "graph-section" baseurl: site.baseurl, path: "/DSACMS/open/total_line_makeup_open_data.svg", title: "Line Complexity" %}
+    <!--- New Commit Contributors by Day over Last Month and Last 6 Months -->
+      {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
+      {% assign graphsArray = '/DSACMS/open/new_commit_contributors_by_day_over_last_month_open_data.svg, /DSACMS/open/new_commit_contributors_by_day_over_last_six_months_open_data.svg' | split: ',' %}
+      {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
 </div>

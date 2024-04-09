@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for repo-scaffolder | REPORT-2024-04-07
+title: Open Source at CMS Metrics Report for repo-scaffolder | REPORT-2024-04-09
 permalink: /DSACMS/repo-scaffolder/
 
 org: DSACMS
 repo: repo-scaffolder
-reportID: REPORT-2024-04-07
-date_stampThisWeek: 2024-04-07
-date_stampLastWeek: 2024-04-07
+reportID: REPORT-2024-04-09
+date_stampThisWeek: 2024-04-09
+date_stampLastWeek: 2024-04-09
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -38,17 +38,17 @@ date_stampLastWeek: 2024-04-07
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>19</td>
         <td>22</td>
-        <td>22</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >-3</td>
+        <td style="color: #45c527" >15%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
+        <td>3</td>
         <td>0</td>
-        <td>0</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >3</td>
+        <td style="" >200%</td>
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
@@ -98,26 +98,17 @@ date_stampLastWeek: 2024-04-07
 <div class="graph-container">
   <br>
   <h2>Activity Graphs</h2>
-  <div class="row">
+  <div class="all-graphs">
     <!--- Issues/PRs Status Breakdown Graph -->
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/DSACMS/repo-scaffolder/issue_gauge_repo-scaffolder_data.svg" | url }}" />
-    </figure>
+    {% render "graph-section"  baseurl: site.baseurl, path: "/DSACMS/repo-scaffolder/issue_gauge_repo-scaffolder_data.svg", title: "Issues & PRs Status Breakdown" %}
     <!--- Contributor Activity Line Graph -->
-    <h3>Commits by Month</h3>
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/DSACMS/repo-scaffolder/commit_sparklines_repo-scaffolder_data.svg" | url }}" />
-    </figure>
+    {% render "graph-section" baseurl: site.baseurl, path: "/DSACMS/repo-scaffolder/commit_sparklines_repo-scaffolder_data.svg", title: "Commits by Month" %}
     <!--- First Response For Closed PR Scatterplot -->
-    <div class="firstResponsePRCrop">
-      <figure>
-        <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/DSACMS/repo-scaffolder/firstResponseForClosedPR_repo-scaffolder_data.png" | url }}" />
-      </figure>
-    </div>
+    {% render "graph-section" baseurl: site.baseurl, class: "firstResponsePRCrop", path: "/DSACMS/repo-scaffolder/firstResponseForClosedPR_repo-scaffolder_data.png", title: "First Response For Closed PR" %}
     <!--- Line Complexity Graphs -->
-    <h3>Line Complexity</h3>
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/DSACMS/repo-scaffolder/total_line_makeup_repo-scaffolder_data.svg" | url }}" />
-    </figure>
-  </div>
+    {% render "graph-section" baseurl: site.baseurl, path: "/DSACMS/repo-scaffolder/total_line_makeup_repo-scaffolder_data.svg", title: "Line Complexity" %}
+    <!--- New Commit Contributors by Day over Last Month and Last 6 Months -->
+      {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
+      {% assign graphsArray = '/DSACMS/repo-scaffolder/new_commit_contributors_by_day_over_last_month_repo-scaffolder_data.svg, /DSACMS/repo-scaffolder/new_commit_contributors_by_day_over_last_six_months_repo-scaffolder_data.svg' | split: ',' %}
+      {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
 </div>

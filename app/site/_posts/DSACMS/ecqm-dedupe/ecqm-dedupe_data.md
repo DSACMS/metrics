@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ecqm-dedupe | REPORT-2024-04-07
+title: Open Source at CMS Metrics Report for ecqm-dedupe | REPORT-2024-04-09
 permalink: /DSACMS/ecqm-dedupe/
 
 org: DSACMS
 repo: ecqm-dedupe
-reportID: REPORT-2024-04-07
-date_stampThisWeek: 2024-04-07
-date_stampLastWeek: 2024-04-07
+reportID: REPORT-2024-04-09
+date_stampThisWeek: 2024-04-09
+date_stampLastWeek: 2024-04-09
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -52,10 +52,10 @@ date_stampLastWeek: 2024-04-07
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>1</td>
         <td>0</td>
-        <td>0</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >1</td>
+        <td style="" >200%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
@@ -98,26 +98,17 @@ date_stampLastWeek: 2024-04-07
 <div class="graph-container">
   <br>
   <h2>Activity Graphs</h2>
-  <div class="row">
+  <div class="all-graphs">
     <!--- Issues/PRs Status Breakdown Graph -->
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/DSACMS/ecqm-dedupe/issue_gauge_ecqm-dedupe_data.svg" | url }}" />
-    </figure>
+    {% render "graph-section"  baseurl: site.baseurl, path: "/DSACMS/ecqm-dedupe/issue_gauge_ecqm-dedupe_data.svg", title: "Issues & PRs Status Breakdown" %}
     <!--- Contributor Activity Line Graph -->
-    <h3>Commits by Month</h3>
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/DSACMS/ecqm-dedupe/commit_sparklines_ecqm-dedupe_data.svg" | url }}" />
-    </figure>
+    {% render "graph-section" baseurl: site.baseurl, path: "/DSACMS/ecqm-dedupe/commit_sparklines_ecqm-dedupe_data.svg", title: "Commits by Month" %}
     <!--- First Response For Closed PR Scatterplot -->
-    <div class="firstResponsePRCrop">
-      <figure>
-        <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/DSACMS/ecqm-dedupe/firstResponseForClosedPR_ecqm-dedupe_data.png" | url }}" />
-      </figure>
-    </div>
+    {% render "graph-section" baseurl: site.baseurl, class: "firstResponsePRCrop", path: "/DSACMS/ecqm-dedupe/firstResponseForClosedPR_ecqm-dedupe_data.png", title: "First Response For Closed PR" %}
     <!--- Line Complexity Graphs -->
-    <h3>Line Complexity</h3>
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/DSACMS/ecqm-dedupe/total_line_makeup_ecqm-dedupe_data.svg" | url }}" />
-    </figure>
-  </div>
+    {% render "graph-section" baseurl: site.baseurl, path: "/DSACMS/ecqm-dedupe/total_line_makeup_ecqm-dedupe_data.svg", title: "Line Complexity" %}
+    <!--- New Commit Contributors by Day over Last Month and Last 6 Months -->
+      {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
+      {% assign graphsArray = '/DSACMS/ecqm-dedupe/new_commit_contributors_by_day_over_last_month_ecqm-dedupe_data.svg, /DSACMS/ecqm-dedupe/new_commit_contributors_by_day_over_last_six_months_ecqm-dedupe_data.svg' | split: ',' %}
+      {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
 </div>

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for mac-fc-security-hub-collector | REPORT-2024-04-07
+title: Open Source at CMS Metrics Report for mac-fc-security-hub-collector | REPORT-2024-04-09
 permalink: /Enterprise-CMCS/mac-fc-security-hub-collector/
 
 org: Enterprise-CMCS
 repo: mac-fc-security-hub-collector
-reportID: REPORT-2024-04-07
-date_stampThisWeek: 2024-04-07
-date_stampLastWeek: 2024-04-07
+reportID: REPORT-2024-04-09
+date_stampThisWeek: 2024-04-09
+date_stampLastWeek: 2024-04-09
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -98,26 +98,17 @@ date_stampLastWeek: 2024-04-07
 <div class="graph-container">
   <br>
   <h2>Activity Graphs</h2>
-  <div class="row">
+  <div class="all-graphs">
     <!--- Issues/PRs Status Breakdown Graph -->
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/mac-fc-security-hub-collector/issue_gauge_mac-fc-security-hub-collector_data.svg" | url }}" />
-    </figure>
+    {% render "graph-section"  baseurl: site.baseurl, path: "/Enterprise-CMCS/mac-fc-security-hub-collector/issue_gauge_mac-fc-security-hub-collector_data.svg", title: "Issues & PRs Status Breakdown" %}
     <!--- Contributor Activity Line Graph -->
-    <h3>Commits by Month</h3>
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/mac-fc-security-hub-collector/commit_sparklines_mac-fc-security-hub-collector_data.svg" | url }}" />
-    </figure>
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/mac-fc-security-hub-collector/commit_sparklines_mac-fc-security-hub-collector_data.svg", title: "Commits by Month" %}
     <!--- First Response For Closed PR Scatterplot -->
-    <div class="firstResponsePRCrop">
-      <figure>
-        <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/Enterprise-CMCS/mac-fc-security-hub-collector/firstResponseForClosedPR_mac-fc-security-hub-collector_data.png" | url }}" />
-      </figure>
-    </div>
+    {% render "graph-section" baseurl: site.baseurl, class: "firstResponsePRCrop", path: "/Enterprise-CMCS/mac-fc-security-hub-collector/firstResponseForClosedPR_mac-fc-security-hub-collector_data.png", title: "First Response For Closed PR" %}
     <!--- Line Complexity Graphs -->
-    <h3>Line Complexity</h3>
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/mac-fc-security-hub-collector/total_line_makeup_mac-fc-security-hub-collector_data.svg" | url }}" />
-    </figure>
-  </div>
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/mac-fc-security-hub-collector/total_line_makeup_mac-fc-security-hub-collector_data.svg", title: "Line Complexity" %}
+    <!--- New Commit Contributors by Day over Last Month and Last 6 Months -->
+      {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
+      {% assign graphsArray = '/Enterprise-CMCS/mac-fc-security-hub-collector/new_commit_contributors_by_day_over_last_month_mac-fc-security-hub-collector_data.svg, /Enterprise-CMCS/mac-fc-security-hub-collector/new_commit_contributors_by_day_over_last_six_months_mac-fc-security-hub-collector_data.svg' | split: ',' %}
+      {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
 </div>

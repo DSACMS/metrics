@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay | REPORT-2024-04-07
+title: Open Source at CMS Metrics Report for cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay | REPORT-2024-04-09
 permalink: /CMS-Enterprise/cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay/
 
 org: CMS-Enterprise
 repo: cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay
-reportID: REPORT-2024-04-07
-date_stampThisWeek: 2024-04-07
-date_stampLastWeek: 2024-04-07
+reportID: REPORT-2024-04-09
+date_stampThisWeek: 2024-04-09
+date_stampLastWeek: 2024-04-09
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -98,26 +98,17 @@ date_stampLastWeek: 2024-04-07
 <div class="graph-container">
   <br>
   <h2>Activity Graphs</h2>
-  <div class="row">
+  <div class="all-graphs">
     <!--- Issues/PRs Status Breakdown Graph -->
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/CMS-Enterprise/cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay/issue_gauge_cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay_data.svg" | url }}" />
-    </figure>
+    {% render "graph-section"  baseurl: site.baseurl, path: "/CMS-Enterprise/cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay/issue_gauge_cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay_data.svg", title: "Issues & PRs Status Breakdown" %}
     <!--- Contributor Activity Line Graph -->
-    <h3>Commits by Month</h3>
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/CMS-Enterprise/cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay/commit_sparklines_cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay_data.svg" | url }}" />
-    </figure>
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay/commit_sparklines_cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay_data.svg", title: "Commits by Month" %}
     <!--- First Response For Closed PR Scatterplot -->
-    <div class="firstResponsePRCrop">
-      <figure>
-        <img alt="firstResponseForClosedPR" src="{{ "/assets/img/graphs/CMS-Enterprise/cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay/firstResponseForClosedPR_cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay_data.png" | url }}" />
-      </figure>
-    </div>
+    {% render "graph-section" baseurl: site.baseurl, class: "firstResponsePRCrop", path: "/CMS-Enterprise/cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay/firstResponseForClosedPR_cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay_data.png", title: "First Response For Closed PR" %}
     <!--- Line Complexity Graphs -->
-    <h3>Line Complexity</h3>
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/CMS-Enterprise/cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay/total_line_makeup_cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay_data.svg" | url }}" />
-    </figure>
-  </div>
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay/total_line_makeup_cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay_data.svg", title: "Line Complexity" %}
+    <!--- New Commit Contributors by Day over Last Month and Last 6 Months -->
+      {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
+      {% assign graphsArray = '/CMS-Enterprise/cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay/new_commit_contributors_by_day_over_last_month_cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay_data.svg, /CMS-Enterprise/cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay/new_commit_contributors_by_day_over_last_six_months_cms-ars-5.0-aws-rds-oracle-mysql-8-stig-overlay_data.svg' | split: ',' %}
+      {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
 </div>

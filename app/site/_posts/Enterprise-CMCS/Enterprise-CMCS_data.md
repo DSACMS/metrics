@@ -1,12 +1,12 @@
 ---
 layout: org-report
-title: Open Source at CMS Metrics Report for Enterprise-CMCS | REPORT-2024-04-07
+title: Open Source at CMS Metrics Report for Enterprise-CMCS | REPORT-2024-04-09
 permalink: /Enterprise-CMCS/
 
 org: Enterprise-CMCS
-reportID: REPORT-2024-04-07
-date_stampThisWeek: 2024-04-07
-date_stampLastWeek: 2024-04-07
+reportID: REPORT-2024-04-09
+date_stampThisWeek: 2024-04-09
+date_stampLastWeek: 2024-04-09
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -23,10 +23,10 @@ date_stampLastWeek: 2024-04-07
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>27983</td>
         <td>27903</td>
-        <td>27867</td>
-        <td style="color: #45c527" >36</td>
-        <td style="color: #45c527" >0%</td>
+        <td style="" >80</td>
+        <td style="" >0.29%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -51,24 +51,24 @@ date_stampLastWeek: 2024-04-07
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>152</td>
         <td>153</td>
-        <td>156</td>
-        <td style="color: #d31c08" >-3</td>
-        <td style="color: #d31c08" >1%</td>
+        <td style="color: #45c527" >-1</td>
+        <td style="color: #45c527" >0.66%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>11652</td>
         <td>11631</td>
-        <td>11605</td>
-        <td style="color: #45c527" >26</td>
-        <td style="color: #45c527" >0%</td>
+        <td style="" >21</td>
+        <td style="" >0.18%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>3059</td>
         <td>3047</td>
-        <td>3042</td>
-        <td style="color: #45c527" >5</td>
-        <td style="color: #45c527" >0%</td>
+        <td style="" >12</td>
+        <td style="" >0.39%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -104,13 +104,10 @@ date_stampLastWeek: 2024-04-07
 <div class="graph-container">
   <br>
   <h2>Activity Graphs</h2>
-  <div class="row">
+  <div class="all-graphs">
     <!--- Issues/PRs Status Breakdown Graph -->
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/Enterprise-CMCS_issue_gauge.svg" | url }}" />
-    </figure>
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/Enterprise-CMCS/Enterprise-CMCS_new_issues_by_day_over_last_six_months.svg" | url }}" />
-    </figure>
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/Enterprise-CMCS_issue_gauge.svg", title: "Issues & PRs Status Breakdown" %}
+    <!-- New Issues over Last 6 Months -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/Enterprise-CMCS_new_issues_by_day_over_last_six_months.svg", title: "New Issues over Last 6 Months" %}
   </div>
 </div>

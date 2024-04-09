@@ -1,12 +1,12 @@
 ---
 layout: org-report
-title: Open Source at CMS Metrics Report for DSACMS | REPORT-2024-04-07
+title: Open Source at CMS Metrics Report for DSACMS | REPORT-2024-04-09
 permalink: /DSACMS/
 
 org: DSACMS
-reportID: REPORT-2024-04-07
-date_stampThisWeek: 2024-04-07
-date_stampLastWeek: 2024-04-07
+reportID: REPORT-2024-04-09
+date_stampThisWeek: 2024-04-09
+date_stampLastWeek: 2024-04-09
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -23,45 +23,45 @@ date_stampLastWeek: 2024-04-07
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>1089</td>
         <td>1015</td>
-        <td>1014</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0%</td>
+        <td style="" >74</td>
+        <td style="" >7%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
         <td>73</td>
-        <td>72</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >1%</td>
+        <td>73</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>55</td>
         <td>62</td>
-        <td>62</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >-7</td>
+        <td style="color: #45c527" >12%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
+        <td>18</td>
         <td>11</td>
-        <td>10</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >9%</td>
+        <td style="" >7</td>
+        <td style="" >48%</td>
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>13</td>
         <td>7</td>
-        <td>7</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >6</td>
+        <td style="" >60%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>166</td>
         <td>157</td>
-        <td>156</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0%</td>
+        <td style="" >9</td>
+        <td style="" >5.6%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -104,13 +104,10 @@ date_stampLastWeek: 2024-04-07
 <div class="graph-container">
   <br>
   <h2>Activity Graphs</h2>
-  <div class="row">
+  <div class="all-graphs">
     <!--- Issues/PRs Status Breakdown Graph -->
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/DSACMS/DSACMS_issue_gauge.svg" | url }}" />
-    </figure>
-    <figure>
-      <embed type="image/svg+xml" src="{{ "/assets/img/graphs/DSACMS/DSACMS_new_issues_by_day_over_last_six_months.svg" | url }}" />
-    </figure>
+    {% render "graph-section" baseurl: site.baseurl, path: "/DSACMS/DSACMS_issue_gauge.svg", title: "Issues & PRs Status Breakdown" %}
+    <!-- New Issues over Last 6 Months -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/DSACMS/DSACMS_new_issues_by_day_over_last_six_months.svg", title: "New Issues over Last 6 Months" %}
   </div>
 </div>
