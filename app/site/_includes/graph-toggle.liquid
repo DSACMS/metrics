@@ -15,6 +15,17 @@
 {% if graphsCheck %}
     <div class="graph-container">
         <h3>{{ title }}</h3>
+        <ul class="usa-button-group ">
+            {% for option in options %}
+                <li class="usa-button-group__item">
+                {% if forloop.first %}
+                    <button type="button" id={{ buttonName | append: forloop.index0 }} class="usa-button" onclick="showGraph({{ forloop.index0 }}, '{{ graphName }}','{{ buttonName }}')">{{ option }}</button>
+                {% else %}
+                    <button type="button" id={{ buttonName | append: forloop.index0 }} class="usa-button usa-button--outline" onclick="showGraph({{ forloop.index0 }}, '{{ graphName }}','{{ buttonName }}')">{{ option }}</button>
+                {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
         {% for graph in graphs %}
             {% if forloop.first %}
                 <div class={{ graphName }} id="{{ forloop.index0 }}">
@@ -33,17 +44,5 @@
             </figure>
             </div>
         {% endfor %}
-
-        <ul class="usa-button-group ">
-            {% for option in options %}
-                <li class="usa-button-group__item">
-                {% if forloop.first %}
-                    <button type="button" id={{ buttonName | append: forloop.index0 }} class="usa-button" onclick="showGraph({{ forloop.index0 }}, '{{ graphName }}','{{ buttonName }}')">{{ option }}</button>
-                {% else %}
-                    <button type="button" id={{ buttonName | append: forloop.index0 }} class="usa-button usa-button--outline" onclick="showGraph({{ forloop.index0 }}, '{{ graphName }}','{{ buttonName }}')">{{ option }}</button>
-                {% endif %}
-                </li>
-            {% endfor %}
-        </ul>
     </div>
 {% endif %}
