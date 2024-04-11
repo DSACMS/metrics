@@ -8,7 +8,7 @@ jobs:
     name: Tier 3 Checks
     runs-on: ubuntu-latest
     steps:
-      - uses: repolinter-action@v1
+      - uses: newrelic/repolinter-action@v1
         with:
           # A URL to pull the JSON/YAML Repolinter ruleset from. This URL must be accessible
           # by the actions runner and return raw JSON file on GET.
