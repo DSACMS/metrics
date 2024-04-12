@@ -12,7 +12,7 @@ These are metrics that basically just fetch simple counts of things.
 
 
 
-## Perioidic metrics
+## Periodic metrics
 
 These are metrics that show data relative to a specific timeboxed period.
 
