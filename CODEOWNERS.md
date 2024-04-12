@@ -1,4 +1,4 @@
-# Codeowners
+# Code Owners
 [@IsaacMilarky](https://github.com/IsaacMilarky)
 [@natalialuzuriaga](https://github.com/natalialuzuriaga)
 [@decause-gov](https://github.com/decause-gov)
