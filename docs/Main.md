@@ -18,6 +18,11 @@ The backend update process looks like this:
 Relevant: https://www.markdownguide.org/extended-syntax/
 
 
+# UML for the Update Process
+
+![UML_Metrics_Diagram](UML_Metrics_Diagram.svg)
+
+
 # Website Home Page
 
 Standard landing page. You can click to repository or organization based metrics from the two buttons shown.
