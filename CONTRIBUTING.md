@@ -163,7 +163,7 @@ authorship metadata will be preserved.
 
 ## Documentation
 
-We also welcome improvements to the project documentation or to the existing
+We also welcome improvements to the project [documentation](docs/Main.md) or to the existing
 docs. Please file an [issue](https://github.com/DSACMS/metrics/issues/new).
 
 ## Policies

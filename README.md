@@ -18,6 +18,7 @@ An up-to-date list of core team members can be found in [MAINTAINERS.md](MAINTAI
 - [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)
 - [SECURITY.md](./SECURITY.md)
 - [LICENSE](./LICENSE)
+- [Documentation](docs/Main.md)
 
 ## Repository Structure
 <!-- TODO: Using the "tree -d" command can be a helpful way to generate this information, but, be sure to update it as the project evolves and changes over time.-->
