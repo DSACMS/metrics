@@ -3,8 +3,7 @@ on:
   pull_request:
     branches: [main, dev]
 
-permissions:
-  contents: read-all
+permissions: read-all
 
 jobs:
   repolinter-checks:
