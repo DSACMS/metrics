@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-tf-utility-belt-irsa | REPORT-2024-04-09
+title: Open Source at CMS Metrics Report for batcave-tf-utility-belt-irsa | REPORT-2024-04-12
 permalink: /CMS-Enterprise/batcave-tf-utility-belt-irsa/
 
 org: CMS-Enterprise
 repo: batcave-tf-utility-belt-irsa
-reportID: REPORT-2024-04-09
-date_stampThisWeek: 2024-04-09
-date_stampLastWeek: 2024-04-09
+reportID: REPORT-2024-04-12
+date_stampThisWeek: 2024-04-12
+date_stampLastWeek: 2024-04-12
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -87,10 +87,10 @@ date_stampLastWeek: 2024-04-09
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>6</td>
         <td>5</td>
-        <td>5</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >18%</td>
       </tr>
     </tbody>
   </table>

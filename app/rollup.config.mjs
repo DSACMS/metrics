@@ -5,19 +5,9 @@ import terser from "@rollup/plugin-terser"
 
 export default [
   {
-    input: "src/js/index.js",
+    input: ["src/js/index.js", "src/js/projects.js", "src/js/graphs.js"],
     output: {
-      file: "site/_includes/js/index.js",
-      format: "esm",
-    },
-    input: "src/js/projects.js",
-    output: {
-      file: "site/_includes/js/projects.js",
-      format: "esm",
-    },
-    input: "src/js/graphs.js",
-    output: {
-      file: "site/_includes/js/graphs.js",
+      dir: "site/_includes/js",
       format: "esm",
     },
     plugins: [

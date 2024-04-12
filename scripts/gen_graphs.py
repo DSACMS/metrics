@@ -1,8 +1,8 @@
 """
 Module to define methods to create pygals graphs
 """
+import datetime
 import pygal
-
 
 def generate_all_graphs_for_repos(all_repos):
     """
@@ -76,7 +76,7 @@ def generate_repo_sparklines(repo):
     # are rendered through a special method of the Line object.
     # TODO: file a pygals issue to make sparklines their own object
     _kwargs_ = {
-        "show_x_labels": True,
+        "show_x_labels": False,
         "show_y_labels": True,
         "margin": 10
     }
@@ -96,12 +96,16 @@ def generate_time_xy_issue_graph(oss_entity,data_key,legend_key):
 
     graph_data_dict = oss_entity.metric_data[data_key]
 
-    dates_list = [record[0] for record in graph_data_dict]
-    issues_list = [record[1] for record in graph_data_dict]
 
-    xy_time_issue_chart = pygal.Line(x_label_rotation=20)
-    xy_time_issue_chart.x_labels = dates_list
-    xy_time_issue_chart.add(legend_key, issues_list)
+    date_series = []
+    for record in graph_data_dict:
+        #datetime.datetime.fromisoformat(stamp.replace('Z', '+00:00'))
+        date_obj = datetime.datetime.fromisoformat(record[0].replace('Z', '+00:00'))
+        date_series.append((date_obj.strftime('%Y/%m/%d'),record[1]))
+
+    xy_time_issue_chart = pygal.Line(x_label_rotation=20,legend_at_bottom=True,stroke=False)
+    xy_time_issue_chart.x_labels = [iter[0] for iter in date_series]
+    xy_time_issue_chart.add(legend_key, [iter[1] for iter in date_series])
 
     write_repo_chart_to_file(oss_entity, xy_time_issue_chart, data_key)
 

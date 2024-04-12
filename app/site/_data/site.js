@@ -6,9 +6,9 @@ const host = production ? "https://dsacms.github.io" : "http://0.0.0.0:8080"
 const baseurl = production ? "/metrics" : ""
 
 module.exports = {
-  name: "CMS OSPO Repo Metrics",
-  title: "CMS OSPO Repo Metrics",
-  description: "Open Source Repository Metrics across CMS.gov",
+  name: "CMS Metrics Website",
+  title: "CMS.gov Open Source Repository Metrics",
+  description: "Powered by the Open Source Program Office (OSPO) at the Digital Service at the Centers for Medicare and Medicaid Services.",
   type: "website",
   baseurl,
   url: `${host}${baseurl}`,
