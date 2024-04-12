@@ -10,17 +10,12 @@ jobs:
     steps:
       - uses: newrelic/repolinter-action@v1
         with:
-          # A URL to pull the JSON/YAML Repolinter ruleset from. This URL must be accessible
-          # by the actions runner and return raw JSON file on GET.
+          # A path to the JSON/YAML Repolinter ruleset to use, relative to the workflow
+          # working directory (i.e. under `$GITHUB_WORKSPACE`).
           #
-          # This option can be used to pull a ruleset from GitHub using the
-          # raw.githubusercontent.com URL (ex. https://raw.githubusercontent.com/aperture-science-incorporated/.github/master/repolinter-newrelic-communityplus.json).
-          #
-          # This option is mutually exclusive with config_file. If this option and
-          # config_file are not specified, Repolinter's default ruleset will be used.
-          #
-          # Uses the config file for tier 3 repositories
-          config_url: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
+          # This option is mutually exclusive with config_url. If this option and
+          # config_url are not specified, Repolinter's default ruleset will be used.
+          config_file: 'repolinter.json'
 
           # Where repolinter-action should put the linting results. There are two
           # options available:
