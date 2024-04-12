@@ -96,16 +96,16 @@ def generate_time_xy_issue_graph(oss_entity,data_key,legend_key):
 
     graph_data_dict = oss_entity.metric_data[data_key]
 
-    date_str = '%Y-%m-%dT%H:%M:%SZ'
 
     date_series = []
     for record in graph_data_dict:
-        date_obj = datetime.datetime.strptime(record[0],date_str)
-        date_series.append((date_obj,record[1]))
+        #datetime.datetime.fromisoformat(stamp.replace('Z', '+00:00'))
+        date_obj = datetime.datetime.fromisoformat(record[0].replace('Z', '+00:00'))
+        date_series.append((date_obj.strftime('%Y/%m/%d'),record[1]))
 
     xy_time_issue_chart = pygal.Line(x_label_rotation=20,legend_at_bottom=True,stroke=False)
-    #xy_time_issue_chart.x_labels = dates_list
-    xy_time_issue_chart.add(legend_key, date_series)
+    xy_time_issue_chart.x_labels = [iter[0] for iter in date_series]
+    xy_time_issue_chart.add(legend_key, [iter[1] for iter in date_series])
 
     write_repo_chart_to_file(oss_entity, xy_time_issue_chart, data_key)
 
