@@ -3,13 +3,13 @@ on:
   pull_request:
     branches: [main, dev]
 
-permissions: read-all
 
 jobs:
   repolinter-checks:
     name: Tier 3 Checks
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - uses: newrelic/repolinter-action@v1
         with:
           # A path to the JSON/YAML Repolinter ruleset to use, relative to the workflow
