@@ -18,6 +18,7 @@ jobs:
           glob_pattern: "**/*.py"
           filter_mode: "file"
   frontend-checks:
+      permissions: write-all
       runs-on: ubuntu-latest
       defaults:
         run:

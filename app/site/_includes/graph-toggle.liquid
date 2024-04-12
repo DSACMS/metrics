@@ -15,24 +15,6 @@
 {% if graphsCheck %}
     <div class="graph-container">
         <h3>{{ title }}</h3>
-        {% for graph in graphs %}
-            {% if forloop.first %}
-                <div class={{ graphName }} id="{{ forloop.index0 }}">
-            {% else %}
-                <div class={{ graphName }} id="{{ forloop.index0 }}" style="display: none;">
-            {% endif %}
-            {% assign graphPath = graph | strip %}
-            {% assign distPath = baseurl | append: "/assets/img/graphs" | append: graphPath %}
-            <figure>
-            {% if fileExtension == 'svg' %}
-                <embed type="image/svg+xml" src="{{ distPath }}" />
-            {% else %}
-                <img src="{{ distPath }}"/>
-            {% endif %}
-            </figure>
-            </div>
-        {% endfor %}
-
         <ul class="usa-button-group ">
             {% for option in options %}
                 <li class="usa-button-group__item">
@@ -44,5 +26,23 @@
                 </li>
             {% endfor %}
         </ul>
+        {% for graph in graphs %}
+            {% if forloop.first %}
+                <div class={{ graphName }} id="{{ forloop.index0 }}">
+            {% else %}
+                <div class={{ graphName }} id="{{ forloop.index0 }}" style="display: none;">
+            {% endif %}
+            {% assign graphPath = graph | strip %}
+            {% assign distPath = baseurl | append: "/assets/img/graphs" | append: graphPath %}
+            {% assign fileExtension = path | split: '.' | last %}
+            <figure>
+            {% if fileExtension == 'svg' %}
+                <embed type="image/svg+xml" src="{{ distPath }}" />
+            {% else %}
+                <img src="{{ distPath }}"/>
+            {% endif %}
+            </figure>
+            </div>
+        {% endfor %}
     </div>
 {% endif %}
