@@ -2,10 +2,51 @@
 Module to define methods that fetch data to store in the oss metric
 entity objects.
 """
+import os
 import json
 from metricsLib.metrics_definitions import SIMPLE_METRICS, ORG_METRICS, ADVANCED_METRICS
 from metricsLib.metrics_definitions import PERIODIC_METRICS, RESOURCE_METRICS
+from metricsLib.oss_metric_entities import GithubOrg, Repository
+from metricsLib.constants import PATH_TO_METADATA
 
+def parse_tracked_repos_file():
+    # TODO: Create a read repos-to-include.txt
+    metadata_path = os.path.join(PATH_TO_METADATA, "projects_tracked.json")
+    with open(metadata_path, "r", encoding="utf-8") as file:
+        tracking_file = json.load(file)
+
+    # Track specific repositories e.g. ['dsacms.github.io']
+    repo_urls = tracking_file["Open Source Projects"]
+
+    # Get two lists of objects that will hold all the new metrics
+    return tracking_file["orgs"], repo_urls
+
+def parse_repos_and_orgs_into_objects(org_name_list, repo_name_list):
+    """
+    This function parses lists of strings into oss metric entities and
+    returns lists of corresponding oss metric entitiy objects.
+
+    Arguments:
+        org_name_list: list of logins for github orgs
+        repo_name_list: list of urls for git repositories with groups labeled
+
+    Returns:
+        Tuple of lists of oss metric entity objects
+    """
+    orgs = [GithubOrg(org) for org in org_name_list]
+
+    repos = []  # [Repository(repo_url) for repo_url in repo_name_list]
+
+    for owner, urls in repo_name_list.items():
+        print(owner)
+        # search for matching org
+        org_id = next(
+            (x.repo_group_id for x in orgs if x.login.lower() == owner.lower()), None)
+
+        # print(f"!!{org_id}")
+        for repo_url in urls:
+            repos.append(Repository(repo_url, org_id))
+    return orgs, repos
 
 def get_all_data(all_orgs, all_repos):
     """
