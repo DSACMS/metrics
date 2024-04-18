@@ -155,6 +155,9 @@ class OSSEntity:
         except TimeoutError as e:
             print(f"Timeout for repo {self.name} with metric {metric.name}")
             print(f"Error: {e}")
+        except ConnectionError as e:
+            print(f"Connection error for repo {self.name} with metric {metric.name}")
+            print(f"Error: {e}")
 
 
 class Repository(OSSEntity):
