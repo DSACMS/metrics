@@ -149,7 +149,12 @@ class OSSEntity:
         params = self.get_parameters_for_metric(metric)
 
         kwargs['params'] = params
-        self.store_metrics(metric.get_values(*args, **kwargs))
+
+        try:
+            self.store_metrics(metric.get_values(*args, **kwargs))
+        except TimeoutError as e:
+            print(f"Timeout for repo {self.name} with metric {metric.name}")
+            print(f"Error: {e}")
 
 
 class Repository(OSSEntity):
