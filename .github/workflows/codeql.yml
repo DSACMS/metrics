@@ -15,6 +15,7 @@ on:
   pull_request:
     branches: [ "main", "dev" ]
   push:
+    branches: [ "!push-action/*"]
 
 jobs:
   analyze:
