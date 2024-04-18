@@ -172,6 +172,8 @@ def read_previous_metric_data(repos, orgs):
 def write_metric_data_json_to_file(orgs, repos):
     """
     Write all metric data to json files.
+    
+    Keep old metrics as a .old file.
 
     Arguments:
         orgs: orgs to write to file
@@ -179,18 +181,34 @@ def write_metric_data_json_to_file(orgs, repos):
     """
 
     for org in orgs:
+
+        #generate dict of current metric data.
         org_dict = org.previous_metric_data
         org_dict.update(org.metric_data)
         org_metric_data = json.dumps(org_dict, indent=4)
 
-        with open(org.get_path_to_json_data(), "w+", encoding="utf-8") as file:
+        path = org.get_path_to_json_data()
+
+        with open(path, "w+", encoding="utf-8") as file:
             file.write(org_metric_data)
+
+        #generate dict of previous and save it as {path}.old
+        previous_metric_org_json = json.dumps(org.previous_metric_data, indent=4)
+
+        with open(f"{path}.old","w+",encoding="utf-8") as file:
+            file.write(previous_metric_org_json)
 
     for repo in repos:
         repo_dict = repo.previous_metric_data
         repo_dict.update(repo.metric_data)
         repo_metric_data = json.dumps(repo_dict, indent=4)
 
+        path = repo.get_path_to_json_data()
 
-        with open(repo.get_path_to_json_data(), "w+", encoding="utf-8") as file:
+        with open(path, "w+", encoding="utf-8") as file:
             file.write(repo_metric_data)
+
+        previous_metric_repo_json = json.dumps(repo.previous_metric_data, indent=4)
+
+        with open(f"{path}.old","w+",encoding="utf-8") as file:
+            file.write(previous_metric_repo_json)
