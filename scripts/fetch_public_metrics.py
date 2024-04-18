@@ -138,13 +138,18 @@ def write_metric_data_json_to_file(orgs, repos):
     """
 
     for org in orgs:
-        org_metric_data = json.dumps(org.metric_data, indent=4)
+        org_dict = org.previous_metric_data
+        org_dict.update(org.metric_data)
+        org_metric_data = json.dumps(org_dict, indent=4)
 
         with open(org.get_path_to_json_data(), "w+", encoding="utf-8") as file:
             file.write(org_metric_data)
 
     for repo in repos:
-        repo_metric_data = json.dumps(repo.metric_data, indent=4)
+        repo_dict = repo.previous_metric_data
+        repo_dict.update(repo.metric_data)
+        repo_metric_data = json.dumps(repo_dict, indent=4)
+
 
         with open(repo.get_path_to_json_data(), "w+", encoding="utf-8") as file:
             file.write(repo_metric_data)
