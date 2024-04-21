@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for price-transparency-guide | REPORT-2024-04-12
+title: Open Source at CMS Metrics Report for price-transparency-guide | REPORT-2024-04-21
 permalink: /CMSgov/price-transparency-guide/
 
 org: CMSgov
 repo: price-transparency-guide
-reportID: REPORT-2024-04-12
-date_stampThisWeek: 2024-04-12
-date_stampLastWeek: 2024-04-12
+reportID: REPORT-2024-04-21
+date_stampThisWeek: 2024-04-21
+date_stampLastWeek: 2024-04-21
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -73,10 +73,10 @@ date_stampLastWeek: 2024-04-12
       </tr>
       <tr>
         <th scope="row">Forks</th>
+        <td>106</td>
         <td>105</td>
-        <td>105</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.95%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
@@ -87,10 +87,10 @@ date_stampLastWeek: 2024-04-12
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>275</td>
         <td>274</td>
-        <td>274</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.36%</td>
       </tr>
     </tbody>
   </table>

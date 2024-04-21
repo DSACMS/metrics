@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for beneficiary-reporting-validation | REPORT-2024-04-12
+title: Open Source at CMS Metrics Report for beneficiary-reporting-validation | REPORT-2024-04-21
 permalink: /CMSgov/beneficiary-reporting-validation/
 
 org: CMSgov
 repo: beneficiary-reporting-validation
-reportID: REPORT-2024-04-12
-date_stampThisWeek: 2024-04-12
-date_stampLastWeek: 2024-04-12
+reportID: REPORT-2024-04-21
+date_stampThisWeek: 2024-04-21
+date_stampLastWeek: 2024-04-21
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -66,10 +66,10 @@ date_stampLastWeek: 2024-04-12
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>35</td>
         <td>34</td>
-        <td>34</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >1</td>
+        <td style="" >2.9%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -87,10 +87,10 @@ date_stampLastWeek: 2024-04-12
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>19</td>
         <td>18</td>
-        <td>18</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >5.4%</td>
       </tr>
     </tbody>
   </table>

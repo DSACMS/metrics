@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for dedupliFHIR | REPORT-2024-04-12
+title: Open Source at CMS Metrics Report for dedupliFHIR | REPORT-2024-04-21
 permalink: /DSACMS/dedupliFHIR/
 
 org: DSACMS
 repo: dedupliFHIR
-reportID: REPORT-2024-04-12
-date_stampThisWeek: 2024-04-12
-date_stampLastWeek: 2024-04-12
+reportID: REPORT-2024-04-21
+date_stampThisWeek: 2024-04-21
+date_stampLastWeek: 2024-04-21
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -31,17 +31,17 @@ date_stampLastWeek: 2024-04-12
       </tr>
       <tr>
         <th scope="row">Issues</th>
+        <td>8</td>
         <td>7</td>
-        <td>7</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >13%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>5</td>
         <td>4</td>
-        <td>4</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >1</td>
+        <td style="" >22%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>

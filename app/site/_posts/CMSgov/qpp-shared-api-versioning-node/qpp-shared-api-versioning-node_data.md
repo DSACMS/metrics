@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for qpp-shared-api-versioning-node | REPORT-2024-04-12
+title: Open Source at CMS Metrics Report for qpp-shared-api-versioning-node | REPORT-2024-04-21
 permalink: /CMSgov/qpp-shared-api-versioning-node/
 
 org: CMSgov
 repo: qpp-shared-api-versioning-node
-reportID: REPORT-2024-04-12
-date_stampThisWeek: 2024-04-12
-date_stampLastWeek: 2024-04-12
+reportID: REPORT-2024-04-21
+date_stampThisWeek: 2024-04-21
+date_stampLastWeek: 2024-04-21
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -87,10 +87,10 @@ date_stampLastWeek: 2024-04-12
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>15</td>
         <td>14</td>
-        <td>14</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >6.9%</td>
       </tr>
     </tbody>
   </table>
