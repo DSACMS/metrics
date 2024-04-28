@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for price-transparency-guide | REPORT-2024-04-21
+title: Open Source at CMS Metrics Report for price-transparency-guide | REPORT-2024-04-28
 permalink: /CMSgov/price-transparency-guide/
 
 org: CMSgov
 repo: price-transparency-guide
-reportID: REPORT-2024-04-21
-date_stampThisWeek: 2024-04-21
-date_stampLastWeek: 2024-04-21
+reportID: REPORT-2024-04-28
+date_stampThisWeek: 2024-04-28
+date_stampLastWeek: 2024-04-28
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -52,10 +52,10 @@ date_stampLastWeek: 2024-04-21
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>2</td>
         <td>1</td>
-        <td>1</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >1</td>
+        <td style="" >67%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
@@ -73,24 +73,24 @@ date_stampLastWeek: 2024-04-21
       </tr>
       <tr>
         <th scope="row">Forks</th>
+        <td>107</td>
         <td>106</td>
-        <td>105</td>
         <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.95%</td>
+        <td style="color: #45c527" >0.94%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
+        <td>338</td>
         <td>337</td>
-        <td>337</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.3%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
-        <td>275</td>
         <td>274</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.36%</td>
+        <td>275</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >0.36%</td>
       </tr>
     </tbody>
   </table>
