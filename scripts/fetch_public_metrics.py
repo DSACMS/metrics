@@ -138,6 +138,53 @@ def fetch_all_new_metric_data(all_orgs, all_repos):
             org.apply_metric_and_store_data(metric)
         add_info_to_org_from_list_of_repos(all_repos, org)
 
+def read_current_metric_data(repos,orgs):
+    """
+    Read current metrics and load previous metrics that 
+    were saved in .old files.
+
+    Arguments:
+        orgs: orgs to write to file
+        repos: repos to write to file
+    """
+
+    for org in orgs:
+
+        path = org.get_path_to_json_data()
+        #generate dict of previous and save it as {path}.old
+        #previous_metric_org_json = json.dumps(org.previous_metric_data, indent=4)
+
+        with open(f"{path}.old","r",encoding="utf-8") as file:
+            previous_metric_org_json = json.load(file)
+
+        #generate dict of current metric data.
+        org.previous_metric_data.update(previous_metric_org_json)
+
+
+        with open(path, "w+", encoding="utf-8") as file:
+            #file.write(org_metric_data)
+            print(path)
+            current_metric_org_json = json.load(file)
+
+        org.metric_data.update(current_metric_org_json)
+
+    for repo in repos:
+        #previous_metric_repo_json = json.dumps(repo.previous_metric_data, indent=4)
+        path = repo.get_path_to_json_data()
+
+        with open(f"{path}.old","w+",encoding="utf-8") as file:
+            #file.write(previous_metric_repo_json)
+            previous_metric_repo_json = json.load(file)
+
+        repo.previous_metric_data.update(previous_metric_repo_json)
+
+
+        with open(path, "w+", encoding="utf-8") as file:
+            #file.write(repo_metric_data)
+            metric_repo_json = json.load(file)
+
+        repo.metric_data.update(metric_repo_json)
+
 
 def read_previous_metric_data(repos, orgs):
     """
@@ -157,7 +204,8 @@ def read_previous_metric_data(repos, orgs):
                 org.previous_metric_data.update(prev_data)
         except FileNotFoundError:
             print("Could not find previous data for records for org" +
-                  f"{org.login}")
+                  f"{org.login}")   
+
 
     for repo in repos:
         try:
@@ -167,6 +215,8 @@ def read_previous_metric_data(repos, orgs):
         except FileNotFoundError:
             print("Could not find previous data for records for repo" +
                   repo.name)
+
+    #note: its good here
 
 
 def write_metric_data_json_to_file(orgs, repos):
@@ -182,33 +232,36 @@ def write_metric_data_json_to_file(orgs, repos):
 
     for org in orgs:
 
-        #generate dict of current metric data.
-        org_dict = org.previous_metric_data
-        org_dict.update(org.metric_data)
-        org_metric_data = json.dumps(org_dict, indent=4)
-
         path = org.get_path_to_json_data()
-
-        with open(path, "w+", encoding="utf-8") as file:
-            file.write(org_metric_data)
-
         #generate dict of previous and save it as {path}.old
         previous_metric_org_json = json.dumps(org.previous_metric_data, indent=4)
 
         with open(f"{path}.old","w+",encoding="utf-8") as file:
             file.write(previous_metric_org_json)
 
-    for repo in repos:
-        repo_dict = repo.previous_metric_data
-        repo_dict.update(repo.metric_data)
-        repo_metric_data = json.dumps(repo_dict, indent=4)
+        #generate dict of current metric data.
+        org_dict = org.previous_metric_data
+        org_dict.update(org.metric_data)
+        org_metric_data = json.dumps(org_dict, indent=4)
 
-        path = repo.get_path_to_json_data()
+        
 
         with open(path, "w+", encoding="utf-8") as file:
-            file.write(repo_metric_data)
+            file.write(org_metric_data)
+
+    for repo in repos:
+        path = repo.get_path_to_json_data()
 
         previous_metric_repo_json = json.dumps(repo.previous_metric_data, indent=4)
 
         with open(f"{path}.old","w+",encoding="utf-8") as file:
             file.write(previous_metric_repo_json)
+
+        repo_dict = repo.previous_metric_data
+        repo_dict.update(repo.metric_data)
+        repo_metric_data = json.dumps(repo_dict, indent=4)
+
+
+        with open(path, "w+", encoding="utf-8") as file:
+            file.write(repo_metric_data)
+
