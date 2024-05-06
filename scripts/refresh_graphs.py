@@ -2,7 +2,6 @@
 Script to run all graph generation from existing data.
 """
 import os
-import json
 from fetch_public_metrics import parse_repos_and_orgs_into_objects
 from fetch_public_metrics import parse_tracked_repos_file, read_current_metric_data
 from gen_graphs import generate_all_graphs_for_repos, generate_all_graphs_for_orgs

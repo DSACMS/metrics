@@ -2,7 +2,6 @@
 Script to run all metrics collection and update operations
 """
 import os
-import json
 from fetch_public_metrics import get_all_data, parse_repos_and_orgs_into_objects
 from fetch_public_metrics import parse_tracked_repos_file, read_previous_metric_data
 

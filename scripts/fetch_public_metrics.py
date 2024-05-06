@@ -10,6 +10,13 @@ from metricsLib.oss_metric_entities import GithubOrg, Repository
 from metricsLib.constants import PATH_TO_METADATA
 
 def parse_tracked_repos_file():
+    """
+    Function to parse projects_tracked.json
+
+    Returns:
+        Tuple of lists of strings that represent repos and orgs
+    """
+
     # TODO: Create a read repos-to-include.txt
     metadata_path = os.path.join(PATH_TO_METADATA, "projects_tracked.json")
     with open(metadata_path, "r", encoding="utf-8") as file:
@@ -265,4 +272,3 @@ def write_metric_data_json_to_file(orgs, repos):
 
         with open(path, "w+", encoding="utf-8") as file:
             file.write(repo_metric_data)
-
