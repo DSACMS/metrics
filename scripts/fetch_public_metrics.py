@@ -145,8 +145,8 @@ def read_current_metric_data(repos,orgs):
     were saved in .old files.
 
     Arguments:
-        orgs: orgs to write to file
-        repos: repos to write to file
+        orgs: orgs to read data for.
+        repos: repos to read data for.
     """
 
     for org in orgs:
@@ -245,7 +245,7 @@ def write_metric_data_json_to_file(orgs, repos):
         org_dict.update(org.metric_data)
         org_metric_data = json.dumps(org_dict, indent=4)
 
-        print(org_metric_data)
+        #print(org_metric_data)
 
         with open(path, "w+", encoding="utf-8") as file:
             file.write(org_metric_data)

@@ -50,7 +50,7 @@ jobs:
           git config user.email 'actions@users.noreply.github.com'
           git add -A
           timestamp=$(date -u)
-          git commit -m "update data: ${timestamp}" || exit 0
+          git commit -m "update reports and graphs: ${timestamp}" || exit 0
       - name: Push to ${{ github.ref_name }}
         uses: CasperWA/push-protected@v2
         with:
