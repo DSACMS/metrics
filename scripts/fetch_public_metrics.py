@@ -136,6 +136,7 @@ def fetch_all_new_metric_data(all_orgs, all_repos):
         print(f"Fetching metrics for org {org.name} id #{org.repo_group_id}")
         for metric in ORG_METRICS:
             org.apply_metric_and_store_data(metric)
+            print(metric.name)
         add_info_to_org_from_list_of_repos(all_repos, org)
 
 def read_current_metric_data(repos,orgs):
@@ -161,7 +162,7 @@ def read_current_metric_data(repos,orgs):
         org.previous_metric_data.update(previous_metric_org_json)
 
 
-        with open(path, "w+", encoding="utf-8") as file:
+        with open(path, "r", encoding="utf-8") as file:
             #file.write(org_metric_data)
             print(path)
             current_metric_org_json = json.load(file)
@@ -172,14 +173,14 @@ def read_current_metric_data(repos,orgs):
         #previous_metric_repo_json = json.dumps(repo.previous_metric_data, indent=4)
         path = repo.get_path_to_json_data()
 
-        with open(f"{path}.old","w+",encoding="utf-8") as file:
+        with open(f"{path}.old","r",encoding="utf-8") as file:
             #file.write(previous_metric_repo_json)
             previous_metric_repo_json = json.load(file)
 
         repo.previous_metric_data.update(previous_metric_repo_json)
 
 
-        with open(path, "w+", encoding="utf-8") as file:
+        with open(path, "r", encoding="utf-8") as file:
             #file.write(repo_metric_data)
             metric_repo_json = json.load(file)
 
@@ -244,7 +245,7 @@ def write_metric_data_json_to_file(orgs, repos):
         org_dict.update(org.metric_data)
         org_metric_data = json.dumps(org_dict, indent=4)
 
-        
+        print(org_metric_data)
 
         with open(path, "w+", encoding="utf-8") as file:
             file.write(org_metric_data)
