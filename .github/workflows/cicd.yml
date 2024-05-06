@@ -19,9 +19,47 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  update-reports-and-graphs:
+    permissions: write-all
+    name: update reports and graphs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # update stats
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: cache pip
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+      - run: pip install -r requirements.txt
+      - run: ./gen_reports.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.METRICS_GITHUB_TOKEN }}
+          AUGUR_HOST: ${{ vars.AUGUR_HOST }}
+      - run: ./gen_graphs.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.METRICS_GITHUB_TOKEN }}
+          AUGUR_HOST: ${{ vars.AUGUR_HOST }}
+      - run: |
+          git config user.name 'GitHub Actions'
+          git config user.email 'actions@users.noreply.github.com'
+          git add -A
+          timestamp=$(date -u)
+          git commit -m "update data: ${timestamp}" || exit 0
+      - name: Push to ${{ github.ref_name }}
+        uses: CasperWA/push-protected@v2
+        with:
+          token: ${{ secrets.METRICS_GITHUB_TOKEN }}
+          branch: ${{ github.ref_name }}
   deploy:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
+    needs: update-reports-and-graphs
     defaults:
       run:
         working-directory: ./app
@@ -56,3 +94,4 @@ jobs:
 
       - name: Deploy to GitHub pages
         uses: actions/deploy-pages@v2
+  
