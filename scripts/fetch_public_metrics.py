@@ -224,8 +224,6 @@ def read_previous_metric_data(repos, orgs):
             print("Could not find previous data for records for repo" +
                   repo.name)
 
-    #note: its good here
-
 
 def write_metric_data_json_to_file(orgs, repos):
     """
