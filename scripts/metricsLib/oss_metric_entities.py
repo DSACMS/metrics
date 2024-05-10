@@ -9,6 +9,7 @@ import os
 import datetime
 import pathlib
 import requests
+from requests.exceptions import ReadTimeout
 from metricsLib.constants import PATH_TO_METRICS_DATA, PATH_TO_REPORTS_DATA, AUGUR_HOST
 from metricsLib.constants import TIMEOUT_IN_SECONDS, PATH_TO_GRAPHS_DATA
 
@@ -152,7 +153,7 @@ class OSSEntity:
 
         try:
             self.store_metrics(metric.get_values(*args, **kwargs))
-        except TimeoutError as e:
+        except (TimeoutError, ReadTimeout) as e:
             print(f"Timeout for repo {self.name} with metric {metric.name}")
             print(f"Error: {e}")
         except ConnectionError as e:

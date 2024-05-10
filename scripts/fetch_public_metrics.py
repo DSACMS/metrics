@@ -2,10 +2,58 @@
 Module to define methods that fetch data to store in the oss metric
 entity objects.
 """
+import os
 import json
 from metricsLib.metrics_definitions import SIMPLE_METRICS, ORG_METRICS, ADVANCED_METRICS
 from metricsLib.metrics_definitions import PERIODIC_METRICS, RESOURCE_METRICS
+from metricsLib.oss_metric_entities import GithubOrg, Repository
+from metricsLib.constants import PATH_TO_METADATA
 
+def parse_tracked_repos_file():
+    """
+    Function to parse projects_tracked.json
+
+    Returns:
+        Tuple of lists of strings that represent repos and orgs
+    """
+
+    # TODO: Create a read repos-to-include.txt
+    metadata_path = os.path.join(PATH_TO_METADATA, "projects_tracked.json")
+    with open(metadata_path, "r", encoding="utf-8") as file:
+        tracking_file = json.load(file)
+
+    # Track specific repositories e.g. ['dsacms.github.io']
+    repo_urls = tracking_file["Open Source Projects"]
+
+    # Get two lists of objects that will hold all the new metrics
+    return tracking_file["orgs"], repo_urls
+
+def parse_repos_and_orgs_into_objects(org_name_list, repo_name_list):
+    """
+    This function parses lists of strings into oss metric entities and
+    returns lists of corresponding oss metric entitiy objects.
+
+    Arguments:
+        org_name_list: list of logins for github orgs
+        repo_name_list: list of urls for git repositories with groups labeled
+
+    Returns:
+        Tuple of lists of oss metric entity objects
+    """
+    orgs = [GithubOrg(org) for org in org_name_list]
+
+    repos = []  # [Repository(repo_url) for repo_url in repo_name_list]
+
+    for owner, urls in repo_name_list.items():
+        print(owner)
+        # search for matching org
+        org_id = next(
+            (x.repo_group_id for x in orgs if x.login.lower() == owner.lower()), None)
+
+        # print(f"!!{org_id}")
+        for repo_url in urls:
+            repos.append(Repository(repo_url, org_id))
+    return orgs, repos
 
 def get_all_data(all_orgs, all_repos):
     """
@@ -95,7 +143,55 @@ def fetch_all_new_metric_data(all_orgs, all_repos):
         print(f"Fetching metrics for org {org.name} id #{org.repo_group_id}")
         for metric in ORG_METRICS:
             org.apply_metric_and_store_data(metric)
+            print(metric.name)
         add_info_to_org_from_list_of_repos(all_repos, org)
+
+def read_current_metric_data(repos,orgs):
+    """
+    Read current metrics and load previous metrics that 
+    were saved in .old files.
+
+    Arguments:
+        orgs: orgs to read data for.
+        repos: repos to read data for.
+    """
+
+    for org in orgs:
+
+        path = org.get_path_to_json_data()
+        #generate dict of previous and save it as {path}.old
+        #previous_metric_org_json = json.dumps(org.previous_metric_data, indent=4)
+
+        with open(f"{path}.old","r",encoding="utf-8") as file:
+            previous_metric_org_json = json.load(file)
+
+        #generate dict of current metric data.
+        org.previous_metric_data.update(previous_metric_org_json)
+
+
+        with open(path, "r", encoding="utf-8") as file:
+            #file.write(org_metric_data)
+            print(path)
+            current_metric_org_json = json.load(file)
+
+        org.metric_data.update(current_metric_org_json)
+
+    for repo in repos:
+        #previous_metric_repo_json = json.dumps(repo.previous_metric_data, indent=4)
+        path = repo.get_path_to_json_data()
+
+        with open(f"{path}.old","r",encoding="utf-8") as file:
+            #file.write(previous_metric_repo_json)
+            previous_metric_repo_json = json.load(file)
+
+        repo.previous_metric_data.update(previous_metric_repo_json)
+
+
+        with open(path, "r", encoding="utf-8") as file:
+            #file.write(repo_metric_data)
+            metric_repo_json = json.load(file)
+
+        repo.metric_data.update(metric_repo_json)
 
 
 def read_previous_metric_data(repos, orgs):
@@ -116,7 +212,8 @@ def read_previous_metric_data(repos, orgs):
                 org.previous_metric_data.update(prev_data)
         except FileNotFoundError:
             print("Could not find previous data for records for org" +
-                  f"{org.login}")
+                  f"{org.login}")   
+
 
     for repo in repos:
         try:
@@ -131,6 +228,8 @@ def read_previous_metric_data(repos, orgs):
 def write_metric_data_json_to_file(orgs, repos):
     """
     Write all metric data to json files.
+    
+    Keep old metrics as a .old file.
 
     Arguments:
         orgs: orgs to write to file
@@ -138,13 +237,36 @@ def write_metric_data_json_to_file(orgs, repos):
     """
 
     for org in orgs:
-        org_metric_data = json.dumps(org.metric_data, indent=4)
 
-        with open(org.get_path_to_json_data(), "w+", encoding="utf-8") as file:
+        path = org.get_path_to_json_data()
+        #generate dict of previous and save it as {path}.old
+        previous_metric_org_json = json.dumps(org.previous_metric_data, indent=4)
+
+        with open(f"{path}.old","w+",encoding="utf-8") as file:
+            file.write(previous_metric_org_json)
+
+        #generate dict of current metric data.
+        org_dict = org.previous_metric_data
+        org_dict.update(org.metric_data)
+        org_metric_data = json.dumps(org_dict, indent=4)
+
+        #print(org_metric_data)
+
+        with open(path, "w+", encoding="utf-8") as file:
             file.write(org_metric_data)
 
     for repo in repos:
-        repo_metric_data = json.dumps(repo.metric_data, indent=4)
+        path = repo.get_path_to_json_data()
 
-        with open(repo.get_path_to_json_data(), "w+", encoding="utf-8") as file:
+        previous_metric_repo_json = json.dumps(repo.previous_metric_data, indent=4)
+
+        with open(f"{path}.old","w+",encoding="utf-8") as file:
+            file.write(previous_metric_repo_json)
+
+        repo_dict = repo.previous_metric_data
+        repo_dict.update(repo.metric_data)
+        repo_metric_data = json.dumps(repo_dict, indent=4)
+
+
+        with open(path, "w+", encoding="utf-8") as file:
             file.write(repo_metric_data)

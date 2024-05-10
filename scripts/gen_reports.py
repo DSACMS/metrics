@@ -98,7 +98,7 @@ def get_heading_report_values(headings, oss_entity):
         #        +--------------+--------------------------------------+---+-------------------+
 
 
-        and_conditional = ((raw_diff>0) and (behavior == DesiredReportBehavior.VALUE_INCREASE.value))
+        and_conditional=((raw_diff>0) and (behavior == DesiredReportBehavior.VALUE_INCREASE.value))
         #Use a XOR by using the != operator
         if (raw_diff > 0) != (behavior == DesiredReportBehavior.VALUE_INCREASE.value):
             if raw_diff < 0:
