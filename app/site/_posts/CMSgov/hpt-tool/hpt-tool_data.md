@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for hpt-tool | REPORT-2024-04-28
+title: Open Source at CMS Metrics Report for hpt-tool | REPORT-2024-05-10
 permalink: /CMSgov/hpt-tool/
 
 org: CMSgov
 repo: hpt-tool
-reportID: REPORT-2024-04-28
-date_stampThisWeek: 2024-04-28
-date_stampLastWeek: 2024-04-28
+reportID: REPORT-2024-05-10
+date_stampThisWeek: 2024-05-10
+date_stampLastWeek: 2024-05-10
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -80,17 +80,17 @@ date_stampLastWeek: 2024-04-28
       </tr>
       <tr>
         <th scope="row">Stars</th>
+        <td>11</td>
         <td>10</td>
-        <td>10</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >9.5%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>9</td>
         <td>8</td>
-        <td>8</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >12%</td>
       </tr>
     </tbody>
   </table>
