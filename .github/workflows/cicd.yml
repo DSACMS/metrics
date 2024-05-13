@@ -1,9 +1,6 @@
 name: CICD
 
 on:
-  push:
-    branches:
-      - main
   schedule:
     # Run Mondays at 5:15 am
     - cron: "15 5 * * 0"
