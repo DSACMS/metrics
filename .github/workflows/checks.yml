@@ -5,15 +5,20 @@ on:
 
 
 jobs:
+  resolve-repolinter-json:
+    uses: DSACMS/repo-scaffolder/.github/workflows/extendJSONFile.yml@add-repolinter-workflows
+    with: 
+      url_to_json: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier3s/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
+  
   repolinter-checks:
     name: Tier 3 Checks
+    needs: resolve-repolinter-json
     runs-on: ubuntu-latest
+    env:
+      RAW_JSON: ${{ needs.resolve-repolinter-json.outputs.raw-json}}
     steps:
-      - uses: DSACMS/repo-scaffolder/.github/workflows/extendJSONFile.yml@add-repolinter-workflows
-        with: 
-          url_to_json: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier3s/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
       - uses: actions/checkout@v4
-      - run: echo $extended_json > repolinter.json
+      - run: echo $RAW_JSON > repolinter.json
       - uses: newrelic/repolinter-action@v1
         with:
           # A path to the JSON/YAML Repolinter ruleset to use, relative to the workflow
