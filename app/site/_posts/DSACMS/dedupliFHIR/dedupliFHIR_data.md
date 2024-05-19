@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for dedupliFHIR | REPORT-2024-05-12
+title: Open Source at CMS Metrics Report for dedupliFHIR | REPORT-2024-05-19
 permalink: /DSACMS/dedupliFHIR/
 
 org: DSACMS
 repo: dedupliFHIR
-reportID: REPORT-2024-05-12
-date_stampThisWeek: 2024-05-12
-date_stampLastWeek: 2024-05-12
+reportID: REPORT-2024-05-19
+date_stampThisWeek: 2024-05-19
+date_stampLastWeek: 2024-05-19
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,16 +25,16 @@ date_stampLastWeek: 2024-05-12
       <tr>
         <th scope="row">Commits</th>
         <td>226</td>
-        <td>202</td>
-        <td style="color: #45c527" >24</td>
-        <td style="color: #45c527" >11%</td>
+        <td>226</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
         <td>14</td>
-        <td>11</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >24%</td>
+        <td>14</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
@@ -46,9 +46,9 @@ date_stampLastWeek: 2024-05-12
       <tr>
         <th scope="row">Closed Issues</th>
         <td>8</td>
-        <td>5</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >46%</td>
+        <td>8</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
@@ -60,16 +60,16 @@ date_stampLastWeek: 2024-05-12
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>40</td>
-        <td>36</td>
-        <td style="color: #45c527" >4</td>
-        <td style="color: #45c527" >11%</td>
+        <td>40</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>2</td>
-        <td>1</td>
-        <td style="" >1</td>
-        <td style="" >67%</td>
+        <td>2</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -81,16 +81,16 @@ date_stampLastWeek: 2024-05-12
       <tr>
         <th scope="row">Stars</th>
         <td>7</td>
-        <td>6</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >15%</td>
+        <td>7</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
         <td>4</td>
-        <td>5</td>
-        <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >22%</td>
+        <td>4</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>

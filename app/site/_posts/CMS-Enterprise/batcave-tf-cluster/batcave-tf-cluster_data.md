@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-tf-cluster | REPORT-2024-05-12
+title: Open Source at CMS Metrics Report for batcave-tf-cluster | REPORT-2024-05-19
 permalink: /CMS-Enterprise/batcave-tf-cluster/
 
 org: CMS-Enterprise
 repo: batcave-tf-cluster
-reportID: REPORT-2024-05-12
-date_stampThisWeek: 2024-05-12
-date_stampLastWeek: 2024-05-12
+reportID: REPORT-2024-05-19
+date_stampThisWeek: 2024-05-19
+date_stampLastWeek: 2024-05-19
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-05-12
       <tr>
         <th scope="row">Commits</th>
         <td>143</td>
-        <td>138</td>
-        <td style="color: #45c527" >5</td>
-        <td style="color: #45c527" >3.6%</td>
+        <td>143</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -60,9 +60,9 @@ date_stampLastWeek: 2024-05-12
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>137</td>
-        <td>132</td>
-        <td style="color: #45c527" >5</td>
-        <td style="color: #45c527" >3.7%</td>
+        <td>137</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
