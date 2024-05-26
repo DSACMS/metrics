@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for hpt-validator-cli | REPORT-2024-05-19
+title: Open Source at CMS Metrics Report for hpt-validator-cli | REPORT-2024-05-26
 permalink: /CMSgov/hpt-validator-cli/
 
 org: CMSgov
 repo: hpt-validator-cli
-reportID: REPORT-2024-05-19
-date_stampThisWeek: 2024-05-19
-date_stampLastWeek: 2024-05-19
+reportID: REPORT-2024-05-26
+date_stampThisWeek: 2024-05-26
+date_stampLastWeek: 2024-05-26
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-05-19
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>30</td>
         <td>29</td>
-        <td>29</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >3.4%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -87,10 +87,10 @@ date_stampLastWeek: 2024-05-19
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>8</td>
         <td>7</td>
-        <td>7</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >13%</td>
       </tr>
     </tbody>
   </table>

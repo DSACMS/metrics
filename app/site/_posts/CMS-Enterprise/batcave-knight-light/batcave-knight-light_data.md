@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-knight-light | REPORT-2024-05-19
+title: Open Source at CMS Metrics Report for batcave-knight-light | REPORT-2024-05-26
 permalink: /CMS-Enterprise/batcave-knight-light/
 
 org: CMS-Enterprise
 repo: batcave-knight-light
-reportID: REPORT-2024-05-19
-date_stampThisWeek: 2024-05-19
-date_stampLastWeek: 2024-05-19
+reportID: REPORT-2024-05-26
+date_stampThisWeek: 2024-05-26
+date_stampLastWeek: 2024-05-26
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-05-19
       <tr>
         <th scope="row">Commits</th>
         <td>138</td>
-        <td>137</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.73%</td>
+        <td>138</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -39,16 +39,16 @@ date_stampLastWeek: 2024-05-19
       <tr>
         <th scope="row">Open Issues</th>
         <td>0</td>
-        <td>1</td>
-        <td style="color: #45c527" >-1</td>
-        <td style="color: #45c527" >200%</td>
+        <td>0</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
         <td>2</td>
-        <td>1</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >67%</td>
+        <td>2</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
@@ -60,16 +60,16 @@ date_stampLastWeek: 2024-05-19
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>7</td>
-        <td>6</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >15%</td>
+        <td>7</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>9</td>
-        <td>8</td>
-        <td style="" >1</td>
-        <td style="" >12%</td>
+        <td>9</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for repo-scaffolder | REPORT-2024-05-19
+title: Open Source at CMS Metrics Report for repo-scaffolder | REPORT-2024-05-26
 permalink: /DSACMS/repo-scaffolder/
 
 org: DSACMS
 repo: repo-scaffolder
-reportID: REPORT-2024-05-19
-date_stampThisWeek: 2024-05-19
-date_stampLastWeek: 2024-05-19
+reportID: REPORT-2024-05-26
+date_stampThisWeek: 2024-05-26
+date_stampLastWeek: 2024-05-26
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -31,17 +31,17 @@ date_stampLastWeek: 2024-05-19
       </tr>
       <tr>
         <th scope="row">Issues</th>
+        <td>27</td>
         <td>25</td>
-        <td>25</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >7.7%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>19</td>
         <td>17</td>
-        <td>17</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >2</td>
+        <td style="" >11%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -60,9 +60,9 @@ date_stampLastWeek: 2024-05-19
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>55</td>
-        <td>54</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >1.8%</td>
+        <td>55</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -73,17 +73,17 @@ date_stampLastWeek: 2024-05-19
       </tr>
       <tr>
         <th scope="row">Forks</th>
+        <td>3</td>
         <td>2</td>
-        <td>2</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >40%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
         <td>19</td>
-        <td>16</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >17%</td>
+        <td>19</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>

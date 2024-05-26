@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ai_website | REPORT-2024-05-19
+title: Open Source at CMS Metrics Report for ai_website | REPORT-2024-05-26
 permalink: /CMSgov/ai_website/
 
 org: CMSgov
 repo: ai_website
-reportID: REPORT-2024-05-19
-date_stampThisWeek: 2024-05-19
-date_stampLastWeek: 2024-05-19
+reportID: REPORT-2024-05-26
+date_stampThisWeek: 2024-05-26
+date_stampLastWeek: 2024-05-26
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-05-19
       <tr>
         <th scope="row">Commits</th>
         <td>26</td>
-        <td>20</td>
-        <td style="color: #45c527" >6</td>
-        <td style="color: #45c527" >26%</td>
+        <td>26</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
