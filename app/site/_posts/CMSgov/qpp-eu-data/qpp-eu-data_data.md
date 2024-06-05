@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for qpp-eu-data | REPORT-2024-05-26
+title: Open Source at CMS Metrics Report for qpp-eu-data | REPORT-2024-06-05
 permalink: /CMSgov/qpp-eu-data/
 
 org: CMSgov
 repo: qpp-eu-data
-reportID: REPORT-2024-05-26
-date_stampThisWeek: 2024-05-26
-date_stampLastWeek: 2024-05-26
+reportID: REPORT-2024-06-05
+date_stampThisWeek: 2024-06-05
+date_stampLastWeek: 2024-06-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -53,9 +53,9 @@ date_stampLastWeek: 2024-05-26
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>2</td>
-        <td>0</td>
-        <td style="" >2</td>
-        <td style="" >200%</td>
+        <td>2</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
