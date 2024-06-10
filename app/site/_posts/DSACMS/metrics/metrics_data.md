@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for metrics | REPORT-2024-06-05
+title: Open Source at CMS Metrics Report for metrics | REPORT-2024-06-10
 permalink: /DSACMS/metrics/
 
 org: DSACMS
 repo: metrics
-reportID: REPORT-2024-06-05
-date_stampThisWeek: 2024-06-05
-date_stampLastWeek: 2024-06-05
+reportID: REPORT-2024-06-10
+date_stampThisWeek: 2024-06-10
+date_stampLastWeek: 2024-06-10
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,24 +24,24 @@ date_stampLastWeek: 2024-06-05
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>856</td>
         <td>853</td>
-        <td>851</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >0.23%</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >0.35%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
+        <td>32</td>
         <td>25</td>
-        <td>25</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >7</td>
+        <td style="color: #45c527" >25%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>22</td>
         <td>15</td>
-        <td>15</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >7</td>
+        <td style="" >38%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -67,9 +67,9 @@ date_stampLastWeek: 2024-06-05
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>9</td>
-        <td>8</td>
-        <td style="" >1</td>
-        <td style="" >12%</td>
+        <td>9</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for bluebutton-sample-client-nodejs-react | REPORT-2024-06-05
+title: Open Source at CMS Metrics Report for bluebutton-sample-client-nodejs-react | REPORT-2024-06-10
 permalink: /CMSgov/bluebutton-sample-client-nodejs-react/
 
 org: CMSgov
 repo: bluebutton-sample-client-nodejs-react
-reportID: REPORT-2024-06-05
-date_stampThisWeek: 2024-06-05
-date_stampLastWeek: 2024-06-05
+reportID: REPORT-2024-06-10
+date_stampThisWeek: 2024-06-10
+date_stampLastWeek: 2024-06-10
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-06-05
       <tr>
         <th scope="row">Commits</th>
         <td>117</td>
-        <td>116</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.86%</td>
+        <td>117</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -60,9 +60,9 @@ date_stampLastWeek: 2024-06-05
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>30</td>
-        <td>29</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >3.4%</td>
+        <td>30</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>

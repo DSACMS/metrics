@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for oopc-calculations | REPORT-2024-06-05
+title: Open Source at CMS Metrics Report for oopc-calculations | REPORT-2024-06-10
 permalink: /CMSgov/oopc-calculations/
 
 org: CMSgov
 repo: oopc-calculations
-reportID: REPORT-2024-06-05
-date_stampThisWeek: 2024-06-05
-date_stampLastWeek: 2024-06-05
+reportID: REPORT-2024-06-10
+date_stampThisWeek: 2024-06-10
+date_stampLastWeek: 2024-06-10
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

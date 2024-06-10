@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for T-MSIS-Analytic-File-Generation-Python | REPORT-2024-06-05
+title: Open Source at CMS Metrics Report for T-MSIS-Analytic-File-Generation-Python | REPORT-2024-06-10
 permalink: /Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/
 
 org: Enterprise-CMCS
 repo: T-MSIS-Analytic-File-Generation-Python
-reportID: REPORT-2024-06-05
-date_stampThisWeek: 2024-06-05
-date_stampLastWeek: 2024-06-05
+reportID: REPORT-2024-06-10
+date_stampThisWeek: 2024-06-10
+date_stampLastWeek: 2024-06-10
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-06-05
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>386</td>
         <td>385</td>
-        <td>383</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >0.52%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.26%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,17 +52,17 @@ date_stampLastWeek: 2024-06-05
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>6</td>
         <td>7</td>
-        <td>3</td>
-        <td style="" >4</td>
-        <td style="" >80%</td>
+        <td style="color: #45c527" >-1</td>
+        <td style="color: #45c527" >15%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>110</td>
         <td>109</td>
-        <td>108</td>
         <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.92%</td>
+        <td style="color: #45c527" >0.91%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
