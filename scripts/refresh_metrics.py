@@ -16,7 +16,7 @@ if __name__ == "__main__":
                     help='The GitHub Org to update data for.')
     args = parser.parse_args()
 
-    orgs_urls, repo_urls = parse_tracked_repos_file()
+    orgs_urls, repo_urls = parse_tracked_repos_file(args.org)
 
     all_orgs, all_repos = parse_repos_and_orgs_into_objects(orgs_urls, repo_urls)
 

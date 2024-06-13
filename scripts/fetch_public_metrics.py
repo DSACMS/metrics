@@ -9,7 +9,7 @@ from metricsLib.metrics_definitions import PERIODIC_METRICS, RESOURCE_METRICS
 from metricsLib.oss_metric_entities import GithubOrg, Repository
 from metricsLib.constants import PATH_TO_METADATA
 
-def parse_tracked_repos_file():
+def parse_tracked_repos_file(org=None):
     """
     Function to parse projects_tracked.json
 
@@ -22,7 +22,13 @@ def parse_tracked_repos_file():
     with open(metadata_path, "r", encoding="utf-8") as file:
         tracking_file = json.load(file)
 
-    # Track specific repositories e.g. ['dsacms.github.io']
+    # Only parse the desired org if an org was passed as an argument
+    if org:
+        repo_urls = {
+            org : tracking_file["Open Source Projects"][org]
+        }
+        return [org], repo_urls
+
     repo_urls = tracking_file["Open Source Projects"]
 
     # Get two lists of objects that will hold all the new metrics
