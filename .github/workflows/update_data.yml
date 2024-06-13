@@ -8,6 +8,9 @@ on:
 
 jobs:
   update:
+    strategy:
+      matrix: 
+        orgs: ["DSACMS","Enterprise-CMCS","CMS-Enterprise","CMSgov"]
     permissions: write-all
     name: update
     runs-on: ubuntu-latest
@@ -25,7 +28,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
       - run: pip install -r requirements.txt
-      - run: ./update.sh
+      - run: ./update.sh ${{ matrix.orgs }}
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_GITHUB_TOKEN }}
           AUGUR_HOST: ${{ vars.AUGUR_HOST }}
