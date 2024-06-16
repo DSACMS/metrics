@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for HealthCare.gov-Styleguide | REPORT-2024-06-10
+title: Open Source at CMS Metrics Report for HealthCare.gov-Styleguide | REPORT-2024-06-16
 permalink: /CMSgov/HealthCare.gov-Styleguide/
 
 org: CMSgov
 repo: HealthCare.gov-Styleguide
-reportID: REPORT-2024-06-10
-date_stampThisWeek: 2024-06-10
-date_stampLastWeek: 2024-06-10
+reportID: REPORT-2024-06-16
+date_stampThisWeek: 2024-06-16
+date_stampLastWeek: 2024-06-16
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

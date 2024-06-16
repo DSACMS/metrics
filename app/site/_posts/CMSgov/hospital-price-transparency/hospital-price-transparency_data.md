@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for hospital-price-transparency | REPORT-2024-06-10
+title: Open Source at CMS Metrics Report for hospital-price-transparency | REPORT-2024-06-16
 permalink: /CMSgov/hospital-price-transparency/
 
 org: CMSgov
 repo: hospital-price-transparency
-reportID: REPORT-2024-06-10
-date_stampThisWeek: 2024-06-10
-date_stampLastWeek: 2024-06-10
+reportID: REPORT-2024-06-16
+date_stampThisWeek: 2024-06-16
+date_stampLastWeek: 2024-06-16
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-06-10
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>111</td>
         <td>100</td>
-        <td>100</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >11</td>
+        <td style="color: #45c527" >10%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,17 +52,17 @@ date_stampLastWeek: 2024-06-10
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>0</td>
         <td>2</td>
-        <td>1</td>
-        <td style="" >1</td>
-        <td style="" >67%</td>
+        <td style="color: #45c527" >-2</td>
+        <td style="color: #45c527" >200%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>31</td>
         <td>28</td>
-        <td>28</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >10%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -87,10 +87,10 @@ date_stampLastWeek: 2024-06-10
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>85</td>
         <td>83</td>
-        <td>82</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >1.2%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >2.4%</td>
       </tr>
     </tbody>
   </table>

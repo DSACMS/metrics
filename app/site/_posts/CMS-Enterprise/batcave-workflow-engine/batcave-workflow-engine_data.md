@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-workflow-engine | REPORT-2024-06-10
+title: Open Source at CMS Metrics Report for batcave-workflow-engine | REPORT-2024-06-16
 permalink: /CMS-Enterprise/batcave-workflow-engine/
 
 org: CMS-Enterprise
 repo: batcave-workflow-engine
-reportID: REPORT-2024-06-10
-date_stampThisWeek: 2024-06-10
-date_stampLastWeek: 2024-06-10
+reportID: REPORT-2024-06-16
+date_stampThisWeek: 2024-06-16
+date_stampLastWeek: 2024-06-16
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-06-10
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>226</td>
         <td>220</td>
-        <td>215</td>
-        <td style="color: #45c527" >5</td>
-        <td style="color: #45c527" >2.3%</td>
+        <td style="color: #45c527" >6</td>
+        <td style="color: #45c527" >2.7%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>

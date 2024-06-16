@@ -1,12 +1,12 @@
 ---
 layout: org-report
-title: Open Source at CMS Metrics Report for CMS-Enterprise | REPORT-2024-06-10
+title: Open Source at CMS Metrics Report for CMS-Enterprise | REPORT-2024-06-16
 permalink: /CMS-Enterprise/
 
 org: CMS-Enterprise
-reportID: REPORT-2024-06-10
-date_stampThisWeek: 2024-06-10
-date_stampLastWeek: 2024-06-10
+reportID: REPORT-2024-06-16
+date_stampThisWeek: 2024-06-16
+date_stampLastWeek: 2024-06-16
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -23,8 +23,8 @@ date_stampLastWeek: 2024-06-10
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>1096</td>
         <td>1090</td>
-        <td>1084</td>
         <td style="color: #45c527" >6</td>
         <td style="color: #45c527" >0.55%</td>
       </tr>
@@ -52,9 +52,9 @@ date_stampLastWeek: 2024-06-10
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>43</td>
-        <td>42</td>
-        <td style="" >1</td>
-        <td style="" >2.4%</td>
+        <td>43</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>

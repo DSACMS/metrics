@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for cms-bb2-node-sdk | REPORT-2024-06-10
+title: Open Source at CMS Metrics Report for cms-bb2-node-sdk | REPORT-2024-06-16
 permalink: /CMSgov/cms-bb2-node-sdk/
 
 org: CMSgov
 repo: cms-bb2-node-sdk
-reportID: REPORT-2024-06-10
-date_stampThisWeek: 2024-06-10
-date_stampLastWeek: 2024-06-10
+reportID: REPORT-2024-06-16
+date_stampThisWeek: 2024-06-16
+date_stampLastWeek: 2024-06-16
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-06-10
       <tr>
         <th scope="row">Commits</th>
         <td>162</td>
-        <td>160</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >1.2%</td>
+        <td>162</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -60,9 +60,9 @@ date_stampLastWeek: 2024-06-10
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>40</td>
-        <td>39</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >2.5%</td>
+        <td>40</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
