@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ECTA | REPORT-2024-06-16
+title: Open Source at CMS Metrics Report for ECTA | REPORT-2024-06-23
 permalink: /CMSgov/ECTA/
 
 org: CMSgov
 repo: ECTA
-reportID: REPORT-2024-06-16
-date_stampThisWeek: 2024-06-16
-date_stampLastWeek: 2024-06-16
+reportID: REPORT-2024-06-23
+date_stampThisWeek: 2024-06-23
+date_stampLastWeek: 2024-06-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

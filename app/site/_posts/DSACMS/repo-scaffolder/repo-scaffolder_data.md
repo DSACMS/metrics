@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for repo-scaffolder | REPORT-2024-06-16
+title: Open Source at CMS Metrics Report for repo-scaffolder | REPORT-2024-06-23
 permalink: /DSACMS/repo-scaffolder/
 
 org: DSACMS
 repo: repo-scaffolder
-reportID: REPORT-2024-06-16
-date_stampThisWeek: 2024-06-16
-date_stampLastWeek: 2024-06-16
+reportID: REPORT-2024-06-23
+date_stampThisWeek: 2024-06-23
+date_stampLastWeek: 2024-06-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-06-16
       <tr>
         <th scope="row">Commits</th>
         <td>352</td>
-        <td>337</td>
-        <td style="color: #45c527" >15</td>
-        <td style="color: #45c527" >4.4%</td>
+        <td>352</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,17 +52,17 @@ date_stampLastWeek: 2024-06-16
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>4</td>
         <td>1</td>
-        <td>1</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >3</td>
+        <td style="" >120%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>59</td>
         <td>58</td>
-        <td>56</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >3.5%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >1.7%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -74,23 +74,23 @@ date_stampLastWeek: 2024-06-16
       <tr>
         <th scope="row">Forks</th>
         <td>5</td>
-        <td>4</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >22%</td>
+        <td>5</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
+        <td>21</td>
         <td>20</td>
-        <td>19</td>
         <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >5.1%</td>
+        <td style="color: #45c527" >4.9%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
         <td>3</td>
-        <td>2</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >40%</td>
+        <td>3</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>
