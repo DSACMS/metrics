@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ab2d-lambdas | REPORT-2024-06-23
+title: Open Source at CMS Metrics Report for ab2d-lambdas | REPORT-2024-06-24
 permalink: /CMSgov/ab2d-lambdas/
 
 org: CMSgov
 repo: ab2d-lambdas
-reportID: REPORT-2024-06-23
-date_stampThisWeek: 2024-06-23
-date_stampLastWeek: 2024-06-23
+reportID: REPORT-2024-06-24
+date_stampThisWeek: 2024-06-24
+date_stampLastWeek: 2024-06-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-06-23
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>164</td>
         <td>162</td>
-        <td>159</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >1.9%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >1.2%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2024-06-23
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>2</td>
         <td>0</td>
-        <td style="" >2</td>
-        <td style="" >200%</td>
+        <td>2</td>
+        <td style="color: #45c527" >-2</td>
+        <td style="color: #45c527" >200%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>69</td>
         <td>67</td>
-        <td>64</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >4.6%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >2.9%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>41</td>
-        <td>40</td>
-        <td style="" >1</td>
-        <td style="" >2.5%</td>
+        <td>41</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -88,9 +88,9 @@ date_stampLastWeek: 2024-06-23
       <tr>
         <th scope="row">Watchers</th>
         <td>9</td>
-        <td>8</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >12%</td>
+        <td>9</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>
