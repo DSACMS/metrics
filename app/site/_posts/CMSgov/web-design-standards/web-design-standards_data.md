@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for web-design-standards | REPORT-2024-06-24
+title: Open Source at CMS Metrics Report for web-design-standards | REPORT-2024-06-30
 permalink: /CMSgov/web-design-standards/
 
 org: CMSgov
 repo: web-design-standards
-reportID: REPORT-2024-06-24
-date_stampThisWeek: 2024-06-24
-date_stampLastWeek: 2024-06-24
+reportID: REPORT-2024-06-30
+date_stampThisWeek: 2024-06-30
+date_stampLastWeek: 2024-06-30
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
