@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for dpc-app | REPORT-2024-06-30
+title: Open Source at CMS Metrics Report for dpc-app | REPORT-2024-07-07
 permalink: /CMSgov/dpc-app/
 
 org: CMSgov
 repo: dpc-app
-reportID: REPORT-2024-06-30
-date_stampThisWeek: 2024-06-30
-date_stampLastWeek: 2024-06-30
+reportID: REPORT-2024-07-07
+date_stampThisWeek: 2024-07-07
+date_stampLastWeek: 2024-07-07
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-06-30
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>1861</td>
-        <td>1848</td>
-        <td style="color: #45c527" >13</td>
-        <td style="color: #45c527" >0.7%</td>
+        <td>1866</td>
+        <td>1866</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2024-06-30
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>4</td>
-        <td>15</td>
-        <td style="color: #45c527" >-11</td>
-        <td style="color: #45c527" >120%</td>
+        <td>5</td>
+        <td>3</td>
+        <td style="" >2</td>
+        <td style="" >50%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>1640</td>
-        <td>1627</td>
-        <td style="color: #45c527" >13</td>
-        <td style="color: #45c527" >0.8%</td>
+        <td>1645</td>
+        <td>1645</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>549</td>
-        <td>544</td>
-        <td style="" >5</td>
-        <td style="" >0.91%</td>
+        <td>549</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

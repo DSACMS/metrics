@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for redhat-enterprise-linux-8-stig-baseline | REPORT-2024-06-30
+title: Open Source at CMS Metrics Report for redhat-enterprise-linux-8-stig-baseline | REPORT-2024-07-07
 permalink: /CMSgov/redhat-enterprise-linux-8-stig-baseline/
 
 org: CMSgov
 repo: redhat-enterprise-linux-8-stig-baseline
-reportID: REPORT-2024-06-30
-date_stampThisWeek: 2024-06-30
-date_stampLastWeek: 2024-06-30
+reportID: REPORT-2024-07-07
+date_stampThisWeek: 2024-07-07
+date_stampLastWeek: 2024-07-07
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

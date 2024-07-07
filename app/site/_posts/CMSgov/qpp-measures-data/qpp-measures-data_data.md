@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for qpp-measures-data | REPORT-2024-06-30
+title: Open Source at CMS Metrics Report for qpp-measures-data | REPORT-2024-07-07
 permalink: /CMSgov/qpp-measures-data/
 
 org: CMSgov
 repo: qpp-measures-data
-reportID: REPORT-2024-06-30
-date_stampThisWeek: 2024-06-30
-date_stampLastWeek: 2024-06-30
+reportID: REPORT-2024-07-07
+date_stampThisWeek: 2024-07-07
+date_stampLastWeek: 2024-07-07
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-06-30
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>1666</td>
-        <td>1666</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td>1670</td>
+        <td>1668</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >0.12%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -38,31 +38,31 @@ date_stampLastWeek: 2024-06-30
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
-        <td>1</td>
-        <td>1</td>
+        <td>0</td>
+        <td>0</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
-        <td>16</td>
-        <td>16</td>
+        <td>17</td>
+        <td>17</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>1</td>
-        <td>0</td>
-        <td style="" >1</td>
-        <td style="" >200%</td>
+        <td>1</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>637</td>
-        <td>637</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td>639</td>
+        <td>638</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.16%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>

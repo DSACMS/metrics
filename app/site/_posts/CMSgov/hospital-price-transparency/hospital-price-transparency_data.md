@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for hospital-price-transparency | REPORT-2024-06-30
+title: Open Source at CMS Metrics Report for hospital-price-transparency | REPORT-2024-07-07
 permalink: /CMSgov/hospital-price-transparency/
 
 org: CMSgov
 repo: hospital-price-transparency
-reportID: REPORT-2024-06-30
-date_stampThisWeek: 2024-06-30
-date_stampLastWeek: 2024-06-30
+reportID: REPORT-2024-07-07
+date_stampThisWeek: 2024-07-07
+date_stampLastWeek: 2024-07-07
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,24 +24,24 @@ date_stampLastWeek: 2024-06-30
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>111</td>
-        <td>111</td>
+        <td>113</td>
+        <td>113</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
         <td>1</td>
-        <td>0</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >200%</td>
+        <td>1</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
         <td>1</td>
-        <td>0</td>
-        <td style="" >1</td>
-        <td style="" >200%</td>
+        <td>1</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -59,8 +59,8 @@ date_stampLastWeek: 2024-06-30
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>31</td>
-        <td>31</td>
+        <td>32</td>
+        <td>32</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
@@ -81,16 +81,16 @@ date_stampLastWeek: 2024-06-30
       <tr>
         <th scope="row">Stars</th>
         <td>51</td>
-        <td>47</td>
-        <td style="color: #45c527" >4</td>
-        <td style="color: #45c527" >8.2%</td>
+        <td>51</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
-        <td>84</td>
         <td>85</td>
-        <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >1.2%</td>
+        <td>85</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>

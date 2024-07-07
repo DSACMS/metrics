@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for easi-app | REPORT-2024-06-30
+title: Open Source at CMS Metrics Report for easi-app | REPORT-2024-07-07
 permalink: /CMSgov/easi-app/
 
 org: CMSgov
 repo: easi-app
-reportID: REPORT-2024-06-30
-date_stampThisWeek: 2024-06-30
-date_stampLastWeek: 2024-06-30
+reportID: REPORT-2024-07-07
+date_stampThisWeek: 2024-07-07
+date_stampLastWeek: 2024-07-07
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-06-30
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>8805</td>
-        <td>8789</td>
-        <td style="color: #45c527" >16</td>
-        <td style="color: #45c527" >0.18%</td>
+        <td>8821</td>
+        <td>8817</td>
+        <td style="color: #45c527" >4</td>
+        <td style="color: #45c527" >0.045%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,43 +52,43 @@ date_stampLastWeek: 2024-06-30
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>4</td>
-        <td>6</td>
-        <td style="color: #45c527" >-2</td>
-        <td style="color: #45c527" >40%</td>
+        <td>7</td>
+        <td>7</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>2371</td>
-        <td>2355</td>
-        <td style="color: #45c527" >16</td>
-        <td style="color: #45c527" >0.68%</td>
+        <td>2387</td>
+        <td>2383</td>
+        <td style="color: #45c527" >4</td>
+        <td style="color: #45c527" >0.17%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
-        <td>279</td>
-        <td>277</td>
-        <td style="" >2</td>
-        <td style="" >0.72%</td>
+        <td>282</td>
+        <td>281</td>
+        <td style="" >1</td>
+        <td style="" >0.36%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
-        <td>11</td>
-        <td>11</td>
+        <td>0</td>
+        <td>0</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
-        <td>23</td>
-        <td>23</td>
+        <td>1</td>
+        <td>1</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
-        <td>15</td>
-        <td>15</td>
+        <td>2</td>
+        <td>2</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
