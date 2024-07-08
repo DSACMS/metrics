@@ -116,7 +116,9 @@ SIMPLE_METRICS.append(RangeMetric("totalRepoBlankLines",["repo_id"], AUGUR_HOST 
                                  "average_blank_lines": ["avg_blank_lines"]}))
 
 REPOMETRICS_ENDPOINT = "https://raw.githubusercontent.com/{owner}/{repo}/main/code.json"
-repometrics_values = {"project_type": "", "user_input": "", "project_fisma_level": "", "group": "", "subset_in_healthcare": "", "user_type": "", "repository_host": "", "maturity_model_tier": ""}
+repometrics_values = {"project_type": "project_type", "user_input": "user_input", "project_fisma_level": "project_fisma_level", 
+                      "group": "group", "subset_in_healthcare": "subset_in_healthcare", "user_type": "user_type", 
+                      "repository_host": "repository_host", "maturity_model_tier": "maturity_model_tier"}
 SIMPLE_METRICS.append(BaseMetric("repometrics", ['owner', 'repo'], REPOMETRICS_ENDPOINT, repometrics_values, token=TOKEN))
 
 ORG_METRICS.append(ListMetric("topCommitters", ["repo_group_id"],
