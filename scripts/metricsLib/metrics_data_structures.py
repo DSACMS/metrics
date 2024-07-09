@@ -87,7 +87,10 @@ class BaseMetric:
             response = requests.request(
                 self.method, endpoint_to_hit, params=request_params, timeout=TIMEOUT_IN_SECONDS)
         try:
-            response_json = json.loads(response.text)
+            if response.status_code == 200:
+                response_json = json.loads(response.text)
+            else:
+                raise ConnectionError(f"Non valid status code {response.status_code}!")
         except JSONDecodeError:
             response_json = {}
 
