@@ -20,7 +20,7 @@ jobs:
         steps:
             - uses: actions/checkout@v4
             - name: Install scc
-              run: sudo apt-get install -y scc
+              run: sudo snap install scc
             - name: Run COCOMO script
               run: ./scripts/scc_cocomo.sh ${{ matrix.orgs }}
             - name: Commit changes
