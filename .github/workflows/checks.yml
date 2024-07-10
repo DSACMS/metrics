@@ -128,3 +128,6 @@ jobs:
             workdir: app/
             reporter: github-pr-review
             level: warning
+            
+        - name: Build Project
+          run: npm run build
