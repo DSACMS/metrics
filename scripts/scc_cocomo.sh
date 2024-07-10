@@ -9,6 +9,9 @@ if [ -z "$organization" ]; then
   exit 1
 fi
 
+# set up working directory
+cd scripts/
+
 repo_paths=$(jq -r '."Open Source Projects"."'"$organization"'"[]' _metadata/projects_tracked.json)
 
 # set up directories
