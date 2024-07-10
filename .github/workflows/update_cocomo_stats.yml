@@ -1,0 +1,31 @@
+name: Update COCOMO stats
+
+on:
+    workflow_dispatch: {}
+    schedule:
+        # Run Mondays at 2:15 am
+        - cron: "15 2 * * 0"
+
+jobs:
+    update:
+        strategy:
+            matrix:
+                orgs: ["DSACMS", "Enterprise-CMCS", "CMS-Enterprise", "CMSgov"]
+        permissions: write-all
+        name: update
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - run: ./scripts/scc_cocomo.sh ${{ matrix.orgs }}
+            - run: |
+                  git config user.name 'GitHub Actions'
+                  git config user.email 'actions@users.noreply.github.com'
+                  git pull
+                  git add -A
+                  timestamp=$(date -u)
+                  git commit -m "update ${{ matrix.orgs }} data: ${timestamp}" || exit 0
+            # - name: Push to ${{ github.ref_name }}
+            #   uses: CasperWA/push-protected@v2
+            #   with:
+            #       token: ${{ secrets.METRICS_GITHUB_TOKEN }}
+            #       branch: ${{ github.ref_name }}
