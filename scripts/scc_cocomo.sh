@@ -9,7 +9,7 @@ if [ -z "$organization" ]; then
   exit 1
 fi
 
-repo_paths=$(jq -r '."Open Source Projects".'"$organization"'[]' _metadata/projects_tracked.json)
+repo_paths=$(jq -r '."Open Source Projects"."'"$organization"'"[]' _metadata/projects_tracked.json)
 
 # set up directories
 mkdir -p scc_repos/ scc_reports/
