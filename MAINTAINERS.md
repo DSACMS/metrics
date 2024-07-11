@@ -1,5 +1,7 @@
 # Maintainers
 
+Total number of contributors: <!--CONTRIBUTOR COUNT START--><!--CONTRIBUTOR COUNT END-->
+
 MAINTAINERS:
 
 - GITHUB_ID
@@ -24,3 +26,9 @@ reviewers:
 | reviewer     | review contributions from other members | history of review and authorship in a subproject | MAINTAINERS file reviewer entry, and GitHub Org Triage Team|
 | approver     | approve accepting contributions | highly experienced and active reviewer + contributor to a subproject  | MAINTAINERS file approver entry and GitHub Triage Team |
 | lead         | set direction and priorities for a subproject | demonstrated responsibility and excellent technical judgement for the subproject |  MAINTAINERS file owner entry and GitHub Org Admin Team|
+
+## All Contributors
+
+<!-- readme: contributors -start -->
+
+<!-- readme: contributors -end -->
