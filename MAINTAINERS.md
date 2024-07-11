@@ -1,5 +1,7 @@
 # Maintainers
 
+Total number of contributors: <!--CONTRIBUTOR COUNT START--> 3 <!--CONTRIBUTOR COUNT END-->
+
 MAINTAINERS:
 
 - GITHUB_ID
@@ -24,3 +26,42 @@ reviewers:
 | reviewer     | review contributions from other members | history of review and authorship in a subproject | MAINTAINERS file reviewer entry, and GitHub Org Triage Team|
 | approver     | approve accepting contributions | highly experienced and active reviewer + contributor to a subproject  | MAINTAINERS file approver entry and GitHub Triage Team |
 | lead         | set direction and priorities for a subproject | demonstrated responsibility and excellent technical judgement for the subproject |  MAINTAINERS file owner entry and GitHub Org Admin Team|
+
+## All Contributors
+
+<!-- readme: contributors -start -->
+<table>
+	<tbody>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/IsaacMilarky">
+                    <img src="https://avatars.githubusercontent.com/u/24639268?v=4" width="100;" alt="IsaacMilarky"/>
+                    <br />
+                    <sub><b>Isaac Milarsky</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/natalialuzuriaga">
+                    <img src="https://avatars.githubusercontent.com/u/29980737?v=4" width="100;" alt="natalialuzuriaga"/>
+                    <br />
+                    <sub><b>Natalia Luzuriaga</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/navila-luna">
+                    <img src="https://avatars.githubusercontent.com/u/52260794?v=4" width="100;" alt="navila-luna"/>
+                    <br />
+                    <sub><b>Nicole Avila</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/decause-gov">
+                    <img src="https://avatars.githubusercontent.com/u/107957201?v=4" width="100;" alt="decause-gov"/>
+                    <br />
+                    <sub><b>decause-gov</b></sub>
+                </a>
+            </td>
+		</tr>
+	<tbody>
+</table>
+<!-- readme: contributors -end -->
