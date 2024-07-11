@@ -28,8 +28,8 @@ jobs:
                   git add -A
                   timestamp=$(date -u)
                   git commit -m "update ${{ matrix.orgs }} data: ${timestamp}" || exit 0
-            # - name: Push to ${{ github.ref_name }}
-            #   uses: CasperWA/push-protected@v2
-            #   with:
-            #       token: ${{ secrets.METRICS_GITHUB_TOKEN }}
-            #       branch: ${{ github.ref_name }}
+            - name: Push to ${{ github.ref_name }}
+              uses: CasperWA/push-protected@v2
+              with:
+                  token: ${{ secrets.METRICS_GITHUB_TOKEN }}
+                  branch: ${{ github.ref_name }}
