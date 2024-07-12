@@ -89,7 +89,10 @@ class BaseMetric:
         # TO DO FIRST: git merge main to update 404 handling code
         # TO DO: Add exception handling for no code.json - 404 handling
         try:
-            response_json = json.loads(response.text)
+            if response.status_code == 200:
+                response_json = json.loads(response.text)
+            else:
+                raise ConnectionError(f"Non valid status code {response.status_code}!")
         except JSONDecodeError:
             response_json = {}
 
