@@ -86,8 +86,7 @@ class BaseMetric:
         else:
             response = requests.request(
                 self.method, endpoint_to_hit, params=request_params, timeout=TIMEOUT_IN_SECONDS)
-        # TO DO FIRST: git merge main to update 404 handling code
-        # TO DO: Add exception handling for no code.json - 404 handling
+
         try:
             if response.status_code == 200:
                 response_json = json.loads(response.text)
@@ -109,7 +108,7 @@ class BaseMetric:
         """
         metric_json = self.hit_metric(params=params)
         to_return = {}
-        # TO DO: exception handling if empty object
+
         for return_label, api_label in self.return_values.items():
             to_return[return_label] = metric_json[api_label]
 
