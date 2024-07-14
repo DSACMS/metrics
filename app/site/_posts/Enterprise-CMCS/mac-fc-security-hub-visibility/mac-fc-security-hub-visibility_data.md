@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for mac-fc-security-hub-visibility | REPORT-2024-07-07
+title: Open Source at CMS Metrics Report for mac-fc-security-hub-visibility | REPORT-2024-07-14
 permalink: /Enterprise-CMCS/mac-fc-security-hub-visibility/
 
 org: Enterprise-CMCS
 repo: mac-fc-security-hub-visibility
-reportID: REPORT-2024-07-07
-date_stampThisWeek: 2024-07-07
-date_stampLastWeek: 2024-07-07
+reportID: REPORT-2024-07-14
+date_stampThisWeek: 2024-07-14
+date_stampLastWeek: 2024-07-14
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-07-07
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>24</td>
         <td>20</td>
-        <td>18</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >11%</td>
+        <td style="color: #45c527" >4</td>
+        <td style="color: #45c527" >18%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -59,10 +59,10 @@ date_stampLastWeek: 2024-07-07
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>15</td>
         <td>13</td>
-        <td>11</td>
         <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >17%</td>
+        <td style="color: #45c527" >14%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>

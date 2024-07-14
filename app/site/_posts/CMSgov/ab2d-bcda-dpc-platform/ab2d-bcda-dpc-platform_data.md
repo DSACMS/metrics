@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ab2d-bcda-dpc-platform | REPORT-2024-07-07
+title: Open Source at CMS Metrics Report for ab2d-bcda-dpc-platform | REPORT-2024-07-14
 permalink: /CMSgov/ab2d-bcda-dpc-platform/
 
 org: CMSgov
 repo: ab2d-bcda-dpc-platform
-reportID: REPORT-2024-07-07
-date_stampThisWeek: 2024-07-07
-date_stampLastWeek: 2024-07-07
+reportID: REPORT-2024-07-14
+date_stampThisWeek: 2024-07-14
+date_stampLastWeek: 2024-07-14
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -52,10 +52,10 @@ date_stampLastWeek: 2024-07-07
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>5</td>
         <td>3</td>
-        <td>3</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >2</td>
+        <td style="" >50%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
