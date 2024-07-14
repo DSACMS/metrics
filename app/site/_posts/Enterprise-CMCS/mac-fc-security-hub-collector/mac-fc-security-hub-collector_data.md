@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for mac-fc-security-hub-collector | REPORT-2024-07-07
+title: Open Source at CMS Metrics Report for mac-fc-security-hub-collector | REPORT-2024-07-14
 permalink: /Enterprise-CMCS/mac-fc-security-hub-collector/
 
 org: Enterprise-CMCS
 repo: mac-fc-security-hub-collector
-reportID: REPORT-2024-07-07
-date_stampThisWeek: 2024-07-07
-date_stampLastWeek: 2024-07-07
+reportID: REPORT-2024-07-14
+date_stampThisWeek: 2024-07-14
+date_stampLastWeek: 2024-07-14
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -53,9 +53,9 @@ date_stampLastWeek: 2024-07-07
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>1</td>
-        <td>0</td>
-        <td style="" >1</td>
-        <td style="" >200%</td>
+        <td>1</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>

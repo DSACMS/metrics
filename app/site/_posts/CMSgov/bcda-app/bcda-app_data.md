@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for bcda-app | REPORT-2024-07-07
+title: Open Source at CMS Metrics Report for bcda-app | REPORT-2024-07-14
 permalink: /CMSgov/bcda-app/
 
 org: CMSgov
 repo: bcda-app
-reportID: REPORT-2024-07-07
-date_stampThisWeek: 2024-07-07
-date_stampLastWeek: 2024-07-07
+reportID: REPORT-2024-07-14
+date_stampThisWeek: 2024-07-14
+date_stampLastWeek: 2024-07-14
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-07-07
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>881</td>
         <td>875</td>
-        <td>870</td>
-        <td style="color: #45c527" >5</td>
-        <td style="color: #45c527" >0.57%</td>
+        <td style="color: #45c527" >6</td>
+        <td style="color: #45c527" >0.68%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,17 +52,17 @@ date_stampLastWeek: 2024-07-07
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>10</td>
         <td>12</td>
-        <td>13</td>
-        <td style="color: #45c527" >-1</td>
-        <td style="color: #45c527" >8%</td>
+        <td style="color: #45c527" >-2</td>
+        <td style="color: #45c527" >18%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>881</td>
         <td>875</td>
-        <td>870</td>
-        <td style="color: #45c527" >5</td>
-        <td style="color: #45c527" >0.57%</td>
+        <td style="color: #45c527" >6</td>
+        <td style="color: #45c527" >0.68%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
