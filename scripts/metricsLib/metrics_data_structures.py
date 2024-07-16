@@ -86,6 +86,7 @@ class BaseMetric:
         else:
             response = requests.request(
                 self.method, endpoint_to_hit, params=request_params, timeout=TIMEOUT_IN_SECONDS)
+
         try:
             if response.status_code == 200:
                 response_json = json.loads(response.text)
@@ -108,13 +109,8 @@ class BaseMetric:
         metric_json = self.hit_metric(params=params)
         to_return = {}
 
-        for return_label, api_label in self.return_values:
-            try:
-                to_return[return_label] = []
-                for sub_label in api_label:
-                    to_return[return_label].append(metric_json[sub_label])
-            except TypeError:
-                to_return[return_label] = metric_json[api_label]
+        for return_label, api_label in self.return_values.items():
+            to_return[return_label] = metric_json[api_label]
 
         return to_return
 
