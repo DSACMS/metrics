@@ -25,3 +25,30 @@
   height: 550px;
   object-fit: cover;
 }
+
+.main-tag {
+  --tag-color: #1a4480;
+  background-color: var(--tag-color);
+  padding: 0.5rem;
+  font-weight: bolder;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem; /* Adjust the gap as needed */
+  border-radius: 0.25rem;
+}
+
+.icon-tag {
+  padding: 0.35rem;
+}
+
+.primary-tag-group {
+  /* padding-top-1 */
+  padding-top: 0.5rem;
+}
+
+.secondary-tag-group {
+  /* padding-y-3 */
+  padding-top:1.5rem;
+  padding-bottom:1.5rem;
+}

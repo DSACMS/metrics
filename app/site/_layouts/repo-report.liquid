@@ -12,6 +12,54 @@ layout: base
     </h1>
   </div>
 
+  {% include 'tag.liquid' %}
+
+  {%comment%} could be in a script on it's own? {%endcomment%}
+  {%comment%} could be separated by primary and secondary tags lists, as tags update {%endcomment%}
+  {% assign allFields = "project_type, user_input, project_fisma_level, group, subset_in_healthcare, user_type, repository_host, maturity_model_tier" | split: "," %}
+  {% assign hasMetricFields = false %}
+  {% for field in allFields %}
+    {% if project[field] %}
+      {% assign hasMetricFields = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  {% if hasMetricFields %}
+    <div class="primary-tag-group">
+      {% if project.repository_host %}
+        <span class="usa-tag usa-tag--big main-tag icon-tag">{{ project.repository_host }} <img src="/assets/img/github.svg" alt="github icon"></span>
+      {% endif %}
+      {% if project.group %}
+        <span class="usa-tag usa-tag--big main-tag">{{ project.group }}</span>
+      {% endif %}
+    </div>
+  
+  
+    <div class="secondary-tag-group">
+      {% if project.project_type %}
+        <span class="usa-tag usa-tag--big main-tag">{{ project.project_type }}</span>
+      {% endif %}
+      {% if project.maturity_model_tier %}
+        <span class="usa-tag usa-tag--big main-tag">TIER {{ project.maturity_model_tier }}</span>
+      {% endif %}
+      {% if project.project_fisma_level %}
+        {%comment%} could be in a script on it's own? {%endcomment%}
+        {% assign fismaLevel = project.project_fisma_level %}
+        {% assign fismaLevelIcon = "chevron.svg" %}
+        {% if fismaLevel == "Moderate" %}
+            {% assign fismaLevelIcon = "chevron-two.svg" %}
+        {% else if fismaLevel == "High" %}
+            {% assign fismaLevelIcon = "chevron-three.svg" %}
+        {% endif %}
+        <span 
+          class="usa-tag usa-tag--big main-tag icon-tag">{{ project.project_fisma_level }} 
+          <img src="/assets/img/{{ fismaLevelIcon }}" alt="github icon"> 
+        </span>
+      {% endif %}
+    </div>
+  {% endif %}
+  
   <div class="tags_row">
     {% render 'project-type-tag',
       type: project.nadia_badge_name,
