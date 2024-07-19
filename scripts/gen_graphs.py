@@ -33,6 +33,7 @@ def generate_all_graphs_for_orgs(all_orgs):
         generate_solid_gauge_issue_graph(org)
         generate_time_xy_issue_graph(org, "new_issues_by_day_over_last_six_months", "New Issues")
         generate_time_xy_issue_graph(org, "new_issues_by_day_over_last_month", "New Issues")
+        generate_top_committer_bar_graph(org)
 
 
 def write_repo_chart_to_file(repo, chart, chart_name, custom_func=None, custom_func_params={}):
@@ -187,3 +188,28 @@ def generate_solid_gauge_issue_graph(oss_entity):
             {'label': "Closed Pull Requests", 'value': closed_pr_percent * 100, 'max_value': 100}])
 
     write_repo_chart_to_file(oss_entity, issues_gauge, "issue_gauge")
+
+def generate_top_committer_bar_graph(oss_entity):
+    """
+    This function generates pygals -top committer by org- bar graph.
+
+    Arguments:
+        oss_entity: the OSSEntity to create a graph for.
+    """
+    
+    # Create a bar chart object
+    bar_chart = pygal.Bar()
+    bar_chart.title = f"Top Committers in {oss_entity.metric_data['name']}"
+
+    top_committers = oss_entity.metric_data['top_committers']
+    contributor_count = 0
+
+    for committer, commits in top_committers:
+        if "dependabot" in committer:
+            continue
+        if contributor_count == 5:
+            break
+        bar_chart.add(committer, commits)
+        contributor_count += 1
+
+    write_repo_chart_to_file(oss_entity, bar_chart, "top_committers")
