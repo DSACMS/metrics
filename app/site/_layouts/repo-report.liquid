@@ -12,9 +12,6 @@ layout: base
     </h1>
   </div>
 
-  {% include 'tag.liquid' %}
-
-  {%comment%} could be in a script on it's own? {%endcomment%}
   {%comment%} could be separated by primary and secondary tags lists, as tags update {%endcomment%}
   {% assign allFields = "project_type, user_input, project_fisma_level, group, subset_in_healthcare, user_type, repository_host, maturity_model_tier" | split: "," %}
   {% assign hasMetricFields = false %}
@@ -38,7 +35,8 @@ layout: base
   
     <div class="secondary-tag-group">
       {% if project.project_type %}
-        <span class="usa-tag usa-tag--big main-tag">{{ project.project_type }}</span>
+        <span class="{{ item.name | slug }}-tag">{{ item.name }}</span>
+        <span class="usa-tag usa-tag--big main-tag {{ project.project_type | slug }}-tag">{{ project.project_type }}</span>
       {% endif %}
       {% if project.maturity_model_tier %}
         <span class="usa-tag usa-tag--big main-tag">TIER {{ project.maturity_model_tier }}</span>
