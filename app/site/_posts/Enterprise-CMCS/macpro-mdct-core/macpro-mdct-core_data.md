@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-mdct-core | REPORT-2024-07-14
+title: Open Source at CMS Metrics Report for macpro-mdct-core | REPORT-2024-07-21
 permalink: /Enterprise-CMCS/macpro-mdct-core/
 
 org: Enterprise-CMCS
 repo: macpro-mdct-core
-reportID: REPORT-2024-07-14
-date_stampThisWeek: 2024-07-14
-date_stampLastWeek: 2024-07-14
+reportID: REPORT-2024-07-21
+date_stampThisWeek: 2024-07-21
+date_stampLastWeek: 2024-07-21
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-07-14
       <tr>
         <th scope="row">Commits</th>
         <td>78</td>
-        <td>70</td>
-        <td style="color: #45c527" >8</td>
-        <td style="color: #45c527" >11%</td>
+        <td>78</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -60,9 +60,9 @@ date_stampLastWeek: 2024-07-14
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>55</td>
-        <td>54</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >1.8%</td>
+        <td>55</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
