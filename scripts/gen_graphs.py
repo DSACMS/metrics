@@ -205,7 +205,7 @@ def generate_top_committer_bar_graph(oss_entity):
     contributor_count = 0
 
     for committer, commits in top_committers:
-        if "dependabot" in committer:
+        if "dependabot" in committer or committer == "actions@github.com":
             continue
         if contributor_count == 5:
             break
