@@ -25,7 +25,7 @@ layout: base
   {% if hasMetricFields %}
     <div class="primary-tag-group">
       {% if project.repository_host %}
-        <span class="usa-tag usa-tag--big main-tag icon-tag">{{ project.repository_host }} <img src="/assets/img/github.svg" alt="github icon"></span>
+        <span class="usa-tag usa-tag--big main-tag icon-tag">{{ project.repository_host }} <img src="{{ '/assets/img/' | url }}github.svg" alt="github icon"></span>
       {% endif %}
       {% if project.group %}
         <span class="usa-tag usa-tag--big main-tag">{{ project.group }}</span>
@@ -42,7 +42,6 @@ layout: base
         <span class="usa-tag usa-tag--big main-tag">TIER {{ project.maturity_model_tier }}</span>
       {% endif %}
       {% if project.project_fisma_level %}
-        {%comment%} could be in a script on it's own? {%endcomment%}
         {% assign fismaLevel = project.project_fisma_level %}
         {% assign fismaLevelIcon = "chevron.svg" %}
         {% if fismaLevel == "Moderate" %}
@@ -52,7 +51,7 @@ layout: base
         {% endif %}
         <span 
           class="usa-tag usa-tag--big main-tag icon-tag">{{ project.project_fisma_level }} 
-          <img src="/assets/img/{{ fismaLevelIcon }}" alt="github icon"> 
+          <img src="{{ '/assets/img/' | url }}{{ fismaLevelIcon }}" alt="fisma level icon"> 
         </span>
       {% endif %}
     </div>
