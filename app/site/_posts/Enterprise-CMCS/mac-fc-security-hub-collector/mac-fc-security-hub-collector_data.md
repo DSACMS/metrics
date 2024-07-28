@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for mac-fc-security-hub-collector | REPORT-2024-07-21
+title: Open Source at CMS Metrics Report for mac-fc-security-hub-collector | REPORT-2024-07-28
 permalink: /Enterprise-CMCS/mac-fc-security-hub-collector/
 
 org: Enterprise-CMCS
 repo: mac-fc-security-hub-collector
-reportID: REPORT-2024-07-21
-date_stampThisWeek: 2024-07-21
-date_stampLastWeek: 2024-07-21
+reportID: REPORT-2024-07-28
+date_stampThisWeek: 2024-07-28
+date_stampLastWeek: 2024-07-28
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-07-21
       <tr>
         <th scope="row">Commits</th>
         <td>86</td>
-        <td>84</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >2.4%</td>
+        <td>86</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -53,23 +53,23 @@ date_stampLastWeek: 2024-07-21
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>0</td>
-        <td>1</td>
-        <td style="color: #45c527" >-1</td>
-        <td style="color: #45c527" >200%</td>
+        <td>0</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>25</td>
-        <td>23</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >8.3%</td>
+        <td>25</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>3</td>
-        <td>2</td>
-        <td style="" >1</td>
-        <td style="" >40%</td>
+        <td>3</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -88,9 +88,9 @@ date_stampLastWeek: 2024-07-21
       <tr>
         <th scope="row">Watchers</th>
         <td>11</td>
-        <td>10</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >9.5%</td>
+        <td>11</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>

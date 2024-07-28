@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for cms-bb2-python-sdk | REPORT-2024-07-21
+title: Open Source at CMS Metrics Report for cms-bb2-python-sdk | REPORT-2024-07-28
 permalink: /CMSgov/cms-bb2-python-sdk/
 
 org: CMSgov
 repo: cms-bb2-python-sdk
-reportID: REPORT-2024-07-21
-date_stampThisWeek: 2024-07-21
-date_stampLastWeek: 2024-07-21
+reportID: REPORT-2024-07-28
+date_stampThisWeek: 2024-07-28
+date_stampLastWeek: 2024-07-28
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -53,9 +53,9 @@ date_stampLastWeek: 2024-07-21
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>7</td>
-        <td>8</td>
-        <td style="color: #45c527" >-1</td>
-        <td style="color: #45c527" >13%</td>
+        <td>7</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
@@ -67,9 +67,9 @@ date_stampLastWeek: 2024-07-21
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>3</td>
-        <td>2</td>
-        <td style="" >1</td>
-        <td style="" >40%</td>
+        <td>3</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

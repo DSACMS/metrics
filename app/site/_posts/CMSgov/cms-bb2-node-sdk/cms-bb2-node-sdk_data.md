@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for cms-bb2-node-sdk | REPORT-2024-07-21
+title: Open Source at CMS Metrics Report for cms-bb2-node-sdk | REPORT-2024-07-28
 permalink: /CMSgov/cms-bb2-node-sdk/
 
 org: CMSgov
 repo: cms-bb2-node-sdk
-reportID: REPORT-2024-07-21
-date_stampThisWeek: 2024-07-21
-date_stampLastWeek: 2024-07-21
+reportID: REPORT-2024-07-28
+date_stampThisWeek: 2024-07-28
+date_stampLastWeek: 2024-07-28
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -67,9 +67,9 @@ date_stampLastWeek: 2024-07-21
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>14</td>
-        <td>13</td>
-        <td style="" >1</td>
-        <td style="" >7.4%</td>
+        <td>14</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for oopc-calculations | REPORT-2024-07-21
+title: Open Source at CMS Metrics Report for oopc-calculations | REPORT-2024-07-28
 permalink: /CMSgov/oopc-calculations/
 
 org: CMSgov
 repo: oopc-calculations
-reportID: REPORT-2024-07-21
-date_stampThisWeek: 2024-07-21
-date_stampLastWeek: 2024-07-21
+reportID: REPORT-2024-07-28
+date_stampThisWeek: 2024-07-28
+date_stampLastWeek: 2024-07-28
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -87,10 +87,10 @@ date_stampLastWeek: 2024-07-21
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>42</td>
         <td>43</td>
-        <td>43</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >2.4%</td>
       </tr>
     </tbody>
   </table>

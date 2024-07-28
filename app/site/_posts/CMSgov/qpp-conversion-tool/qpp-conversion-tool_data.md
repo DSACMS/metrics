@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for qpp-conversion-tool | REPORT-2024-07-21
+title: Open Source at CMS Metrics Report for qpp-conversion-tool | REPORT-2024-07-28
 permalink: /CMSgov/qpp-conversion-tool/
 
 org: CMSgov
 repo: qpp-conversion-tool
-reportID: REPORT-2024-07-21
-date_stampThisWeek: 2024-07-21
-date_stampLastWeek: 2024-07-21
+reportID: REPORT-2024-07-28
+date_stampThisWeek: 2024-07-28
+date_stampLastWeek: 2024-07-28
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-07-21
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>7677</td>
         <td>7674</td>
-        <td>7674</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >0.039%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -59,10 +59,10 @@ date_stampLastWeek: 2024-07-21
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>1191</td>
         <td>1190</td>
-        <td>1190</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.084%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
