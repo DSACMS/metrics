@@ -5,6 +5,9 @@ on:
     schedule:
         # Run Mondays at 2:15 am
         - cron: "15 2 * * 0"
+    push:
+        branches:
+            - add-scc-cocomo
 
 jobs:
     update:
