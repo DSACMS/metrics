@@ -44,8 +44,8 @@ layout: base
               <legend class="usa-sr-only" aria-labelledby="tier-filtering"></legend>
               {% for tier in filters.maturity_model_tier %}
                 <div class="usa-checkbox padding-bottom-1">
-                  <input type="checkbox" class="usa-checkbox__input" id="{{ tier }}" value="{{ tier }}">
-                  <label class="usa-checkbox__label font-body-2xs text-base-dark" for="{{ tier }}">
+                  <input type="checkbox" class="usa-checkbox__input" id="{{ tier | slug }}" value="{{ tier | slug }}">
+                  <label class="usa-checkbox__label font-body-2xs text-base-dark" for="{{ tier | slug }}">
                     <span>{{ tier }}</span>
                   </label>
                 </div>
@@ -112,6 +112,8 @@ layout: base
           <input class="usa-input--lg" id="filter-input" name="filter-input">
         </div>
       </div>
+
+      <div class="padding-left-05" id="filter-tags"></div>
 
       {% for org in organizations %}
         <div class="project_section">

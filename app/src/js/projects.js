@@ -1,5 +1,5 @@
-const filterBox = document.getElementById("filter-input")
-const projectSections = document.querySelectorAll(".project_section")
+const filterBox = document.getElementById("filter-input");
+const projectSections = document.querySelectorAll(".project_section");
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
 // Add event listener to each checkbox
@@ -11,16 +11,30 @@ checkboxes.forEach(function (checkbox) {
 
 // Function to update filters
 function updateFilters() {
-
   const selectedFilters = []
 
   // Get selected categories
   document.querySelectorAll('input:checked').forEach(function (checkbox) {
       selectedFilters.push(checkbox.value);
-      console.log(checkbox.value)
   });
 
   console.log(selectedFilters)
+  
+  // Get filter tags div from DOM
+  const selectedFiltersContainer = document.getElementById('filter-tags');
+  selectedFiltersContainer.innerHTML = '';
+
+  // Manipulate the DOM to create buttons based on the selected filters
+  const filtersButtonGroup = document.createElement('div');
+  filtersButtonGroup.className = "usa-button-group";
+  selectedFiltersContainer.appendChild(filtersButtonGroup);
+
+  selectedFilters.forEach(filter => {
+    const filterButton = document.createElement('button');
+    filterButton.className = 'usa-button margin-bottom-1';
+    filterButton.textContent = filter;
+    filtersButtonGroup.appendChild(filterButton);
+  });
 }
 
 filterBox.addEventListener("input", () => {
