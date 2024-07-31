@@ -1,5 +1,27 @@
 const filterBox = document.getElementById("filter-input")
 const projectSections = document.querySelectorAll(".project_section")
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+// Add event listener to each checkbox
+checkboxes.forEach(function (checkbox) {
+  checkbox.addEventListener('change', function () {
+      updateFilters();
+  });
+});
+
+// Function to update filters
+function updateFilters() {
+
+  const selectedFilters = []
+
+  // Get selected categories
+  document.querySelectorAll('input:checked').forEach(function (checkbox) {
+      selectedFilters.push(checkbox.value);
+      console.log(checkbox.value)
+  });
+
+  console.log(selectedFilters)
+}
 
 filterBox.addEventListener("input", () => {
   const query = filterBox.value.toLowerCase()

@@ -7,37 +7,103 @@ layout: base
     The Centers for Medicare and Medicaid Services develops and supports many open-source projects found in our various
     GitHub Organizations.
   </p>
-  {% assign org_filters = "DSACMS, CMS-Enterprise, CMSgov, Enterprise-CMCS" | split: "," %}
   {% assign allFields = "project_type, user_input, project_fisma_level, group, subset_in_healthcare, user_type, repository_host, maturity_model_tier" | split: "," %}
 
-  <div class="test">
-    <div class="usa-accordion border-base-lighter border-2px">
-      <div class"usa-accordion__heading">
-        <button class="usa-accordion__button font-heading-md text-base-darker" id="organization">Organization</button>
-      </div>
-      <div class="usa-prose border-top-1px border-base-light">
-        <form class="usa-form">
-          <fieldset class="usa-fieldset" aria-labelledby="organization">
-            {% for org in org_filters %}
-              <div class="usa-checkbox padding-x-2 padding-y-1">
-                <input type="checkbox" class="usa-checkbox__input" id="test" value="test">
-                  <label class="usa-checkbox__label font-body-2xs text-base-dark">
-                    <span>{{org}}</span>
+  <div class="dashboard-container">
+    <div class="filters-container">
+      {% comment %} filter by organization {% endcomment %}
+      <div class="usa-accordion border-base-lighter border-2px">
+        <div class="usa-accordion__heading">
+          <button class="usa-accordion__button font-heading-md text-base-darker" aria-expanded="true" aria-controls="organization-content" id="organization">Organization</button>
+        </div>
+        <div id="organization-content" class="usa-accordion__content usa-prose border-top-1px border-base-lighter" hidden>
+          <form class="usa-form">
+            <fieldset class="usa-fieldset" aria-labelledby="organization-filter">
+              <legend class="usa-sr-only" aria-labelledby="organization-filtering"></legend>
+              {% for org in filters.organizations %}
+                <div class="usa-checkbox padding-bottom-1">
+                  <input type="checkbox" class="usa-checkbox__input" id="{{ org }}" value="{{ org }}">
+                  <label class="usa-checkbox__label font-body-2xs text-base-dark" for="{{ org }}">
+                    <span>{{ org }}</span>
                   </label>
-                </input>
-              </div>
-            {% endfor %}
-          </fieldset>
-        
-        </form>
+                </div>
+              {% endfor %}
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+      {% comment %} filter by maturity model tier {% endcomment %}
+      <div class="usa-accordion border-base-lighter border-2px">
+        <div class="usa-accordion__heading">
+          <button class="usa-accordion__button font-heading-md text-base-darker" aria-expanded="false" aria-controls="tier-content" id="mauturity-model-tier">Maturity Model Tier</button>
+        </div>
+        <div id="tier-content" class="usa-accordion__content usa-prose border-top-1px border-base-lighter" hidden>
+          <form class="usa-form">
+            <fieldset class="usa-fieldset" aria-labelledby="tier-filter">
+              <legend class="usa-sr-only" aria-labelledby="tier-filtering"></legend>
+              {% for tier in filters.maturity_model_tier %}
+                <div class="usa-checkbox padding-bottom-1">
+                  <input type="checkbox" class="usa-checkbox__input" id="{{ tier }}" value="{{ tier }}">
+                  <label class="usa-checkbox__label font-body-2xs text-base-dark" for="{{ tier }}">
+                    <span>{{ tier }}</span>
+                  </label>
+                </div>
+              {% endfor %}
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+      {% comment %} filter by fisma compliance level {% endcomment %}
+      <div class="usa-accordion border-base-lighter border-2px">
+        <div class="usa-accordion__heading">
+          <button class="usa-accordion__button font-heading-md text-base-darker" aria-expanded="false" aria-controls="fisma-level-content" id="fisma-level">FISMA Compliance Level</button>
+        </div>
+        <div id="fisma-level-content" class="usa-accordion__content usa-prose border-top-1px border-base-lighter" hidden>
+          <form class="usa-form">
+            <fieldset class="usa-fieldset" aria-labelledby="fisma-level-filter">
+              <legend class="usa-sr-only" aria-labelledby="fisma-level-filtering"></legend>
+              {% for level in filters.fisma_level %}
+                <div class="usa-checkbox padding-bottom-1">
+                  <input type="checkbox" class="usa-checkbox__input" id="fisma-level-{{ level | slug }}" value="fisma-level-{{ level | slug }}">
+                  <label class="usa-checkbox__label font-body-2xs text-base-dark" for="fisma-level-{{ level | slug }}">
+                    <span>{{ level }}</span>
+                  </label>
+                </div>
+              {% endfor %}
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+      {% comment %} filter by project type {% endcomment %}
+      <div class="usa-accordion border-base-lighter border-2px">
+        <div class="usa-accordion__heading">
+          <button class="usa-accordion__button font-heading-md text-base-darker" aria-expanded="false" aria-controls="project-type-content" id="project-type">Project Type</button>
+        </div>
+        <div id="project-type-content" class="usa-accordion__content usa-prose border-top-1px border-base-lighter" hidden>
+          <form class="usa-form">
+            <fieldset class="usa-fieldset" aria-labelledby="project-type-filter">
+              <legend class="usa-sr-only" aria-labelledby="project-type-filtering"></legend>
+              {% for type in filters.project_type %}
+                <div class="usa-checkbox padding-bottom-1">
+                  <input type="checkbox" class="usa-checkbox__input" id="{{ type }}" value="{{ type }}">
+                  <label class="usa-checkbox__label font-body-2xs text-base-dark" for="{{ type }}">
+                    <span>{{ type }}</span>
+                  </label>
+                </div>
+              {% endfor %}
+            </fieldset>
+          </form>
+        </div>
       </div>
     </div>
-
-
+    
     <div class="block">
       <div class="margin-bottom-2">
         <label class="usa-label" for="filter-input">Search</label>
-        <div class="usa-input-group width-full maxw-none">
+        <div class="usa-input-group width-full maxw-none border-base-light">
           <div class="usa-input-prefix" aria-hidden="true">
             <svg aria-hidden="true" role="img" focusable="false" class="usa-icon">
               <use xlink:href={{  "/assets/img/sprite.svg#search"| url }} ></use>
@@ -68,6 +134,6 @@ layout: base
           </ul>
         </div>
       {% endfor %}
-    </div>
+
   </div>
 </div>
