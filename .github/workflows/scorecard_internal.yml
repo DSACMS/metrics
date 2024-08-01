@@ -1,0 +1,39 @@
+name: Generate OSSF Scorecard Report for Internal Repositories
+
+on:
+    workflow_dispatch: {}
+    schedule:
+        # Weekly on Saturdays.
+        - cron: "30 1 * * 6"
+
+jobs:
+    update:
+        strategy:
+            matrix:
+                orgs: ["DSACMS", "Enterprise-CMCS", "CMS-Enterprise", "CMSgov"]
+            max-parallel: 1
+        permissions: write-all
+        name: update
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-go@v5
+            - name: Install OSSF CLI
+              run: docker pull gcr.io/openssf/scorecard:stable
+            - name: Run OSSF Scorecard Report script
+              run: ./scripts/scorecard_internal.sh ${{ matrix.orgs }}
+              env:
+                  GITHUB_TOKEN: ${{ secrets.METRICS_GITHUB_TOKEN }}
+            - name: Commit changes
+              run: |
+                  git config user.name 'GitHub Actions'
+                  git config user.email 'actions@users.noreply.github.com'
+                  git pull
+                  git add -A
+                  timestamp=$(date -u)
+                  git commit -m "update ${{ matrix.orgs }} data: ${timestamp}" || exit 0
+            - name: Push to ${{ github.ref_name }}
+              uses: CasperWA/push-protected@v2
+              with:
+                  token: ${{ secrets.METRICS_GITHUB_TOKEN }}
+                  branch: ${{ github.ref_name }}
