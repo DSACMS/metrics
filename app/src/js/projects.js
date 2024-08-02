@@ -5,13 +5,21 @@ const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 // Add event listener to each checkbox
 checkboxes.forEach(function (checkbox) {
   checkbox.addEventListener('change', function () {
-      updateFilters();
+    updateFilters();
   });
 });
 
 // Function to update filters
 function updateFilters() {
   const selectedFilters = []
+
+  // const repoData = document.getElementById('dedupliFHIR-data').textContent;
+  // const parsedData = JSON.parse(repoData);
+  // console.log(parsedData)
+
+
+  const siteDataScript = document.getElementById('dedupliFHIR-data');
+  console.log(siteDataScript)
 
   // Get selected categories
   document.querySelectorAll('input:checked').forEach(function (checkbox) {

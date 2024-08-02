@@ -1,5 +1,6 @@
 {% capture new_link_var %}/{{ repo.owner }}/{{ repo.name }}/{% endcapture %}
-<li class="usa-card project-card tablet:grid-col-12" org-name="{{ repo.owner }}">
+<li class="usa-card project-card tablet:grid-col-12" id="{{ repo.name }}" org-name="{{ repo.owner }}">
+  <script type="application/json" id="{{ repo.name }}-data">{{ repo | dump }}</script>
   <div class="usa-card__container">
     <div class="usa-card__header">
       <h2 class="usa-card__heading">
