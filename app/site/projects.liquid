@@ -2,6 +2,10 @@
 layout: base
 ---
 <script type="module" src="{{ "/assets/js/projects.js" | url }}"></script>
+<span style="display:none;" id="metrics">
+  {{projects | json }}
+</span>
+
 <div class="grid-container ">
   <p>
     The Centers for Medicare and Medicaid Services develops and supports many open-source projects found in our various
@@ -11,6 +15,7 @@ layout: base
 
   <div class="dashboard-container">
     <div class="filters-container">
+
       {% comment %} filter by organization {% endcomment %}
       <div class="usa-accordion border-base-lighter border-2px">
         <div class="usa-accordion__heading">
@@ -22,7 +27,7 @@ layout: base
               <legend class="usa-sr-only" aria-labelledby="organization-filtering"></legend>
               {% for org in filters.organizations %}
                 <div class="usa-checkbox padding-bottom-1">
-                  <input type="checkbox" class="usa-checkbox__input" id="{{ org }}" value="{{ org }}">
+                  <input type="checkbox" class="usa-checkbox__input" name="org-filter" id="{{ org }}" value="{{ org }}">
                   <label class="usa-checkbox__label font-body-2xs text-base-dark" for="{{ org }}">
                     <span>{{ org }}</span>
                   </label>
@@ -44,7 +49,7 @@ layout: base
               <legend class="usa-sr-only" aria-labelledby="tier-filtering"></legend>
               {% for tier in filters.maturity_model_tier %}
                 <div class="usa-checkbox padding-bottom-1">
-                  <input type="checkbox" class="usa-checkbox__input" id="{{ tier | slug }}" value="{{ tier | slug }}">
+                  <input type="checkbox" class="usa-checkbox__input" name="tier-filter" id="{{ tier | slug }}" value="{{ tier }}">
                   <label class="usa-checkbox__label font-body-2xs text-base-dark" for="{{ tier | slug }}">
                     <span>{{ tier }}</span>
                   </label>
@@ -66,7 +71,7 @@ layout: base
               <legend class="usa-sr-only" aria-labelledby="fisma-level-filtering"></legend>
               {% for level in filters.fisma_level %}
                 <div class="usa-checkbox padding-bottom-1">
-                  <input type="checkbox" class="usa-checkbox__input" id="fisma-level-{{ level | slug }}" value="fisma-level-{{ level | slug }}">
+                  <input type="checkbox" class="usa-checkbox__input" name="fisma-level-filter" id="fisma-level-{{ level | slug }}" value="{{ level }}">
                   <label class="usa-checkbox__label font-body-2xs text-base-dark" for="fisma-level-{{ level | slug }}">
                     <span>{{ level }}</span>
                   </label>
@@ -88,7 +93,7 @@ layout: base
               <legend class="usa-sr-only" aria-labelledby="project-type-filtering"></legend>
               {% for type in filters.project_type %}
                 <div class="usa-checkbox padding-bottom-1">
-                  <input type="checkbox" class="usa-checkbox__input" id="{{ type }}" value="{{ type }}">
+                  <input type="checkbox" class="usa-checkbox__input" name="project-type-filter" id="{{ type }}" value="{{ type }}">
                   <label class="usa-checkbox__label font-body-2xs text-base-dark" for="{{ type }}">
                     <span>{{ type }}</span>
                   </label>
@@ -101,15 +106,39 @@ layout: base
     </div>
     
     <div class="block">
-      <div class="margin-bottom-2">
-        <label class="usa-label" for="filter-input">Search</label>
-        <div class="usa-input-group width-full maxw-none border-base-light">
-          <div class="usa-input-prefix" aria-hidden="true">
-            <svg aria-hidden="true" role="img" focusable="false" class="usa-icon">
-              <use xlink:href={{  "/assets/img/sprite.svg#search"| url }} ></use>
-            </svg>
+      <div class="search-and-sort">
+        <div class="search-container">
+          <label class="usa-label" for="filter-input">Search</label>
+          <div class="usa-input-group width-full maxw-none border-base-light">
+            <div class="usa-input-prefix" aria-hidden="true">
+              <svg aria-hidden="true" role="img" focusable="false" class="usa-icon">
+                <use xlink:href={{  "/assets/img/sprite.svg#search"| url }} ></use>
+              </svg>
+            </div>
+            <input class="usa-input--lg" id="filter-input" name="filter-input">
           </div>
-          <input class="usa-input--lg" id="filter-input" name="filter-input">
+        </div>
+        <div class="sort-dropdown">
+          <form class="usa-form">
+            <label class="usa-label" for="sortSelection">Sort by</label>
+            <select class="usa-select border-base-light" id="sortSelection" name="sortSelection">
+              <option value="organization">Organization</option>
+              <option value="project-name">Project Name</option>
+              <option value="fisma-level">FISMA Compliance Level</option>
+              <option value="project-type">Project Type</option>
+              <option value="stars">Stars</option>
+              <option value="tier">Maturity Model Tier</option>
+              <option value="forks">Forks</option>
+            </select>
+          </form>
+
+          <form class="usa-form hidden">
+            <label class="usa-label" for="sortSelection">Sort Direction</label>
+            <select class="usa-select border-base-light" id="sortSelection" name="sortSelection">
+              <option value="ascending">Ascending</option>
+              <option value="descending">Descending</option>
+            </select>
+          </form>
         </div>
       </div>
 
@@ -130,6 +159,7 @@ layout: base
 
           <ul class="usa-card-group flex-align-stretch">
             {% assign orgProjects = projects | findProjectsInOrg: org.name %}
+
             {% for repo in orgProjects %}
               {% render 'project-card', repo: repo, base_url: site.baseurl %}
             {% endfor %}
