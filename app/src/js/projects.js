@@ -8,23 +8,8 @@ const parsedProjectsData = JSON.parse(projectsData)
 checkboxes.forEach(function (checkbox) {
   checkbox.addEventListener('change', function () {
     updateFilters();
-    clearFilterSelection(checkbox);
   });
 });
-
-// Clears the selected filter when the corresponding button is clicked
-function clearFilterSelection(checkbox) {
-  const buttonGroup = document.querySelectorAll('#filter-tags .usa-button');
-
-  buttonGroup.forEach(button => {
-    // button.addEventListener('click', myFunction)
-    button.addEventListener("click", function() {
-      button.remove();
-      checkbox.checked = false;
-      updateFilters();
-    });
-  })
-}
 
 // Function to update filters
 function updateFilters() {
@@ -41,7 +26,7 @@ function updateFilters() {
     selectedFiltersObject.organization.push(checkbox.value);
   });
   document.querySelectorAll('input[name="tier-filter"]:checked').forEach(checkbox => {
-    selectedFiltersObject.maturityModelTier.push(checkbox.value.replace("Tier ",""));
+    selectedFiltersObject.maturityModelTier.push(checkbox.value);
   });
   document.querySelectorAll('input[name="fisma-level-filter"]:checked').forEach(checkbox => {
     selectedFiltersObject.fismaLevel.push(checkbox.value);
@@ -50,7 +35,7 @@ function updateFilters() {
     selectedFiltersObject.projectType.push(checkbox.value);
   });
 
-  addFitlerButtonGroup(selectedFiltersObject)
+  addFilterButtonGroup(selectedFiltersObject)
 
   projectSections.forEach((section) => {
     const projectCards = section.querySelectorAll(".project-card");
@@ -64,7 +49,7 @@ function updateFilters() {
 }
 
 // Function to add filters buttons
-function addFitlerButtonGroup(selectedFiltersObject) {
+function addFilterButtonGroup(selectedFiltersObject) {
   // Get filter tags div from DOM
   const selectedFiltersContainer = document.getElementById('filter-tags');
   selectedFiltersContainer.innerHTML = '';
@@ -84,6 +69,26 @@ function addFitlerButtonGroup(selectedFiltersObject) {
       filtersButtonGroup.appendChild(filterButton);
     })
   }
+
+  clearFilterSelection()
+}
+
+// Clears the selected filter when the corresponding button is clicked
+function clearFilterSelection() {
+  const buttonGroup = document.querySelectorAll('#filter-tags .usa-button');
+  buttonGroup.forEach(button => {
+    button.addEventListener('click', function() {
+      const checkboxes = document.querySelectorAll("input:checked")
+
+      checkboxes.forEach(checkbox => {
+        if (button.textContent == checkbox.value) {
+          button.remove();
+          checkbox.checked = false;
+          updateFilters();
+        }
+      })
+    })
+  })
 }
 
 // Function to update heading visibility
@@ -116,7 +121,8 @@ function checkFilterCriteria(card, selectedFiltersObject) {
     if (cardName === project.name) {
       // Flags per category to denote if no filters are chosen or if project includes a selected filter
       let matchesOrganization = selectedFiltersObject.organization.length === 0 || selectedFiltersObject.organization.includes(project.owner);
-      let matchesMaturityModelTier = selectedFiltersObject.maturityModelTier.length === 0 || selectedFiltersObject.maturityModelTier.includes(project.maturity_model_tier);
+      const projectMaturityModelTier = "Tier " + project.maturity_model_tier;
+      let matchesMaturityModelTier = selectedFiltersObject.maturityModelTier.length === 0 || selectedFiltersObject.maturityModelTier.includes(projectMaturityModelTier);
       let matchesFismaLevel = selectedFiltersObject.fismaLevel.length === 0 || selectedFiltersObject.fismaLevel.includes(project.project_fisma_level);
       let matchesProjectType = selectedFiltersObject.projectType.length === 0 || selectedFiltersObject.projectType.includes(project.project_type)
       
