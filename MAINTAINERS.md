@@ -1,6 +1,6 @@
 # Maintainers
 
-Total number of contributors: <!--CONTRIBUTOR COUNT START--> 3 <!--CONTRIBUTOR COUNT END-->
+Total number of contributors: <!--CONTRIBUTOR COUNT START--> 4 <!--CONTRIBUTOR COUNT END-->
 
 MAINTAINERS:
 
