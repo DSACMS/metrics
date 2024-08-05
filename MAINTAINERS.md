@@ -48,6 +48,20 @@ reviewers:
                 </a>
             </td>
             <td align="center">
+                <a href="https://github.com/RicardoZamora01">
+                    <img src="https://avatars.githubusercontent.com/u/41018905?v=4" width="100;" alt="RicardoZamora01"/>
+                    <br />
+                    <sub><b>Ricardo Zamora</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/Firebird1029">
+                    <img src="https://avatars.githubusercontent.com/u/6111102?v=4" width="100;" alt="Firebird1029"/>
+                    <br />
+                    <sub><b>Brandon Yee</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/navila-luna">
                     <img src="https://avatars.githubusercontent.com/u/52260794?v=4" width="100;" alt="navila-luna"/>
                     <br />
