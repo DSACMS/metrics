@@ -89,6 +89,7 @@
 
 .block {
   display: block;
+  width: 100%;
 }
 
 .dashboard-container {
@@ -103,4 +104,33 @@
   flex-direction: column;
   gap: 1rem;
   padding-top: 3.4rem;
+}
+
+.search-container {
+  flex:1;
+  margin-bottom: 1rem;
+  box-sizing: border-box; 
+}
+
+.search-and-sort {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.sort-dropdown {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  text-align: right;
+  gap: 0.5rem;
+
+}
+
+@media screen and (max-width: 1080px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
 }

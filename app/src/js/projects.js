@@ -1,6 +1,8 @@
 const filterBox = document.getElementById("filter-input");
 const projectSections = document.querySelectorAll(".project_section");
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+const projectsData = document.getElementById('metrics').textContent;
+const parsedProjectsData = JSON.parse(projectsData)
 
 // Add event listener to each checkbox
 checkboxes.forEach(function (checkbox) {
@@ -11,23 +13,43 @@ checkboxes.forEach(function (checkbox) {
 
 // Function to update filters
 function updateFilters() {
-  const selectedFilters = []
 
-  // const repoData = document.getElementById('dedupliFHIR-data').textContent;
-  // const parsedData = JSON.parse(repoData);
-  // console.log(parsedData)
+  const selectedFiltersObject = {
+    organization: [],
+    maturityModelTier: [],
+    fismaLevel: [],
+    projectType: []
+  }
 
 
-  const siteDataScript = document.getElementById('dedupliFHIR-data');
-  console.log(siteDataScript)
-
-  // Get selected categories
-  document.querySelectorAll('input:checked').forEach(function (checkbox) {
-      selectedFilters.push(checkbox.value);
+  document.querySelectorAll('input[name="org-filter"]:checked').forEach(checkbox => {
+    selectedFiltersObject.organization.push(checkbox.value);
+  });
+  document.querySelectorAll('input[name="tier-filter"]:checked').forEach(checkbox => {
+    selectedFiltersObject.maturityModelTier.push(checkbox.value.replace("Tier ",""));
+  });
+  document.querySelectorAll('input[name="fisma-level-filter"]:checked').forEach(checkbox => {
+    selectedFiltersObject.fismaLevel.push(checkbox.value);
+  });
+  document.querySelectorAll('input[name="project-type-filter"]:checked').forEach(checkbox => {
+    selectedFiltersObject.projectType.push(checkbox.value);
   });
 
-  console.log(selectedFilters)
-  
+  addFitlerButtonGroup(selectedFiltersObject)
+
+  projectSections.forEach((section) => {
+    const projectCards = section.querySelectorAll(".project-card");
+    
+    projectCards.forEach((card) => {
+      checkFilterCriteria(card, selectedFiltersObject)
+    })
+  })
+
+  updateHeadingVisibility()
+}
+
+// Function to add filters buttons
+function addFitlerButtonGroup(selectedFiltersObject) {
   // Get filter tags div from DOM
   const selectedFiltersContainer = document.getElementById('filter-tags');
   selectedFiltersContainer.innerHTML = '';
@@ -37,11 +59,55 @@ function updateFilters() {
   filtersButtonGroup.className = "usa-button-group";
   selectedFiltersContainer.appendChild(filtersButtonGroup);
 
-  selectedFilters.forEach(filter => {
-    const filterButton = document.createElement('button');
-    filterButton.className = 'usa-button margin-bottom-1';
-    filterButton.textContent = filter;
-    filtersButtonGroup.appendChild(filterButton);
+  for (const filterCategory in selectedFiltersObject) {
+    const filtersArray = selectedFiltersObject[filterCategory]
+    
+    filtersArray.forEach(filter => {
+      const filterButton = document.createElement('button');
+      filterButton.className = 'usa-button margin-bottom-1';
+      filterButton.textContent = filter;
+      filtersButtonGroup.appendChild(filterButton);
+    })
+  }
+}
+
+// Function to update heading visibility
+function updateHeadingVisibility() {
+  projectSections.forEach(section => {
+    let hasVisibleCard = false
+    // Select the report heading within the current section
+    let reportHeading = section.querySelector('.report_heading');
+    
+    // Select all project cards within the current section
+    let projectCards = section.querySelectorAll('.project-card');
+    
+    // Flag visible card if any card is not hidden
+    projectCards.forEach((card) => {
+      if (!card.hidden) {
+        hasVisibleCard = true;
+      }
+    })
+    
+  // Hide heading if all cards under section are hidden
+  reportHeading.hidden = !hasVisibleCard;
+  });
+}
+
+// Function to return whether all filter criteria were met
+function checkFilterCriteria(card, selectedFiltersObject) {
+  const cardName = card.querySelector(".text-no-underline").textContent
+
+  parsedProjectsData.forEach(project => {
+    if (cardName === project.name) {
+      // Flags per category to denote if no filters are chosen or if project includes a selected filter
+      let matchesOrganization = selectedFiltersObject.organization.length === 0 || selectedFiltersObject.organization.includes(project.owner);
+      let matchesMaturityModelTier = selectedFiltersObject.maturityModelTier.length === 0 || selectedFiltersObject.maturityModelTier.includes(project.maturity_model_tier);
+      let matchesFismaLevel = selectedFiltersObject.fismaLevel.length === 0 || selectedFiltersObject.fismaLevel.includes(project.project_fisma_level);
+      let matchesProjectType = selectedFiltersObject.projectType.length === 0 || selectedFiltersObject.projectType.includes(project.project_type)
+      
+      // Hide card if project does not match all filter categories
+      card.hidden = !(matchesOrganization && matchesMaturityModelTier && matchesFismaLevel && matchesProjectType);
+    }
   });
 }
 
