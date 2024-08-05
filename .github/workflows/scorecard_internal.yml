@@ -1,10 +1,10 @@
-name: Update COCOMO stats
+name: Generate OSSF Scorecard Report for Internal Repositories
 
 on:
     workflow_dispatch: {}
     schedule:
-        # Run Mondays at 2:15 am
-        - cron: "15 2 * * 0"
+        # Weekly on Saturdays.
+        - cron: "30 1 * * 6"
 
 jobs:
     update:
@@ -18,10 +18,12 @@ jobs:
         steps:
             - uses: actions/checkout@v4
             - uses: actions/setup-go@v5
-            - name: Install scc
-              run: go install github.com/boyter/scc/v3@latest
-            - name: Run COCOMO script
-              run: ./scripts/scc_cocomo.sh ${{ matrix.orgs }}
+            - name: Install OSSF CLI
+              run: docker pull gcr.io/openssf/scorecard:stable
+            - name: Run OSSF Scorecard Report script
+              run: ./scripts/scorecard_internal.sh ${{ matrix.orgs }}
+              env:
+                  GITHUB_TOKEN: ${{ secrets.METRICS_GITHUB_TOKEN }}
             - name: Commit changes
               run: |
                   git config user.name 'GitHub Actions'

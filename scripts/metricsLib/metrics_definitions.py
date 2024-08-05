@@ -30,6 +30,7 @@ query ($repo: String!, $owner: String!) {
     forkCount,
     forkingAllowed,
     stargazerCount,
+    createdAt,
     
     pullRequests(first: 1)
     {
@@ -95,7 +96,8 @@ github_graphql_simple_counts_metric_map = {
     "closed_pull_requests_count": ["data", "repository", "closedPullRequests", "totalCount"],
     "forks_count": ["data", "repository", "forkCount"],
     "stargazers_count": ["data", "repository", "stargazerCount"],
-    "watchers_count": ["data", "repository", "watchers", "totalCount"]
+    "watchers_count": ["data", "repository", "watchers", "totalCount"],
+    "created_at": ["data", "repository", "createdAt"]
 }
 SIMPLE_METRICS.append(GraphQLMetric("githubGraphqlSimpleCounts", ["repo", "owner"],
                                     REPO_GITHUB_GRAPHQL_QUERY,
