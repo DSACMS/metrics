@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for oracle-database-19c-cis-baseline | REPORT-2024-08-04
+title: Open Source at CMS Metrics Report for oracle-database-19c-cis-baseline | REPORT-2024-08-05
 permalink: /CMSgov/oracle-database-19c-cis-baseline/
 
 org: CMSgov
 repo: oracle-database-19c-cis-baseline
-reportID: REPORT-2024-08-04
-date_stampThisWeek: 2024-08-04
-date_stampLastWeek: 2024-08-04
+reportID: REPORT-2024-08-05
+date_stampThisWeek: 2024-08-05
+date_stampLastWeek: 2024-08-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

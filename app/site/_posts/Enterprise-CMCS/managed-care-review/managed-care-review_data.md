@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for managed-care-review | REPORT-2024-08-04
+title: Open Source at CMS Metrics Report for managed-care-review | REPORT-2024-08-05
 permalink: /Enterprise-CMCS/managed-care-review/
 
 org: Enterprise-CMCS
 repo: managed-care-review
-reportID: REPORT-2024-08-04
-date_stampThisWeek: 2024-08-04
-date_stampLastWeek: 2024-08-04
+reportID: REPORT-2024-08-05
+date_stampThisWeek: 2024-08-05
+date_stampLastWeek: 2024-08-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-08-04
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>1973</td>
         <td>1952</td>
-        <td>1939</td>
-        <td style="color: #45c527" >13</td>
-        <td style="color: #45c527" >0.67%</td>
+        <td style="color: #45c527" >21</td>
+        <td style="color: #45c527" >1.1%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2024-08-04
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>4</td>
         <td>10</td>
-        <td>9</td>
-        <td style="" >1</td>
-        <td style="" >11%</td>
+        <td style="color: #45c527" >-6</td>
+        <td style="color: #45c527" >86%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>1941</td>
         <td>1920</td>
-        <td>1907</td>
-        <td style="color: #45c527" >13</td>
-        <td style="color: #45c527" >0.68%</td>
+        <td style="color: #45c527" >21</td>
+        <td style="color: #45c527" >1.1%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>677</td>
         <td>668</td>
-        <td>664</td>
-        <td style="" >4</td>
-        <td style="" >0.6%</td>
+        <td style="" >9</td>
+        <td style="" >1.3%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -87,10 +87,10 @@ date_stampLastWeek: 2024-08-04
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>13</td>
         <td>14</td>
-        <td>14</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >7.4%</td>
       </tr>
     </tbody>
   </table>

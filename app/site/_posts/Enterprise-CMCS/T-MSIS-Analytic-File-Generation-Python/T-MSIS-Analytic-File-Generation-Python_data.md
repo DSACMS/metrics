@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for T-MSIS-Analytic-File-Generation-Python | REPORT-2024-08-04
+title: Open Source at CMS Metrics Report for T-MSIS-Analytic-File-Generation-Python | REPORT-2024-08-05
 permalink: /Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/
 
 org: Enterprise-CMCS
 repo: T-MSIS-Analytic-File-Generation-Python
-reportID: REPORT-2024-08-04
-date_stampThisWeek: 2024-08-04
-date_stampLastWeek: 2024-08-04
+reportID: REPORT-2024-08-05
+date_stampThisWeek: 2024-08-05
+date_stampLastWeek: 2024-08-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -59,10 +59,10 @@ date_stampLastWeek: 2024-08-04
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>159</td>
         <td>153</td>
-        <td>152</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.66%</td>
+        <td style="color: #45c527" >6</td>
+        <td style="color: #45c527" >3.8%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>

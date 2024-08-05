@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-knight-light | REPORT-2024-08-04
+title: Open Source at CMS Metrics Report for batcave-knight-light | REPORT-2024-08-05
 permalink: /CMS-Enterprise/batcave-knight-light/
 
 org: CMS-Enterprise
 repo: batcave-knight-light
-reportID: REPORT-2024-08-04
-date_stampThisWeek: 2024-08-04
-date_stampLastWeek: 2024-08-04
+reportID: REPORT-2024-08-05
+date_stampThisWeek: 2024-08-05
+date_stampLastWeek: 2024-08-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-08-04
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>197</td>
         <td>191</td>
-        <td>183</td>
-        <td style="color: #45c527" >8</td>
-        <td style="color: #45c527" >4.3%</td>
+        <td style="color: #45c527" >6</td>
+        <td style="color: #45c527" >3.1%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,17 +52,17 @@ date_stampLastWeek: 2024-08-04
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>7</td>
         <td>8</td>
-        <td>10</td>
-        <td style="color: #45c527" >-2</td>
-        <td style="color: #45c527" >22%</td>
+        <td style="color: #45c527" >-1</td>
+        <td style="color: #45c527" >13%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>24</td>
         <td>20</td>
-        <td>14</td>
-        <td style="color: #45c527" >6</td>
-        <td style="color: #45c527" >35%</td>
+        <td style="color: #45c527" >4</td>
+        <td style="color: #45c527" >18%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -87,10 +87,10 @@ date_stampLastWeek: 2024-08-04
       </tr>
       <tr>
         <th scope="row">Watchers</th>
-        <td>9</td>
         <td>8</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >12%</td>
+        <td>9</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >12%</td>
       </tr>
     </tbody>
   </table>

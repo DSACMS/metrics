@@ -1,12 +1,12 @@
 ---
 layout: org-report
-title: Open Source at CMS Metrics Report for Enterprise-CMCS | REPORT-2024-08-04
+title: Open Source at CMS Metrics Report for Enterprise-CMCS | REPORT-2024-08-05
 permalink: /Enterprise-CMCS/
 
 org: Enterprise-CMCS
-reportID: REPORT-2024-08-04
-date_stampThisWeek: 2024-08-04
-date_stampLastWeek: 2024-08-04
+reportID: REPORT-2024-08-05
+date_stampThisWeek: 2024-08-05
+date_stampLastWeek: 2024-08-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -23,10 +23,10 @@ date_stampLastWeek: 2024-08-04
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>29308</td>
         <td>29161</td>
-        <td>29079</td>
-        <td style="color: #45c527" >82</td>
-        <td style="color: #45c527" >0.28%</td>
+        <td style="color: #45c527" >147</td>
+        <td style="color: #45c527" >0.5%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -51,24 +51,24 @@ date_stampLastWeek: 2024-08-04
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>153</td>
         <td>166</td>
-        <td>167</td>
-        <td style="color: #45c527" >-1</td>
-        <td style="color: #45c527" >0.6%</td>
+        <td style="color: #45c527" >-13</td>
+        <td style="color: #45c527" >8.2%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>12911</td>
         <td>12812</td>
-        <td>12720</td>
-        <td style="color: #45c527" >92</td>
-        <td style="color: #45c527" >0.72%</td>
+        <td style="color: #45c527" >99</td>
+        <td style="color: #45c527" >0.77%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>3338</td>
         <td>3308</td>
-        <td>3287</td>
-        <td style="" >21</td>
-        <td style="" >0.64%</td>
+        <td style="" >30</td>
+        <td style="" >0.9%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -79,17 +79,17 @@ date_stampLastWeek: 2024-08-04
       </tr>
       <tr>
         <th scope="row">Stars</th>
+        <td>171</td>
         <td>170</td>
-        <td>168</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >1.2%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.59%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>202</td>
         <td>210</td>
-        <td>210</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #d31c08" >-8</td>
+        <td style="color: #d31c08" >3.9%</td>
       </tr>
       <tr>
         <th scope="row">Followers</th>

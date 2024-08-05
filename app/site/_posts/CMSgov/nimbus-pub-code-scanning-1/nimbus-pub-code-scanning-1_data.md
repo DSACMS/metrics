@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for nimbus-pub-code-scanning-1 | REPORT-2024-08-04
+title: Open Source at CMS Metrics Report for nimbus-pub-code-scanning-1 | REPORT-2024-08-05
 permalink: /CMSgov/nimbus-pub-code-scanning-1/
 
 org: CMSgov
 repo: nimbus-pub-code-scanning-1
-reportID: REPORT-2024-08-04
-date_stampThisWeek: 2024-08-04
-date_stampLastWeek: 2024-08-04
+reportID: REPORT-2024-08-05
+date_stampThisWeek: 2024-08-05
+date_stampLastWeek: 2024-08-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

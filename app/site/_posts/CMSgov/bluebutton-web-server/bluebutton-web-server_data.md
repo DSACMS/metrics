@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for bluebutton-web-server | REPORT-2024-08-04
+title: Open Source at CMS Metrics Report for bluebutton-web-server | REPORT-2024-08-05
 permalink: /CMSgov/bluebutton-web-server/
 
 org: CMSgov
 repo: bluebutton-web-server
-reportID: REPORT-2024-08-04
-date_stampThisWeek: 2024-08-04
-date_stampLastWeek: 2024-08-04
+reportID: REPORT-2024-08-05
+date_stampThisWeek: 2024-08-05
+date_stampLastWeek: 2024-08-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-08-04
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>3494</td>
         <td>3486</td>
-        <td>3481</td>
-        <td style="color: #45c527" >5</td>
-        <td style="color: #45c527" >0.14%</td>
+        <td style="color: #45c527" >8</td>
+        <td style="color: #45c527" >0.23%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2024-08-04
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>6</td>
         <td>12</td>
-        <td>14</td>
-        <td style="color: #45c527" >-2</td>
-        <td style="color: #45c527" >15%</td>
+        <td style="color: #45c527" >-6</td>
+        <td style="color: #45c527" >67%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>987</td>
         <td>979</td>
-        <td>973</td>
-        <td style="color: #45c527" >6</td>
-        <td style="color: #45c527" >0.61%</td>
+        <td style="color: #45c527" >8</td>
+        <td style="color: #45c527" >0.81%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>212</td>
         <td>207</td>
-        <td>207</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >5</td>
+        <td style="" >2.4%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -80,17 +80,17 @@ date_stampLastWeek: 2024-08-04
       </tr>
       <tr>
         <th scope="row">Stars</th>
+        <td>39</td>
         <td>38</td>
-        <td>38</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >2.6%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>25</td>
         <td>26</td>
-        <td>26</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >3.9%</td>
       </tr>
     </tbody>
   </table>

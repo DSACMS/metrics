@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for dedupliFHIR | REPORT-2024-08-04
+title: Open Source at CMS Metrics Report for dedupliFHIR | REPORT-2024-08-05
 permalink: /DSACMS/dedupliFHIR/
 
 org: DSACMS
 repo: dedupliFHIR
-reportID: REPORT-2024-08-04
-date_stampThisWeek: 2024-08-04
-date_stampLastWeek: 2024-08-04
+reportID: REPORT-2024-08-05
+date_stampThisWeek: 2024-08-05
+date_stampLastWeek: 2024-08-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-08-04
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>346</td>
         <td>330</td>
-        <td>278</td>
-        <td style="color: #45c527" >52</td>
-        <td style="color: #45c527" >17%</td>
+        <td style="color: #45c527" >16</td>
+        <td style="color: #45c527" >4.7%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -38,38 +38,38 @@ date_stampLastWeek: 2024-08-04
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>9</td>
         <td>10</td>
-        <td>11</td>
         <td style="color: #45c527" >-1</td>
-        <td style="color: #45c527" >9.5%</td>
+        <td style="color: #45c527" >11%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
+        <td>12</td>
         <td>11</td>
-        <td>10</td>
         <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >9.5%</td>
+        <td style="color: #45c527" >8.7%</td>
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>8</td>
         <td>7</td>
-        <td>17</td>
-        <td style="color: #45c527" >-10</td>
-        <td style="color: #45c527" >83%</td>
+        <td style="" >1</td>
+        <td style="" >13%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>73</td>
         <td>69</td>
-        <td>56</td>
-        <td style="color: #45c527" >13</td>
-        <td style="color: #45c527" >21%</td>
+        <td style="color: #45c527" >4</td>
+        <td style="color: #45c527" >5.6%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>12</td>
         <td>5</td>
-        <td>5</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >7</td>
+        <td style="" >82%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -87,10 +87,10 @@ date_stampLastWeek: 2024-08-04
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>5</td>
         <td>6</td>
-        <td>6</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >18%</td>
       </tr>
     </tbody>
   </table>

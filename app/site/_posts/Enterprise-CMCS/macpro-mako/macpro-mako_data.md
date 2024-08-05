@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-mako | REPORT-2024-08-04
+title: Open Source at CMS Metrics Report for macpro-mako | REPORT-2024-08-05
 permalink: /Enterprise-CMCS/macpro-mako/
 
 org: Enterprise-CMCS
 repo: macpro-mako
-reportID: REPORT-2024-08-04
-date_stampThisWeek: 2024-08-04
-date_stampLastWeek: 2024-08-04
+reportID: REPORT-2024-08-05
+date_stampThisWeek: 2024-08-05
+date_stampLastWeek: 2024-08-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-08-04
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>1472</td>
         <td>1417</td>
-        <td>1405</td>
-        <td style="color: #45c527" >12</td>
-        <td style="color: #45c527" >0.85%</td>
+        <td style="color: #45c527" >55</td>
+        <td style="color: #45c527" >3.8%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2024-08-04
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>7</td>
         <td>8</td>
-        <td>11</td>
-        <td style="color: #45c527" >-3</td>
-        <td style="color: #45c527" >32%</td>
+        <td style="color: #45c527" >-1</td>
+        <td style="color: #45c527" >13%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>557</td>
         <td>541</td>
-        <td>521</td>
-        <td style="color: #45c527" >20</td>
-        <td style="color: #45c527" >3.8%</td>
+        <td style="color: #45c527" >16</td>
+        <td style="color: #45c527" >2.9%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>118</td>
         <td>117</td>
-        <td>111</td>
-        <td style="" >6</td>
-        <td style="" >5.3%</td>
+        <td style="" >1</td>
+        <td style="" >0.85%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -80,17 +80,17 @@ date_stampLastWeek: 2024-08-04
       </tr>
       <tr>
         <th scope="row">Stars</th>
+        <td>7</td>
         <td>6</td>
-        <td>5</td>
         <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >18%</td>
+        <td style="color: #45c527" >15%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>4</td>
         <td>5</td>
-        <td>5</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >22%</td>
       </tr>
     </tbody>
   </table>

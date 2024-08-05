@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for qpp-shared-api-versioning-node | REPORT-2024-08-04
+title: Open Source at CMS Metrics Report for qpp-shared-api-versioning-node | REPORT-2024-08-05
 permalink: /CMSgov/qpp-shared-api-versioning-node/
 
 org: CMSgov
 repo: qpp-shared-api-versioning-node
-reportID: REPORT-2024-08-04
-date_stampThisWeek: 2024-08-04
-date_stampLastWeek: 2024-08-04
+reportID: REPORT-2024-08-05
+date_stampThisWeek: 2024-08-05
+date_stampLastWeek: 2024-08-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -53,9 +53,9 @@ date_stampLastWeek: 2024-08-04
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>7</td>
-        <td>14</td>
-        <td style="color: #45c527" >-7</td>
-        <td style="color: #45c527" >67%</td>
+        <td>7</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
@@ -67,9 +67,9 @@ date_stampLastWeek: 2024-08-04
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>10</td>
-        <td>2</td>
-        <td style="" >8</td>
-        <td style="" >130%</td>
+        <td>10</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
