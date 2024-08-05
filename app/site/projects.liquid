@@ -120,8 +120,8 @@ layout: base
         </div>
         <div class="sort-dropdown">
           <form class="usa-form">
-            <label class="usa-label" for="sortSelection">Sort by</label>
-            <select class="usa-select border-base-light" id="sortSelection" name="sortSelection">
+            <label class="usa-label" for="sort-selection">Sort by</label>
+            <select class="usa-select border-base-light" id="sort-selection" name="sort-selection">
               <option value="organization">Organization</option>
               <option value="project-name">Project Name</option>
               <option value="fisma-level">FISMA Compliance Level</option>
@@ -132,9 +132,9 @@ layout: base
             </select>
           </form>
 
-          <form class="usa-form hidden">
-            <label class="usa-label" for="sortSelection">Sort Direction</label>
-            <select class="usa-select border-base-light" id="sortSelection" name="sortSelection">
+          <form class="usa-form" id="sort-direction-form">
+            <label class="usa-label" for="sort-direction">Sort Direction</label>
+            <select class="usa-select border-base-light" id="sort-direction" name="sort-direction">
               <option value="ascending">Ascending</option>
               <option value="descending">Descending</option>
             </select>

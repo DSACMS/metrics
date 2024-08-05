@@ -8,8 +8,23 @@ const parsedProjectsData = JSON.parse(projectsData)
 checkboxes.forEach(function (checkbox) {
   checkbox.addEventListener('change', function () {
     updateFilters();
+    clearFilterSelection(checkbox);
   });
 });
+
+// Clears the selected filter when the corresponding button is clicked
+function clearFilterSelection(checkbox) {
+  const buttonGroup = document.querySelectorAll('#filter-tags .usa-button');
+
+  buttonGroup.forEach(button => {
+    // button.addEventListener('click', myFunction)
+    button.addEventListener("click", function() {
+      button.remove();
+      checkbox.checked = false;
+      updateFilters();
+    });
+  })
+}
 
 // Function to update filters
 function updateFilters() {
@@ -41,11 +56,11 @@ function updateFilters() {
     const projectCards = section.querySelectorAll(".project-card");
     
     projectCards.forEach((card) => {
-      checkFilterCriteria(card, selectedFiltersObject)
+      checkFilterCriteria(card, selectedFiltersObject);
     })
   })
 
-  updateHeadingVisibility()
+  updateHeadingVisibility();
 }
 
 // Function to add filters buttons
@@ -60,7 +75,7 @@ function addFitlerButtonGroup(selectedFiltersObject) {
   selectedFiltersContainer.appendChild(filtersButtonGroup);
 
   for (const filterCategory in selectedFiltersObject) {
-    const filtersArray = selectedFiltersObject[filterCategory]
+    const filtersArray = selectedFiltersObject[filterCategory];
     
     filtersArray.forEach(filter => {
       const filterButton = document.createElement('button');
@@ -74,7 +89,7 @@ function addFitlerButtonGroup(selectedFiltersObject) {
 // Function to update heading visibility
 function updateHeadingVisibility() {
   projectSections.forEach(section => {
-    let hasVisibleCard = false
+    let hasVisibleCard = false;
     // Select the report heading within the current section
     let reportHeading = section.querySelector('.report_heading');
     
@@ -95,7 +110,7 @@ function updateHeadingVisibility() {
 
 // Function to return whether all filter criteria were met
 function checkFilterCriteria(card, selectedFiltersObject) {
-  const cardName = card.querySelector(".text-no-underline").textContent
+  const cardName = card.querySelector(".text-no-underline").textContent;
 
   parsedProjectsData.forEach(project => {
     if (cardName === project.name) {
