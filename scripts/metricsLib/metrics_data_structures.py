@@ -511,3 +511,39 @@ def parse_commits_by_month(**kwargs):
             commits_by_month[month] = 1
 
     return {"commits_by_month": commits_by_month}
+
+class LanguageMetric(BaseMetric):
+    """
+    Class to fetch and process language data for a GitHub repository.
+    ...
+    
+    This class overrides the get_values method to handle the GitHub API's
+    language endpoint, which returns a dictionary of languages and their 
+    byte counts. It calculates the percentage of each language based on 
+    the total bytes of code in the repository.
+
+    Attributes
+    ----------
+        Inherits all attributes from BaseMetric.
+
+    Methods
+    ----------
+        get_values(params=None): Fetches language data and calculates
+        percentages.
+    """
+    def __init__(self, name, params, url, token=None):
+        super().__init__(name, params, url, {}, token)
+
+    def get_values(self, params=None):
+        languages_data = self.hit_metric(params=params)
+        total_bytes = sum(languages_data.values())
+        
+        language_percentages = {}
+        for lang, bytes_count in languages_data.items():
+            if total_bytes > 0:
+                percentage = (bytes_count / total_bytes) * 100
+            else:
+                percentage = 0
+            language_percentages[lang] = percentage
+        
+        return {"languages": language_percentages}
