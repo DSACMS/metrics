@@ -126,11 +126,27 @@
   box-sizing: border-box;
   text-align: right;
   gap: 0.5rem;
+  margin-bottom: 1rem;
 
 }
 
 @media screen and (max-width: 1080px) {
   .dashboard-container {
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .search-and-sort {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .search-container {
+    margin-bottom: 0;
+  }
+
+  .sort-dropdown {
+    text-align: left;
   }
 }

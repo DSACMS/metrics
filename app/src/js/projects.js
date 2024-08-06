@@ -3,13 +3,12 @@ const projectSections = document.querySelectorAll(".project_section");
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 const projectsData = document.getElementById('metrics').textContent;
 const parsedProjectsData = JSON.parse(projectsData)
+const filtersContainer = document.querySelector('.filters-container')
 
-// Add event listener to each checkbox
-checkboxes.forEach(function (checkbox) {
-  checkbox.addEventListener('change', function () {
-    updateFilters();
-  });
-});
+addGlobalEventListener('change', '.usa-checkbox__input', e => {
+  // Can use this e.target.name to update selected filters object
+  updateFilters();
+}, filtersContainer)
 
 // Function to update filters
 function updateFilters() {
@@ -63,6 +62,7 @@ function addFilterButtonGroup(selectedFiltersObject) {
     const filtersArray = selectedFiltersObject[filterCategory];
     
     filtersArray.forEach(filter => {
+      // TODO: add remove.svg to button
       const filterButton = document.createElement('button');
       filterButton.className = 'usa-button margin-bottom-1';
       filterButton.textContent = filter;
@@ -70,25 +70,33 @@ function addFilterButtonGroup(selectedFiltersObject) {
     })
   }
 
-  clearFilterSelection()
+  addGlobalEventListener("click", "#filter-tags .usa-button", e => {
+    const buttonName = e.target.textContent;
+    const selectedCheckboxes = document.querySelectorAll("input:checked");
+
+    selectedCheckboxes.forEach(checkbox => {
+      if (buttonName == checkbox.value) {
+        e.target.remove();
+        checkbox.checked = false;
+        updateFilters();
+      }
+    })
+    
+  }, filtersButtonGroup);
 }
 
-// Clears the selected filter when the corresponding button is clicked
-function clearFilterSelection() {
-  const buttonGroup = document.querySelectorAll('#filter-tags .usa-button');
-  buttonGroup.forEach(button => {
-    button.addEventListener('click', function() {
-      const checkboxes = document.querySelectorAll("input:checked")
-
-      checkboxes.forEach(checkbox => {
-        if (button.textContent == checkbox.value) {
-          button.remove();
-          checkbox.checked = false;
-          updateFilters();
-        }
-      })
-    })
-  })
+// Function for adding a dynamic global event listener
+// Parameters:
+// - type: The type of event to listen for (e.g., 'click', 'mouseover')
+// - selector: The CSS selector to match the target elements (e.g., '.class-name')
+// - callback: The callback function to execute when the event is triggered on a matching element
+// - parent: The element to attach the event listener to; defaults to 'document' for global listening
+function addGlobalEventListener(type, selector, callback, parent = document) {
+  parent.addEventListener(type, e => {
+    if (e.target.matches(selector)) {
+      callback(e);
+    }
+  });
 }
 
 // Function to update heading visibility
@@ -116,20 +124,18 @@ function updateHeadingVisibility() {
 // Function to return whether all filter criteria were met
 function checkFilterCriteria(card, selectedFiltersObject) {
   const cardName = card.querySelector(".text-no-underline").textContent;
+  // return array.filter((item) => item["owner"] === value)
+  const currentProject = parsedProjectsData.find((project) => project["name"] === cardName)
+  
+  const matchesOrganization = selectedFiltersObject.organization.length === 0 || selectedFiltersObject.organization.includes(currentProject.owner);
+  const projectMaturityModelTier = "Tier " + currentProject.maturity_model_tier;
+  const matchesMaturityModelTier = selectedFiltersObject.maturityModelTier.length === 0 || selectedFiltersObject.maturityModelTier.includes(projectMaturityModelTier);
+  const matchesFismaLevel = selectedFiltersObject.fismaLevel.length === 0 || selectedFiltersObject.fismaLevel.includes(currentProject.project_fisma_level);
+  const matchesProjectType = selectedFiltersObject.projectType.length === 0 || selectedFiltersObject.projectType.includes(currentProject.project_type);
+  
+  // Hide card if project does not match all filter categories
+  card.hidden = !(matchesOrganization && matchesMaturityModelTier && matchesFismaLevel && matchesProjectType);
 
-  parsedProjectsData.forEach(project => {
-    if (cardName === project.name) {
-      // Flags per category to denote if no filters are chosen or if project includes a selected filter
-      let matchesOrganization = selectedFiltersObject.organization.length === 0 || selectedFiltersObject.organization.includes(project.owner);
-      const projectMaturityModelTier = "Tier " + project.maturity_model_tier;
-      let matchesMaturityModelTier = selectedFiltersObject.maturityModelTier.length === 0 || selectedFiltersObject.maturityModelTier.includes(projectMaturityModelTier);
-      let matchesFismaLevel = selectedFiltersObject.fismaLevel.length === 0 || selectedFiltersObject.fismaLevel.includes(project.project_fisma_level);
-      let matchesProjectType = selectedFiltersObject.projectType.length === 0 || selectedFiltersObject.projectType.includes(project.project_type)
-      
-      // Hide card if project does not match all filter categories
-      card.hidden = !(matchesOrganization && matchesMaturityModelTier && matchesFismaLevel && matchesProjectType);
-    }
-  });
 }
 
 filterBox.addEventListener("input", () => {
