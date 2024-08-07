@@ -535,15 +535,5 @@ class LanguageMetric(BaseMetric):
         super().__init__(name, params, url, {}, token)
 
     def get_values(self, params=None):
-        languages_data = self.hit_metric(params=params)
-        total_bytes = sum(languages_data.values())
-        
-        language_percentages = {}
-        for lang, bytes_count in languages_data.items():
-            if total_bytes > 0:
-                percentage = (bytes_count / total_bytes) * 100
-            else:
-                percentage = 0
-            language_percentages[lang] = percentage
-        
-        return {"languages": language_percentages}
+        predom_langs_data = self.hit_metric(params=params)
+        return {"predominant_langs": predom_langs_data}
