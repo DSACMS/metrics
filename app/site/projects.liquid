@@ -5,7 +5,9 @@ layout: base
 <span style="display:none;" id="metrics">
   {{projects | json }}
 </span>
-
+<span style="display:none;" id="org-data">
+  {{organizations | json }}
+</span>
 <div class="grid-container ">
   <p>
     The Centers for Medicare and Medicaid Services develops and supports many open-source projects found in our various
@@ -119,15 +121,15 @@ layout: base
           </div>
         </div>
         <div class="sort-dropdown">
-          <form class="usa-form">
+          <form class="usa-form" id="sort-selection-form">
             <label class="usa-label" for="sort-selection">Sort by</label>
             <select class="usa-select border-base-light" id="sort-selection" name="sort-selection">
-              <option value="organization">Organization</option>
-              <option value="project-name">Project Name</option>
-              <option value="fisma-level">FISMA Compliance Level</option>
-              <option value="project-type">Project Type</option>
+              <option value="owner">Organization</option>
+              <option value="name">Project Name</option>
+              <option value="project_fisma_level">FISMA Compliance Level</option>
+              <option value="project_type">Project Type</option>
               <option value="stars">Stars</option>
-              <option value="tier">Maturity Model Tier</option>
+              <option value="maturity_model_tier">Maturity Model Tier</option>
               <option value="forks">Forks</option>
             </select>
           </form>
@@ -143,29 +145,6 @@ layout: base
       </div>
 
       <div class="padding-left-05" id="filter-tags"></div>
-
-      {% for org in organizations %}
-        <div class="project_section">
-          <div class="report_heading">
-            <h2>
-              {{ org.name }}
-              <img
-                src="{{org.avatar_url}}"
-                alt="Organization Avatar"
-                width="20"
-              >
-            </h2>
-          </div>
-
-          <ul class="usa-card-group flex-align-stretch">
-            {% assign orgProjects = projects | findProjectsInOrg: org.name %}
-
-            {% for repo in orgProjects %}
-              {% render 'project-card', repo: repo, base_url: site.baseurl %}
-            {% endfor %}
-          </ul>
-        </div>
-      {% endfor %}
-
+      <div id="content-container"></div>
   </div>
 </div>
