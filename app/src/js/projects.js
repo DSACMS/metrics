@@ -1,73 +1,64 @@
 import { reportHeadingTemplate, projectCardTemplate } from "./templates";
 const filterBox = document.getElementById("filter-input");
-let projectSections = document.querySelectorAll(".project_section");
+var projectSections = document.querySelectorAll(".project_section");
 const projectsData = document.getElementById('metrics').textContent;
 const orgsData = document.getElementById('org-data').textContent;
 const parsedOrgsData = JSON.parse(orgsData);
 const parsedProjectsData = JSON.parse(projectsData);
 const filtersContainer = document.querySelector('.filters-container');
 const templateDiv = document.getElementById('content-container');
-
-
-
-//SORT
+var projects = setProjectsData(parsedProjectsData)
 const sortDirection = document.getElementById('sort-direction')
 const sortSelection = document.getElementById('sort-selection')
-// let sortedByOrg = sortSelection.value == "organization" ? true : false;
-// console.log(sortDirection)
-// console.log(sortSelection.value)
-// console.log(sortedByOrg)
-// document.getElementById("sort-direction-form").hidden = true;
+var isSorted = false;
 
-// sortSelection.addEventListener('change', function() {
-//  sortedByOrg = sortSelection.value == "organization" ? true : false;
-// //  console.log('ete')
-// //  console.log(sortedByOrg)
-// //  console.log(sortSelection.value)
-//  document.getElementById("sort-direction-form").hidden = false;
-//  parsedProjectsData.sort((a, b) => a.value - b.value);
-// })
 
-document.addEventListener("DOMContentLoaded", () => {
-  projectSections = document.querySelectorAll(".project_section");
-});
+document.getElementById("sort-direction-form").hidden = !isSorted;
 
-// console.log("before projects: ", projects)
-// sortSelection.addEventListener('change', e => {
-//   const selection = sortSelection.value;
-//   console.log(sortSelection.value)
-
-//   for (org in projects) {
-//     // const repoData = projects[org][repoIndex]
-//     if (selection === "maturity_model_tier")
-//       sortByTier(projects[org])
-//   }
-// })
-// console.log("after projects: ", projects)
-
-function sortByTier(data) {
+function sortByNumberAttribute(data, attribute) {
+  // console.log(data)
+  // console.log(attribute)
   data.sort((a, b) => {
-    const tierA = a.maturity_model_tier ? Number(a.maturity_model_tier) : Infinity;
-    const tierB = b.maturity_model_tier ? Number(b.maturity_model_tier) : Infinity;
+    // console.log(a[attribute])
+    // console.log(b[attribute])
+    const tierA = a[attribute] !== undefined ? Number(a[attribute]) : Infinity;
+    const tierB = b[attribute] !== undefined ? Number(b[attribute]) : Infinity;
     return tierA - tierB;
   });
   // data.sort((a, b) => Number(a.maturity_model_tier) - Number(b.maturity_model_tier));
 }
 
-const orgCheckboxes = document.getElementById('organization-content').querySelectorAll('.usa-checkbox')
-const organizations = [...orgCheckboxes].map(checkbox => checkbox.textContent.trim());
+function sortByStringAttribute(data, attribute) {
+  data.sort((a, b) => {
+    const hasAttributeA = typeof a[attribute] === 'string';
+    const hasAttributeB = typeof b[attribute] === 'string';
+  
+    // If both objects have the attribute, sort by name
+    if (hasAttributeA && hasAttributeB) {
+      return a[attribute].localeCompare(b[attribute]);
+    }
+  
+    // If only one object has the attribute, it should come first
+    if (hasAttributeA) return -1;
+    if (hasAttributeB) return 1;
+  
+    // If neither object has the attribute, sort by name
+    return a.name.localeCompare(b.name);
+  });
+}
 
-// SORT END
 
-// eleventyConfig.addFilter("findProjectsInOrg", function (array, value) {
-//   return array.filter((item) => item["owner"] === value)
-// })
 
-let projects = {};
-
-organizations.forEach(org => {
-  projects[org] = getProjectsInOrg(parsedProjectsData, org);
-})
+function setProjectsData(parsedData) {
+  let projects = {};
+  const orgCheckboxes = document.getElementById('organization-content').querySelectorAll('.usa-checkbox')
+  const organizations = [...orgCheckboxes].map(checkbox => checkbox.textContent.trim());
+  
+  organizations.forEach(org => {
+    projects[org] = getProjectsInOrg(parsedData, org);
+  })
+  return projects
+}
 
 function findObject(array, value) {
   return array.find((item) => item["name"] === value)
@@ -78,15 +69,31 @@ function getProjectsInOrg(array, value) {
 }
 
 sortSelection.addEventListener('change', e => {
+  sortCards();
+})
+
+function sortCards() {
   const selection = sortSelection.value;
 
   for (const org in projects) {
-    // const repoData = projects[org][repoIndex]
-    if (selection === "maturity_model_tier")
-      sortByTier(projects[org])
-      createProjectCards()
+    if (
+        selection === "maturity_model_tier" || 
+        selection === "stargazers_count" || 
+        selection === 'forks_count'
+      ) {
+      sortByNumberAttribute(projects[org], selection)
+    } 
+    else if (selection === 'name') {
+      projects[org].sort((a, b) => {
+        return a.name.localeCompare(b.name);
+      });
+    }
+    else if (selection === 'project_type' || selection === "project_fisma_level") {
+      sortByStringAttribute(projects[org], selection)
+    }
+    createProjectCards()
   }
-})
+}
 
 function createProjectCards() {
   templateDiv.innerHTML = ''
@@ -115,15 +122,11 @@ function createProjectCards() {
       projectCard.id = repoData.name
       projectCard.setAttribute('org-name', repoData.owner)
       projectCard.innerHTML = projectCardTemplate(repoData)
-      // const selectedFiltersObject = updateFilters()
-      // if (!passesFilterCriteria(repoData, selectedFiltersObject)) {
-      //   projectCard.hidden = true
-      // }
       projectCards.appendChild(projectCard);
     }
   }
   updateFilters()
-  // updateHeadingVisibility();
+  updateHeadingVisibility();
 }
 
 createProjectCards()
@@ -131,10 +134,12 @@ createProjectCards()
 // Keep filters after navigating back
 window.addEventListener('pageshow', (event) => {
   updateFilters();
+  sortCards();
 
   if (event.persisted) {
     // The page was loaded from the bfcache (back-forward cache)
     updateFilters();
+    sortCards();
   }
 });
 
@@ -169,6 +174,7 @@ function updateFilters() {
   });
 
   addFilterButtonGroup(selectedFiltersObject)
+  const projectSections = document.querySelectorAll(".project_section");
 
   projectSections.forEach((section) => {
     const projectCards = section.querySelectorAll(".project-card");
@@ -179,8 +185,6 @@ function updateFilters() {
   })
 
   updateHeadingVisibility();
-
-  // return selectedFiltersObject
 }
 
 // Function to add filters buttons
@@ -237,6 +241,7 @@ function addGlobalEventListener(type, selector, callback, parent = document) {
 
 // Function to update heading visibility
 function updateHeadingVisibility() {
+  const projectSections = document.querySelectorAll(".project_section");
   projectSections.forEach(section => {
     let hasVisibleCard = false;
     // Select the report heading within the current section
@@ -272,16 +277,6 @@ function checkFilterCriteria(card, selectedFiltersObject) {
   card.hidden = !(matchesOrganization && matchesMaturityModelTier && matchesFismaLevel && matchesProjectType);
 
 }
-
-// function passesFilterCriteria(data, selectedFiltersObject) {
-//   const matchesOrganization = selectedFiltersObject.organization.length === 0 || selectedFiltersObject.organization.includes(data.owner);
-//   const projectMaturityModelTier = "Tier " + data.maturity_model_tier;
-//   const matchesMaturityModelTier = selectedFiltersObject.maturityModelTier.length === 0 || selectedFiltersObject.maturityModelTier.includes(projectMaturityModelTier);
-//   const matchesFismaLevel = selectedFiltersObject.fismaLevel.length === 0 || selectedFiltersObject.fismaLevel.includes(data.project_fisma_level);
-//   const matchesProjectType = selectedFiltersObject.projectType.length === 0 || selectedFiltersObject.projectType.includes(data.project_type);
-
-//   return (matchesOrganization && matchesMaturityModelTier && matchesFismaLevel && matchesProjectType);
-// }
 
 filterBox.addEventListener("input", () => {
   const query = filterBox.value.toLowerCase()
