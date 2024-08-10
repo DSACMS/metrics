@@ -10,45 +10,65 @@ const templateDiv = document.getElementById('content-container');
 var projects = setProjectsData(parsedProjectsData)
 const sortDirection = document.getElementById('sort-direction')
 const sortSelection = document.getElementById('sort-selection')
-var isSorted = false;
 
+// Hide sort direction when sort is not selected
+document.getElementById("sort-direction-form").hidden = true;
 
-document.getElementById("sort-direction-form").hidden = !isSorted;
+// Main Function to create project cards, filter buttons, and hide headings based on filters
+createProjectCards()
 
-function sortByNumberAttribute(data, attribute) {
-  // console.log(data)
-  // console.log(attribute)
+sortSelection.addEventListener('change', e => {
+  sortCards();
+  // Unhide sort direction once sort by is selected
+  document.getElementById("sort-direction-form").hidden = false;
+})
+
+sortDirection.addEventListener('change', e => {
+  const isDescending = sortDirection.value === 'descending' ? true : false  
+  sortCards(isDescending)
+})
+
+// Keep filters after navigating back
+window.addEventListener('pageshow', (event) => {
+  updateFilters();
+  sortCards();
+
+  if (event.persisted) {
+    // The page was loaded from the bfcache (back-forward cache)
+    updateFilters();
+    sortCards();
+  }
+});
+
+// Sorting cards function for numberic attributes
+function sortByNumberAttribute(data, attribute, isDescending) {
   data.sort((a, b) => {
-    // console.log(a[attribute])
-    // console.log(b[attribute])
-    const tierA = a[attribute] !== undefined ? Number(a[attribute]) : Infinity;
-    const tierB = b[attribute] !== undefined ? Number(b[attribute]) : Infinity;
-    return tierA - tierB;
+    const attributeA = a[attribute] !== undefined ? Number(a[attribute]) : Infinity;
+    const attributeB = b[attribute] !== undefined ? Number(b[attribute]) : Infinity;
+    return isDescending ? attributeB - attributeA : attributeA - attributeB;
   });
-  // data.sort((a, b) => Number(a.maturity_model_tier) - Number(b.maturity_model_tier));
 }
 
-function sortByStringAttribute(data, attribute) {
+// Sort cards function for string type attributes
+function sortByStringAttribute(data, attribute, isDescending) {
   data.sort((a, b) => {
     const hasAttributeA = typeof a[attribute] === 'string';
     const hasAttributeB = typeof b[attribute] === 'string';
   
     // If both objects have the attribute, sort by name
     if (hasAttributeA && hasAttributeB) {
-      return a[attribute].localeCompare(b[attribute]);
+      return isDescending ? b[attribute].localeCompare(a[attribute]) : a[attribute].localeCompare(b[attribute]);
     }
   
-    // If only one object has the attribute, it should come first
-    if (hasAttributeA) return -1;
-    if (hasAttributeB) return 1;
+  // If only one object has the attribute, determine order based on `isDescending`
+  if (hasAttributeA) return isDescending ? 1 : -1;
+  if (hasAttributeB) return isDescending ? -1 : 1;
   
     // If neither object has the attribute, sort by name
-    return a.name.localeCompare(b.name);
+    return isDescending ? b.name.localeCompare(a.name) : a.name.localeCompare(b.name);
   });
 }
-
-
-
+// Function to map organizations with their projects
 function setProjectsData(parsedData) {
   let projects = {};
   const orgCheckboxes = document.getElementById('organization-content').querySelectorAll('.usa-checkbox')
@@ -68,11 +88,7 @@ function getProjectsInOrg(array, value) {
   return array.filter((item) => item["owner"] === value)
 }
 
-sortSelection.addEventListener('change', e => {
-  sortCards();
-})
-
-function sortCards() {
+function sortCards(descending=false) {
   const selection = sortSelection.value;
 
   for (const org in projects) {
@@ -81,15 +97,13 @@ function sortCards() {
         selection === "stargazers_count" || 
         selection === 'forks_count'
       ) {
-      sortByNumberAttribute(projects[org], selection)
+      sortByNumberAttribute(projects[org], selection, descending)
     } 
     else if (selection === 'name') {
-      projects[org].sort((a, b) => {
-        return a.name.localeCompare(b.name);
-      });
+      sortByStringAttribute(projects[org], selection, descending)
     }
     else if (selection === 'project_type' || selection === "project_fisma_level") {
-      sortByStringAttribute(projects[org], selection)
+      sortByStringAttribute(projects[org], selection, descending)
     }
     createProjectCards()
   }
@@ -99,14 +113,14 @@ function createProjectCards() {
   templateDiv.innerHTML = ''
   for (const org in projects) {
     const orgProject = findObject(parsedOrgsData, org);
-    const heading = reportHeadingTemplate(orgProject);
+    const orgHeading = reportHeadingTemplate(orgProject);
     const projectSectionsTemplate = document.createElement('div');
     projectSectionsTemplate.className = 'project_section'
     templateDiv.append(projectSectionsTemplate)
   
     const reportHeading = document.createElement('div');
     reportHeading.className = "report_heading"
-    reportHeading.innerHTML = heading;
+    reportHeading.innerHTML = orgHeading;
     projectSectionsTemplate.appendChild(reportHeading)
   
     const projectCards = document.createElement('ul');
@@ -129,20 +143,6 @@ function createProjectCards() {
   updateHeadingVisibility();
 }
 
-createProjectCards()
-
-// Keep filters after navigating back
-window.addEventListener('pageshow', (event) => {
-  updateFilters();
-  sortCards();
-
-  if (event.persisted) {
-    // The page was loaded from the bfcache (back-forward cache)
-    updateFilters();
-    sortCards();
-  }
-});
-
 // Checks for Checkbox event and updates filters
 addGlobalEventListener('change', '.usa-checkbox__input', e => {
   // Can use this e.target.name to update selected filters object
@@ -158,7 +158,6 @@ function updateFilters() {
     fismaLevel: [],
     projectType: []
   }
-
 
   document.querySelectorAll('input[name="org-filter"]:checked').forEach(checkbox => {
     selectedFiltersObject.organization.push(checkbox.value);
@@ -279,6 +278,7 @@ function checkFilterCriteria(card, selectedFiltersObject) {
 }
 
 filterBox.addEventListener("input", () => {
+  const projectSections = document.querySelectorAll(".project_section");
   const query = filterBox.value.toLowerCase()
 
   // Iterate through each section
