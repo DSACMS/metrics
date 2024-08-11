@@ -38,60 +38,59 @@
   "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=midsize&color=ff0000",
   "nadia_color": "ff0000",
   "nadia_badge_name": "midsize",
-  "cocomo": [
-    {
-      "Name": "Markdown",
-      "Bytes": 1336,
-      "CodeBytes": 0,
-      "Lines": 26,
-      "Code": 19,
-      "Comment": 0,
-      "Blank": 7,
-      "Complexity": 0,
-      "Count": 3,
-      "WeightedComplexity": 0,
-      "Files": []
-    },
-    {
-      "Name": "Terraform",
-      "Bytes": 2889,
-      "CodeBytes": 0,
-      "Lines": 126,
-      "Code": 105,
-      "Comment": 1,
-      "Blank": 20,
-      "Complexity": 1,
-      "Count": 3,
-      "WeightedComplexity": 0,
-      "Files": []
-    },
-    {
-      "Name": "YAML",
-      "Bytes": 733,
-      "CodeBytes": 0,
-      "Lines": 19,
-      "Code": 17,
-      "Comment": 2,
-      "Blank": 0,
-      "Complexity": 0,
-      "Count": 1,
-      "WeightedComplexity": 0,
-      "Files": []
-    },
-    {
-      "Name": "gitignore",
-      "Bytes": 9,
-      "CodeBytes": 0,
-      "Lines": 1,
-      "Code": 1,
-      "Comment": 0,
-      "Blank": 0,
-      "Complexity": 0,
-      "Count": 1,
-      "WeightedComplexity": 0,
-      "Files": []
-    }
-  ],
+  "cocomo": {
+    "languageSummary": [
+      {
+        "Name": "Markdown",
+        "Bytes": 1336,
+        "CodeBytes": 0,
+        "Lines": 26,
+        "Code": 19,
+        "Comment": 0,
+        "Blank": 7,
+        "Complexity": 0,
+        "Count": 3,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null
+      },
+      {
+        "Name": "Terraform",
+        "Bytes": 2889,
+        "CodeBytes": 0,
+        "Lines": 126,
+        "Code": 105,
+        "Comment": 1,
+        "Blank": 20,
+        "Complexity": 1,
+        "Count": 3,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null
+      },
+      {
+        "Name": "YAML",
+        "Bytes": 733,
+        "CodeBytes": 0,
+        "Lines": 19,
+        "Code": 17,
+        "Comment": 2,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null
+      }
+    ],
+    "estimatedCost_low": 3149.5013726738352,
+    "estimatedScheduleMonths_low": 1.5957274152892587,
+    "estimatedPeople_low": 0.19227933149368265,
+    "estimatedCost_high": 9815.221836887902,
+    "estimatedScheduleMonths_high": 1.5957274152892587,
+    "estimatedPeople_high": 0.19227933149368265,
+    "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nMarkdown                     3        26        7         0       19          0\n(ULOC)                                20\n-------------------------------------------------------------------------------\nTerraform                    3       126       20         1      105          1\n(ULOC)                                70\n-------------------------------------------------------------------------------\nYAML                         1        19        0         2       17          0\n(ULOC)                                19\n───────────────────────────────────────────────────────────────────────────────\nTotal                        7       171       27         3      141          1\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)          107\nDRYness %                           0.63\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $3,453\nEstimated Schedule Effort (organic) 1.60 months\nEstimated People Required (organic) 0.19\n───────────────────────────────────────────────────────────────────────────────\nProcessed 4958 bytes, 0.005 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
+  },
   "created_at": "2023-02-27T21:44:41Z",
   "ossf_scorecard": {
     "date": "2024-08-10T02:42:58Z",
