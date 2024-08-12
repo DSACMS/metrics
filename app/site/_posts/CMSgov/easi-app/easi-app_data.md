@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for easi-app | REPORT-2024-08-11
+title: Open Source at CMS Metrics Report for easi-app | REPORT-2024-08-12
 permalink: /CMSgov/easi-app/
 
 org: CMSgov
 repo: easi-app
-reportID: REPORT-2024-08-11
-date_stampThisWeek: 2024-08-11
-date_stampLastWeek: 2024-08-11
+reportID: REPORT-2024-08-12
+date_stampThisWeek: 2024-08-12
+date_stampLastWeek: 2024-08-12
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-08-11
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>8872</td>
         <td>8860</td>
-        <td>8844</td>
-        <td style="color: #45c527" >16</td>
-        <td style="color: #45c527" >0.18%</td>
+        <td style="color: #45c527" >12</td>
+        <td style="color: #45c527" >0.14%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2024-08-11
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>6</td>
         <td>4</td>
-        <td style="" >2</td>
-        <td style="" >40%</td>
+        <td>6</td>
+        <td style="color: #45c527" >-2</td>
+        <td style="color: #45c527" >40%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>2454</td>
         <td>2441</td>
-        <td>2418</td>
-        <td style="color: #45c527" >23</td>
-        <td style="color: #45c527" >0.95%</td>
+        <td style="color: #45c527" >13</td>
+        <td style="color: #45c527" >0.53%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>296</td>
         <td>293</td>
-        <td>289</td>
-        <td style="" >4</td>
-        <td style="" >1.4%</td>
+        <td style="" >3</td>
+        <td style="" >1%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -88,9 +88,9 @@ date_stampLastWeek: 2024-08-11
       <tr>
         <th scope="row">Watchers</th>
         <td>2</td>
-        <td>3</td>
-        <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >40%</td>
+        <td>2</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>
