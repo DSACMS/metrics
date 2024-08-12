@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ECTA | REPORT-2024-08-11
+title: Open Source at CMS Metrics Report for ECTA | REPORT-2024-08-12
 permalink: /CMSgov/ECTA/
 
 org: CMSgov
 repo: ECTA
-reportID: REPORT-2024-08-11
-date_stampThisWeek: 2024-08-11
-date_stampLastWeek: 2024-08-11
+reportID: REPORT-2024-08-12
+date_stampThisWeek: 2024-08-12
+date_stampLastWeek: 2024-08-12
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-08-11
       <tr>
         <th scope="row">Commits</th>
         <td>124</td>
-        <td>120</td>
-        <td style="color: #45c527" >4</td>
-        <td style="color: #45c527" >3.3%</td>
+        <td>124</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -53,16 +53,16 @@ date_stampLastWeek: 2024-08-11
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>0</td>
-        <td>1</td>
-        <td style="color: #45c527" >-1</td>
-        <td style="color: #45c527" >200%</td>
+        <td>0</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>34</td>
-        <td>33</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >3%</td>
+        <td>34</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
