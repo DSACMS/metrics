@@ -2,43 +2,148 @@
 layout: base
 ---
 <script type="module" src="{{ "/assets/js/projects.js" | url }}"></script>
-<div class="grid-container">
+<span style="display:none;" id="metrics">
+  {{projects | json }}
+</span>
+<span style="display:none;" id="org-data">
+  {{organizations | json }}
+</span>
+<div class="grid-container ">
   <p>
     The Centers for Medicare and Medicaid Services develops and supports many open-source projects found in our various
     GitHub Organizations.
   </p>
+  {% assign allFields = "project_type, user_input, project_fisma_level, group, subset_in_healthcare, user_type, repository_host, maturity_model_tier" | split: "," %}
 
-  <div class="margin-bottom-2">
-    <label class="usa-label" for="filter-input">Search</label>
-    <div class="usa-input-group width-full maxw-none">
-      <div class="usa-input-prefix" aria-hidden="true">
-        <svg aria-hidden="true" role="img" focusable="false" class="usa-icon">
-          <use xlink:href={{  "/assets/img/sprite.svg#search"| url }} ></use>
-        </svg>
+  <div class="dashboard-container">
+    <div class="filters-container">
+
+      {% comment %} filter by organization {% endcomment %}
+      <div class="usa-accordion border-base-lighter border-2px">
+        <div class="usa-accordion__heading">
+          <button class="usa-accordion__button font-heading-md text-base-darker" aria-expanded="true" aria-controls="organization-content" id="organization">Organization</button>
+        </div>
+        <div id="organization-content" class="usa-accordion__content usa-prose border-top-1px border-base-lighter" hidden>
+          <form class="usa-form">
+            <fieldset class="usa-fieldset" aria-labelledby="organization-filter">
+              <legend class="usa-sr-only" aria-labelledby="organization-filtering"></legend>
+              {% for org in filters.organizations %}
+                <div class="usa-checkbox padding-bottom-1">
+                  <input type="checkbox" class="usa-checkbox__input" name="org-filter" id="{{ org }}" value="{{ org }}">
+                  <label class="usa-checkbox__label font-body-2xs text-base-dark" for="{{ org }}">
+                    <span>{{ org }}</span>
+                  </label>
+                </div>
+              {% endfor %}
+            </fieldset>
+          </form>
+        </div>
       </div>
-      <input class="usa-input--lg" id="filter-input" name="filter-input">
+
+      {% comment %} filter by maturity model tier {% endcomment %}
+      <div class="usa-accordion border-base-lighter border-2px">
+        <div class="usa-accordion__heading">
+          <button class="usa-accordion__button font-heading-md text-base-darker" aria-expanded="false" aria-controls="tier-content" id="mauturity-model-tier">Maturity Model Tier</button>
+        </div>
+        <div id="tier-content" class="usa-accordion__content usa-prose border-top-1px border-base-lighter" hidden>
+          <form class="usa-form">
+            <fieldset class="usa-fieldset" aria-labelledby="tier-filter">
+              <legend class="usa-sr-only" aria-labelledby="tier-filtering"></legend>
+              {% for tier in filters.maturity_model_tier %}
+                <div class="usa-checkbox padding-bottom-1">
+                  <input type="checkbox" class="usa-checkbox__input" name="tier-filter" id="{{ tier | slug }}" value="{{ tier }}">
+                  <label class="usa-checkbox__label font-body-2xs text-base-dark" for="{{ tier | slug }}">
+                    <span>{{ tier }}</span>
+                  </label>
+                </div>
+              {% endfor %}
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+      {% comment %} filter by fisma compliance level {% endcomment %}
+      <div class="usa-accordion border-base-lighter border-2px">
+        <div class="usa-accordion__heading">
+          <button class="usa-accordion__button font-heading-md text-base-darker" aria-expanded="false" aria-controls="fisma-level-content" id="fisma-level">FISMA Compliance Level</button>
+        </div>
+        <div id="fisma-level-content" class="usa-accordion__content usa-prose border-top-1px border-base-lighter" hidden>
+          <form class="usa-form">
+            <fieldset class="usa-fieldset" aria-labelledby="fisma-level-filter">
+              <legend class="usa-sr-only" aria-labelledby="fisma-level-filtering"></legend>
+              {% for level in filters.fisma_level %}
+                <div class="usa-checkbox padding-bottom-1">
+                  <input type="checkbox" class="usa-checkbox__input" name="fisma-level-filter" id="fisma-level-{{ level | slug }}" value="{{ level }}">
+                  <label class="usa-checkbox__label font-body-2xs text-base-dark" for="fisma-level-{{ level | slug }}">
+                    <span>{{ level }}</span>
+                  </label>
+                </div>
+              {% endfor %}
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+      {% comment %} filter by project type {% endcomment %}
+      <div class="usa-accordion border-base-lighter border-2px">
+        <div class="usa-accordion__heading">
+          <button class="usa-accordion__button font-heading-md text-base-darker" aria-expanded="false" aria-controls="project-type-content" id="project-type">Project Type</button>
+        </div>
+        <div id="project-type-content" class="usa-accordion__content usa-prose border-top-1px border-base-lighter" hidden>
+          <form class="usa-form">
+            <fieldset class="usa-fieldset" aria-labelledby="project-type-filter">
+              <legend class="usa-sr-only" aria-labelledby="project-type-filtering"></legend>
+              {% for type in filters.project_type %}
+                <div class="usa-checkbox padding-bottom-1">
+                  <input type="checkbox" class="usa-checkbox__input" name="project-type-filter" id="{{ type }}" value="{{ type }}">
+                  <label class="usa-checkbox__label font-body-2xs text-base-dark" for="{{ type }}">
+                    <span>{{ type }}</span>
+                  </label>
+                </div>
+              {% endfor %}
+            </fieldset>
+          </form>
+        </div>
+      </div>
     </div>
+    
+    <div class="block">
+      <div class="search-and-sort">
+        <div class="search-container">
+          <label class="usa-label" for="filter-input">Search</label>
+          <div class="usa-input-group width-full maxw-none border-base-light">
+            <div class="usa-input-prefix" aria-hidden="true">
+              <svg aria-hidden="true" role="img" focusable="false" class="usa-icon">
+                <use xlink:href={{  "/assets/img/sprite.svg#search"| url }} ></use>
+              </svg>
+            </div>
+            <input class="usa-input--lg" id="filter-input" name="filter-input">
+          </div>
+        </div>
+        <div class="sort-dropdown">
+          <form class="usa-form" id="sort-selection-form">
+            <label class="usa-label" for="sort-selection">Sort by</label>
+            <select class="usa-select border-base-light" id="sort-selection" name="sort-selection">
+              <option value="name">Project Name</option>
+              <option value="project_fisma_level">FISMA Compliance Level</option>
+              <option value="project_type">Project Type</option>
+              <option value="stargazers_count">Stars</option>
+              <option value="maturity_model_tier">Maturity Model Tier</option>
+              <option value="forks_count">Forks</option>
+            </select>
+          </form>
+
+          <form class="usa-form" id="sort-direction-form">
+            <label class="usa-label" for="sort-direction">Sort Direction</label>
+            <select class="usa-select border-base-light" id="sort-direction" name="sort-direction">
+              <option value="ascending">Ascending</option>
+              <option value="descending">Descending</option>
+            </select>
+          </form>
+        </div>
+      </div>
+
+      <div class="padding-left-05" id="filter-tags"></div>
+      <div id="content-container"></div>
   </div>
-
-  {% for org in organizations %}
-    <div class="project_section">
-      <div class="report_heading">
-        <h2>
-          {{ org.name }}
-          <img
-            src="{{org.avatar_url}}"
-            alt="Organization Avatar"
-            width="20"
-          >
-        </h2>
-      </div>
-
-      <ul class="usa-card-group flex-align-stretch">
-        {% assign orgProjects = projects | findProjectsInOrg: org.name %}
-        {% for repo in orgProjects %}
-          {% render 'project-card', repo: repo, base_url: site.baseurl %}
-        {% endfor %}
-      </ul>
-    </div>
-  {% endfor %}
 </div>

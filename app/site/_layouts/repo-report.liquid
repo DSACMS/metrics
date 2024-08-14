@@ -43,11 +43,12 @@ layout: base
       {% endif %}
       {% if project.project_fisma_level %}
         {% assign fismaLevel = project.project_fisma_level %}
-        {% assign fismaLevelIcon = "chevron.svg" %}
         {% if fismaLevel == "Moderate" %}
             {% assign fismaLevelIcon = "chevron-two.svg" %}
         {% else if fismaLevel == "High" %}
             {% assign fismaLevelIcon = "chevron-three.svg" %}
+        {% else %}
+            {% assign fismaLevelIcon = "chevron.svg" %}
         {% endif %}
         <span 
           class="usa-tag usa-tag--big main-tag icon-tag">{{ project.project_fisma_level }} 
