@@ -1,6 +1,6 @@
 import { reportHeadingTemplate, projectCardTemplate } from "./templates";
+import DOMPurify from 'dompurify';
 const filterBox = document.getElementById("filter-input");
-var projectSections = document.querySelectorAll(".project_section");
 const projectsData = document.getElementById('metrics').textContent;
 const orgsData = document.getElementById('org-data').textContent;
 const parsedOrgsData = JSON.parse(orgsData);
@@ -8,24 +8,27 @@ const parsedProjectsData = JSON.parse(projectsData);
 const filtersContainer = document.querySelector('.filters-container');
 const templateDiv = document.getElementById('content-container');
 var projects = setProjectsData(parsedProjectsData)
-const sortDirection = document.getElementById('sort-direction')
-const sortSelection = document.getElementById('sort-selection')
+const sortDirection = document.getElementById('sort-direction');
+const sortSelection = document.getElementById('sort-selection');
+
 
 // Hide sort direction when sort is not selected
 document.getElementById("sort-direction-form").hidden = true;
 
 // Main Function to create project cards, filter buttons, and hide headings based on filters
-createProjectCards()
+createProjectCards();
 
+// Listens for selection to sort by attribute
 sortSelection.addEventListener('change', e => {
   sortCards();
   // Unhide sort direction once sort by is selected
   document.getElementById("sort-direction-form").hidden = false;
 })
 
+// Listens for sort direction to sort descending/ascending
 sortDirection.addEventListener('change', e => {
-  const isDescending = sortDirection.value === 'descending' ? true : false  
-  sortCards(isDescending)
+  const isDescending = sortDirection.value === 'descending' ? true : false; 
+  sortCards(isDescending);
 })
 
 // Keep filters after navigating back
@@ -71,7 +74,7 @@ function sortByStringAttribute(data, attribute, isDescending) {
 // Function to map organizations with their projects
 function setProjectsData(parsedData) {
   let projects = {};
-  const orgCheckboxes = document.getElementById('organization-content').querySelectorAll('.usa-checkbox')
+  const orgCheckboxes = document.getElementById('organization-content').querySelectorAll('.usa-checkbox');
   const organizations = [...orgCheckboxes].map(checkbox => checkbox.textContent.trim());
   
   organizations.forEach(org => {
@@ -81,31 +84,36 @@ function setProjectsData(parsedData) {
 }
 
 function findObject(array, value) {
-  return array.find((item) => item["name"] === value)
+  return array.find((item) => item["name"] === value);
 }
 
 function getProjectsInOrg(array, value) {
-  return array.filter((item) => item["owner"] === value)
+  return array.filter((item) => item["owner"] === value);
 }
 
 function sortCards(descending=false) {
   const selection = sortSelection.value;
 
   for (const org in projects) {
-    if (
+    // Selected attribute of type number
+    if 
+      (
         selection === "maturity_model_tier" || 
         selection === "stargazers_count" || 
         selection === 'forks_count'
       ) {
-      sortByNumberAttribute(projects[org], selection, descending)
-    } 
-    else if (selection === 'name') {
-      sortByStringAttribute(projects[org], selection, descending)
-    }
-    else if (selection === 'project_type' || selection === "project_fisma_level") {
-      sortByStringAttribute(projects[org], selection, descending)
-    }
-    createProjectCards()
+        sortByNumberAttribute(projects[org], selection, descending);
+      } 
+    // Selected attribute of type string
+    else if
+      (
+        selection === 'name' || 
+        selection === 'project_type' || 
+        selection === "project_fisma_level"
+      ) {
+        sortByStringAttribute(projects[org], selection, descending);
+      }
+    createProjectCards();
   }
 }
 
@@ -115,31 +123,32 @@ function createProjectCards() {
     const orgProject = findObject(parsedOrgsData, org);
     const orgHeading = reportHeadingTemplate(orgProject);
     const projectSectionsTemplate = document.createElement('div');
-    projectSectionsTemplate.className = 'project_section'
-    templateDiv.append(projectSectionsTemplate)
+    projectSectionsTemplate.className = 'project_section';
+    templateDiv.append(projectSectionsTemplate);
   
+    // Add report heading for each org
     const reportHeading = document.createElement('div');
-    reportHeading.className = "report_heading"
-    reportHeading.innerHTML = orgHeading;
-    projectSectionsTemplate.appendChild(reportHeading)
+    reportHeading.className = "report_heading";
+    reportHeading.innerHTML = DOMPurify.sanitize(orgHeading);
+    projectSectionsTemplate.appendChild(reportHeading);
   
     const projectCards = document.createElement('ul');
-    projectCards.className = "usa-card-group flex-align-stretch"
+    projectCards.className = "usa-card-group flex-align-stretch";
   
-    projectSectionsTemplate.appendChild(projectCards)
+    projectSectionsTemplate.appendChild(projectCards);
   
-  
+    // Create all project cards for each org
     for (const repoIndex in projects[org]) {
-      const repoData = projects[org][repoIndex]
+      const repoData = projects[org][repoIndex];
       const projectCard = document.createElement('li');
-      projectCard.className = 'usa-card project-card tablet:grid-col-12'
-      projectCard.id = repoData.name
-      projectCard.setAttribute('org-name', repoData.owner)
-      projectCard.innerHTML = projectCardTemplate(repoData)
+      projectCard.className = 'usa-card project-card tablet:grid-col-12';
+      projectCard.id = repoData.name;
+      projectCard.setAttribute('org-name', repoData.owner);
+      projectCard.innerHTML = DOMPurify.sanitize(projectCardTemplate(repoData));
       projectCards.appendChild(projectCard);
     }
   }
-  updateFilters()
+  updateFilters();
   updateHeadingVisibility();
 }
 
