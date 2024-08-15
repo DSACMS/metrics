@@ -109,7 +109,7 @@ function sortCards(descending=false) {
       (
         selection === 'name' || 
         selection === 'project_type' || 
-        selection === "project_fisma_level"
+        selection === "fisma_level"
       ) {
         sortByStringAttribute(projects[org], selection, descending);
       }
@@ -276,10 +276,10 @@ function checkFilterCriteria(card, selectedFiltersObject) {
   const currentProject = parsedProjectsData.find((project) => project["name"] === cardName)
   
   const matchesOrganization = selectedFiltersObject.organization.length === 0 || selectedFiltersObject.organization.includes(currentProject.owner);
-  const projectMaturityModelTier = "Tier " + currentProject.maturity_model_tier;
+  const projectMaturityModelTier = "Tier " + currentProject.maturityModelTier;
   const matchesMaturityModelTier = selectedFiltersObject.maturityModelTier.length === 0 || selectedFiltersObject.maturityModelTier.includes(projectMaturityModelTier);
-  const matchesFismaLevel = selectedFiltersObject.fismaLevel.length === 0 || selectedFiltersObject.fismaLevel.includes(currentProject.project_fisma_level);
-  const matchesProjectType = selectedFiltersObject.projectType.length === 0 || selectedFiltersObject.projectType.includes(currentProject.project_type);
+  const matchesFismaLevel = selectedFiltersObject.fismaLevel.length === 0 || selectedFiltersObject.fismaLevel.includes(currentProject.fismaLevel);
+  const matchesProjectType = selectedFiltersObject.projectType.length === 0 || selectedFiltersObject.projectType.includes(currentProject.projectType);
   
   // Hide card if project does not match all filter categories
   card.hidden = !(matchesOrganization && matchesMaturityModelTier && matchesFismaLevel && matchesProjectType);
