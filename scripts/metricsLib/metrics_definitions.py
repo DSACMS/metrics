@@ -4,7 +4,7 @@ Definitions of specific metrics for metricsLib
 from metricsLib.metrics_data_structures import CustomMetric, parse_commits_by_month, RangeMetric
 from metricsLib.metrics_data_structures import GraphQLMetric, LengthMetric, ResourceMetric, BaseMetric
 from metricsLib.metrics_data_structures import ListMetric, parse_nadia_label_into_badge
-from metricsLib.metrics_data_structures import BaseMetric
+from metricsLib.metrics_data_structures import BaseMetric, LanguageMetric
 from metricsLib.constants import TOKEN, AUGUR_HOST
 
 # The general procedure is to execute all metrics against all repos and orgs
@@ -22,6 +22,9 @@ ORG_METRICS = []
 
 # Metrics that save a resource to a file
 RESOURCE_METRICS = []
+
+# Predominant Languages Endpoint (ex. https://api.github.com/repos/chaoss/augur/languages)
+LANGUAGE_ENDPOINT = "https://api.github.com/repos/{owner}/{repo}/languages"
 
 REPO_GITHUB_GRAPHQL_QUERY = """
 query ($repo: String!, $owner: String!) {
@@ -117,6 +120,15 @@ SIMPLE_METRICS.append(RangeMetric("totalRepoBlankLines",["repo_id"], AUGUR_HOST 
                                  "/complexity/project_blank_lines?repo_id={repo_id}",
                                  {"total_project_blank_lines": ["blank_lines"],
                                  "average_blank_lines": ["avg_blank_lines"]}))
+
+SIMPLE_METRICS.append(LanguageMetric("repositoryLanguages", 
+                                     ["owner", "repo"], 
+                                     LANGUAGE_ENDPOINT, 
+                                     token=TOKEN))
+
+SIMPLE_METRICS.append(GraphQLMetric("githubGraphqlSimpleCounts", ["repo", "owner"],
+                                    REPO_GITHUB_GRAPHQL_QUERY,
+                                    github_graphql_simple_counts_metric_map, token=TOKEN))
 
 REPOMETRICS_ENDPOINT = "https://raw.githubusercontent.com/{owner}/{repo}/main/code.json"
 repometrics_values = {"project_type": "project_type", "user_input": "user_input", "project_fisma_level": "project_fisma_level", 

@@ -1,0 +1,33 @@
+name: stale repo identifier
+
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: "0 0 1 * *" # first day of every month
+
+jobs:
+    build:
+        name: stale repo identifier
+        runs-on: ubuntu-latest
+        permissions: write-all
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Run stale_repos tool
+              uses: docker://ghcr.io/github/stale_repos:v1
+              env:
+                  GH_TOKEN: ${{ secrets.METRICS_GITHUB_TOKEN }}
+                  ORGANIZATION: DSACMS
+                  # ORGANIZATION: ${{ secrets.ORGANIZATION }}
+                  INACTIVE_DAYS: 730
+
+            - name: Create issue
+              uses: peter-evans/create-issue-from-file@v5
+              with:
+                  title: Stale repository report
+                  content-filepath: ./stale_repos.md
+                  labels: |
+                      report
+                      automated issue
