@@ -13,7 +13,6 @@ layout: base
     The Centers for Medicare and Medicaid Services develops and supports many open-source projects found in our various
     GitHub Organizations.
   </p>
-  {% assign allFields = "project_type, user_input, project_fisma_level, group, subset_in_healthcare, user_type, repository_host, maturity_model_tier" | split: "," %}
 
   <div class="dashboard-container">
     <div class="filters-container">
@@ -49,7 +48,7 @@ layout: base
           <form class="usa-form">
             <fieldset class="usa-fieldset" aria-labelledby="tier-filter">
               <legend class="usa-sr-only" aria-labelledby="tier-filtering"></legend>
-              {% for tier in filters.maturity_model_tier %}
+              {% for tier in filters.maturityModelTier %}
                 <div class="usa-checkbox padding-bottom-1">
                   <input type="checkbox" class="usa-checkbox__input" name="tier-filter" id="{{ tier | slug }}" value="{{ tier }}">
                   <label class="usa-checkbox__label font-body-2xs text-base-dark" for="{{ tier | slug }}">
@@ -71,7 +70,7 @@ layout: base
           <form class="usa-form">
             <fieldset class="usa-fieldset" aria-labelledby="fisma-level-filter">
               <legend class="usa-sr-only" aria-labelledby="fisma-level-filtering"></legend>
-              {% for level in filters.fisma_level %}
+              {% for level in filters.fismaLevel %}
                 <div class="usa-checkbox padding-bottom-1">
                   <input type="checkbox" class="usa-checkbox__input" name="fisma-level-filter" id="fisma-level-{{ level | slug }}" value="{{ level }}">
                   <label class="usa-checkbox__label font-body-2xs text-base-dark" for="fisma-level-{{ level | slug }}">
@@ -93,7 +92,7 @@ layout: base
           <form class="usa-form">
             <fieldset class="usa-fieldset" aria-labelledby="project-type-filter">
               <legend class="usa-sr-only" aria-labelledby="project-type-filtering"></legend>
-              {% for type in filters.project_type %}
+              {% for type in filters.projectType %}
                 <div class="usa-checkbox padding-bottom-1">
                   <input type="checkbox" class="usa-checkbox__input" name="project-type-filter" id="{{ type }}" value="{{ type }}">
                   <label class="usa-checkbox__label font-body-2xs text-base-dark" for="{{ type }}">
@@ -125,7 +124,7 @@ layout: base
             <label class="usa-label" for="sort-selection">Sort by</label>
             <select class="usa-select border-base-light" id="sort-selection" name="sort-selection">
               <option value="name">Project Name</option>
-              <option value="project_fisma_level">FISMA Compliance Level</option>
+              <option value="fisma_level">FISMA Compliance Level</option>
               <option value="project_type">Project Type</option>
               <option value="stargazers_count">Stars</option>
               <option value="maturity_model_tier">Maturity Model Tier</option>
