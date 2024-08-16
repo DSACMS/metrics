@@ -131,9 +131,9 @@ SIMPLE_METRICS.append(GraphQLMetric("githubGraphqlSimpleCounts", ["repo", "owner
                                     github_graphql_simple_counts_metric_map, token=TOKEN))
 
 REPOMETRICS_ENDPOINT = "https://raw.githubusercontent.com/{owner}/{repo}/main/code.json"
-repometrics_values = {"project_type": "project_type", "user_input": "user_input", "project_fisma_level": "project_fisma_level", 
-                      "group": "group", "subset_in_healthcare": "subset_in_healthcare", "user_type": "user_type", 
-                      "repository_host": "repository_host", "maturity_model_tier": "maturity_model_tier"}
+repometrics_values = {"projectType": "projectType", "userInput": "userInput", "fismaLevel": "fismaLevel", 
+                      "group": "group", "subsetInHealthcare": "subsetInHealthcare", "userType": "userType", 
+                      "repositoryHost": "repositoryHost", "maturityModelTier": "maturityModelTier"}
 SIMPLE_METRICS.append(BaseMetric("repometrics", ['owner', 'repo'], REPOMETRICS_ENDPOINT, repometrics_values, token=TOKEN))
 
 ORG_METRICS.append(ListMetric("topCommitters", ["repo_group_id"],
