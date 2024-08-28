@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-mdct-core | REPORT-2024-08-25
+title: Open Source at CMS Metrics Report for macpro-mdct-core | REPORT-2024-08-28
 permalink: /Enterprise-CMCS/macpro-mdct-core/
 
 org: Enterprise-CMCS
 repo: macpro-mdct-core
-reportID: REPORT-2024-08-25
-date_stampThisWeek: 2024-08-25
-date_stampLastWeek: 2024-08-25
+reportID: REPORT-2024-08-28
+date_stampThisWeek: 2024-08-28
+date_stampLastWeek: 2024-08-28
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for CMCS-DSG-DSS-Certification-Staging | REPORT-2024-08-25
+title: Open Source at CMS Metrics Report for CMCS-DSG-DSS-Certification-Staging | REPORT-2024-08-28
 permalink: /CMSgov/CMCS-DSG-DSS-Certification-Staging/
 
 org: CMSgov
 repo: CMCS-DSG-DSS-Certification-Staging
-reportID: REPORT-2024-08-25
-date_stampThisWeek: 2024-08-25
-date_stampLastWeek: 2024-08-25
+reportID: REPORT-2024-08-28
+date_stampThisWeek: 2024-08-28
+date_stampLastWeek: 2024-08-28
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -52,10 +52,10 @@ date_stampLastWeek: 2024-08-25
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>2</td>
         <td>1</td>
-        <td>1</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >1</td>
+        <td style="" >67%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
@@ -67,9 +67,9 @@ date_stampLastWeek: 2024-08-25
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>25</td>
-        <td>24</td>
-        <td style="" >1</td>
-        <td style="" >4.1%</td>
+        <td>25</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for cms-bb2-python-sdk | REPORT-2024-08-25
+title: Open Source at CMS Metrics Report for cms-bb2-python-sdk | REPORT-2024-08-28
 permalink: /CMSgov/cms-bb2-python-sdk/
 
 org: CMSgov
 repo: cms-bb2-python-sdk
-reportID: REPORT-2024-08-25
-date_stampThisWeek: 2024-08-25
-date_stampLastWeek: 2024-08-25
+reportID: REPORT-2024-08-28
+date_stampThisWeek: 2024-08-28
+date_stampLastWeek: 2024-08-28
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-08-25
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>75</td>
         <td>74</td>
-        <td>74</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >1.3%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,17 +52,17 @@ date_stampLastWeek: 2024-08-25
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>8</td>
         <td>7</td>
-        <td style="" >1</td>
-        <td style="" >13%</td>
+        <td>8</td>
+        <td style="color: #45c527" >-1</td>
+        <td style="color: #45c527" >13%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>30</td>
         <td>29</td>
-        <td>29</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >3.4%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>

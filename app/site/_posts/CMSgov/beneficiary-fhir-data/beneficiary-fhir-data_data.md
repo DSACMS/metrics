@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for beneficiary-fhir-data | REPORT-2024-08-25
+title: Open Source at CMS Metrics Report for beneficiary-fhir-data | REPORT-2024-08-28
 permalink: /CMSgov/beneficiary-fhir-data/
 
 org: CMSgov
 repo: beneficiary-fhir-data
-reportID: REPORT-2024-08-25
-date_stampThisWeek: 2024-08-25
-date_stampLastWeek: 2024-08-25
+reportID: REPORT-2024-08-28
+date_stampThisWeek: 2024-08-28
+date_stampLastWeek: 2024-08-28
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-08-25
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>5207</td>
         <td>5182</td>
-        <td>5178</td>
-        <td style="color: #45c527" >4</td>
-        <td style="color: #45c527" >0.077%</td>
+        <td style="color: #45c527" >25</td>
+        <td style="color: #45c527" >0.48%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2024-08-25
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>17</td>
         <td>19</td>
-        <td>18</td>
-        <td style="" >1</td>
-        <td style="" >5.4%</td>
+        <td style="color: #45c527" >-2</td>
+        <td style="color: #45c527" >11%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>1903</td>
         <td>1888</td>
-        <td>1886</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >0.11%</td>
+        <td style="color: #45c527" >15</td>
+        <td style="color: #45c527" >0.79%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>460</td>
         <td>456</td>
-        <td>456</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >4</td>
+        <td style="" >0.87%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -80,8 +80,8 @@ date_stampLastWeek: 2024-08-25
       </tr>
       <tr>
         <th scope="row">Stars</th>
+        <td>59</td>
         <td>58</td>
-        <td>57</td>
         <td style="color: #45c527" >1</td>
         <td style="color: #45c527" >1.7%</td>
       </tr>
