@@ -110,7 +110,13 @@ class BaseMetric:
         to_return = {}
 
         for return_label, api_label in self.return_values.items():
-            to_return[return_label] = metric_json[api_label]
+            try:
+                to_return[return_label] = metric_json[api_label]
+            except KeyError as e:
+                print(f"KeyError found when trying to map return values: {e}")
+                print(
+                    f"Map throws KeyError when trying to parse return values for metric {self.name}"
+                )
 
         return to_return
 
