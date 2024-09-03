@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-tf-s3-replication | REPORT-2024-08-28
+title: Open Source at CMS Metrics Report for batcave-tf-s3-replication | REPORT-2024-09-03
 permalink: /CMS-Enterprise/batcave-tf-s3-replication/
 
 org: CMS-Enterprise
 repo: batcave-tf-s3-replication
-reportID: REPORT-2024-08-28
-date_stampThisWeek: 2024-08-28
-date_stampLastWeek: 2024-08-28
+reportID: REPORT-2024-09-03
+date_stampThisWeek: 2024-09-03
+date_stampLastWeek: 2024-09-03
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for repo-scaffolder | REPORT-2024-08-28
+title: Open Source at CMS Metrics Report for repo-scaffolder | REPORT-2024-09-03
 permalink: /DSACMS/repo-scaffolder/
 
 org: DSACMS
 repo: repo-scaffolder
-reportID: REPORT-2024-08-28
-date_stampThisWeek: 2024-08-28
-date_stampLastWeek: 2024-08-28
+reportID: REPORT-2024-09-03
+date_stampThisWeek: 2024-09-03
+date_stampLastWeek: 2024-09-03
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,24 +24,24 @@ date_stampLastWeek: 2024-08-28
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>498</td>
         <td>484</td>
-        <td>464</td>
-        <td style="color: #45c527" >20</td>
-        <td style="color: #45c527" >4.2%</td>
+        <td style="color: #45c527" >14</td>
+        <td style="color: #45c527" >2.9%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
         <td>39</td>
-        <td>36</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >8%</td>
+        <td>39</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
         <td>21</td>
-        <td>18</td>
-        <td style="" >3</td>
-        <td style="" >15%</td>
+        <td>21</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -59,10 +59,10 @@ date_stampLastWeek: 2024-08-28
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>93</td>
         <td>92</td>
-        <td>84</td>
-        <td style="color: #45c527" >8</td>
-        <td style="color: #45c527" >9.1%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >1.1%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -88,9 +88,9 @@ date_stampLastWeek: 2024-08-28
       <tr>
         <th scope="row">Watchers</th>
         <td>2</td>
-        <td>3</td>
-        <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >40%</td>
+        <td>2</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>

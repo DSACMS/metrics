@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for mac-fc-amazon-ecs-run-task | REPORT-2024-08-28
+title: Open Source at CMS Metrics Report for mac-fc-amazon-ecs-run-task | REPORT-2024-09-03
 permalink: /Enterprise-CMCS/mac-fc-amazon-ecs-run-task/
 
 org: Enterprise-CMCS
 repo: mac-fc-amazon-ecs-run-task
-reportID: REPORT-2024-08-28
-date_stampThisWeek: 2024-08-28
-date_stampLastWeek: 2024-08-28
+reportID: REPORT-2024-09-03
+date_stampThisWeek: 2024-09-03
+date_stampLastWeek: 2024-09-03
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

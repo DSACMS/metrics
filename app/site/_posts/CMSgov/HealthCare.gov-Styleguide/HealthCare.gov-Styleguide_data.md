@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for HealthCare.gov-Styleguide | REPORT-2024-08-28
+title: Open Source at CMS Metrics Report for HealthCare.gov-Styleguide | REPORT-2024-09-03
 permalink: /CMSgov/HealthCare.gov-Styleguide/
 
 org: CMSgov
 repo: HealthCare.gov-Styleguide
-reportID: REPORT-2024-08-28
-date_stampThisWeek: 2024-08-28
-date_stampLastWeek: 2024-08-28
+reportID: REPORT-2024-09-03
+date_stampThisWeek: 2024-09-03
+date_stampLastWeek: 2024-09-03
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -81,9 +81,9 @@ date_stampLastWeek: 2024-08-28
       <tr>
         <th scope="row">Stars</th>
         <td>58</td>
-        <td>57</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >1.7%</td>
+        <td>58</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>

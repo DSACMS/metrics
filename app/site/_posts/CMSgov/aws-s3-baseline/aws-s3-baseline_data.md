@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for aws-s3-baseline | REPORT-2024-08-28
+title: Open Source at CMS Metrics Report for aws-s3-baseline | REPORT-2024-09-03
 permalink: /CMSgov/aws-s3-baseline/
 
 org: CMSgov
 repo: aws-s3-baseline
-reportID: REPORT-2024-08-28
-date_stampThisWeek: 2024-08-28
-date_stampLastWeek: 2024-08-28
+reportID: REPORT-2024-09-03
+date_stampThisWeek: 2024-09-03
+date_stampLastWeek: 2024-09-03
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -88,9 +88,9 @@ date_stampLastWeek: 2024-08-28
       <tr>
         <th scope="row">Watchers</th>
         <td>25</td>
-        <td>24</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >4.1%</td>
+        <td>25</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>

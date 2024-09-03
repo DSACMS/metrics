@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for price-transparency-guide-validator | REPORT-2024-08-28
+title: Open Source at CMS Metrics Report for price-transparency-guide-validator | REPORT-2024-09-03
 permalink: /CMSgov/price-transparency-guide-validator/
 
 org: CMSgov
 repo: price-transparency-guide-validator
-reportID: REPORT-2024-08-28
-date_stampThisWeek: 2024-08-28
-date_stampLastWeek: 2024-08-28
+reportID: REPORT-2024-09-03
+date_stampThisWeek: 2024-09-03
+date_stampLastWeek: 2024-09-03
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -39,16 +39,16 @@ date_stampLastWeek: 2024-08-28
       <tr>
         <th scope="row">Open Issues</th>
         <td>2</td>
-        <td>3</td>
-        <td style="color: #45c527" >-1</td>
-        <td style="color: #45c527" >40%</td>
+        <td>2</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
         <td>40</td>
-        <td>39</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >2.5%</td>
+        <td>40</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>

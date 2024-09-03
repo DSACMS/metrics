@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for qpp-measures-data | REPORT-2024-08-28
+title: Open Source at CMS Metrics Report for qpp-measures-data | REPORT-2024-09-03
 permalink: /CMSgov/qpp-measures-data/
 
 org: CMSgov
 repo: qpp-measures-data
-reportID: REPORT-2024-08-28
-date_stampThisWeek: 2024-08-28
-date_stampLastWeek: 2024-08-28
+reportID: REPORT-2024-09-03
+date_stampThisWeek: 2024-09-03
+date_stampLastWeek: 2024-09-03
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,24 +24,24 @@ date_stampLastWeek: 2024-08-28
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>1746</td>
         <td>1737</td>
-        <td>1713</td>
-        <td style="color: #45c527" >24</td>
-        <td style="color: #45c527" >1.4%</td>
+        <td style="color: #45c527" >9</td>
+        <td style="color: #45c527" >0.52%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
         <td>18</td>
-        <td>17</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >5.7%</td>
+        <td>18</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
         <td>1</td>
-        <td>0</td>
-        <td style="" >1</td>
-        <td style="" >200%</td>
+        <td>1</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -59,17 +59,17 @@ date_stampLastWeek: 2024-08-28
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>657</td>
         <td>655</td>
-        <td>651</td>
-        <td style="color: #45c527" >4</td>
-        <td style="color: #45c527" >0.61%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >0.3%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>91</td>
-        <td>90</td>
-        <td style="" >1</td>
-        <td style="" >1.1%</td>
+        <td>91</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -81,16 +81,16 @@ date_stampLastWeek: 2024-08-28
       <tr>
         <th scope="row">Stars</th>
         <td>89</td>
-        <td>88</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >1.1%</td>
+        <td>89</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
         <td>74</td>
-        <td>73</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >1.4%</td>
+        <td>74</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>

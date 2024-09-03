@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-omnibus | REPORT-2024-08-28
+title: Open Source at CMS Metrics Report for batcave-omnibus | REPORT-2024-09-03
 permalink: /CMS-Enterprise/batcave-omnibus/
 
 org: CMS-Enterprise
 repo: batcave-omnibus
-reportID: REPORT-2024-08-28
-date_stampThisWeek: 2024-08-28
-date_stampLastWeek: 2024-08-28
+reportID: REPORT-2024-09-03
+date_stampThisWeek: 2024-09-03
+date_stampLastWeek: 2024-09-03
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -74,16 +74,16 @@ date_stampLastWeek: 2024-08-28
       <tr>
         <th scope="row">Forks</th>
         <td>2</td>
-        <td>1</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >67%</td>
+        <td>2</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
         <td>1</td>
-        <td>0</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >200%</td>
+        <td>1</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>

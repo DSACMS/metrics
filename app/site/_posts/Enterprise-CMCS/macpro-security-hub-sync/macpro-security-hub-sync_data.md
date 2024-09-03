@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-security-hub-sync | REPORT-2024-08-28
+title: Open Source at CMS Metrics Report for macpro-security-hub-sync | REPORT-2024-09-03
 permalink: /Enterprise-CMCS/macpro-security-hub-sync/
 
 org: Enterprise-CMCS
 repo: macpro-security-hub-sync
-reportID: REPORT-2024-08-28
-date_stampThisWeek: 2024-08-28
-date_stampLastWeek: 2024-08-28
+reportID: REPORT-2024-09-03
+date_stampThisWeek: 2024-09-03
+date_stampLastWeek: 2024-09-03
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-08-28
       <tr>
         <th scope="row">Commits</th>
         <td>72</td>
-        <td>71</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >1.4%</td>
+        <td>72</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -60,9 +60,9 @@ date_stampLastWeek: 2024-08-28
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>56</td>
-        <td>55</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >1.8%</td>
+        <td>56</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
