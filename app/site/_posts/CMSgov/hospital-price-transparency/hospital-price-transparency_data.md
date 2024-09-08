@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for hospital-price-transparency | REPORT-2024-09-03
+title: Open Source at CMS Metrics Report for hospital-price-transparency | REPORT-2024-09-08
 permalink: /CMSgov/hospital-price-transparency/
 
 org: CMSgov
 repo: hospital-price-transparency
-reportID: REPORT-2024-09-03
-date_stampThisWeek: 2024-09-03
-date_stampLastWeek: 2024-09-03
+reportID: REPORT-2024-09-08
+date_stampThisWeek: 2024-09-08
+date_stampLastWeek: 2024-09-08
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
