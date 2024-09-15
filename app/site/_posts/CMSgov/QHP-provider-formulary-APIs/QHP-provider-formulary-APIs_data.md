@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for QHP-provider-formulary-APIs | REPORT-2024-09-08
+title: Open Source at CMS Metrics Report for QHP-provider-formulary-APIs | REPORT-2024-09-15
 permalink: /CMSgov/QHP-provider-formulary-APIs/
 
 org: CMSgov
 repo: QHP-provider-formulary-APIs
-reportID: REPORT-2024-09-08
-date_stampThisWeek: 2024-09-08
-date_stampLastWeek: 2024-09-08
+reportID: REPORT-2024-09-15
+date_stampThisWeek: 2024-09-15
+date_stampLastWeek: 2024-09-15
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
