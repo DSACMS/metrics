@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-knight-light | REPORT-2024-09-15
+title: Open Source at CMS Metrics Report for batcave-knight-light | REPORT-2024-09-17
 permalink: /CMS-Enterprise/batcave-knight-light/
 
 org: CMS-Enterprise
 repo: batcave-knight-light
-reportID: REPORT-2024-09-15
-date_stampThisWeek: 2024-09-15
-date_stampLastWeek: 2024-09-15
+reportID: REPORT-2024-09-17
+date_stampThisWeek: 2024-09-17
+date_stampLastWeek: 2024-09-17
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-09-15
       <tr>
         <th scope="row">Commits</th>
         <td>205</td>
-        <td>203</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >0.98%</td>
+        <td>205</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>

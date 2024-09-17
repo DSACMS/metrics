@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for inspec-k8s-node | REPORT-2024-09-15
+title: Open Source at CMS Metrics Report for inspec-k8s-node | REPORT-2024-09-17
 permalink: /CMSgov/inspec-k8s-node/
 
 org: CMSgov
 repo: inspec-k8s-node
-reportID: REPORT-2024-09-15
-date_stampThisWeek: 2024-09-15
-date_stampLastWeek: 2024-09-15
+reportID: REPORT-2024-09-17
+date_stampThisWeek: 2024-09-17
+date_stampLastWeek: 2024-09-17
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -87,10 +87,10 @@ date_stampLastWeek: 2024-09-15
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>17</td>
         <td>16</td>
-        <td>16</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >6.1%</td>
       </tr>
     </tbody>
   </table>

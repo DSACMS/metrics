@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for repo-scaffolder | REPORT-2024-09-15
+title: Open Source at CMS Metrics Report for repo-scaffolder | REPORT-2024-09-17
 permalink: /DSACMS/repo-scaffolder/
 
 org: DSACMS
 repo: repo-scaffolder
-reportID: REPORT-2024-09-15
-date_stampThisWeek: 2024-09-15
-date_stampLastWeek: 2024-09-15
+reportID: REPORT-2024-09-17
+date_stampThisWeek: 2024-09-17
+date_stampLastWeek: 2024-09-17
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,23 +25,23 @@ date_stampLastWeek: 2024-09-15
       <tr>
         <th scope="row">Commits</th>
         <td>498</td>
-        <td>484</td>
-        <td style="color: #45c527" >14</td>
-        <td style="color: #45c527" >2.9%</td>
+        <td>498</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
+        <td>40</td>
         <td>39</td>
-        <td>39</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >2.5%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>22</td>
         <td>21</td>
-        <td>21</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >1</td>
+        <td style="" >4.7%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -52,17 +52,17 @@ date_stampLastWeek: 2024-09-15
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>3</td>
         <td>1</td>
-        <td>1</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >2</td>
+        <td style="" >100%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>93</td>
-        <td>92</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >1.1%</td>
+        <td>93</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -73,10 +73,10 @@ date_stampLastWeek: 2024-09-15
       </tr>
       <tr>
         <th scope="row">Forks</th>
+        <td>9</td>
         <td>8</td>
-        <td>8</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >12%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ab2d-events | REPORT-2024-09-15
+title: Open Source at CMS Metrics Report for ab2d-events | REPORT-2024-09-17
 permalink: /CMSgov/ab2d-events/
 
 org: CMSgov
 repo: ab2d-events
-reportID: REPORT-2024-09-15
-date_stampThisWeek: 2024-09-15
-date_stampLastWeek: 2024-09-15
+reportID: REPORT-2024-09-17
+date_stampThisWeek: 2024-09-17
+date_stampLastWeek: 2024-09-17
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -53,9 +53,9 @@ date_stampLastWeek: 2024-09-15
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>4</td>
-        <td>5</td>
-        <td style="color: #45c527" >-1</td>
-        <td style="color: #45c527" >22%</td>
+        <td>4</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
@@ -67,9 +67,9 @@ date_stampLastWeek: 2024-09-15
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>144</td>
-        <td>143</td>
-        <td style="" >1</td>
-        <td style="" >0.7%</td>
+        <td>144</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

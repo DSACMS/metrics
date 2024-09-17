@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-tf-mysql | REPORT-2024-09-15
+title: Open Source at CMS Metrics Report for batcave-tf-mysql | REPORT-2024-09-17
 permalink: /CMS-Enterprise/batcave-tf-mysql/
 
 org: CMS-Enterprise
 repo: batcave-tf-mysql
-reportID: REPORT-2024-09-15
-date_stampThisWeek: 2024-09-15
-date_stampLastWeek: 2024-09-15
+reportID: REPORT-2024-09-17
+date_stampThisWeek: 2024-09-17
+date_stampLastWeek: 2024-09-17
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -53,16 +53,16 @@ date_stampLastWeek: 2024-09-15
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>3</td>
-        <td>4</td>
-        <td style="color: #45c527" >-1</td>
-        <td style="color: #45c527" >29%</td>
+        <td>3</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>17</td>
-        <td>16</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >6.1%</td>
+        <td>17</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for newrelic_mysql_java_plugin | REPORT-2024-09-15
+title: Open Source at CMS Metrics Report for newrelic_mysql_java_plugin | REPORT-2024-09-17
 permalink: /CMSgov/newrelic_mysql_java_plugin/
 
 org: CMSgov
 repo: newrelic_mysql_java_plugin
-reportID: REPORT-2024-09-15
-date_stampThisWeek: 2024-09-15
-date_stampLastWeek: 2024-09-15
+reportID: REPORT-2024-09-17
+date_stampThisWeek: 2024-09-17
+date_stampLastWeek: 2024-09-17
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
