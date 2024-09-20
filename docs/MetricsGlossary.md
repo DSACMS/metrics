@@ -3,11 +3,17 @@
 ## Organization
 An organization is a team of collaborators and contributors, along with project repositories. An organizational account allows people to become members and collaborate on the repositories it contains. Members can assume different roles with varying responsibilities and abilities.
 
-### OSPO
-**Open Source Program Office**. A department or team within an organization that manages and oversees open source software initiatives, including contributions, compliance, and community engagement.
-
-### DSAC
+### DSACMS
 **Digital Services at CMS**. The digital services and initiatives managed by the Centers for Medicare & Medicaid Services (CMS) to enhance their digital platforms and services.
+
+### CMS-Enterprise
+Repositories related to the operations of the Centers for Medicare and Medicaid Services. 
+
+### CMSgov
+Open Source repositories released by the Centers for Medicare and Medicaid Services.
+
+### Enterprise-CMCS
+Center for Medicaid & CHIP Services.
 
 ## Repository
 Also known as “repo,” a repository is the most basic element of GitHub. It's easiest to imagine as a project's folder. A repository contains all of the project files (including documentation) and stores each file's revision history. Repositories can have multiple collaborators and can be either public or private.
@@ -41,6 +47,9 @@ Diff refers to the difference in metrics such as issues, commits, or PRs between
 
 
 # Terms In the Metrics Repository 
+
+## OSPO
+**Open Source Program Office**. A department or team within an organization that manages and oversees open source software initiatives, including contributions, compliance, and community engagement.
 
 ## Feature Branch
 A feature branch is a separate branch in a version control system (like Git) used to develop a new feature or make changes to the project. It allows developers to work on features independently of the main codebase and merge changes back once the feature is complete.
