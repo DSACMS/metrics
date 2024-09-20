@@ -39,11 +39,14 @@ Stars are a way for users to show appreciation for a repository. A star can be t
 ## Watchers
 Watchers are users who subscribe to updates for a repository. They receive notifications about discussions, issues, and commits. The number of watchers can indicate how many people are actively interested in the project's progress.
 
+## Followers
+Watchers are users who subscribe to updates for an organization's public activity(new repositories, discussions...).
+
 ## Diff
 Diff refers to the difference in metrics such as issues, commits, or PRs between this week and last week. It highlights changes in contributions or activity over time.
 
-## %diff
-%diff represents the percentage change in a given metric (like issues, commits, or PRs) compared to the previous week. It provides a quick view of growth or decline, helping teams assess their activity levels and project health over time.
+## % Diff
+% Diff represents the percentage change in a given metric (like issues, commits, or PRs) compared to the previous week. It provides a quick view of growth or decline, helping teams assess their activity levels and project health over time.
 
 
 # Terms In the Metrics Repository 
