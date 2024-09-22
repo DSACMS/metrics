@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for beneficiary-fhir-data | REPORT-2024-09-17
+title: Open Source at CMS Metrics Report for beneficiary-fhir-data | REPORT-2024-09-22
 permalink: /CMSgov/beneficiary-fhir-data/
 
 org: CMSgov
 repo: beneficiary-fhir-data
-reportID: REPORT-2024-09-17
-date_stampThisWeek: 2024-09-17
-date_stampLastWeek: 2024-09-17
+reportID: REPORT-2024-09-22
+date_stampThisWeek: 2024-09-22
+date_stampLastWeek: 2024-09-22
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
