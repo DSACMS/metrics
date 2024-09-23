@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for dpc_aop | REPORT-2024-09-22
+title: Open Source at CMS Metrics Report for dpc_aop | REPORT-2024-09-23
 permalink: /CMSgov/dpc_aop/
 
 org: CMSgov
 repo: dpc_aop
-reportID: REPORT-2024-09-22
-date_stampThisWeek: 2024-09-22
-date_stampLastWeek: 2024-09-22
+reportID: REPORT-2024-09-23
+date_stampThisWeek: 2024-09-23
+date_stampLastWeek: 2024-09-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

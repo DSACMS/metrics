@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for AB2D-Libs | REPORT-2024-09-22
+title: Open Source at CMS Metrics Report for AB2D-Libs | REPORT-2024-09-23
 permalink: /CMSgov/AB2D-Libs/
 
 org: CMSgov
 repo: AB2D-Libs
-reportID: REPORT-2024-09-22
-date_stampThisWeek: 2024-09-22
-date_stampLastWeek: 2024-09-22
+reportID: REPORT-2024-09-23
+date_stampThisWeek: 2024-09-23
+date_stampLastWeek: 2024-09-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-09-22
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>155</td>
         <td>153</td>
-        <td>152</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.66%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >1.3%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,17 +52,17 @@ date_stampLastWeek: 2024-09-22
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>2</td>
         <td>3</td>
-        <td>3</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >-1</td>
+        <td style="color: #45c527" >40%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>131</td>
         <td>129</td>
-        <td>128</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.78%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >1.5%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -87,10 +87,10 @@ date_stampLastWeek: 2024-09-22
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>8</td>
         <td>9</td>
-        <td>9</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >12%</td>
       </tr>
     </tbody>
   </table>

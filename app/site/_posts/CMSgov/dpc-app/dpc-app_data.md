@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for dpc-app | REPORT-2024-09-22
+title: Open Source at CMS Metrics Report for dpc-app | REPORT-2024-09-23
 permalink: /CMSgov/dpc-app/
 
 org: CMSgov
 repo: dpc-app
-reportID: REPORT-2024-09-22
-date_stampThisWeek: 2024-09-22
-date_stampLastWeek: 2024-09-22
+reportID: REPORT-2024-09-23
+date_stampThisWeek: 2024-09-23
+date_stampLastWeek: 2024-09-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-09-22
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>1923</td>
         <td>1918</td>
-        <td>1910</td>
-        <td style="color: #45c527" >8</td>
-        <td style="color: #45c527" >0.42%</td>
+        <td style="color: #45c527" >5</td>
+        <td style="color: #45c527" >0.26%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,22 +52,22 @@ date_stampLastWeek: 2024-09-22
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>9</td>
         <td>7</td>
-        <td>10</td>
-        <td style="color: #45c527" >-3</td>
-        <td style="color: #45c527" >35%</td>
+        <td style="" >2</td>
+        <td style="" >25%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>1702</td>
         <td>1697</td>
-        <td>1689</td>
-        <td style="color: #45c527" >8</td>
-        <td style="color: #45c527" >0.47%</td>
+        <td style="color: #45c527" >5</td>
+        <td style="color: #45c527" >0.29%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>555</td>
         <td>554</td>
-        <td>553</td>
         <td style="" >1</td>
         <td style="" >0.18%</td>
       </tr>
@@ -87,10 +87,10 @@ date_stampLastWeek: 2024-09-22
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>19</td>
         <td>20</td>
-        <td>21</td>
         <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >4.9%</td>
+        <td style="color: #d31c08" >5.1%</td>
       </tr>
     </tbody>
   </table>

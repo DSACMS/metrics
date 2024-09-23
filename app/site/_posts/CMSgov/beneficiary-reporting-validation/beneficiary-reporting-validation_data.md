@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for beneficiary-reporting-validation | REPORT-2024-09-22
+title: Open Source at CMS Metrics Report for beneficiary-reporting-validation | REPORT-2024-09-23
 permalink: /CMSgov/beneficiary-reporting-validation/
 
 org: CMSgov
 repo: beneficiary-reporting-validation
-reportID: REPORT-2024-09-22
-date_stampThisWeek: 2024-09-22
-date_stampLastWeek: 2024-09-22
+reportID: REPORT-2024-09-23
+date_stampThisWeek: 2024-09-23
+date_stampLastWeek: 2024-09-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-09-22
       <tr>
         <th scope="row">Commits</th>
         <td>389</td>
-        <td>386</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >0.77%</td>
+        <td>389</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -60,9 +60,9 @@ date_stampLastWeek: 2024-09-22
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>142</td>
-        <td>139</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >2.1%</td>
+        <td>142</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -88,9 +88,9 @@ date_stampLastWeek: 2024-09-22
       <tr>
         <th scope="row">Watchers</th>
         <td>19</td>
-        <td>20</td>
-        <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >5.1%</td>
+        <td>19</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>

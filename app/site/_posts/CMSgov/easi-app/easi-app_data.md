@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for easi-app | REPORT-2024-09-22
+title: Open Source at CMS Metrics Report for easi-app | REPORT-2024-09-23
 permalink: /CMSgov/easi-app/
 
 org: CMSgov
 repo: easi-app
-reportID: REPORT-2024-09-22
-date_stampThisWeek: 2024-09-22
-date_stampLastWeek: 2024-09-22
+reportID: REPORT-2024-09-23
+date_stampThisWeek: 2024-09-23
+date_stampLastWeek: 2024-09-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-09-22
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>8911</td>
         <td>8909</td>
-        <td>8896</td>
-        <td style="color: #45c527" >13</td>
-        <td style="color: #45c527" >0.15%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >0.022%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -53,23 +53,23 @@ date_stampLastWeek: 2024-09-22
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>7</td>
-        <td>3</td>
-        <td style="" >4</td>
-        <td style="" >80%</td>
+        <td>7</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>2504</td>
         <td>2499</td>
-        <td>2484</td>
-        <td style="color: #45c527" >15</td>
-        <td style="color: #45c527" >0.6%</td>
+        <td style="color: #45c527" >5</td>
+        <td style="color: #45c527" >0.2%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>309</td>
-        <td>302</td>
-        <td style="" >7</td>
-        <td style="" >2.3%</td>
+        <td>309</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

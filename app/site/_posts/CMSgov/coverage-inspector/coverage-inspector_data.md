@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for coverage-inspector | REPORT-2024-09-22
+title: Open Source at CMS Metrics Report for coverage-inspector | REPORT-2024-09-23
 permalink: /CMSgov/coverage-inspector/
 
 org: CMSgov
 repo: coverage-inspector
-reportID: REPORT-2024-09-22
-date_stampThisWeek: 2024-09-22
-date_stampLastWeek: 2024-09-22
+reportID: REPORT-2024-09-23
+date_stampThisWeek: 2024-09-23
+date_stampLastWeek: 2024-09-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
