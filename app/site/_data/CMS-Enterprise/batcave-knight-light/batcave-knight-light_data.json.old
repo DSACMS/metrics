@@ -25,15 +25,10 @@
         "2024/7": 16,
         "2024/6": 5
     },
-    "new_commit_contributors_by_day_over_last_month": [
-        [
-            "2024-08-08T00:00:00.000Z",
-            2
-        ]
-    ],
+    "new_commit_contributors_by_day_over_last_month": [],
     "new_commit_contributors_by_day_over_last_six_months": [
         [
-            "2024-03-21T00:00:00.000Z",
+            "2024-05-13T00:00:00.000Z",
             1
         ],
         [
@@ -55,10 +50,6 @@
     ],
     "new_issues_by_day_over_last_month": [],
     "new_issues_by_day_over_last_six_months": [
-        [
-            "2024-03-22T00:00:00.000Z",
-            1
-        ],
         [
             "2024-04-11T00:00:00.000Z",
             1
@@ -374,14 +365,14 @@
     },
     "created_at": "2023-12-07T14:49:04Z",
     "ossf_scorecard": {
-        "date": "2024-09-14T02:45:57Z",
+        "date": "2024-09-21T02:47:44Z",
         "repo": {
             "name": "github.com/CMS-Enterprise/batcave-knight-light",
             "commit": "ed82fd175c2c83f1cf08e0ae51cd8bf821093506"
         },
         "scorecard": {
-            "version": "v5.0.0-49-g9ff40de4",
-            "commit": "9ff40de429d0c7710076070387c8755494a9f187"
+            "version": "v5.0.0-50-g5d7dd8fe",
+            "commit": "5d7dd8fe048688caf7b469f5e4809fe66527b5fc"
         },
         "score": 4.6,
         "checks": [
@@ -391,7 +382,7 @@
                 "reason": "no binaries found in the repo",
                 "name": "Binary-Artifacts",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/9ff40de429d0c7710076070387c8755494a9f187/docs/checks.md#binary-artifacts",
+                    "url": "https://github.com/ossf/scorecard/blob/5d7dd8fe048688caf7b469f5e4809fe66527b5fc/docs/checks.md#binary-artifacts",
                     "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
                 }
             },
@@ -401,7 +392,7 @@
                 "reason": "branch protection is not maximal on development and all release branches",
                 "name": "Branch-Protection",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/9ff40de429d0c7710076070387c8755494a9f187/docs/checks.md#branch-protection",
+                    "url": "https://github.com/ossf/scorecard/blob/5d7dd8fe048688caf7b469f5e4809fe66527b5fc/docs/checks.md#branch-protection",
                     "short": "Determines if the default and release branches are protected with GitHub's branch protection settings."
                 }
             },
@@ -411,7 +402,7 @@
                 "reason": "13 out of 15 merged PRs checked by a CI test -- score normalized to 8",
                 "name": "CI-Tests",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/9ff40de429d0c7710076070387c8755494a9f187/docs/checks.md#ci-tests",
+                    "url": "https://github.com/ossf/scorecard/blob/5d7dd8fe048688caf7b469f5e4809fe66527b5fc/docs/checks.md#ci-tests",
                     "short": "Determines if the project runs tests before pull requests are merged."
                 }
             },
@@ -421,7 +412,7 @@
                 "reason": "no effort to earn an OpenSSF best practices badge detected",
                 "name": "CII-Best-Practices",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/9ff40de429d0c7710076070387c8755494a9f187/docs/checks.md#cii-best-practices",
+                    "url": "https://github.com/ossf/scorecard/blob/5d7dd8fe048688caf7b469f5e4809fe66527b5fc/docs/checks.md#cii-best-practices",
                     "short": "Determines if the project has an OpenSSF (formerly CII) Best Practices Badge."
                 }
             },
@@ -431,7 +422,7 @@
                 "reason": "Found 2/25 approved changesets -- score normalized to 0",
                 "name": "Code-Review",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/9ff40de429d0c7710076070387c8755494a9f187/docs/checks.md#code-review",
+                    "url": "https://github.com/ossf/scorecard/blob/5d7dd8fe048688caf7b469f5e4809fe66527b5fc/docs/checks.md#code-review",
                     "short": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
                 }
             },
@@ -441,7 +432,7 @@
                 "reason": "project has 3 contributing companies or organizations -- score normalized to 10",
                 "name": "Contributors",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/9ff40de429d0c7710076070387c8755494a9f187/docs/checks.md#contributors",
+                    "url": "https://github.com/ossf/scorecard/blob/5d7dd8fe048688caf7b469f5e4809fe66527b5fc/docs/checks.md#contributors",
                     "short": "Determines if the project has a set of contributors from multiple organizations (e.g., companies)."
                 }
             },
@@ -451,7 +442,7 @@
                 "reason": "no workflows found",
                 "name": "Dangerous-Workflow",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/9ff40de429d0c7710076070387c8755494a9f187/docs/checks.md#dangerous-workflow",
+                    "url": "https://github.com/ossf/scorecard/blob/5d7dd8fe048688caf7b469f5e4809fe66527b5fc/docs/checks.md#dangerous-workflow",
                     "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
                 }
             },
@@ -461,7 +452,7 @@
                 "reason": "no update tool detected",
                 "name": "Dependency-Update-Tool",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/9ff40de429d0c7710076070387c8755494a9f187/docs/checks.md#dependency-update-tool",
+                    "url": "https://github.com/ossf/scorecard/blob/5d7dd8fe048688caf7b469f5e4809fe66527b5fc/docs/checks.md#dependency-update-tool",
                     "short": "Determines if the project uses a dependency update tool."
                 }
             },
@@ -471,7 +462,7 @@
                 "reason": "project is not fuzzed",
                 "name": "Fuzzing",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/9ff40de429d0c7710076070387c8755494a9f187/docs/checks.md#fuzzing",
+                    "url": "https://github.com/ossf/scorecard/blob/5d7dd8fe048688caf7b469f5e4809fe66527b5fc/docs/checks.md#fuzzing",
                     "short": "Determines if the project uses fuzzing."
                 }
             },
@@ -481,7 +472,7 @@
                 "reason": "license file detected",
                 "name": "License",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/9ff40de429d0c7710076070387c8755494a9f187/docs/checks.md#license",
+                    "url": "https://github.com/ossf/scorecard/blob/5d7dd8fe048688caf7b469f5e4809fe66527b5fc/docs/checks.md#license",
                     "short": "Determines if the project has defined a license."
                 }
             },
@@ -491,7 +482,7 @@
                 "reason": "30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10",
                 "name": "Maintained",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/9ff40de429d0c7710076070387c8755494a9f187/docs/checks.md#maintained",
+                    "url": "https://github.com/ossf/scorecard/blob/5d7dd8fe048688caf7b469f5e4809fe66527b5fc/docs/checks.md#maintained",
                     "short": "Determines if the project is \"actively maintained\"."
                 }
             },
@@ -501,7 +492,7 @@
                 "reason": "packaging workflow not detected",
                 "name": "Packaging",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/9ff40de429d0c7710076070387c8755494a9f187/docs/checks.md#packaging",
+                    "url": "https://github.com/ossf/scorecard/blob/5d7dd8fe048688caf7b469f5e4809fe66527b5fc/docs/checks.md#packaging",
                     "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
                 }
             },
@@ -511,7 +502,7 @@
                 "reason": "dependency not pinned by hash detected -- score normalized to 1",
                 "name": "Pinned-Dependencies",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/9ff40de429d0c7710076070387c8755494a9f187/docs/checks.md#pinned-dependencies",
+                    "url": "https://github.com/ossf/scorecard/blob/5d7dd8fe048688caf7b469f5e4809fe66527b5fc/docs/checks.md#pinned-dependencies",
                     "short": "Determines if the project has declared and pinned the dependencies of its build process."
                 }
             },
@@ -521,7 +512,7 @@
                 "reason": "SAST tool is run on all commits",
                 "name": "SAST",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/9ff40de429d0c7710076070387c8755494a9f187/docs/checks.md#sast",
+                    "url": "https://github.com/ossf/scorecard/blob/5d7dd8fe048688caf7b469f5e4809fe66527b5fc/docs/checks.md#sast",
                     "short": "Determines if the project uses static code analysis."
                 }
             },
@@ -531,7 +522,7 @@
                 "reason": "security policy file detected",
                 "name": "Security-Policy",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/9ff40de429d0c7710076070387c8755494a9f187/docs/checks.md#security-policy",
+                    "url": "https://github.com/ossf/scorecard/blob/5d7dd8fe048688caf7b469f5e4809fe66527b5fc/docs/checks.md#security-policy",
                     "short": "Determines if the project has published a security policy."
                 }
             },
@@ -541,7 +532,7 @@
                 "reason": "no releases found",
                 "name": "Signed-Releases",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/9ff40de429d0c7710076070387c8755494a9f187/docs/checks.md#signed-releases",
+                    "url": "https://github.com/ossf/scorecard/blob/5d7dd8fe048688caf7b469f5e4809fe66527b5fc/docs/checks.md#signed-releases",
                     "short": "Determines if the project cryptographically signs release artifacts."
                 }
             },
@@ -551,17 +542,17 @@
                 "reason": "No tokens found",
                 "name": "Token-Permissions",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/9ff40de429d0c7710076070387c8755494a9f187/docs/checks.md#token-permissions",
+                    "url": "https://github.com/ossf/scorecard/blob/5d7dd8fe048688caf7b469f5e4809fe66527b5fc/docs/checks.md#token-permissions",
                     "short": "Determines if the project's workflows follow the principle of least privilege."
                 }
             },
             {
                 "details": null,
                 "score": 0,
-                "reason": "19 existing vulnerabilities detected",
+                "reason": "20 existing vulnerabilities detected",
                 "name": "Vulnerabilities",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/9ff40de429d0c7710076070387c8755494a9f187/docs/checks.md#vulnerabilities",
+                    "url": "https://github.com/ossf/scorecard/blob/5d7dd8fe048688caf7b469f5e4809fe66527b5fc/docs/checks.md#vulnerabilities",
                     "short": "Determines if the project has open, known unfixed vulnerabilities."
                 }
             }
