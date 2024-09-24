@@ -103,12 +103,4 @@ date_stampLastWeek: 2024-09-24
     {% render "graph-section"  baseurl: site.baseurl, path: "/DSACMS/party-planning-website/issue_gauge_party-planning-website_data.svg", title: "Issues & PRs Status Breakdown" %}
     <!--- Contributor Activity Line Graph -->
     {% render "graph-section" baseurl: site.baseurl, path: "/DSACMS/party-planning-website/commit_sparklines_party-planning-website_data.svg", title: "Commits by Month" %}
-    <!--- First Response For Closed PR Scatterplot -->
-    {% render "graph-section" baseurl: site.baseurl, class: "firstResponsePRCrop", path: "/DSACMS/party-planning-website/firstResponseForClosedPR_party-planning-website_data.png", title: "First Response For Closed PR" %}
-    <!--- Line Complexity Graphs -->
-    {% render "graph-section" baseurl: site.baseurl, path: "/DSACMS/party-planning-website/total_line_makeup_party-planning-website_data.svg", title: "Line Complexity" %}
-    <!--- New Commit Contributors by Day over Last Month and Last 6 Months -->
-      {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
-      {% assign graphsArray = '/DSACMS/party-planning-website/new_commit_contributors_by_day_over_last_month_party-planning-website_data.svg, /DSACMS/party-planning-website/new_commit_contributors_by_day_over_last_six_months_party-planning-website_data.svg' | split: ',' %}
-      {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
 </div>
