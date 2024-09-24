@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for bluebutton-web-server | REPORT-2024-09-23
+title: Open Source at CMS Metrics Report for bluebutton-web-server | REPORT-2024-09-24
 permalink: /CMSgov/bluebutton-web-server/
 
 org: CMSgov
 repo: bluebutton-web-server
-reportID: REPORT-2024-09-23
-date_stampThisWeek: 2024-09-23
-date_stampLastWeek: 2024-09-23
+reportID: REPORT-2024-09-24
+date_stampThisWeek: 2024-09-24
+date_stampLastWeek: 2024-09-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-09-23
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>3506</td>
         <td>3505</td>
-        <td>3503</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >0.057%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.029%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,17 +52,17 @@ date_stampLastWeek: 2024-09-23
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>5</td>
         <td>6</td>
-        <td>7</td>
         <td style="color: #45c527" >-1</td>
-        <td style="color: #45c527" >15%</td>
+        <td style="color: #45c527" >18%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>1001</td>
         <td>1000</td>
-        <td>998</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >0.2%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.1%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>

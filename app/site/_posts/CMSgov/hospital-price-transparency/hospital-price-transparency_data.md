@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for hospital-price-transparency | REPORT-2024-09-23
+title: Open Source at CMS Metrics Report for hospital-price-transparency | REPORT-2024-09-24
 permalink: /CMSgov/hospital-price-transparency/
 
 org: CMSgov
 repo: hospital-price-transparency
-reportID: REPORT-2024-09-23
-date_stampThisWeek: 2024-09-23
-date_stampLastWeek: 2024-09-23
+reportID: REPORT-2024-09-24
+date_stampThisWeek: 2024-09-24
+date_stampLastWeek: 2024-09-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -81,14 +81,14 @@ date_stampLastWeek: 2024-09-23
       <tr>
         <th scope="row">Stars</th>
         <td>59</td>
-        <td>57</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >3.4%</td>
+        <td>59</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>90</td>
         <td>89</td>
-        <td>88</td>
         <td style="color: #45c527" >1</td>
         <td style="color: #45c527" >1.1%</td>
       </tr>
