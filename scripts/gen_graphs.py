@@ -16,9 +16,13 @@ def generate_all_graphs_for_repos(all_repos):
         print(f"Generating graphs for repo {repo.name}")
         generate_solid_gauge_issue_graph(repo)
         generate_repo_sparklines(repo)
-        generate_donut_graph_line_complexity_graph(repo)
-        generate_time_xy_issue_graph(repo, "new_commit_contributors_by_day_over_last_month", "New Contributors")
-        generate_time_xy_issue_graph(repo, "new_commit_contributors_by_day_over_last_six_months", "New Contributors")
+        try:
+            generate_donut_graph_line_complexity_graph(repo)
+            generate_time_xy_issue_graph(repo, "new_commit_contributors_by_day_over_last_month", "New Contributors")
+            generate_time_xy_issue_graph(repo, "new_commit_contributors_by_day_over_last_six_months", "New Contributors")
+        except KeyError as e:
+            print(f"Could not find metrics to build graphs for repo {repo.name}")
+            print(e)
 
 
 def generate_all_graphs_for_orgs(all_orgs):
