@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ECTA | REPORT-2024-09-03
+title: Open Source at CMS Metrics Report for ECTA | REPORT-2024-09-24
 permalink: /CMSgov/ECTA/
 
 org: CMSgov
 repo: ECTA
-reportID: REPORT-2024-09-03
-date_stampThisWeek: 2024-09-03
-date_stampLastWeek: 2024-09-03
+reportID: REPORT-2024-09-24
+date_stampThisWeek: 2024-09-24
+date_stampLastWeek: 2024-09-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-09-03
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>134</td>
-        <td>134</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td>148</td>
+        <td>145</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >2%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -59,10 +59,10 @@ date_stampLastWeek: 2024-09-03
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>38</td>
-        <td>38</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td>42</td>
+        <td>41</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >2.4%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for price-transparency-guide | REPORT-2024-09-03
+title: Open Source at CMS Metrics Report for price-transparency-guide | REPORT-2024-09-24
 permalink: /CMSgov/price-transparency-guide/
 
 org: CMSgov
 repo: price-transparency-guide
-reportID: REPORT-2024-09-03
-date_stampThisWeek: 2024-09-03
-date_stampLastWeek: 2024-09-03
+reportID: REPORT-2024-09-24
+date_stampThisWeek: 2024-09-24
+date_stampLastWeek: 2024-09-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -31,17 +31,17 @@ date_stampLastWeek: 2024-09-03
       </tr>
       <tr>
         <th scope="row">Issues</th>
-        <td>79</td>
-        <td>78</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >1.3%</td>
+        <td>81</td>
+        <td>81</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
-        <td>15</td>
-        <td>14</td>
-        <td style="" >1</td>
-        <td style="" >6.9%</td>
+        <td>17</td>
+        <td>17</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -52,8 +52,8 @@ date_stampLastWeek: 2024-09-03
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>2</td>
-        <td>2</td>
+        <td>3</td>
+        <td>3</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
@@ -73,17 +73,17 @@ date_stampLastWeek: 2024-09-03
       </tr>
       <tr>
         <th scope="row">Forks</th>
-        <td>108</td>
-        <td>108</td>
+        <td>110</td>
+        <td>110</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
-        <td>357</td>
-        <td>356</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.28%</td>
+        <td>359</td>
+        <td>359</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>

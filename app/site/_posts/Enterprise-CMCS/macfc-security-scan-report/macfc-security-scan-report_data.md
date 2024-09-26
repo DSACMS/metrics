@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macfc-security-scan-report | REPORT-2024-09-03
+title: Open Source at CMS Metrics Report for macfc-security-scan-report | REPORT-2024-09-24
 permalink: /Enterprise-CMCS/macfc-security-scan-report/
 
 org: Enterprise-CMCS
 repo: macfc-security-scan-report
-reportID: REPORT-2024-09-03
-date_stampThisWeek: 2024-09-03
-date_stampLastWeek: 2024-09-03
+reportID: REPORT-2024-09-24
+date_stampThisWeek: 2024-09-24
+date_stampLastWeek: 2024-09-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,8 +24,8 @@ date_stampLastWeek: 2024-09-03
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>241</td>
-        <td>241</td>
+        <td>245</td>
+        <td>245</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
@@ -59,8 +59,8 @@ date_stampLastWeek: 2024-09-03
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>27</td>
-        <td>27</td>
+        <td>28</td>
+        <td>28</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>

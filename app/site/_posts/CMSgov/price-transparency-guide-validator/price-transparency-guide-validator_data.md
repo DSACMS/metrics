@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for price-transparency-guide-validator | REPORT-2024-09-03
+title: Open Source at CMS Metrics Report for price-transparency-guide-validator | REPORT-2024-09-24
 permalink: /CMSgov/price-transparency-guide-validator/
 
 org: CMSgov
 repo: price-transparency-guide-validator
-reportID: REPORT-2024-09-03
-date_stampThisWeek: 2024-09-03
-date_stampLastWeek: 2024-09-03
+reportID: REPORT-2024-09-24
+date_stampThisWeek: 2024-09-24
+date_stampLastWeek: 2024-09-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -31,15 +31,15 @@ date_stampLastWeek: 2024-09-03
       </tr>
       <tr>
         <th scope="row">Issues</th>
-        <td>42</td>
-        <td>42</td>
+        <td>43</td>
+        <td>43</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
-        <td>2</td>
-        <td>2</td>
+        <td>3</td>
+        <td>3</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
@@ -52,8 +52,8 @@ date_stampLastWeek: 2024-09-03
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>0</td>
-        <td>0</td>
+        <td>1</td>
+        <td>1</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
@@ -73,8 +73,8 @@ date_stampLastWeek: 2024-09-03
       </tr>
       <tr>
         <th scope="row">Forks</th>
-        <td>12</td>
-        <td>12</td>
+        <td>13</td>
+        <td>13</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for design-system | REPORT-2024-09-03
+title: Open Source at CMS Metrics Report for design-system | REPORT-2024-09-24
 permalink: /CMSgov/design-system/
 
 org: CMSgov
 repo: design-system
-reportID: REPORT-2024-09-03
-date_stampThisWeek: 2024-09-03
-date_stampLastWeek: 2024-09-03
+reportID: REPORT-2024-09-24
+date_stampThisWeek: 2024-09-24
+date_stampLastWeek: 2024-09-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-09-03
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>2304</td>
-        <td>2302</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >0.087%</td>
+        <td>2316</td>
+        <td>2316</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,36 +52,36 @@ date_stampLastWeek: 2024-09-03
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>6</td>
-        <td>7</td>
-        <td style="color: #45c527" >-1</td>
-        <td style="color: #45c527" >15%</td>
+        <td>9</td>
+        <td>8</td>
+        <td style="" >1</td>
+        <td style="" >12%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>2188</td>
-        <td>2186</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >0.091%</td>
+        <td>2200</td>
+        <td>2200</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
-        <td>671</td>
-        <td>670</td>
+        <td>688</td>
+        <td>687</td>
         <td style="" >1</td>
         <td style="" >0.15%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
-        <td>84</td>
-        <td>84</td>
+        <td>86</td>
+        <td>86</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
-        <td>310</td>
-        <td>310</td>
+        <td>313</td>
+        <td>313</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>

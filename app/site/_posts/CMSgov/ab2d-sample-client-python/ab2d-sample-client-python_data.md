@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ab2d-sample-client-python | REPORT-2024-09-03
+title: Open Source at CMS Metrics Report for ab2d-sample-client-python | REPORT-2024-09-24
 permalink: /CMSgov/ab2d-sample-client-python/
 
 org: CMSgov
 repo: ab2d-sample-client-python
-reportID: REPORT-2024-09-03
-date_stampThisWeek: 2024-09-03
-date_stampLastWeek: 2024-09-03
+reportID: REPORT-2024-09-24
+date_stampThisWeek: 2024-09-24
+date_stampLastWeek: 2024-09-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
