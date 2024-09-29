@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ars-machine-readable | REPORT-2024-09-24
+title: Open Source at CMS Metrics Report for ars-machine-readable | REPORT-2024-09-29
 permalink: /CMSgov/ars-machine-readable/
 
 org: CMSgov
 repo: ars-machine-readable
-reportID: REPORT-2024-09-24
-date_stampThisWeek: 2024-09-24
-date_stampLastWeek: 2024-09-24
+reportID: REPORT-2024-09-29
+date_stampThisWeek: 2024-09-29
+date_stampLastWeek: 2024-09-29
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for managed-care-review | REPORT-2024-09-24
+title: Open Source at CMS Metrics Report for managed-care-review | REPORT-2024-09-29
 permalink: /Enterprise-CMCS/managed-care-review/
 
 org: Enterprise-CMCS
 repo: managed-care-review
-reportID: REPORT-2024-09-24
-date_stampThisWeek: 2024-09-24
-date_stampLastWeek: 2024-09-24
+reportID: REPORT-2024-09-29
+date_stampThisWeek: 2024-09-29
+date_stampLastWeek: 2024-09-29
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
