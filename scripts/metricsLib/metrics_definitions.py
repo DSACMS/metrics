@@ -141,6 +141,14 @@ ORG_METRICS.append(ListMetric("topCommitters", ["repo_group_id"],
                               "/repo-groups/{repo_group_id}/top-committers",
                               {"top_committers": ["email", "commits"]}))
 
+ORG_METRICS.append(ListMetric("orgLibyears", ["repo_group_id"],
+                              AUGUR_HOST +
+                              "/repo-groups/{repo_group_id}/libyear",
+                              {"dependency_libyear_list": [
+                                "repo_name", "name","libyear","most_recent_collection"
+                                ]
+                              }))
+
 
 CONTRIBS_LABEL_LAST_MONTH = "new_commit_contributors_by_day_over_last_month"
 PERIODIC_METRICS.append(ListMetric("newContributorsofCommitsWeekly",
