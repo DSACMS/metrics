@@ -239,3 +239,16 @@ SIMPLE_METRICS.append(CustomMetric("getCommitsByMonth", [
 NADIA_ENDPOINT = AUGUR_HOST + "/repos/{repo_id}/nadia-project-labeling-badge/"
 ADVANCED_METRICS.append(CustomMetric("getNadiaBadgeURL",[
   "repo_id"],NADIA_ENDPOINT, parse_nadia_label_into_badge))
+
+REPO_LIBYEAR_ENDPOINT = AUGUR_HOST + "/repo-groups/{repo_group_id}/repos/{repo_id}/libyear"
+ADVANCED_METRICS.append(ListMetric(
+  "repoLibyears",
+  ["repo_group_id","repo_id"],
+  REPO_LIBYEAR_ENDPOINT,
+  {
+    "repo_dependency_libyear_list" : [
+                                "name","libyear","most_recent_collection"
+                                ]
+  }
+  )
+)
