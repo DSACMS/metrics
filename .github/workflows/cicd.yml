@@ -24,6 +24,7 @@ jobs:
     permissions: write-all
     name: update reports and graphs
     runs-on: ubuntu-latest
+    needs: update-metrics
     steps:
       - uses: actions/checkout@v4
       # update stats
