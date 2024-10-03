@@ -2,8 +2,8 @@ name: CICD
 
 on:
   schedule:
-    # Run Mondays at 5:15 am
-    - cron: "15 5 * * 0"
+    # Run Mondays at 7:15 am
+    - cron: "15 7 * * 0"
   workflow_dispatch:
 
 permissions:
@@ -16,6 +16,10 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  update-metrics:
+    name: Update Metrics
+    uses: ./.github/workflows/update_data.yml
+  
   update-reports-and-graphs:
     permissions: write-all
     name: update reports and graphs
