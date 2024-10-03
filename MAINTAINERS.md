@@ -76,6 +76,15 @@ reviewers:
                 </a>
             </td>
 		</tr>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/CreativeNick">
+                    <img src="https://avatars.githubusercontent.com/u/43157506?v=4" width="100;" alt="CreativeNick"/>
+                    <br />
+                    <sub><b>Nick</b></sub>
+                </a>
+            </td>
+		</tr>
 	<tbody>
 </table>
 <!-- readme: contributors -end -->
