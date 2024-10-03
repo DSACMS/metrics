@@ -16,6 +16,7 @@ def generate_all_graphs_for_repos(all_repos):
         print(f"Generating graphs for repo {repo.name}")
         generate_solid_gauge_issue_graph(repo)
         generate_repo_sparklines(repo)
+        generate_predominant_languages_graph(repo)
         try:
             generate_donut_graph_line_complexity_graph(repo)
             generate_time_xy_issue_graph(repo, "new_commit_contributors_by_day_over_last_month", "New Contributors")
@@ -38,7 +39,6 @@ def generate_all_graphs_for_orgs(all_orgs):
         generate_time_xy_issue_graph(org, "new_issues_by_day_over_last_six_months", "New Issues")
         generate_time_xy_issue_graph(org, "new_issues_by_day_over_last_month", "New Issues")
         generate_top_committer_bar_graph(org)
-
 
 def write_repo_chart_to_file(repo, chart, chart_name, custom_func=None, custom_func_params={}):
     """
@@ -227,7 +227,7 @@ def generate_predominant_languages_graph(oss_entity):
     """
 
     guage_graph = pygal.Gauge(dynamic_print_values=True, human_readable = True)
-    graph.title = f"Predominant Languages in {oss_entity.metric_data['name']}"
+    guage_graph.title = f"Predominant Languages in {oss_entity.metric_data['name']}"
 
     predominant_lang = oss_entity.metric_data['predominant_langs']
     max_amount = 0
@@ -236,8 +236,8 @@ def generate_predominant_languages_graph(oss_entity):
         if lines > max_amount:
             max_amount = lines
 
-        graph.add(lang, lines)
+        guage_graph.add(lang, lines)
 
     guage_graph.range = [round(max_amount + 2000), 0]
 
-    write_repo_chart_to_file(oss_entity, graph, "predominant_langs")
+    write_repo_chart_to_file(oss_entity, guage_graph, "predominant_langs")
