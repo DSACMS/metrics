@@ -217,3 +217,27 @@ def generate_top_committer_bar_graph(oss_entity):
         contributor_count += 1
 
     write_repo_chart_to_file(oss_entity, bar_chart, "top_committers")
+
+def generate_predominant_languages_graph(oss_entity):
+    """
+    This function generates a pygal predominant programming languages guage graph.
+
+    Arguments:
+        oss_entity: the OSSEntity to create a graph for.
+    """
+
+    guage_graph = pygal.Gauge(dynamic_print_values=True, human_readable = True)
+    graph.title = f"Predominant Languages in {oss_entity.metric_data['name']}"
+
+    predominant_lang = oss_entity.metric_data['predominant_langs']
+    max_amount = 0
+
+    for lang, lines in predominant_lang:
+        if lines > max_amount:
+            max_amount = lines
+
+        graph.add(lang, lines)
+
+    guage_graph.range = [round(max_amount + 2000), 0]
+
+    write_repo_chart_to_file(oss_entity, graph, "predominant_langs")
