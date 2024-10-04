@@ -226,18 +226,12 @@ def generate_predominant_languages_graph(oss_entity):
         oss_entity: the OSSEntity to create a graph for.
     """
 
-    guage_graph = pygal.Gauge(dynamic_print_values=True, human_readable = True)
-    guage_graph.title = f"Predominant Languages in {oss_entity.metric_data['name']}"
+    bar_chart = pygal.Bar()
+    bar_chart.title = f"Predominant Languages in {oss_entity.metric_data['name']}"
 
     predominant_lang = oss_entity.metric_data['predominant_langs']
-    max_amount = 0
+    
+    for lang, lines in predominant_lang.items():
+        bar_chart.add(lang, lines)
 
-    for lang, lines in predominant_lang:
-        if lines > max_amount:
-            max_amount = lines
-
-        guage_graph.add(lang, lines)
-
-    guage_graph.range = [round(max_amount + 2000), 0]
-
-    write_repo_chart_to_file(oss_entity, guage_graph, "predominant_langs")
+    write_repo_chart_to_file(oss_entity, bar_chart, "predominant_langs")
