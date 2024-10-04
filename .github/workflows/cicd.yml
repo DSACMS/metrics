@@ -2,8 +2,8 @@ name: CICD
 
 on:
   schedule:
-    # Run Mondays at 5:15 am
-    - cron: "15 5 * * 0"
+    # Run Mondays at 7:15 am
+    - cron: "15 7 * * 0"
   workflow_dispatch:
 
 permissions:
@@ -16,10 +16,109 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  update:
+    strategy:
+      matrix: 
+        orgs: ["DSACMS","Enterprise-CMCS","CMS-Enterprise","CMSgov"]
+      max-parallel: 1
+    permissions: write-all
+    name: update
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # update stats
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+      - name: cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+      - run: pip install -r requirements.txt
+      - run: git pull && ./update.sh ${{ matrix.orgs }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.METRICS_GITHUB_TOKEN }}
+          AUGUR_HOST: ${{ vars.AUGUR_HOST }}
+      - run: |
+          git config user.name 'GitHub Actions'
+          git config user.email 'actions@users.noreply.github.com'
+          git pull
+          git add -A
+          timestamp=$(date -u)
+          git commit -m "update ${{ matrix.orgs }} data: ${timestamp}" || exit 0
+      - name: Push to ${{ github.ref_name }}
+        uses: CasperWA/push-protected@v2
+        with:
+          token: ${{ secrets.METRICS_GITHUB_TOKEN }}
+          branch: ${{ github.ref_name }}
+  cocomo:
+        strategy:
+            matrix:
+                orgs: ["DSACMS", "Enterprise-CMCS", "CMS-Enterprise", "CMSgov"]
+            max-parallel: 1
+        permissions: write-all
+        name: cocomo
+        runs-on: ubuntu-latest
+        needs: update
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-go@v5
+            - name: Install scc
+              run: go install github.com/boyter/scc/v3@latest
+            - name: Run COCOMO script
+              run: ./scripts/scc_cocomo.sh ${{ matrix.orgs }}
+            - name: Commit changes
+              run: |
+                  git config user.name 'GitHub Actions'
+                  git config user.email 'actions@users.noreply.github.com'
+                  git pull
+                  git add -A
+                  timestamp=$(date -u)
+                  git commit -m "update ${{ matrix.orgs }} data: ${timestamp}" || exit 0
+            - name: Push to ${{ github.ref_name }}
+              uses: CasperWA/push-protected@v2
+              with:
+                  token: ${{ secrets.METRICS_GITHUB_TOKEN }}
+                  branch: ${{ github.ref_name }}
+  scorecard:
+        strategy:
+            matrix:
+                orgs: ["DSACMS", "Enterprise-CMCS", "CMS-Enterprise", "CMSgov"]
+            max-parallel: 1
+        permissions: write-all
+        name: scorecard
+        runs-on: ubuntu-latest
+        needs: cocomo
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-go@v5
+            - name: Install OSSF CLI
+              run: docker pull gcr.io/openssf/scorecard:stable
+            - name: Run OSSF Scorecard Report script
+              run: ./scripts/scorecard_internal.sh ${{ matrix.orgs }}
+              env:
+                  GITHUB_TOKEN: ${{ secrets.METRICS_GITHUB_TOKEN }}
+            - name: Commit changes
+              run: |
+                  git config user.name 'GitHub Actions'
+                  git config user.email 'actions@users.noreply.github.com'
+                  git pull
+                  git add -A
+                  timestamp=$(date -u)
+                  git commit -m "update ${{ matrix.orgs }} data: ${timestamp}" || exit 0
+            - name: Push to ${{ github.ref_name }}
+              uses: CasperWA/push-protected@v2
+              with:
+                  token: ${{ secrets.METRICS_GITHUB_TOKEN }}
+                  branch: ${{ github.ref_name }}
   update-reports-and-graphs:
     permissions: write-all
     name: update reports and graphs
     runs-on: ubuntu-latest
+    needs: scorecard
     steps:
       - uses: actions/checkout@v4
       # update stats

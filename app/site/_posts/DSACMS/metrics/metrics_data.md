@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for metrics | REPORT-2024-09-29
+title: Open Source at CMS Metrics Report for metrics | REPORT-2024-10-02
 permalink: /DSACMS/metrics/
 
 org: DSACMS
 repo: metrics
-reportID: REPORT-2024-09-29
-date_stampThisWeek: 2024-09-29
-date_stampLastWeek: 2024-09-29
+reportID: REPORT-2024-10-02
+date_stampThisWeek: 2024-10-02
+date_stampLastWeek: 2024-10-02
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,17 +24,17 @@ date_stampLastWeek: 2024-09-29
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>1174</td>
         <td>1151</td>
-        <td>1145</td>
-        <td style="color: #45c527" >6</td>
-        <td style="color: #45c527" >0.52%</td>
+        <td style="color: #45c527" >23</td>
+        <td style="color: #45c527" >2%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
+        <td>41</td>
         <td>40</td>
-        <td>40</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >2.5%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
@@ -45,10 +45,10 @@ date_stampLastWeek: 2024-09-29
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
+        <td>22</td>
         <td>21</td>
-        <td>21</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >4.7%</td>
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
@@ -59,17 +59,17 @@ date_stampLastWeek: 2024-09-29
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>149</td>
         <td>148</td>
-        <td>148</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.67%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>37</td>
         <td>36</td>
-        <td>34</td>
-        <td style="" >2</td>
-        <td style="" >5.7%</td>
+        <td style="" >1</td>
+        <td style="" >2.7%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
