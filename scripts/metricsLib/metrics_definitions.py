@@ -141,6 +141,14 @@ ORG_METRICS.append(ListMetric("topCommitters", ["repo_group_id"],
                               "/repo-groups/{repo_group_id}/top-committers",
                               {"top_committers": ["email", "commits"]}))
 
+ORG_METRICS.append(ListMetric("orgLibyears", ["repo_group_id"],
+                              AUGUR_HOST +
+                              "/repo-groups/{repo_group_id}/libyear",
+                              {"dependency_libyear_list": [
+                                "repo_name", "name","libyear","most_recent_collection"
+                                ]
+                              }))
+
 
 CONTRIBS_LABEL_LAST_MONTH = "new_commit_contributors_by_day_over_last_month"
 PERIODIC_METRICS.append(ListMetric("newContributorsofCommitsWeekly",
@@ -231,3 +239,16 @@ SIMPLE_METRICS.append(CustomMetric("getCommitsByMonth", [
 NADIA_ENDPOINT = AUGUR_HOST + "/repos/{repo_id}/nadia-project-labeling-badge/"
 ADVANCED_METRICS.append(CustomMetric("getNadiaBadgeURL",[
   "repo_id"],NADIA_ENDPOINT, parse_nadia_label_into_badge))
+
+REPO_LIBYEAR_ENDPOINT = AUGUR_HOST + "/repo-groups/{repo_group_id}/repos/{repo_id}/libyear"
+ADVANCED_METRICS.append(ListMetric(
+  "repoLibyears",
+  ["repo_group_id","repo_id"],
+  REPO_LIBYEAR_ENDPOINT,
+  {
+    "repo_dependency_libyear_list" : [
+                                "name","libyear","most_recent_collection"
+                                ]
+  }
+  )
+)
