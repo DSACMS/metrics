@@ -6,7 +6,7 @@ import os
 from pathlib import Path
 from enum import Enum
 
-TIMEOUT_IN_SECONDS = 20
+TIMEOUT_IN_SECONDS = 120
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 # Folder Names to send over our projects tracked data
 PATH_TO_METRICS_DATA = (Path(__file__).parent /
