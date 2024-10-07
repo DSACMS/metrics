@@ -69,7 +69,7 @@ jobs:
             - name: Install scc
               run: go install github.com/boyter/scc/v3@latest
             - name: Run COCOMO script
-              run: ./scripts/scc_cocomo.sh ${{ matrix.orgs }}
+              run: git pull && ./scripts/scc_cocomo.sh ${{ matrix.orgs }}
             - name: Commit changes
               run: |
                   git config user.name 'GitHub Actions'
@@ -98,7 +98,7 @@ jobs:
             - name: Install OSSF CLI
               run: docker pull gcr.io/openssf/scorecard:stable
             - name: Run OSSF Scorecard Report script
-              run: ./scripts/scorecard_internal.sh ${{ matrix.orgs }}
+              run: git pull && ./scripts/scorecard_internal.sh ${{ matrix.orgs }}
               env:
                   GITHUB_TOKEN: ${{ secrets.METRICS_GITHUB_TOKEN }}
             - name: Commit changes
@@ -133,7 +133,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
       - run: pip install -r requirements.txt
-      - run: ./gen_reports.sh
+      - run: git pull && ./gen_reports.sh
         env:
           GITHUB_TOKEN: ${{ secrets.METRICS_GITHUB_TOKEN }}
           AUGUR_HOST: ${{ vars.AUGUR_HOST }}
