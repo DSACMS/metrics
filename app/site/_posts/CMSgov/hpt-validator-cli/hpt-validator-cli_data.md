@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for hpt-validator-cli | REPORT-2024-10-02
+title: Open Source at CMS Metrics Report for hpt-validator-cli | REPORT-2024-10-07
 permalink: /CMSgov/hpt-validator-cli/
 
 org: CMSgov
 repo: hpt-validator-cli
-reportID: REPORT-2024-10-02
-date_stampThisWeek: 2024-10-02
-date_stampLastWeek: 2024-10-02
+reportID: REPORT-2024-10-07
+date_stampThisWeek: 2024-10-07
+date_stampLastWeek: 2024-10-07
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,8 +24,8 @@ date_stampLastWeek: 2024-10-02
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>41</td>
-        <td>41</td>
+        <td>44</td>
+        <td>44</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
@@ -52,15 +52,15 @@ date_stampLastWeek: 2024-10-02
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>2</td>
-        <td>2</td>
+        <td>1</td>
+        <td>1</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>8</td>
-        <td>8</td>
+        <td>9</td>
+        <td>9</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
@@ -81,9 +81,9 @@ date_stampLastWeek: 2024-10-02
       <tr>
         <th scope="row">Stars</th>
         <td>5</td>
-        <td>4</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >22%</td>
+        <td>5</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>

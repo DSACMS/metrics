@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-mako | REPORT-2024-10-02
+title: Open Source at CMS Metrics Report for macpro-mako | REPORT-2024-10-07
 permalink: /Enterprise-CMCS/macpro-mako/
 
 org: Enterprise-CMCS
 repo: macpro-mako
-reportID: REPORT-2024-10-02
-date_stampThisWeek: 2024-10-02
-date_stampLastWeek: 2024-10-02
+reportID: REPORT-2024-10-07
+date_stampThisWeek: 2024-10-07
+date_stampLastWeek: 2024-10-07
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-10-02
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>1534</td>
-        <td>1524</td>
-        <td style="color: #45c527" >10</td>
-        <td style="color: #45c527" >0.65%</td>
+        <td>1535</td>
+        <td>1535</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,29 +52,29 @@ date_stampLastWeek: 2024-10-02
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>5</td>
-        <td>4</td>
-        <td style="" >1</td>
-        <td style="" >22%</td>
+        <td>7</td>
+        <td>7</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>647</td>
-        <td>635</td>
-        <td style="color: #45c527" >12</td>
-        <td style="color: #45c527" >1.9%</td>
+        <td>648</td>
+        <td>648</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
-        <td>128</td>
-        <td>126</td>
-        <td style="" >2</td>
-        <td style="" >1.6%</td>
+        <td>129</td>
+        <td>129</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
-        <td>0</td>
-        <td>0</td>
+        <td>1</td>
+        <td>1</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
