@@ -1,6 +1,7 @@
 const production = process.env.NODE_ENV === "production"
 
-const host = production ? "https://dsacms.github.io" : "http://0.0.0.0:8080"
+// const host = production ? "https://dsacms.github.io" : "http://0.0.0.0:8080"
+const host = "http://0.0.0.0:8080"
 
 // For modifying the <base> tag
 const baseurl = production ? "/metrics" : ""

@@ -17,6 +17,7 @@ def generate_all_graphs_for_repos(all_repos):
         generate_solid_gauge_issue_graph(repo)
         generate_repo_sparklines(repo)
         generate_predominant_languages_graph(repo)
+        generate_language_summary_pie_chart(repo)
         try:
             generate_donut_graph_line_complexity_graph(repo)
             generate_time_xy_issue_graph(repo, "new_commit_contributors_by_day_over_last_month", "New Contributors")
@@ -235,3 +236,21 @@ def generate_predominant_languages_graph(oss_entity):
         bar_chart.add(lang, lines)
 
     write_repo_chart_to_file(oss_entity, bar_chart, "predominant_langs")
+
+def generate_language_summary_pie_chart(oss_entity):
+    """
+    This function generates a pygal for programming languages and total lines written in each language.
+
+    Arguments:
+        oss_entity: the OSSEntity to create a graph for.    
+    """
+
+    pie_chart = pygal.Pie()
+    pie_chart.title = 'Language Summary'
+
+    language_summary = oss_entity.metric_data['cocomo']['languageSummary']
+
+    for entry in language_summary:
+        pie_chart.add(entry['Name'], entry['Code'])
+
+    pie_chart.render_to_file('language_summary_pie_chart.svg')
