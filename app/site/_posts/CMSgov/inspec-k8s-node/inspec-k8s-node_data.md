@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for inspec-k8s-node | REPORT-2024-10-02
+title: Open Source at CMS Metrics Report for inspec-k8s-node | REPORT-2024-10-07
 permalink: /CMSgov/inspec-k8s-node/
 
 org: CMSgov
 repo: inspec-k8s-node
-reportID: REPORT-2024-10-02
-date_stampThisWeek: 2024-10-02
-date_stampLastWeek: 2024-10-02
+reportID: REPORT-2024-10-07
+date_stampThisWeek: 2024-10-07
+date_stampLastWeek: 2024-10-07
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

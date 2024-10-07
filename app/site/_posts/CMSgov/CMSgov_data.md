@@ -1,12 +1,12 @@
 ---
 layout: org-report
-title: Open Source at CMS Metrics Report for CMSgov | REPORT-2024-10-02
+title: Open Source at CMS Metrics Report for CMSgov | REPORT-2024-10-07
 permalink: /CMSgov/
 
 org: CMSgov
-reportID: REPORT-2024-10-02
-date_stampThisWeek: 2024-10-02
-date_stampLastWeek: 2024-10-02
+reportID: REPORT-2024-10-07
+date_stampThisWeek: 2024-10-07
+date_stampLastWeek: 2024-10-07
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -23,10 +23,10 @@ date_stampLastWeek: 2024-10-02
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>53844</td>
-        <td>53772</td>
-        <td style="color: #45c527" >72</td>
-        <td style="color: #45c527" >0.13%</td>
+        <td>53889</td>
+        <td>53887</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >0.0037%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -51,24 +51,24 @@ date_stampLastWeek: 2024-10-02
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>215</td>
-        <td>219</td>
-        <td style="color: #45c527" >-4</td>
-        <td style="color: #45c527" >1.8%</td>
+        <td>214</td>
+        <td>212</td>
+        <td style="" >2</td>
+        <td style="" >0.94%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>19502</td>
-        <td>19445</td>
-        <td style="color: #45c527" >57</td>
-        <td style="color: #45c527" >0.29%</td>
+        <td>19528</td>
+        <td>19526</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >0.01%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
-        <td>4407</td>
-        <td>4384</td>
-        <td style="" >23</td>
-        <td style="" >0.52%</td>
+        <td>4415</td>
+        <td>4415</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -79,17 +79,17 @@ date_stampLastWeek: 2024-10-02
       </tr>
       <tr>
         <th scope="row">Stars</th>
-        <td>1430</td>
-        <td>1421</td>
-        <td style="color: #45c527" >9</td>
-        <td style="color: #45c527" >0.63%</td>
+        <td>1433</td>
+        <td>1432</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.07%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
-        <td>1795</td>
-        <td>1794</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.056%</td>
+        <td>1796</td>
+        <td>1796</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Followers</th>
