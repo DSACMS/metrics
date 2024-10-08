@@ -250,7 +250,7 @@ def generate_language_summary_pie_chart(oss_entity):
 
     language_summary = oss_entity.metric_data['cocomo']['languageSummary']
 
-    for entry in language_summary:
+    for entry in language_summary.items():
         pie_chart.add(entry['Name'], entry['Code'])
 
     write_repo_chart_to_file(oss_entity, pie_chart, "language_summary")
