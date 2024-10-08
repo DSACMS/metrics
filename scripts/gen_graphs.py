@@ -25,7 +25,15 @@ def generate_all_graphs_for_repos(all_repos):
         except KeyError as e:
             print(f"Could not find metrics to build graphs for repo {repo.name}")
             print(e)
-        generate_dryness_percentage_graph(repo)
+        
+        try:
+            generate_dryness_percentage_graph(repo)
+        except ValueError as e:
+            print("Could not parse DRYness due to percentage values being invalid!")
+            print(e)
+        except KeyError as e:
+            print(f"Could not find metrics to build dryness graphs for repo {repo.name}")
+            print(e)
 
 
 def generate_all_graphs_for_orgs(all_orgs):
@@ -254,13 +262,16 @@ def parse_cocomo_dryness_metrics(dryness_string):
 
     dryness_metrics = {}
 
+    #Parse output line by line
     for line in dryness_string.split('\n'):
+        #Parse the parts that we want into fields
         if 'Unique Lines of Code' in line:
+            #Use regex to remove all non-numerals from the string
             dryness_metrics['total_uloc'] = re.sub('[^0-9.]','',line)
         if 'DRYness' in line:
+            #Use regex to remove all non-numerals from the string
             dryness_metrics['DRYness_percentage'] = re.sub('[^0-9.]','',line)
     
-    #sloc = uloc / DRYness
     return dryness_metrics
 
 
@@ -286,13 +297,17 @@ def generate_dryness_percentage_graph(oss_entity):
     pie_chart = pygal.Pie(half_pie=True)
     pie_chart.title = 'DRYness Percentage Graph'
 
-    pie_chart.add(
-        'Total Unique Lines of Code (ULOC)', dryness_values['total_uloc']
-    )
+    #print(dryness_values)
 
     pie_chart.add(
+        'Total Unique Lines of Code (ULOC)', float(dryness_values['total_uloc'])
+    )
+
+    #Will cause a value error if the dryness value is NaN which can happen. 
+    pie_chart.add(
         'Total Source Lines of Code (SLOC)', 
-        dryness_values['total_uloc'] / dryness_values['DRYness_percentage']
+        #sloc = uloc / DRYness
+        float(dryness_values['total_uloc']) / float(dryness_values['DRYness_percentage'])
     )
     
     write_repo_chart_to_file(oss_entity, pie_chart, "DRYness")
