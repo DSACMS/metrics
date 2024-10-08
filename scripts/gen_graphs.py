@@ -25,6 +25,7 @@ def generate_all_graphs_for_repos(all_repos):
         except KeyError as e:
             print(f"Could not find metrics to build graphs for repo {repo.name}")
             print(e)
+        generate_dryness_percentage_graph(repo)
 
 
 def generate_all_graphs_for_orgs(all_orgs):
@@ -276,3 +277,22 @@ def generate_dryness_percentage_graph(oss_entity):
     DRY = Don't repeat yourself
     WET = Waste Everybody's time or Write Everything Twice 
     """
+
+    dryness_values = parse_cocomo_dryness_metrics(
+        oss_entity.metric_data["cocomo"]['dryness_table']
+    )
+
+
+    pie_chart = pygal.Pie(half_pie=True)
+    pie_chart.title = 'DRYness Percentage Graph'
+
+    pie_chart.add(
+        'Total Unique Lines of Code (ULOC)', dryness_values['total_uloc']
+    )
+
+    pie_chart.add(
+        'Total Source Lines of Code (SLOC)', 
+        dryness_values['total_uloc'] / dryness_values['DRYness_percentage']
+    )
+    
+    write_repo_chart_to_file(oss_entity, pie_chart, "DRYness")
