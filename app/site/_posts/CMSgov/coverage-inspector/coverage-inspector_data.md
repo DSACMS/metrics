@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for coverage-inspector | REPORT-2024-10-07
+title: Open Source at CMS Metrics Report for coverage-inspector | REPORT-2024-10-08
 permalink: /CMSgov/coverage-inspector/
 
 org: CMSgov
 repo: coverage-inspector
-reportID: REPORT-2024-10-07
-date_stampThisWeek: 2024-10-07
-date_stampLastWeek: 2024-10-07
+reportID: REPORT-2024-10-08
+date_stampThisWeek: 2024-10-08
+date_stampLastWeek: 2024-10-08
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -111,4 +111,8 @@ date_stampLastWeek: 2024-10-07
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/CMSgov/coverage-inspector/new_commit_contributors_by_day_over_last_month_coverage-inspector_data.svg, /CMSgov/coverage-inspector/new_commit_contributors_by_day_over_last_six_months_coverage-inspector_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Predominant Lanugages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/coverage-inspector/predominant_langs_coverage-inspector_data.svg", title: "Predominant Languages" %}
+    <!-- Language Summary Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/coverage-inspector/language_summary_coverage-inspector_data.svg", title: "Language Summary" %}
 </div>

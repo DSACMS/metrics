@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for cms-gource | REPORT-2024-10-07
+title: Open Source at CMS Metrics Report for cms-gource | REPORT-2024-10-08
 permalink: /DSACMS/cms-gource/
 
 org: DSACMS
 repo: cms-gource
-reportID: REPORT-2024-10-07
-date_stampThisWeek: 2024-10-07
-date_stampLastWeek: 2024-10-07
+reportID: REPORT-2024-10-08
+date_stampThisWeek: 2024-10-08
+date_stampLastWeek: 2024-10-08
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -111,4 +111,8 @@ date_stampLastWeek: 2024-10-07
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/DSACMS/cms-gource/new_commit_contributors_by_day_over_last_month_cms-gource_data.svg, /DSACMS/cms-gource/new_commit_contributors_by_day_over_last_six_months_cms-gource_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Predominant Lanugages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/DSACMS/cms-gource/predominant_langs_cms-gource_data.svg", title: "Predominant Languages" %}
+    <!-- Language Summary Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/DSACMS/cms-gource/language_summary_cms-gource_data.svg", title: "Language Summary" %}
 </div>

@@ -253,6 +253,4 @@ def generate_language_summary_pie_chart(oss_entity):
     for entry in language_summary:
         pie_chart.add(entry['Name'], entry['Code'])
 
-    # pie_chart.render_to_file('language_summary_pie_chart.svg')
-
     write_repo_chart_to_file(oss_entity, pie_chart, "language_summary")

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-platform-doc-conversion | REPORT-2024-10-07
+title: Open Source at CMS Metrics Report for macpro-platform-doc-conversion | REPORT-2024-10-08
 permalink: /Enterprise-CMCS/macpro-platform-doc-conversion/
 
 org: Enterprise-CMCS
 repo: macpro-platform-doc-conversion
-reportID: REPORT-2024-10-07
-date_stampThisWeek: 2024-10-07
-date_stampLastWeek: 2024-10-07
+reportID: REPORT-2024-10-08
+date_stampThisWeek: 2024-10-08
+date_stampLastWeek: 2024-10-08
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -111,4 +111,8 @@ date_stampLastWeek: 2024-10-07
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/Enterprise-CMCS/macpro-platform-doc-conversion/new_commit_contributors_by_day_over_last_month_macpro-platform-doc-conversion_data.svg, /Enterprise-CMCS/macpro-platform-doc-conversion/new_commit_contributors_by_day_over_last_six_months_macpro-platform-doc-conversion_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Predominant Lanugages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/macpro-platform-doc-conversion/predominant_langs_macpro-platform-doc-conversion_data.svg", title: "Predominant Languages" %}
+    <!-- Language Summary Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/macpro-platform-doc-conversion/language_summary_macpro-platform-doc-conversion_data.svg", title: "Language Summary" %}
 </div>

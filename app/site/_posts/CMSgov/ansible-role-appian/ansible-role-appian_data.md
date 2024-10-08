@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ansible-role-appian | REPORT-2024-10-07
+title: Open Source at CMS Metrics Report for ansible-role-appian | REPORT-2024-10-08
 permalink: /CMSgov/ansible-role-appian/
 
 org: CMSgov
 repo: ansible-role-appian
-reportID: REPORT-2024-10-07
-date_stampThisWeek: 2024-10-07
-date_stampLastWeek: 2024-10-07
+reportID: REPORT-2024-10-08
+date_stampThisWeek: 2024-10-08
+date_stampLastWeek: 2024-10-08
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -111,4 +111,8 @@ date_stampLastWeek: 2024-10-07
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/CMSgov/ansible-role-appian/new_commit_contributors_by_day_over_last_month_ansible-role-appian_data.svg, /CMSgov/ansible-role-appian/new_commit_contributors_by_day_over_last_six_months_ansible-role-appian_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Predominant Lanugages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/ansible-role-appian/predominant_langs_ansible-role-appian_data.svg", title: "Predominant Languages" %}
+    <!-- Language Summary Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/ansible-role-appian/language_summary_ansible-role-appian_data.svg", title: "Language Summary" %}
 </div>

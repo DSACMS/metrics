@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for inspec-k8s-node | REPORT-2024-10-07
+title: Open Source at CMS Metrics Report for inspec-k8s-node | REPORT-2024-10-08
 permalink: /CMSgov/inspec-k8s-node/
 
 org: CMSgov
 repo: inspec-k8s-node
-reportID: REPORT-2024-10-07
-date_stampThisWeek: 2024-10-07
-date_stampLastWeek: 2024-10-07
+reportID: REPORT-2024-10-08
+date_stampThisWeek: 2024-10-08
+date_stampLastWeek: 2024-10-08
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -111,4 +111,8 @@ date_stampLastWeek: 2024-10-07
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/CMSgov/inspec-k8s-node/new_commit_contributors_by_day_over_last_month_inspec-k8s-node_data.svg, /CMSgov/inspec-k8s-node/new_commit_contributors_by_day_over_last_six_months_inspec-k8s-node_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Predominant Lanugages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/inspec-k8s-node/predominant_langs_inspec-k8s-node_data.svg", title: "Predominant Languages" %}
+    <!-- Language Summary Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/inspec-k8s-node/language_summary_inspec-k8s-node_data.svg", title: "Language Summary" %}
 </div>

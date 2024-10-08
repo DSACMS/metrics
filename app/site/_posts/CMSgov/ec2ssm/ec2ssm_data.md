@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ec2ssm | REPORT-2024-10-07
+title: Open Source at CMS Metrics Report for ec2ssm | REPORT-2024-10-08
 permalink: /CMSgov/ec2ssm/
 
 org: CMSgov
 repo: ec2ssm
-reportID: REPORT-2024-10-07
-date_stampThisWeek: 2024-10-07
-date_stampLastWeek: 2024-10-07
+reportID: REPORT-2024-10-08
+date_stampThisWeek: 2024-10-08
+date_stampLastWeek: 2024-10-08
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -111,4 +111,8 @@ date_stampLastWeek: 2024-10-07
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/CMSgov/ec2ssm/new_commit_contributors_by_day_over_last_month_ec2ssm_data.svg, /CMSgov/ec2ssm/new_commit_contributors_by_day_over_last_six_months_ec2ssm_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Predominant Lanugages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/ec2ssm/predominant_langs_ec2ssm_data.svg", title: "Predominant Languages" %}
+    <!-- Language Summary Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/ec2ssm/language_summary_ec2ssm_data.svg", title: "Language Summary" %}
 </div>

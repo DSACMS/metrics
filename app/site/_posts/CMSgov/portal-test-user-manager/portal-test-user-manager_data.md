@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for portal-test-user-manager | REPORT-2024-10-07
+title: Open Source at CMS Metrics Report for portal-test-user-manager | REPORT-2024-10-08
 permalink: /CMSgov/portal-test-user-manager/
 
 org: CMSgov
 repo: portal-test-user-manager
-reportID: REPORT-2024-10-07
-date_stampThisWeek: 2024-10-07
-date_stampLastWeek: 2024-10-07
+reportID: REPORT-2024-10-08
+date_stampThisWeek: 2024-10-08
+date_stampLastWeek: 2024-10-08
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -111,4 +111,8 @@ date_stampLastWeek: 2024-10-07
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/CMSgov/portal-test-user-manager/new_commit_contributors_by_day_over_last_month_portal-test-user-manager_data.svg, /CMSgov/portal-test-user-manager/new_commit_contributors_by_day_over_last_six_months_portal-test-user-manager_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Predominant Lanugages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/portal-test-user-manager/predominant_langs_portal-test-user-manager_data.svg", title: "Predominant Languages" %}
+    <!-- Language Summary Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/portal-test-user-manager/language_summary_portal-test-user-manager_data.svg", title: "Language Summary" %}
 </div>

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for cms-ars-5.0-apache-2.4-unix-server-stig-overlay | REPORT-2024-10-07
+title: Open Source at CMS Metrics Report for cms-ars-5.0-apache-2.4-unix-server-stig-overlay | REPORT-2024-10-08
 permalink: /CMS-Enterprise/cms-ars-5.0-apache-2.4-unix-server-stig-overlay/
 
 org: CMS-Enterprise
 repo: cms-ars-5.0-apache-2.4-unix-server-stig-overlay
-reportID: REPORT-2024-10-07
-date_stampThisWeek: 2024-10-07
-date_stampLastWeek: 2024-10-07
+reportID: REPORT-2024-10-08
+date_stampThisWeek: 2024-10-08
+date_stampLastWeek: 2024-10-08
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -111,4 +111,8 @@ date_stampLastWeek: 2024-10-07
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/CMS-Enterprise/cms-ars-5.0-apache-2.4-unix-server-stig-overlay/new_commit_contributors_by_day_over_last_month_cms-ars-5.0-apache-2.4-unix-server-stig-overlay_data.svg, /CMS-Enterprise/cms-ars-5.0-apache-2.4-unix-server-stig-overlay/new_commit_contributors_by_day_over_last_six_months_cms-ars-5.0-apache-2.4-unix-server-stig-overlay_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Predominant Lanugages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/cms-ars-5.0-apache-2.4-unix-server-stig-overlay/predominant_langs_cms-ars-5.0-apache-2.4-unix-server-stig-overlay_data.svg", title: "Predominant Languages" %}
+    <!-- Language Summary Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/cms-ars-5.0-apache-2.4-unix-server-stig-overlay/language_summary_cms-ars-5.0-apache-2.4-unix-server-stig-overlay_data.svg", title: "Language Summary" %}
 </div>
