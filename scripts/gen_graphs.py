@@ -293,21 +293,26 @@ def generate_dryness_percentage_graph(oss_entity):
         oss_entity.metric_data["cocomo"]['dryness_table']
     )
 
+    sloc = (float(dryness_values['total_uloc']) / float(dryness_values['DRYness_percentage']))
+    sloc_diff = sloc - float(dryness_values['total_uloc'])
+    sloc_percent = (sloc_diff / sloc) * 100
 
-    pie_chart = pygal.Pie(half_pie=True)
+    uloc_percent = (float(dryness_values['total_uloc']) / sloc) * 100
+
+    pie_chart = pygal.Pie(half_pie=True, legend_at_bottom=True)
     pie_chart.title = 'DRYness Percentage Graph'
 
     #print(dryness_values)
 
     pie_chart.add(
-        'Total Unique Lines of Code (ULOC)', float(dryness_values['total_uloc'])
+        'Unique Lines of Code (ULOC) %', uloc_percent
     )
 
     #Will cause a value error if the dryness value is NaN which can happen. 
     pie_chart.add(
-        'Total Source Lines of Code (SLOC)', 
+        'Source Lines of Code (SLOC) %', 
         #sloc = uloc / DRYness
-        float(dryness_values['total_uloc']) / float(dryness_values['DRYness_percentage'])
+        sloc_percent
     )
     
     write_repo_chart_to_file(oss_entity, pie_chart, "DRYness")
