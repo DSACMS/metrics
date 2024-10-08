@@ -3,6 +3,7 @@ Module to define methods to create pygals graphs
 """
 import datetime
 import pygal
+import re
 
 def generate_all_graphs_for_repos(all_repos):
     """
@@ -235,3 +236,43 @@ def generate_predominant_languages_graph(oss_entity):
         bar_chart.add(lang, lines)
 
     write_repo_chart_to_file(oss_entity, bar_chart, "predominant_langs")
+
+def parse_cocomo_dryness_metrics(dryness_string):
+    """
+    This function parses the output of the scc dryness metrics.
+
+    For some reason, ULOC, SLOC, and DRYness don't show up in the json and
+    only show up in the stdout text.
+
+    Arguments:
+        dryness_string: the string containing the dryness table to parse
+    
+    Returns:
+        A dictionary with the unique lines of code and DRYness percentage
+    """
+
+    dryness_metrics = {}
+
+    for line in dryness_string.split('\n'):
+        if 'Unique Lines of Code' in line:
+            dryness_metrics['total_uloc'] = re.sub('[^0-9.]','',line)
+        if 'DRYness' in line:
+            dryness_metrics['DRYness_percentage'] = re.sub('[^0-9.]','',line)
+    
+    #sloc = uloc / DRYness
+    return dryness_metrics
+
+
+
+
+def generate_dryness_percentage_graph(oss_entity):
+    """
+    This function generates a pygal DRYness pie graph.
+
+    DRYness = ULOC / SLOC
+
+    WETness = 1 - DRYness
+
+    DRY = Don't repeat yourself
+    WET = Waste Everybody's time or Write Everything Twice 
+    """
