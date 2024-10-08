@@ -2,8 +2,8 @@
 Module to define methods to create pygals graphs
 """
 import datetime
-import pygal
 import re
+import pygal
 
 def generate_all_graphs_for_repos(all_repos):
     """
@@ -20,12 +20,16 @@ def generate_all_graphs_for_repos(all_repos):
         generate_predominant_languages_graph(repo)
         try:
             generate_donut_graph_line_complexity_graph(repo)
-            generate_time_xy_issue_graph(repo, "new_commit_contributors_by_day_over_last_month", "New Contributors")
-            generate_time_xy_issue_graph(repo, "new_commit_contributors_by_day_over_last_six_months", "New Contributors")
+            generate_time_xy_issue_graph(
+                repo, "new_commit_contributors_by_day_over_last_month", "New Contributors"
+            )
+            generate_time_xy_issue_graph(
+                repo, "new_commit_contributors_by_day_over_last_six_months", "New Contributors"
+            )
         except KeyError as e:
             print(f"Could not find metrics to build graphs for repo {repo.name}")
             print(e)
-        
+
         try:
             generate_dryness_percentage_graph(repo)
         except ValueError as e:
@@ -210,7 +214,7 @@ def generate_top_committer_bar_graph(oss_entity):
     Arguments:
         oss_entity: the OSSEntity to create a graph for.
     """
-    
+
     # Create a bar chart object
     bar_chart = pygal.Bar()
     bar_chart.title = f"Top Committers in {oss_entity.metric_data['name']}"
@@ -240,7 +244,7 @@ def generate_predominant_languages_graph(oss_entity):
     bar_chart.title = f"Predominant Languages in {oss_entity.metric_data['name']}"
 
     predominant_lang = oss_entity.metric_data['predominant_langs']
-    
+
     for lang, lines in predominant_lang.items():
         bar_chart.add(lang, lines)
 
@@ -271,7 +275,7 @@ def parse_cocomo_dryness_metrics(dryness_string):
         if 'DRYness' in line:
             #Use regex to remove all non-numerals from the string
             dryness_metrics['DRYness_percentage'] = re.sub('[^0-9.]','',line)
-    
+
     return dryness_metrics
 
 
@@ -308,11 +312,11 @@ def generate_dryness_percentage_graph(oss_entity):
         'Unique Lines of Code (ULOC) %', uloc_percent
     )
 
-    #Will cause a value error if the dryness value is NaN which can happen. 
+    #Will cause a value error if the dryness value is NaN which can happen.
     pie_chart.add(
         'Source Lines of Code (SLOC) %', 
         #sloc = uloc / DRYness
         sloc_percent
     )
-    
+
     write_repo_chart_to_file(oss_entity, pie_chart, "DRYness")
