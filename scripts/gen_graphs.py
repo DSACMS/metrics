@@ -236,7 +236,7 @@ def generate_predominant_languages_graph(oss_entity):
 
     write_repo_chart_to_file(oss_entity, bar_chart, "predominant_langs")
 
-def parse_libyear_dates(dependency_list):
+def parse_libyear_list(dependency_list):
     """
     Parses the dependency list returned from the libyear metric into a list of python dictionaries
     that have correctly parsed dates.
@@ -262,7 +262,8 @@ def parse_libyear_dates(dependency_list):
             }
         )
     
-    return to_return
+    #return list sorted by date
+    return sorted(to_return, key=lambda d : d["libyear_date_last_updated"])
 
 
 def generate_libyears_graph(oss_entity):
@@ -273,13 +274,16 @@ def generate_libyears_graph(oss_entity):
         oss_entity: the OSSEntity to create a libyears graph for.
     """
 
-    dep_list = oss_entity.metric_data['repo_dependency_libyear_list']
-    if not dep_list:
+    raw_dep_list = oss_entity.metric_data['repo_dependency_libyear_list']
+    if not raw_dep_list:
         return
     
     line_chart = pygal.Line()
 
     line_chart.title = 'Dependency Libyears'
 
+    dep_list = parse_libyear_list(raw_dep_list)
+    earliest_year = dep_list[0]["libyear_date_last_updated"].year - 5
+    latest_year = dep_list[-1]["libyear_date_last_updated"].year + 1
 
-    line_chart.x_labels = map(str, range(2002, 2013))
+    line_chart.x_labels = map(str, range(earliest_year, latest_year))
