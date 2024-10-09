@@ -155,6 +155,34 @@ layout: base
           </div>
           <p>{{ project.pull_requests_count }}</p>
         </div>
+        <div class="stat-container" id="project-age">
+          <div class="project-age-heading">
+            <h4>
+              <span>
+                <svg
+                  class="usa-icon"
+                  aria-labelledby="project-age"
+                  role="img"
+                >
+                  {% lucide "calendar" %}
+                </svg>
+              </span>
+              Age Of Project
+            </h4>
+          </div>
+          <p onclick="toggleDateAge(this)" style="cursor: pointer;">
+            <span class="date">
+              {{ project.created_at | date: "%B %d, %Y" }}
+            </span>
+            <span class="age" style="display: none;">
+              {% assign created_date = project.created_at | date: "%s" | plus: 0 %}
+              {% assign current_date = "now" | date: "%s" | plus: 0 %}
+              {% assign age_seconds = current_date | minus: created_date %}
+              {% assign age_days = age_seconds | divided_by: 86400.0 | round %}
+              {{ age_days }} day{% if age_days != 1 %}s{% endif %}
+            </span>
+          </p>
+        </div>
       </div>
     {% else %}
       <p>Error Occurred: Object Not Found</p>
