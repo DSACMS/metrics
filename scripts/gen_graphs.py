@@ -39,7 +39,6 @@ def generate_all_graphs_for_repos(all_repos):
             print(f"Could not find metrics to build dryness graphs for repo {repo.name}")
             print(e)
 
-
 def generate_all_graphs_for_orgs(all_orgs):
     """
     Function to iterate through all orgs and generate graphs for each of them
@@ -76,7 +75,6 @@ def write_repo_chart_to_file(repo, chart, chart_name, custom_func=None, custom_f
             print(
                 f"Repo {repo.name} has a division by zero error when trying to make graph")
     # issues_gauge.render_to_file(repo.get_path_to_graph_data("issue_gauge"))
-
 
 def generate_repo_sparklines(repo):
     """
@@ -128,7 +126,6 @@ def generate_time_xy_issue_graph(oss_entity,data_key,legend_key):
 
     write_repo_chart_to_file(oss_entity, xy_time_issue_chart, data_key)
 
-
 def generate_donut_graph_line_complexity_graph(oss_entity):
     """
     This function generates pygals line complexity donut graph
@@ -155,7 +152,6 @@ def generate_donut_graph_line_complexity_graph(oss_entity):
     donut_lines_graph.add('Total Other Lines', num_remaining_lines)
 
     write_repo_chart_to_file(oss_entity, donut_lines_graph, "total_line_makeup")
-
 
 def generate_solid_gauge_issue_graph(oss_entity):
     """
@@ -277,9 +273,6 @@ def parse_cocomo_dryness_metrics(dryness_string):
             dryness_metrics['DRYness_percentage'] = re.sub('[^0-9.]','',line)
 
     return dryness_metrics
-
-
-
 
 def generate_dryness_percentage_graph(oss_entity):
     """
