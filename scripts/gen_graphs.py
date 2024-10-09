@@ -25,6 +25,11 @@ def generate_all_graphs_for_repos(all_repos):
         except KeyError as e:
             print(f"Could not find metrics to build graphs for repo {repo.name}")
             print(e)
+        
+        try:
+            generate_libyears_graph(repo)
+        except KeyError:
+            print(f"Repository {repo.name} has no deps data associated with it!")
 
 
 def generate_all_graphs_for_orgs(all_orgs):
@@ -40,6 +45,11 @@ def generate_all_graphs_for_orgs(all_orgs):
         generate_time_xy_issue_graph(org, "new_issues_by_day_over_last_six_months", "New Issues")
         generate_time_xy_issue_graph(org, "new_issues_by_day_over_last_month", "New Issues")
         generate_top_committer_bar_graph(org)
+
+        try:
+            generate_libyears_graph(org)
+        except KeyError:
+            print(f"Org {org.name} has no deps data associated with it!")
 
 def write_repo_chart_to_file(repo, chart, chart_name, custom_func=None, custom_func_params={}):
     """
@@ -252,19 +262,18 @@ def parse_libyear_list(dependency_list):
     to_return = []
     for dep in dependency_list:
 
-
-        date = datetime.datetime.strptime(dep[3], '%Y-%m-%dT%H:%M:%S.%f')
+        #print(dep)
+        date = datetime.datetime.strptime(dep[-1], '%Y-%m-%dT%H:%M:%S.%f')
         to_return.append(
             {
-                "repository": dep[0],
-                "dep_name": dep[1],
-                "libyear_value": dep[2],
+                "dep_name": dep[-3],
+                "libyear_value": dep[-2],
                 "libyear_date_last_updated": date
             }
         )
-    
+
     #return list sorted by date
-    return sorted(to_return, key=lambda d : d["libyear_date_last_updated"])
+    return sorted(to_return, key=lambda d : d["libyear_value"])
 
 
 def generate_libyears_graph(oss_entity):
@@ -275,16 +284,20 @@ def generate_libyears_graph(oss_entity):
         oss_entity: the OSSEntity to create a libyears graph for.
     """
 
-    raw_dep_list = oss_entity.metric_data['repo_dependency_libyear_list']
+    try:
+        raw_dep_list = oss_entity.metric_data['repo_dependency_libyear_list']
+    except KeyError:
+        raw_dep_list = oss_entity.metric_data['dependency_libyear_list']
+
     if not raw_dep_list:
         return
-    
+
     #This is going to be kind of hacky since pygals doesn't have a 
     #timeline object
     #TODO: Contribute upstream to add a timeline object to pygal
     dateline = pygal.TimeDeltaLine(x_label_rotation=25)
 
-    dateline.title = 'Dependency Libyears'
+    dateline.title = 'Dependency Libyears: Age of Dependency Version in Days'
 
     dep_list = parse_libyear_list(raw_dep_list)
 
@@ -293,7 +306,7 @@ def generate_libyears_graph(oss_entity):
     for dep in dep_list:
         dateline.add(dep["dep_name"], [
             (timedelta(), elevation),
-            (datetime.datetime.now() - dep["libyear_date_last_updated"], elevation),
+            (timedelta(days=(dep["libyear_value"] * 365)), elevation),
         ])
 
         #move one line up so that we have no overlap in the timedeltas
