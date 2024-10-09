@@ -113,4 +113,6 @@ date_stampLastWeek: {date_stamp}
       {{% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}}
     <!-- Predominant Lanugages Graph -->
     {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/predominant_langs_{repo_name}_data.svg", title: "Predominant Languages" %}}
+    <!-- Libyear Timeline Graph -->
+    {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/libyear_timeline_{repo_name}_data.svg", title: "Dependency Libyears" %}}
 </div>

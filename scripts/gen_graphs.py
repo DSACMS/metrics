@@ -25,7 +25,7 @@ def generate_all_graphs_for_repos(all_repos):
         except KeyError as e:
             print(f"Could not find metrics to build graphs for repo {repo.name}")
             print(e)
-        
+
         try:
             generate_libyears_graph(repo)
         except KeyError:
@@ -53,7 +53,7 @@ def generate_all_graphs_for_orgs(all_orgs):
 
 def write_repo_chart_to_file(repo, chart, chart_name, custom_func=None, custom_func_params={}):
     """
-    This function's purpose is to save a pygals chart to a path derived from the 
+    This function's purpose is to save a pygals chart to a path derived from the
     repository object passed in.
 
     Arguments:
@@ -132,7 +132,7 @@ def generate_donut_graph_line_complexity_graph(oss_entity):
     for a set of Repository objects.
 
     Arguments:
-        oss_entity: The OSSEntity to create a graph for. an 
+        oss_entity: The OSSEntity to create a graph for. an
             OSSEntity is a data structure that is typically
             a repository or an organization.
     """
@@ -211,7 +211,7 @@ def generate_top_committer_bar_graph(oss_entity):
     Arguments:
         oss_entity: the OSSEntity to create a graph for.
     """
-    
+
     # Create a bar chart object
     bar_chart = pygal.Bar()
     bar_chart.title = f"Top Committers in {oss_entity.metric_data['name']}"
@@ -241,7 +241,7 @@ def generate_predominant_languages_graph(oss_entity):
     bar_chart.title = f"Predominant Languages in {oss_entity.metric_data['name']}"
 
     predominant_lang = oss_entity.metric_data['predominant_langs']
-    
+
     for lang, lines in predominant_lang.items():
         bar_chart.add(lang, lines)
 
@@ -254,7 +254,7 @@ def parse_libyear_list(dependency_list):
 
     Arguments:
         dependency_list: the list of lists that has the deps data
-    
+
     Returns:
         A list of dictionaries describing deps
     """
@@ -292,10 +292,10 @@ def generate_libyears_graph(oss_entity):
     if not raw_dep_list:
         return
 
-    #This is going to be kind of hacky since pygals doesn't have a 
+    #This is going to be kind of hacky since pygals doesn't have a
     #timeline object
     #TODO: Contribute upstream to add a timeline object to pygal
-    dateline = pygal.TimeDeltaLine(x_label_rotation=25)
+    dateline = pygal.TimeDeltaLine(x_label_rotation=25,legend_at_bottom=True)
 
     dateline.title = 'Dependency Libyears: Age of Dependency Version in Days'
 
@@ -311,6 +311,10 @@ def generate_libyears_graph(oss_entity):
 
         #move one line up so that we have no overlap in the timedeltas
         elevation += 1
-    
+
+        if elevation >= 40:
+            break
+
+    dateline.show_y_labels = False
     write_repo_chart_to_file(oss_entity, dateline, "libyear_timeline")
 
