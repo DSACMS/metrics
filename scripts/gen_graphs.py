@@ -20,8 +20,12 @@ def generate_all_graphs_for_repos(all_repos):
         generate_predominant_languages_graph(repo)
         try:
             generate_donut_graph_line_complexity_graph(repo)
-            generate_time_xy_issue_graph(repo, "new_commit_contributors_by_day_over_last_month", "New Contributors")
-            generate_time_xy_issue_graph(repo, "new_commit_contributors_by_day_over_last_six_months", "New Contributors")
+            generate_time_xy_issue_graph(
+                repo, "new_commit_contributors_by_day_over_last_month", "New Contributors"
+            )
+            generate_time_xy_issue_graph(
+                repo, "new_commit_contributors_by_day_over_last_six_months", "New Contributors"
+            )
         except KeyError as e:
             print(f"Could not find metrics to build graphs for repo {repo.name}")
             print(e)
@@ -306,7 +310,7 @@ def generate_libyears_graph(oss_entity):
     for dep in dep_list:
         dateline.add(dep["dep_name"], [
             (timedelta(), elevation),
-            (timedelta(days=(dep["libyear_value"] * 365)), elevation),
+            (timedelta(days=dep["libyear_value"] * 365), elevation),
         ])
 
         #move one line up so that we have no overlap in the timedeltas
@@ -317,4 +321,3 @@ def generate_libyears_graph(oss_entity):
 
     dateline.show_y_labels = False
     write_repo_chart_to_file(oss_entity, dateline, "libyear_timeline")
-
