@@ -2,6 +2,7 @@
 Module to define methods to create pygals graphs
 """
 import datetime
+from datetime import timedelta
 import pygal
 
 def generate_all_graphs_for_repos(all_repos):
@@ -278,12 +279,25 @@ def generate_libyears_graph(oss_entity):
     if not raw_dep_list:
         return
     
-    line_chart = pygal.Line()
+    #This is going to be kind of hacky since pygals doesn't have a 
+    #timeline object
+    #TODO: Contribute upstream to add a timeline object to pygal
+    dateline = pygal.TimeDeltaLine(x_label_rotation=25)
 
-    line_chart.title = 'Dependency Libyears'
+    dateline.title = 'Dependency Libyears'
 
     dep_list = parse_libyear_list(raw_dep_list)
-    earliest_year = dep_list[0]["libyear_date_last_updated"].year - 5
-    latest_year = dep_list[-1]["libyear_date_last_updated"].year + 1
 
-    line_chart.x_labels = map(str, range(earliest_year, latest_year))
+    #We are going to treat the y-axis as having one dep per level in the graph
+    elevation = 0
+    for dep in dep_list:
+        dateline.add(dep["dep_name"], [
+            (timedelta(), elevation),
+            (datetime.datetime.now() - dep["libyear_date_last_updated"], elevation),
+        ])
+
+        #move one line up so that we have no overlap in the timedeltas
+        elevation += 1
+    
+    write_repo_chart_to_file(oss_entity, dateline, "libyear_timeline")
+
