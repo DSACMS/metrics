@@ -315,20 +315,30 @@ def generate_dryness_percentage_graph(oss_entity):
 
     write_repo_chart_to_file(oss_entity, pie_chart, "DRYness")
 
+
 def generate_language_summary_pie_chart(oss_entity):
     """
-    This function generates a pygal for programming languages and total lines written in each language.
-
+    This function generates a pygal pie chart for programming languages and total lines written in each language.
+    The total LoC is displayed in the chart's title.
+    
     Arguments:
-        oss_entity: the OSSEntity to create a graph for.    
+        oss_entity: the OSSEntity to create a graph for.
     """
 
     pie_chart = pygal.Pie()
-    pie_chart.title = 'Language Summary'
 
-    language_summary = oss_entity.metric_data['cocomo']['languageSummary']
+    language_summary = oss_entity.metric_data.get('cocomo', {}).get('languageSummary')
+    if not language_summary:
+        raise ValueError("No valid 'languageSummary' found in the data.")
+
+    total_loc = sum(entry.get('Code', 0) for entry in language_summary)
+    
+    pie_chart.title = f'Language Summary (Total SLOC: {total_loc:,})'
+
+    pie_chart.value_formatter = lambda x: f'{x} SLOC'
 
     for entry in language_summary:
-        pie_chart.add(entry['Name'], entry['Code'])
+        code_lines = entry.get('Code', 0)
+        pie_chart.add(entry['Name'], code_lines)
 
     write_repo_chart_to_file(oss_entity, pie_chart, "language_summary")
