@@ -6,6 +6,19 @@ from datetime import timedelta
 import re
 import pygal
 
+
+def percent_formatter(x):
+    """
+    Function to format percentage values.
+
+    Arguments:
+        x: Value to format into a percent
+    Returns:
+        A string containing the formatted version of x
+    """
+
+    return '{:0.2f}%'.format(x)
+
 def generate_all_graphs_for_repos(all_repos):
     """
     Function to generate and save all graphs for the input
@@ -174,8 +187,6 @@ def generate_solid_gauge_issue_graph(oss_entity):
 
     issues_gauge = pygal.SolidGauge(inner_radius=0.70, legend_at_bottom=True)
 
-    def percent_formatter(x):
-        return '{:0.2f}%'.format(x)
     issues_gauge.value_formatter = percent_formatter
 
     # Generate graph to measure percentage of issues that are open
@@ -379,6 +390,7 @@ def generate_dryness_percentage_graph(oss_entity):
     uloc_percent = (float(dryness_values['total_uloc']) / sloc) * 100
 
     pie_chart = pygal.Pie(half_pie=True, legend_at_bottom=True)
+    pie_chart.value_formatter = percent_formatter
     pie_chart.title = 'DRYness Percentage Graph'
 
     #print(dryness_values)
