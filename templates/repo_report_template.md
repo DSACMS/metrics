@@ -111,4 +111,8 @@ date_stampLastWeek: {date_stamp}
       {{% assign optionsArray = '1 Month, 6 Month' | split: ',' %}}
       {{% assign graphsArray = '/{repo_owner}/{repo_name}/new_commit_contributors_by_day_over_last_month_{repo_name}_data.svg, /{repo_owner}/{repo_name}/new_commit_contributors_by_day_over_last_six_months_{repo_name}_data.svg' | split: ',' %}}
       {{% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}}
+    <!-- Predominant Languages Graph -->
+    {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/predominant_langs_{repo_name}_data.svg", title: "Predominant Languages" %}}
+    <!-- DRYness Percentages Graph -->
+    {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/DRYness_{repo_name}_data.svg", title: "DRYness Percentage Graph" %}}
 </div>

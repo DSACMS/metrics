@@ -2,6 +2,7 @@
 Module to define methods to create pygals graphs
 """
 import datetime
+import re
 import pygal
 
 def generate_all_graphs_for_repos(all_repos):
@@ -16,14 +17,28 @@ def generate_all_graphs_for_repos(all_repos):
         print(f"Generating graphs for repo {repo.name}")
         generate_solid_gauge_issue_graph(repo)
         generate_repo_sparklines(repo)
+        generate_predominant_languages_graph(repo)
+        generate_language_summary_pie_chart(repo)
         try:
             generate_donut_graph_line_complexity_graph(repo)
-            generate_time_xy_issue_graph(repo, "new_commit_contributors_by_day_over_last_month", "New Contributors")
-            generate_time_xy_issue_graph(repo, "new_commit_contributors_by_day_over_last_six_months", "New Contributors")
+            generate_time_xy_issue_graph(
+                repo, "new_commit_contributors_by_day_over_last_month", "New Contributors"
+            )
+            generate_time_xy_issue_graph(
+                repo, "new_commit_contributors_by_day_over_last_six_months", "New Contributors"
+            )
         except KeyError as e:
             print(f"Could not find metrics to build graphs for repo {repo.name}")
             print(e)
 
+        try:
+            generate_dryness_percentage_graph(repo)
+        except ValueError as e:
+            print("Could not parse DRYness due to percentage values being invalid!")
+            print(e)
+        except KeyError as e:
+            print(f"Could not find metrics to build dryness graphs for repo {repo.name}")
+            print(e)
 
 def generate_all_graphs_for_orgs(all_orgs):
     """
@@ -38,7 +53,6 @@ def generate_all_graphs_for_orgs(all_orgs):
         generate_time_xy_issue_graph(org, "new_issues_by_day_over_last_six_months", "New Issues")
         generate_time_xy_issue_graph(org, "new_issues_by_day_over_last_month", "New Issues")
         generate_top_committer_bar_graph(org)
-
 
 def write_repo_chart_to_file(repo, chart, chart_name, custom_func=None, custom_func_params={}):
     """
@@ -62,7 +76,6 @@ def write_repo_chart_to_file(repo, chart, chart_name, custom_func=None, custom_f
             print(
                 f"Repo {repo.name} has a division by zero error when trying to make graph")
     # issues_gauge.render_to_file(repo.get_path_to_graph_data("issue_gauge"))
-
 
 def generate_repo_sparklines(repo):
     """
@@ -114,7 +127,6 @@ def generate_time_xy_issue_graph(oss_entity,data_key,legend_key):
 
     write_repo_chart_to_file(oss_entity, xy_time_issue_chart, data_key)
 
-
 def generate_donut_graph_line_complexity_graph(oss_entity):
     """
     This function generates pygals line complexity donut graph
@@ -141,7 +153,6 @@ def generate_donut_graph_line_complexity_graph(oss_entity):
     donut_lines_graph.add('Total Other Lines', num_remaining_lines)
 
     write_repo_chart_to_file(oss_entity, donut_lines_graph, "total_line_makeup")
-
 
 def generate_solid_gauge_issue_graph(oss_entity):
     """
@@ -200,7 +211,7 @@ def generate_top_committer_bar_graph(oss_entity):
     Arguments:
         oss_entity: the OSSEntity to create a graph for.
     """
-    
+
     # Create a bar chart object
     bar_chart = pygal.Bar()
     bar_chart.title = f"Top Committers in {oss_entity.metric_data['name']}"
@@ -217,3 +228,107 @@ def generate_top_committer_bar_graph(oss_entity):
         contributor_count += 1
 
     write_repo_chart_to_file(oss_entity, bar_chart, "top_committers")
+
+def generate_predominant_languages_graph(oss_entity):
+    """
+    This function generates a pygal predominant programming languages guage graph.
+
+    Arguments:
+        oss_entity: the OSSEntity to create a graph for.
+    """
+
+    bar_chart = pygal.Bar()
+    bar_chart.title = f"Predominant Languages in {oss_entity.metric_data['name']}"
+
+    predominant_lang = oss_entity.metric_data['predominant_langs']
+
+    for lang, lines in predominant_lang.items():
+        bar_chart.add(lang, lines)
+
+    write_repo_chart_to_file(oss_entity, bar_chart, "predominant_langs")
+
+def parse_cocomo_dryness_metrics(dryness_string):
+    """
+    This function parses the output of the scc dryness metrics.
+
+    For some reason, ULOC, SLOC, and DRYness don't show up in the json and
+    only show up in the stdout text.
+
+    Arguments:
+        dryness_string: the string containing the dryness table to parse
+    
+    Returns:
+        A dictionary with the unique lines of code and DRYness percentage
+    """
+
+    dryness_metrics = {}
+
+    #Parse output line by line
+    for line in dryness_string.split('\n'):
+        #Parse the parts that we want into fields
+        if 'Unique Lines of Code' in line:
+            #Use regex to remove all non-numerals from the string
+            dryness_metrics['total_uloc'] = re.sub('[^0-9.]','',line)
+        if 'DRYness' in line:
+            #Use regex to remove all non-numerals from the string
+            dryness_metrics['DRYness_percentage'] = re.sub('[^0-9.]','',line)
+
+    return dryness_metrics
+
+def generate_dryness_percentage_graph(oss_entity):
+    """
+    This function generates a pygal DRYness pie graph.
+
+    DRYness = ULOC / SLOC
+
+    WETness = 1 - DRYness
+
+    DRY = Don't repeat yourself
+    WET = Waste Everybody's time or Write Everything Twice 
+    """
+
+    dryness_values = parse_cocomo_dryness_metrics(
+        oss_entity.metric_data["cocomo"]['dryness_table']
+    )
+
+    sloc = (float(dryness_values['total_uloc']) / float(dryness_values['DRYness_percentage']))
+    sloc_diff = sloc - float(dryness_values['total_uloc'])
+    sloc_percent = (sloc_diff / sloc) * 100
+
+    uloc_percent = (float(dryness_values['total_uloc']) / sloc) * 100
+
+    pie_chart = pygal.Pie(half_pie=True, legend_at_bottom=True)
+    pie_chart.title = 'DRYness Percentage Graph'
+
+    #print(dryness_values)
+
+    pie_chart.add(
+        'Unique Lines of Code (ULOC) %', uloc_percent
+    )
+
+    #Will cause a value error if the dryness value is NaN which can happen.
+    pie_chart.add(
+        'Source Lines of Code (SLOC) %', 
+        #sloc = uloc / DRYness
+        sloc_percent
+    )
+
+    write_repo_chart_to_file(oss_entity, pie_chart, "DRYness")
+
+def generate_language_summary_pie_chart(oss_entity):
+    """
+    This function generates a pygal for programming languages and total lines written in each language.
+
+    Arguments:
+        oss_entity: the OSSEntity to create a graph for.    
+    """
+
+    pie_chart = pygal.Pie()
+    pie_chart.title = 'Language Summary'
+
+    language_summary = oss_entity.metric_data['cocomo']['languageSummary']
+
+    for entry in language_summary:
+        pie_chart.add(entry['Name'], entry['Code'])
+
+    write_repo_chart_to_file(oss_entity, pie_chart, "language_summary")
