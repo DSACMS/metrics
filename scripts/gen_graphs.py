@@ -2,6 +2,7 @@
 Module to define methods to create pygals graphs
 """
 import datetime
+from datetime import timedelta
 import re
 import pygal
 
@@ -31,6 +32,11 @@ def generate_all_graphs_for_repos(all_repos):
             print(e)
 
         try:
+            generate_libyears_graph(repo)
+        except KeyError:
+            print(f"Repository {repo.name} has no deps data associated with it!")
+
+        try:
             generate_dryness_percentage_graph(repo)
         except ValueError as e:
             print("Could not parse DRYness due to percentage values being invalid!")
@@ -53,9 +59,14 @@ def generate_all_graphs_for_orgs(all_orgs):
         generate_time_xy_issue_graph(org, "new_issues_by_day_over_last_month", "New Issues")
         generate_top_committer_bar_graph(org)
 
+        try:
+            generate_libyears_graph(org)
+        except KeyError:
+            print(f"Org {org.name} has no deps data associated with it!")
+
 def write_repo_chart_to_file(repo, chart, chart_name, custom_func=None, custom_func_params={}):
     """
-    This function's purpose is to save a pygals chart to a path derived from the 
+    This function's purpose is to save a pygals chart to a path derived from the
     repository object passed in.
 
     Arguments:
@@ -132,7 +143,7 @@ def generate_donut_graph_line_complexity_graph(oss_entity):
     for a set of Repository objects.
 
     Arguments:
-        oss_entity: The OSSEntity to create a graph for. an 
+        oss_entity: The OSSEntity to create a graph for. an
             OSSEntity is a data structure that is typically
             a repository or an organization.
     """
@@ -245,6 +256,77 @@ def generate_predominant_languages_graph(oss_entity):
         bar_chart.add(lang, lines)
 
     write_repo_chart_to_file(oss_entity, bar_chart, "predominant_langs")
+
+def parse_libyear_list(dependency_list):
+    """
+    Parses the dependency list returned from the libyear metric into a list of python dictionaries
+    that have correctly parsed dates.
+
+    Arguments:
+        dependency_list: the list of lists that has the deps data
+
+    Returns:
+        A list of dictionaries describing deps
+    """
+
+    to_return = []
+    for dep in dependency_list:
+
+        #print(dep)
+        date = datetime.datetime.strptime(dep[-1], '%Y-%m-%dT%H:%M:%S.%f')
+        to_return.append(
+            {
+                "dep_name": dep[-3],
+                "libyear_value": dep[-2],
+                "libyear_date_last_updated": date
+            }
+        )
+
+    #return list sorted by date
+    return sorted(to_return, key=lambda d : d["libyear_value"])
+
+
+def generate_libyears_graph(oss_entity):
+    """
+    Generates a pygal graph to describe libyear metrics for the requested oss_entity
+
+    Arguments:
+        oss_entity: the OSSEntity to create a libyears graph for.
+    """
+
+    try:
+        raw_dep_list = oss_entity.metric_data['repo_dependency_libyear_list']
+    except KeyError:
+        raw_dep_list = oss_entity.metric_data['dependency_libyear_list']
+
+    if not raw_dep_list:
+        return
+
+    #This is going to be kind of hacky since pygals doesn't have a
+    #timeline object
+    #TODO: Contribute upstream to add a timeline object to pygal
+    dateline = pygal.TimeDeltaLine(x_label_rotation=25,legend_at_bottom=True)
+
+    dateline.title = 'Dependency Libyears: Age of Dependency Version in Days'
+
+    dep_list = parse_libyear_list(raw_dep_list)
+
+    #We are going to treat the y-axis as having one dep per level in the graph
+    elevation = 0
+    for dep in dep_list:
+        dateline.add(dep["dep_name"], [
+            (timedelta(), elevation),
+            (timedelta(days=dep["libyear_value"] * 365), elevation),
+        ])
+
+        #move one line up so that we have no overlap in the timedeltas
+        elevation += 1
+
+        if elevation >= 40:
+            break
+
+    dateline.show_y_labels = False
+    write_repo_chart_to_file(oss_entity, dateline, "libyear_timeline")
 
 def parse_cocomo_dryness_metrics(dryness_string):
     """

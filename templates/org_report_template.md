@@ -111,5 +111,7 @@ date_stampLastWeek: {date_stamp}
     {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_owner}_new_issues_by_day_over_last_six_months.svg", title: "New Issues over Last 6 Months" %}}
     <!-- Top Committers Bar Graph -->
     {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_owner}_top_committers.svg", title: "Top Committers" %}}
+    <!-- Top Committers Bar Graph -->
+    {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_owner}_libyear_timeline.svg", title: "Top Committers" %}}
   </div>
 </div>
