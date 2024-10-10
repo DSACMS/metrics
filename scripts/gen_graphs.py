@@ -19,6 +19,30 @@ def percent_formatter(x):
 
     return '{:0.2f}%'.format(x)
 
+def timedelta_formatter(x):
+    """
+    Function to format percentage values.
+
+    Arguments:
+        x: Value to format into days
+    Returns:
+        A string containing the formatted version of x
+    """
+
+    return '{} days'.format(x.days)
+
+def ignore_formatter(x):
+    """
+    Function to ignore values in formatting
+
+    Arguments:
+        x: Value to ignore
+    Returns:
+        A string containing the formatted version of x
+    """
+
+    return ''
+
 def generate_all_graphs_for_repos(all_repos):
     """
     Function to generate and save all graphs for the input
@@ -317,7 +341,8 @@ def generate_libyears_graph(oss_entity):
     #timeline object
     #TODO: Contribute upstream to add a timeline object to pygal
     dateline = pygal.TimeDeltaLine(x_label_rotation=25,legend_at_bottom=True)
-
+    dateline.x_value_formatter = timedelta_formatter
+    dateline.value_formatter = ignore_formatter
     dateline.title = 'Dependency Libyears: Age of Dependency Version in Days'
 
     dep_list = parse_libyear_list(raw_dep_list)
@@ -348,7 +373,7 @@ def parse_cocomo_dryness_metrics(dryness_string):
 
     Arguments:
         dryness_string: the string containing the dryness table to parse
-    
+
     Returns:
         A dictionary with the unique lines of code and DRYness percentage
     """
@@ -376,7 +401,7 @@ def generate_dryness_percentage_graph(oss_entity):
     WETness = 1 - DRYness
 
     DRY = Don't repeat yourself
-    WET = Waste Everybody's time or Write Everything Twice 
+    WET = Waste Everybody's time or Write Everything Twice
     """
 
     dryness_values = parse_cocomo_dryness_metrics(
@@ -401,7 +426,7 @@ def generate_dryness_percentage_graph(oss_entity):
 
     #Will cause a value error if the dryness value is NaN which can happen.
     pie_chart.add(
-        'Source Lines of Code (SLOC) %', 
+        'Source Lines of Code (SLOC) %',
         #sloc = uloc / DRYness
         sloc_percent
     )
