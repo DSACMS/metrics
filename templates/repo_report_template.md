@@ -117,4 +117,6 @@ date_stampLastWeek: {date_stamp}
     {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/DRYness_{repo_name}_data.svg", title: "DRYness Percentage Graph" %}}
      <!-- Language Summary Chart -->
     {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/language_summary_{repo_name}_data.svg", title: "Language Summary" %}}
+    <!-- Cost Estimate Chart -->
+    {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/estimated_project_costs_{repo_name}_data.svg", title: "Estimated Costs" %}}
 </div>
