@@ -1,7 +1,22 @@
 ---
 layout: base
 ---
+<script>
+  function toggleDateAge(element) {
+    const dateSpan = element.querySelector(".date");
+    const ageSpan = element.querySelector(".age");
+  
+    if (ageSpan.style.display === "none") {
+      dateSpan.style.display = "none";
+      ageSpan.style.display = "inline";
+    } else {
+      dateSpan.style.display = "inline";
+      ageSpan.style.display = "none";
+    }
+  }
+</script>
 <script src="{{ "/assets/js/graphs.js" | url }}"></script>
+
 <div class="grid-container">
   {% assign project = projects | findObject: repo %}
 
@@ -172,13 +187,18 @@ layout: base
           </div>
           <p onclick="toggleDateAge(this)" style="cursor: pointer;">
             <span class="date">
-              {{ project.created_at | date: "%B %d, %Y" }}
+              {{ project.created_at | date: '%B %d, %Y' }}
             </span>
             <span class="age" style="display: none;">
-              {% assign created_date = project.created_at | date: "%s" | plus: 0 %}
-              {% assign current_date = "now" | date: "%s" | plus: 0 %}
+              {% comment %} takes project created + todays date and turns it into seconds {% endcomment %}
+              {% assign created_date = project.created_at | date: '%s' | plus: 0 %}
+              {% assign current_date = 'now' | date: '%s' | plus: 0 %}
+
               {% assign age_seconds = current_date | minus: created_date %}
+
+              {% comment %} divide by how many seconds are in a day to convert back into days {% endcomment %}
               {% assign age_days = age_seconds | divided_by: 86400.0 | round %}
+
               {{ age_days }} day{% if age_days != 1 %}s{% endif %}
             </span>
           </p>

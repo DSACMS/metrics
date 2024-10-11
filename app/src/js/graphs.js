@@ -17,17 +17,3 @@ window.showGraph = function (selectedGraphId, className, buttonName) {
     }
   })
 }
-
-// goes inside includes/js for the time being
-function toggleDateAge(element) {
-  const dateSpan = element.querySelector('.date');
-  const ageSpan = element.querySelector('.age');
-  
-  if (ageSpan.style.display === 'none') {
-    dateSpan.style.display = 'none';
-    ageSpan.style.display = 'inline';
-  } else {
-    dateSpan.style.display = 'inline';
-    ageSpan.style.display = 'none';
-  }
-}
