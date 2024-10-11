@@ -344,9 +344,13 @@ def generate_libyears_graph(oss_entity):
     dateline = pygal.TimeDeltaLine(x_label_rotation=25,legend_at_bottom=True)
     dateline.x_value_formatter = timedelta_formatter
     dateline.value_formatter = ignore_formatter
-    dateline.title = 'Dependency Libyears: Age of Dependency Version in Days'
+
 
     dep_list = parse_libyear_list(raw_dep_list)
+    total_libyears_ood = sum(n['libyear_value'] for n in dep_list)
+
+    dateline.title = f"""Dependency Libyears: Age of Dependency Version in Days 
+        \nTotal Libyears: {total_libyears_ood}"""
 
     #We are going to treat the y-axis as having one dep per level in the graph
     elevation = 0
