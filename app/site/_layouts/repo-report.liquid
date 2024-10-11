@@ -3,16 +3,16 @@ layout: base
 ---
 <script>
   function toggleDateAge(element) {
-    const dateSpan = element.querySelector(".date");
-    const ageSpan = element.querySelector(".age");
+    const dateElements = element.querySelectorAll(".date");
+    const ageElements = element.querySelectorAll(".age");
   
-    if (ageSpan.style.display === "none") {
-      dateSpan.style.display = "none";
-      ageSpan.style.display = "inline";
-    } else {
-      dateSpan.style.display = "inline";
-      ageSpan.style.display = "none";
-    }
+    dateElements.forEach(element => {
+      element.style.display = element.style.display === 'none' ? 'inline' : 'none';
+    });
+  
+    ageElements.forEach(element => {
+      element.style.display = element.style.display === 'none' ? 'inline' : 'none';
+    });
   }
 </script>
 <script src="{{ "/assets/js/graphs.js" | url }}"></script>
@@ -170,7 +170,7 @@ layout: base
           </div>
           <p>{{ project.pull_requests_count }}</p>
         </div>
-        <div class="stat-container" id="project-age">
+        <div class="stat-container" id="project-age" onclick="toggleDateAge(this)" style="cursor: pointer;">
           <div class="project-age-heading">
             <h4>
               <span>
@@ -182,10 +182,11 @@ layout: base
                   {% lucide "calendar" %}
                 </svg>
               </span>
-              Age Of Project
+              <span class="date">Project Creation Date</span>
+              <span class="age" style="display: none;">Age of Project</span>
             </h4>
           </div>
-          <p onclick="toggleDateAge(this)" style="cursor: pointer;">
+          <p style= "text-decoration: underline;">
             <span class="date">
               {{ project.created_at | date: '%B %d, %Y' }}
             </span>
