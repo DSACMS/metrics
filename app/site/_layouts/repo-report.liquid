@@ -3,14 +3,14 @@ layout: base
 ---
 <script>
   function toggleDateAge(element) {
-    const dateElements = element.querySelectorAll(".date");
-    const ageElements = element.querySelectorAll(".age");
+    const dateElements = element.querySelectorAll('.date');
+    const ageElements = element.querySelectorAll('.age');
   
-    dateElements.forEach(element => {
+    dateElements.forEach((element) => {
       element.style.display = element.style.display === 'none' ? 'inline' : 'none';
     });
   
-    ageElements.forEach(element => {
+    ageElements.forEach((element) => {
       element.style.display = element.style.display === 'none' ? 'inline' : 'none';
     });
   }
@@ -186,7 +186,7 @@ layout: base
               <span class="age" style="display: none;">Age of Project</span>
             </h4>
           </div>
-          <p style= "text-decoration: underline;">
+          <p style="text-decoration: underline;">
             <span class="date">
               {{ project.created_at | date: '%B %d, %Y' }}
             </span>
