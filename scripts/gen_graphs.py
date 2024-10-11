@@ -368,6 +368,7 @@ def generate_cost_estimates_bar_chart(oss_entity):
 
     bar_chart.add(f'Estimated Cost Low (${estimatedCost_low:,.2f})', estimatedCost_low)
     bar_chart.add(f'Estimated Cost High (${estimatedCost_high:,.2f})', estimatedCost_high)
+    print("test")
 
     write_repo_chart_to_file(oss_entity, bar_chart, "estimated_project_costs")
 
