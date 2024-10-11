@@ -349,8 +349,8 @@ def generate_libyears_graph(oss_entity):
     dep_list = parse_libyear_list(raw_dep_list)
     total_libyears_ood = sum(n['libyear_value'] for n in dep_list)
 
-    dateline.title = f"""Dependency Libyears: Age of Dependency Version in Days 
-        \nTotal Libyears: {total_libyears_ood}"""
+    dateline.title = f"""Dependency Libyears: Age of Dependency Version
+        Total Libyears: {round(total_libyears_ood,1)}"""
 
     #We are going to treat the y-axis as having one dep per level in the graph
     elevation = 0
@@ -443,7 +443,7 @@ def generate_language_summary_pie_chart(oss_entity):
     """
     This function generates a pygal pie chart for programming languages and total lines written in each language.
     The total LoC is displayed in the chart's title.
-    
+
     Arguments:
         oss_entity: the OSSEntity to create a graph for.
     """
@@ -452,10 +452,11 @@ def generate_language_summary_pie_chart(oss_entity):
 
     language_summary = oss_entity.metric_data.get('cocomo', {}).get('languageSummary')
     if not language_summary:
-        raise ValueError("No valid 'languageSummary' found in the data.")
+        print("No valid 'languageSummary' found in the data.")
+        return
 
     total_loc = sum(entry.get('Code', 0) for entry in language_summary)
-    
+
     pie_chart.title = f'Language Summary (Total SLOC: {total_loc:,})'
 
     pie_chart.value_formatter = lambda x: f'{x} SLOC'
