@@ -2,8 +2,46 @@
 Module to define methods to create pygals graphs
 """
 import datetime
+from datetime import timedelta
 import re
 import pygal
+
+
+def percent_formatter(x):
+    """
+    Function to format percentage values.
+
+    Arguments:
+        x: Value to format into a percent
+    Returns:
+        A string containing the formatted version of x
+    """
+
+    return '{:0.2f}%'.format(x)
+
+def timedelta_formatter(x):
+    """
+    Function to format percentage values.
+
+    Arguments:
+        x: Value to format into days
+    Returns:
+        A string containing the formatted version of x
+    """
+
+    return '{} days'.format(x.days)
+
+def ignore_formatter(x):
+    """
+    Function to ignore values in formatting
+
+    Arguments:
+        x: Value to ignore
+    Returns:
+        A string containing the formatted version of x
+    """
+
+    return ''
 
 def generate_all_graphs_for_repos(all_repos):
     """
@@ -33,6 +71,11 @@ def generate_all_graphs_for_repos(all_repos):
             print(e)
 
         try:
+            generate_libyears_graph(repo)
+        except KeyError:
+            print(f"Repository {repo.name} has no deps data associated with it!")
+
+        try:
             generate_dryness_percentage_graph(repo)
         except ValueError as e:
             print("Could not parse DRYness due to percentage values being invalid!")
@@ -55,9 +98,14 @@ def generate_all_graphs_for_orgs(all_orgs):
         generate_time_xy_issue_graph(org, "new_issues_by_day_over_last_month", "New Issues")
         generate_top_committer_bar_graph(org)
 
+        try:
+            generate_libyears_graph(org)
+        except KeyError:
+            print(f"Org {org.name} has no deps data associated with it!")
+
 def write_repo_chart_to_file(repo, chart, chart_name, custom_func=None, custom_func_params={}):
     """
-    This function's purpose is to save a pygals chart to a path derived from the 
+    This function's purpose is to save a pygals chart to a path derived from the
     repository object passed in.
 
     Arguments:
@@ -134,7 +182,7 @@ def generate_donut_graph_line_complexity_graph(oss_entity):
     for a set of Repository objects.
 
     Arguments:
-        oss_entity: The OSSEntity to create a graph for. an 
+        oss_entity: The OSSEntity to create a graph for. an
             OSSEntity is a data structure that is typically
             a repository or an organization.
     """
@@ -165,8 +213,6 @@ def generate_solid_gauge_issue_graph(oss_entity):
 
     issues_gauge = pygal.SolidGauge(inner_radius=0.70, legend_at_bottom=True)
 
-    def percent_formatter(x):
-        return '{:0.2f}%'.format(x)
     issues_gauge.value_formatter = percent_formatter
 
     # Generate graph to measure percentage of issues that are open
@@ -248,6 +294,78 @@ def generate_predominant_languages_graph(oss_entity):
 
     write_repo_chart_to_file(oss_entity, bar_chart, "predominant_langs")
 
+def parse_libyear_list(dependency_list):
+    """
+    Parses the dependency list returned from the libyear metric into a list of python dictionaries
+    that have correctly parsed dates.
+
+    Arguments:
+        dependency_list: the list of lists that has the deps data
+
+    Returns:
+        A list of dictionaries describing deps
+    """
+
+    to_return = []
+    for dep in dependency_list:
+
+        #print(dep)
+        date = datetime.datetime.strptime(dep[-1], '%Y-%m-%dT%H:%M:%S.%f')
+        to_return.append(
+            {
+                "dep_name": dep[-3],
+                "libyear_value": dep[-2],
+                "libyear_date_last_updated": date
+            }
+        )
+
+    #return list sorted by date
+    return sorted(to_return, key=lambda d : d["libyear_value"])
+
+
+def generate_libyears_graph(oss_entity):
+    """
+    Generates a pygal graph to describe libyear metrics for the requested oss_entity
+
+    Arguments:
+        oss_entity: the OSSEntity to create a libyears graph for.
+    """
+
+    try:
+        raw_dep_list = oss_entity.metric_data['repo_dependency_libyear_list']
+    except KeyError:
+        raw_dep_list = oss_entity.metric_data['dependency_libyear_list']
+
+    if not raw_dep_list:
+        return
+
+    #This is going to be kind of hacky since pygals doesn't have a
+    #timeline object
+    #TODO: Contribute upstream to add a timeline object to pygal
+    dateline = pygal.TimeDeltaLine(x_label_rotation=25,legend_at_bottom=True)
+    dateline.x_value_formatter = timedelta_formatter
+    dateline.value_formatter = ignore_formatter
+    dateline.title = 'Dependency Libyears: Age of Dependency Version in Days'
+
+    dep_list = parse_libyear_list(raw_dep_list)
+
+    #We are going to treat the y-axis as having one dep per level in the graph
+    elevation = 0
+    for dep in dep_list:
+        dateline.add(dep["dep_name"], [
+            (timedelta(), elevation),
+            (timedelta(days=dep["libyear_value"] * 365), elevation),
+        ])
+
+        #move one line up so that we have no overlap in the timedeltas
+        elevation += 1
+
+        if elevation >= 40:
+            break
+
+    dateline.show_y_labels = False
+    write_repo_chart_to_file(oss_entity, dateline, "libyear_timeline")
+
 def parse_cocomo_dryness_metrics(dryness_string):
     """
     This function parses the output of the scc dryness metrics.
@@ -257,7 +375,7 @@ def parse_cocomo_dryness_metrics(dryness_string):
 
     Arguments:
         dryness_string: the string containing the dryness table to parse
-    
+
     Returns:
         A dictionary with the unique lines of code and DRYness percentage
     """
@@ -285,7 +403,7 @@ def generate_dryness_percentage_graph(oss_entity):
     WETness = 1 - DRYness
 
     DRY = Don't repeat yourself
-    WET = Waste Everybody's time or Write Everything Twice 
+    WET = Waste Everybody's time or Write Everything Twice
     """
 
     dryness_values = parse_cocomo_dryness_metrics(
@@ -299,6 +417,7 @@ def generate_dryness_percentage_graph(oss_entity):
     uloc_percent = (float(dryness_values['total_uloc']) / sloc) * 100
 
     pie_chart = pygal.Pie(half_pie=True, legend_at_bottom=True)
+    pie_chart.value_formatter = percent_formatter
     pie_chart.title = 'DRYness Percentage Graph'
 
     #print(dryness_values)
@@ -309,7 +428,7 @@ def generate_dryness_percentage_graph(oss_entity):
 
     #Will cause a value error if the dryness value is NaN which can happen.
     pie_chart.add(
-        'Source Lines of Code (SLOC) %', 
+        'Source Lines of Code (SLOC) %',
         #sloc = uloc / DRYness
         sloc_percent
     )
@@ -353,7 +472,7 @@ def generate_cost_estimates_bar_chart(oss_entity):
         oss_entity: the OSSEntity to create a graph for.
     """
 
-    bar_chart = pygal.Bar()
+    bar_chart = pygal.Bar(legend_at_bottom=True)
 
     metric_data = oss_entity.metric_data['cocomo']
 
@@ -364,7 +483,7 @@ def generate_cost_estimates_bar_chart(oss_entity):
 
     average_cost = (estimatedCost_low + estimatedCost_high) / 2
 
-    bar_chart.title = f'Estimated Project Costs in $ (Average Cost: ${average_cost:,.2f})'
+    bar_chart.title = f'Estimated Project Costs in $ From Constructive Cost Model (COCOMO) \n Average Cost: ${average_cost:,.2f}'
 
     bar_chart.add(f'Estimated Cost Low (${estimatedCost_low:,.2f})', estimatedCost_low)
     bar_chart.add(f'Estimated Cost High (${estimatedCost_high:,.2f})', estimatedCost_high)
