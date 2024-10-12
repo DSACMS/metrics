@@ -474,6 +474,7 @@ def generate_cost_estimates_bar_chart(oss_entity):
 
     bar_chart = pygal.Bar(legend_at_bottom=True)
 
+
     metric_data = oss_entity.metric_data['cocomo']
 
     estimatedCost_low = metric_data.get('estimatedCost_low', 0)
