@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-mdct-qmr | REPORT-2024-10-07
+title: Open Source at CMS Metrics Report for macpro-mdct-qmr | REPORT-2024-10-14
 permalink: /Enterprise-CMCS/macpro-mdct-qmr/
 
 org: Enterprise-CMCS
 repo: macpro-mdct-qmr
-reportID: REPORT-2024-10-07
-date_stampThisWeek: 2024-10-07
-date_stampLastWeek: 2024-10-07
+reportID: REPORT-2024-10-14
+date_stampThisWeek: 2024-10-14
+date_stampLastWeek: 2024-10-14
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-10-07
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>4551</td>
         <td>4544</td>
-        <td>4543</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.022%</td>
+        <td style="color: #45c527" >7</td>
+        <td style="color: #45c527" >0.15%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,17 +52,17 @@ date_stampLastWeek: 2024-10-07
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>4</td>
         <td>8</td>
-        <td>8</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >-4</td>
+        <td style="color: #45c527" >67%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>1526</td>
         <td>1518</td>
-        <td>1517</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.066%</td>
+        <td style="color: #45c527" >8</td>
+        <td style="color: #45c527" >0.53%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -87,10 +87,10 @@ date_stampLastWeek: 2024-10-07
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>11</td>
         <td>10</td>
-        <td>10</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >9.5%</td>
       </tr>
     </tbody>
   </table>
