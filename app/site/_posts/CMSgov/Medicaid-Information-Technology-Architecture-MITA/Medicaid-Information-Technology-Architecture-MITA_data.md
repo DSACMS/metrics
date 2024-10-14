@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for Medicaid-Information-Technology-Architecture-MITA | REPORT-2024-10-07
+title: Open Source at CMS Metrics Report for Medicaid-Information-Technology-Architecture-MITA | REPORT-2024-10-14
 permalink: /CMSgov/Medicaid-Information-Technology-Architecture-MITA/
 
 org: CMSgov
 repo: Medicaid-Information-Technology-Architecture-MITA
-reportID: REPORT-2024-10-07
-date_stampThisWeek: 2024-10-07
-date_stampLastWeek: 2024-10-07
+reportID: REPORT-2024-10-14
+date_stampThisWeek: 2024-10-14
+date_stampLastWeek: 2024-10-14
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-10-07
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>99</td>
         <td>95</td>
-        <td>95</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >4</td>
+        <td style="color: #45c527" >4.1%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -59,10 +59,10 @@ date_stampLastWeek: 2024-10-07
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>8</td>
         <td>6</td>
-        <td>6</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >29%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
