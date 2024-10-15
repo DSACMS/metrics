@@ -58,6 +58,7 @@ def generate_all_graphs_for_repos(all_repos):
         generate_predominant_languages_graph(repo)
         generate_language_summary_pie_chart(repo)
         generate_cost_estimates_bar_chart(repo)
+        generate_time_estimates_bar_chart(repo)
         try:
             generate_donut_graph_line_complexity_graph(repo)
             generate_time_xy_issue_graph(
@@ -453,7 +454,7 @@ def generate_language_summary_pie_chart(oss_entity):
 
     total_loc = sum(entry.get('Code', 0) for entry in language_summary)
     
-    pie_chart.title = f'Language Summary (Total SLOC: {total_loc:,})'
+    pie_chart.title = f'Language Summary \n Total Source Lines of Code (SLOC): {total_loc:,}'
 
     pie_chart.value_formatter = lambda x: f'{x} SLOC'
 
@@ -491,3 +492,29 @@ def generate_cost_estimates_bar_chart(oss_entity):
 
     write_repo_chart_to_file(oss_entity, bar_chart, "estimated_project_costs")
 
+
+def generate_time_estimates_bar_chart(oss_entity):
+    """
+    This function generates a pygal bar chart for estimated time of project in months rounded to the nearest tenth.
+
+    Arguments:
+        oss_entity: the OSSEntity to create a graph for.
+    """
+
+    bar_chart = pygal.Bar(legend_at_bottom=True)
+
+    metric_data = oss_entity.metric_data['cocomo']
+
+    estimatedScheduleMonths_low = metric_data.get('estimatedScheduleMonths_low', 0)
+    estimatedScheduleMonths_high = metric_data.get('estimatedScheduleMonths_high', 0)
+
+    bar_chart.value_formatter = lambda x: f'{x:,.1f} mos'
+
+    average_time = (estimatedScheduleMonths_low + estimatedScheduleMonths_high) / 2
+
+    bar_chart.title = f'Estimated Project Time in Months From Constructive Cost Model (COCOMO) \n Average Time: {average_time:,.1f} mos'
+
+    bar_chart.add(f'Estimated Time Low ({estimatedScheduleMonths_low:,.1f} mos)', estimatedScheduleMonths_low)
+    bar_chart.add(f'Estimated Time High ({estimatedScheduleMonths_high:,.1f} mos)', estimatedScheduleMonths_high)
+
+    write_repo_chart_to_file(oss_entity, bar_chart, "estimated_project_time")
