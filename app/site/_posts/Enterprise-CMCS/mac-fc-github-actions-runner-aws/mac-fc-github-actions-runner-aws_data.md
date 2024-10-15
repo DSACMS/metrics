@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for mac-fc-github-actions-runner-aws | REPORT-2024-10-07
+title: Open Source at CMS Metrics Report for mac-fc-github-actions-runner-aws | REPORT-2024-10-14
 permalink: /Enterprise-CMCS/mac-fc-github-actions-runner-aws/
 
 org: Enterprise-CMCS
 repo: mac-fc-github-actions-runner-aws
-reportID: REPORT-2024-10-07
-date_stampThisWeek: 2024-10-07
-date_stampLastWeek: 2024-10-07
+reportID: REPORT-2024-10-14
+date_stampThisWeek: 2024-10-14
+date_stampLastWeek: 2024-10-14
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-10-07
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>349</td>
         <td>348</td>
-        <td>348</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.29%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,17 +52,17 @@ date_stampLastWeek: 2024-10-07
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>4</td>
         <td>5</td>
-        <td>5</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >-1</td>
+        <td style="color: #45c527" >22%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>154</td>
         <td>153</td>
-        <td>153</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.65%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>

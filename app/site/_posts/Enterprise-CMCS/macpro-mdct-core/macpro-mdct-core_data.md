@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-mdct-core | REPORT-2024-10-07
+title: Open Source at CMS Metrics Report for macpro-mdct-core | REPORT-2024-10-14
 permalink: /Enterprise-CMCS/macpro-mdct-core/
 
 org: Enterprise-CMCS
 repo: macpro-mdct-core
-reportID: REPORT-2024-10-07
-date_stampThisWeek: 2024-10-07
-date_stampLastWeek: 2024-10-07
+reportID: REPORT-2024-10-14
+date_stampThisWeek: 2024-10-14
+date_stampLastWeek: 2024-10-14
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -87,10 +87,10 @@ date_stampLastWeek: 2024-10-07
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>10</td>
         <td>9</td>
-        <td>9</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >11%</td>
       </tr>
     </tbody>
   </table>
