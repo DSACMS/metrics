@@ -516,3 +516,4 @@ def generate_time_estimates_bar_chart(oss_entity):
     bar_chart.add(f'Estimated Time Low ({estimatedScheduleMonths_low:,.1f} mos)', estimatedScheduleMonths_low)
    
     write_repo_chart_to_file(oss_entity, bar_chart, "estimated_project_time")
+    
