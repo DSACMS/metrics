@@ -119,4 +119,6 @@ date_stampLastWeek: {date_stamp}
     {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/libyear_timeline_{repo_name}_data.svg", title: "Dependency Libyears" %}}
     <!-- DRYness Percentages Graph -->
     {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/DRYness_{repo_name}_data.svg", title: "DRYness Percentage Graph" %}}
+    <!-- Cost Estimate Chart -->
+    {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/estimated_project_costs_{repo_name}_data.svg", title: "Estimated Costs" %}}
 </div>
