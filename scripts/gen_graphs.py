@@ -57,6 +57,7 @@ def generate_all_graphs_for_repos(all_repos):
         generate_repo_sparklines(repo)
         generate_predominant_languages_graph(repo)
         generate_language_summary_pie_chart(repo)
+        generate_cost_estimates_bar_chart(repo)
         try:
             generate_donut_graph_line_complexity_graph(repo)
             generate_time_xy_issue_graph(
@@ -466,3 +467,32 @@ def generate_language_summary_pie_chart(oss_entity):
         pie_chart.add(entry['Name'], code_lines)
 
     write_repo_chart_to_file(oss_entity, pie_chart, "language_summary")
+
+
+def generate_cost_estimates_bar_chart(oss_entity):
+    """
+    This function generates a pygal bar chart for estimated costs with rounded values and a dollar sign.
+
+    Arguments:
+        oss_entity: the OSSEntity to create a graph for.
+    """
+
+    bar_chart = pygal.Bar(legend_at_bottom=True)
+
+
+    metric_data = oss_entity.metric_data['cocomo']
+
+    estimatedCost_low = metric_data.get('estimatedCost_low', 0)
+    estimatedCost_high = metric_data.get('estimatedCost_high', 0)
+
+    bar_chart.value_formatter = lambda x: f'${x:,.2f}'
+
+    average_cost = (estimatedCost_low + estimatedCost_high) / 2
+
+    bar_chart.title = f'Estimated Project Costs in $ From Constructive Cost Model (COCOMO) \n Average Cost: ${average_cost:,.2f}'
+
+    bar_chart.add(f'Estimated Cost Low (${estimatedCost_low:,.2f})', estimatedCost_low)
+    bar_chart.add(f'Estimated Cost High (${estimatedCost_high:,.2f})', estimatedCost_high)
+
+    write_repo_chart_to_file(oss_entity, bar_chart, "estimated_project_costs")
+
