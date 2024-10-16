@@ -95,9 +95,7 @@ class BaseMetric:
                 if response.status_code == 200:
                     response_json = json.loads(response.text)
                     break
-
-                #check for rate limit response
-                if response.status_code in (403,429):
+                elif response.status_code in (403,429):
                     #rate limit was triggered.
                     wait_until = int(response.headers.get("x-ratelimit-reset"))
                     wait_in_seconds = int(
