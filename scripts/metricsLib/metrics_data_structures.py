@@ -8,7 +8,7 @@ from time import sleep, mktime, gmtime, time, localtime
 from functools import reduce
 import operator
 import requests
-from metricsLib.constants import TIMEOUT_IN_SECONDS, GH_GQL_ENDPOINT
+from metricsLib.constants import TIMEOUT_IN_SECONDS, GH_GQL_ENDPOINT, REQUEST_RETRIES
 
 # Simple metric that can be represented by a count or value.
 
@@ -78,7 +78,7 @@ class BaseMetric:
 
         attempts = 0
 
-        while attempts < 10:
+        while attempts < REQUEST_RETRIES:
             if self.headers:
                 _args_ = (self.method, endpoint_to_hit)
                 _kwargs_ = {
@@ -112,6 +112,11 @@ class BaseMetric:
 
                     response_json = {}
                     attempts += 1
+
+                    if attempts >= REQUEST_RETRIES:
+                        raise ConnectionError(
+                            f"Rate limit was reached and couldn't be rectified after {attempts} tries"
+                        )
                 else:
                     raise ConnectionError(f"Non valid status code {response.status_code}!")
             except JSONDecodeError:
