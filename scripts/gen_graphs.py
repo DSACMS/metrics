@@ -443,7 +443,9 @@ def generate_dryness_percentage_graph(oss_entity):
 
 def generate_language_summary_pie_chart(oss_entity):
     """
-    This function generates a pygal pie chart for programming languages and total lines written in each language.
+    This function generates a pygal pie chart for programming languages 
+    and total lines written in each language.
+
     The total LoC is displayed in the chart's title.
 
     Arguments:
@@ -472,7 +474,8 @@ def generate_language_summary_pie_chart(oss_entity):
 
 def generate_cost_estimates_bar_chart(oss_entity):
     """
-    This function generates a pygal bar chart for estimated costs with rounded values and a dollar sign.
+    This function generates a pygal bar chart for estimated costs 
+    with rounded values and a dollar sign.
 
     Arguments:
         oss_entity: the OSSEntity to create a graph for.
@@ -480,27 +483,33 @@ def generate_cost_estimates_bar_chart(oss_entity):
 
     bar_chart = pygal.Bar(legend_at_bottom=True)
 
+    if oss_entity.metric_data is not None:
+        metric_data = oss_entity.metric_data.get('cocomo', {})
+        estimated_cost_low = metric_data.get('estimatedCost_low', 0)
+        estimated_cost_high = metric_data.get('estimatedCost_high', 0)
+    else:
+        estimated_cost_low = 0.0
+        estimated_cost_high = 0.0
 
-    metric_data = oss_entity.metric_data['cocomo']
-
-    estimatedCost_low = metric_data.get('estimatedCost_low', 0)
-    estimatedCost_high = metric_data.get('estimatedCost_high', 0)
+    formatted_estimated_cost_low = float(estimated_cost_low or 0.0)
+    formatted_estimated_cost_high = float(estimated_cost_high or 0.0)
 
     bar_chart.value_formatter = lambda x: f'${x:,.2f}'
 
-    average_cost = (estimatedCost_low + estimatedCost_high) / 2
+    average_cost = (formatted_estimated_cost_low + formatted_estimated_cost_high) / 2
 
     bar_chart.title = f'Estimated Project Costs in $ From Constructive Cost Model (COCOMO) \n Average Cost: ${average_cost:,.2f}'
 
-    bar_chart.add(f'Estimated Cost Low (${estimatedCost_low:,.2f})', estimatedCost_low)
-    bar_chart.add(f'Estimated Cost High (${estimatedCost_high:,.2f})', estimatedCost_high)
+    bar_chart.add(f'Estimated Cost Low (${formatted_estimated_cost_low:,.2f})', estimated_cost_low)
+    bar_chart.add(f'Estimated Cost High (${formatted_estimated_cost_high:,.2f})', estimated_cost_high)
 
     write_repo_chart_to_file(oss_entity, bar_chart, "estimated_project_costs")
 
 
 def generate_time_estimates_bar_chart(oss_entity):
     """
-    This function generates a pygal bar chart for estimated time of project in months rounded to the nearest tenth.
+    This function generates a pygal bar chart for estimated time 
+    of project in months rounded to the nearest tenth.
 
     estimatedScheduleMonths_low is used for time.
 
@@ -510,16 +519,50 @@ def generate_time_estimates_bar_chart(oss_entity):
 
     bar_chart = pygal.Bar(legend_at_bottom=True)
 
-    metric_data = oss_entity.metric_data['cocomo']
+    if oss_entity.metric_data is not None:
+        metric_data = oss_entity.metric_data.get('cocomo', {})
+        estimatedScheduleMonths_low = metric_data.get('estimatedScheduleMonths_low', 0)
+    else:
+        estimatedScheduleMonths_low = 0
 
-    estimatedScheduleMonths_low = metric_data.get('estimatedScheduleMonths_low', 0)
+    formatted_estimated_months = float(estimatedScheduleMonths_low or 0.0)
 
     bar_chart.value_formatter = lambda x: f'{x:,.1f} mos'
 
     bar_chart.title = 'Estimated Project Time in Months From Constructive Cost Model (COCOMO)'
 
     bar_chart.add(None, [0])
-    bar_chart.add(f'Estimated Time ({estimatedScheduleMonths_low:,.1f} mos)', estimatedScheduleMonths_low)
+    bar_chart.add(f'Estimated Time ({formatted_estimated_months:,.1f} mos)', estimatedScheduleMonths_low)
     bar_chart.add(None, [0])
 
     write_repo_chart_to_file(oss_entity, bar_chart, "estimated_project_time")
+
+
+def generate_people_estimate_bar_chart(oss_entity):
+    """
+    This function generates a pygal bar chart for estimated people 
+    working on the project rounded to the nearest integer.
+
+    estimatedPeople_low is used for contributors.
+
+    Arguments:
+        oss_entity: the OSSEntity to create a graph for.
+    """
+
+    bar_chart = pygal.Bar(legend_at_bottom=True)
+
+    if oss_entity.metric_data is not None:
+        metric_data = oss_entity.metric_data.get('cocomo', {})
+        estimatedPeople_low = metric_data.get('estimatedPeople_low', 0)
+    else:
+        estimatedPeople_low = 0
+
+    bar_chart.value_formatter = lambda x: f'{x:,.0f} ppl'
+
+    bar_chart.title = 'Estimated Individual Project Contributors From Constructive Cost Model (COCOMO)'
+
+    bar_chart.add(None, [0])
+    bar_chart.add(f'Estimated Contributors ({estimatedPeople_low:,.0f} ppl)', estimatedPeople_low)
+    bar_chart.add(None, [0])
+
+    write_repo_chart_to_file(oss_entity, bar_chart, "estimated_people_contributing")
