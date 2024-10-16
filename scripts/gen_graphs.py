@@ -496,12 +496,15 @@ def generate_cost_estimates_bar_chart(oss_entity):
 
     bar_chart.value_formatter = lambda x: f'${x:,.2f}'
 
-    average_cost = (formatted_estimated_cost_low + formatted_estimated_cost_high) / 2
+    average_cost = (formatted_estimated_cost_low + 
+                    formatted_estimated_cost_high) / 2
 
     bar_chart.title = f'Estimated Project Costs in $ From Constructive Cost Model (COCOMO) \n Average Cost: ${average_cost:,.2f}'
 
-    bar_chart.add(f'Estimated Cost Low (${formatted_estimated_cost_low:,.2f})', estimated_cost_low)
-    bar_chart.add(f'Estimated Cost High (${formatted_estimated_cost_high:,.2f})', estimated_cost_high)
+    bar_chart.add(f'Estimated Cost Low (${formatted_estimated_cost_low:,.2f})', 
+                  estimated_cost_low)
+    bar_chart.add(f'Estimated Cost High (${formatted_estimated_cost_high:,.2f})', 
+                  estimated_cost_high)
 
     write_repo_chart_to_file(oss_entity, bar_chart, "estimated_project_costs")
 
@@ -521,18 +524,19 @@ def generate_time_estimates_bar_chart(oss_entity):
 
     if oss_entity.metric_data is not None:
         metric_data = oss_entity.metric_data.get('cocomo', {})
-        estimatedScheduleMonths_low = metric_data.get('estimatedScheduleMonths_low', 0)
+        estimated_schedule_months_low = metric_data.get('estimatedScheduleMonths_low', 0)
     else:
-        estimatedScheduleMonths_low = 0
+        estimated_schedule_months_low = 0
 
-    formatted_estimated_months = float(estimatedScheduleMonths_low or 0.0)
+    formatted_estimated_months = float(estimated_schedule_months_low or 0.0)
 
     bar_chart.value_formatter = lambda x: f'{x:,.1f} mos'
 
     bar_chart.title = 'Estimated Project Time in Months From Constructive Cost Model (COCOMO)'
 
     bar_chart.add(None, [0])
-    bar_chart.add(f'Estimated Time ({formatted_estimated_months:,.1f} mos)', estimatedScheduleMonths_low)
+    bar_chart.add(f'Estimated Time ({formatted_estimated_months:,.1f} mos)', 
+                  estimated_schedule_months_low)
     bar_chart.add(None, [0])
 
     write_repo_chart_to_file(oss_entity, bar_chart, "estimated_project_time")
@@ -553,16 +557,16 @@ def generate_people_estimate_bar_chart(oss_entity):
 
     if oss_entity.metric_data is not None:
         metric_data = oss_entity.metric_data.get('cocomo', {})
-        estimatedPeople_low = metric_data.get('estimatedPeople_low', 0)
+        estimated_people_low = metric_data.get('estimatedPeople_low', 0)
     else:
-        estimatedPeople_low = 0
+        estimated_people_low = 0
 
     bar_chart.value_formatter = lambda x: f'{x:,.0f} ppl'
 
     bar_chart.title = 'Estimated Individual Project Contributors From Constructive Cost Model (COCOMO)'
 
     bar_chart.add(None, [0])
-    bar_chart.add(f'Estimated Contributors ({estimatedPeople_low:,.0f} ppl)', estimatedPeople_low)
+    bar_chart.add(f'Estimated Contributors ({estimated_people_low:,.0f} ppl)', estimated_people_low)
     bar_chart.add(None, [0])
 
     write_repo_chart_to_file(oss_entity, bar_chart, "estimated_people_contributing")
