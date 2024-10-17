@@ -568,7 +568,7 @@ def generate_people_estimate_bar_chart(oss_entity):
     bar_chart.add(None, [0])
 
     write_repo_chart_to_file(oss_entity, bar_chart, "estimated_people_contributing")
-git 
+
 def generate_average_issue_resolution_graph(oss_entity):
     """
     This function generates a pygal gauge chart for average issue resolution time.
