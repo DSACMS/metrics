@@ -590,9 +590,7 @@ def generate_average_issue_resolution_graph(oss_entity):
     days_str = average_time_str.split(' days ')
     days = int(days_str[0])
 
-    random_numbers = [10,20,30,40,50,60]
-
-    gauge_graph.range = [0, (days + random.choice(random_numbers))]
+    gauge_graph.range = [0, round((days + 20))]
 
     gauge_graph.title = f"Average Issue Resolution Time for {repo_name} \n Average Time: {round(days)} days"
     gauge_graph.add("Days", round(days))
