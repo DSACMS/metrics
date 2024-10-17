@@ -485,25 +485,22 @@ def generate_cost_estimates_bar_chart(oss_entity):
 
     if oss_entity.metric_data is not None:
         metric_data = oss_entity.metric_data.get('cocomo', {})
-        estimated_cost_low = metric_data.get('estimatedCost_low', 0)
-        estimated_cost_high = metric_data.get('estimatedCost_high', 0)
+        estimated_cost_low = float(metric_data.get('estimatedCost_low', 0) or 0.0)
+        estimated_cost_high = float(metric_data.get('estimatedCost_high', 0) or 0.0)
     else:
         estimated_cost_low = 0.0
         estimated_cost_high = 0.0
 
-    formatted_estimated_cost_low = float(estimated_cost_low or 0.0)
-    formatted_estimated_cost_high = float(estimated_cost_high or 0.0)
-
     bar_chart.value_formatter = lambda x: f'${x:,.2f}'
 
-    average_cost = (formatted_estimated_cost_low + 
-                    formatted_estimated_cost_high) / 2
+    average_cost = (estimated_cost_low +
+                    estimated_cost_high) / 2
 
     bar_chart.title = f'Estimated Project Costs in $ From Constructive Cost Model (COCOMO) \n Average Cost: ${average_cost:,.2f}'
 
-    bar_chart.add(f'Estimated Cost Low (${formatted_estimated_cost_low:,.2f})', 
+    bar_chart.add(f'Estimated Cost Low (${estimated_cost_low:,.2f})',
                   estimated_cost_low)
-    bar_chart.add(f'Estimated Cost High (${formatted_estimated_cost_high:,.2f})', 
+    bar_chart.add(f'Estimated Cost High (${estimated_cost_high:,.2f})',
                   estimated_cost_high)
 
     write_repo_chart_to_file(oss_entity, bar_chart, "estimated_project_costs")
