@@ -4,9 +4,8 @@ Module to define methods to create pygals graphs
 import datetime
 from datetime import timedelta
 import re
-import pygal
 import random
-
+import pygal
 
 def percent_formatter(x):
     """
@@ -569,7 +568,7 @@ def generate_people_estimate_bar_chart(oss_entity):
     bar_chart.add(None, [0])
 
     write_repo_chart_to_file(oss_entity, bar_chart, "estimated_people_contributing")
-    
+git 
 def generate_average_issue_resolution_graph(oss_entity):
     """
     This function generates a pygal gauge chart for average issue resolution time.
@@ -578,7 +577,7 @@ def generate_average_issue_resolution_graph(oss_entity):
         oss_entity: An object containing the metric data.
     """
     gauge_graph = pygal.Gauge(legend_at_bottom=True)
-    
+
     metric_data = oss_entity.metric_data.get('average_issue_resolution_time')
     if not metric_data or not metric_data[0]:
         print("No data available for average issue resolution time")
