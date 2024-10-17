@@ -184,7 +184,6 @@ RESOURCE_METRICS.append(ResourceMetric("firstResponseForClosedPR", sixMonthsPara
                                 AUGUR_HOST + "/pull_request_reports/PR_time_to_first_response/" +
                                 "?repo_id={repo_id}&start_date={begin_month}&end_date={end_date}"))
 
-
 ORG_GITHUB_GRAPHQL_QUERY = """
 query ($org_login: String!) {
   organization(login: $org_login) {
@@ -252,3 +251,12 @@ ADVANCED_METRICS.append(ListMetric(
   }
   )
 )
+
+SIMPLE_METRICS.append(ListMetric("averageIssueResolutionTime", sixMonthsParams, AUGUR_HOST + "/repos/" + "{repo_id}" + "/average-issue-resolution-time", {"average_issue_resolution_time": ["repo_name", "avg_issue_resolution_time"]}))
+
+# Metric for Average Commit Counts per PR
+# TODO: - Currently not working because of something wrong on Augur's end. Develop a solution here (hacky) or fix upstream.
+
+# RESOURCE_METRICS.append(ResourceMetric("averageCommitsPerPR", sixMonthsParams,
+#                                 AUGUR_HOST + "/pull_request_reports/average_commits_per_PR/" +
+#                                 "?repo_id={repo_id}&start_date={begin_month}&end_date={end_date}"))
