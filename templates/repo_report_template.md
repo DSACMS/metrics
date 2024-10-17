@@ -123,4 +123,6 @@ date_stampLastWeek: {date_stamp}
     {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/estimated_project_costs_{repo_name}_data.svg", title: "Estimated Costs" %}}
      <!-- Time Estimate Chart -->
     {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/estimated_project_time_{repo_name}_data.svg", title: "Estimated Time" %}}
+    <!-- Contributor Estimate Chart -->
+    {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/estimated_people_contributing_{repo_name}_data.svg", title: "Estimated Individual Contributors" %}}
 </div>
