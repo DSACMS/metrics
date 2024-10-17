@@ -4,7 +4,6 @@ Module to define methods to create pygals graphs
 import datetime
 from datetime import timedelta
 import re
-import random
 import pygal
 
 def percent_formatter(x):
