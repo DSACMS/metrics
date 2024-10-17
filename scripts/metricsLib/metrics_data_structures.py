@@ -336,6 +336,9 @@ class ListMetric(BaseMetric):
             # EX: storing the date and count of each time the amount of followers
             # increased.
             try:
+                #Only continue if the api_label is a list
+                if type(api_label) != list:
+                    raise TypeError
                 list(api_label)
 
                 # initialize each label as an empty list
