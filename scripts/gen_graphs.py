@@ -5,6 +5,7 @@ import datetime
 from datetime import timedelta
 import re
 import pygal
+import random
 
 
 def percent_formatter(x):
@@ -58,6 +59,7 @@ def generate_all_graphs_for_repos(all_repos):
         generate_predominant_languages_graph(repo)
         generate_language_summary_pie_chart(repo)
         generate_cost_estimates_bar_chart(repo)
+        generate_average_issue_resolution_graph(repo)
         try:
             generate_donut_graph_line_complexity_graph(repo)
             generate_time_xy_issue_graph(
@@ -491,3 +493,32 @@ def generate_cost_estimates_bar_chart(oss_entity):
 
     write_repo_chart_to_file(oss_entity, bar_chart, "estimated_project_costs")
 
+def generate_average_issue_resolution_graph(oss_entity):
+    """
+    This function generates a pygal gauge chart for average issue resolution time.
+
+    Arguments:
+        oss_entity: An object containing the metric data.
+    """
+    gauge_graph = pygal.Gauge(legend_at_bottom=True)
+    
+    metric_data = oss_entity.metric_data.get('average_issue_resolution_time')
+    if not metric_data or not metric_data[0]:
+        print("No data available for average issue resolution time")
+        return
+
+    data = metric_data[0]
+    repo_name = data[0]
+    average_time_str = data[1]
+
+    days_str = average_time_str.split(' days ')
+    days = int(days_str[0])
+
+    random_numbers = [10,20,30,40,50,60]
+
+    gauge_graph.range = [0, (days + random.choice(random_numbers))]
+
+    gauge_graph.title = f"Average Issue Resolution Time for {repo_name} \n Average Time: {round(days)} days"
+    gauge_graph.add("Days", round(days))
+
+    write_repo_chart_to_file(oss_entity, gauge_graph, "average_issue_resolution_time")

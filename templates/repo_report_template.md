@@ -113,6 +113,8 @@ date_stampLastWeek: {date_stamp}
       {{% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}}
     <!-- Predominant Languages Graph -->
     {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/predominant_langs_{repo_name}_data.svg", title: "Predominant Languages" %}}
+    <!-- Average Issue Resolution Time -->
+    {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/average_issue_resolution_time_{repo_name}_data.svg", title: "Average Issue Resolution Time" %}}
     <!-- Libyear Timeline Graph -->
     {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/libyear_timeline_{repo_name}_data.svg", title: "Dependency Libyears" %}}
     <!-- DRYness Percentages Graph -->
