@@ -4,10 +4,11 @@ Module to define classes of metrics that gather data given parameters
 import json
 from json.decoder import JSONDecodeError
 import datetime
+from time import sleep, mktime, gmtime, time, localtime
 from functools import reduce
 import operator
 import requests
-from metricsLib.constants import TIMEOUT_IN_SECONDS, GH_GQL_ENDPOINT
+from metricsLib.constants import TIMEOUT_IN_SECONDS, GH_GQL_ENDPOINT, REQUEST_RETRIES
 
 # Simple metric that can be represented by a count or value.
 
@@ -75,25 +76,52 @@ class BaseMetric:
             endpoint_to_hit = self.url.format(**params)
             request_params = None
 
-        if self.headers:
-            _args_ = (self.method, endpoint_to_hit)
-            _kwargs_ = {
-                "params": request_params,
-                "headers": self.headers,
-                "timeout": TIMEOUT_IN_SECONDS
-            }
-            response = requests.request(*_args_, **_kwargs_)
-        else:
-            response = requests.request(
-                self.method, endpoint_to_hit, params=request_params, timeout=TIMEOUT_IN_SECONDS)
+        attempts = 0
 
-        try:
-            if response.status_code == 200:
-                response_json = json.loads(response.text)
+        while attempts < REQUEST_RETRIES:
+            if self.headers:
+                _args_ = (self.method, endpoint_to_hit)
+                _kwargs_ = {
+                    "params": request_params,
+                    "headers": self.headers,
+                    "timeout": TIMEOUT_IN_SECONDS
+                }
+                response = requests.request(*_args_, **_kwargs_)
             else:
-                raise ConnectionError(f"Non valid status code {response.status_code}!")
-        except JSONDecodeError:
-            response_json = {}
+                response = requests.request(
+                    self.method, endpoint_to_hit, params=request_params, timeout=TIMEOUT_IN_SECONDS)
+
+            try:
+                if response.status_code == 200:
+                    response_json = json.loads(response.text)
+                    break
+                elif response.status_code in (403,429):
+                    #rate limit was triggered.
+                    wait_until = int(response.headers.get("x-ratelimit-reset"))
+                    wait_in_seconds = int(
+                        mktime(gmtime(wait_until)) -
+                        mktime(gmtime(time()))
+                    )
+                    wait_until_time = localtime(wait_until)
+
+                    print(f"Ran into rate limit sleeping for {self.name}!")
+                    print(
+                        f"sleeping until {wait_until_time.tm_hour}:{wait_until_time.tm_min} ({wait_in_seconds} seconds)"
+                    )
+                    sleep(wait_in_seconds)
+
+                    response_json = {}
+                    attempts += 1
+
+                    if attempts >= REQUEST_RETRIES:
+                        raise ConnectionError(
+                            f"Rate limit was reached and couldn't be rectified after {attempts} tries"
+                        )
+                else:
+                    raise ConnectionError(f"Non valid status code {response.status_code}!")
+            except JSONDecodeError:
+                response_json = {}
+                attempts += 1
 
         return response_json
 
