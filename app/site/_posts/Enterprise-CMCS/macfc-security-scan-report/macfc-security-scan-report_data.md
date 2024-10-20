@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macfc-security-scan-report | REPORT-2024-10-14
+title: Open Source at CMS Metrics Report for macfc-security-scan-report | REPORT-2024-10-20
 permalink: /Enterprise-CMCS/macfc-security-scan-report/
 
 org: Enterprise-CMCS
 repo: macfc-security-scan-report
-reportID: REPORT-2024-10-14
-date_stampThisWeek: 2024-10-14
-date_stampLastWeek: 2024-10-14
+reportID: REPORT-2024-10-20
+date_stampThisWeek: 2024-10-20
+date_stampLastWeek: 2024-10-20
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ec2ssm | REPORT-2024-10-14
+title: Open Source at CMS Metrics Report for ec2ssm | REPORT-2024-10-20
 permalink: /CMSgov/ec2ssm/
 
 org: CMSgov
 repo: ec2ssm
-reportID: REPORT-2024-10-14
-date_stampThisWeek: 2024-10-14
-date_stampLastWeek: 2024-10-14
+reportID: REPORT-2024-10-20
+date_stampThisWeek: 2024-10-20
+date_stampLastWeek: 2024-10-20
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -74,9 +74,9 @@ date_stampLastWeek: 2024-10-14
       <tr>
         <th scope="row">Forks</th>
         <td>1</td>
-        <td>0</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >200%</td>
+        <td>1</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
