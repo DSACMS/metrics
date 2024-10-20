@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-mdct-carts | REPORT-2024-10-14
+title: Open Source at CMS Metrics Report for macpro-mdct-carts | REPORT-2024-10-20
 permalink: /Enterprise-CMCS/macpro-mdct-carts/
 
 org: Enterprise-CMCS
 repo: macpro-mdct-carts
-reportID: REPORT-2024-10-14
-date_stampThisWeek: 2024-10-14
-date_stampLastWeek: 2024-10-14
+reportID: REPORT-2024-10-20
+date_stampThisWeek: 2024-10-20
+date_stampLastWeek: 2024-10-20
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-10-14
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>4007</td>
         <td>4006</td>
-        <td>4004</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >0.05%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.025%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,22 +52,22 @@ date_stampLastWeek: 2024-10-14
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>4</td>
         <td>6</td>
-        <td>6</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >-2</td>
+        <td style="color: #45c527" >40%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>1328</td>
         <td>1326</td>
-        <td>1321</td>
-        <td style="color: #45c527" >5</td>
-        <td style="color: #45c527" >0.38%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >0.15%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>330</td>
         <td>329</td>
-        <td>328</td>
         <td style="" >1</td>
         <td style="" >0.3%</td>
       </tr>
@@ -88,9 +88,9 @@ date_stampLastWeek: 2024-10-14
       <tr>
         <th scope="row">Watchers</th>
         <td>9</td>
-        <td>8</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >12%</td>
+        <td>9</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>
