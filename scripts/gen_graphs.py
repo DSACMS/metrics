@@ -223,6 +223,10 @@ def generate_solid_gauge_issue_graph(oss_entity):
             oss_entity.metric_data['issues_count']
     except ZeroDivisionError:
         open_issue_percent = 0
+    except TypeError:
+        print("Repo has no issues")
+        return
+
     issues_gauge.add(
         'Open Issues', [{'value': open_issue_percent * 100, 'max_value': 100}])
 
@@ -586,8 +590,12 @@ def generate_average_issue_resolution_graph(oss_entity):
     repo_name = data[0]
     average_time_str = data[1]
 
-    days_str = average_time_str.split(' days ')
-    days = int(days_str[0])
+    if "days" in average_time_str:
+        days_str = average_time_str.split(' days ')
+        days = int(days_str[0])
+    else:
+        print("Average issue resolution time is less than a day")
+        return
 
     gauge_graph.range = [0, round((days + 20))]
 
