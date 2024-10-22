@@ -315,17 +315,18 @@ def parse_libyear_list(dependency_list):
     for dep in dependency_list:
 
         #print(dep)
-        date = datetime.datetime.strptime(dep[-1], '%Y-%m-%dT%H:%M:%S.%f')
-        to_return.append(
-            {
-                "dep_name": dep[-3],
-                "libyear_value": dep[-2],
-                "libyear_date_last_updated": date
-            }
-        )
+        if dep[-2] >= 0:
+            date = datetime.datetime.strptime(dep[-1], '%Y-%m-%dT%H:%M:%S.%f')
+            to_return.append(
+                {
+                    "dep_name": dep[-3],
+                    "libyear_value": dep[-2],
+                    "libyear_date_last_updated": date
+                }
+            )
 
     #return list sorted by date
-    return sorted(to_return, key=lambda d : d["libyear_value"])
+    return sorted(to_return, key=lambda d : d["libyear_value"],reverse=True)
 
 
 def generate_libyears_graph(oss_entity):
