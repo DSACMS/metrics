@@ -1,9 +1,10 @@
-const production = process.env.NODE_ENV === "production"
+const isProduction = process.env.NODE_ENV.includes("production")
+const isTest = process.env.NODE_ENV.includes("test")
 
-const host = production ? "https://dsacms.github.io" : "http://0.0.0.0:8080"
+const host = (isProduction && !isTest) ? "https://dsacms.github.io" : "http://localhost:8080"
 
 // For modifying the <base> tag
-const baseurl = production ? "/metrics" : ""
+const baseurl = isProduction ? "/metrics" : ""
 
 module.exports = {
   name: "CMS Metrics Website",
@@ -13,8 +14,8 @@ module.exports = {
   baseurl,
   url: `${host}${baseurl}`,
   domain: (host || "").replace("https://", ""),
-  production,
-  robots: production,
+  production: isProduction,
+  robots: isProduction,
   locale: "en-US",
   // TODO: Add nav elements for deployment
   nav: [{ url: "/about/", label: "About" }],

@@ -3,6 +3,7 @@ import DOMPurify from 'dompurify';
 const filterBox = document.getElementById("filter-input");
 const projectsData = document.getElementById('metrics').textContent;
 const orgsData = document.getElementById('org-data').textContent;
+const siteData = JSON.parse(document.getElementById('site-data').textContent);
 const parsedOrgsData = JSON.parse(orgsData);
 const parsedProjectsData = JSON.parse(projectsData);
 const filtersContainer = document.querySelector('.filters-container');
@@ -140,6 +141,7 @@ function createProjectCards() {
     // Create all project cards for each org
     for (const repoIndex in projects[org]) {
       const repoData = projects[org][repoIndex];
+      repoData.baseurl = siteData.baseurl;
       const projectCard = document.createElement('li');
       projectCard.className = 'usa-card project-card tablet:grid-col-12';
       projectCard.id = repoData.name;

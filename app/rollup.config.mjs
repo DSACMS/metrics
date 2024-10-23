@@ -14,7 +14,7 @@ export default [
       resolve(),
       babel(),
       commonjs(),
-      ...(process.env.NODE_ENV === "production" ? [terser()] : []),
+      ...(process.env.NODE_ENV.includes("production") ? [terser()] : []),
     ],
   },
 ]
