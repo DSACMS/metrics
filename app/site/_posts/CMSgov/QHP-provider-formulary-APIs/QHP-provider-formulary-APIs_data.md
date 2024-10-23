@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for QHP-provider-formulary-APIs | REPORT-2024-10-20
+title: Open Source at CMS Metrics Report for QHP-provider-formulary-APIs | REPORT-2024-10-23
 permalink: /CMSgov/QHP-provider-formulary-APIs/
 
 org: CMSgov
 repo: QHP-provider-formulary-APIs
-reportID: REPORT-2024-10-20
-date_stampThisWeek: 2024-10-20
-date_stampLastWeek: 2024-10-20
+reportID: REPORT-2024-10-23
+date_stampThisWeek: 2024-10-23
+date_stampLastWeek: 2024-10-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -111,4 +111,20 @@ date_stampLastWeek: 2024-10-20
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/CMSgov/QHP-provider-formulary-APIs/new_commit_contributors_by_day_over_last_month_QHP-provider-formulary-APIs_data.svg, /CMSgov/QHP-provider-formulary-APIs/new_commit_contributors_by_day_over_last_six_months_QHP-provider-formulary-APIs_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Languages Graphs - Summary + Predominant -->
+    {% assign optionsArray = 'Summary, Predominant' | split: ',' %}
+    {% assign graphsArray = "/CMSgov/QHP-provider-formulary-APIs/language_summary_QHP-provider-formulary-APIs_data.svg, /CMSgov/QHP-provider-formulary-APIs/predominant_langs_QHP-provider-formulary-APIs_data.svg" | split: ',' %}
+    {% render "graph-toggle" baseurl: site.baseurl, name:"language-information" options: optionsArray, graphs: graphsArray, title: "Language Information" %}
+    <!-- Average Issue Resolution Time -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/QHP-provider-formulary-APIs/average_issue_resolution_time_QHP-provider-formulary-APIs_data.svg", title: "Average Issue Resolution Time" %}
+    <!-- Libyear Timeline Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/QHP-provider-formulary-APIs/libyear_timeline_QHP-provider-formulary-APIs_data.svg", title: "Dependency Libyears" %}
+    <!-- DRYness Percentages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/QHP-provider-formulary-APIs/DRYness_QHP-provider-formulary-APIs_data.svg", title: "DRYness Percentage Graph" %}
+    <!-- Cost Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/QHP-provider-formulary-APIs/estimated_project_costs_QHP-provider-formulary-APIs_data.svg", title: "Estimated Costs" %}
+     <!-- Time Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/QHP-provider-formulary-APIs/estimated_project_time_QHP-provider-formulary-APIs_data.svg", title: "Estimated Time" %}
+    <!-- Contributor Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/QHP-provider-formulary-APIs/estimated_people_contributing_QHP-provider-formulary-APIs_data.svg", title: "Estimated Individual Contributors" %}
 </div>

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for price-transparency-guide-validator | REPORT-2024-10-20
+title: Open Source at CMS Metrics Report for price-transparency-guide-validator | REPORT-2024-10-23
 permalink: /CMSgov/price-transparency-guide-validator/
 
 org: CMSgov
 repo: price-transparency-guide-validator
-reportID: REPORT-2024-10-20
-date_stampThisWeek: 2024-10-20
-date_stampLastWeek: 2024-10-20
+reportID: REPORT-2024-10-23
+date_stampThisWeek: 2024-10-23
+date_stampLastWeek: 2024-10-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-10-20
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>97</td>
         <td>95</td>
-        <td>95</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >2.1%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -38,31 +38,31 @@ date_stampLastWeek: 2024-10-20
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>2</td>
         <td>3</td>
-        <td>3</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >-1</td>
+        <td style="color: #45c527" >40%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
+        <td>41</td>
         <td>40</td>
-        <td>40</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >2.5%</td>
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>0</td>
         <td>1</td>
-        <td>1</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >-1</td>
+        <td style="color: #45c527" >200%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>44</td>
         <td>43</td>
-        <td>43</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >2.3%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -111,4 +111,20 @@ date_stampLastWeek: 2024-10-20
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/CMSgov/price-transparency-guide-validator/new_commit_contributors_by_day_over_last_month_price-transparency-guide-validator_data.svg, /CMSgov/price-transparency-guide-validator/new_commit_contributors_by_day_over_last_six_months_price-transparency-guide-validator_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Languages Graphs - Summary + Predominant -->
+    {% assign optionsArray = 'Summary, Predominant' | split: ',' %}
+    {% assign graphsArray = "/CMSgov/price-transparency-guide-validator/language_summary_price-transparency-guide-validator_data.svg, /CMSgov/price-transparency-guide-validator/predominant_langs_price-transparency-guide-validator_data.svg" | split: ',' %}
+    {% render "graph-toggle" baseurl: site.baseurl, name:"language-information" options: optionsArray, graphs: graphsArray, title: "Language Information" %}
+    <!-- Average Issue Resolution Time -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/price-transparency-guide-validator/average_issue_resolution_time_price-transparency-guide-validator_data.svg", title: "Average Issue Resolution Time" %}
+    <!-- Libyear Timeline Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/price-transparency-guide-validator/libyear_timeline_price-transparency-guide-validator_data.svg", title: "Dependency Libyears" %}
+    <!-- DRYness Percentages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/price-transparency-guide-validator/DRYness_price-transparency-guide-validator_data.svg", title: "DRYness Percentage Graph" %}
+    <!-- Cost Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/price-transparency-guide-validator/estimated_project_costs_price-transparency-guide-validator_data.svg", title: "Estimated Costs" %}
+     <!-- Time Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/price-transparency-guide-validator/estimated_project_time_price-transparency-guide-validator_data.svg", title: "Estimated Time" %}
+    <!-- Contributor Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/price-transparency-guide-validator/estimated_people_contributing_price-transparency-guide-validator_data.svg", title: "Estimated Individual Contributors" %}
 </div>

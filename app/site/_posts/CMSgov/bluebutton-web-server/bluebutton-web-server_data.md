@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for bluebutton-web-server | REPORT-2024-10-20
+title: Open Source at CMS Metrics Report for bluebutton-web-server | REPORT-2024-10-23
 permalink: /CMSgov/bluebutton-web-server/
 
 org: CMSgov
 repo: bluebutton-web-server
-reportID: REPORT-2024-10-20
-date_stampThisWeek: 2024-10-20
-date_stampLastWeek: 2024-10-20
+reportID: REPORT-2024-10-23
+date_stampThisWeek: 2024-10-23
+date_stampLastWeek: 2024-10-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-10-20
       <tr>
         <th scope="row">Commits</th>
         <td>3511</td>
-        <td>3509</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >0.057%</td>
+        <td>3511</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -53,16 +53,16 @@ date_stampLastWeek: 2024-10-20
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>6</td>
-        <td>7</td>
-        <td style="color: #45c527" >-1</td>
-        <td style="color: #45c527" >15%</td>
+        <td>6</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>1007</td>
-        <td>1005</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >0.2%</td>
+        <td>1007</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -111,4 +111,20 @@ date_stampLastWeek: 2024-10-20
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/CMSgov/bluebutton-web-server/new_commit_contributors_by_day_over_last_month_bluebutton-web-server_data.svg, /CMSgov/bluebutton-web-server/new_commit_contributors_by_day_over_last_six_months_bluebutton-web-server_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Languages Graphs - Summary + Predominant -->
+    {% assign optionsArray = 'Summary, Predominant' | split: ',' %}
+    {% assign graphsArray = "/CMSgov/bluebutton-web-server/language_summary_bluebutton-web-server_data.svg, /CMSgov/bluebutton-web-server/predominant_langs_bluebutton-web-server_data.svg" | split: ',' %}
+    {% render "graph-toggle" baseurl: site.baseurl, name:"language-information" options: optionsArray, graphs: graphsArray, title: "Language Information" %}
+    <!-- Average Issue Resolution Time -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/bluebutton-web-server/average_issue_resolution_time_bluebutton-web-server_data.svg", title: "Average Issue Resolution Time" %}
+    <!-- Libyear Timeline Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/bluebutton-web-server/libyear_timeline_bluebutton-web-server_data.svg", title: "Dependency Libyears" %}
+    <!-- DRYness Percentages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/bluebutton-web-server/DRYness_bluebutton-web-server_data.svg", title: "DRYness Percentage Graph" %}
+    <!-- Cost Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/bluebutton-web-server/estimated_project_costs_bluebutton-web-server_data.svg", title: "Estimated Costs" %}
+     <!-- Time Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/bluebutton-web-server/estimated_project_time_bluebutton-web-server_data.svg", title: "Estimated Time" %}
+    <!-- Contributor Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/bluebutton-web-server/estimated_people_contributing_bluebutton-web-server_data.svg", title: "Estimated Individual Contributors" %}
 </div>

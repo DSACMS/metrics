@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for cmcs-eregulations | REPORT-2024-10-20
+title: Open Source at CMS Metrics Report for cmcs-eregulations | REPORT-2024-10-23
 permalink: /Enterprise-CMCS/cmcs-eregulations/
 
 org: Enterprise-CMCS
 repo: cmcs-eregulations
-reportID: REPORT-2024-10-20
-date_stampThisWeek: 2024-10-20
-date_stampLastWeek: 2024-10-20
+reportID: REPORT-2024-10-23
+date_stampThisWeek: 2024-10-23
+date_stampLastWeek: 2024-10-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-10-20
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>1167</td>
         <td>1165</td>
-        <td>1160</td>
-        <td style="color: #45c527" >5</td>
-        <td style="color: #45c527" >0.43%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >0.17%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2024-10-20
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>4</td>
         <td>3</td>
-        <td style="" >1</td>
-        <td style="" >29%</td>
+        <td>4</td>
+        <td style="color: #45c527" >-1</td>
+        <td style="color: #45c527" >29%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>1171</td>
         <td>1169</td>
-        <td>1164</td>
-        <td style="color: #45c527" >5</td>
-        <td style="color: #45c527" >0.43%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >0.17%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>257</td>
         <td>255</td>
-        <td>254</td>
-        <td style="" >1</td>
-        <td style="" >0.39%</td>
+        <td style="" >2</td>
+        <td style="" >0.78%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -87,10 +87,10 @@ date_stampLastWeek: 2024-10-20
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>10</td>
         <td>11</td>
-        <td>11</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >9.5%</td>
       </tr>
     </tbody>
   </table>
@@ -111,4 +111,20 @@ date_stampLastWeek: 2024-10-20
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/Enterprise-CMCS/cmcs-eregulations/new_commit_contributors_by_day_over_last_month_cmcs-eregulations_data.svg, /Enterprise-CMCS/cmcs-eregulations/new_commit_contributors_by_day_over_last_six_months_cmcs-eregulations_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Languages Graphs - Summary + Predominant -->
+    {% assign optionsArray = 'Summary, Predominant' | split: ',' %}
+    {% assign graphsArray = "/Enterprise-CMCS/cmcs-eregulations/language_summary_cmcs-eregulations_data.svg, /Enterprise-CMCS/cmcs-eregulations/predominant_langs_cmcs-eregulations_data.svg" | split: ',' %}
+    {% render "graph-toggle" baseurl: site.baseurl, name:"language-information" options: optionsArray, graphs: graphsArray, title: "Language Information" %}
+    <!-- Average Issue Resolution Time -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/cmcs-eregulations/average_issue_resolution_time_cmcs-eregulations_data.svg", title: "Average Issue Resolution Time" %}
+    <!-- Libyear Timeline Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/cmcs-eregulations/libyear_timeline_cmcs-eregulations_data.svg", title: "Dependency Libyears" %}
+    <!-- DRYness Percentages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/cmcs-eregulations/DRYness_cmcs-eregulations_data.svg", title: "DRYness Percentage Graph" %}
+    <!-- Cost Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/cmcs-eregulations/estimated_project_costs_cmcs-eregulations_data.svg", title: "Estimated Costs" %}
+     <!-- Time Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/cmcs-eregulations/estimated_project_time_cmcs-eregulations_data.svg", title: "Estimated Time" %}
+    <!-- Contributor Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/cmcs-eregulations/estimated_people_contributing_cmcs-eregulations_data.svg", title: "Estimated Individual Contributors" %}
 </div>

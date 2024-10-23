@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for cms-bb2-node-sdk | REPORT-2024-10-20
+title: Open Source at CMS Metrics Report for cms-bb2-node-sdk | REPORT-2024-10-23
 permalink: /CMSgov/cms-bb2-node-sdk/
 
 org: CMSgov
 repo: cms-bb2-node-sdk
-reportID: REPORT-2024-10-20
-date_stampThisWeek: 2024-10-20
-date_stampLastWeek: 2024-10-20
+reportID: REPORT-2024-10-23
+date_stampThisWeek: 2024-10-23
+date_stampLastWeek: 2024-10-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-10-20
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>169</td>
         <td>168</td>
-        <td>168</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.59%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -59,10 +59,10 @@ date_stampLastWeek: 2024-10-20
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>46</td>
         <td>45</td>
-        <td>45</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >2.2%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -111,4 +111,20 @@ date_stampLastWeek: 2024-10-20
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/CMSgov/cms-bb2-node-sdk/new_commit_contributors_by_day_over_last_month_cms-bb2-node-sdk_data.svg, /CMSgov/cms-bb2-node-sdk/new_commit_contributors_by_day_over_last_six_months_cms-bb2-node-sdk_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Languages Graphs - Summary + Predominant -->
+    {% assign optionsArray = 'Summary, Predominant' | split: ',' %}
+    {% assign graphsArray = "/CMSgov/cms-bb2-node-sdk/language_summary_cms-bb2-node-sdk_data.svg, /CMSgov/cms-bb2-node-sdk/predominant_langs_cms-bb2-node-sdk_data.svg" | split: ',' %}
+    {% render "graph-toggle" baseurl: site.baseurl, name:"language-information" options: optionsArray, graphs: graphsArray, title: "Language Information" %}
+    <!-- Average Issue Resolution Time -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/cms-bb2-node-sdk/average_issue_resolution_time_cms-bb2-node-sdk_data.svg", title: "Average Issue Resolution Time" %}
+    <!-- Libyear Timeline Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/cms-bb2-node-sdk/libyear_timeline_cms-bb2-node-sdk_data.svg", title: "Dependency Libyears" %}
+    <!-- DRYness Percentages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/cms-bb2-node-sdk/DRYness_cms-bb2-node-sdk_data.svg", title: "DRYness Percentage Graph" %}
+    <!-- Cost Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/cms-bb2-node-sdk/estimated_project_costs_cms-bb2-node-sdk_data.svg", title: "Estimated Costs" %}
+     <!-- Time Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/cms-bb2-node-sdk/estimated_project_time_cms-bb2-node-sdk_data.svg", title: "Estimated Time" %}
+    <!-- Contributor Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/cms-bb2-node-sdk/estimated_people_contributing_cms-bb2-node-sdk_data.svg", title: "Estimated Individual Contributors" %}
 </div>

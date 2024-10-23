@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for design-system | REPORT-2024-10-20
+title: Open Source at CMS Metrics Report for design-system | REPORT-2024-10-23
 permalink: /CMSgov/design-system/
 
 org: CMSgov
 repo: design-system
-reportID: REPORT-2024-10-20
-date_stampThisWeek: 2024-10-20
-date_stampLastWeek: 2024-10-20
+reportID: REPORT-2024-10-23
+date_stampThisWeek: 2024-10-23
+date_stampLastWeek: 2024-10-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,24 +24,24 @@ date_stampLastWeek: 2024-10-20
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>2341</td>
         <td>2337</td>
-        <td>2331</td>
-        <td style="color: #45c527" >6</td>
-        <td style="color: #45c527" >0.26%</td>
+        <td style="color: #45c527" >4</td>
+        <td style="color: #45c527" >0.17%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
+        <td>242</td>
         <td>241</td>
-        <td>241</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.41%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>6</td>
         <td>5</td>
-        <td>5</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >1</td>
+        <td style="" >18%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -52,22 +52,22 @@ date_stampLastWeek: 2024-10-20
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>5</td>
         <td>11</td>
-        <td>13</td>
-        <td style="color: #45c527" >-2</td>
-        <td style="color: #45c527" >17%</td>
+        <td style="color: #45c527" >-6</td>
+        <td style="color: #45c527" >75%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>2225</td>
         <td>2221</td>
-        <td>2215</td>
-        <td style="color: #45c527" >6</td>
-        <td style="color: #45c527" >0.27%</td>
+        <td style="color: #45c527" >4</td>
+        <td style="color: #45c527" >0.18%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>713</td>
         <td>707</td>
-        <td>701</td>
         <td style="" >6</td>
         <td style="" >0.85%</td>
       </tr>
@@ -111,4 +111,20 @@ date_stampLastWeek: 2024-10-20
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/CMSgov/design-system/new_commit_contributors_by_day_over_last_month_design-system_data.svg, /CMSgov/design-system/new_commit_contributors_by_day_over_last_six_months_design-system_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Languages Graphs - Summary + Predominant -->
+    {% assign optionsArray = 'Summary, Predominant' | split: ',' %}
+    {% assign graphsArray = "/CMSgov/design-system/language_summary_design-system_data.svg, /CMSgov/design-system/predominant_langs_design-system_data.svg" | split: ',' %}
+    {% render "graph-toggle" baseurl: site.baseurl, name:"language-information" options: optionsArray, graphs: graphsArray, title: "Language Information" %}
+    <!-- Average Issue Resolution Time -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/design-system/average_issue_resolution_time_design-system_data.svg", title: "Average Issue Resolution Time" %}
+    <!-- Libyear Timeline Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/design-system/libyear_timeline_design-system_data.svg", title: "Dependency Libyears" %}
+    <!-- DRYness Percentages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/design-system/DRYness_design-system_data.svg", title: "DRYness Percentage Graph" %}
+    <!-- Cost Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/design-system/estimated_project_costs_design-system_data.svg", title: "Estimated Costs" %}
+     <!-- Time Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/design-system/estimated_project_time_design-system_data.svg", title: "Estimated Time" %}
+    <!-- Contributor Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/design-system/estimated_people_contributing_design-system_data.svg", title: "Estimated Individual Contributors" %}
 </div>

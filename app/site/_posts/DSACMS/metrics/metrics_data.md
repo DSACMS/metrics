@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for metrics | REPORT-2024-10-20
+title: Open Source at CMS Metrics Report for metrics | REPORT-2024-10-23
 permalink: /DSACMS/metrics/
 
 org: DSACMS
 repo: metrics
-reportID: REPORT-2024-10-20
-date_stampThisWeek: 2024-10-20
-date_stampLastWeek: 2024-10-20
+reportID: REPORT-2024-10-23
+date_stampThisWeek: 2024-10-23
+date_stampLastWeek: 2024-10-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-10-20
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>1389</td>
         <td>1244</td>
-        <td>1231</td>
-        <td style="color: #45c527" >13</td>
-        <td style="color: #45c527" >1.1%</td>
+        <td style="color: #45c527" >145</td>
+        <td style="color: #45c527" >11%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -38,36 +38,36 @@ date_stampLastWeek: 2024-10-20
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>14</td>
         <td>17</td>
-        <td>18</td>
-        <td style="color: #45c527" >-1</td>
-        <td style="color: #45c527" >5.7%</td>
+        <td style="color: #45c527" >-3</td>
+        <td style="color: #45c527" >19%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
+        <td>30</td>
         <td>27</td>
-        <td>26</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >3.8%</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >11%</td>
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>11</td>
-        <td>14</td>
-        <td style="color: #45c527" >-3</td>
-        <td style="color: #45c527" >24%</td>
+        <td>11</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>171</td>
         <td>168</td>
-        <td>161</td>
-        <td style="color: #45c527" >7</td>
-        <td style="color: #45c527" >4.3%</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >1.8%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>47</td>
         <td>46</td>
-        <td>45</td>
         <td style="" >1</td>
         <td style="" >2.2%</td>
       </tr>
@@ -111,4 +111,20 @@ date_stampLastWeek: 2024-10-20
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/DSACMS/metrics/new_commit_contributors_by_day_over_last_month_metrics_data.svg, /DSACMS/metrics/new_commit_contributors_by_day_over_last_six_months_metrics_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Languages Graphs - Summary + Predominant -->
+    {% assign optionsArray = 'Summary, Predominant' | split: ',' %}
+    {% assign graphsArray = "/DSACMS/metrics/language_summary_metrics_data.svg, /DSACMS/metrics/predominant_langs_metrics_data.svg" | split: ',' %}
+    {% render "graph-toggle" baseurl: site.baseurl, name:"language-information" options: optionsArray, graphs: graphsArray, title: "Language Information" %}
+    <!-- Average Issue Resolution Time -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/DSACMS/metrics/average_issue_resolution_time_metrics_data.svg", title: "Average Issue Resolution Time" %}
+    <!-- Libyear Timeline Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/DSACMS/metrics/libyear_timeline_metrics_data.svg", title: "Dependency Libyears" %}
+    <!-- DRYness Percentages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/DSACMS/metrics/DRYness_metrics_data.svg", title: "DRYness Percentage Graph" %}
+    <!-- Cost Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/DSACMS/metrics/estimated_project_costs_metrics_data.svg", title: "Estimated Costs" %}
+     <!-- Time Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/DSACMS/metrics/estimated_project_time_metrics_data.svg", title: "Estimated Time" %}
+    <!-- Contributor Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/DSACMS/metrics/estimated_people_contributing_metrics_data.svg", title: "Estimated Individual Contributors" %}
 </div>

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for CMS-AWS-West-Pipelines | REPORT-2024-10-20
+title: Open Source at CMS Metrics Report for CMS-AWS-West-Pipelines | REPORT-2024-10-23
 permalink: /CMSgov/CMS-AWS-West-Pipelines/
 
 org: CMSgov
 repo: CMS-AWS-West-Pipelines
-reportID: REPORT-2024-10-20
-date_stampThisWeek: 2024-10-20
-date_stampLastWeek: 2024-10-20
+reportID: REPORT-2024-10-23
+date_stampThisWeek: 2024-10-23
+date_stampLastWeek: 2024-10-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -111,4 +111,20 @@ date_stampLastWeek: 2024-10-20
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/CMSgov/CMS-AWS-West-Pipelines/new_commit_contributors_by_day_over_last_month_CMS-AWS-West-Pipelines_data.svg, /CMSgov/CMS-AWS-West-Pipelines/new_commit_contributors_by_day_over_last_six_months_CMS-AWS-West-Pipelines_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Languages Graphs - Summary + Predominant -->
+    {% assign optionsArray = 'Summary, Predominant' | split: ',' %}
+    {% assign graphsArray = "/CMSgov/CMS-AWS-West-Pipelines/language_summary_CMS-AWS-West-Pipelines_data.svg, /CMSgov/CMS-AWS-West-Pipelines/predominant_langs_CMS-AWS-West-Pipelines_data.svg" | split: ',' %}
+    {% render "graph-toggle" baseurl: site.baseurl, name:"language-information" options: optionsArray, graphs: graphsArray, title: "Language Information" %}
+    <!-- Average Issue Resolution Time -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/CMS-AWS-West-Pipelines/average_issue_resolution_time_CMS-AWS-West-Pipelines_data.svg", title: "Average Issue Resolution Time" %}
+    <!-- Libyear Timeline Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/CMS-AWS-West-Pipelines/libyear_timeline_CMS-AWS-West-Pipelines_data.svg", title: "Dependency Libyears" %}
+    <!-- DRYness Percentages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/CMS-AWS-West-Pipelines/DRYness_CMS-AWS-West-Pipelines_data.svg", title: "DRYness Percentage Graph" %}
+    <!-- Cost Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/CMS-AWS-West-Pipelines/estimated_project_costs_CMS-AWS-West-Pipelines_data.svg", title: "Estimated Costs" %}
+     <!-- Time Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/CMS-AWS-West-Pipelines/estimated_project_time_CMS-AWS-West-Pipelines_data.svg", title: "Estimated Time" %}
+    <!-- Contributor Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/CMS-AWS-West-Pipelines/estimated_people_contributing_CMS-AWS-West-Pipelines_data.svg", title: "Estimated Individual Contributors" %}
 </div>

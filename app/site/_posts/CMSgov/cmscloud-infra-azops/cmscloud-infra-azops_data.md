@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for cmscloud-infra-azops | REPORT-2024-10-20
+title: Open Source at CMS Metrics Report for cmscloud-infra-azops | REPORT-2024-10-23
 permalink: /CMSgov/cmscloud-infra-azops/
 
 org: CMSgov
 repo: cmscloud-infra-azops
-reportID: REPORT-2024-10-20
-date_stampThisWeek: 2024-10-20
-date_stampLastWeek: 2024-10-20
+reportID: REPORT-2024-10-23
+date_stampThisWeek: 2024-10-23
+date_stampLastWeek: 2024-10-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -111,4 +111,20 @@ date_stampLastWeek: 2024-10-20
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/CMSgov/cmscloud-infra-azops/new_commit_contributors_by_day_over_last_month_cmscloud-infra-azops_data.svg, /CMSgov/cmscloud-infra-azops/new_commit_contributors_by_day_over_last_six_months_cmscloud-infra-azops_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Languages Graphs - Summary + Predominant -->
+    {% assign optionsArray = 'Summary, Predominant' | split: ',' %}
+    {% assign graphsArray = "/CMSgov/cmscloud-infra-azops/language_summary_cmscloud-infra-azops_data.svg, /CMSgov/cmscloud-infra-azops/predominant_langs_cmscloud-infra-azops_data.svg" | split: ',' %}
+    {% render "graph-toggle" baseurl: site.baseurl, name:"language-information" options: optionsArray, graphs: graphsArray, title: "Language Information" %}
+    <!-- Average Issue Resolution Time -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/cmscloud-infra-azops/average_issue_resolution_time_cmscloud-infra-azops_data.svg", title: "Average Issue Resolution Time" %}
+    <!-- Libyear Timeline Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/cmscloud-infra-azops/libyear_timeline_cmscloud-infra-azops_data.svg", title: "Dependency Libyears" %}
+    <!-- DRYness Percentages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/cmscloud-infra-azops/DRYness_cmscloud-infra-azops_data.svg", title: "DRYness Percentage Graph" %}
+    <!-- Cost Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/cmscloud-infra-azops/estimated_project_costs_cmscloud-infra-azops_data.svg", title: "Estimated Costs" %}
+     <!-- Time Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/cmscloud-infra-azops/estimated_project_time_cmscloud-infra-azops_data.svg", title: "Estimated Time" %}
+    <!-- Contributor Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/cmscloud-infra-azops/estimated_people_contributing_cmscloud-infra-azops_data.svg", title: "Estimated Individual Contributors" %}
 </div>

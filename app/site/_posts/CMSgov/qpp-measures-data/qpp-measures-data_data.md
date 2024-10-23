@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for qpp-measures-data | REPORT-2024-10-20
+title: Open Source at CMS Metrics Report for qpp-measures-data | REPORT-2024-10-23
 permalink: /CMSgov/qpp-measures-data/
 
 org: CMSgov
 repo: qpp-measures-data
-reportID: REPORT-2024-10-20
-date_stampThisWeek: 2024-10-20
-date_stampLastWeek: 2024-10-20
+reportID: REPORT-2024-10-23
+date_stampThisWeek: 2024-10-23
+date_stampLastWeek: 2024-10-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-10-20
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>1785</td>
         <td>1778</td>
-        <td>1774</td>
-        <td style="color: #45c527" >4</td>
-        <td style="color: #45c527" >0.23%</td>
+        <td style="color: #45c527" >7</td>
+        <td style="color: #45c527" >0.39%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,17 +52,17 @@ date_stampLastWeek: 2024-10-20
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>2</td>
         <td>1</td>
-        <td style="" >1</td>
-        <td style="" >67%</td>
+        <td>2</td>
+        <td style="color: #45c527" >-1</td>
+        <td style="color: #45c527" >67%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>670</td>
         <td>667</td>
-        <td>666</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.15%</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >0.45%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -111,4 +111,20 @@ date_stampLastWeek: 2024-10-20
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/CMSgov/qpp-measures-data/new_commit_contributors_by_day_over_last_month_qpp-measures-data_data.svg, /CMSgov/qpp-measures-data/new_commit_contributors_by_day_over_last_six_months_qpp-measures-data_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Languages Graphs - Summary + Predominant -->
+    {% assign optionsArray = 'Summary, Predominant' | split: ',' %}
+    {% assign graphsArray = "/CMSgov/qpp-measures-data/language_summary_qpp-measures-data_data.svg, /CMSgov/qpp-measures-data/predominant_langs_qpp-measures-data_data.svg" | split: ',' %}
+    {% render "graph-toggle" baseurl: site.baseurl, name:"language-information" options: optionsArray, graphs: graphsArray, title: "Language Information" %}
+    <!-- Average Issue Resolution Time -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/qpp-measures-data/average_issue_resolution_time_qpp-measures-data_data.svg", title: "Average Issue Resolution Time" %}
+    <!-- Libyear Timeline Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/qpp-measures-data/libyear_timeline_qpp-measures-data_data.svg", title: "Dependency Libyears" %}
+    <!-- DRYness Percentages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/qpp-measures-data/DRYness_qpp-measures-data_data.svg", title: "DRYness Percentage Graph" %}
+    <!-- Cost Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/qpp-measures-data/estimated_project_costs_qpp-measures-data_data.svg", title: "Estimated Costs" %}
+     <!-- Time Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/qpp-measures-data/estimated_project_time_qpp-measures-data_data.svg", title: "Estimated Time" %}
+    <!-- Contributor Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/qpp-measures-data/estimated_people_contributing_qpp-measures-data_data.svg", title: "Estimated Individual Contributors" %}
 </div>

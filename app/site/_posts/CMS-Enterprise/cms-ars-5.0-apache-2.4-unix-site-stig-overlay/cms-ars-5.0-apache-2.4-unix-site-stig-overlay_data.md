@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for cms-ars-5.0-apache-2.4-unix-site-stig-overlay | REPORT-2024-10-20
+title: Open Source at CMS Metrics Report for cms-ars-5.0-apache-2.4-unix-site-stig-overlay | REPORT-2024-10-23
 permalink: /CMS-Enterprise/cms-ars-5.0-apache-2.4-unix-site-stig-overlay/
 
 org: CMS-Enterprise
 repo: cms-ars-5.0-apache-2.4-unix-site-stig-overlay
-reportID: REPORT-2024-10-20
-date_stampThisWeek: 2024-10-20
-date_stampLastWeek: 2024-10-20
+reportID: REPORT-2024-10-23
+date_stampThisWeek: 2024-10-23
+date_stampLastWeek: 2024-10-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -111,4 +111,20 @@ date_stampLastWeek: 2024-10-20
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/CMS-Enterprise/cms-ars-5.0-apache-2.4-unix-site-stig-overlay/new_commit_contributors_by_day_over_last_month_cms-ars-5.0-apache-2.4-unix-site-stig-overlay_data.svg, /CMS-Enterprise/cms-ars-5.0-apache-2.4-unix-site-stig-overlay/new_commit_contributors_by_day_over_last_six_months_cms-ars-5.0-apache-2.4-unix-site-stig-overlay_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Languages Graphs - Summary + Predominant -->
+    {% assign optionsArray = 'Summary, Predominant' | split: ',' %}
+    {% assign graphsArray = "/CMS-Enterprise/cms-ars-5.0-apache-2.4-unix-site-stig-overlay/language_summary_cms-ars-5.0-apache-2.4-unix-site-stig-overlay_data.svg, /CMS-Enterprise/cms-ars-5.0-apache-2.4-unix-site-stig-overlay/predominant_langs_cms-ars-5.0-apache-2.4-unix-site-stig-overlay_data.svg" | split: ',' %}
+    {% render "graph-toggle" baseurl: site.baseurl, name:"language-information" options: optionsArray, graphs: graphsArray, title: "Language Information" %}
+    <!-- Average Issue Resolution Time -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/cms-ars-5.0-apache-2.4-unix-site-stig-overlay/average_issue_resolution_time_cms-ars-5.0-apache-2.4-unix-site-stig-overlay_data.svg", title: "Average Issue Resolution Time" %}
+    <!-- Libyear Timeline Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/cms-ars-5.0-apache-2.4-unix-site-stig-overlay/libyear_timeline_cms-ars-5.0-apache-2.4-unix-site-stig-overlay_data.svg", title: "Dependency Libyears" %}
+    <!-- DRYness Percentages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/cms-ars-5.0-apache-2.4-unix-site-stig-overlay/DRYness_cms-ars-5.0-apache-2.4-unix-site-stig-overlay_data.svg", title: "DRYness Percentage Graph" %}
+    <!-- Cost Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/cms-ars-5.0-apache-2.4-unix-site-stig-overlay/estimated_project_costs_cms-ars-5.0-apache-2.4-unix-site-stig-overlay_data.svg", title: "Estimated Costs" %}
+     <!-- Time Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/cms-ars-5.0-apache-2.4-unix-site-stig-overlay/estimated_project_time_cms-ars-5.0-apache-2.4-unix-site-stig-overlay_data.svg", title: "Estimated Time" %}
+    <!-- Contributor Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/cms-ars-5.0-apache-2.4-unix-site-stig-overlay/estimated_people_contributing_cms-ars-5.0-apache-2.4-unix-site-stig-overlay_data.svg", title: "Estimated Individual Contributors" %}
 </div>

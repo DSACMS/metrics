@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for bcda-app | REPORT-2024-10-20
+title: Open Source at CMS Metrics Report for bcda-app | REPORT-2024-10-23
 permalink: /CMSgov/bcda-app/
 
 org: CMSgov
 repo: bcda-app
-reportID: REPORT-2024-10-20
-date_stampThisWeek: 2024-10-20
-date_stampLastWeek: 2024-10-20
+reportID: REPORT-2024-10-23
+date_stampThisWeek: 2024-10-23
+date_stampLastWeek: 2024-10-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-10-20
       <tr>
         <th scope="row">Commits</th>
         <td>906</td>
-        <td>905</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.11%</td>
+        <td>906</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -39,30 +39,30 @@ date_stampLastWeek: 2024-10-20
       <tr>
         <th scope="row">Open Issues</th>
         <td>0</td>
-        <td>2</td>
-        <td style="color: #45c527" >-2</td>
-        <td style="color: #45c527" >200%</td>
+        <td>0</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
         <td>7</td>
-        <td>5</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >33%</td>
+        <td>7</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>4</td>
         <td>3</td>
-        <td>2</td>
         <td style="" >1</td>
-        <td style="" >40%</td>
+        <td style="" >29%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>906</td>
-        <td>905</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.11%</td>
+        <td>906</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -111,4 +111,20 @@ date_stampLastWeek: 2024-10-20
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/CMSgov/bcda-app/new_commit_contributors_by_day_over_last_month_bcda-app_data.svg, /CMSgov/bcda-app/new_commit_contributors_by_day_over_last_six_months_bcda-app_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Languages Graphs - Summary + Predominant -->
+    {% assign optionsArray = 'Summary, Predominant' | split: ',' %}
+    {% assign graphsArray = "/CMSgov/bcda-app/language_summary_bcda-app_data.svg, /CMSgov/bcda-app/predominant_langs_bcda-app_data.svg" | split: ',' %}
+    {% render "graph-toggle" baseurl: site.baseurl, name:"language-information" options: optionsArray, graphs: graphsArray, title: "Language Information" %}
+    <!-- Average Issue Resolution Time -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/bcda-app/average_issue_resolution_time_bcda-app_data.svg", title: "Average Issue Resolution Time" %}
+    <!-- Libyear Timeline Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/bcda-app/libyear_timeline_bcda-app_data.svg", title: "Dependency Libyears" %}
+    <!-- DRYness Percentages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/bcda-app/DRYness_bcda-app_data.svg", title: "DRYness Percentage Graph" %}
+    <!-- Cost Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/bcda-app/estimated_project_costs_bcda-app_data.svg", title: "Estimated Costs" %}
+     <!-- Time Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/bcda-app/estimated_project_time_bcda-app_data.svg", title: "Estimated Time" %}
+    <!-- Contributor Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/bcda-app/estimated_people_contributing_bcda-app_data.svg", title: "Estimated Individual Contributors" %}
 </div>

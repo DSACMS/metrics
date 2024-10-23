@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for easi-app | REPORT-2024-10-20
+title: Open Source at CMS Metrics Report for easi-app | REPORT-2024-10-23
 permalink: /CMSgov/easi-app/
 
 org: CMSgov
 repo: easi-app
-reportID: REPORT-2024-10-20
-date_stampThisWeek: 2024-10-20
-date_stampLastWeek: 2024-10-20
+reportID: REPORT-2024-10-23
+date_stampThisWeek: 2024-10-23
+date_stampLastWeek: 2024-10-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-10-20
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>8933</td>
         <td>8931</td>
-        <td>8925</td>
-        <td style="color: #45c527" >6</td>
-        <td style="color: #45c527" >0.067%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >0.022%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2024-10-20
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>8</td>
         <td>7</td>
-        <td style="" >1</td>
-        <td style="" >13%</td>
+        <td>8</td>
+        <td style="color: #45c527" >-1</td>
+        <td style="color: #45c527" >13%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>2532</td>
         <td>2530</td>
-        <td>2522</td>
-        <td style="color: #45c527" >8</td>
-        <td style="color: #45c527" >0.32%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >0.079%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>323</td>
         <td>320</td>
-        <td>317</td>
         <td style="" >3</td>
-        <td style="" >0.94%</td>
+        <td style="" >0.93%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -111,4 +111,20 @@ date_stampLastWeek: 2024-10-20
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/CMSgov/easi-app/new_commit_contributors_by_day_over_last_month_easi-app_data.svg, /CMSgov/easi-app/new_commit_contributors_by_day_over_last_six_months_easi-app_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Languages Graphs - Summary + Predominant -->
+    {% assign optionsArray = 'Summary, Predominant' | split: ',' %}
+    {% assign graphsArray = "/CMSgov/easi-app/language_summary_easi-app_data.svg, /CMSgov/easi-app/predominant_langs_easi-app_data.svg" | split: ',' %}
+    {% render "graph-toggle" baseurl: site.baseurl, name:"language-information" options: optionsArray, graphs: graphsArray, title: "Language Information" %}
+    <!-- Average Issue Resolution Time -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/easi-app/average_issue_resolution_time_easi-app_data.svg", title: "Average Issue Resolution Time" %}
+    <!-- Libyear Timeline Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/easi-app/libyear_timeline_easi-app_data.svg", title: "Dependency Libyears" %}
+    <!-- DRYness Percentages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/easi-app/DRYness_easi-app_data.svg", title: "DRYness Percentage Graph" %}
+    <!-- Cost Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/easi-app/estimated_project_costs_easi-app_data.svg", title: "Estimated Costs" %}
+     <!-- Time Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/easi-app/estimated_project_time_easi-app_data.svg", title: "Estimated Time" %}
+    <!-- Contributor Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/easi-app/estimated_people_contributing_easi-app_data.svg", title: "Estimated Individual Contributors" %}
 </div>

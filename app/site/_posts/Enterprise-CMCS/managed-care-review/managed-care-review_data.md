@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for managed-care-review | REPORT-2024-10-20
+title: Open Source at CMS Metrics Report for managed-care-review | REPORT-2024-10-23
 permalink: /Enterprise-CMCS/managed-care-review/
 
 org: Enterprise-CMCS
 repo: managed-care-review
-reportID: REPORT-2024-10-20
-date_stampThisWeek: 2024-10-20
-date_stampLastWeek: 2024-10-20
+reportID: REPORT-2024-10-23
+date_stampThisWeek: 2024-10-23
+date_stampLastWeek: 2024-10-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-10-20
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>2138</td>
         <td>2125</td>
-        <td>2118</td>
-        <td style="color: #45c527" >7</td>
-        <td style="color: #45c527" >0.33%</td>
+        <td style="color: #45c527" >13</td>
+        <td style="color: #45c527" >0.61%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2024-10-20
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>4</td>
         <td>8</td>
-        <td>8</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >-4</td>
+        <td style="color: #45c527" >67%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>2106</td>
         <td>2093</td>
-        <td>2086</td>
-        <td style="color: #45c527" >7</td>
-        <td style="color: #45c527" >0.34%</td>
+        <td style="color: #45c527" >13</td>
+        <td style="color: #45c527" >0.62%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>755</td>
         <td>748</td>
-        <td>740</td>
-        <td style="" >8</td>
-        <td style="" >1.1%</td>
+        <td style="" >7</td>
+        <td style="" >0.93%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -111,4 +111,20 @@ date_stampLastWeek: 2024-10-20
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/Enterprise-CMCS/managed-care-review/new_commit_contributors_by_day_over_last_month_managed-care-review_data.svg, /Enterprise-CMCS/managed-care-review/new_commit_contributors_by_day_over_last_six_months_managed-care-review_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Languages Graphs - Summary + Predominant -->
+    {% assign optionsArray = 'Summary, Predominant' | split: ',' %}
+    {% assign graphsArray = "/Enterprise-CMCS/managed-care-review/language_summary_managed-care-review_data.svg, /Enterprise-CMCS/managed-care-review/predominant_langs_managed-care-review_data.svg" | split: ',' %}
+    {% render "graph-toggle" baseurl: site.baseurl, name:"language-information" options: optionsArray, graphs: graphsArray, title: "Language Information" %}
+    <!-- Average Issue Resolution Time -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/managed-care-review/average_issue_resolution_time_managed-care-review_data.svg", title: "Average Issue Resolution Time" %}
+    <!-- Libyear Timeline Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/managed-care-review/libyear_timeline_managed-care-review_data.svg", title: "Dependency Libyears" %}
+    <!-- DRYness Percentages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/managed-care-review/DRYness_managed-care-review_data.svg", title: "DRYness Percentage Graph" %}
+    <!-- Cost Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/managed-care-review/estimated_project_costs_managed-care-review_data.svg", title: "Estimated Costs" %}
+     <!-- Time Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/managed-care-review/estimated_project_time_managed-care-review_data.svg", title: "Estimated Time" %}
+    <!-- Contributor Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/managed-care-review/estimated_people_contributing_managed-care-review_data.svg", title: "Estimated Individual Contributors" %}
 </div>

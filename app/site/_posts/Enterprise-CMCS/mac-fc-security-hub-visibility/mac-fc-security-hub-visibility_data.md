@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for mac-fc-security-hub-visibility | REPORT-2024-10-20
+title: Open Source at CMS Metrics Report for mac-fc-security-hub-visibility | REPORT-2024-10-23
 permalink: /Enterprise-CMCS/mac-fc-security-hub-visibility/
 
 org: Enterprise-CMCS
 repo: mac-fc-security-hub-visibility
-reportID: REPORT-2024-10-20
-date_stampThisWeek: 2024-10-20
-date_stampLastWeek: 2024-10-20
+reportID: REPORT-2024-10-23
+date_stampThisWeek: 2024-10-23
+date_stampLastWeek: 2024-10-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -53,9 +53,9 @@ date_stampLastWeek: 2024-10-20
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>11</td>
-        <td>10</td>
-        <td style="" >1</td>
-        <td style="" >9.5%</td>
+        <td>11</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
@@ -111,4 +111,20 @@ date_stampLastWeek: 2024-10-20
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/Enterprise-CMCS/mac-fc-security-hub-visibility/new_commit_contributors_by_day_over_last_month_mac-fc-security-hub-visibility_data.svg, /Enterprise-CMCS/mac-fc-security-hub-visibility/new_commit_contributors_by_day_over_last_six_months_mac-fc-security-hub-visibility_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Languages Graphs - Summary + Predominant -->
+    {% assign optionsArray = 'Summary, Predominant' | split: ',' %}
+    {% assign graphsArray = "/Enterprise-CMCS/mac-fc-security-hub-visibility/language_summary_mac-fc-security-hub-visibility_data.svg, /Enterprise-CMCS/mac-fc-security-hub-visibility/predominant_langs_mac-fc-security-hub-visibility_data.svg" | split: ',' %}
+    {% render "graph-toggle" baseurl: site.baseurl, name:"language-information" options: optionsArray, graphs: graphsArray, title: "Language Information" %}
+    <!-- Average Issue Resolution Time -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/mac-fc-security-hub-visibility/average_issue_resolution_time_mac-fc-security-hub-visibility_data.svg", title: "Average Issue Resolution Time" %}
+    <!-- Libyear Timeline Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/mac-fc-security-hub-visibility/libyear_timeline_mac-fc-security-hub-visibility_data.svg", title: "Dependency Libyears" %}
+    <!-- DRYness Percentages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/mac-fc-security-hub-visibility/DRYness_mac-fc-security-hub-visibility_data.svg", title: "DRYness Percentage Graph" %}
+    <!-- Cost Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/mac-fc-security-hub-visibility/estimated_project_costs_mac-fc-security-hub-visibility_data.svg", title: "Estimated Costs" %}
+     <!-- Time Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/mac-fc-security-hub-visibility/estimated_project_time_mac-fc-security-hub-visibility_data.svg", title: "Estimated Time" %}
+    <!-- Contributor Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/mac-fc-security-hub-visibility/estimated_people_contributing_mac-fc-security-hub-visibility_data.svg", title: "Estimated Individual Contributors" %}
 </div>

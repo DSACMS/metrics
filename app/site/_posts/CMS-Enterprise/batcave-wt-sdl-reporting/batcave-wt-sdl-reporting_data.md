@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-wt-sdl-reporting | REPORT-2024-10-20
+title: Open Source at CMS Metrics Report for batcave-wt-sdl-reporting | REPORT-2024-10-23
 permalink: /CMS-Enterprise/batcave-wt-sdl-reporting/
 
 org: CMS-Enterprise
 repo: batcave-wt-sdl-reporting
-reportID: REPORT-2024-10-20
-date_stampThisWeek: 2024-10-20
-date_stampLastWeek: 2024-10-20
+reportID: REPORT-2024-10-23
+date_stampThisWeek: 2024-10-23
+date_stampLastWeek: 2024-10-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -111,4 +111,20 @@ date_stampLastWeek: 2024-10-20
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/CMS-Enterprise/batcave-wt-sdl-reporting/new_commit_contributors_by_day_over_last_month_batcave-wt-sdl-reporting_data.svg, /CMS-Enterprise/batcave-wt-sdl-reporting/new_commit_contributors_by_day_over_last_six_months_batcave-wt-sdl-reporting_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Languages Graphs - Summary + Predominant -->
+    {% assign optionsArray = 'Summary, Predominant' | split: ',' %}
+    {% assign graphsArray = "/CMS-Enterprise/batcave-wt-sdl-reporting/language_summary_batcave-wt-sdl-reporting_data.svg, /CMS-Enterprise/batcave-wt-sdl-reporting/predominant_langs_batcave-wt-sdl-reporting_data.svg" | split: ',' %}
+    {% render "graph-toggle" baseurl: site.baseurl, name:"language-information" options: optionsArray, graphs: graphsArray, title: "Language Information" %}
+    <!-- Average Issue Resolution Time -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/batcave-wt-sdl-reporting/average_issue_resolution_time_batcave-wt-sdl-reporting_data.svg", title: "Average Issue Resolution Time" %}
+    <!-- Libyear Timeline Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/batcave-wt-sdl-reporting/libyear_timeline_batcave-wt-sdl-reporting_data.svg", title: "Dependency Libyears" %}
+    <!-- DRYness Percentages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/batcave-wt-sdl-reporting/DRYness_batcave-wt-sdl-reporting_data.svg", title: "DRYness Percentage Graph" %}
+    <!-- Cost Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/batcave-wt-sdl-reporting/estimated_project_costs_batcave-wt-sdl-reporting_data.svg", title: "Estimated Costs" %}
+     <!-- Time Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/batcave-wt-sdl-reporting/estimated_project_time_batcave-wt-sdl-reporting_data.svg", title: "Estimated Time" %}
+    <!-- Contributor Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/batcave-wt-sdl-reporting/estimated_people_contributing_batcave-wt-sdl-reporting_data.svg", title: "Estimated Individual Contributors" %}
 </div>

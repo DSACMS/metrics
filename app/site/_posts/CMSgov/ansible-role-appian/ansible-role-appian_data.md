@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ansible-role-appian | REPORT-2024-10-20
+title: Open Source at CMS Metrics Report for ansible-role-appian | REPORT-2024-10-23
 permalink: /CMSgov/ansible-role-appian/
 
 org: CMSgov
 repo: ansible-role-appian
-reportID: REPORT-2024-10-20
-date_stampThisWeek: 2024-10-20
-date_stampLastWeek: 2024-10-20
+reportID: REPORT-2024-10-23
+date_stampThisWeek: 2024-10-23
+date_stampLastWeek: 2024-10-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -111,4 +111,20 @@ date_stampLastWeek: 2024-10-20
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/CMSgov/ansible-role-appian/new_commit_contributors_by_day_over_last_month_ansible-role-appian_data.svg, /CMSgov/ansible-role-appian/new_commit_contributors_by_day_over_last_six_months_ansible-role-appian_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Languages Graphs - Summary + Predominant -->
+    {% assign optionsArray = 'Summary, Predominant' | split: ',' %}
+    {% assign graphsArray = "/CMSgov/ansible-role-appian/language_summary_ansible-role-appian_data.svg, /CMSgov/ansible-role-appian/predominant_langs_ansible-role-appian_data.svg" | split: ',' %}
+    {% render "graph-toggle" baseurl: site.baseurl, name:"language-information" options: optionsArray, graphs: graphsArray, title: "Language Information" %}
+    <!-- Average Issue Resolution Time -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/ansible-role-appian/average_issue_resolution_time_ansible-role-appian_data.svg", title: "Average Issue Resolution Time" %}
+    <!-- Libyear Timeline Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/ansible-role-appian/libyear_timeline_ansible-role-appian_data.svg", title: "Dependency Libyears" %}
+    <!-- DRYness Percentages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/ansible-role-appian/DRYness_ansible-role-appian_data.svg", title: "DRYness Percentage Graph" %}
+    <!-- Cost Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/ansible-role-appian/estimated_project_costs_ansible-role-appian_data.svg", title: "Estimated Costs" %}
+     <!-- Time Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/ansible-role-appian/estimated_project_time_ansible-role-appian_data.svg", title: "Estimated Time" %}
+    <!-- Contributor Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/ansible-role-appian/estimated_people_contributing_ansible-role-appian_data.svg", title: "Estimated Individual Contributors" %}
 </div>

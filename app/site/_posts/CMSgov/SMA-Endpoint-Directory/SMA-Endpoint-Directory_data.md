@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for SMA-Endpoint-Directory | REPORT-2024-10-20
+title: Open Source at CMS Metrics Report for SMA-Endpoint-Directory | REPORT-2024-10-23
 permalink: /CMSgov/SMA-Endpoint-Directory/
 
 org: CMSgov
 repo: SMA-Endpoint-Directory
-reportID: REPORT-2024-10-20
-date_stampThisWeek: 2024-10-20
-date_stampLastWeek: 2024-10-20
+reportID: REPORT-2024-10-23
+date_stampThisWeek: 2024-10-23
+date_stampLastWeek: 2024-10-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -73,10 +73,10 @@ date_stampLastWeek: 2024-10-20
       </tr>
       <tr>
         <th scope="row">Forks</th>
+        <td>5</td>
         <td>4</td>
-        <td>4</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >22%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
@@ -111,4 +111,20 @@ date_stampLastWeek: 2024-10-20
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/CMSgov/SMA-Endpoint-Directory/new_commit_contributors_by_day_over_last_month_SMA-Endpoint-Directory_data.svg, /CMSgov/SMA-Endpoint-Directory/new_commit_contributors_by_day_over_last_six_months_SMA-Endpoint-Directory_data.svg' | split: ',' %}
       {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+    <!-- Languages Graphs - Summary + Predominant -->
+    {% assign optionsArray = 'Summary, Predominant' | split: ',' %}
+    {% assign graphsArray = "/CMSgov/SMA-Endpoint-Directory/language_summary_SMA-Endpoint-Directory_data.svg, /CMSgov/SMA-Endpoint-Directory/predominant_langs_SMA-Endpoint-Directory_data.svg" | split: ',' %}
+    {% render "graph-toggle" baseurl: site.baseurl, name:"language-information" options: optionsArray, graphs: graphsArray, title: "Language Information" %}
+    <!-- Average Issue Resolution Time -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/SMA-Endpoint-Directory/average_issue_resolution_time_SMA-Endpoint-Directory_data.svg", title: "Average Issue Resolution Time" %}
+    <!-- Libyear Timeline Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/SMA-Endpoint-Directory/libyear_timeline_SMA-Endpoint-Directory_data.svg", title: "Dependency Libyears" %}
+    <!-- DRYness Percentages Graph -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/SMA-Endpoint-Directory/DRYness_SMA-Endpoint-Directory_data.svg", title: "DRYness Percentage Graph" %}
+    <!-- Cost Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/SMA-Endpoint-Directory/estimated_project_costs_SMA-Endpoint-Directory_data.svg", title: "Estimated Costs" %}
+     <!-- Time Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/SMA-Endpoint-Directory/estimated_project_time_SMA-Endpoint-Directory_data.svg", title: "Estimated Time" %}
+    <!-- Contributor Estimate Chart -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMSgov/SMA-Endpoint-Directory/estimated_people_contributing_SMA-Endpoint-Directory_data.svg", title: "Estimated Individual Contributors" %}
 </div>
