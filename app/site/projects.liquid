@@ -3,10 +3,13 @@ layout: base
 ---
 <script type="module" src="{{ "/assets/js/projects.js" | url }}"></script>
 <span style="display:none;" id="metrics">
-  {{projects | json }}
+  {{ projects | json }}
 </span>
 <span style="display:none;" id="org-data">
-  {{organizations | json }}
+  {{ organizations | json }}
+</span>
+<span style="display:none;" id="site-data">
+  {{ site | json }}
 </span>
 <div class="grid-container ">
   <p>
