@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-mdct-mfp | REPORT-2024-10-23
+title: Open Source at CMS Metrics Report for macpro-mdct-mfp | REPORT-2024-10-27
 permalink: /Enterprise-CMCS/macpro-mdct-mfp/
 
 org: Enterprise-CMCS
 repo: macpro-mdct-mfp
-reportID: REPORT-2024-10-23
-date_stampThisWeek: 2024-10-23
-date_stampLastWeek: 2024-10-23
+reportID: REPORT-2024-10-27
+date_stampThisWeek: 2024-10-27
+date_stampLastWeek: 2024-10-27
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-10-23
       <tr>
         <th scope="row">Commits</th>
         <td>672</td>
-        <td>671</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.15%</td>
+        <td>672</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -60,9 +60,9 @@ date_stampLastWeek: 2024-10-23
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>665</td>
-        <td>664</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.15%</td>
+        <td>665</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>

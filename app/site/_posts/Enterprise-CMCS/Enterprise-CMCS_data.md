@@ -1,12 +1,12 @@
 ---
 layout: org-report
-title: Open Source at CMS Metrics Report for Enterprise-CMCS | REPORT-2024-10-23
+title: Open Source at CMS Metrics Report for Enterprise-CMCS | REPORT-2024-10-27
 permalink: /Enterprise-CMCS/
 
 org: Enterprise-CMCS
-reportID: REPORT-2024-10-23
-date_stampThisWeek: 2024-10-23
-date_stampLastWeek: 2024-10-23
+reportID: REPORT-2024-10-27
+date_stampThisWeek: 2024-10-27
+date_stampLastWeek: 2024-10-27
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -23,10 +23,10 @@ date_stampLastWeek: 2024-10-23
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>29983</td>
         <td>29959</td>
-        <td>29928</td>
-        <td style="color: #45c527" >31</td>
-        <td style="color: #45c527" >0.1%</td>
+        <td style="color: #45c527" >24</td>
+        <td style="color: #45c527" >0.08%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -51,24 +51,24 @@ date_stampLastWeek: 2024-10-23
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>161</td>
         <td>154</td>
-        <td>155</td>
-        <td style="color: #45c527" >-1</td>
-        <td style="color: #45c527" >0.65%</td>
+        <td style="" >7</td>
+        <td style="" >4.4%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>13674</td>
         <td>13647</td>
-        <td>13613</td>
-        <td style="color: #45c527" >34</td>
-        <td style="color: #45c527" >0.25%</td>
+        <td style="color: #45c527" >27</td>
+        <td style="color: #45c527" >0.2%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>3517</td>
         <td>3514</td>
-        <td>3503</td>
-        <td style="" >11</td>
-        <td style="" >0.31%</td>
+        <td style="" >3</td>
+        <td style="" >0.085%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -87,9 +87,9 @@ date_stampLastWeek: 2024-10-23
       <tr>
         <th scope="row">Watchers</th>
         <td>208</td>
-        <td>209</td>
-        <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >0.48%</td>
+        <td>208</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Followers</th>
