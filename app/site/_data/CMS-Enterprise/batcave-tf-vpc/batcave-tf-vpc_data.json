@@ -101,7 +101,7 @@
   },
   "created_at": "2022-03-10T14:25:02Z",
   "ossf_scorecard": {
-    "date": "2024-10-23T19:20:53Z",
+    "date": "2024-10-27T08:50:29Z",
     "repo": {
       "name": "github.com/CMS-Enterprise/batcave-tf-vpc",
       "commit": "2fa49e15c2271d880c2cc1b85e8e0ccae24831b1"
@@ -110,7 +110,7 @@
       "version": "v5.0.0-74-g367426ed",
       "commit": "367426ed5d9cc62f4944dc4a2174f3bbb5e22169"
     },
-    "score": 3.9,
+    "score": 4.2,
     "checks": [
       {
         "details": null,
@@ -134,8 +134,8 @@
       },
       {
         "details": null,
-        "score": 0,
-        "reason": "0 out of 25 merged PRs checked by a CI test -- score normalized to 0",
+        "score": -1,
+        "reason": "internal error: internal error: Client.Repositories.ListStatuses: internal error: ListStatuses: GET https://api.github.com/repos/CMS-Enterprise/batcave-tf-vpc/commits/e2404c2d29d6489e2dbebaf034339f62c69a611f/statuses: 401 Bad credentials []",
         "name": "CI-Tests",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/367426ed5d9cc62f4944dc4a2174f3bbb5e22169/docs/checks.md#ci-tests",
@@ -164,8 +164,8 @@
       },
       {
         "details": null,
-        "score": 3,
-        "reason": "project has 1 contributing companies or organizations -- score normalized to 3",
+        "score": 0,
+        "reason": "project has 0 contributing companies or organizations -- score normalized to 0",
         "name": "Contributors",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/367426ed5d9cc62f4944dc4a2174f3bbb5e22169/docs/checks.md#contributors",
@@ -194,8 +194,8 @@
       },
       {
         "details": null,
-        "score": 0,
-        "reason": "project is not fuzzed",
+        "score": -1,
+        "reason": "internal error: cannot get langs of repo: error during languagesHandler.setup: response for repo languages failed with GET https://api.github.com/repos/CMS-Enterprise/batcave-tf-vpc/languages: 401 Bad credentials []",
         "name": "Fuzzing",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/367426ed5d9cc62f4944dc4a2174f3bbb5e22169/docs/checks.md#fuzzing",
