@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for nimbus-pub-github-action-poc | REPORT-2024-10-23
+title: Open Source at CMS Metrics Report for nimbus-pub-github-action-poc | REPORT-2024-10-27
 permalink: /CMSgov/nimbus-pub-github-action-poc/
 
 org: CMSgov
 repo: nimbus-pub-github-action-poc
-reportID: REPORT-2024-10-23
-date_stampThisWeek: 2024-10-23
-date_stampLastWeek: 2024-10-23
+reportID: REPORT-2024-10-27
+date_stampThisWeek: 2024-10-27
+date_stampLastWeek: 2024-10-27
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
