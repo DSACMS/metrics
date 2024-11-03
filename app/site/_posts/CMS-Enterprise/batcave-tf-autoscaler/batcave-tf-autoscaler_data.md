@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-tf-autoscaler | REPORT-2024-10-27
+title: Open Source at CMS Metrics Report for batcave-tf-autoscaler | REPORT-2024-11-03
 permalink: /CMS-Enterprise/batcave-tf-autoscaler/
 
 org: CMS-Enterprise
 repo: batcave-tf-autoscaler
-reportID: REPORT-2024-10-27
-date_stampThisWeek: 2024-10-27
-date_stampLastWeek: 2024-10-27
+reportID: REPORT-2024-11-03
+date_stampThisWeek: 2024-11-03
+date_stampLastWeek: 2024-11-03
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

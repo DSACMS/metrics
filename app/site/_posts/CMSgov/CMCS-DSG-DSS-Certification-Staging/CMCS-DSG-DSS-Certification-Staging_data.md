@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for CMCS-DSG-DSS-Certification-Staging | REPORT-2024-10-27
+title: Open Source at CMS Metrics Report for CMCS-DSG-DSS-Certification-Staging | REPORT-2024-11-03
 permalink: /CMSgov/CMCS-DSG-DSS-Certification-Staging/
 
 org: CMSgov
 repo: CMCS-DSG-DSS-Certification-Staging
-reportID: REPORT-2024-10-27
-date_stampThisWeek: 2024-10-27
-date_stampLastWeek: 2024-10-27
+reportID: REPORT-2024-11-03
+date_stampThisWeek: 2024-11-03
+date_stampLastWeek: 2024-11-03
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -52,10 +52,10 @@ date_stampLastWeek: 2024-10-27
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>2</td>
         <td>1</td>
-        <td>1</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >1</td>
+        <td style="" >67%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
