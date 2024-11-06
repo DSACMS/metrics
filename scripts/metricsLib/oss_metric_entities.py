@@ -214,7 +214,7 @@ class Repository(OSSEntity):
         #    endpoint = f"{AUGUR_HOST}/repos"
         #else:
         #    endpoint = f"{AUGUR_HOST}/repo-groups/{owner_id}/repos"
-        endpoint = f"{AUGUR_HOST}owner/{owner.lower()}/repo/{repo_name}"
+        endpoint = f"{AUGUR_HOST}owner/{owner.lower()}/repo/{repo_name.lower()}"
         super().__init__(repo_name, endpoint)
 
         response = requests.get(
@@ -225,19 +225,23 @@ class Repository(OSSEntity):
         print(endpoint)
         print(response_json)
         print("--------")
-        repo_val = response_json[0]
+
+        try:
+            repo_val = response_json[0]
+        except IndexError:
+            repo_val = {}
 
         # print(f"!!!{repo_val}")
         # for x in response_json:
         #    print(f"|{x['repo_name'].lower()}=={repo_name.lower()}|")
         # print(repo_val)
-        self.repo_id = repo_val['repo_id']
+        self.repo_id = repo_val.get('repo_id')
 
         #print(f"repo id: {self.repo_id}")
         if owner_id is not None:
             self.repo_group_id = owner_id
         else:
-            self.repo_group_id = repo_val['repo_group_id']
+            self.repo_group_id = repo_val.get('repo_group_id')
 
 
         # print(f"BEGIN: {today.strftime('%Y/%m/%d')}")
