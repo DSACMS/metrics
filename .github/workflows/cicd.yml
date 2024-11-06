@@ -19,7 +19,7 @@ jobs:
   update:
     strategy:
       matrix: 
-        orgs: ["DSACMS","Enterprise-CMCS","CMS-Enterprise","CMSgov"]
+        orgs: ["DSACMS","Enterprise-CMCS","CMS-Enterprise","CMSgov","measureauthoringtool"]
       max-parallel: 1
     permissions: write-all
     name: update
@@ -57,7 +57,7 @@ jobs:
   cocomo:
         strategy:
             matrix:
-                orgs: ["DSACMS", "Enterprise-CMCS", "CMS-Enterprise", "CMSgov"]
+                orgs: ["DSACMS","Enterprise-CMCS","CMS-Enterprise","CMSgov","measureauthoringtool"]
             max-parallel: 1
         permissions: write-all
         name: cocomo
@@ -86,7 +86,7 @@ jobs:
   scorecard:
         strategy:
             matrix:
-                orgs: ["DSACMS", "Enterprise-CMCS", "CMS-Enterprise", "CMSgov"]
+                orgs: ["DSACMS","Enterprise-CMCS","CMS-Enterprise","CMSgov","measureauthoringtool"]
             max-parallel: 1
         permissions: write-all
         name: scorecard
