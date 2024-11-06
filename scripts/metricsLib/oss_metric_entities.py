@@ -214,7 +214,7 @@ class Repository(OSSEntity):
         #    endpoint = f"{AUGUR_HOST}/repos"
         #else:
         #    endpoint = f"{AUGUR_HOST}/repo-groups/{owner_id}/repos"
-        endpoint = f"{AUGUR_HOST}/owner/{owner}/repo/{repo_name}"
+        endpoint = f"{AUGUR_HOST}owner/{owner.lower()}/repo/{repo_name}"
         super().__init__(repo_name, endpoint)
 
         response = requests.get(
