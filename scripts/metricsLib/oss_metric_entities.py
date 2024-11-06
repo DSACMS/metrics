@@ -210,29 +210,19 @@ class Repository(OSSEntity):
         #print(f"owner id: {owner_id}")
         #print(repo_git_url)
 
-        if owner_id is None:
-            endpoint = f"{AUGUR_HOST}/repos"
-        else:
-            endpoint = f"{AUGUR_HOST}/repo-groups/{owner_id}/repos"
+        #if owner_id is None:
+        #    endpoint = f"{AUGUR_HOST}/repos"
+        #else:
+        #    endpoint = f"{AUGUR_HOST}/repo-groups/{owner_id}/repos"
+        endpoint = f"{AUGUR_HOST}/owner/{owner}/repo/{repo_name}"
         super().__init__(repo_name, endpoint)
 
         response = requests.get(
             self.augur_util_endpoint, timeout=TIMEOUT_IN_SECONDS)
         response_json = json.loads(response.text)
 
-        #(response_json)
-        try:
-            repo_name.lower()
-
-
-            repo_val = next(
-                x for x in
-                response_json if x['repo_name'] and x['repo_name'].lower() == repo_name.lower())
-        except StopIteration:
-            print(f"Could not find repo {repo_git_url} in group {owner_id}")
-            repo_val = {
-                'repo_id': None
-            }
+        print(response_json)
+        repo_val = response_json[0]
 
         # print(f"!!!{repo_val}")
         # for x in response_json:
