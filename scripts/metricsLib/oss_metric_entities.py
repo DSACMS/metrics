@@ -221,11 +221,6 @@ class Repository(OSSEntity):
             self.augur_util_endpoint, timeout=TIMEOUT_IN_SECONDS)
         response_json = json.loads(response.text)
 
-        print("--------")
-        print(endpoint)
-        print(response_json)
-        print("--------")
-
         try:
             repo_val = response_json[0]
         except IndexError:
