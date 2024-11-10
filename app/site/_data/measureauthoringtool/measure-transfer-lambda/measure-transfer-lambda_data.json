@@ -1,194 +1,310 @@
 {
-    "url": "https://github.com/measureauthoringtool/measure-transfer-lambda",
-    "owner": "measureauthoringtool",
-    "name": "measure-transfer-lambda",
-    "description": "This is a lambda service to transfer MAT measures to MADiE",
-    "commits_count": 238,
-    "issues_count": 0,
-    "open_issues_count": 0,
-    "closed_issues_count": 0,
-    "pull_requests_count": 92,
-    "open_pull_requests_count": 0,
-    "merged_pull_requests_count": 60,
-    "closed_pull_requests_count": 32,
-    "forks_count": 0,
-    "stargazers_count": 0,
-    "watchers_count": 4,
-    "created_at": "2022-03-02T21:47:51Z",
-    "total_project_lines": 3832,
-    "average_project_lines": 87,
-    "total_project_comment_lines": 70,
-    "average_project_comment_lines": 2,
-    "total_project_blank_lines": 203,
-    "average_blank_lines": 5,
-    "predominant_langs": {
-        "TypeScript": 69689,
-        "JavaScript": 1060
-    },
-    "commits_by_month": {
-        "2024/5": 2,
-        "2024/4": 2,
-        "2024/3": 10,
-        "2024/2": 16
-    },
-    "average_issue_resolution_time": [],
-    "new_commit_contributors_by_day_over_last_month": [],
-    "new_commit_contributors_by_day_over_last_six_months": [
-        [
-            "2024-05-31T00:00:00.000Z",
-            1
-        ]
-    ],
-    "new_issues_by_day_over_last_month": [],
-    "new_issues_by_day_over_last_six_months": [],
-    "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=midsize&color=ff0000",
-    "nadia_color": "ff0000",
-    "nadia_badge_name": "midsize",
-    "repo_dependency_libyear_list": [
-        [
-            "@aws-sdk/client-s3",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@babel/core",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@babel/preset-env",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@babel/preset-typescript",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@lhncbc/ucum-lhc",
-            0.4219178082,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@madie/madie-models",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@types/aws-lambda",
-            2.2219178082,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@types/jest",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@types/lodash",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@types/node",
-            2.3780821918,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@types/nodemailer",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@types/nodemailer-smtp-transport",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@typescript-eslint/eslint-plugin",
-            1.304109589,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@typescript-eslint/parser",
-            1.304109589,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "axios",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "babel-jest",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "esbuild",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "eslint",
-            2.6821917808,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "eslint-config-prettier",
-            0.3479452055,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "eslint-plugin-prettier",
-            2.0493150685,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "fast-xml-parser",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "jest",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "lodash",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "nodemailer",
-            0.7369863014,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "nodemailer-smtp-transport",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "prettier",
-            1.2246575342,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "ts-jest",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "ts-node",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "typescript",
-            1.6904109589,
-            "2024-10-31T17:28:09.000"
-        ]
+  "url": "https://github.com/measureauthoringtool/measure-transfer-lambda",
+  "owner": "measureauthoringtool",
+  "name": "measure-transfer-lambda",
+  "description": "This is a lambda service to transfer MAT measures to MADiE",
+  "commits_count": 238,
+  "issues_count": 0,
+  "open_issues_count": 0,
+  "closed_issues_count": 0,
+  "pull_requests_count": 92,
+  "open_pull_requests_count": 0,
+  "merged_pull_requests_count": 60,
+  "closed_pull_requests_count": 32,
+  "forks_count": 0,
+  "stargazers_count": 0,
+  "watchers_count": 4,
+  "created_at": "2022-03-02T21:47:51Z",
+  "total_project_lines": 3832,
+  "average_project_lines": 87,
+  "total_project_comment_lines": 70,
+  "average_project_comment_lines": 2,
+  "total_project_blank_lines": 203,
+  "average_blank_lines": 5,
+  "predominant_langs": {
+    "TypeScript": 69689,
+    "JavaScript": 1060
+  },
+  "commits_by_month": {
+    "2024/5": 2,
+    "2024/4": 2,
+    "2024/3": 10,
+    "2024/2": 16
+  },
+  "average_issue_resolution_time": [],
+  "new_commit_contributors_by_day_over_last_month": [],
+  "new_commit_contributors_by_day_over_last_six_months": [
+    [
+      "2024-05-31T00:00:00.000Z",
+      1
     ]
+  ],
+  "new_issues_by_day_over_last_month": [],
+  "new_issues_by_day_over_last_six_months": [],
+  "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=midsize&color=ff0000",
+  "nadia_color": "ff0000",
+  "nadia_badge_name": "midsize",
+  "repo_dependency_libyear_list": [
+    [
+      "@aws-sdk/client-s3",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@babel/core",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@babel/preset-env",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@babel/preset-typescript",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@lhncbc/ucum-lhc",
+      0.4219178082,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@madie/madie-models",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@types/aws-lambda",
+      2.2219178082,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@types/jest",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@types/lodash",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@types/node",
+      2.3780821918,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@types/nodemailer",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@types/nodemailer-smtp-transport",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@typescript-eslint/eslint-plugin",
+      1.304109589,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@typescript-eslint/parser",
+      1.304109589,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "axios",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "babel-jest",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "esbuild",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "eslint",
+      2.6821917808,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "eslint-config-prettier",
+      0.3479452055,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "eslint-plugin-prettier",
+      2.0493150685,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "fast-xml-parser",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "jest",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "lodash",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "nodemailer",
+      0.7369863014,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "nodemailer-smtp-transport",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "prettier",
+      1.2246575342,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "ts-jest",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "ts-node",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "typescript",
+      1.6904109589,
+      "2024-10-31T17:28:09.000"
+    ]
+  ],
+  "cocomo": {
+    "languageSummary": [
+      {
+        "Name": "TypeScript",
+        "Bytes": 69689,
+        "CodeBytes": 0,
+        "Lines": 1738,
+        "Code": 1526,
+        "Comment": 66,
+        "Blank": 146,
+        "Complexity": 197,
+        "Count": 20,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "JSON",
+        "Bytes": 195070,
+        "CodeBytes": 0,
+        "Lines": 1751,
+        "Code": 1751,
+        "Comment": 0,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 17,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "Markdown",
+        "Bytes": 4722,
+        "CodeBytes": 0,
+        "Lines": 90,
+        "Code": 63,
+        "Comment": 0,
+        "Blank": 27,
+        "Complexity": 0,
+        "Count": 2,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "YAML",
+        "Bytes": 1669,
+        "CodeBytes": 0,
+        "Lines": 66,
+        "Code": 52,
+        "Comment": 2,
+        "Blank": 12,
+        "Complexity": 0,
+        "Count": 2,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "CloudFormation (YAML)",
+        "Bytes": 1840,
+        "CodeBytes": 0,
+        "Lines": 53,
+        "Code": 45,
+        "Comment": 2,
+        "Blank": 6,
+        "Complexity": 2,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "License",
+        "Bytes": 7048,
+        "CodeBytes": 0,
+        "Lines": 121,
+        "Code": 109,
+        "Comment": 0,
+        "Blank": 12,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "TOML",
+        "Bytes": 360,
+        "CodeBytes": 0,
+        "Lines": 13,
+        "Code": 13,
+        "Comment": 0,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      }
+    ],
+    "estimatedCost_low": 93423.497311645,
+    "estimatedScheduleMonths_low": 5.786289356528265,
+    "estimatedPeople_low": 1.572915823250005,
+    "estimatedCost_high": 291148.4207778621,
+    "estimatedScheduleMonths_high": 5.786289356528265,
+    "estimatedPeople_high": 1.572915823250005,
+    "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nTypeScript                  20      1738      146        66     1526        197\n(ULOC)                              1180\n-------------------------------------------------------------------------------\nJSON                        17      1751        0         0     1751          0\n(ULOC)                               432\n-------------------------------------------------------------------------------\nMarkdown                     2        90       27         0       63          0\n(ULOC)                                56\n-------------------------------------------------------------------------------\nYAML                         2        66       12         2       52          0\n(ULOC)                                51\n-------------------------------------------------------------------------------\nCloudFormation (YAM…         1        53        6         2       45          2\n(ULOC)                                47\n-------------------------------------------------------------------------------\nLicense                      1       121       12         0      109          0\n(ULOC)                               110\n-------------------------------------------------------------------------------\nTOML                         1        13        0         0       13          0\n(ULOC)                                14\n───────────────────────────────────────────────────────────────────────────────\nTotal                       44      3832      203        70     3559        199\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)         1875\nDRYness %                           0.49\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $102,444\nEstimated Schedule Effort (organic) 5.79 months\nEstimated People Required (organic) 1.57\n───────────────────────────────────────────────────────────────────────────────\nProcessed 280398 bytes, 0.280 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
+  }
 }

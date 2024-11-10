@@ -1,217 +1,348 @@
 {
-    "url": "https://github.com/measureauthoringtool/mat_automation_cypress",
-    "owner": "measureauthoringtool",
-    "name": "mat_automation_cypress",
-    "description": null,
-    "commits_count": 664,
-    "issues_count": 0,
-    "open_issues_count": 0,
-    "closed_issues_count": 0,
-    "pull_requests_count": 346,
-    "open_pull_requests_count": 36,
-    "merged_pull_requests_count": 285,
-    "closed_pull_requests_count": 25,
-    "forks_count": 0,
-    "stargazers_count": 0,
-    "watchers_count": 7,
-    "created_at": "2020-01-28T14:18:43Z",
-    "total_project_lines": 25139,
-    "average_project_lines": 120,
-    "total_project_comment_lines": 1657,
-    "average_project_comment_lines": 8,
-    "total_project_blank_lines": 6776,
-    "average_blank_lines": 32,
-    "predominant_langs": {
-        "JavaScript": 942479,
-        "HTML": 94524,
-        "Dockerfile": 756
-    },
-    "commits_by_month": {
-        "2023/11": 7,
-        "2023/9": 2,
-        "2023/7": 10,
-        "2023/4": 3,
-        "2023/3": 2,
-        "2022/7": 6
-    },
-    "average_issue_resolution_time": [],
-    "new_commit_contributors_by_day_over_last_month": [],
-    "new_commit_contributors_by_day_over_last_six_months": [],
-    "new_issues_by_day_over_last_month": [],
-    "new_issues_by_day_over_last_six_months": [],
-    "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=midsize&color=ff0000",
-    "nadia_color": "ff0000",
-    "nadia_badge_name": "midsize",
-    "repo_dependency_libyear_list": [
-        [
-            "@cypress/browserify-preprocessor",
-            1.4821917808,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "@cypress/webpack-preprocessor",
-            4.1698630137,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "@types/node",
-            2.4,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "axe-core",
-            0.2547945205,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "cy-verify-downloads",
-            0.0,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "cypress",
-            2.4219178082,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "cypress-axe",
-            1.6575342466,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "cypress-commands",
-            2.2191780822,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "cypress-file-upload",
-            0.8109589041,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "cypress-visual-regression",
-            2.4219178082,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "data-driven",
-            0.0,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "diff",
-            4.6520547945,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "eslint-plugin-chai-friendly",
-            0.1808219178,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "eslint-plugin-cypress",
-            0.5397260274,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "husky",
-            3.6547945205,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "make-runnable",
-            0.0,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "mocha",
-            3.4849315068,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "mochawesome",
-            2.6328767123,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "mochawesome-merge",
-            0.0,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "mongodb",
-            4.2301369863,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "mongodb-client-encryption",
-            0.8465753425,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "mysql",
-            0.0,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "playwright",
-            3.6301369863,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "portscanner",
-            0.0,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "snazzy",
-            2.1643835616,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "standard",
-            4.3424657534,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "ts-loader",
-            3.6493150685,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "tsify",
-            0.9342465753,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "tslint",
-            0.7342465753,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "tslint-no-unused-expression-chai",
-            0.0,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "tunnel-ssh",
-            5.8876712329,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "typescript",
-            3.6602739726,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "unzipper",
-            0.0,
-            "2024-11-01T01:07:16.000"
-        ],
-        [
-            "webpack",
-            1.1534246575,
-            "2024-11-01T01:07:16.000"
-        ]
+  "url": "https://github.com/measureauthoringtool/mat_automation_cypress",
+  "owner": "measureauthoringtool",
+  "name": "mat_automation_cypress",
+  "description": null,
+  "commits_count": 664,
+  "issues_count": 0,
+  "open_issues_count": 0,
+  "closed_issues_count": 0,
+  "pull_requests_count": 346,
+  "open_pull_requests_count": 36,
+  "merged_pull_requests_count": 285,
+  "closed_pull_requests_count": 25,
+  "forks_count": 0,
+  "stargazers_count": 0,
+  "watchers_count": 7,
+  "created_at": "2020-01-28T14:18:43Z",
+  "total_project_lines": 25139,
+  "average_project_lines": 120,
+  "total_project_comment_lines": 1657,
+  "average_project_comment_lines": 8,
+  "total_project_blank_lines": 6776,
+  "average_blank_lines": 32,
+  "predominant_langs": {
+    "JavaScript": 942479,
+    "HTML": 94524,
+    "Dockerfile": 756
+  },
+  "commits_by_month": {
+    "2023/11": 7,
+    "2023/9": 2,
+    "2023/7": 10,
+    "2023/4": 3,
+    "2023/3": 2,
+    "2022/7": 6
+  },
+  "average_issue_resolution_time": [],
+  "new_commit_contributors_by_day_over_last_month": [],
+  "new_commit_contributors_by_day_over_last_six_months": [],
+  "new_issues_by_day_over_last_month": [],
+  "new_issues_by_day_over_last_six_months": [],
+  "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=midsize&color=ff0000",
+  "nadia_color": "ff0000",
+  "nadia_badge_name": "midsize",
+  "repo_dependency_libyear_list": [
+    [
+      "@cypress/browserify-preprocessor",
+      1.4821917808,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "@cypress/webpack-preprocessor",
+      4.1698630137,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "@types/node",
+      2.4,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "axe-core",
+      0.2547945205,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "cy-verify-downloads",
+      0,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "cypress",
+      2.4219178082,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "cypress-axe",
+      1.6575342466,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "cypress-commands",
+      2.2191780822,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "cypress-file-upload",
+      0.8109589041,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "cypress-visual-regression",
+      2.4219178082,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "data-driven",
+      0,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "diff",
+      4.6520547945,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "eslint-plugin-chai-friendly",
+      0.1808219178,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "eslint-plugin-cypress",
+      0.5397260274,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "husky",
+      3.6547945205,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "make-runnable",
+      0,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "mocha",
+      3.4849315068,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "mochawesome",
+      2.6328767123,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "mochawesome-merge",
+      0,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "mongodb",
+      4.2301369863,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "mongodb-client-encryption",
+      0.8465753425,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "mysql",
+      0,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "playwright",
+      3.6301369863,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "portscanner",
+      0,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "snazzy",
+      2.1643835616,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "standard",
+      4.3424657534,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "ts-loader",
+      3.6493150685,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "tsify",
+      0.9342465753,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "tslint",
+      0.7342465753,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "tslint-no-unused-expression-chai",
+      0,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "tunnel-ssh",
+      5.8876712329,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "typescript",
+      3.6602739726,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "unzipper",
+      0,
+      "2024-11-01T01:07:16.000"
+    ],
+    [
+      "webpack",
+      1.1534246575,
+      "2024-11-01T01:07:16.000"
     ]
+  ],
+  "cocomo": {
+    "languageSummary": [
+      {
+        "Name": "JavaScript",
+        "Bytes": 942479,
+        "CodeBytes": 0,
+        "Lines": 24036,
+        "Code": 15675,
+        "Comment": 1643,
+        "Blank": 6718,
+        "Complexity": 209,
+        "Count": 185,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "JSON",
+        "Bytes": 229865,
+        "CodeBytes": 0,
+        "Lines": 438,
+        "Code": 422,
+        "Comment": 0,
+        "Blank": 16,
+        "Complexity": 0,
+        "Count": 15,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "YAML",
+        "Bytes": 2979,
+        "CodeBytes": 0,
+        "Lines": 70,
+        "Code": 67,
+        "Comment": 0,
+        "Blank": 3,
+        "Complexity": 0,
+        "Count": 3,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "TypeScript",
+        "Bytes": 0,
+        "CodeBytes": 0,
+        "Lines": 0,
+        "Code": 0,
+        "Comment": 0,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 2,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "Dockerfile",
+        "Bytes": 756,
+        "CodeBytes": 0,
+        "Lines": 29,
+        "Code": 19,
+        "Comment": 4,
+        "Blank": 6,
+        "Complexity": 6,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "Markdown",
+        "Bytes": 3510,
+        "CodeBytes": 0,
+        "Lines": 103,
+        "Code": 72,
+        "Comment": 0,
+        "Blank": 31,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "TypeScript Typings",
+        "Bytes": 0,
+        "CodeBytes": 0,
+        "Lines": 0,
+        "Code": 0,
+        "Comment": 0,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "XML",
+        "Bytes": 20255,
+        "CodeBytes": 0,
+        "Lines": 463,
+        "Code": 451,
+        "Comment": 10,
+        "Blank": 2,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      }
+    ],
+    "estimatedCost_low": 473781.2120127499,
+    "estimatedScheduleMonths_low": 10.723743037722866,
+    "estimatedPeople_low": 4.304086033425594,
+    "estimatedCost_high": 1476509.1828192528,
+    "estimatedScheduleMonths_high": 10.723743037722866,
+    "estimatedPeople_high": 4.304086033425594,
+    "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nJavaScript                 185     24036     6718      1643    15675        209\n(ULOC)                              5950\n-------------------------------------------------------------------------------\nJSON                        15       438       16         0      422          0\n(ULOC)                               337\n-------------------------------------------------------------------------------\nYAML                         3        70        3         0       67          0\n(ULOC)                                58\n-------------------------------------------------------------------------------\nTypeScript                   2         0        0         0        0          0\n(ULOC)                                 1\n-------------------------------------------------------------------------------\nDockerfile                   1        29        6         4       19          6\n(ULOC)                                23\n-------------------------------------------------------------------------------\nMarkdown                     1       103       31         0       72          0\n(ULOC)                                68\n-------------------------------------------------------------------------------\nTypeScript Typings           1         0        0         0        0          0\n(ULOC)                                 1\n-------------------------------------------------------------------------------\nXML                          1       463        2        10      451          0\n(ULOC)                               249\n───────────────────────────────────────────────────────────────────────────────\nTotal                      209     25139     6776      1657    16706        215\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)         6675\nDRYness %                           0.27\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $519,530\nEstimated Schedule Effort (organic) 10.72 months\nEstimated People Required (organic) 4.30\n───────────────────────────────────────────────────────────────────────────────\nProcessed 1199844 bytes, 1.200 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
+  }
 }

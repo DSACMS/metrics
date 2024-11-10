@@ -1,355 +1,486 @@
 {
-    "url": "https://github.com/measureauthoringtool/madie-components",
-    "owner": "measureauthoringtool",
-    "name": "madie-components",
-    "description": "A collection of UI components, built with React and Tailwind CSS, for the MADiE application.",
-    "commits_count": 79,
-    "issues_count": 0,
-    "open_issues_count": 0,
-    "closed_issues_count": 0,
-    "pull_requests_count": 139,
-    "open_pull_requests_count": 34,
-    "merged_pull_requests_count": 30,
-    "closed_pull_requests_count": 75,
-    "forks_count": 1,
-    "stargazers_count": 2,
-    "watchers_count": 5,
-    "created_at": "2021-09-09T15:35:53Z",
-    "total_project_lines": 4277,
-    "average_project_lines": 60,
-    "total_project_comment_lines": 88,
-    "average_project_comment_lines": 1,
-    "total_project_blank_lines": 423,
-    "average_blank_lines": 6,
-    "predominant_langs": {
-        "TypeScript": 102480,
-        "JavaScript": 4364,
-        "Shell": 116
-    },
-    "commits_by_month": {
-        "2022/4": 1,
-        "2022/2": 8,
-        "2021/12": 3,
-        "2021/11": 18
-    },
-    "average_issue_resolution_time": [],
-    "new_commit_contributors_by_day_over_last_month": [],
-    "new_commit_contributors_by_day_over_last_six_months": [],
-    "new_issues_by_day_over_last_month": [],
-    "new_issues_by_day_over_last_six_months": [],
-    "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=midsize&color=ff0000",
-    "nadia_color": "ff0000",
-    "nadia_badge_name": "midsize",
-    "repo_dependency_libyear_list": [
-        [
-            "@babel/core",
-            0.0,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@babel/eslint-parser",
-            0.0,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@babel/plugin-transform-react-jsx",
-            0.0,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@babel/plugin-transform-runtime",
-            0.0,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@babel/preset-env",
-            0.0,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@babel/preset-react",
-            0.0,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@babel/preset-typescript",
-            0.0,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@babel/runtime",
-            0.0,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@headlessui/react",
-            0.5260273973,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@heroicons/react",
-            2.3589041096,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@storybook/addon-actions",
-            1.6109589041,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@storybook/addon-essentials",
-            1.6109589041,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@storybook/addon-links",
-            1.6109589041,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@storybook/builder-webpack5",
-            1.6109589041,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@storybook/manager-webpack5",
-            -0.1534246575,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@storybook/react",
-            1.6109589041,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@storybook/storybook-deployer",
-            0.0,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@tailwindcss/forms",
-            0.0,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@testing-library/jest-dom",
-            1.2904109589,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@testing-library/react",
-            2.3835616438,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@testing-library/user-event",
-            2.1945205479,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@types/jest",
-            2.3945205479,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@types/react",
-            0.0684931507,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@types/react-dom",
-            0.8876712329,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@types/styled-components",
-            0.0,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@types/systemjs",
-            0.0,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@types/testing-library__jest-dom",
-            0.0575342466,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "@types/webpack-env",
-            0.0,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "autoprefixer",
-            0.0,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "babel-jest",
-            1.5890410959,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "babel-loader",
-            0.0,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "concurrently",
-            2.7315068493,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "cross-env",
-            0.0,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "eslint",
-            0.0876712329,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "eslint-config-prettier",
-            0.3479452055,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "eslint-config-ts-react-important-stuff",
-            0.0,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "eslint-plugin-prettier",
-            2.0493150685,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "husky",
-            2.8931506849,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "identity-obj-proxy",
-            0.0,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "jest",
-            1.5890410959,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "jest-cli",
-            1.5890410959,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "lodash",
-            0.0,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "postcss",
-            2.501369863,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "postcss-loader",
-            2.2547945205,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "postcss-preset-env",
-            1.9424657534,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "prettier",
-            1.2246575342,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "pretty-quick",
-            0.0,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "react-test-renderer",
-            3.095890411,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "single-spa",
-            1.2904109589,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "single-spa-react",
-            2.6684931507,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "system-font-css",
-            0.0,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "tailwindcss",
-            2.9616438356,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "ts-config-single-spa",
-            0.0,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "twin.macro",
-            2.1150684932,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "typescript",
-            1.6904109589,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "webpack",
-            0.0,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "webpack-cli",
-            1.3671232877,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "webpack-config-single-spa-react",
-            0.7424657534,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "webpack-config-single-spa-react-ts",
-            0.7424657534,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "webpack-config-single-spa-ts",
-            0.7424657534,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "webpack-dev-server",
-            2.1808219178,
-            "2024-10-31T17:28:02.000"
-        ],
-        [
-            "webpack-merge",
-            1.1150684932,
-            "2024-10-31T17:28:02.000"
-        ]
+  "url": "https://github.com/measureauthoringtool/madie-components",
+  "owner": "measureauthoringtool",
+  "name": "madie-components",
+  "description": "A collection of UI components, built with React and Tailwind CSS, for the MADiE application.",
+  "commits_count": 79,
+  "issues_count": 0,
+  "open_issues_count": 0,
+  "closed_issues_count": 0,
+  "pull_requests_count": 139,
+  "open_pull_requests_count": 34,
+  "merged_pull_requests_count": 30,
+  "closed_pull_requests_count": 75,
+  "forks_count": 1,
+  "stargazers_count": 2,
+  "watchers_count": 5,
+  "created_at": "2021-09-09T15:35:53Z",
+  "total_project_lines": 4277,
+  "average_project_lines": 60,
+  "total_project_comment_lines": 88,
+  "average_project_comment_lines": 1,
+  "total_project_blank_lines": 423,
+  "average_blank_lines": 6,
+  "predominant_langs": {
+    "TypeScript": 102480,
+    "JavaScript": 4364,
+    "Shell": 116
+  },
+  "commits_by_month": {
+    "2022/4": 1,
+    "2022/2": 8,
+    "2021/12": 3,
+    "2021/11": 18
+  },
+  "average_issue_resolution_time": [],
+  "new_commit_contributors_by_day_over_last_month": [],
+  "new_commit_contributors_by_day_over_last_six_months": [],
+  "new_issues_by_day_over_last_month": [],
+  "new_issues_by_day_over_last_six_months": [],
+  "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=midsize&color=ff0000",
+  "nadia_color": "ff0000",
+  "nadia_badge_name": "midsize",
+  "repo_dependency_libyear_list": [
+    [
+      "@babel/core",
+      0,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@babel/eslint-parser",
+      0,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@babel/plugin-transform-react-jsx",
+      0,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@babel/plugin-transform-runtime",
+      0,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@babel/preset-env",
+      0,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@babel/preset-react",
+      0,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@babel/preset-typescript",
+      0,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@babel/runtime",
+      0,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@headlessui/react",
+      0.5260273973,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@heroicons/react",
+      2.3589041096,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@storybook/addon-actions",
+      1.6109589041,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@storybook/addon-essentials",
+      1.6109589041,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@storybook/addon-links",
+      1.6109589041,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@storybook/builder-webpack5",
+      1.6109589041,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@storybook/manager-webpack5",
+      -0.1534246575,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@storybook/react",
+      1.6109589041,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@storybook/storybook-deployer",
+      0,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@tailwindcss/forms",
+      0,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@testing-library/jest-dom",
+      1.2904109589,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@testing-library/react",
+      2.3835616438,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@testing-library/user-event",
+      2.1945205479,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@types/jest",
+      2.3945205479,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@types/react",
+      0.0684931507,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@types/react-dom",
+      0.8876712329,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@types/styled-components",
+      0,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@types/systemjs",
+      0,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@types/testing-library__jest-dom",
+      0.0575342466,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "@types/webpack-env",
+      0,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "autoprefixer",
+      0,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "babel-jest",
+      1.5890410959,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "babel-loader",
+      0,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "concurrently",
+      2.7315068493,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "cross-env",
+      0,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "eslint",
+      0.0876712329,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "eslint-config-prettier",
+      0.3479452055,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "eslint-config-ts-react-important-stuff",
+      0,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "eslint-plugin-prettier",
+      2.0493150685,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "husky",
+      2.8931506849,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "identity-obj-proxy",
+      0,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "jest",
+      1.5890410959,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "jest-cli",
+      1.5890410959,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "lodash",
+      0,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "postcss",
+      2.501369863,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "postcss-loader",
+      2.2547945205,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "postcss-preset-env",
+      1.9424657534,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "prettier",
+      1.2246575342,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "pretty-quick",
+      0,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "react-test-renderer",
+      3.095890411,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "single-spa",
+      1.2904109589,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "single-spa-react",
+      2.6684931507,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "system-font-css",
+      0,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "tailwindcss",
+      2.9616438356,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "ts-config-single-spa",
+      0,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "twin.macro",
+      2.1150684932,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "typescript",
+      1.6904109589,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "webpack",
+      0,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "webpack-cli",
+      1.3671232877,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "webpack-config-single-spa-react",
+      0.7424657534,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "webpack-config-single-spa-react-ts",
+      0.7424657534,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "webpack-config-single-spa-ts",
+      0.7424657534,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "webpack-dev-server",
+      2.1808219178,
+      "2024-10-31T17:28:02.000"
+    ],
+    [
+      "webpack-merge",
+      1.1150684932,
+      "2024-10-31T17:28:02.000"
     ]
+  ],
+  "cocomo": {
+    "languageSummary": [
+      {
+        "Name": "TypeScript",
+        "Bytes": 102480,
+        "CodeBytes": 0,
+        "Lines": 3508,
+        "Code": 3095,
+        "Comment": 55,
+        "Blank": 358,
+        "Complexity": 125,
+        "Count": 55,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "JavaScript",
+        "Bytes": 4364,
+        "CodeBytes": 0,
+        "Lines": 185,
+        "Code": 179,
+        "Comment": 2,
+        "Blank": 4,
+        "Complexity": 0,
+        "Count": 4,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "JSON",
+        "Bytes": 4502,
+        "CodeBytes": 0,
+        "Lines": 163,
+        "Code": 163,
+        "Comment": 0,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 3,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "YAML",
+        "Bytes": 5824,
+        "CodeBytes": 0,
+        "Lines": 191,
+        "Code": 153,
+        "Comment": 8,
+        "Blank": 30,
+        "Complexity": 0,
+        "Count": 3,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "Markdown",
+        "Bytes": 1523,
+        "CodeBytes": 0,
+        "Lines": 32,
+        "Code": 23,
+        "Comment": 0,
+        "Blank": 9,
+        "Complexity": 0,
+        "Count": 2,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "TypeScript Typings",
+        "Bytes": 1369,
+        "CodeBytes": 0,
+        "Lines": 73,
+        "Code": 42,
+        "Comment": 22,
+        "Blank": 9,
+        "Complexity": 0,
+        "Count": 2,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "License",
+        "Bytes": 7048,
+        "CodeBytes": 0,
+        "Lines": 121,
+        "Code": 109,
+        "Comment": 0,
+        "Blank": 12,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "Shell",
+        "Bytes": 116,
+        "CodeBytes": 0,
+        "Lines": 4,
+        "Code": 2,
+        "Comment": 1,
+        "Blank": 1,
+        "Complexity": 1,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      }
+    ],
+    "estimatedCost_low": 99137.06679880571,
+    "estimatedScheduleMonths_low": 5.918293875968756,
+    "estimatedPeople_low": 1.6318831070069988,
+    "estimatedCost_high": 308954.39872838,
+    "estimatedScheduleMonths_high": 5.918293875968756,
+    "estimatedPeople_high": 1.6318831070069988,
+    "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nTypeScript                  55      3508      358        55     3095        125\n(ULOC)                              1918\n-------------------------------------------------------------------------------\nJavaScript                   4       185        4         2      179          0\n(ULOC)                               157\n-------------------------------------------------------------------------------\nJSON                         3       163        0         0      163          0\n(ULOC)                               146\n-------------------------------------------------------------------------------\nYAML                         3       191       30         8      153          0\n(ULOC)                               104\n-------------------------------------------------------------------------------\nMarkdown                     2        32        9         0       23          0\n(ULOC)                                24\n-------------------------------------------------------------------------------\nTypeScript Typings           2        73        9        22       42          0\n(ULOC)                                37\n-------------------------------------------------------------------------------\nLicense                      1       121       12         0      109          0\n(ULOC)                               110\n-------------------------------------------------------------------------------\nShell                        1         4        1         1        2          1\n(ULOC)                                 4\n───────────────────────────────────────────────────────────────────────────────\nTotal                       71      4277      423        88     3766        126\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)         2481\nDRYness %                           0.58\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $108,710\nEstimated Schedule Effort (organic) 5.92 months\nEstimated People Required (organic) 1.63\n───────────────────────────────────────────────────────────────────────────────\nProcessed 127226 bytes, 0.127 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
+  }
 }
