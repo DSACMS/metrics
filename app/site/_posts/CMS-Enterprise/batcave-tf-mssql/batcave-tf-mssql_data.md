@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-tf-mssql | REPORT-2024-11-03
+title: Open Source at CMS Metrics Report for batcave-tf-mssql | REPORT-2024-11-10
 permalink: /CMS-Enterprise/batcave-tf-mssql/
 
 org: CMS-Enterprise
 repo: batcave-tf-mssql
-reportID: REPORT-2024-11-03
-date_stampThisWeek: 2024-11-03
-date_stampLastWeek: 2024-11-03
+reportID: REPORT-2024-11-10
+date_stampThisWeek: 2024-11-10
+date_stampLastWeek: 2024-11-10
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -87,10 +87,10 @@ date_stampLastWeek: 2024-11-03
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>4</td>
         <td>5</td>
-        <td>5</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >22%</td>
       </tr>
     </tbody>
   </table>

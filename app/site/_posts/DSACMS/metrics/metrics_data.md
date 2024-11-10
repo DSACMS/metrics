@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for metrics | REPORT-2024-11-03
+title: Open Source at CMS Metrics Report for metrics | REPORT-2024-11-10
 permalink: /DSACMS/metrics/
 
 org: DSACMS
 repo: metrics
-reportID: REPORT-2024-11-03
-date_stampThisWeek: 2024-11-03
-date_stampLastWeek: 2024-11-03
+reportID: REPORT-2024-11-10
+date_stampThisWeek: 2024-11-10
+date_stampLastWeek: 2024-11-10
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-11-03
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>1435</td>
         <td>1418</td>
-        <td>1402</td>
-        <td style="color: #45c527" >16</td>
-        <td style="color: #45c527" >1.1%</td>
+        <td style="color: #45c527" >17</td>
+        <td style="color: #45c527" >1.2%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2024-11-03
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>11</td>
         <td>10</td>
-        <td>10</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >1</td>
+        <td style="" >9.5%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>174</td>
         <td>173</td>
-        <td>172</td>
         <td style="color: #45c527" >1</td>
         <td style="color: #45c527" >0.58%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>48</td>
-        <td>47</td>
-        <td style="" >1</td>
-        <td style="" >2.1%</td>
+        <td>48</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -81,9 +81,9 @@ date_stampLastWeek: 2024-11-03
       <tr>
         <th scope="row">Stars</th>
         <td>7</td>
-        <td>6</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >15%</td>
+        <td>7</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
