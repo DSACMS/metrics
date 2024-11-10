@@ -1,463 +1,463 @@
 {
-    "url": "https://github.com/CMSgov/qpp-file-upload-api-client",
-    "owner": "CMSgov",
-    "name": "qpp-file-upload-api-client",
-    "description": "A set of functions to call the QPP Submissions API in common manner, such as for the file upload use case. ",
-    "commits_count": 425,
-    "issues_count": 14,
-    "open_issues_count": 4,
-    "closed_issues_count": 10,
-    "pull_requests_count": 198,
-    "open_pull_requests_count": 7,
-    "merged_pull_requests_count": 138,
-    "closed_pull_requests_count": 53,
-    "forks_count": 3,
-    "stargazers_count": 3,
-    "watchers_count": 34,
-    "total_project_lines": 2381,
-    "average_project_lines": 95,
-    "total_project_comment_lines": 167,
-    "average_project_comment_lines": 7,
-    "total_project_blank_lines": 287,
-    "average_blank_lines": 11,
-    "commits_by_month": {
-        "2024/10": 1,
-        "2024/1": 2,
-        "2023/11": 1,
-        "2023/1": 8,
-        "2022/12": 3,
-        "2022/11": 5,
-        "2022/10": 7,
-        "2022/9": 3
-    },
-    "new_commit_contributors_by_day_over_last_month": [],
-    "new_commit_contributors_by_day_over_last_six_months": [
-        [
-            "2024-10-01T00:00:00.000Z",
-            1
-        ]
-    ],
-    "new_issues_by_day_over_last_month": [],
-    "new_issues_by_day_over_last_six_months": [],
-    "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=midsize&color=ff0000",
-    "nadia_color": "ff0000",
-    "nadia_badge_name": "midsize",
-    "created_at": "2017-09-18T19:06:47Z",
-    "ossf_scorecard": {
-        "date": "2024-11-03T09:37:13Z",
-        "repo": {
-            "name": "github.com/CMSgov/qpp-file-upload-api-client",
-            "commit": "3422dcd806b0768c8d6b3b22bca109c0d72060f0"
-        },
-        "scorecard": {
-            "version": "v5.0.0-76-gc9d1dae3",
-            "commit": "c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720"
-        },
-        "score": 4.8,
-        "checks": [
-            {
-                "details": null,
-                "score": 10,
-                "reason": "no binaries found in the repo",
-                "name": "Binary-Artifacts",
-                "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#binary-artifacts",
-                    "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
-                }
-            },
-            {
-                "details": null,
-                "score": 1,
-                "reason": "branch protection is not maximal on development and all release branches",
-                "name": "Branch-Protection",
-                "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#branch-protection",
-                    "short": "Determines if the default and release branches are protected with GitHub's branch protection settings."
-                }
-            },
-            {
-                "details": null,
-                "score": 1,
-                "reason": "4 out of 21 merged PRs checked by a CI test -- score normalized to 1",
-                "name": "CI-Tests",
-                "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#ci-tests",
-                    "short": "Determines if the project runs tests before pull requests are merged."
-                }
-            },
-            {
-                "details": null,
-                "score": 0,
-                "reason": "no effort to earn an OpenSSF best practices badge detected",
-                "name": "CII-Best-Practices",
-                "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#cii-best-practices",
-                    "short": "Determines if the project has an OpenSSF (formerly CII) Best Practices Badge."
-                }
-            },
-            {
-                "details": null,
-                "score": 10,
-                "reason": "all changesets reviewed",
-                "name": "Code-Review",
-                "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#code-review",
-                    "short": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
-                }
-            },
-            {
-                "details": null,
-                "score": 10,
-                "reason": "project has 6 contributing companies or organizations",
-                "name": "Contributors",
-                "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#contributors",
-                    "short": "Determines if the project has a set of contributors from multiple organizations (e.g., companies)."
-                }
-            },
-            {
-                "details": null,
-                "score": 10,
-                "reason": "no dangerous workflow patterns detected",
-                "name": "Dangerous-Workflow",
-                "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#dangerous-workflow",
-                    "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
-                }
-            },
-            {
-                "details": null,
-                "score": 10,
-                "reason": "update tool detected",
-                "name": "Dependency-Update-Tool",
-                "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#dependency-update-tool",
-                    "short": "Determines if the project uses a dependency update tool."
-                }
-            },
-            {
-                "details": null,
-                "score": 0,
-                "reason": "project is not fuzzed",
-                "name": "Fuzzing",
-                "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#fuzzing",
-                    "short": "Determines if the project uses fuzzing."
-                }
-            },
-            {
-                "details": null,
-                "score": 10,
-                "reason": "license file detected",
-                "name": "License",
-                "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#license",
-                    "short": "Determines if the project has defined a license."
-                }
-            },
-            {
-                "details": null,
-                "score": 0,
-                "reason": "1 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0",
-                "name": "Maintained",
-                "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#maintained",
-                    "short": "Determines if the project is \"actively maintained\"."
-                }
-            },
-            {
-                "details": null,
-                "score": 10,
-                "reason": "packaging workflow detected",
-                "name": "Packaging",
-                "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#packaging",
-                    "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
-                }
-            },
-            {
-                "details": null,
-                "score": 6,
-                "reason": "dependency not pinned by hash detected -- score normalized to 6",
-                "name": "Pinned-Dependencies",
-                "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#pinned-dependencies",
-                    "short": "Determines if the project has declared and pinned the dependencies of its build process."
-                }
-            },
-            {
-                "details": null,
-                "score": 0,
-                "reason": "SAST tool is not run on all commits -- score normalized to 0",
-                "name": "SAST",
-                "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#sast",
-                    "short": "Determines if the project uses static code analysis."
-                }
-            },
-            {
-                "details": null,
-                "score": 0,
-                "reason": "security policy file not detected",
-                "name": "Security-Policy",
-                "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#security-policy",
-                    "short": "Determines if the project has published a security policy."
-                }
-            },
-            {
-                "details": null,
-                "score": -1,
-                "reason": "no releases found",
-                "name": "Signed-Releases",
-                "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#signed-releases",
-                    "short": "Determines if the project cryptographically signs release artifacts."
-                }
-            },
-            {
-                "details": null,
-                "score": 0,
-                "reason": "detected GitHub workflow tokens with excessive permissions",
-                "name": "Token-Permissions",
-                "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#token-permissions",
-                    "short": "Determines if the project's workflows follow the principle of least privilege."
-                }
-            },
-            {
-                "details": null,
-                "score": 1,
-                "reason": "9 existing vulnerabilities detected",
-                "name": "Vulnerabilities",
-                "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#vulnerabilities",
-                    "short": "Determines if the project has open, known unfixed vulnerabilities."
-                }
-            }
-        ],
-        "metadata": null
-    },
-    "cocomo": {
-        "languageSummary": [
-            {
-                "Name": "JavaScript",
-                "Bytes": 51510,
-                "CodeBytes": 0,
-                "Lines": 1463,
-                "Code": 1144,
-                "Comment": 166,
-                "Blank": 153,
-                "Complexity": 87,
-                "Count": 8,
-                "WeightedComplexity": 0,
-                "Files": [],
-                "LineLength": null,
-                "ULOC": 0
-            },
-            {
-                "Name": "YAML",
-                "Bytes": 3858,
-                "CodeBytes": 0,
-                "Lines": 170,
-                "Code": 137,
-                "Comment": 1,
-                "Blank": 32,
-                "Complexity": 0,
-                "Count": 6,
-                "WeightedComplexity": 0,
-                "Files": [],
-                "LineLength": null,
-                "ULOC": 0
-            },
-            {
-                "Name": "JSON",
-                "Bytes": 6189,
-                "CodeBytes": 0,
-                "Lines": 236,
-                "Code": 235,
-                "Comment": 0,
-                "Blank": 1,
-                "Complexity": 0,
-                "Count": 4,
-                "WeightedComplexity": 0,
-                "Files": [],
-                "LineLength": null,
-                "ULOC": 0
-            },
-            {
-                "Name": "Markdown",
-                "Bytes": 13346,
-                "CodeBytes": 0,
-                "Lines": 291,
-                "Code": 210,
-                "Comment": 0,
-                "Blank": 81,
-                "Complexity": 0,
-                "Count": 4,
-                "WeightedComplexity": 0,
-                "Files": [],
-                "LineLength": null,
-                "ULOC": 0
-            },
-            {
-                "Name": "License",
-                "Bytes": 6555,
-                "CodeBytes": 0,
-                "Lines": 116,
-                "Code": 96,
-                "Comment": 0,
-                "Blank": 20,
-                "Complexity": 0,
-                "Count": 1,
-                "WeightedComplexity": 0,
-                "Files": [],
-                "LineLength": null,
-                "ULOC": 0
-            },
-            {
-                "Name": "TOML",
-                "Bytes": 3576,
-                "CodeBytes": 0,
-                "Lines": 104,
-                "Code": 104,
-                "Comment": 0,
-                "Blank": 0,
-                "Complexity": 0,
-                "Count": 1,
-                "WeightedComplexity": 0,
-                "Files": [],
-                "LineLength": null,
-                "ULOC": 0
-            },
-            {
-                "Name": "TypeScript Typings",
-                "Bytes": 139,
-                "CodeBytes": 0,
-                "Lines": 1,
-                "Code": 1,
-                "Comment": 0,
-                "Blank": 0,
-                "Complexity": 0,
-                "Count": 1,
-                "WeightedComplexity": 0,
-                "Files": [],
-                "LineLength": null,
-                "ULOC": 0
-            }
-        ],
-        "estimatedCost_low": 49055.480507903456,
-        "estimatedScheduleMonths_low": 4.529894470155126,
-        "estimatedPeople_low": 1.0549914923851864,
-        "estimatedCost_high": 152878.30247599838,
-        "estimatedScheduleMonths_high": 4.529894470155126,
-        "estimatedPeople_high": 1.0549914923851864,
-        "dryness_table": "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nJavaScript                   8      1463      153       166     1144         87\n(ULOC)                               686\n-------------------------------------------------------------------------------\nYAML                         6       170       32         1      137          0\n(ULOC)                                93\n-------------------------------------------------------------------------------\nJSON                         4       236        1         0      235          0\n(ULOC)                               159\n-------------------------------------------------------------------------------\nMarkdown                     4       291       81         0      210          0\n(ULOC)                               186\n-------------------------------------------------------------------------------\nLicense                      1       116       20         0       96          0\n(ULOC)                                97\n-------------------------------------------------------------------------------\nTOML                         1       104        0         0      104          0\n(ULOC)                                77\n-------------------------------------------------------------------------------\nTypeScript Typings           1         1        0         0        1          0\n(ULOC)                                 2\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nTotal                       25      2381      287       167     1927         87\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nUnique Lines of Code (ULOC)         1276\nDRYness %                           0.54\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nEstimated Cost to Develop (organic) $53,792\nEstimated Schedule Effort (organic) 4.53 months\nEstimated People Required (organic) 1.05\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProcessed 85173 bytes, 0.085 megabytes (SI)\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n"
-    },
-    "predominant_langs": {
-        "JavaScript": 51510
-    },
-    "average_issue_resolution_time": [
-        [
-            "qpp-file-upload-api-client",
-            "33 days 13:31:32.1"
-        ]
-    ],
-    "repo_dependency_libyear_list": [
-        [
-            "@babel/cli",
-            0.0,
-            "2024-10-30T20:39:48.000"
-        ],
-        [
-            "@babel/preset-env",
-            0.0,
-            "2024-10-30T20:39:48.000"
-        ],
-        [
-            "@babel/register",
-            0.0,
-            "2024-10-30T20:39:48.000"
-        ],
-        [
-            "@snyk/protect",
-            2.1287671233,
-            "2024-10-30T20:39:48.000"
-        ],
-        [
-            "axios",
-            0.0,
-            "2024-10-30T20:39:48.000"
-        ],
-        [
-            "babel-loader",
-            0.0,
-            "2024-10-30T20:39:48.000"
-        ],
-        [
-            "chai",
-            0.2438356164,
-            "2024-10-30T20:39:48.000"
-        ],
-        [
-            "debug",
-            0.0,
-            "2024-10-30T20:39:48.000"
-        ],
-        [
-            "eslint",
-            3.2191780822,
-            "2024-10-30T20:39:48.000"
-        ],
-        [
-            "mocha",
-            2.6383561644,
-            "2024-10-30T20:39:48.000"
-        ],
-        [
-            "nyc",
-            4.304109589,
-            "2024-10-30T20:39:48.000"
-        ],
-        [
-            "pre-push",
-            0.0,
-            "2024-10-30T20:39:48.000"
-        ],
-        [
-            "rimraf",
-            4.4191780822,
-            "2024-10-30T20:39:48.000"
-        ],
-        [
-            "sinon",
-            3.1342465753,
-            "2024-10-30T20:39:48.000"
-        ],
-        [
-            "snyk",
-            0.0,
-            "2024-10-30T20:39:48.000"
-        ],
-        [
-            "tar",
-            0.3452054795,
-            "2024-10-30T20:39:48.000"
-        ],
-        [
-            "terser-webpack-plugin",
-            0.0,
-            "2024-10-30T20:39:48.000"
-        ],
-        [
-            "webpack",
-            0.0,
-            "2024-10-30T20:39:48.000"
-        ],
-        [
-            "webpack-cli",
-            1.3671232877,
-            "2024-10-30T20:39:48.000"
-        ]
+  "url": "https://github.com/CMSgov/qpp-file-upload-api-client",
+  "owner": "CMSgov",
+  "name": "qpp-file-upload-api-client",
+  "description": "A set of functions to call the QPP Submissions API in common manner, such as for the file upload use case. ",
+  "commits_count": 425,
+  "issues_count": 14,
+  "open_issues_count": 4,
+  "closed_issues_count": 10,
+  "pull_requests_count": 198,
+  "open_pull_requests_count": 7,
+  "merged_pull_requests_count": 138,
+  "closed_pull_requests_count": 53,
+  "forks_count": 3,
+  "stargazers_count": 3,
+  "watchers_count": 34,
+  "total_project_lines": 2381,
+  "average_project_lines": 95,
+  "total_project_comment_lines": 167,
+  "average_project_comment_lines": 7,
+  "total_project_blank_lines": 287,
+  "average_blank_lines": 11,
+  "commits_by_month": {
+    "2024/10": 1,
+    "2024/1": 2,
+    "2023/11": 1,
+    "2023/1": 8,
+    "2022/12": 3,
+    "2022/11": 5,
+    "2022/10": 7,
+    "2022/9": 3
+  },
+  "new_commit_contributors_by_day_over_last_month": [],
+  "new_commit_contributors_by_day_over_last_six_months": [
+    [
+      "2024-10-01T00:00:00.000Z",
+      1
     ]
+  ],
+  "new_issues_by_day_over_last_month": [],
+  "new_issues_by_day_over_last_six_months": [],
+  "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=midsize&color=ff0000",
+  "nadia_color": "ff0000",
+  "nadia_badge_name": "midsize",
+  "created_at": "2017-09-18T19:06:47Z",
+  "ossf_scorecard": {
+    "date": "2024-11-03T09:37:13Z",
+    "repo": {
+      "name": "github.com/CMSgov/qpp-file-upload-api-client",
+      "commit": "3422dcd806b0768c8d6b3b22bca109c0d72060f0"
+    },
+    "scorecard": {
+      "version": "v5.0.0-76-gc9d1dae3",
+      "commit": "c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720"
+    },
+    "score": 4.8,
+    "checks": [
+      {
+        "details": null,
+        "score": 10,
+        "reason": "no binaries found in the repo",
+        "name": "Binary-Artifacts",
+        "documentation": {
+          "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#binary-artifacts",
+          "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
+        }
+      },
+      {
+        "details": null,
+        "score": 1,
+        "reason": "branch protection is not maximal on development and all release branches",
+        "name": "Branch-Protection",
+        "documentation": {
+          "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#branch-protection",
+          "short": "Determines if the default and release branches are protected with GitHub's branch protection settings."
+        }
+      },
+      {
+        "details": null,
+        "score": 1,
+        "reason": "4 out of 21 merged PRs checked by a CI test -- score normalized to 1",
+        "name": "CI-Tests",
+        "documentation": {
+          "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#ci-tests",
+          "short": "Determines if the project runs tests before pull requests are merged."
+        }
+      },
+      {
+        "details": null,
+        "score": 0,
+        "reason": "no effort to earn an OpenSSF best practices badge detected",
+        "name": "CII-Best-Practices",
+        "documentation": {
+          "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#cii-best-practices",
+          "short": "Determines if the project has an OpenSSF (formerly CII) Best Practices Badge."
+        }
+      },
+      {
+        "details": null,
+        "score": 10,
+        "reason": "all changesets reviewed",
+        "name": "Code-Review",
+        "documentation": {
+          "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#code-review",
+          "short": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
+        }
+      },
+      {
+        "details": null,
+        "score": 10,
+        "reason": "project has 6 contributing companies or organizations",
+        "name": "Contributors",
+        "documentation": {
+          "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#contributors",
+          "short": "Determines if the project has a set of contributors from multiple organizations (e.g., companies)."
+        }
+      },
+      {
+        "details": null,
+        "score": 10,
+        "reason": "no dangerous workflow patterns detected",
+        "name": "Dangerous-Workflow",
+        "documentation": {
+          "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#dangerous-workflow",
+          "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
+        }
+      },
+      {
+        "details": null,
+        "score": 10,
+        "reason": "update tool detected",
+        "name": "Dependency-Update-Tool",
+        "documentation": {
+          "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#dependency-update-tool",
+          "short": "Determines if the project uses a dependency update tool."
+        }
+      },
+      {
+        "details": null,
+        "score": 0,
+        "reason": "project is not fuzzed",
+        "name": "Fuzzing",
+        "documentation": {
+          "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#fuzzing",
+          "short": "Determines if the project uses fuzzing."
+        }
+      },
+      {
+        "details": null,
+        "score": 10,
+        "reason": "license file detected",
+        "name": "License",
+        "documentation": {
+          "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#license",
+          "short": "Determines if the project has defined a license."
+        }
+      },
+      {
+        "details": null,
+        "score": 0,
+        "reason": "1 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0",
+        "name": "Maintained",
+        "documentation": {
+          "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#maintained",
+          "short": "Determines if the project is \"actively maintained\"."
+        }
+      },
+      {
+        "details": null,
+        "score": 10,
+        "reason": "packaging workflow detected",
+        "name": "Packaging",
+        "documentation": {
+          "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#packaging",
+          "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
+        }
+      },
+      {
+        "details": null,
+        "score": 6,
+        "reason": "dependency not pinned by hash detected -- score normalized to 6",
+        "name": "Pinned-Dependencies",
+        "documentation": {
+          "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#pinned-dependencies",
+          "short": "Determines if the project has declared and pinned the dependencies of its build process."
+        }
+      },
+      {
+        "details": null,
+        "score": 0,
+        "reason": "SAST tool is not run on all commits -- score normalized to 0",
+        "name": "SAST",
+        "documentation": {
+          "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#sast",
+          "short": "Determines if the project uses static code analysis."
+        }
+      },
+      {
+        "details": null,
+        "score": 0,
+        "reason": "security policy file not detected",
+        "name": "Security-Policy",
+        "documentation": {
+          "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#security-policy",
+          "short": "Determines if the project has published a security policy."
+        }
+      },
+      {
+        "details": null,
+        "score": -1,
+        "reason": "no releases found",
+        "name": "Signed-Releases",
+        "documentation": {
+          "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#signed-releases",
+          "short": "Determines if the project cryptographically signs release artifacts."
+        }
+      },
+      {
+        "details": null,
+        "score": 0,
+        "reason": "detected GitHub workflow tokens with excessive permissions",
+        "name": "Token-Permissions",
+        "documentation": {
+          "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#token-permissions",
+          "short": "Determines if the project's workflows follow the principle of least privilege."
+        }
+      },
+      {
+        "details": null,
+        "score": 1,
+        "reason": "9 existing vulnerabilities detected",
+        "name": "Vulnerabilities",
+        "documentation": {
+          "url": "https://github.com/ossf/scorecard/blob/c9d1dae3ac8a8062fc7f2b9ec7afd097fb254720/docs/checks.md#vulnerabilities",
+          "short": "Determines if the project has open, known unfixed vulnerabilities."
+        }
+      }
+    ],
+    "metadata": null
+  },
+  "cocomo": {
+    "languageSummary": [
+      {
+        "Name": "JavaScript",
+        "Bytes": 51510,
+        "CodeBytes": 0,
+        "Lines": 1463,
+        "Code": 1144,
+        "Comment": 166,
+        "Blank": 153,
+        "Complexity": 87,
+        "Count": 8,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "YAML",
+        "Bytes": 3858,
+        "CodeBytes": 0,
+        "Lines": 170,
+        "Code": 137,
+        "Comment": 1,
+        "Blank": 32,
+        "Complexity": 0,
+        "Count": 6,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "JSON",
+        "Bytes": 6189,
+        "CodeBytes": 0,
+        "Lines": 236,
+        "Code": 235,
+        "Comment": 0,
+        "Blank": 1,
+        "Complexity": 0,
+        "Count": 4,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "Markdown",
+        "Bytes": 13346,
+        "CodeBytes": 0,
+        "Lines": 291,
+        "Code": 210,
+        "Comment": 0,
+        "Blank": 81,
+        "Complexity": 0,
+        "Count": 4,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "License",
+        "Bytes": 6555,
+        "CodeBytes": 0,
+        "Lines": 116,
+        "Code": 96,
+        "Comment": 0,
+        "Blank": 20,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "TOML",
+        "Bytes": 3576,
+        "CodeBytes": 0,
+        "Lines": 104,
+        "Code": 104,
+        "Comment": 0,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "TypeScript Typings",
+        "Bytes": 139,
+        "CodeBytes": 0,
+        "Lines": 1,
+        "Code": 1,
+        "Comment": 0,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      }
+    ],
+    "estimatedCost_low": 49055.480507903456,
+    "estimatedScheduleMonths_low": 4.529894470155126,
+    "estimatedPeople_low": 1.0549914923851864,
+    "estimatedCost_high": 152878.30247599838,
+    "estimatedScheduleMonths_high": 4.529894470155126,
+    "estimatedPeople_high": 1.0549914923851864,
+    "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nJavaScript                   8      1463      153       166     1144         87\n(ULOC)                               686\n-------------------------------------------------------------------------------\nYAML                         6       170       32         1      137          0\n(ULOC)                                93\n-------------------------------------------------------------------------------\nJSON                         4       236        1         0      235          0\n(ULOC)                               159\n-------------------------------------------------------------------------------\nMarkdown                     4       291       81         0      210          0\n(ULOC)                               186\n-------------------------------------------------------------------------------\nLicense                      1       116       20         0       96          0\n(ULOC)                                97\n-------------------------------------------------------------------------------\nTOML                         1       104        0         0      104          0\n(ULOC)                                77\n-------------------------------------------------------------------------------\nTypeScript Typings           1         1        0         0        1          0\n(ULOC)                                 2\n───────────────────────────────────────────────────────────────────────────────\nTotal                       25      2381      287       167     1927         87\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)         1276\nDRYness %                           0.54\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $53,792\nEstimated Schedule Effort (organic) 4.53 months\nEstimated People Required (organic) 1.05\n───────────────────────────────────────────────────────────────────────────────\nProcessed 85173 bytes, 0.085 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
+  },
+  "predominant_langs": {
+    "JavaScript": 51510
+  },
+  "average_issue_resolution_time": [
+    [
+      "qpp-file-upload-api-client",
+      "33 days 13:31:32.1"
+    ]
+  ],
+  "repo_dependency_libyear_list": [
+    [
+      "@babel/cli",
+      0,
+      "2024-10-30T20:39:48.000"
+    ],
+    [
+      "@babel/preset-env",
+      0,
+      "2024-10-30T20:39:48.000"
+    ],
+    [
+      "@babel/register",
+      0,
+      "2024-10-30T20:39:48.000"
+    ],
+    [
+      "@snyk/protect",
+      2.1287671233,
+      "2024-10-30T20:39:48.000"
+    ],
+    [
+      "axios",
+      0,
+      "2024-10-30T20:39:48.000"
+    ],
+    [
+      "babel-loader",
+      0,
+      "2024-10-30T20:39:48.000"
+    ],
+    [
+      "chai",
+      0.2438356164,
+      "2024-10-30T20:39:48.000"
+    ],
+    [
+      "debug",
+      0,
+      "2024-10-30T20:39:48.000"
+    ],
+    [
+      "eslint",
+      3.2191780822,
+      "2024-10-30T20:39:48.000"
+    ],
+    [
+      "mocha",
+      2.6383561644,
+      "2024-10-30T20:39:48.000"
+    ],
+    [
+      "nyc",
+      4.304109589,
+      "2024-10-30T20:39:48.000"
+    ],
+    [
+      "pre-push",
+      0,
+      "2024-10-30T20:39:48.000"
+    ],
+    [
+      "rimraf",
+      4.4191780822,
+      "2024-10-30T20:39:48.000"
+    ],
+    [
+      "sinon",
+      3.1342465753,
+      "2024-10-30T20:39:48.000"
+    ],
+    [
+      "snyk",
+      0,
+      "2024-10-30T20:39:48.000"
+    ],
+    [
+      "tar",
+      0.3452054795,
+      "2024-10-30T20:39:48.000"
+    ],
+    [
+      "terser-webpack-plugin",
+      0,
+      "2024-10-30T20:39:48.000"
+    ],
+    [
+      "webpack",
+      0,
+      "2024-10-30T20:39:48.000"
+    ],
+    [
+      "webpack-cli",
+      1.3671232877,
+      "2024-10-30T20:39:48.000"
+    ]
+  ]
 }
