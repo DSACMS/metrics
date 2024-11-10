@@ -1,374 +1,520 @@
 {
-    "url": "https://github.com/measureauthoringtool/madie-auth",
-    "owner": "measureauthoringtool",
-    "name": "madie-auth",
-    "description": "The single-spa Application responsible for the MADiE application's authorization/authentication logic.",
-    "commits_count": 101,
-    "issues_count": 1,
-    "open_issues_count": 0,
-    "closed_issues_count": 1,
-    "pull_requests_count": 201,
-    "open_pull_requests_count": 42,
-    "merged_pull_requests_count": 45,
-    "closed_pull_requests_count": 114,
-    "forks_count": 1,
-    "stargazers_count": 1,
-    "watchers_count": 5,
-    "created_at": "2021-08-31T22:37:00Z",
-    "total_project_lines": 954,
-    "average_project_lines": 38,
-    "total_project_comment_lines": 34,
-    "average_project_comment_lines": 1,
-    "total_project_blank_lines": 80,
-    "average_blank_lines": 3,
-    "predominant_langs": {
-        "TypeScript": 8273,
-        "JavaScript": 2930,
-        "SCSS": 344,
-        "Shell": 116
-    },
-    "commits_by_month": {
-        "2024/8": 4,
-        "2024/2": 4,
-        "2023/11": 1,
-        "2023/10": 2,
-        "2022/12": 2,
-        "2022/11": 1,
-        "2022/10": 8,
-        "2022/6": 8
-    },
-    "average_issue_resolution_time": [
-        [
-            "madie-auth",
-            "4 days 17:41:37"
-        ]
-    ],
-    "new_commit_contributors_by_day_over_last_month": [],
-    "new_commit_contributors_by_day_over_last_six_months": [
-        [
-            "2024-08-02T00:00:00.000Z",
-            1
-        ],
-        [
-            "2024-08-05T00:00:00.000Z",
-            1
-        ]
-    ],
-    "new_issues_by_day_over_last_month": [],
-    "new_issues_by_day_over_last_six_months": [],
-    "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=midsize&color=ff0000",
-    "nadia_color": "ff0000",
-    "nadia_badge_name": "midsize",
-    "repo_dependency_libyear_list": [
-        [
-            "@babel/core",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "@babel/eslint-parser",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "@babel/plugin-transform-react-jsx",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "@babel/plugin-transform-runtime",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "@babel/preset-env",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "@babel/preset-react",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "@babel/preset-typescript",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "@babel/runtime",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "@emotion/react",
-            2.1917808219,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "@emotion/styled",
-            2.104109589,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "@madie/madie-root",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "@mui/material",
-            2.2465753425,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "@okta/okta-signin-widget",
-            1.9753424658,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "@testing-library/jest-dom",
-            1.2904109589,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "@testing-library/react",
-            2.3835616438,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "@testing-library/user-event",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "@types/jest",
-            2.3945205479,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "@types/react",
-            0.0684931507,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "@types/react-dom",
-            0.8876712329,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "@types/styled-components",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "@types/systemjs",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "@types/testing-library__jest-dom",
-            0.0575342466,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "@types/webpack-env",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "@types/ws",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "autoprefixer",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "babel-jest",
-            1.5890410959,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "concurrently",
-            1.8109589041,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "cross-env",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "eslint",
-            0.0876712329,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "eslint-config-prettier",
-            0.3479452055,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "eslint-config-ts-react-important-stuff",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "eslint-plugin-prettier",
-            2.0493150685,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "html-webpack-plugin",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "husky",
-            2.8931506849,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "identity-obj-proxy",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "jest",
-            1.5890410959,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "jest-canvas-mock",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "jest-cli",
-            1.5890410959,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "postcss",
-            2.501369863,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "postcss-loader",
-            2.2547945205,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "postcss-preset-env",
-            1.9424657534,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "prettier",
-            1.2246575342,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "pretty-quick",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "react",
-            3.095890411,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "react-dom",
-            3.095890411,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "react-is",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "sass",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "sass-loader",
-            2.7095890411,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "single-spa",
-            1.2904109589,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "single-spa-react",
-            2.6684931507,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "styled-components",
-            1.4657534247,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "tailwindcss",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "ts-config-single-spa",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "twin.macro",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "typescript",
-            -0.0630136986,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "webpack",
-            0.0,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "webpack-cli",
-            1.3671232877,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "webpack-config-single-spa-react",
-            0.7424657534,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "webpack-config-single-spa-react-ts",
-            0.7424657534,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "webpack-config-single-spa-ts",
-            0.7424657534,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "webpack-dev-server",
-            2.1808219178,
-            "2024-11-01T01:08:23.000"
-        ],
-        [
-            "webpack-merge",
-            1.1150684932,
-            "2024-11-01T01:08:23.000"
-        ]
+  "url": "https://github.com/measureauthoringtool/madie-auth",
+  "owner": "measureauthoringtool",
+  "name": "madie-auth",
+  "description": "The single-spa Application responsible for the MADiE application's authorization/authentication logic.",
+  "commits_count": 101,
+  "issues_count": 1,
+  "open_issues_count": 0,
+  "closed_issues_count": 1,
+  "pull_requests_count": 201,
+  "open_pull_requests_count": 42,
+  "merged_pull_requests_count": 45,
+  "closed_pull_requests_count": 114,
+  "forks_count": 1,
+  "stargazers_count": 1,
+  "watchers_count": 5,
+  "created_at": "2021-08-31T22:37:00Z",
+  "total_project_lines": 954,
+  "average_project_lines": 38,
+  "total_project_comment_lines": 34,
+  "average_project_comment_lines": 1,
+  "total_project_blank_lines": 80,
+  "average_blank_lines": 3,
+  "predominant_langs": {
+    "TypeScript": 8273,
+    "JavaScript": 2930,
+    "SCSS": 344,
+    "Shell": 116
+  },
+  "commits_by_month": {
+    "2024/8": 4,
+    "2024/2": 4,
+    "2023/11": 1,
+    "2023/10": 2,
+    "2022/12": 2,
+    "2022/11": 1,
+    "2022/10": 8,
+    "2022/6": 8
+  },
+  "average_issue_resolution_time": [
+    [
+      "madie-auth",
+      "4 days 17:41:37"
     ]
+  ],
+  "new_commit_contributors_by_day_over_last_month": [],
+  "new_commit_contributors_by_day_over_last_six_months": [
+    [
+      "2024-08-02T00:00:00.000Z",
+      1
+    ],
+    [
+      "2024-08-05T00:00:00.000Z",
+      1
+    ]
+  ],
+  "new_issues_by_day_over_last_month": [],
+  "new_issues_by_day_over_last_six_months": [],
+  "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=midsize&color=ff0000",
+  "nadia_color": "ff0000",
+  "nadia_badge_name": "midsize",
+  "repo_dependency_libyear_list": [
+    [
+      "@babel/core",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "@babel/eslint-parser",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "@babel/plugin-transform-react-jsx",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "@babel/plugin-transform-runtime",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "@babel/preset-env",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "@babel/preset-react",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "@babel/preset-typescript",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "@babel/runtime",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "@emotion/react",
+      2.1917808219,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "@emotion/styled",
+      2.104109589,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "@madie/madie-root",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "@mui/material",
+      2.2465753425,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "@okta/okta-signin-widget",
+      1.9753424658,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "@testing-library/jest-dom",
+      1.2904109589,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "@testing-library/react",
+      2.3835616438,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "@testing-library/user-event",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "@types/jest",
+      2.3945205479,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "@types/react",
+      0.0684931507,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "@types/react-dom",
+      0.8876712329,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "@types/styled-components",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "@types/systemjs",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "@types/testing-library__jest-dom",
+      0.0575342466,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "@types/webpack-env",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "@types/ws",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "autoprefixer",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "babel-jest",
+      1.5890410959,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "concurrently",
+      1.8109589041,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "cross-env",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "eslint",
+      0.0876712329,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "eslint-config-prettier",
+      0.3479452055,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "eslint-config-ts-react-important-stuff",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "eslint-plugin-prettier",
+      2.0493150685,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "html-webpack-plugin",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "husky",
+      2.8931506849,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "identity-obj-proxy",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "jest",
+      1.5890410959,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "jest-canvas-mock",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "jest-cli",
+      1.5890410959,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "postcss",
+      2.501369863,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "postcss-loader",
+      2.2547945205,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "postcss-preset-env",
+      1.9424657534,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "prettier",
+      1.2246575342,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "pretty-quick",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "react",
+      3.095890411,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "react-dom",
+      3.095890411,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "react-is",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "sass",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "sass-loader",
+      2.7095890411,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "single-spa",
+      1.2904109589,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "single-spa-react",
+      2.6684931507,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "styled-components",
+      1.4657534247,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "tailwindcss",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "ts-config-single-spa",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "twin.macro",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "typescript",
+      -0.0630136986,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "webpack",
+      0,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "webpack-cli",
+      1.3671232877,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "webpack-config-single-spa-react",
+      0.7424657534,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "webpack-config-single-spa-react-ts",
+      0.7424657534,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "webpack-config-single-spa-ts",
+      0.7424657534,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "webpack-dev-server",
+      2.1808219178,
+      "2024-11-01T01:08:23.000"
+    ],
+    [
+      "webpack-merge",
+      1.1150684932,
+      "2024-11-01T01:08:23.000"
+    ]
+  ],
+  "cocomo": {
+    "languageSummary": [
+      {
+        "Name": "TypeScript",
+        "Bytes": 8273,
+        "CodeBytes": 0,
+        "Lines": 239,
+        "Code": 221,
+        "Comment": 1,
+        "Blank": 17,
+        "Complexity": 10,
+        "Count": 6,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "JSON",
+        "Bytes": 4211,
+        "CodeBytes": 0,
+        "Lines": 160,
+        "Code": 160,
+        "Comment": 0,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 5,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "JavaScript",
+        "Bytes": 2930,
+        "CodeBytes": 0,
+        "Lines": 122,
+        "Code": 117,
+        "Comment": 2,
+        "Blank": 3,
+        "Complexity": 0,
+        "Count": 4,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "YAML",
+        "Bytes": 5615,
+        "CodeBytes": 0,
+        "Lines": 186,
+        "Code": 149,
+        "Comment": 8,
+        "Blank": 29,
+        "Complexity": 0,
+        "Count": 3,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "Markdown",
+        "Bytes": 1429,
+        "CodeBytes": 0,
+        "Lines": 30,
+        "Code": 22,
+        "Comment": 0,
+        "Blank": 8,
+        "Complexity": 0,
+        "Count": 2,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "TypeScript Typings",
+        "Bytes": 1297,
+        "CodeBytes": 0,
+        "Lines": 68,
+        "Code": 38,
+        "Comment": 22,
+        "Blank": 8,
+        "Complexity": 0,
+        "Count": 2,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "License",
+        "Bytes": 7048,
+        "CodeBytes": 0,
+        "Lines": 121,
+        "Code": 109,
+        "Comment": 0,
+        "Blank": 12,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "Sass",
+        "Bytes": 344,
+        "CodeBytes": 0,
+        "Lines": 24,
+        "Code": 22,
+        "Comment": 0,
+        "Blank": 2,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "Shell",
+        "Bytes": 116,
+        "CodeBytes": 0,
+        "Lines": 4,
+        "Code": 2,
+        "Comment": 1,
+        "Blank": 1,
+        "Complexity": 1,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      }
+    ],
+    "estimatedCost_low": 20514.21883560251,
+    "estimatedScheduleMonths_low": 3.252428182969255,
+    "estimatedPeople_low": 0.6144644707785274,
+    "estimatedCost_high": 63931.26557394105,
+    "estimatedScheduleMonths_high": 3.252428182969255,
+    "estimatedPeople_high": 0.6144644707785274,
+    "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nTypeScript                   6       239       17         1      221         10\n(ULOC)                               179\n-------------------------------------------------------------------------------\nJSON                         5       160        0         0      160          0\n(ULOC)                               137\n-------------------------------------------------------------------------------\nJavaScript                   4       122        3         2      117          0\n(ULOC)                                92\n-------------------------------------------------------------------------------\nYAML                         3       186       29         8      149          0\n(ULOC)                               102\n-------------------------------------------------------------------------------\nMarkdown                     2        30        8         0       22          0\n(ULOC)                                23\n-------------------------------------------------------------------------------\nTypeScript Typings           2        68        8        22       38          0\n(ULOC)                                36\n-------------------------------------------------------------------------------\nLicense                      1       121       12         0      109          0\n(ULOC)                               110\n-------------------------------------------------------------------------------\nSass                         1        24        2         0       22          0\n(ULOC)                                18\n-------------------------------------------------------------------------------\nShell                        1         4        1         1        2          1\n(ULOC)                                 4\n───────────────────────────────────────────────────────────────────────────────\nTotal                       25       954       80        34      840         11\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)          679\nDRYness %                           0.71\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $22,495\nEstimated Schedule Effort (organic) 3.25 months\nEstimated People Required (organic) 0.61\n───────────────────────────────────────────────────────────────────────────────\nProcessed 31263 bytes, 0.031 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
+  }
 }

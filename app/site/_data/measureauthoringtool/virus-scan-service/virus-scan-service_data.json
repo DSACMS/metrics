@@ -1,323 +1,484 @@
 {
-    "url": "https://github.com/measureauthoringtool/virus-scan-service",
-    "owner": "measureauthoringtool",
-    "name": "virus-scan-service",
-    "description": "This is a virus scanning microservice running on Node.js",
-    "commits_count": 387,
-    "issues_count": 1,
-    "open_issues_count": 0,
-    "closed_issues_count": 1,
-    "pull_requests_count": 532,
-    "open_pull_requests_count": 22,
-    "merged_pull_requests_count": 182,
-    "closed_pull_requests_count": 328,
-    "forks_count": 0,
-    "stargazers_count": 0,
-    "watchers_count": 7,
-    "created_at": "2020-12-02T19:35:54Z",
-    "total_project_lines": 3443,
-    "average_project_lines": 49,
-    "total_project_comment_lines": 254,
-    "average_project_comment_lines": 4,
-    "total_project_blank_lines": 386,
-    "average_blank_lines": 6,
-    "predominant_langs": {
-        "TypeScript": 91954,
-        "Dockerfile": 606,
-        "JavaScript": 595
-    },
-    "commits_by_month": {
-        "2024/9": 6,
-        "2024/4": 3,
-        "2024/2": 5,
-        "2024/1": 3,
-        "2023/11": 1,
-        "2023/2": 3,
-        "2023/1": 7,
-        "2022/5": 2
-    },
-    "average_issue_resolution_time": [
-        [
-            "virus-scan-service",
-            "55 days 06:02:57"
-        ]
-    ],
-    "new_commit_contributors_by_day_over_last_month": [],
-    "new_commit_contributors_by_day_over_last_six_months": [
-        [
-            "2024-09-19T00:00:00.000Z",
-            1
-        ],
-        [
-            "2024-09-23T00:00:00.000Z",
-            1
-        ]
-    ],
-    "new_issues_by_day_over_last_month": [],
-    "new_issues_by_day_over_last_six_months": [],
-    "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=midsize&color=ff0000",
-    "nadia_color": "ff0000",
-    "nadia_badge_name": "midsize",
-    "repo_dependency_libyear_list": [
-        [
-            "@nestjs/axios",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@nestjs/cli",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@nestjs/common",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@nestjs/config",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@nestjs/core",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@nestjs/passport",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@nestjs/platform-express",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@nestjs/schematics",
-            2.5753424658,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@nestjs/swagger",
-            0.1123287671,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@nestjs/terminus",
-            -0.4109589041,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@nestjs/testing",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@types/busboy",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@types/express",
-            0.8849315068,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@types/express-serve-static-core",
-            0.0767123288,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@types/jest",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@types/mock-req-res",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@types/node",
-            -0.002739726,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@types/passport",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@types/passport-strategy",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@types/sinon",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@types/supertest",
-            0.1369863014,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@typescript-eslint/eslint-plugin",
-            1.304109589,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "@typescript-eslint/parser",
-            1.304109589,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "busboy",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "clamscan",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "date-fns",
-            1.3863013699,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "eslint",
-            0.0876712329,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "eslint-config-prettier",
-            0.3479452055,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "eslint-plugin-prettier",
-            2.0493150685,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "helmet",
-            3.4109589041,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "jest",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "jest-extended",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "jest-sinon",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "joi",
-            1.1534246575,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "mock-req-res",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "nest-winston",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "passport",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "passport-headerapikey",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "prettier",
-            1.2246575342,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "reflect-metadata",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "rimraf",
-            4.4191780822,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "rxjs",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "sinon",
-            1.8493150685,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "supertest",
-            0.2739726027,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "swagger-ui-express",
-            1.0739726027,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "ts-jest",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "ts-loader",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "ts-node",
-            0.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "tsconfig-paths",
-            -0.7123287671,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "typescript",
-            1.6904109589,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "virus-scan-service",
-            -1.0,
-            "2024-10-31T17:28:09.000"
-        ],
-        [
-            "winston",
-            1.3616438356,
-            "2024-10-31T17:28:09.000"
-        ]
+  "url": "https://github.com/measureauthoringtool/virus-scan-service",
+  "owner": "measureauthoringtool",
+  "name": "virus-scan-service",
+  "description": "This is a virus scanning microservice running on Node.js",
+  "commits_count": 387,
+  "issues_count": 1,
+  "open_issues_count": 0,
+  "closed_issues_count": 1,
+  "pull_requests_count": 532,
+  "open_pull_requests_count": 22,
+  "merged_pull_requests_count": 182,
+  "closed_pull_requests_count": 328,
+  "forks_count": 0,
+  "stargazers_count": 0,
+  "watchers_count": 7,
+  "created_at": "2020-12-02T19:35:54Z",
+  "total_project_lines": 3443,
+  "average_project_lines": 49,
+  "total_project_comment_lines": 254,
+  "average_project_comment_lines": 4,
+  "total_project_blank_lines": 386,
+  "average_blank_lines": 6,
+  "predominant_langs": {
+    "TypeScript": 91954,
+    "Dockerfile": 606,
+    "JavaScript": 595
+  },
+  "commits_by_month": {
+    "2024/9": 6,
+    "2024/4": 3,
+    "2024/2": 5,
+    "2024/1": 3,
+    "2023/11": 1,
+    "2023/2": 3,
+    "2023/1": 7,
+    "2022/5": 2
+  },
+  "average_issue_resolution_time": [
+    [
+      "virus-scan-service",
+      "55 days 06:02:57"
     ]
+  ],
+  "new_commit_contributors_by_day_over_last_month": [],
+  "new_commit_contributors_by_day_over_last_six_months": [
+    [
+      "2024-09-19T00:00:00.000Z",
+      1
+    ],
+    [
+      "2024-09-23T00:00:00.000Z",
+      1
+    ]
+  ],
+  "new_issues_by_day_over_last_month": [],
+  "new_issues_by_day_over_last_six_months": [],
+  "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=midsize&color=ff0000",
+  "nadia_color": "ff0000",
+  "nadia_badge_name": "midsize",
+  "repo_dependency_libyear_list": [
+    [
+      "@nestjs/axios",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@nestjs/cli",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@nestjs/common",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@nestjs/config",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@nestjs/core",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@nestjs/passport",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@nestjs/platform-express",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@nestjs/schematics",
+      2.5753424658,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@nestjs/swagger",
+      0.1123287671,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@nestjs/terminus",
+      -0.4109589041,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@nestjs/testing",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@types/busboy",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@types/express",
+      0.8849315068,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@types/express-serve-static-core",
+      0.0767123288,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@types/jest",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@types/mock-req-res",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@types/node",
+      -0.002739726,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@types/passport",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@types/passport-strategy",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@types/sinon",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@types/supertest",
+      0.1369863014,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@typescript-eslint/eslint-plugin",
+      1.304109589,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "@typescript-eslint/parser",
+      1.304109589,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "busboy",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "clamscan",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "date-fns",
+      1.3863013699,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "eslint",
+      0.0876712329,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "eslint-config-prettier",
+      0.3479452055,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "eslint-plugin-prettier",
+      2.0493150685,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "helmet",
+      3.4109589041,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "jest",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "jest-extended",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "jest-sinon",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "joi",
+      1.1534246575,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "mock-req-res",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "nest-winston",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "passport",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "passport-headerapikey",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "prettier",
+      1.2246575342,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "reflect-metadata",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "rimraf",
+      4.4191780822,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "rxjs",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "sinon",
+      1.8493150685,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "supertest",
+      0.2739726027,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "swagger-ui-express",
+      1.0739726027,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "ts-jest",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "ts-loader",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "ts-node",
+      0,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "tsconfig-paths",
+      -0.7123287671,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "typescript",
+      1.6904109589,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "virus-scan-service",
+      -1,
+      "2024-10-31T17:28:09.000"
+    ],
+    [
+      "winston",
+      1.3616438356,
+      "2024-10-31T17:28:09.000"
+    ]
+  ],
+  "cocomo": {
+    "languageSummary": [
+      {
+        "Name": "TypeScript",
+        "Bytes": 91954,
+        "CodeBytes": 0,
+        "Lines": 2854,
+        "Code": 2295,
+        "Comment": 243,
+        "Blank": 316,
+        "Complexity": 53,
+        "Count": 54,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "JSON",
+        "Bytes": 3714,
+        "CodeBytes": 0,
+        "Lines": 136,
+        "Code": 136,
+        "Comment": 0,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 5,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "YAML",
+        "Bytes": 6591,
+        "CodeBytes": 0,
+        "Lines": 212,
+        "Code": 170,
+        "Comment": 8,
+        "Blank": 34,
+        "Complexity": 0,
+        "Count": 4,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "Docker ignore",
+        "Bytes": 53,
+        "CodeBytes": 0,
+        "Lines": 7,
+        "Code": 7,
+        "Comment": 0,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "Dockerfile",
+        "Bytes": 606,
+        "CodeBytes": 0,
+        "Lines": 23,
+        "Code": 14,
+        "Comment": 3,
+        "Blank": 6,
+        "Complexity": 3,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "JavaScript",
+        "Bytes": 595,
+        "CodeBytes": 0,
+        "Lines": 23,
+        "Code": 23,
+        "Comment": 0,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "License",
+        "Bytes": 7048,
+        "CodeBytes": 0,
+        "Lines": 121,
+        "Code": 109,
+        "Comment": 0,
+        "Blank": 12,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "Markdown",
+        "Bytes": 488,
+        "CodeBytes": 0,
+        "Lines": 40,
+        "Code": 27,
+        "Comment": 0,
+        "Blank": 13,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "Plain Text",
+        "Bytes": 34,
+        "CodeBytes": 0,
+        "Lines": 1,
+        "Code": 1,
+        "Comment": 0,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "TypeScript Typings",
+        "Bytes": 476,
+        "CodeBytes": 0,
+        "Lines": 26,
+        "Code": 21,
+        "Comment": 0,
+        "Blank": 5,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      }
+    ],
+    "estimatedCost_low": 72705.28586054734,
+    "estimatedScheduleMonths_low": 5.2604378812438775,
+    "estimatedPeople_low": 1.3464604393429218,
+    "estimatedCost_high": 226581.42511929752,
+    "estimatedScheduleMonths_high": 5.2604378812438775,
+    "estimatedPeople_high": 1.3464604393429218,
+    "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nTypeScript                  54      2854      316       243     2295         53\n(ULOC)                              1526\n-------------------------------------------------------------------------------\nJSON                         5       136        0         0      136          0\n(ULOC)                               123\n-------------------------------------------------------------------------------\nYAML                         4       212       34         8      170          0\n(ULOC)                               143\n-------------------------------------------------------------------------------\nDocker ignore                1         7        0         0        7          0\n(ULOC)                                 8\n-------------------------------------------------------------------------------\nDockerfile                   1        23        6         3       14          3\n(ULOC)                                18\n-------------------------------------------------------------------------------\nJavaScript                   1        23        0         0       23          0\n(ULOC)                                22\n-------------------------------------------------------------------------------\nLicense                      1       121       12         0      109          0\n(ULOC)                               110\n-------------------------------------------------------------------------------\nMarkdown                     1        40       13         0       27          0\n(ULOC)                                24\n-------------------------------------------------------------------------------\nPlain Text                   1         1        0         0        1          0\n(ULOC)                                 2\n-------------------------------------------------------------------------------\nTypeScript Typings           1        26        5         0       21          0\n(ULOC)                                20\n───────────────────────────────────────────────────────────────────────────────\nTotal                       70      3443      386       254     2803         56\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)         1978\nDRYness %                           0.57\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $79,725\nEstimated Schedule Effort (organic) 5.26 months\nEstimated People Required (organic) 1.35\n───────────────────────────────────────────────────────────────────────────────\nProcessed 111559 bytes, 0.112 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
+  }
 }

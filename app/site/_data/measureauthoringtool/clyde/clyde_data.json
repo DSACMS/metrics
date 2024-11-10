@@ -1,182 +1,343 @@
 {
-    "url": "https://github.com/measureauthoringtool/clyde",
-    "owner": "measureauthoringtool",
-    "name": "clyde",
-    "description": "FHIR Measure Authoring Tool 2.0",
-    "commits_count": 90,
-    "issues_count": 3,
-    "open_issues_count": 1,
-    "closed_issues_count": 2,
-    "pull_requests_count": 53,
-    "open_pull_requests_count": 4,
-    "merged_pull_requests_count": 36,
-    "closed_pull_requests_count": 13,
-    "forks_count": 1,
-    "stargazers_count": 1,
-    "watchers_count": 9,
-    "created_at": "2021-01-29T20:15:18Z",
-    "total_project_lines": 173098,
-    "average_project_lines": 5409,
-    "total_project_comment_lines": 251,
-    "average_project_comment_lines": 8,
-    "total_project_blank_lines": 38317,
-    "average_blank_lines": 1197,
-    "predominant_langs": {
-        "CSS": 3562657,
-        "TypeScript": 21571,
-        "HTML": 1566,
-        "JavaScript": 556
-    },
-    "commits_by_month": {
-        "2021/10": 1,
-        "2021/6": 13,
-        "2021/5": 5,
-        "2021/4": 2,
-        "2021/2": 9
-    },
-    "average_issue_resolution_time": [
-        [
-            "clyde",
-            "13 days 24:44:23.5"
-        ]
-    ],
-    "new_commit_contributors_by_day_over_last_month": [],
-    "new_commit_contributors_by_day_over_last_six_months": [],
-    "new_issues_by_day_over_last_month": [],
-    "new_issues_by_day_over_last_six_months": [],
-    "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=midsize&color=ff0000",
-    "nadia_color": "ff0000",
-    "nadia_badge_name": "midsize",
-    "repo_dependency_libyear_list": [
-        [
-            "@testing-library/jest-dom",
-            1.2904109589,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "@testing-library/react",
-            2.3835616438,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "@testing-library/user-event",
-            2.1945205479,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "@types/draft-js",
-            2.0657534247,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "@types/jest",
-            3.298630137,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "@types/node",
-            3.4136986301,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "@types/react",
-            0.0684931507,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "@types/react-dom",
-            3.2630136986,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "@types/styled-components",
-            2.7260273973,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "autoprefixer",
-            0.0,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "babel-plugin-macros",
-            0.0,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "cql-antlr-parser",
-            0.0,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "draft-js",
-            0.0,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "postcss",
-            0.0,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "postcss-cli",
-            1.9863013699,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "react",
-            3.095890411,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "react-dom",
-            3.095890411,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "react-scripts",
-            1.1315068493,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "rxjs",
-            0.0,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "rxjs-compat",
-            0.0,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "styled-components",
-            1.2630136986,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "tailwind.macro",
-            0.0,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "tailwindcss",
-            2.9616438356,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "twin.macro",
-            2.1150684932,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "typescript",
-            1.6904109589,
-            "2024-10-31T17:28:08.000"
-        ],
-        [
-            "web-vitals",
-            2.7534246575,
-            "2024-10-31T17:28:08.000"
-        ]
+  "url": "https://github.com/measureauthoringtool/clyde",
+  "owner": "measureauthoringtool",
+  "name": "clyde",
+  "description": "FHIR Measure Authoring Tool 2.0",
+  "commits_count": 90,
+  "issues_count": 3,
+  "open_issues_count": 1,
+  "closed_issues_count": 2,
+  "pull_requests_count": 53,
+  "open_pull_requests_count": 4,
+  "merged_pull_requests_count": 36,
+  "closed_pull_requests_count": 13,
+  "forks_count": 1,
+  "stargazers_count": 1,
+  "watchers_count": 9,
+  "created_at": "2021-01-29T20:15:18Z",
+  "total_project_lines": 173098,
+  "average_project_lines": 5409,
+  "total_project_comment_lines": 251,
+  "average_project_comment_lines": 8,
+  "total_project_blank_lines": 38317,
+  "average_blank_lines": 1197,
+  "predominant_langs": {
+    "CSS": 3562657,
+    "TypeScript": 21571,
+    "HTML": 1566,
+    "JavaScript": 556
+  },
+  "commits_by_month": {
+    "2021/10": 1,
+    "2021/6": 13,
+    "2021/5": 5,
+    "2021/4": 2,
+    "2021/2": 9
+  },
+  "average_issue_resolution_time": [
+    [
+      "clyde",
+      "13 days 24:44:23.5"
     ]
+  ],
+  "new_commit_contributors_by_day_over_last_month": [],
+  "new_commit_contributors_by_day_over_last_six_months": [],
+  "new_issues_by_day_over_last_month": [],
+  "new_issues_by_day_over_last_six_months": [],
+  "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=midsize&color=ff0000",
+  "nadia_color": "ff0000",
+  "nadia_badge_name": "midsize",
+  "repo_dependency_libyear_list": [
+    [
+      "@testing-library/jest-dom",
+      1.2904109589,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "@testing-library/react",
+      2.3835616438,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "@testing-library/user-event",
+      2.1945205479,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "@types/draft-js",
+      2.0657534247,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "@types/jest",
+      3.298630137,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "@types/node",
+      3.4136986301,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "@types/react",
+      0.0684931507,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "@types/react-dom",
+      3.2630136986,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "@types/styled-components",
+      2.7260273973,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "autoprefixer",
+      0,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "babel-plugin-macros",
+      0,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "cql-antlr-parser",
+      0,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "draft-js",
+      0,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "postcss",
+      0,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "postcss-cli",
+      1.9863013699,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "react",
+      3.095890411,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "react-dom",
+      3.095890411,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "react-scripts",
+      1.1315068493,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "rxjs",
+      0,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "rxjs-compat",
+      0,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "styled-components",
+      1.2630136986,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "tailwind.macro",
+      0,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "tailwindcss",
+      2.9616438356,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "twin.macro",
+      2.1150684932,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "typescript",
+      1.6904109589,
+      "2024-10-31T17:28:08.000"
+    ],
+    [
+      "web-vitals",
+      2.7534246575,
+      "2024-10-31T17:28:08.000"
+    ]
+  ],
+  "cocomo": {
+    "languageSummary": [
+      {
+        "Name": "TypeScript",
+        "Bytes": 21571,
+        "CodeBytes": 0,
+        "Lines": 646,
+        "Code": 552,
+        "Comment": 9,
+        "Blank": 85,
+        "Complexity": 8,
+        "Count": 13,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "CSS",
+        "Bytes": 3562657,
+        "CodeBytes": 0,
+        "Lines": 171986,
+        "Code": 133590,
+        "Comment": 212,
+        "Blank": 38184,
+        "Complexity": 0,
+        "Count": 4,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "JSON",
+        "Bytes": 2830,
+        "CodeBytes": 0,
+        "Lines": 117,
+        "Code": 117,
+        "Comment": 0,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 3,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "JavaScript",
+        "Bytes": 556,
+        "CodeBytes": 0,
+        "Lines": 28,
+        "Code": 28,
+        "Comment": 0,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 3,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "Markdown",
+        "Bytes": 1806,
+        "CodeBytes": 0,
+        "Lines": 46,
+        "Code": 28,
+        "Comment": 0,
+        "Blank": 18,
+        "Complexity": 0,
+        "Count": 2,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "TypeScript Typings",
+        "Bytes": 760,
+        "CodeBytes": 0,
+        "Lines": 32,
+        "Code": 21,
+        "Comment": 7,
+        "Blank": 4,
+        "Complexity": 1,
+        "Count": 2,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "YAML",
+        "Bytes": 2510,
+        "CodeBytes": 0,
+        "Lines": 79,
+        "Code": 66,
+        "Comment": 0,
+        "Blank": 13,
+        "Complexity": 0,
+        "Count": 2,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "HTML",
+        "Bytes": 1566,
+        "CodeBytes": 0,
+        "Lines": 40,
+        "Code": 16,
+        "Comment": 23,
+        "Blank": 1,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "License",
+        "Bytes": 7048,
+        "CodeBytes": 0,
+        "Lines": 121,
+        "Code": 109,
+        "Comment": 0,
+        "Blank": 12,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "Plain Text",
+        "Bytes": 67,
+        "CodeBytes": 0,
+        "Lines": 3,
+        "Code": 3,
+        "Comment": 0,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      }
+    ],
+    "estimatedCost_low": 4234692.0440671565,
+    "estimatedScheduleMonths_low": 24.650124565550517,
+    "estimatedPeople_low": 16.736021409518123,
+    "estimatedCost_high": 13197149.931113193,
+    "estimatedScheduleMonths_high": 24.650124565550517,
+    "estimatedPeople_high": 16.736021409518123,
+    "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nTypeScript                  13       646       85         9      552          8\n(ULOC)                               383\n-------------------------------------------------------------------------------\nCSS                          4    171986    38184       212   133590          0\n(ULOC)                             44862\n-------------------------------------------------------------------------------\nJSON                         3       117        0         0      117          0\n(ULOC)                               105\n-------------------------------------------------------------------------------\nJavaScript                   3        28        0         0       28          0\n(ULOC)                                24\n-------------------------------------------------------------------------------\nMarkdown                     2        46       18         0       28          0\n(ULOC)                                29\n-------------------------------------------------------------------------------\nTypeScript Typings           2        32        4         7       21          1\n(ULOC)                                24\n-------------------------------------------------------------------------------\nYAML                         2        79       13         0       66          0\n(ULOC)                                58\n-------------------------------------------------------------------------------\nHTML                         1        40        1        23       16          0\n(ULOC)                                35\n-------------------------------------------------------------------------------\nLicense                      1       121       12         0      109          0\n(ULOC)                               110\n-------------------------------------------------------------------------------\nPlain Text                   1         3        0         0        3          0\n(ULOC)                                 4\n───────────────────────────────────────────────────────────────────────────────\nTotal                       32    173098    38317       251   134530          9\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)        45608\nDRYness %                           0.26\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $4,643,606\nEstimated Schedule Effort (organic) 24.65 months\nEstimated People Required (organic) 16.74\n───────────────────────────────────────────────────────────────────────────────\nProcessed 3601371 bytes, 3.601 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
+  }
 }

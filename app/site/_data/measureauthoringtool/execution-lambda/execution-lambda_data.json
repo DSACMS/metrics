@@ -1,136 +1,252 @@
 {
-    "url": "https://github.com/measureauthoringtool/execution-lambda",
-    "owner": "measureauthoringtool",
-    "name": "execution-lambda",
-    "description": "PoC Test Case Execution using AWS Lambda",
-    "commits_count": 6,
-    "issues_count": 0,
-    "open_issues_count": 0,
-    "closed_issues_count": 0,
-    "pull_requests_count": 5,
-    "open_pull_requests_count": 3,
-    "merged_pull_requests_count": 2,
-    "closed_pull_requests_count": 0,
-    "forks_count": 0,
-    "stargazers_count": 0,
-    "watchers_count": 4,
-    "created_at": "2023-06-06T20:33:58Z",
-    "total_project_lines": 1419,
-    "average_project_lines": 101,
-    "total_project_comment_lines": 76,
-    "average_project_comment_lines": 5,
-    "total_project_blank_lines": 164,
-    "average_blank_lines": 12,
-    "predominant_langs": {
-        "TypeScript": 35006,
-        "JavaScript": 877
-    },
-    "commits_by_month": {
-        "2023/6": 6
-    },
-    "average_issue_resolution_time": [],
-    "new_commit_contributors_by_day_over_last_month": [],
-    "new_commit_contributors_by_day_over_last_six_months": [],
-    "new_issues_by_day_over_last_month": [],
-    "new_issues_by_day_over_last_six_months": [],
-    "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=toy&color=0000ff",
-    "nadia_color": "0000ff",
-    "nadia_badge_name": "toy",
-    "repo_dependency_libyear_list": [
-        [
-            "@madie/madie-models",
-            0.0,
-            "2024-10-31T17:28:05.000"
-        ],
-        [
-            "@types/fhir",
-            0.0,
-            "2024-10-31T17:28:05.000"
-        ],
-        [
-            "@types/jest",
-            0.0,
-            "2024-10-31T17:28:05.000"
-        ],
-        [
-            "@types/node",
-            -0.002739726,
-            "2024-10-31T17:28:05.000"
-        ],
-        [
-            "@typescript-eslint/eslint-plugin",
-            1.304109589,
-            "2024-10-31T17:28:05.000"
-        ],
-        [
-            "@typescript-eslint/parser",
-            1.304109589,
-            "2024-10-31T17:28:05.000"
-        ],
-        [
-            "cqm-execution",
-            0.0,
-            "2024-10-31T17:28:05.000"
-        ],
-        [
-            "dompurify",
-            0.0,
-            "2024-10-31T17:28:05.000"
-        ],
-        [
-            "esbuild",
-            0.0,
-            "2024-10-31T17:28:05.000"
-        ],
-        [
-            "eslint",
-            2.6821917808,
-            "2024-10-31T17:28:05.000"
-        ],
-        [
-            "eslint-config-prettier",
-            0.3479452055,
-            "2024-10-31T17:28:05.000"
-        ],
-        [
-            "eslint-plugin-prettier",
-            2.0493150685,
-            "2024-10-31T17:28:05.000"
-        ],
-        [
-            "fhir",
-            0.0,
-            "2024-10-31T17:28:05.000"
-        ],
-        [
-            "fqm-execution",
-            0.0,
-            "2024-10-31T17:28:05.000"
-        ],
-        [
-            "jest",
-            0.0,
-            "2024-10-31T17:28:05.000"
-        ],
-        [
-            "prettier",
-            1.2246575342,
-            "2024-10-31T17:28:05.000"
-        ],
-        [
-            "ts-jest",
-            0.0,
-            "2024-10-31T17:28:05.000"
-        ],
-        [
-            "ts-node",
-            0.0,
-            "2024-10-31T17:28:05.000"
-        ],
-        [
-            "typescript",
-            1.6904109589,
-            "2024-10-31T17:28:05.000"
-        ]
+  "url": "https://github.com/measureauthoringtool/execution-lambda",
+  "owner": "measureauthoringtool",
+  "name": "execution-lambda",
+  "description": "PoC Test Case Execution using AWS Lambda",
+  "commits_count": 6,
+  "issues_count": 0,
+  "open_issues_count": 0,
+  "closed_issues_count": 0,
+  "pull_requests_count": 5,
+  "open_pull_requests_count": 3,
+  "merged_pull_requests_count": 2,
+  "closed_pull_requests_count": 0,
+  "forks_count": 0,
+  "stargazers_count": 0,
+  "watchers_count": 4,
+  "created_at": "2023-06-06T20:33:58Z",
+  "total_project_lines": 1419,
+  "average_project_lines": 101,
+  "total_project_comment_lines": 76,
+  "average_project_comment_lines": 5,
+  "total_project_blank_lines": 164,
+  "average_blank_lines": 12,
+  "predominant_langs": {
+    "TypeScript": 35006,
+    "JavaScript": 877
+  },
+  "commits_by_month": {
+    "2023/6": 6
+  },
+  "average_issue_resolution_time": [],
+  "new_commit_contributors_by_day_over_last_month": [],
+  "new_commit_contributors_by_day_over_last_six_months": [],
+  "new_issues_by_day_over_last_month": [],
+  "new_issues_by_day_over_last_six_months": [],
+  "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=toy&color=0000ff",
+  "nadia_color": "0000ff",
+  "nadia_badge_name": "toy",
+  "repo_dependency_libyear_list": [
+    [
+      "@madie/madie-models",
+      0,
+      "2024-10-31T17:28:05.000"
+    ],
+    [
+      "@types/fhir",
+      0,
+      "2024-10-31T17:28:05.000"
+    ],
+    [
+      "@types/jest",
+      0,
+      "2024-10-31T17:28:05.000"
+    ],
+    [
+      "@types/node",
+      -0.002739726,
+      "2024-10-31T17:28:05.000"
+    ],
+    [
+      "@typescript-eslint/eslint-plugin",
+      1.304109589,
+      "2024-10-31T17:28:05.000"
+    ],
+    [
+      "@typescript-eslint/parser",
+      1.304109589,
+      "2024-10-31T17:28:05.000"
+    ],
+    [
+      "cqm-execution",
+      0,
+      "2024-10-31T17:28:05.000"
+    ],
+    [
+      "dompurify",
+      0,
+      "2024-10-31T17:28:05.000"
+    ],
+    [
+      "esbuild",
+      0,
+      "2024-10-31T17:28:05.000"
+    ],
+    [
+      "eslint",
+      2.6821917808,
+      "2024-10-31T17:28:05.000"
+    ],
+    [
+      "eslint-config-prettier",
+      0.3479452055,
+      "2024-10-31T17:28:05.000"
+    ],
+    [
+      "eslint-plugin-prettier",
+      2.0493150685,
+      "2024-10-31T17:28:05.000"
+    ],
+    [
+      "fhir",
+      0,
+      "2024-10-31T17:28:05.000"
+    ],
+    [
+      "fqm-execution",
+      0,
+      "2024-10-31T17:28:05.000"
+    ],
+    [
+      "jest",
+      0,
+      "2024-10-31T17:28:05.000"
+    ],
+    [
+      "prettier",
+      1.2246575342,
+      "2024-10-31T17:28:05.000"
+    ],
+    [
+      "ts-jest",
+      0,
+      "2024-10-31T17:28:05.000"
+    ],
+    [
+      "ts-node",
+      0,
+      "2024-10-31T17:28:05.000"
+    ],
+    [
+      "typescript",
+      1.6904109589,
+      "2024-10-31T17:28:05.000"
     ]
+  ],
+  "cocomo": {
+    "languageSummary": [
+      {
+        "Name": "TypeScript",
+        "Bytes": 35006,
+        "CodeBytes": 0,
+        "Lines": 994,
+        "Code": 831,
+        "Comment": 68,
+        "Blank": 95,
+        "Complexity": 210,
+        "Count": 6,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "JSON",
+        "Bytes": 1487,
+        "CodeBytes": 0,
+        "Lines": 53,
+        "Code": 53,
+        "Comment": 0,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 2,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "JavaScript",
+        "Bytes": 877,
+        "CodeBytes": 0,
+        "Lines": 22,
+        "Code": 20,
+        "Comment": 2,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 2,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "CloudFormation (YAML)",
+        "Bytes": 2384,
+        "CodeBytes": 0,
+        "Lines": 62,
+        "Code": 54,
+        "Comment": 4,
+        "Blank": 4,
+        "Complexity": 4,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "License",
+        "Bytes": 7048,
+        "CodeBytes": 0,
+        "Lines": 121,
+        "Code": 109,
+        "Comment": 0,
+        "Blank": 12,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "Markdown",
+        "Bytes": 8429,
+        "CodeBytes": 0,
+        "Lines": 136,
+        "Code": 91,
+        "Comment": 0,
+        "Blank": 45,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "TOML",
+        "Bytes": 690,
+        "CodeBytes": 0,
+        "Lines": 31,
+        "Code": 21,
+        "Comment": 2,
+        "Blank": 8,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      }
+    ],
+    "estimatedCost_low": 29285.40463492373,
+    "estimatedScheduleMonths_low": 3.723525125892703,
+    "estimatedPeople_low": 0.7662075874352087,
+    "estimatedCost_high": 91266.11138155212,
+    "estimatedScheduleMonths_high": 3.723525125892703,
+    "estimatedPeople_high": 0.7662075874352087,
+    "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nTypeScript                   6       994       95        68      831        210\n(ULOC)                               713\n-------------------------------------------------------------------------------\nJSON                         2        53        0         0       53          0\n(ULOC)                                51\n-------------------------------------------------------------------------------\nJavaScript                   2        22        0         2       20          0\n(ULOC)                                20\n-------------------------------------------------------------------------------\nCloudFormation (YAM…         1        62        4         4       54          4\n(ULOC)                                56\n-------------------------------------------------------------------------------\nLicense                      1       121       12         0      109          0\n(ULOC)                               110\n-------------------------------------------------------------------------------\nMarkdown                     1       136       45         0       91          0\n(ULOC)                                79\n-------------------------------------------------------------------------------\nTOML                         1        31        8         2       21          0\n(ULOC)                                22\n───────────────────────────────────────────────────────────────────────────────\nTotal                       14      1419      164        76     1179        214\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)         1040\nDRYness %                           0.73\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $32,113\nEstimated Schedule Effort (organic) 3.72 months\nEstimated People Required (organic) 0.77\n───────────────────────────────────────────────────────────────────────────────\nProcessed 55921 bytes, 0.056 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
+  }
 }

@@ -1,137 +1,238 @@
 {
-    "url": "https://github.com/measureauthoringtool/fhir-mongoose-models",
-    "owner": "measureauthoringtool",
-    "name": "fhir-mongoose-models",
-    "description": "This is a library containing JavaScript Mongoose models that conform to the FHIR specification. Its code is generated using the model-info-parser utility ",
-    "commits_count": 15,
-    "issues_count": 0,
-    "open_issues_count": 0,
-    "closed_issues_count": 0,
-    "pull_requests_count": 5,
-    "open_pull_requests_count": 1,
-    "merged_pull_requests_count": 3,
-    "closed_pull_requests_count": 1,
-    "forks_count": 0,
-    "stargazers_count": 0,
-    "watchers_count": 10,
-    "created_at": "2020-06-23T14:35:20Z",
-    "total_project_lines": 164767,
-    "average_project_lines": 172,
-    "total_project_comment_lines": 23686,
-    "average_project_comment_lines": 25,
-    "total_project_blank_lines": 18669,
-    "average_blank_lines": 20,
-    "predominant_langs": {
-        "JavaScript": 869924
-    },
-    "commits_by_month": {
-        "2020/8": 1,
-        "2020/7": 12,
-        "2020/6": 2
-    },
-    "average_issue_resolution_time": [],
-    "new_commit_contributors_by_day_over_last_month": [],
-    "new_commit_contributors_by_day_over_last_six_months": [],
-    "new_issues_by_day_over_last_month": [],
-    "new_issues_by_day_over_last_six_months": [],
-    "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=toy&color=0000ff",
-    "nadia_color": "0000ff",
-    "nadia_badge_name": "toy",
-    "repo_dependency_libyear_list": [
-        [
-            "@types/faker",
-            4.4410958904,
-            "2024-11-01T01:01:34.000"
-        ],
-        [
-            "@types/jest",
-            4.4328767123,
-            "2024-11-01T01:01:34.000"
-        ],
-        [
-            "@types/lodash",
-            0.0,
-            "2024-11-01T01:01:34.000"
-        ],
-        [
-            "@types/node",
-            1.104109589,
-            "2024-11-01T01:01:34.000"
-        ],
-        [
-            "@types/xml2js",
-            2.3506849315,
-            "2024-11-01T01:01:34.000"
-        ],
-        [
-            "browserify",
-            4.1671232877,
-            "2024-11-01T01:01:34.000"
-        ],
-        [
-            "eslint",
-            3.2191780822,
-            "2024-11-01T01:01:34.000"
-        ],
-        [
-            "eslint-config-airbnb-base",
-            1.0054794521,
-            "2024-11-01T01:01:34.000"
-        ],
-        [
-            "eslint-config-prettier",
-            3.095890411,
-            "2024-11-01T01:01:34.000"
-        ],
-        [
-            "eslint-plugin-eslint-comments",
-            0.0,
-            "2024-11-01T01:01:34.000"
-        ],
-        [
-            "eslint-plugin-import",
-            0.0,
-            "2024-11-01T01:01:34.000"
-        ],
-        [
-            "eslint-plugin-jest",
-            4.101369863,
-            "2024-11-01T01:01:34.000"
-        ],
-        [
-            "eslint-plugin-promise",
-            3.4849315068,
-            "2024-11-01T01:01:34.000"
-        ],
-        [
-            "faker",
-            4.8712328767,
-            "2024-11-01T01:01:34.000"
-        ],
-        [
-            "jest",
-            2.8547945205,
-            "2024-11-01T01:01:34.000"
-        ],
-        [
-            "jest-extended",
-            3.701369863,
-            "2024-11-01T01:01:34.000"
-        ],
-        [
-            "model-info-parser",
-            0.3506849315,
-            "2024-11-01T01:01:34.000"
-        ],
-        [
-            "mongoose",
-            4.2164383562,
-            "2024-11-01T01:01:34.000"
-        ],
-        [
-            "prettier",
-            1.2246575342,
-            "2024-11-01T01:01:34.000"
-        ]
+  "url": "https://github.com/measureauthoringtool/fhir-mongoose-models",
+  "owner": "measureauthoringtool",
+  "name": "fhir-mongoose-models",
+  "description": "This is a library containing JavaScript Mongoose models that conform to the FHIR specification. Its code is generated using the model-info-parser utility ",
+  "commits_count": 15,
+  "issues_count": 0,
+  "open_issues_count": 0,
+  "closed_issues_count": 0,
+  "pull_requests_count": 5,
+  "open_pull_requests_count": 1,
+  "merged_pull_requests_count": 3,
+  "closed_pull_requests_count": 1,
+  "forks_count": 0,
+  "stargazers_count": 0,
+  "watchers_count": 10,
+  "created_at": "2020-06-23T14:35:20Z",
+  "total_project_lines": 164767,
+  "average_project_lines": 172,
+  "total_project_comment_lines": 23686,
+  "average_project_comment_lines": 25,
+  "total_project_blank_lines": 18669,
+  "average_blank_lines": 20,
+  "predominant_langs": {
+    "JavaScript": 869924
+  },
+  "commits_by_month": {
+    "2020/8": 1,
+    "2020/7": 12,
+    "2020/6": 2
+  },
+  "average_issue_resolution_time": [],
+  "new_commit_contributors_by_day_over_last_month": [],
+  "new_commit_contributors_by_day_over_last_six_months": [],
+  "new_issues_by_day_over_last_month": [],
+  "new_issues_by_day_over_last_six_months": [],
+  "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=toy&color=0000ff",
+  "nadia_color": "0000ff",
+  "nadia_badge_name": "toy",
+  "repo_dependency_libyear_list": [
+    [
+      "@types/faker",
+      4.4410958904,
+      "2024-11-01T01:01:34.000"
+    ],
+    [
+      "@types/jest",
+      4.4328767123,
+      "2024-11-01T01:01:34.000"
+    ],
+    [
+      "@types/lodash",
+      0,
+      "2024-11-01T01:01:34.000"
+    ],
+    [
+      "@types/node",
+      1.104109589,
+      "2024-11-01T01:01:34.000"
+    ],
+    [
+      "@types/xml2js",
+      2.3506849315,
+      "2024-11-01T01:01:34.000"
+    ],
+    [
+      "browserify",
+      4.1671232877,
+      "2024-11-01T01:01:34.000"
+    ],
+    [
+      "eslint",
+      3.2191780822,
+      "2024-11-01T01:01:34.000"
+    ],
+    [
+      "eslint-config-airbnb-base",
+      1.0054794521,
+      "2024-11-01T01:01:34.000"
+    ],
+    [
+      "eslint-config-prettier",
+      3.095890411,
+      "2024-11-01T01:01:34.000"
+    ],
+    [
+      "eslint-plugin-eslint-comments",
+      0,
+      "2024-11-01T01:01:34.000"
+    ],
+    [
+      "eslint-plugin-import",
+      0,
+      "2024-11-01T01:01:34.000"
+    ],
+    [
+      "eslint-plugin-jest",
+      4.101369863,
+      "2024-11-01T01:01:34.000"
+    ],
+    [
+      "eslint-plugin-promise",
+      3.4849315068,
+      "2024-11-01T01:01:34.000"
+    ],
+    [
+      "faker",
+      4.8712328767,
+      "2024-11-01T01:01:34.000"
+    ],
+    [
+      "jest",
+      2.8547945205,
+      "2024-11-01T01:01:34.000"
+    ],
+    [
+      "jest-extended",
+      3.701369863,
+      "2024-11-01T01:01:34.000"
+    ],
+    [
+      "model-info-parser",
+      0.3506849315,
+      "2024-11-01T01:01:34.000"
+    ],
+    [
+      "mongoose",
+      4.2164383562,
+      "2024-11-01T01:01:34.000"
+    ],
+    [
+      "prettier",
+      1.2246575342,
+      "2024-11-01T01:01:34.000"
     ]
+  ],
+  "cocomo": {
+    "languageSummary": [
+      {
+        "Name": "JavaScript",
+        "Bytes": 5898050,
+        "CodeBytes": 0,
+        "Lines": 152240,
+        "Code": 109926,
+        "Comment": 23672,
+        "Blank": 18642,
+        "Complexity": 12504,
+        "Count": 945,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "JSON",
+        "Bytes": 4123017,
+        "CodeBytes": 0,
+        "Lines": 102,
+        "Code": 101,
+        "Comment": 0,
+        "Blank": 1,
+        "Complexity": 0,
+        "Count": 8,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "License",
+        "Bytes": 7048,
+        "CodeBytes": 0,
+        "Lines": 121,
+        "Code": 109,
+        "Comment": 0,
+        "Blank": 12,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "Markdown",
+        "Bytes": 396,
+        "CodeBytes": 0,
+        "Lines": 4,
+        "Code": 4,
+        "Comment": 0,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "XML",
+        "Bytes": 808232,
+        "CodeBytes": 0,
+        "Lines": 12217,
+        "Code": 12217,
+        "Comment": 0,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "YAML",
+        "Bytes": 2328,
+        "CodeBytes": 0,
+        "Lines": 83,
+        "Code": 55,
+        "Comment": 14,
+        "Blank": 14,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      }
+    ],
+    "estimatedCost_low": 3835102.069361778,
+    "estimatedScheduleMonths_low": 23.73897996819362,
+    "estimatedPeople_low": 15.738537784429122,
+    "estimatedCost_high": 11951853.047117874,
+    "estimatedScheduleMonths_high": 23.73897996819362,
+    "estimatedPeople_high": 15.738537784429122,
+    "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nJavaScript                 945    152240    18642     23672   109926      12504\n(ULOC)                             32635\n-------------------------------------------------------------------------------\nJSON                         8       102        1         0      101          0\n(ULOC)                                90\n-------------------------------------------------------------------------------\nLicense                      1       121       12         0      109          0\n(ULOC)                               110\n-------------------------------------------------------------------------------\nMarkdown                     1         4        0         0        4          0\n(ULOC)                                 5\n-------------------------------------------------------------------------------\nXML                          1     12217        0         0    12217          0\n(ULOC)                              3817\n-------------------------------------------------------------------------------\nYAML                         1        83       14        14       55          0\n(ULOC)                                62\n───────────────────────────────────────────────────────────────────────────────\nTotal                      957    164767    18669     23686   122412      12504\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)        36708\nDRYness %                           0.22\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $4,205,431\nEstimated Schedule Effort (organic) 23.74 months\nEstimated People Required (organic) 15.74\n───────────────────────────────────────────────────────────────────────────────\nProcessed 10839071 bytes, 10.839 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
+  }
 }

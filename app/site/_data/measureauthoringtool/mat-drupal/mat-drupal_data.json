@@ -1,103 +1,339 @@
 {
-    "url": "https://github.com/measureauthoringtool/mat-drupal",
-    "owner": "measureauthoringtool",
-    "name": "mat-drupal",
-    "description": "Drupal CMS",
-    "commits_count": 238,
-    "issues_count": 0,
-    "open_issues_count": 0,
-    "closed_issues_count": 0,
-    "pull_requests_count": 75,
-    "open_pull_requests_count": 16,
-    "merged_pull_requests_count": 38,
-    "closed_pull_requests_count": 21,
-    "forks_count": 0,
-    "stargazers_count": 0,
-    "watchers_count": 9,
-    "created_at": "2020-02-03T22:50:28Z",
-    "total_project_lines": 48565,
-    "average_project_lines": 68,
-    "total_project_comment_lines": 2233,
-    "average_project_comment_lines": 3,
-    "total_project_blank_lines": 3143,
-    "average_blank_lines": 4,
-    "predominant_langs": {
-        "JavaScript": 297379,
-        "HTML": 262597,
-        "Twig": 179870,
-        "SCSS": 62870,
-        "PHP": 28554,
-        "CSS": 18651,
-        "Dockerfile": 6292,
-        "Shell": 1174
-    },
-    "commits_by_month": {
-        "2024/11": 4,
-        "2024/10": 2,
-        "2024/9": 2,
-        "2024/8": 17,
-        "2024/7": 5
-    },
-    "average_issue_resolution_time": [],
-    "new_commit_contributors_by_day_over_last_month": [
-        [
-            "2024-10-22T00:00:00.000Z",
-            1
-        ]
-    ],
-    "new_commit_contributors_by_day_over_last_six_months": [
-        [
-            "2024-05-27T00:00:00.000Z",
-            1
-        ],
-        [
-            "2024-07-31T00:00:00.000Z",
-            1
-        ],
-        [
-            "2024-08-14T00:00:00.000Z",
-            1
-        ],
-        [
-            "2024-08-23T00:00:00.000Z",
-            1
-        ]
-    ],
-    "new_issues_by_day_over_last_month": [],
-    "new_issues_by_day_over_last_six_months": [],
-    "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=midsize&color=ff0000",
-    "nadia_color": "ff0000",
-    "nadia_badge_name": "midsize",
-    "repo_dependency_libyear_list": [
-        [
-            "breakpoint-sass",
-            5.6849315068,
-            "2024-11-01T01:01:04.000"
-        ],
-        [
-            "node-sass",
-            0.0,
-            "2024-11-01T01:01:04.000"
-        ],
-        [
-            "node-sass-glob-importer",
-            0.0,
-            "2024-11-01T01:01:04.000"
-        ],
-        [
-            "normalize-scss",
-            5.7863013699,
-            "2024-11-01T01:01:04.000"
-        ],
-        [
-            "normalize.css",
-            0.0,
-            "2024-11-01T01:01:04.000"
-        ],
-        [
-            "sass-rem",
-            5.6684931507,
-            "2024-11-01T01:01:04.000"
-        ]
+  "url": "https://github.com/measureauthoringtool/mat-drupal",
+  "owner": "measureauthoringtool",
+  "name": "mat-drupal",
+  "description": "Drupal CMS",
+  "commits_count": 238,
+  "issues_count": 0,
+  "open_issues_count": 0,
+  "closed_issues_count": 0,
+  "pull_requests_count": 75,
+  "open_pull_requests_count": 16,
+  "merged_pull_requests_count": 38,
+  "closed_pull_requests_count": 21,
+  "forks_count": 0,
+  "stargazers_count": 0,
+  "watchers_count": 9,
+  "created_at": "2020-02-03T22:50:28Z",
+  "total_project_lines": 48565,
+  "average_project_lines": 68,
+  "total_project_comment_lines": 2233,
+  "average_project_comment_lines": 3,
+  "total_project_blank_lines": 3143,
+  "average_blank_lines": 4,
+  "predominant_langs": {
+    "JavaScript": 297379,
+    "HTML": 262597,
+    "Twig": 179870,
+    "SCSS": 62870,
+    "PHP": 28554,
+    "CSS": 18651,
+    "Dockerfile": 6292,
+    "Shell": 1174
+  },
+  "commits_by_month": {
+    "2024/11": 4,
+    "2024/10": 2,
+    "2024/9": 2,
+    "2024/8": 17,
+    "2024/7": 5
+  },
+  "average_issue_resolution_time": [],
+  "new_commit_contributors_by_day_over_last_month": [
+    [
+      "2024-10-22T00:00:00.000Z",
+      1
     ]
+  ],
+  "new_commit_contributors_by_day_over_last_six_months": [
+    [
+      "2024-05-27T00:00:00.000Z",
+      1
+    ],
+    [
+      "2024-07-31T00:00:00.000Z",
+      1
+    ],
+    [
+      "2024-08-14T00:00:00.000Z",
+      1
+    ],
+    [
+      "2024-08-23T00:00:00.000Z",
+      1
+    ]
+  ],
+  "new_issues_by_day_over_last_month": [],
+  "new_issues_by_day_over_last_six_months": [],
+  "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=midsize&color=ff0000",
+  "nadia_color": "ff0000",
+  "nadia_badge_name": "midsize",
+  "repo_dependency_libyear_list": [
+    [
+      "breakpoint-sass",
+      5.6849315068,
+      "2024-11-01T01:01:04.000"
+    ],
+    [
+      "node-sass",
+      0,
+      "2024-11-01T01:01:04.000"
+    ],
+    [
+      "node-sass-glob-importer",
+      0,
+      "2024-11-01T01:01:04.000"
+    ],
+    [
+      "normalize-scss",
+      5.7863013699,
+      "2024-11-01T01:01:04.000"
+    ],
+    [
+      "normalize.css",
+      0,
+      "2024-11-01T01:01:04.000"
+    ],
+    [
+      "sass-rem",
+      5.6684931507,
+      "2024-11-01T01:01:04.000"
+    ]
+  ],
+  "cocomo": {
+    "languageSummary": [
+      {
+        "Name": "YAML",
+        "Bytes": 553715,
+        "CodeBytes": 0,
+        "Lines": 21160,
+        "Code": 21082,
+        "Comment": 50,
+        "Blank": 28,
+        "Complexity": 0,
+        "Count": 397,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "Twig Template",
+        "Bytes": 179870,
+        "CodeBytes": 0,
+        "Lines": 4937,
+        "Code": 4694,
+        "Comment": 0,
+        "Blank": 243,
+        "Complexity": 196,
+        "Count": 160,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "Sass",
+        "Bytes": 62870,
+        "CodeBytes": 0,
+        "Lines": 3606,
+        "Code": 2805,
+        "Comment": 209,
+        "Blank": 592,
+        "Complexity": 5,
+        "Count": 79,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "JavaScript",
+        "Bytes": 333756,
+        "CodeBytes": 0,
+        "Lines": 11153,
+        "Code": 8050,
+        "Comment": 1457,
+        "Blank": 1646,
+        "Complexity": 1817,
+        "Count": 24,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "PHP",
+        "Bytes": 28554,
+        "CodeBytes": 0,
+        "Lines": 959,
+        "Code": 598,
+        "Comment": 244,
+        "Blank": 117,
+        "Complexity": 73,
+        "Count": 17,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "Markdown",
+        "Bytes": 10158,
+        "CodeBytes": 0,
+        "Lines": 246,
+        "Code": 198,
+        "Comment": 0,
+        "Blank": 48,
+        "Complexity": 0,
+        "Count": 14,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "SVG",
+        "Bytes": 43111,
+        "CodeBytes": 0,
+        "Lines": 221,
+        "Code": 221,
+        "Comment": 0,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 14,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "JSON",
+        "Bytes": 46453,
+        "CodeBytes": 0,
+        "Lines": 1352,
+        "Code": 1352,
+        "Comment": 0,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 7,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "CSS",
+        "Bytes": 98892,
+        "CodeBytes": 0,
+        "Lines": 3668,
+        "Code": 3172,
+        "Comment": 219,
+        "Blank": 277,
+        "Complexity": 0,
+        "Count": 3,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "Dockerfile",
+        "Bytes": 6292,
+        "CodeBytes": 0,
+        "Lines": 178,
+        "Code": 100,
+        "Comment": 42,
+        "Blank": 36,
+        "Complexity": 14,
+        "Count": 3,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "Shell",
+        "Bytes": 1174,
+        "CodeBytes": 0,
+        "Lines": 60,
+        "Code": 33,
+        "Comment": 8,
+        "Blank": 19,
+        "Complexity": 2,
+        "Count": 3,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "INI",
+        "Bytes": 168,
+        "CodeBytes": 0,
+        "Lines": 6,
+        "Code": 6,
+        "Comment": 0,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 2,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "Docker ignore",
+        "Bytes": 99,
+        "CodeBytes": 0,
+        "Lines": 3,
+        "Code": 3,
+        "Comment": 0,
+        "Blank": 0,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "HTML",
+        "Bytes": 262597,
+        "CodeBytes": 0,
+        "Lines": 1116,
+        "Code": 1001,
+        "Comment": 8,
+        "Blank": 107,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      },
+      {
+        "Name": "License",
+        "Bytes": 11357,
+        "CodeBytes": 0,
+        "Lines": 201,
+        "Code": 169,
+        "Comment": 0,
+        "Blank": 32,
+        "Complexity": 0,
+        "Count": 1,
+        "WeightedComplexity": 0,
+        "Files": [],
+        "LineLength": null,
+        "ULOC": 0
+      }
+    ],
+    "estimatedCost_low": 1293622.9004781805,
+    "estimatedScheduleMonths_low": 15.707741511832293,
+    "estimatedPeople_low": 8.023123129045103,
+    "estimatedCost_high": 4031493.953816616,
+    "estimatedScheduleMonths_high": 15.707741511832293,
+    "estimatedPeople_high": 8.023123129045103,
+    "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nYAML                       397     21160       28        50    21082          0\n(ULOC)                              5183\n-------------------------------------------------------------------------------\nTwig Template              160      4937      243         0     4694        196\n(ULOC)                              2083\n-------------------------------------------------------------------------------\nSass                        79      3606      592       209     2805          5\n(ULOC)                              1638\n-------------------------------------------------------------------------------\nJavaScript                  24     11153     1646      1457     8050       1817\n(ULOC)                              6803\n-------------------------------------------------------------------------------\nPHP                         17       959      117       244      598         73\n(ULOC)                               542\n-------------------------------------------------------------------------------\nMarkdown                    14       246       48         0      198          0\n(ULOC)                               154\n-------------------------------------------------------------------------------\nSVG                         14       221        0         0      221          0\n(ULOC)                               140\n-------------------------------------------------------------------------------\nJSON                         7      1352        0         0     1352          0\n(ULOC)                               664\n-------------------------------------------------------------------------------\nCSS                          3      3668      277       219     3172          0\n(ULOC)                              1952\n-------------------------------------------------------------------------------\nDockerfile                   3       178       36        42      100         14\n(ULOC)                               140\n-------------------------------------------------------------------------------\nShell                        3        60       19         8       33          2\n(ULOC)                                30\n-------------------------------------------------------------------------------\nINI                          2         6        0         0        6          0\n(ULOC)                                 4\n-------------------------------------------------------------------------------\nDocker ignore                1         3        0         0        3          0\n(ULOC)                                 4\n-------------------------------------------------------------------------------\nHTML                         1      1116      107         8     1001          0\n(ULOC)                               507\n-------------------------------------------------------------------------------\nLicense                      1       201       32         0      169          0\n(ULOC)                               168\n───────────────────────────────────────────────────────────────────────────────\nTotal                      726     48866     3145      2237    43484       2107\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)        19524\nDRYness %                           0.40\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $1,418,539\nEstimated Schedule Effort (organic) 15.71 months\nEstimated People Required (organic) 8.02\n───────────────────────────────────────────────────────────────────────────────\nProcessed 1639066 bytes, 1.639 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
+  }
 }
