@@ -371,7 +371,7 @@ def generate_libyears_graph(oss_entity):
     elevation = 0
     for dep in dep_list:
 
-        label = f"{dep["dep_name"]}/{dep["repo_name"]}"
+        label = f"{dep['dep_name']}/{dep['repo_name']}"
         
         dateline.add(label, [
             (timedelta(), elevation),
