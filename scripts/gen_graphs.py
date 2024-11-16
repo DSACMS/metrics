@@ -317,12 +317,20 @@ def parse_libyear_list(dependency_list):
         #print(dep)
         if dep[-2] >= 0:
             date = datetime.datetime.strptime(dep[-1], '%Y-%m-%dT%H:%M:%S.%f')
+
+            dep_dict = {
+                "dep_name": dep[-3],
+                "libyear_value": dep[-2],
+                "libyear_date_last_updated": date
+            }
+
+            if len(dep) > 3:
+                dep_dict['repo_name'] = dep[0]
+            else:
+                dep_dict['repo_name'] = ''
+
             to_return.append(
-                {
-                    "dep_name": dep[-3],
-                    "libyear_value": dep[-2],
-                    "libyear_date_last_updated": date
-                }
+                dep_dict
             )
 
     #return list sorted by date
@@ -362,7 +370,10 @@ def generate_libyears_graph(oss_entity):
     #We are going to treat the y-axis as having one dep per level in the graph
     elevation = 0
     for dep in dep_list:
-        dateline.add(dep["dep_name"], [
+
+        label = f"{dep['dep_name']}/{dep['repo_name']}"
+        
+        dateline.add(label, [
             (timedelta(), elevation),
             (timedelta(days=dep["libyear_value"] * 365), elevation),
         ])

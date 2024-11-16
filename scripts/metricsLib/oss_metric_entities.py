@@ -214,7 +214,7 @@ class Repository(OSSEntity):
         #    endpoint = f"{AUGUR_HOST}/repos"
         #else:
         #    endpoint = f"{AUGUR_HOST}/repo-groups/{owner_id}/repos"
-        endpoint = f"{AUGUR_HOST}owner/{owner.lower()}/repo/{repo_name.lower()}"
+        endpoint = f"{AUGUR_HOST}/owner/{owner.lower()}/repo/{repo_name.lower()}"
         super().__init__(repo_name, endpoint)
 
         response = requests.get(
@@ -222,8 +222,10 @@ class Repository(OSSEntity):
         response_json = json.loads(response.text)
 
         try:
+            print(endpoint)
+            print(response_json)
             repo_val = response_json[0]
-        except IndexError:
+        except (IndexError,KeyError):
             repo_val = {}
 
         # print(f"!!!{repo_val}")
