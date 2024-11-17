@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for k8s-cluster-stig-baseline | REPORT-2024-11-10
+title: Open Source at CMS Metrics Report for k8s-cluster-stig-baseline | REPORT-2024-11-17
 permalink: /CMSgov/k8s-cluster-stig-baseline/
 
 org: CMSgov
 repo: k8s-cluster-stig-baseline
-reportID: REPORT-2024-11-10
-date_stampThisWeek: 2024-11-10
-date_stampLastWeek: 2024-11-10
+reportID: REPORT-2024-11-17
+date_stampThisWeek: 2024-11-17
+date_stampLastWeek: 2024-11-17
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -87,10 +87,10 @@ date_stampLastWeek: 2024-11-10
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>16</td>
         <td>17</td>
-        <td>17</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >6.1%</td>
       </tr>
     </tbody>
   </table>

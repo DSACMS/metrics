@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-tf-misc-modules | REPORT-2024-11-10
+title: Open Source at CMS Metrics Report for batcave-tf-misc-modules | REPORT-2024-11-17
 permalink: /CMS-Enterprise/batcave-tf-misc-modules/
 
 org: CMS-Enterprise
 repo: batcave-tf-misc-modules
-reportID: REPORT-2024-11-10
-date_stampThisWeek: 2024-11-10
-date_stampLastWeek: 2024-11-10
+reportID: REPORT-2024-11-17
+date_stampThisWeek: 2024-11-17
+date_stampLastWeek: 2024-11-17
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -88,9 +88,9 @@ date_stampLastWeek: 2024-11-10
       <tr>
         <th scope="row">Watchers</th>
         <td>7</td>
-        <td>8</td>
-        <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >13%</td>
+        <td>7</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>
