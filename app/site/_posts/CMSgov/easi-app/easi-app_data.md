@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for easi-app | REPORT-2024-11-10
+title: Open Source at CMS Metrics Report for easi-app | REPORT-2024-11-17
 permalink: /CMSgov/easi-app/
 
 org: CMSgov
 repo: easi-app
-reportID: REPORT-2024-11-10
-date_stampThisWeek: 2024-11-10
-date_stampLastWeek: 2024-11-10
+reportID: REPORT-2024-11-17
+date_stampThisWeek: 2024-11-17
+date_stampLastWeek: 2024-11-17
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-11-10
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>8943</td>
         <td>8942</td>
-        <td>8940</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >0.022%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.011%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,22 +52,22 @@ date_stampLastWeek: 2024-11-10
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>8</td>
         <td>6</td>
-        <td>5</td>
-        <td style="" >1</td>
-        <td style="" >18%</td>
+        <td style="" >2</td>
+        <td style="" >29%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>2552</td>
         <td>2548</td>
-        <td>2540</td>
-        <td style="color: #45c527" >8</td>
-        <td style="color: #45c527" >0.31%</td>
+        <td style="color: #45c527" >4</td>
+        <td style="color: #45c527" >0.16%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>327</td>
         <td>326</td>
-        <td>325</td>
         <td style="" >1</td>
         <td style="" >0.31%</td>
       </tr>
@@ -88,9 +88,9 @@ date_stampLastWeek: 2024-11-10
       <tr>
         <th scope="row">Watchers</th>
         <td>3</td>
-        <td>2</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >40%</td>
+        <td>3</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>

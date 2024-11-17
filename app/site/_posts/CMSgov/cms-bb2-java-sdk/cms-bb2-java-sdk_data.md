@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for cms-bb2-java-sdk | REPORT-2024-11-10
+title: Open Source at CMS Metrics Report for cms-bb2-java-sdk | REPORT-2024-11-17
 permalink: /CMSgov/cms-bb2-java-sdk/
 
 org: CMSgov
 repo: cms-bb2-java-sdk
-reportID: REPORT-2024-11-10
-date_stampThisWeek: 2024-11-10
-date_stampLastWeek: 2024-11-10
+reportID: REPORT-2024-11-17
+date_stampThisWeek: 2024-11-17
+date_stampLastWeek: 2024-11-17
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -87,10 +87,10 @@ date_stampLastWeek: 2024-11-10
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>11</td>
         <td>12</td>
-        <td>12</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >8.7%</td>
       </tr>
     </tbody>
   </table>
