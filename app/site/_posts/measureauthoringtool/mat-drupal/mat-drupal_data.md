@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for mat-drupal | REPORT-2024-11-17
+title: Open Source at CMS Metrics Report for mat-drupal | REPORT-2024-11-24
 permalink: /measureauthoringtool/mat-drupal/
 
 org: measureauthoringtool
 repo: mat-drupal
-reportID: REPORT-2024-11-17
-date_stampThisWeek: 2024-11-17
-date_stampLastWeek: 2024-11-17
+reportID: REPORT-2024-11-24
+date_stampThisWeek: 2024-11-24
+date_stampLastWeek: 2024-11-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

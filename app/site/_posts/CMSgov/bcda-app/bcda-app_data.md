@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for bcda-app | REPORT-2024-11-17
+title: Open Source at CMS Metrics Report for bcda-app | REPORT-2024-11-24
 permalink: /CMSgov/bcda-app/
 
 org: CMSgov
 repo: bcda-app
-reportID: REPORT-2024-11-17
-date_stampThisWeek: 2024-11-17
-date_stampLastWeek: 2024-11-17
+reportID: REPORT-2024-11-24
+date_stampThisWeek: 2024-11-24
+date_stampLastWeek: 2024-11-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,8 +24,8 @@ date_stampLastWeek: 2024-11-17
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>912</td>
         <td>911</td>
-        <td>910</td>
         <td style="color: #45c527" >1</td>
         <td style="color: #45c527" >0.11%</td>
       </tr>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2024-11-17
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>2</td>
         <td>1</td>
-        <td style="" >1</td>
-        <td style="" >67%</td>
+        <td>2</td>
+        <td style="color: #45c527" >-1</td>
+        <td style="color: #45c527" >67%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>913</td>
         <td>912</td>
-        <td>911</td>
         <td style="color: #45c527" >1</td>
         <td style="color: #45c527" >0.11%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>85</td>
-        <td>83</td>
-        <td style="" >2</td>
-        <td style="" >2.4%</td>
+        <td>85</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -87,10 +87,10 @@ date_stampLastWeek: 2024-11-17
       </tr>
       <tr>
         <th scope="row">Watchers</th>
-        <td>25</td>
         <td>26</td>
-        <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >3.9%</td>
+        <td>25</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >3.9%</td>
       </tr>
     </tbody>
   </table>
