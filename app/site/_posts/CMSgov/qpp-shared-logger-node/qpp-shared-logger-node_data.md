@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for qpp-shared-logger-node | REPORT-2024-11-17
+title: Open Source at CMS Metrics Report for qpp-shared-logger-node | REPORT-2024-11-24
 permalink: /CMSgov/qpp-shared-logger-node/
 
 org: CMSgov
 repo: qpp-shared-logger-node
-reportID: REPORT-2024-11-17
-date_stampThisWeek: 2024-11-17
-date_stampLastWeek: 2024-11-17
+reportID: REPORT-2024-11-24
+date_stampThisWeek: 2024-11-24
+date_stampLastWeek: 2024-11-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -87,10 +87,10 @@ date_stampLastWeek: 2024-11-17
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>20</td>
         <td>19</td>
-        <td>19</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >5.1%</td>
       </tr>
     </tbody>
   </table>

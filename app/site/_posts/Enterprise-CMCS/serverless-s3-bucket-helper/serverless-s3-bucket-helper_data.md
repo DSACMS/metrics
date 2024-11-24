@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for serverless-s3-bucket-helper | REPORT-2024-11-17
+title: Open Source at CMS Metrics Report for serverless-s3-bucket-helper | REPORT-2024-11-24
 permalink: /Enterprise-CMCS/serverless-s3-bucket-helper/
 
 org: Enterprise-CMCS
 repo: serverless-s3-bucket-helper
-reportID: REPORT-2024-11-17
-date_stampThisWeek: 2024-11-17
-date_stampLastWeek: 2024-11-17
+reportID: REPORT-2024-11-24
+date_stampThisWeek: 2024-11-24
+date_stampLastWeek: 2024-11-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -87,10 +87,10 @@ date_stampLastWeek: 2024-11-17
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>11</td>
         <td>10</td>
-        <td>9</td>
         <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >11%</td>
+        <td style="color: #45c527" >9.5%</td>
       </tr>
     </tbody>
   </table>

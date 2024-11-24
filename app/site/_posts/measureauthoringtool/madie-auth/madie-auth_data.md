@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for madie-auth | REPORT-2024-11-17
+title: Open Source at CMS Metrics Report for madie-auth | REPORT-2024-11-24
 permalink: /measureauthoringtool/madie-auth/
 
 org: measureauthoringtool
 repo: madie-auth
-reportID: REPORT-2024-11-17
-date_stampThisWeek: 2024-11-17
-date_stampLastWeek: 2024-11-17
+reportID: REPORT-2024-11-24
+date_stampThisWeek: 2024-11-24
+date_stampLastWeek: 2024-11-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -52,10 +52,10 @@ date_stampLastWeek: 2024-11-17
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>44</td>
         <td>43</td>
-        <td>42</td>
         <td style="" >1</td>
-        <td style="" >2.4%</td>
+        <td style="" >2.3%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>

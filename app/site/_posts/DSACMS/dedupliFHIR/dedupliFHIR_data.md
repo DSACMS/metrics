@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for dedupliFHIR | REPORT-2024-11-17
+title: Open Source at CMS Metrics Report for dedupliFHIR | REPORT-2024-11-24
 permalink: /DSACMS/dedupliFHIR/
 
 org: DSACMS
 repo: dedupliFHIR
-reportID: REPORT-2024-11-17
-date_stampThisWeek: 2024-11-17
-date_stampLastWeek: 2024-11-17
+reportID: REPORT-2024-11-24
+date_stampThisWeek: 2024-11-24
+date_stampLastWeek: 2024-11-24
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-11-17
       <tr>
         <th scope="row">Commits</th>
         <td>505</td>
-        <td>489</td>
-        <td style="color: #45c527" >16</td>
-        <td style="color: #45c527" >3.2%</td>
+        <td>505</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,31 +52,31 @@ date_stampLastWeek: 2024-11-17
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>5</td>
         <td>10</td>
-        <td style="color: #45c527" >-5</td>
-        <td style="color: #45c527" >67%</td>
+        <td>5</td>
+        <td style="" >5</td>
+        <td style="" >67%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>117</td>
-        <td>111</td>
-        <td style="color: #45c527" >6</td>
-        <td style="color: #45c527" >5.3%</td>
+        <td>117</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>52</td>
-        <td>51</td>
-        <td style="" >1</td>
-        <td style="" >1.9%</td>
+        <td>52</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
+        <td>3</td>
         <td>2</td>
-        <td>2</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >40%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
