@@ -23,7 +23,7 @@ export function createNavigation() {
     if (toggleButton && closeButton && menu) {
 
         toggleButton.addEventListener("click", () => {
-            const isOpen = menu.classList.toggle("is-visible");
+            const isOpen = menu.classList.toggle("is-hidden");
 
             menuIcon.setAttribute(
                 "xlink:href",
