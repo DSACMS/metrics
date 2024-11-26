@@ -1,4 +1,4 @@
-<div class="usa-overlay"></div>
+<!-- <div class="usa-overlay"></div>
 <header class="usa-header usa-header--basic">
   <div class="usa-nav-container">
     <div class="usa-navbar">
@@ -36,6 +36,85 @@
           </a>
         </li>
       </ul>
+    </nav>
+  </div>
+</header> -->
+
+<div class="usa-overlay"></div>
+<header class="usa-header usa-header--basic">
+  <div class="usa-nav-container">
+    <div class="usa-navbar">
+      <div class="title">
+        <img src="{{ "/assets/img/cms-logo.jpg" | url }}" class="logo">
+        <h1>Metrics Website!</h1>
+      </div>
+
+      <div class="usa-logo">
+        <em class="usa-logo__text">
+          <a href="{{ "/" | url}}" title="{{site.title}}">{{ site.title }}</a>
+        </em>
+      </div>
+
+      <button type="button" class="usa-menu-btn">
+        <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+          <use xlink:href="/assets/img/sprite.svg#menu"></use>
+        </svg>
+      </button>
+    </div>
+    <nav aria-label="Primary navigation" class="usa-nav">
+      <button type="button" class="usa-nav__close">
+        <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+          <use xlink:href="/assets/img/sprite.svg#close"></use>
+        </svg>
+      </button>
+
+      <ul class="usa-nav__primary usa-accordion">
+        <li class="usa-nav__primary-item">
+          <button
+            type="button"
+            class="usa-accordion__button usa-nav__link"
+            aria-expanded="false"
+            aria-controls="basic-nav-section-one"
+          >
+            <svg
+              class="usa-icon toggle-icon"
+              aria-hidden="true"
+              focusable="false"
+              role="img"
+            >
+              <use xlink:href="/assets/img/sprite.svg#menu">
+            </svg>
+          </button>
+
+
+          <ul id="basic-nav-section-one" class="usa-nav__submenu">
+
+            <li class="usa-nav__submenu-item">
+              <a href="javascript:void(0);"
+                ><span>&lt;Navigation link&gt;</span></a
+              >
+            </li>
+            <li class="usa-nav__submenu-item">
+              <a href="javascript:void(0);"
+                ><span>&lt;Navigation link&gt;</span></a
+              >
+            </li>
+            <li class="usa-nav__submenu-item">
+              <a href="javascript:void(0);"
+                ><span>&lt;Navigation link&gt;</span></a
+              >
+            </li>
+            <li class="usa-nav__submenu-item">
+              <a href="javascript:void(0);"
+                ><span>&lt;Navigation link&gt;</span></a
+              >
+            </li>
+
+          </ul>
+        </li>
+      </ul>
+
+
     </nav>
   </div>
 </header>
