@@ -2,57 +2,68 @@
 layout: base
 ---
 <div class="grid-container">
-  <!-- <div class="title">
-    <img src="{{ "/assets/img/cms-logo.jpg" | url }}" class="logo">
-    <h1>Metrics Website</h1>
-  </div> -->
-  <!-- <p>
-    {{ site.description }}
-  </p> -->
-  <ul class="usa-card-group">
+  <section class="home-page-description">
+    <div class="description-styling">
+      <h2>
+        Metrics & Code.JSON
+      </h2>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer venenatis aliquet quam ut cursus. Ut ac orci eros. 
+      Suspendisse sodales nulla id metus egestas, euismod aliquet massa laoreet. Nulla vel blandit neque, ac efficitur augue. 
+      Donec consequat pulvinar lacus, a dignissim sem rhoncus ut. Nunc eu elit dignissim, elementum nunc ut, fermentum nulla. 
+      Proin sed enim vel lorem dictum lacinia quis id justo. Vestibulum ac justo commodo, interdum nisl nec, posuere lacus. 
+      In hac habitasse platea dictumst. Aliquam quis risus at tortor placerat congue ut in mi. 
+      Praesent suscipit lectus sit amet massa.
+    </p>
+    <p>
+      {{ site.description }}
+    </p>
+  </section>
+  <ul class="usa-card-group-home">
     <li class="usa-card tablet:grid-col-6">
-      <div class="usa-card__container">
-        <div class="usa-card__header">
-          <h2 class="usa-card__heading">
-            <svg class="usa-icon" aria-labelledby="organizations" role="img">
-              <title id="organizations-category"> Organizations </title>
-              {% lucide "building-2" %}
-            </svg>
-            <a href="{{ "/organizations/" | url}}" class="text-no-underline"
-              >Organizations
-              <span class="chevrons-right">
-                <svg class="usa-icon usa-icon--size-2" aria-hidden="true" focusable="false" role="img">
-                  <use xlink:href= {{ "/assets/img/sprite.svg#navigate_far_next" | url }}></use>
+      <div class="usa-card-outer">
+        <div class="usa-card-middle">
+          <a href="{{ "/organizations/" | url}}" class="href-home">
+            <div class="usa-card__container">
+              <div class="home-icon-container">
+                <svg class="usa-icon--size-5" aria-hidden="true" focusable="false" role="img">
+                  <use xlink:href="/assets/img/sprite.svg#groups"></use>
                 </svg>
-              </span>
-            </a>
-          </h2>
-        </div>
-        <div class="usa-card__body">
-          <p>View Metrics on our GitHub Organizations</p>
+              </div>
+              <div class="usa-card__header">
+                <h2 class="usa-card__heading-home">
+                  Organizations
+                </h2>
+                <div class="usa-card__body">
+                  <p>View Metrics on our GitHub Organizations</p>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </li>
     <li class="usa-card tablet:grid-col-6">
-      <div class="usa-card__container">
-        <div class="usa-card__header">
-          <h2 class="usa-card__heading">
-            <svg class="usa-icon" aria-labelledby="projects" role="img">
-              <title id="projects-category"> Projects </title>
-              {% lucide "folder-git-2" %}
-            </svg>
-            <a href="{{ "/projects/" | url}}" class="text-no-underline"
-              >Projects
-              <span class="chevrons-right">
-                <svg class="usa-icon usa-icon--size-2" aria-hidden="true" focusable="false" role="img">
-                  <use xlink:href={{ "/assets/img/sprite.svg#navigate_far_next" | url }} ></use>
+      <div class="usa-card-outer">
+        <div class="usa-card-middle">
+          <a href="{{ "/projects/" | url}}" class="href-home">
+            <div class="usa-card__container">
+              <div class="home-icon-container">
+                <svg class="usa-icon--size-5" aria-hidden="true" focusable="false" role="img">
+                  <use xlink:href="/assets/img/sprite.svg#folder_open"></use>
                 </svg>
-              </span>
-            </a>
-          </h2>
-        </div>
-        <div class="usa-card__body">
-          <p>View Metrics on our {{ projects.length }}+ Repositories</p>
+              </div>
+              <div class="usa-card__header">
+                <h2 class="usa-card__heading-home">
+                  Projects
+                </h2>
+                <div class="usa-card__body">
+                  <p>View Metrics on our {{ projects.length }}+ Repositories</p>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </li>
