@@ -96,15 +96,11 @@ h2 {
   margin-left: -80px;
 }
 
-.usa-card {
-  margin: 0 1% 0 1%;
-}
-
 .usa-card-outer {
   display: flex;
   background-color: #043884;
   border-radius: 70px;
-  height: 11vw;
+  height: 20vh;
   width: 25vw;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
@@ -134,7 +130,6 @@ h2 {
 .href-home:focus {
   outline:none;
 }
-
 
 .usa-card__container {
   align-items: center;
@@ -208,6 +203,55 @@ a.usa-link {
 
 a.usa-link:visited {
   color: #494949;
+}
+
+/* Orgs */
+.usa-card-group-orgs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type:none;
+  justify-content: center;
+}
+
+.usa-card {
+  display: flex;
+  justify-content: center;
+  /* margin: 0 1% 0 1%; */
+  margin: 2%;
+}
+
+.usa-card__media {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  margin-left: 6%;
+  width: 100px;
+}
+
+.usa-card__img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.usa-card__header-orgs {
+  margin: 15% 1% 10% 5%;
+  padding: 0;
+}
+
+.usa-card__heading-orgs {
+  font-size: 1.2em;
+}
+
+.usa-card__footer {
+  padding-bottom: 1.5rem;
+  padding-left: 0;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
 }
 
 /* .githubinformation {
