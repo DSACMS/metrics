@@ -4,7 +4,9 @@ export function createNavigation() {
     const menu = document.querySelector(".usa-nav");
     const menuIcon = document.querySelector(".usa-accordion__button svg use");
 
-    if (toggleButton && closeButton && menu) {
+  if (toggleButton && closeButton && menu) {
+    toggleButton.addEventListener("click", () => {
+      const isOpen = menu.classList.toggle("is-hidden")
 
         toggleButton.addEventListener("click", () => {
             const isOpen = menu.classList.toggle("is-hidden");
