@@ -6,9 +6,11 @@ header {
 }
 
 main {
-  min-height: 65vh;
+  min-height: 70vh;
 }
 
+
+/* Header */
 .usa-header {
   align-items: center;
   display: flex;
@@ -63,6 +65,8 @@ h1 {
   fill: #000;
 }
 
+
+/* Home page main */
 .grid-container {
   display: flex;
   flex-direction: column;
@@ -89,7 +93,7 @@ h2 {
   display: flex;
   flex-direction: row;
   list-style-type:none;
-  margin-left: -60px;
+  margin-left: -80px;
 }
 
 .usa-card {
@@ -166,9 +170,44 @@ h2 {
 }
 
 .usa-card-heading-home {
-  /* font-family: "Source Sans Pro Web"; */
   font-size: 1.2em;
-  /* color: #000; */
+}
+
+/* Footer */
+.usa-identifier {
+  display: flex;
+  background-color: #E0EAF8;
+  color: #000;
+}
+
+.usa-identifier__logo-img {
+  filter: invert(1);
+}
+
+.usa-identifier__identity-domain {
+  color: #000;
+}
+
+.usa-identifier__identity-disclaimer a:visited {
+  color: #494949;
+}
+
+.usa-identifier__required-link,
+.usa-identifier__required-link.usa-link{
+  color:#000;
+  display:inline-block;
+}
+.usa-identifier__required-link:visited,
+.usa-identifier__required-link.usa-link:visited{
+  color:#494949;
+}
+
+a.usa-link {
+  color: #000;
+}
+
+a.usa-link:visited {
+  color: #494949;
 }
 
 /* .githubinformation {
