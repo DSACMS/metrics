@@ -71,7 +71,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({
     "src/img": "assets/img",
-    "src/js" : "src/js",
+    "src/js": "src/js",
     "site/img": "assets/img",
     "site/_includes/css": "css",
     "site/_includes/js": "assets/js",
