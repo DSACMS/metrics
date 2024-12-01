@@ -6,7 +6,7 @@ header {
 }
 
 main {
-  min-height: 70vh;
+  min-height: 73vh;
 }
 
 
@@ -99,6 +99,7 @@ h2 {
 .usa-card-outer {
   display: flex;
   background-color: #043884;
+  border: none;
   border-radius: 70px;
   height: 20vh;
   width: 25vw;
@@ -108,10 +109,11 @@ h2 {
 .usa-card-middle {
   display: flex;
   background-color: #5C85C1;
+  border: none;
   border-radius: 70px;
   height: 100%;
-  margin-left: -1px;
-  width: 97%;
+  margin-left: -5px;
+  width: 98%;
 }
 
 .usa-card-middle:hover {
@@ -123,8 +125,9 @@ h2 {
 }
 
 .href-home {
+  border: none;
   text-decoration:none;
-  width: 96%;
+  width: 98%;
 }
 
 .href-home:focus {
@@ -134,12 +137,13 @@ h2 {
 .usa-card__container {
   align-items: center;
   background-color: #E0EAF8;
+  border: none;
   border-radius: 70px;
   display: flex;
   flex-direction: row;
   height: 100%;
   margin: 0;
-  margin-left: -1px;
+  margin-left: -5px;
   padding: 0;
   width: 100%;
 }
@@ -252,6 +256,16 @@ a.usa-link:visited {
   padding-left: 0;
   padding-right: 1.5rem;
   padding-top: 0.5rem;
+}
+
+/* Projects */
+.dashboard-container {
+  display: flex;
+}
+
+.search-and-sort {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* .githubinformation {

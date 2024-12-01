@@ -1,15 +1,22 @@
 import { reportHeadingTemplate, projectCardTemplate } from "./templates";
 import DOMPurify from 'dompurify';
-const filterBox = document.getElementById("filter-input");
+
+// const searchForm = document.getElementById('search-form');
+// const searchBox = document.getElementById("search-input");
+// const label = document.querySelector('label[for="search-input"]');
+
+
 const projectsData = document.getElementById('metrics').textContent;
 const orgsData = document.getElementById('org-data').textContent;
 const parsedOrgsData = JSON.parse(orgsData);
 const parsedProjectsData = JSON.parse(projectsData);
 const filtersContainer = document.querySelector('.filters-container');
 const templateDiv = document.getElementById('content-container');
-var projects = setProjectsData(parsedProjectsData)
+const projects = setProjectsData(parsedProjectsData)
 const sortDirection = document.getElementById('sort-direction');
 const sortSelection = document.getElementById('sort-selection');
+
+console.log({projects})
 
 
 // Hide sort direction when sort is not selected
@@ -286,28 +293,88 @@ function checkFilterCriteria(card, selectedFiltersObject) {
 
 }
 
-filterBox.addEventListener("input", () => {
+
+
+// SEARCH BOX FUNCTIONS
+// Value needs to match project[org][index].name
+// search value needs to disapear when typing starts
+// functions needs to return project card matching input value
+// should filter as typing begins
+// event prevent default from form reload
+document.addEventListener("DOMContentLoaded", () => {
+  const searchForm = document.getElementById('search-form');
+  const searchBox = document.getElementById("search-input");
+  const projectList = document.getElementById("content-container");
+  const projectCards = projectList.getElementsByClassName("project-card");
   const projectSections = document.querySelectorAll(".project_section");
-  const query = filterBox.value.toLowerCase()
+  // console.log("org name: ", projectSections[0].childNodes[1].childNodes)
+  // console.log("org THINGS: ", projectSections[0].attributes)
 
-  // Iterate through each section
-  projectSections.forEach((section) => {
-    var queryMatchCheck = false
-    const projectCards = section.querySelectorAll(".project-card")
+  searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+  })
+  
+  searchBox.addEventListener("input", () => {
+    const query = searchBox.value.toLowerCase();
 
-    // Performs query and hides project card accordingly
-    projectCards.forEach((card) => {
-      card.hidden = !(
-        query == "" || card.textContent.toLowerCase().includes(query)
-      )
+    projectSections.forEach((section) => {
+      const orgName = section.querySelector(".report_heading h2")
+      console.log({orgName})
+      console.log(orgName.innerHTML)
 
-      if (!card.hidden) {
-        queryMatchCheck = true
-      }
+      let hasVisableProjects = false;
+    
+
+    Array.from(projectCards).forEach((card) => {
+      const cardName = card.id.toLowerCase()
+      const isVisable = query === "" || cardName.includes(query)
+      card.style.display = isVisable ? "" : "none";
+
+      if(isVisable) hasVisableProjects = true
     })
 
-    // Hide heading if all cards under section are hidden
-    const reportHeadings = section.querySelector(".report_heading")
-    reportHeadings.hidden = !queryMatchCheck
+
+    // orgName.innerHTML = hasVisableProjects ? orgName.innerHTML : "";
+    if(hasVisableProjects) {
+      console.log({hasVisableProjects})
+      orgName.innerHTML.style.display = "";
+    } else {
+      orgName.innerHTML.style.display = "none";
+    }
+  })
   })
 })
+
+
+// // Search function
+// {projects}
+// searchBox.addEventListener("input", () => {
+//   const projectSections = document.querySelectorAll(".project_section");
+//   console.log("projects inside search: ", projects.DSACMS[3].name)
+//   console.log({projectSections})
+//   const query = searchBox.value.toLowerCase()
+
+
+
+//   // Iterate through each section
+//   projectSections.forEach((section) => {
+//     var queryMatchCheck = false
+//     const projectCards = section.querySelectorAll(".project-card")
+//     console.log({projectCards})
+
+//     // Performs query and hides project card accordingly
+//     projectCards.forEach((card) => {
+//       card.hidden = !(
+//         query == "" || card.textContent.toLowerCase().includes(query)
+//       )
+
+//       if (!card.hidden) {
+//         queryMatchCheck = false
+//       }
+//     })
+
+//     // Hide heading if all cards under section are hidden
+//     const reportHeadings = section.querySelector(".report_heading")
+//     reportHeadings.hidden = !queryMatchCheck
+//   })
+// })

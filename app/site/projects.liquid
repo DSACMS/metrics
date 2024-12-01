@@ -8,15 +8,18 @@ layout: base
 <span style="display:none;" id="org-data">
   {{organizations | json }}
 </span>
-<div class="grid-container ">
+<div class="grid-container">
+  <div class="description-styling">
+    <h2>Projects</h2>
+  </div>
   <p>
     The Centers for Medicare and Medicaid Services develops and supports many open-source projects found in our various
     GitHub Organizations.
   </p>
 
+
   <div class="dashboard-container">
     <div class="filters-container">
-
       {% comment %} filter by organization {% endcomment %}
       <div class="usa-accordion border-base-lighter border-2px">
         <div class="usa-accordion__heading">
@@ -38,7 +41,6 @@ layout: base
           </form>
         </div>
       </div>
-
       {% comment %} filter by maturity model tier {% endcomment %}
       <div class="usa-accordion border-base-lighter border-2px">
         <div class="usa-accordion__heading">
@@ -60,7 +62,6 @@ layout: base
           </form>
         </div>
       </div>
-
       {% comment %} filter by fisma compliance level {% endcomment %}
       <div class="usa-accordion border-base-lighter border-2px">
         <div class="usa-accordion__heading">
@@ -82,7 +83,6 @@ layout: base
           </form>
         </div>
       </div>
-
       {% comment %} filter by project type {% endcomment %}
       <div class="usa-accordion border-base-lighter border-2px">
         <div class="usa-accordion__heading">
@@ -105,10 +105,12 @@ layout: base
         </div>
       </div>
     </div>
-    
+
+
     <div class="block">
       <div class="search-and-sort">
-        <div class="search-container">
+
+        <!-- <div class="search-container">
           <label class="usa-label" for="filter-input">Search</label>
           <div class="usa-input-group width-full maxw-none border-base-light">
             <div class="usa-input-prefix" aria-hidden="true">
@@ -118,7 +120,31 @@ layout: base
             </div>
             <input class="usa-input--lg" id="filter-input" name="filter-input">
           </div>
-        </div>
+        </div> -->
+
+
+        <section aria-label="Small search component">
+          <form class="usa-search usa-search--small" role="search" id="search-form">
+            <label class="usa-sr-only" for="search-input">Search</label>
+            <input
+              class="usa-input"
+              id="search-input"
+              type="search"
+              name="search-input"
+              placeholder="Search"
+            />
+            <button class="usa-button" type="submit">
+              <img
+                src="/assets/img/usa-icons-bg/search--white.svg"
+                class="usa-search__submit-icon"
+                alt="Search"
+              />
+            </button>
+          </form>
+        </section>
+
+
+
         <div class="sort-dropdown">
           <form class="usa-form" id="sort-selection-form">
             <label class="usa-label" for="sort-selection">Sort by</label>
@@ -140,9 +166,9 @@ layout: base
             </select>
           </form>
         </div>
+        
       </div>
-
-      <div class="padding-left-05" id="filter-tags"></div>
-      <div id="content-container"></div>
+    <div class="padding-left-05" id="filter-tags"></div>
+    <div id="content-container"></div>
   </div>
 </div>
