@@ -5,9 +5,16 @@
     {% include 'assets.liquid' %}
   </head>
   <body>
-    {% include 'banner.liquid' %}
-    {% include 'nav.liquid' %}
-    {{ content | raw }}
-    {% include 'footer.liquid' %}
+    <header>
+      {% include 'banner.liquid' %}
+      {% include 'nav.liquid' %}
+    </header>
+    <main>
+      {{ content | raw }}
+    </main>
+    <footer>
+      {% include 'footer.liquid' %}
+    </footer>
   </body>
+  <!-- <script type="module" src="{{ "/src/js/nav.js" | url}}"></script> -->
 </html>
