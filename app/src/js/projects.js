@@ -1,11 +1,6 @@
 import { reportHeadingTemplate, projectCardTemplate, renderProjectCards } from "./templates";
 import DOMPurify from 'dompurify';
 
-// const searchForm = document.getElementById('search-form');
-// const searchBox = document.getElementById("search-input");
-// const label = document.querySelector('label[for="search-input"]');
-
-
 const projectsData = document.getElementById('metrics').textContent;
 const orgsData = document.getElementById('org-data').textContent;
 const parsedOrgsData = JSON.parse(orgsData);
@@ -160,10 +155,6 @@ function createProjectCards() {
   
     projectSectionsTemplate.appendChild(projectCards);
 
-    // const startIndex = (currentPage - 1) * itemsPerPage;
-    // const endIndex = startIndex + itemsPerPage;
-    // const paginatedProjects = projects[org].slice(startIndex, endIndex);
-
     groupedByOrg[org].forEach(repoData => {
       const projectCard = document.createElement('li');
       projectCard.className = 'usa-card project-card tablet:grid-col-12';
@@ -172,17 +163,6 @@ function createProjectCards() {
       projectCard.innerHTML = DOMPurify.sanitize(projectCardTemplate(repoData));
       projectCards.appendChild(projectCard);
     })
-  
-    // Create all project cards for each org
-    // for (const repoIndex in projects[org]) {
-    //   const repoData = projects[org][repoIndex];
-    //   const projectCard = document.createElement('li');
-    //   projectCard.className = 'usa-card project-card tablet:grid-col-12';
-    //   projectCard.id = repoData.name;
-    //   projectCard.setAttribute('org-name', repoData.owner);
-    //   projectCard.innerHTML = DOMPurify.sanitize(projectCardTemplate(repoData));
-    //   projectCards.appendChild(projectCard);
-    // }
   }
   updateFilters();
   updateHeadingVisibility();
@@ -192,10 +172,10 @@ function createProjectCards() {
 function renderPaginationControls() {
   const paginationDiv = document.getElementById('pagination-controls') || document.createElement('div');
   paginationDiv.id = 'pagination-controls';
-  paginationDiv.innerHTML = ''; // Clear previous controls
+  paginationDiv.innerHTML = ''; 
 
   // Determine the total number of pages
-  const totalProjects = Object.values(projects).flat().length; // Combine all projects into one array
+  const totalProjects = Object.values(projects).flat().length; 
   const totalPages = Math.ceil(totalProjects / itemsPerPage);
 
   // Create Previous Button
@@ -205,7 +185,7 @@ function renderPaginationControls() {
   prevButton.addEventListener('click', () => {
     if (currentPage > 1) {
       currentPage--;
-      createProjectCards(); // Re-render cards
+      createProjectCards(); 
     }
   });
   paginationDiv.appendChild(prevButton);
@@ -214,10 +194,10 @@ function renderPaginationControls() {
   for (let i = 1; i <= totalPages; i++) {
     const pageButton = document.createElement('button');
     pageButton.textContent = i;
-    pageButton.disabled = i === currentPage; // Highlight the current page
+    pageButton.disabled = i === currentPage; 
     pageButton.addEventListener('click', () => {
       currentPage = i;
-      createProjectCards(); // Re-render cards
+      createProjectCards(); 
     });
     paginationDiv.appendChild(pageButton);
   }
@@ -239,8 +219,6 @@ function renderPaginationControls() {
     templateDiv.parentElement.appendChild(paginationDiv);
   }
 }
-
-
 
 // Checks for Checkbox event and updates filters
 addGlobalEventListener('change', '.usa-checkbox__input', e => {
@@ -402,39 +380,5 @@ document.addEventListener("DOMContentLoaded", () => {
       card.style.display = isVisable ? "" : "none";
     })
   })
-
+  updateHeadingVisibility()
 })
-
-
-// // Search function
-// {projects}
-// searchBox.addEventListener("input", () => {
-//   const projectSections = document.querySelectorAll(".project_section");
-//   console.log("projects inside search: ", projects.DSACMS[3].name)
-//   console.log({projectSections})
-//   const query = searchBox.value.toLowerCase()
-
-
-
-//   // Iterate through each section
-//   projectSections.forEach((section) => {
-//     var queryMatchCheck = false
-//     const projectCards = section.querySelectorAll(".project-card")
-//     console.log({projectCards})
-
-//     // Performs query and hides project card accordingly
-//     projectCards.forEach((card) => {
-//       card.hidden = !(
-//         query == "" || card.textContent.toLowerCase().includes(query)
-//       )
-
-//       if (!card.hidden) {
-//         queryMatchCheck = false
-//       }
-//     })
-
-//     // Hide heading if all cards under section are hidden
-//     const reportHeadings = section.querySelector(".report_heading")
-//     reportHeadings.hidden = !queryMatchCheck
-//   })
-// })
