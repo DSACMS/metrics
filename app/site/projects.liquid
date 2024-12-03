@@ -1,6 +1,7 @@
 ---
 layout: base
 ---
+
 <script type="module" src="{{ "/assets/js/projects.js" | url }}"></script>
 <span style="display:none;" id="metrics">
   {{projects | json }}
@@ -8,7 +9,7 @@ layout: base
 <span style="display:none;" id="org-data">
   {{organizations | json }}
 </span>
-<div class="grid-container">
+<div class="grid-container-projects">
   <div class="description-styling">
     <h2>Projects</h2>
   </div>
@@ -106,69 +107,145 @@ layout: base
       </div>
     </div>
 
+    <div class="outer-search-block">
+      <div class="search-block">
+        <div class="search-and-sort">
 
-    <div class="block">
-      <div class="search-and-sort">
-
-        <!-- <div class="search-container">
-          <label class="usa-label" for="filter-input">Search</label>
-          <div class="usa-input-group width-full maxw-none border-base-light">
-            <div class="usa-input-prefix" aria-hidden="true">
-              <svg aria-hidden="true" role="img" focusable="false" class="usa-icon">
-                <use xlink:href={{  "/assets/img/sprite.svg#search"| url }} ></use>
-              </svg>
+          <!-- <div class="search-container">
+            <label class="usa-label" for="filter-input">Search</label>
+            <div class="usa-input-group width-full maxw-none border-base-light">
+              <div class="usa-input-prefix" aria-hidden="true">
+                <svg aria-hidden="true" role="img" focusable="false" class="usa-icon">
+                  <use xlink:href={{  "/assets/img/sprite.svg#search"| url }} ></use>
+                </svg>
+              </div>
+              <input class="usa-input--lg" id="filter-input" name="filter-input">
             </div>
-            <input class="usa-input--lg" id="filter-input" name="filter-input">
-          </div>
-        </div> -->
+          </div> -->
 
 
-        <section aria-label="Small search component">
-          <form class="usa-search usa-search--small" role="search" id="search-form">
-            <label class="usa-sr-only" for="search-input">Search</label>
-            <input
-              class="usa-input"
-              id="search-input"
-              type="search"
-              name="search-input"
-              placeholder="Search"
-            />
-            <button class="usa-button" type="submit">
-              <img
-                src="/assets/img/usa-icons-bg/search--white.svg"
-                class="usa-search__submit-icon"
-                alt="Search"
+          <section aria-label="Small search component">
+            <form class="usa-search usa-search--small" role="search" id="search-form">
+              <label class="usa-sr-only" for="search-input">Search</label>
+              <input
+                class="usa-input"
+                id="search-input"
+                type="search"
+                name="search-input"
+                placeholder="Search"
               />
-            </button>
-          </form>
-        </section>
+              <button class="usa-button" type="submit">
+                <img
+                  src="/assets/img/usa-icons-bg/search--white.svg"
+                  class="usa-search__submit-icon"
+                  alt="Search"
+                />
+              </button>
+            </form>
+          </section>
+
+          <!-- <section aria-label="Small search component" class="sort-dropdown">
+            <form class="usa-form usa-search usa-search--small" id="sort-selection-form">
+              <select class="usa-select border-base-light" id="sort-selection" name="sort-selection">
+                  <label class="usa-label" for="sort-selection">Sort by</label>
+                  <option valuer="" disabled selected>Sort By</option>
+                  <option value="name">Project Name</option>
+                  <option value="fisma_level">FISMA Compliance Level</option>
+                  <option value="project_type">Project Type</option>
+                  <option value="stargazers_count">Stars</option>
+                  <option value="maturity_model_tier">Maturity Model Tier</option>
+                  <option value="forks_count">Forks</option>
+              </select>
+              <button class="usa-button" type="submit">
+                <img
+                  src="/assets/img/usa-icons-bg/search--white.svg"
+                  class="usa-search__submit-icon"
+                  alt="Search"
+                />
+                  </button>
+            </form>
+          </section> -->
 
 
 
-        <div class="sort-dropdown">
-          <form class="usa-form" id="sort-selection-form">
-            <label class="usa-label" for="sort-selection">Sort by</label>
-            <select class="usa-select border-base-light" id="sort-selection" name="sort-selection">
-              <option value="name">Project Name</option>
-              <option value="fisma_level">FISMA Compliance Level</option>
-              <option value="project_type">Project Type</option>
-              <option value="stargazers_count">Stars</option>
-              <option value="maturity_model_tier">Maturity Model Tier</option>
-              <option value="forks_count">Forks</option>
-            </select>
-          </form>
+          <div class="sort-dropdown">
+            <form class="usa-form" id="sort-selection-form">
+              <label class="usa-label" for="sort-selection">Sort by</label>
+              <select class="usa-select border-base-light" id="sort-selection" name="sort-selection">
+                <option valuer="" disabled selected>Sort By</option>
+                <option value="name">Project Name</option>
+                <option value="fisma_level">FISMA Compliance Level</option>
+                <option value="project_type">Project Type</option>
+                <option value="stargazers_count">Stars</option>
+                <option value="maturity_model_tier">Maturity Model Tier</option>
+                <option value="forks_count">Forks</option>
+              </select>
+            </form>
 
-          <form class="usa-form" id="sort-direction-form">
-            <label class="usa-label" for="sort-direction">Sort Direction</label>
-            <select class="usa-select border-base-light" id="sort-direction" name="sort-direction">
-              <option value="ascending">Ascending</option>
-              <option value="descending">Descending</option>
-            </select>
-          </form>
+            <form class="usa-form" id="sort-direction-form">
+              <label class="usa-label" for="sort-direction">Sort Direction</label>
+              <select class="usa-select border-base-light" id="sort-direction" name="sort-direction">
+                <option valuer="" disabled selected>Sort Direction</option>
+                <option value="ascending">Ascending</option>
+                <option value="descending">Descending</option>
+              </select>
+            </form>
+          </div>
+          
         </div>
-        
+      <div class="padding-left-05" id="filter-tags"></div>
+      <div id="content-container">
+        <div id="pagination-controls" class="usa-pagination">
+          <ul class="project-card-list">
+            {% assign itemsPerPage = 10 %}
+            {% assign totalProjects = projects | size %}
+            {% assign totalPages = totalPages | divided_by: itemsPerPage | ceil %}
+            {% assign currentPage = pagination.pageNumber | default: 1 | minus: 1 %}
+            {% assign startIndex = currentPage | times: itemsPerPage %}
+            {% assign paginatedProjects = projects | slice: startIndex, itemsPerPage %}
+
+            {% for project in paginatedProjects %}
+              {% include "project-card.liquid" %}
+            {% endfor %}
+          </ul>
+        </div>
       </div>
-    <div class="padding-left-05" id="filter-tags"></div>
-    <div id="content-container"></div>
+
+      <!-- <nav aria-label="Pagination" class="usa-pagination">
+        <ul class="usa-pagination__list">
+          {% if currentPage > 0 %}
+            <li class="usa-pagination__item usa-pagination__arrow">
+              <a href="/projects/page/{{ currentPage | minus: 1 }}/" class="usa-pagination__link usa-pagination__previous-page" aria-label="Previous page">
+                <svg class="usa-icon" aria-hidden="true" role="img">
+                  <use xlink:href="/assets/img/sprite.svg#navigate_before"></use>
+                </svg>
+                <span class="usa-pagination__link-text">Previous</span>
+              </a>
+            </li>
+          {% endif %}
+
+          {% for page in (1..totalPages) %}
+            <li class="usa-pagination__item usa-pagination__page-no">
+              {% assign adjustedCurrentPage = currentPage | plus: 1 %}
+              <a href="?page={{ page }}" class="usa-pagination__button {% if page == adjustedCurrentPage %}active{% endif %}" aria-label="Page {{ page }}" aria-current="{{ page }}">
+                {{ page }}
+              </a>
+            </li>
+          {% endfor %}
+
+          {% if currentPage < totalPages | minus: 1 %}
+            <li class="usa-pagination__item usa-pagination__arrow">
+              <a href="/projects/page/{{ currentPage | plus: 1 }}/" class="usa-pagination__link usa-pagination__next-page" aria-label="Next page">
+                <span class="usa-pagination__link-text">Next </span>
+                <svg class="usa-icon" aria-hidden="true" role="img">
+                  <use xlink:href="/assets/img/sprite.svg#navigate_next"></use>
+                </svg>
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+      </nav> -->
+
+    </div>
   </div>
 </div>

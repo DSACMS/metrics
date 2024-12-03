@@ -6,7 +6,9 @@ header {
 }
 
 main {
+  display: flex;
   min-height: 73vh;
+  justify-content: center;
 }
 
 
@@ -259,13 +261,69 @@ a.usa-link:visited {
 }
 
 /* Projects */
+.grid-container-projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+}
+
+.search-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 .dashboard-container {
   display: flex;
 }
 
-.search-and-sort {
+/* .search-and-sort {
   display: flex;
   justify-content: flex-end;
+}
+
+.usa-search--small {
+  height: 100px; 
+}
+
+.sort-dropdown {
+  display: flex;
+} */
+
+.outer-project-template {
+  height: fit-content;
+  width: 60vw;
+}
+
+.container-project-template {
+  display: flex;
+  /* height: fit-content; */
+  /* flex-direction: column;
+  align-items: flex-start;
+  justify-content: center; */
+}
+
+.text-container-project-template {
+  display: flex;
+  flex-direction: column;
+  margin: 2% 1% 0 3%;
+}
+
+.header-project-template {
+  margin: 0 0 2% 0;
+}
+
+.body-project-template {
+  margin: 0;
+}
+
+.footer-project-template {
+  padding-bottom: 0;
+}
+
+.report_heading {
+  margin-left: 5%;
 }
 
 /* .githubinformation {

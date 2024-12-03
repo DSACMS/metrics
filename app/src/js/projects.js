@@ -1,4 +1,4 @@
-import { reportHeadingTemplate, projectCardTemplate } from "./templates";
+import { reportHeadingTemplate, projectCardTemplate, renderProjectCards } from "./templates";
 import DOMPurify from 'dompurify';
 
 // const searchForm = document.getElementById('search-form');
@@ -16,7 +16,8 @@ const projects = setProjectsData(parsedProjectsData)
 const sortDirection = document.getElementById('sort-direction');
 const sortSelection = document.getElementById('sort-selection');
 
-console.log({projects})
+let currentPage = 1;
+const itemsPerPage = 10;
 
 
 // Hide sort direction when sort is not selected
@@ -126,7 +127,22 @@ function sortCards(descending=false) {
 
 function createProjectCards() {
   templateDiv.innerHTML = ''
-  for (const org in projects) {
+
+  const allProjects = Object.keys(projects).flatMap(org => projects[org].map(project => ({ ...project, org })));
+  
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const paginatedProjects = allProjects.slice(startIndex, endIndex);
+
+  const groupedByOrg = paginatedProjects.reduce((acc, curr) => {
+    if(!acc[curr.org]) {
+      acc[curr.org] = []
+    }
+    acc[curr.org].push(curr);
+    return acc
+  }, {});
+
+  for (const org in groupedByOrg) {
     const orgProject = findObject(parsedOrgsData, org);
     const orgHeading = reportHeadingTemplate(orgProject);
     const projectSectionsTemplate = document.createElement('div');
@@ -143,21 +159,88 @@ function createProjectCards() {
     projectCards.className = "usa-card-group flex-align-stretch";
   
     projectSectionsTemplate.appendChild(projectCards);
-  
-    // Create all project cards for each org
-    for (const repoIndex in projects[org]) {
-      const repoData = projects[org][repoIndex];
+
+    // const startIndex = (currentPage - 1) * itemsPerPage;
+    // const endIndex = startIndex + itemsPerPage;
+    // const paginatedProjects = projects[org].slice(startIndex, endIndex);
+
+    groupedByOrg[org].forEach(repoData => {
       const projectCard = document.createElement('li');
       projectCard.className = 'usa-card project-card tablet:grid-col-12';
       projectCard.id = repoData.name;
       projectCard.setAttribute('org-name', repoData.owner);
       projectCard.innerHTML = DOMPurify.sanitize(projectCardTemplate(repoData));
       projectCards.appendChild(projectCard);
-    }
+    })
+  
+    // Create all project cards for each org
+    // for (const repoIndex in projects[org]) {
+    //   const repoData = projects[org][repoIndex];
+    //   const projectCard = document.createElement('li');
+    //   projectCard.className = 'usa-card project-card tablet:grid-col-12';
+    //   projectCard.id = repoData.name;
+    //   projectCard.setAttribute('org-name', repoData.owner);
+    //   projectCard.innerHTML = DOMPurify.sanitize(projectCardTemplate(repoData));
+    //   projectCards.appendChild(projectCard);
+    // }
   }
   updateFilters();
   updateHeadingVisibility();
+  renderPaginationControls()
 }
+
+function renderPaginationControls() {
+  const paginationDiv = document.getElementById('pagination-controls') || document.createElement('div');
+  paginationDiv.id = 'pagination-controls';
+  paginationDiv.innerHTML = ''; // Clear previous controls
+
+  // Determine the total number of pages
+  const totalProjects = Object.values(projects).flat().length; // Combine all projects into one array
+  const totalPages = Math.ceil(totalProjects / itemsPerPage);
+
+  // Create Previous Button
+  const prevButton = document.createElement('button');
+  prevButton.textContent = 'Previous';
+  prevButton.disabled = currentPage === 1;
+  prevButton.addEventListener('click', () => {
+    if (currentPage > 1) {
+      currentPage--;
+      createProjectCards(); // Re-render cards
+    }
+  });
+  paginationDiv.appendChild(prevButton);
+
+  // Create Page Number Indicators
+  for (let i = 1; i <= totalPages; i++) {
+    const pageButton = document.createElement('button');
+    pageButton.textContent = i;
+    pageButton.disabled = i === currentPage; // Highlight the current page
+    pageButton.addEventListener('click', () => {
+      currentPage = i;
+      createProjectCards(); // Re-render cards
+    });
+    paginationDiv.appendChild(pageButton);
+  }
+
+  // Create Next Button
+  const nextButton = document.createElement('button');
+  nextButton.textContent = 'Next';
+  nextButton.disabled = currentPage === totalPages;
+  nextButton.addEventListener('click', () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+      createProjectCards(); // Re-render cards
+    }
+  });
+  paginationDiv.appendChild(nextButton);
+
+  // Append pagination controls to the DOM
+  if (!document.body.contains(paginationDiv)) {
+    templateDiv.parentElement.appendChild(paginationDiv);
+  }
+}
+
+
 
 // Checks for Checkbox event and updates filters
 addGlobalEventListener('change', '.usa-checkbox__input', e => {
@@ -279,9 +362,8 @@ function updateHeadingVisibility() {
 
 // Function to return whether all filter criteria were met
 function checkFilterCriteria(card, selectedFiltersObject) {
-  const cardName = card.querySelector(".text-no-underline").textContent;
-  const currentProject = parsedProjectsData.find((project) => project["name"] === cardName)
-  
+  const cardName = card.querySelector(".usa-card__heading").innerText;
+  const currentProject = parsedProjectsData.find((project) => project.name === cardName)
   const matchesOrganization = selectedFiltersObject.organization.length === 0 || selectedFiltersObject.organization.includes(currentProject.owner);
   const projectMaturityModelTier = "Tier " + currentProject.maturityModelTier;
   const matchesMaturityModelTier = selectedFiltersObject.maturityModelTier.length === 0 || selectedFiltersObject.maturityModelTier.includes(projectMaturityModelTier);
@@ -293,7 +375,7 @@ function checkFilterCriteria(card, selectedFiltersObject) {
 
 }
 
-
+ 
 
 // SEARCH BOX FUNCTIONS
 // Value needs to match project[org][index].name
@@ -304,11 +386,8 @@ function checkFilterCriteria(card, selectedFiltersObject) {
 document.addEventListener("DOMContentLoaded", () => {
   const searchForm = document.getElementById('search-form');
   const searchBox = document.getElementById("search-input");
-  const projectList = document.getElementById("content-container");
-  const projectCards = projectList.getElementsByClassName("project-card");
-  const projectSections = document.querySelectorAll(".project_section");
-  // console.log("org name: ", projectSections[0].childNodes[1].childNodes)
-  // console.log("org THINGS: ", projectSections[0].attributes)
+  const projectList = document.getElementById("content-container")
+  const projectCards = projectList.getElementsByClassName("project-card")
 
   searchForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -317,32 +396,13 @@ document.addEventListener("DOMContentLoaded", () => {
   searchBox.addEventListener("input", () => {
     const query = searchBox.value.toLowerCase();
 
-    projectSections.forEach((section) => {
-      const orgName = section.querySelector(".report_heading h2")
-      console.log({orgName})
-      console.log(orgName.innerHTML)
-
-      let hasVisableProjects = false;
-    
-
     Array.from(projectCards).forEach((card) => {
       const cardName = card.id.toLowerCase()
       const isVisable = query === "" || cardName.includes(query)
       card.style.display = isVisable ? "" : "none";
-
-      if(isVisable) hasVisableProjects = true
     })
-
-
-    // orgName.innerHTML = hasVisableProjects ? orgName.innerHTML : "";
-    if(hasVisableProjects) {
-      console.log({hasVisableProjects})
-      orgName.innerHTML.style.display = "";
-    } else {
-      orgName.innerHTML.style.display = "none";
-    }
   })
-  })
+
 })
 
 
