@@ -13,7 +13,16 @@ const sortSelection = document.getElementById('sort-selection');
 
 let currentPage = 1;
 const itemsPerPage = 10;
-let filteredProjects = null;
+let filteredProjects = [];
+
+document.addEventListener('DOMContentLoaded', () => {
+  if(parsedProjectsData && parsedProjectsData.length > 0) {
+    filteredProjects = [...parsedProjectsData];
+    renderPaginatedProjects();
+  } else {
+    console.error('Parsed projects empty')
+  }
+})
 
 
 // Hide sort direction when sort is not selected
@@ -23,14 +32,14 @@ document.getElementById("sort-direction-form").hidden = true;
 createProjectCards();
 
 // Listens for selection to sort by attribute
-sortSelection.addEventListener('change', e => {
-  sortCards();
+sortSelection.addEventListener('change', () => {
   // Unhide sort direction once sort by is selected
   document.getElementById("sort-direction-form").hidden = false;
+  sortCards();
 })
 
 // Listens for sort direction to sort descending/ascending
-sortDirection.addEventListener('change', e => {
+sortDirection.addEventListener('change', () => {
   const isDescending = sortDirection.value === 'descending' ? true : false; 
   sortCards(isDescending);
 })
@@ -95,33 +104,44 @@ function getProjectsInOrg(array, value) {
   return array.filter((item) => item["owner"] === value);
 }
 
-function sortCards(descending=false) {
+function sortCards(isDescending = false) {
   const selection = sortSelection.value;
 
-  for (const org in projects) {
-    // Selected attribute of type number
-    if 
-      (
-        selection === "maturity_model_tier" || 
-        selection === "stargazers_count" || 
-        selection === 'forks_count'
-      ) {
-        sortByNumberAttribute(projects[org], selection, descending);
-      } 
-    // Selected attribute of type string
-    else if
-      (
-        selection === 'name' || 
-        selection === 'project_type' || 
-        selection === "fisma_level"
-      ) {
-        sortByStringAttribute(projects[org], selection, descending);
-      }
-    createProjectCards();
+  let targetProjects = filteredProjects || parsedOrgsData
+
+  if(["maturity_model_tier", "stargazers_count", "forks_count"].includes(selection)) {
+    sortByNumberAttribute(targetProjects, selection, isDescending);
+  } else { 
+    sortByStringAttribute(targetProjects, selection, isDescending);
   }
+
+  updatePagination()
+  renderPaginatedProjects()
+
+  // for (const org in projects) {
+  //   // Selected attribute of type number
+  //   if 
+  //     (
+  //       selection === "maturity_model_tier" || 
+  //       selection === "stargazers_count" || 
+  //       selection === 'forks_count'
+  //     ) {
+  //       sortByNumberAttribute(projects[org], selection, descending);
+  //     } 
+  //   // Selected attribute of type string
+  //   else if
+  //     (
+  //       selection === 'name' || 
+  //       selection === 'project_type' || 
+  //       selection === "fisma_level"
+  //     ) {
+  //       sortByStringAttribute(projects[org], selection, descending);
+  //     }
+  //   createProjectCards();
+  // }
 }
 
-function createProjectCards() {
+function createProjectCards(filteredProjects) {
   templateDiv.innerHTML = ''
 
   // const allProjects = Object.keys(projects).flatMap(org => projects[org].map(project => ({ ...project, org })));
@@ -293,20 +313,22 @@ function updateFilteredProjects() {
   });
 
   const allProjects = Object.keys(projects).flatMap((org) => projects[org].map((project) => ({...project, org})))
-  const filteredProjects = allProjects.filter((project) => {
+  filteredProjects = allProjects.filter((project) => {
     const matchesOrg = selectedFiltersObject.organization.length === 0 || selectedFiltersObject.organization.includes(project.org);
     const matchesTier = selectedFiltersObject.maturityModelTier.length === 0 || selectedFiltersObject.maturityModelTier.includes("Tier" + project.maturityModelTier);
     const matchesFisma = selectedFiltersObject.fismaLevel.length === 0 || selectedFiltersObject.fismaLevel.includes(project.fismaLevel);
     const matchesType = selectedFiltersObject.projectType.length === 0 || selectedFiltersObject.projectType.includes(project.projectType);
     return  matchesOrg && matchesTier && matchesFisma && matchesType;
   });
-
+ 
+  console.log({filteredProjects})
   updatePagination(filteredProjects);
   renderPaginatedProjects(filteredProjects)
+  sortCards();
 }
 
 function updatePagination(filteredProjects) {
-  const totalProjects = filteredProjects.length;
+  const totalProjects = (filteredProjects || parsedProjectsData).length;
   const totalPages = Math.ceil(totalProjects / itemsPerPage);
 
   currentPage = Math.min(currentPage, totalPages || 1);
@@ -314,6 +336,7 @@ function updatePagination(filteredProjects) {
 }
 
 function renderPaginatedProjects(filteredProjects) {
+  console.log("IN RENDERPAGINATED: ", filteredProjects)
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const paginatedProjects = filteredProjects.slice(startIndex, endIndex);
