@@ -13,6 +13,7 @@ const sortSelection = document.getElementById('sort-selection');
 
 let currentPage = 1;
 const itemsPerPage = 10;
+let filteredProjects = null;
 
 
 // Hide sort direction when sort is not selected
@@ -123,7 +124,12 @@ function sortCards(descending=false) {
 function createProjectCards() {
   templateDiv.innerHTML = ''
 
-  const allProjects = Object.keys(projects).flatMap(org => projects[org].map(project => ({ ...project, org })));
+  // const allProjects = Object.keys(projects).flatMap(org => projects[org].map(project => ({ ...project, org })));
+
+  const allProjects = (filteredProjects || parsedProjectsData).map((project) => ({
+    ...project,
+    org: project.owner
+  }));
   
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
@@ -166,17 +172,17 @@ function createProjectCards() {
   }
   updateFilters();
   updateHeadingVisibility();
-  renderPaginationControls()
+  renderPaginationControls(allProjects.length)
 }
 
-function renderPaginationControls() {
+function renderPaginationControls(totalProjectsCount) {
   const paginationDiv = document.getElementById('pagination-controls') || document.createElement('div');
   paginationDiv.id = 'pagination-controls';
   paginationDiv.innerHTML = ''; 
 
   // Determine the total number of pages
-  const totalProjects = Object.values(projects).flat().length; 
-  const totalPages = Math.ceil(totalProjects / itemsPerPage);
+  // const totalProjects = Object.values(projects).flat().length; 
+  const totalPages = Math.ceil(totalProjectsCount / itemsPerPage);
 
   // Create Previous Button
   const prevButton = document.createElement('button');
@@ -224,6 +230,7 @@ function renderPaginationControls() {
 addGlobalEventListener('change', '.usa-checkbox__input', e => {
   // Can use this e.target.name to update selected filters object
   updateFilters();
+  updateFilteredProjects()
 }, filtersContainer)
 
 // Function to update filters
@@ -259,6 +266,99 @@ function updateFilters() {
       checkFilterCriteria(card, selectedFiltersObject);
     })
   })
+
+  updateHeadingVisibility();
+}
+
+function updateFilteredProjects() {
+
+  const selectedFiltersObject = {
+    organization: [],
+    maturityModelTier: [],
+    fismaLevel: [],
+    projectType: []
+  }
+
+  document.querySelectorAll('input[name="org-filter"]:checked').forEach(checkbox => {
+    selectedFiltersObject.organization.push(checkbox.value);
+  });
+  document.querySelectorAll('input[name="tier-filter"]:checked').forEach(checkbox => {
+    selectedFiltersObject.maturityModelTier.push(checkbox.value);
+  });
+  document.querySelectorAll('input[name="fisma-level-filter"]:checked').forEach(checkbox => {
+    selectedFiltersObject.fismaLevel.push(checkbox.value);
+  });
+  document.querySelectorAll('input[name="project-type-filter"]:checked').forEach(checkbox => {
+    selectedFiltersObject.projectType.push(checkbox.value);
+  });
+
+  const allProjects = Object.keys(projects).flatMap((org) => projects[org].map((project) => ({...project, org})))
+  const filteredProjects = allProjects.filter((project) => {
+    const matchesOrg = selectedFiltersObject.organization.length === 0 || selectedFiltersObject.organization.includes(project.org);
+    const matchesTier = selectedFiltersObject.maturityModelTier.length === 0 || selectedFiltersObject.maturityModelTier.includes("Tier" + project.maturityModelTier);
+    const matchesFisma = selectedFiltersObject.fismaLevel.length === 0 || selectedFiltersObject.fismaLevel.includes(project.fismaLevel);
+    const matchesType = selectedFiltersObject.projectType.length === 0 || selectedFiltersObject.projectType.includes(project.projectType);
+    return  matchesOrg && matchesTier && matchesFisma && matchesType;
+  });
+
+  updatePagination(filteredProjects);
+  renderPaginatedProjects(filteredProjects)
+}
+
+function updatePagination(filteredProjects) {
+  const totalProjects = filteredProjects.length;
+  const totalPages = Math.ceil(totalProjects / itemsPerPage);
+
+  currentPage = Math.min(currentPage, totalPages || 1);
+  renderPaginationControls(totalPages);
+}
+
+function renderPaginatedProjects(filteredProjects) {
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const paginatedProjects = filteredProjects.slice(startIndex, endIndex);
+
+  templateDiv.innerHTML = '';
+
+  const groupedByOrg = paginatedProjects.reduce((acc, curr) => {
+    if(!acc[curr.org]) {
+      acc[curr.org] = []
+    }
+    acc[curr.org].push(curr);
+    return acc
+  }, {});
+
+  for (const org in groupedByOrg) {
+    const orgProject = findObject(parsedOrgsData, org);
+    const orgHeading = reportHeadingTemplate(orgProject);
+    const projectSectionsTemplate = document.createElement('div');
+    projectSectionsTemplate.className = 'project_section';
+    // templateDiv.append(projectSectionsTemplate);
+  
+    // Add report heading for each org
+    const reportHeading = document.createElement('div');
+    reportHeading.className = "report_heading";
+    reportHeading.innerHTML = DOMPurify.sanitize(orgHeading);
+    projectSectionsTemplate.appendChild(reportHeading);
+  
+    const projectCards = document.createElement('ul');
+    projectCards.className = "usa-card-group flex-align-stretch";
+  
+    // projectSectionsTemplate.appendChild(projectCards);
+
+    groupedByOrg[org].forEach(repoData => {
+      const projectCard = document.createElement('li');
+      projectCard.className = 'usa-card project-card tablet:grid-col-12';
+      projectCard.id = repoData.name;
+      projectCard.setAttribute('org-name', repoData.owner);
+      projectCard.innerHTML = DOMPurify.sanitize(projectCardTemplate(repoData));
+      projectCards.appendChild(projectCard);
+    });
+
+    projectSectionsTemplate.appendChild(projectCards);
+    templateDiv.append(projectSectionsTemplate);
+
+  }
 
   updateHeadingVisibility();
 }
@@ -353,14 +453,6 @@ function checkFilterCriteria(card, selectedFiltersObject) {
 
 }
 
- 
-
-// SEARCH BOX FUNCTIONS
-// Value needs to match project[org][index].name
-// search value needs to disapear when typing starts
-// functions needs to return project card matching input value
-// should filter as typing begins
-// event prevent default from form reload
 document.addEventListener("DOMContentLoaded", () => {
   const searchForm = document.getElementById('search-form');
   const searchBox = document.getElementById("search-input");
@@ -374,11 +466,13 @@ document.addEventListener("DOMContentLoaded", () => {
   searchBox.addEventListener("input", () => {
     const query = searchBox.value.toLowerCase();
 
-    Array.from(projectCards).forEach((card) => {
-      const cardName = card.id.toLowerCase()
-      const isVisable = query === "" || cardName.includes(query)
-      card.style.display = isVisable ? "" : "none";
-    })
+    filteredProjects = parsedProjectsData.filter((project) => project.name.toLowerCase().includes(query));
+
+    currentPage = 1
+    createProjectCards()
+
   })
-  updateHeadingVisibility()
+
+
 })
+
