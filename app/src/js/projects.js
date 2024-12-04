@@ -13,16 +13,7 @@ const sortSelection = document.getElementById('sort-selection');
 
 let currentPage = 1;
 const itemsPerPage = 10;
-let filteredProjects = [];
-
-document.addEventListener('DOMContentLoaded', () => {
-  if(parsedProjectsData && parsedProjectsData.length > 0) {
-    filteredProjects = [...parsedProjectsData];
-    renderPaginatedProjects();
-  } else {
-    console.error('Parsed projects empty')
-  }
-})
+let filteredProjects = [...parsedProjectsData];
 
 
 // Hide sort direction when sort is not selected
@@ -116,34 +107,12 @@ function sortCards(isDescending = false) {
   }
 
   updatePagination()
-  renderPaginatedProjects()
-
-  // for (const org in projects) {
-  //   // Selected attribute of type number
-  //   if 
-  //     (
-  //       selection === "maturity_model_tier" || 
-  //       selection === "stargazers_count" || 
-  //       selection === 'forks_count'
-  //     ) {
-  //       sortByNumberAttribute(projects[org], selection, descending);
-  //     } 
-  //   // Selected attribute of type string
-  //   else if
-  //     (
-  //       selection === 'name' || 
-  //       selection === 'project_type' || 
-  //       selection === "fisma_level"
-  //     ) {
-  //       sortByStringAttribute(projects[org], selection, descending);
-  //     }
-  //   createProjectCards();
-  // }
+  renderPaginatedProjects(filteredProjects)
 }
 
-function createProjectCards(filteredProjects) {
+function createProjectCards() {
   templateDiv.innerHTML = ''
-
+  
   // const allProjects = Object.keys(projects).flatMap(org => projects[org].map(project => ({ ...project, org })));
 
   const allProjects = (filteredProjects || parsedProjectsData).map((project) => ({
@@ -321,13 +290,12 @@ function updateFilteredProjects() {
     return  matchesOrg && matchesTier && matchesFisma && matchesType;
   });
  
-  console.log({filteredProjects})
   updatePagination(filteredProjects);
   renderPaginatedProjects(filteredProjects)
   sortCards();
 }
 
-function updatePagination(filteredProjects) {
+function updatePagination() {
   const totalProjects = (filteredProjects || parsedProjectsData).length;
   const totalPages = Math.ceil(totalProjects / itemsPerPage);
 
@@ -335,19 +303,18 @@ function updatePagination(filteredProjects) {
   renderPaginationControls(totalPages);
 }
 
-function renderPaginatedProjects(filteredProjects) {
-  console.log("IN RENDERPAGINATED: ", filteredProjects)
+function renderPaginatedProjects(projects = parsedProjectsData) {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-  const paginatedProjects = filteredProjects.slice(startIndex, endIndex);
+  const paginatedProjects = projects.slice(startIndex, endIndex);
 
   templateDiv.innerHTML = '';
 
   const groupedByOrg = paginatedProjects.reduce((acc, curr) => {
-    if(!acc[curr.org]) {
-      acc[curr.org] = []
+    if(!acc[curr.owner]) {
+      acc[curr.owner] = []
     }
-    acc[curr.org].push(curr);
+    acc[curr.owner].push(curr);
     return acc
   }, {});
 
@@ -356,9 +323,7 @@ function renderPaginatedProjects(filteredProjects) {
     const orgHeading = reportHeadingTemplate(orgProject);
     const projectSectionsTemplate = document.createElement('div');
     projectSectionsTemplate.className = 'project_section';
-    // templateDiv.append(projectSectionsTemplate);
   
-    // Add report heading for each org
     const reportHeading = document.createElement('div');
     reportHeading.className = "report_heading";
     reportHeading.innerHTML = DOMPurify.sanitize(orgHeading);
@@ -366,8 +331,6 @@ function renderPaginatedProjects(filteredProjects) {
   
     const projectCards = document.createElement('ul');
     projectCards.className = "usa-card-group flex-align-stretch";
-  
-    // projectSectionsTemplate.appendChild(projectCards);
 
     groupedByOrg[org].forEach(repoData => {
       const projectCard = document.createElement('li');
@@ -380,9 +343,7 @@ function renderPaginatedProjects(filteredProjects) {
 
     projectSectionsTemplate.appendChild(projectCards);
     templateDiv.append(projectSectionsTemplate);
-
   }
-
   updateHeadingVisibility();
 }
 
@@ -424,12 +385,6 @@ function addFilterButtonGroup(selectedFiltersObject) {
   }, filtersButtonGroup);
 }
 
-// Function for adding a dynamic global event listener
-// Parameters:
-// - type: The type of event to listen for (e.g., 'click', 'mouseover')
-// - selector: The CSS selector to match the target elements (e.g., '.class-name')
-// - callback: The callback function to execute when the event is triggered on a matching element
-// - parent: The element to attach the event listener to; defaults to 'document' for global listening
 function addGlobalEventListener(type, selector, callback, parent = document) {
   parent.addEventListener(type, e => {
     if (e.target.matches(selector)) {
@@ -488,14 +443,9 @@ document.addEventListener("DOMContentLoaded", () => {
   
   searchBox.addEventListener("input", () => {
     const query = searchBox.value.toLowerCase();
-
     filteredProjects = parsedProjectsData.filter((project) => project.name.toLowerCase().includes(query));
-
     currentPage = 1
     createProjectCards()
-
   })
-
-
+  createProjectCards()
 })
-
