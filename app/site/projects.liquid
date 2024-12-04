@@ -4,10 +4,13 @@ layout: base
 
 <script type="module" src="{{ "/assets/js/projects.js" | url }}"></script>
 <span style="display:none;" id="metrics">
-  {{projects | json }}
+  {{ projects | json }}
 </span>
 <span style="display:none;" id="org-data">
-  {{organizations | json }}
+  {{ organizations | json }}
+</span>
+<span style="display:none;" id="site-data">
+  {{ site | json }}
 </span>
 <div class="grid-container-projects">
   <div class="description-styling">
@@ -111,19 +114,6 @@ layout: base
       <div class="search-block">
         <div class="search-and-sort">
 
-          <!-- <div class="search-container">
-            <label class="usa-label" for="filter-input">Search</label>
-            <div class="usa-input-group width-full maxw-none border-base-light">
-              <div class="usa-input-prefix" aria-hidden="true">
-                <svg aria-hidden="true" role="img" focusable="false" class="usa-icon">
-                  <use xlink:href={{  "/assets/img/sprite.svg#search"| url }} ></use>
-                </svg>
-              </div>
-              <input class="usa-input--lg" id="filter-input" name="filter-input">
-            </div>
-          </div> -->
-
-
           <section aria-label="Small search component">
             <form class="usa-search usa-search--small" role="search" id="search-form">
               <label class="usa-sr-only" for="search-input">Search</label>
@@ -136,7 +126,7 @@ layout: base
               />
               <button class="usa-button" type="submit">
                 <img
-                  src="/assets/img/usa-icons-bg/search--white.svg"
+                  src="{{ site.baseurl }}/assets/img/usa-icons-bg/search--white.svg"
                   class="usa-search__submit-icon"
                   alt="Search"
                 />

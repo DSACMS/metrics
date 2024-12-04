@@ -1,9 +1,10 @@
-import { reportHeadingTemplate, projectCardTemplate, renderProjectCards } from "./templates";
+import { reportHeadingTemplate, projectCardTemplate } from "./templates";
 import DOMPurify from 'dompurify';
 
 const projectsData = document.getElementById('metrics').textContent;
 const orgsData = document.getElementById('org-data').textContent;
 const parsedOrgsData = JSON.parse(orgsData);
+const siteData = JSON.parse(document.getElementById('site-data').textContent);
 const parsedProjectsData = JSON.parse(projectsData);
 const filtersContainer = document.querySelector('.filters-container');
 const templateDiv = document.getElementById('content-container');
@@ -112,8 +113,6 @@ function sortCards(isDescending = false) {
 
 function createProjectCards() {
   templateDiv.innerHTML = ''
-  
-  // const allProjects = Object.keys(projects).flatMap(org => projects[org].map(project => ({ ...project, org })));
 
   const allProjects = (filteredProjects || parsedProjectsData).map((project) => ({
     ...project,
@@ -151,6 +150,7 @@ function createProjectCards() {
     projectSectionsTemplate.appendChild(projectCards);
 
     groupedByOrg[org].forEach(repoData => {
+      repoData.url = siteData.baseurl;
       const projectCard = document.createElement('li');
       projectCard.className = 'usa-card project-card tablet:grid-col-12';
       projectCard.id = repoData.name;

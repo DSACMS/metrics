@@ -12,12 +12,11 @@ export const reportHeadingTemplate = function(data) {
 }
 
 export function projectCardTemplate(data) {  
-    const baseUrl = window.location.hostname === "dsacms.github.io" ? '/metrics' : ""
     const description = data.description !== null ? data.description : ""
     return `
         <div class="usa-card-outer outer-project-template">
             <div class="usa-card-middle">
-                <a href="${ baseUrl }/${ data.owner }/${ data.name }/" class="href-home">
+                <a href="${ data.url }/${ data.owner }/${ data.name }/" class="href-home">
                     <div class="usa-card__container container-project-template">
                         <div class="text-container-project-template">
                             <div class="usa-card__header header-project-template">
