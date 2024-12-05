@@ -10,7 +10,7 @@ export function createNavigation() {
             const isOpen = menu.classList.toggle("is-hidden");
 
             menuIcon.setAttribute(
-                "xlink:href",
+                "href",
                 isOpen ? "/assets/img/sprite.svg#close" : "/assets/img/sprite.svg#menu"
             );
         });
@@ -18,7 +18,7 @@ export function createNavigation() {
         closeButton.addEventListener("click", () => {
             menu.classList.remove("is-hidden");
 
-            menuIcon.setAttribute("xlink:href", "/assets/img/sprite.svg#menu");
+            menuIcon.setAttribute("href", "/assets/img/sprite.svg#menu");
         });
     } else {
         console.error("One or more elements is not found")

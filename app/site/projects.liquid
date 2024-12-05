@@ -186,54 +186,56 @@ layout: base
       <div class="padding-left-05" id="filter-tags"></div>
       <div id="content-container">
         <div id="pagination-controls" class="usa-pagination">
-          <ul class="project-card-list">
-            {% assign itemsPerPage = 10 %}
+          
+          {% assign itemsPerPage = 10 %}
             {% assign totalProjects = projects | size %}
             {% assign totalPages = totalPages | divided_by: itemsPerPage | ceil %}
             {% assign currentPage = pagination.pageNumber | default: 1 | minus: 1 %}
             {% assign startIndex = currentPage | times: itemsPerPage %}
             {% assign paginatedProjects = projects | slice: startIndex, itemsPerPage %}
 
-            {% for project in paginatedProjects %}
-              {% include "project-card.liquid" %}
-            {% endfor %}
-          </ul>
+            <ul class=project-card-list">
+              {% for project in paginatedProjects %}
+                {% include "project-card.liquid" %}
+              {% endfor %}
+            </ul>
+
+            <nav aria-label="Pagination" class="usa-pagination">
+              <ul class="usa-pagination__list">
+                {% if currentPage > 0 %}
+                  <li class="usa-pagination__item usa-pagination__arrow">
+                    <a href="/projects/page/{{ currentPage | minus: 1 }}/" class="usa-pagination__link usa-pagination__previous-page" aria-label="Previous page">
+                      <svg class="usa-icon" aria-hidden="true" role="img">
+                        <use xlink:href="{{ site.baseurl }}/assets/img/sprite.svg#navigate_before"></use>
+                      </svg>
+                      <span class="usa-pagination__link-text">Previous</span>
+                    </a>
+                  </li>
+                {% endif %}
+
+                {% for page in (1..totalPages) %}
+                  <li class="usa-pagination__item usa-pagination__page-no">
+                    {% assign adjustedCurrentPage = currentPage | plus: 1 %}
+                    <a href="?page={{ page }}" class="usa-pagination__button usa-currect {% if page == adjustedCurrentPage %}active{% endif %}" aria-label="Page {{ page }}" aria-current="{{ page }}">
+                      {{ page }}
+                    </a>
+                  </li>
+                {% endfor %}
+
+                {% if currentPage < totalPages | minus: 1 %}
+                  <li class="usa-pagination__item usa-pagination__arrow">
+                    <a href="/projects/page/{{ currentPage | plus: 1 }}/" class="usa-pagination__link usa-pagination__next-page" aria-label="Next page">
+                      <span class="usa-pagination__link-text">Next</span>
+                      <svg class="usa-icon" aria-hidden="true" role="img">
+                        <use href="{{ site.baseurl }}/assets/img/sprite.svg#navigate_next"></use>
+                      </svg>
+                    </a>
+                  </li>
+                {% endif %}
+              </ul>
+            </nav>
+        </div>
       </div>
-
-      <!-- <nav aria-label="Pagination" class="usa-pagination">
-        <ul class="usa-pagination__list">
-          {% if currentPage > 0 %}
-            <li class="usa-pagination__item usa-pagination__arrow">
-              <a href="/projects/page/{{ currentPage | minus: 1 }}/" class="usa-pagination__link usa-pagination__previous-page" aria-label="Previous page">
-                <svg class="usa-icon" aria-hidden="true" role="img">
-                  <use xlink:href="/assets/img/sprite.svg#navigate_before"></use>
-                </svg>
-                <span class="usa-pagination__link-text">Previous</span>
-              </a>
-            </li>
-          {% endif %}
-
-          {% for page in (1..totalPages) %}
-            <li class="usa-pagination__item usa-pagination__page-no">
-              {% assign adjustedCurrentPage = currentPage | plus: 1 %}
-              <a href="?page={{ page }}" class="usa-pagination__button {% if page == adjustedCurrentPage %}active{% endif %}" aria-label="Page {{ page }}" aria-current="{{ page }}">
-                {{ page }}
-              </a>
-            </li>
-          {% endfor %}
-
-          {% if currentPage < totalPages | minus: 1 %}
-            <li class="usa-pagination__item usa-pagination__arrow">
-              <a href="/projects/page/{{ currentPage | plus: 1 }}/" class="usa-pagination__link usa-pagination__next-page" aria-label="Next page">
-                <span class="usa-pagination__link-text">Next </span>
-                <svg class="usa-icon" aria-hidden="true" role="img">
-                  <use xlink:href="/assets/img/sprite.svg#navigate_next"></use>
-                </svg>
-              </a>
-            </li>
-          {% endif %}
-        </ul>
-      </nav> -->
 
     </div>
   </div>
