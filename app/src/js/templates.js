@@ -17,7 +17,7 @@ export function projectCardTemplate(data) {
     return `
         <div class="usa-card-outer outer-project-template">
             <div class="usa-card-middle">
-                <a href="${ data.url }/${ data.owner }/${ data.name }/" class="href-home">
+                <a href="/metrics/${ data.owner }/${ data.name }/" class="href-home">
                     <div class="usa-card__container container-project-template">
                         <div class="text-container-project-template">
                             <div class="usa-card__header header-project-template">
