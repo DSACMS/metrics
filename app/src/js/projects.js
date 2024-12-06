@@ -149,7 +149,7 @@ function createProjectCards() {
     projectSectionsTemplate.appendChild(projectCards);
 
     groupedByOrg[org].forEach(repoData => {
-      repoData.url = siteData.baseurl;
+      repoData.baseurl = siteData.baseurl;
       const projectCard = document.createElement('li');
       projectCard.className = 'usa-card project-card tablet:grid-col-12';
       projectCard.id = repoData.name;
@@ -388,6 +388,7 @@ function renderPaginatedProjects(projects = parsedProjectsData) {
     projectCards.className = "usa-card-group flex-align-stretch";
 
     groupedByOrg[org].forEach(repoData => {
+      repoData.baseurl = siteData.baseurl;
       const projectCard = document.createElement('li');
       projectCard.className = 'usa-card project-card tablet:grid-col-12';
       projectCard.id = repoData.name;
