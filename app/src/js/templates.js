@@ -13,8 +13,7 @@ export const reportHeadingTemplate = function(data) {
 
 
 export function projectCardTemplate(data) {  
-    const baseUrl = window.location.hostname.includes("dsacms.github.io") || window.location.hostname === "localhost" ? '/metrics' : "";
-    const projectUrl = `${baseUrl}/${ data.owner }/${ data.name }/`;
+    const projectUrl = `${data.baseurl}/${ data.owner }/${ data.name }/`;
     const description = data.description !== null ? data.description : "";
 
     return `
