@@ -25,11 +25,11 @@ layout: base
   <div class="dashboard-container">
     <div class="filters-container">
       {% comment %} filter by organization {% endcomment %}
-      <div class="usa-accordion border-base-lighter border-2px">
-        <div class="usa-accordion__heading">
-          <button class="usa-accordion__button font-heading-md text-base-darker" aria-expanded="true" aria-controls="organization-content" id="organization">Organization</button>
+      <div class="usa-accordion">
+        <div class="usa-accordion__heading filter-heading">
+          <button class="usa-accordion__button filter-button" aria-expanded="true" aria-controls="organization-content" id="organization">Organization</button>
         </div>
-        <div id="organization-content" class="usa-accordion__content usa-prose border-top-1px border-base-lighter" hidden>
+        <div id="organization-content" class="usa-accordion__content filter-content usa-prose" hidden>
           <form class="usa-form">
             <fieldset class="usa-fieldset" aria-labelledby="organization-filter">
               <legend class="usa-sr-only" aria-labelledby="organization-filtering"></legend>
@@ -46,11 +46,11 @@ layout: base
         </div>
       </div>
       {% comment %} filter by maturity model tier {% endcomment %}
-      <div class="usa-accordion border-base-lighter border-2px">
-        <div class="usa-accordion__heading">
-          <button class="usa-accordion__button font-heading-md text-base-darker" aria-expanded="false" aria-controls="tier-content" id="mauturity-model-tier">Maturity Model Tier</button>
+      <div class="usa-accordion">
+        <div class="usa-accordion__heading filter-heading">
+          <button class="usa-accordion__button filter-button" aria-expanded="false" aria-controls="tier-content" id="mauturity-model-tier">Maturity Model Tier</button>
         </div>
-        <div id="tier-content" class="usa-accordion__content usa-prose border-top-1px border-base-lighter" hidden>
+        <div id="tier-content" class="usa-accordion__content filter-content usa-prose" hidden>
           <form class="usa-form">
             <fieldset class="usa-fieldset" aria-labelledby="tier-filter">
               <legend class="usa-sr-only" aria-labelledby="tier-filtering"></legend>
@@ -67,11 +67,11 @@ layout: base
         </div>
       </div>
       {% comment %} filter by fisma compliance level {% endcomment %}
-      <div class="usa-accordion border-base-lighter border-2px">
-        <div class="usa-accordion__heading">
-          <button class="usa-accordion__button font-heading-md text-base-darker" aria-expanded="false" aria-controls="fisma-level-content" id="fisma-level">FISMA Compliance Level</button>
+      <div class="usa-accordion">
+        <div class="usa-accordion__heading filter-heading">
+          <button class="usa-accordion__button filter-button" aria-expanded="false" aria-controls="fisma-level-content" id="fisma-level">FISMA Compliance Level</button>
         </div>
-        <div id="fisma-level-content" class="usa-accordion__content usa-prose border-top-1px border-base-lighter" hidden>
+        <div id="fisma-level-content" class="usa-accordion__content filter-content usa-prose" hidden>
           <form class="usa-form">
             <fieldset class="usa-fieldset" aria-labelledby="fisma-level-filter">
               <legend class="usa-sr-only" aria-labelledby="fisma-level-filtering"></legend>
@@ -88,11 +88,11 @@ layout: base
         </div>
       </div>
       {% comment %} filter by project type {% endcomment %}
-      <div class="usa-accordion border-base-lighter border-2px">
-        <div class="usa-accordion__heading">
-          <button class="usa-accordion__button font-heading-md text-base-darker" aria-expanded="false" aria-controls="project-type-content" id="project-type">Project Type</button>
+      <div class="usa-accordion">
+        <div class="usa-accordion__heading filter-heading">
+          <button class="usa-accordion__button filter-button" aria-expanded="false" aria-controls="project-type-content" id="project-type">Project Type</button>
         </div>
-        <div id="project-type-content" class="usa-accordion__content usa-prose border-top-1px border-base-lighter" hidden>
+        <div id="project-type-content" class="usa-accordion__content filter-content usa-prose" hidden>
           <form class="usa-form">
             <fieldset class="usa-fieldset" aria-labelledby="project-type-filter">
               <legend class="usa-sr-only" aria-labelledby="project-type-filtering"></legend>
@@ -186,56 +186,54 @@ layout: base
       <div class="padding-left-05" id="filter-tags"></div>
       <div id="content-container">
         <div id="pagination-controls" class="usa-pagination">
-          
-          {% assign itemsPerPage = 10 %}
+          <ul class="project-card-list">
+            {% assign itemsPerPage = 10 %}
             {% assign totalProjects = projects | size %}
             {% assign totalPages = totalPages | divided_by: itemsPerPage | ceil %}
             {% assign currentPage = pagination.pageNumber | default: 1 | minus: 1 %}
             {% assign startIndex = currentPage | times: itemsPerPage %}
             {% assign paginatedProjects = projects | slice: startIndex, itemsPerPage %}
 
-            <ul class=project-card-list">
-              {% for project in paginatedProjects %}
-                {% include "project-card.liquid" %}
-              {% endfor %}
-            </ul>
-
-            <nav aria-label="Pagination" class="usa-pagination">
-              <ul class="usa-pagination__list">
-                {% if currentPage > 0 %}
-                  <li class="usa-pagination__item usa-pagination__arrow">
-                    <a href="/projects/page/{{ currentPage | minus: 1 }}/" class="usa-pagination__link usa-pagination__previous-page" aria-label="Previous page">
-                      <svg class="usa-icon" aria-hidden="true" role="img">
-                        <use xlink:href="{{ site.baseurl }}/assets/img/sprite.svg#navigate_before"></use>
-                      </svg>
-                      <span class="usa-pagination__link-text">Previous</span>
-                    </a>
-                  </li>
-                {% endif %}
-
-                {% for page in (1..totalPages) %}
-                  <li class="usa-pagination__item usa-pagination__page-no">
-                    {% assign adjustedCurrentPage = currentPage | plus: 1 %}
-                    <a href="?page={{ page }}" class="usa-pagination__button usa-currect {% if page == adjustedCurrentPage %}active{% endif %}" aria-label="Page {{ page }}" aria-current="{{ page }}">
-                      {{ page }}
-                    </a>
-                  </li>
-                {% endfor %}
-
-                {% if currentPage < totalPages | minus: 1 %}
-                  <li class="usa-pagination__item usa-pagination__arrow">
-                    <a href="/projects/page/{{ currentPage | plus: 1 }}/" class="usa-pagination__link usa-pagination__next-page" aria-label="Next page">
-                      <span class="usa-pagination__link-text">Next</span>
-                      <svg class="usa-icon" aria-hidden="true" role="img">
-                        <use href="{{ site.baseurl }}/assets/img/sprite.svg#navigate_next"></use>
-                      </svg>
-                    </a>
-                  </li>
-                {% endif %}
-              </ul>
-            </nav>
-        </div>
+            {% for project in paginatedProjects %}
+              {% include "project-card.liquid" %}
+            {% endfor %}
+          </ul>
       </div>
+
+      <!-- <nav aria-label="Pagination" class="usa-pagination">
+        <ul class="usa-pagination__list">
+          {% if currentPage > 0 %}
+            <li class="usa-pagination__item usa-pagination__arrow">
+              <a href="/projects/page/{{ currentPage | minus: 1 }}/" class="usa-pagination__link usa-pagination__previous-page" aria-label="Previous page">
+                <svg class="usa-icon" aria-hidden="true" role="img">
+                  <use xlink:href="/assets/img/sprite.svg#navigate_before"></use>
+                </svg>
+                <span class="usa-pagination__link-text">Previous</span>
+              </a>
+            </li>
+          {% endif %}
+
+          {% for page in (1..totalPages) %}
+            <li class="usa-pagination__item usa-pagination__page-no">
+              {% assign adjustedCurrentPage = currentPage | plus: 1 %}
+              <a href="?page={{ page }}" class="usa-pagination__button {% if page == adjustedCurrentPage %}active{% endif %}" aria-label="Page {{ page }}" aria-current="{{ page }}">
+                {{ page }}
+              </a>
+            </li>
+          {% endfor %}
+
+          {% if currentPage < totalPages | minus: 1 %}
+            <li class="usa-pagination__item usa-pagination__arrow">
+              <a href="/projects/page/{{ currentPage | plus: 1 }}/" class="usa-pagination__link usa-pagination__next-page" aria-label="Next page">
+                <span class="usa-pagination__link-text">Next </span>
+                <svg class="usa-icon" aria-hidden="true" role="img">
+                  <use xlink:href="/assets/img/sprite.svg#navigate_next"></use>
+                </svg>
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+      </nav> -->
 
     </div>
   </div>

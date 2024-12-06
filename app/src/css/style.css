@@ -326,6 +326,53 @@ a.usa-link:visited {
   margin-left: 5%;
 }
 
+.filters-container {
+  margin-right: 5%;
+}
+
+.filter-heading {
+  border: none;
+}
+
+.filter-button {
+  display: flex;
+  background-color: #E0EAF8;
+  border-radius: 50px 50px 0 0;
+  border: none;
+  font-weight: 600; 
+  justify-content: center;
+  min-width: 215px;
+  padding: 7% 0 7% 0;
+}
+
+.filter-button:hover {
+  background-color: #ecdd90;
+}
+
+.filter-button[aria-expanded="false"] {
+  background-color: #E0EAF8;
+  border-radius: 50px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  min-width: 215px;
+}
+
+.filter-button[aria-expanded="false"]:focus {
+  outline: none;
+}
+
+.filter-button[aria-expanded="false"]:hover {
+  background-color: #ecdd90;
+}
+
+.filter-button:not([disabled]):focus {
+  outline: none;
+}
+
+.filter-content {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+
 /* .githubinformation {
   display: flex;
   flex-direction: row;
