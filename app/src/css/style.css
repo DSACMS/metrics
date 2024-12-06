@@ -1,43 +1,362 @@
 @import "@uswds/uswds/dist/css/uswds.css";
 
-.title {
+header {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
 }
+
+main {
+  display: flex;
+  min-height: 73vh;
+  justify-content: center;
+}
+
+
+/* Header */
+.usa-header {
+  align-items: center;
+  display: flex;
+}
+
+.usa-navigation-container {
+  display: flex;
+  width: 90%;
+}
+
+.usa-nav-bar {
+  width: 90%;
+}
+
+.title {
+  align-items: center;
+  display: flex;
+}
+
+h1 {
+  color: #093f8e;
+  font-size: 1.9em;
+  margin: 3% 2% 0 2%;
+}
+
 .logo {
   width: 120px;
   height: 40px;
   margin-right: 10px;
 }
-.github-information {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+
+.usa-logo {
+  font-size: 1.5em;
+  margin: 1% 0 1% 0;
 }
-.stat-container {
+
+.usa-nav__primary-item {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #fff;
+}
+
+.usa-nav {
+  opacity: 1;
+}
+
+.usa-nav.is-hidden {
+  opacity: 1;
+}
+
+.usa-icon {
+  fill: #000;
+}
+
+
+/* Home page main */
+.grid-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+.home-page-description {
+  margin: 3%;
+  width: 90%;
+}
+
+.description-styling {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2em;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+/* Cards */
+.usa-card-group-home {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin-left: -80px;
+}
+
+.usa-card-outer {
+  display: flex;
+  background-color: #043884;
+  border: none;
+  border-radius: 70px;
+  height: 20vh;
+  width: 25vw;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.usa-card-middle {
+  display: flex;
+  background-color: #5C85C1;
+  border: none;
+  border-radius: 70px;
+  height: 100%;
+  margin-left: -5px;
+  width: 98%;
+}
+
+.usa-card-middle:hover {
+  background-color: #E7C000;
+}
+
+.usa-card-outer:active {
+  box-shadow: none;
+}
+
+.href-home {
+  border: none;
+  text-decoration:none;
+  width: 98%;
+}
+
+.href-home:focus {
+  outline:none;
+}
+
+.usa-card__container {
+  align-items: center;
+  background-color: #E0EAF8;
+  border: none;
+  border-radius: 70px;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  margin: 0;
+  margin-left: -5px;
+  padding: 0;
+  width: 100%;
+}
+
+.home-icon-container {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  margin-left: 6%;
+  width: 100px;
+}
+
+.usa-card__header {
+  margin: 15% 1% 10% 5%;
+  padding: 0;
+}
+
+.usa-card__body {
+  padding: 0;
+}
+
+.usa-card-heading-home {
+  font-size: 1.2em;
+}
+
+/* Footer */
+.usa-identifier {
+  display: flex;
+  background-color: #E0EAF8;
+  color: #000;
+}
+
+.usa-identifier__logo-img {
+  filter: invert(1);
+}
+
+.usa-identifier__identity-domain {
+  color: #000;
+}
+
+.usa-identifier__identity-disclaimer a:visited {
+  color: #494949;
+}
+
+.usa-identifier__required-link,
+.usa-identifier__required-link.usa-link{
+  color:#000;
+  display:inline-block;
+}
+.usa-identifier__required-link:visited,
+.usa-identifier__required-link.usa-link:visited{
+  color:#494949;
+}
+
+a.usa-link {
+  color: #000;
+}
+
+a.usa-link:visited {
+  color: #494949;
+}
+
+/* Orgs */
+.usa-card-group-orgs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type:none;
+  justify-content: center;
+}
+
+.usa-card {
+  display: flex;
+  justify-content: center;
+  /* margin: 0 1% 0 1%; */
+  margin: 2%;
+}
+
+.usa-card__media {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  margin-left: 6%;
+  width: 100px;
+}
+
+.usa-card__img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.usa-card__header-orgs {
+  margin: 15% 1% 10% 5%;
+  padding: 0;
+}
+
+.usa-card__heading-orgs {
+  font-size: 1.2em;
+}
+
+.usa-card__footer {
+  padding-bottom: 1.5rem;
+  padding-left: 0;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+/* Projects */
+.grid-container-projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+}
+
+.search-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.dashboard-container {
+  display: flex;
+}
+
+/* .search-and-sort {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.usa-search--small {
+  height: 100px; 
+}
+
+.sort-dropdown {
+  display: flex;
+} */
+
+.outer-project-template {
+  height: fit-content;
+  width: 60vw;
+}
+
+.container-project-template {
+  display: flex;
+  /* height: fit-content; */
+  /* flex-direction: column;
+  align-items: flex-start;
+  justify-content: center; */
+}
+
+.text-container-project-template {
+  display: flex;
+  flex-direction: column;
+  margin: 2% 1% 0 3%;
+}
+
+.header-project-template {
+  margin: 0 0 2% 0;
+}
+
+.body-project-template {
+  margin: 0;
+}
+
+.footer-project-template {
+  padding-bottom: 0;
+}
+
+.report_heading {
+  margin-left: 5%;
+}
+
+/* .githubinformation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+} */
+
+/* .stat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
 /* This is so that augur visualizations have the buttons cropped out. */
-.firstResponsePRCrop img {
+/* .firstResponsePRCrop img {
   width: 900px;
   height: 550px;
   object-fit: cover;
-}
+} */
 
-.main-tag {
+/* .main-tag {
   background-color: #1a4480;
   padding: 0.5rem;
   font-weight: bolder;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.25rem; /* Adjust the gap as needed */
+  gap: 0.25rem; Adjust the gap as needed
   border-radius: 0.25rem;
-}
+} */
 
-.tools-tag {
+/* .tools-tag {
   background-color: green;
 }
 
@@ -59,28 +378,28 @@
 
 .libraries-tag {
   background-color: #D72D79;
-}
+} */
 
-.standards-tag {
+/* .standards-tag {
   background-color: #FFBE2F;
 }
 
 .icon-tag {
   padding: 0.35rem;
-}
+} */
 
-.primary-tag-group {
-  /* padding-top-1 */
+/* .primary-tag-group {
+  padding-top-1
   padding-top: 0.5rem;
-}
+} */
 
-.secondary-tag-group {
-  /* padding-y-3 */
+/* .secondary-tag-group {
+  padding-y-3
   padding-top:1.5rem;
   padding-bottom:1.5rem;
-}
+} */
 
-.projects-container {
+/* .projects-container {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -90,16 +409,16 @@
 .block {
   display: block;
   width: 100%;
-}
+} */
 
-.dashboard-container {
+/* .dashboard-container {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  /* padding-top: 5rem; */
-}
+  padding-top: 5rem;
+} */
 
-.filters-container {
+/* .filters-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -118,9 +437,9 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 3rem;
-}
+} */
 
-.sort-dropdown {
+/* .sort-dropdown {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
@@ -128,9 +447,9 @@
   gap: 0.5rem;
   margin-bottom: 1rem;
 
-}
+} */
 
-@media screen and (max-width: 1080px) {
+/* @media screen and (max-width: 1080px) {
   .dashboard-container {
     flex-direction: column;
   }
@@ -149,4 +468,4 @@
   .sort-dropdown {
     text-align: left;
   }
-}
+} */

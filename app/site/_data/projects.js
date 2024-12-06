@@ -3,10 +3,10 @@ const path = require("path");
 
 module.exports = function () {
   const dataDirectory = path.join(__dirname);
-  var projects = [];
+  const projects = [];
 
   // Read the list of organization directories
-  var orgDirectories = fs.readdirSync(dataDirectory);
+  const orgDirectories = fs.readdirSync(dataDirectory);
 
   // Iterate through organization directories
   orgDirectories.forEach((orgDirectory) => {
@@ -37,7 +37,8 @@ module.exports = function () {
         }
       });
     }
+    
   });
-
-  return projects;
+  
+  return projects
 };
