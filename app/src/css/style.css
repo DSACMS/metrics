@@ -425,36 +425,77 @@ a.usa-link:visited {
   padding: 0 5% 0 5%;
 }
 
-
-/* .githubinformation {
+.report_heading-title {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-} */
+}
 
-/* .stat-container {
+/* ORG REPORTS */
+.grid-container-org-report {
+  display: flex;
+  width: 80vw;
+  flex-direction: column;
+  align-items: center;
+}
+
+.report_heading {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+}
+
+.report-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.github-information {
+  display: flex;
+  justify-content: center;
+}
+
+.stat-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-} */
+  margin: 20%;
+}
+
+.repo-stats {
+  display: flex;
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+
+.post {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /* This is so that augur visualizations have the buttons cropped out. */
-/* .firstResponsePRCrop img {
+.firstResponsePRCrop img {
   width: 900px;
   height: 550px;
   object-fit: cover;
-} */
+}
 
-/* .main-tag {
+.main-tag {
   background-color: #1a4480;
   padding: 0.5rem;
   font-weight: bolder;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.25rem; Adjust the gap as needed
+  gap: 0.25rem; /*Adjust the gap as needed */
   border-radius: 0.25rem;
-} */
+}
+
+.graph-container {
+  width: 100%;
+}
 
 /* .tools-tag {
   background-color: green;
