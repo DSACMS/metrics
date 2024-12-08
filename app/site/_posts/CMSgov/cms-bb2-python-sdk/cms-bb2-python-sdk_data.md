@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for cms-bb2-python-sdk | REPORT-2024-11-24
+title: Open Source at CMS Metrics Report for cms-bb2-python-sdk | REPORT-2024-12-08
 permalink: /CMSgov/cms-bb2-python-sdk/
 
 org: CMSgov
 repo: cms-bb2-python-sdk
-reportID: REPORT-2024-11-24
-date_stampThisWeek: 2024-11-24
-date_stampLastWeek: 2024-11-24
+reportID: REPORT-2024-12-08
+date_stampThisWeek: 2024-12-08
+date_stampLastWeek: 2024-12-08
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -88,9 +88,9 @@ date_stampLastWeek: 2024-11-24
       <tr>
         <th scope="row">Watchers</th>
         <td>13</td>
-        <td>12</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >8%</td>
+        <td>13</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>

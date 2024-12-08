@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for cql-antlr-parser | REPORT-2024-11-24
+title: Open Source at CMS Metrics Report for cql-antlr-parser | REPORT-2024-12-08
 permalink: /measureauthoringtool/cql-antlr-parser/
 
 org: measureauthoringtool
 repo: cql-antlr-parser
-reportID: REPORT-2024-11-24
-date_stampThisWeek: 2024-11-24
-date_stampLastWeek: 2024-11-24
+reportID: REPORT-2024-12-08
+date_stampThisWeek: 2024-12-08
+date_stampLastWeek: 2024-12-08
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-11-24
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>157</td>
         <td>145</td>
-        <td>145</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >12</td>
+        <td style="color: #45c527" >7.9%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -53,23 +53,23 @@ date_stampLastWeek: 2024-11-24
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>14</td>
-        <td>14</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td>15</td>
+        <td style="color: #45c527" >-1</td>
+        <td style="color: #45c527" >6.9%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>65</td>
         <td>60</td>
-        <td>60</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >5</td>
+        <td style="color: #45c527" >8%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
-        <td>140</td>
-        <td>140</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td>142</td>
+        <td>141</td>
+        <td style="" >1</td>
+        <td style="" >0.71%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

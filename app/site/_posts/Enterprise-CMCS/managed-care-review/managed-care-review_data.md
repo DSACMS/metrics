@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for managed-care-review | REPORT-2024-11-24
+title: Open Source at CMS Metrics Report for managed-care-review | REPORT-2024-12-08
 permalink: /Enterprise-CMCS/managed-care-review/
 
 org: Enterprise-CMCS
 repo: managed-care-review
-reportID: REPORT-2024-11-24
-date_stampThisWeek: 2024-11-24
-date_stampLastWeek: 2024-11-24
+reportID: REPORT-2024-12-08
+date_stampThisWeek: 2024-12-08
+date_stampLastWeek: 2024-12-08
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-11-24
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>2205</td>
-        <td>2182</td>
-        <td style="color: #45c527" >23</td>
-        <td style="color: #45c527" >1%</td>
+        <td>2222</td>
+        <td>2209</td>
+        <td style="color: #45c527" >13</td>
+        <td style="color: #45c527" >0.59%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2024-11-24
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>6</td>
-        <td>9</td>
-        <td style="color: #45c527" >-3</td>
-        <td style="color: #45c527" >40%</td>
+        <td>8</td>
+        <td>8</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>2173</td>
-        <td>2150</td>
-        <td style="color: #45c527" >23</td>
-        <td style="color: #45c527" >1.1%</td>
+        <td>2190</td>
+        <td>2177</td>
+        <td style="color: #45c527" >13</td>
+        <td style="color: #45c527" >0.6%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
-        <td>782</td>
-        <td>779</td>
-        <td style="" >3</td>
-        <td style="" >0.38%</td>
+        <td>790</td>
+        <td>784</td>
+        <td style="" >6</td>
+        <td style="" >0.76%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -88,9 +88,9 @@ date_stampLastWeek: 2024-11-24
       <tr>
         <th scope="row">Watchers</th>
         <td>14</td>
-        <td>13</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >7.4%</td>
+        <td>14</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>

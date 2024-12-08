@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for fhir-typescript-models | REPORT-2024-11-24
+title: Open Source at CMS Metrics Report for fhir-typescript-models | REPORT-2024-12-08
 permalink: /measureauthoringtool/fhir-typescript-models/
 
 org: measureauthoringtool
 repo: fhir-typescript-models
-reportID: REPORT-2024-11-24
-date_stampThisWeek: 2024-11-24
-date_stampLastWeek: 2024-11-24
+reportID: REPORT-2024-12-08
+date_stampThisWeek: 2024-12-08
+date_stampLastWeek: 2024-12-08
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -67,9 +67,9 @@ date_stampLastWeek: 2024-11-24
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>187</td>
-        <td>186</td>
-        <td style="" >1</td>
-        <td style="" >0.54%</td>
+        <td>187</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
