@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for price-transparency-guide | REPORT-2024-11-24
+title: Open Source at CMS Metrics Report for price-transparency-guide | REPORT-2024-12-08
 permalink: /CMSgov/price-transparency-guide/
 
 org: CMSgov
 repo: price-transparency-guide
-reportID: REPORT-2024-11-24
-date_stampThisWeek: 2024-11-24
-date_stampLastWeek: 2024-11-24
+reportID: REPORT-2024-12-08
+date_stampThisWeek: 2024-12-08
+date_stampLastWeek: 2024-12-08
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -31,31 +31,31 @@ date_stampLastWeek: 2024-11-24
       </tr>
       <tr>
         <th scope="row">Issues</th>
-        <td>81</td>
-        <td>81</td>
+        <td>82</td>
+        <td>82</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
-        <td>14</td>
-        <td>17</td>
-        <td style="color: #45c527" >-3</td>
-        <td style="color: #45c527" >19%</td>
+        <td>15</td>
+        <td>15</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
         <td>67</td>
-        <td>64</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >4.6%</td>
+        <td>67</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>3</td>
-        <td>4</td>
-        <td style="color: #45c527" >-1</td>
-        <td style="color: #45c527" >29%</td>
+        <td>3</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
@@ -67,30 +67,30 @@ date_stampLastWeek: 2024-11-24
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>12</td>
-        <td>11</td>
-        <td style="" >1</td>
-        <td style="" >8.7%</td>
+        <td>12</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
-        <td>113</td>
-        <td>113</td>
+        <td>114</td>
+        <td>114</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
-        <td>365</td>
-        <td>365</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td>368</td>
+        <td>367</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.27%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
-        <td>282</td>
         <td>281</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.36%</td>
+        <td>282</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >0.36%</td>
       </tr>
     </tbody>
   </table>

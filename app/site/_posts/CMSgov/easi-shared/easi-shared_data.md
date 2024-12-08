@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for easi-shared | REPORT-2024-11-24
+title: Open Source at CMS Metrics Report for easi-shared | REPORT-2024-12-08
 permalink: /CMSgov/easi-shared/
 
 org: CMSgov
 repo: easi-shared
-reportID: REPORT-2024-11-24
-date_stampThisWeek: 2024-11-24
-date_stampLastWeek: 2024-11-24
+reportID: REPORT-2024-12-08
+date_stampThisWeek: 2024-12-08
+date_stampLastWeek: 2024-12-08
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -66,8 +66,8 @@ date_stampLastWeek: 2024-11-24
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
-        <td>18</td>
-        <td>18</td>
+        <td>19</td>
+        <td>19</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>

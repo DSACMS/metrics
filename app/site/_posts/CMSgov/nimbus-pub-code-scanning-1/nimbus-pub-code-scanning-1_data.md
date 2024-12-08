@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for nimbus-pub-code-scanning-1 | REPORT-2024-11-24
+title: Open Source at CMS Metrics Report for nimbus-pub-code-scanning-1 | REPORT-2024-12-08
 permalink: /CMSgov/nimbus-pub-code-scanning-1/
 
 org: CMSgov
 repo: nimbus-pub-code-scanning-1
-reportID: REPORT-2024-11-24
-date_stampThisWeek: 2024-11-24
-date_stampLastWeek: 2024-11-24
+reportID: REPORT-2024-12-08
+date_stampThisWeek: 2024-12-08
+date_stampLastWeek: 2024-12-08
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -88,9 +88,9 @@ date_stampLastWeek: 2024-11-24
       <tr>
         <th scope="row">Watchers</th>
         <td>7</td>
-        <td>6</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >15%</td>
+        <td>7</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>

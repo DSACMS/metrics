@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-mako | REPORT-2024-11-24
+title: Open Source at CMS Metrics Report for macpro-mako | REPORT-2024-12-08
 permalink: /Enterprise-CMCS/macpro-mako/
 
 org: Enterprise-CMCS
 repo: macpro-mako
-reportID: REPORT-2024-11-24
-date_stampThisWeek: 2024-11-24
-date_stampLastWeek: 2024-11-24
+reportID: REPORT-2024-12-08
+date_stampThisWeek: 2024-12-08
+date_stampLastWeek: 2024-12-08
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-11-24
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>1583</td>
-        <td>1570</td>
-        <td style="color: #45c527" >13</td>
-        <td style="color: #45c527" >0.82%</td>
+        <td>1599</td>
+        <td>1588</td>
+        <td style="color: #45c527" >11</td>
+        <td style="color: #45c527" >0.69%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,31 +52,31 @@ date_stampLastWeek: 2024-11-24
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>7</td>
-        <td>7</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td>18</td>
+        <td>12</td>
+        <td style="" >6</td>
+        <td style="" >40%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>703</td>
-        <td>687</td>
-        <td style="color: #45c527" >16</td>
-        <td style="color: #45c527" >2.3%</td>
+        <td>721</td>
+        <td>708</td>
+        <td style="color: #45c527" >13</td>
+        <td style="color: #45c527" >1.8%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
-        <td>143</td>
-        <td>140</td>
+        <td>147</td>
+        <td>144</td>
         <td style="" >3</td>
         <td style="" >2.1%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
+        <td>3</td>
         <td>2</td>
-        <td>2</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >40%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
@@ -88,9 +88,9 @@ date_stampLastWeek: 2024-11-24
       <tr>
         <th scope="row">Watchers</th>
         <td>7</td>
-        <td>6</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >15%</td>
+        <td>7</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>

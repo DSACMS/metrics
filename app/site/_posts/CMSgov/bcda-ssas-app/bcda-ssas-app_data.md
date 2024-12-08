@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for bcda-ssas-app | REPORT-2024-11-24
+title: Open Source at CMS Metrics Report for bcda-ssas-app | REPORT-2024-12-08
 permalink: /CMSgov/bcda-ssas-app/
 
 org: CMSgov
 repo: bcda-ssas-app
-reportID: REPORT-2024-11-24
-date_stampThisWeek: 2024-11-24
-date_stampLastWeek: 2024-11-24
+reportID: REPORT-2024-12-08
+date_stampThisWeek: 2024-12-08
+date_stampLastWeek: 2024-12-08
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -88,9 +88,9 @@ date_stampLastWeek: 2024-11-24
       <tr>
         <th scope="row">Watchers</th>
         <td>22</td>
-        <td>21</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >4.7%</td>
+        <td>22</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>

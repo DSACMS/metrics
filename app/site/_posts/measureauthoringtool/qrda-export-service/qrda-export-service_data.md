@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for qrda-export-service | REPORT-2024-11-24
+title: Open Source at CMS Metrics Report for qrda-export-service | REPORT-2024-12-08
 permalink: /measureauthoringtool/qrda-export-service/
 
 org: measureauthoringtool
 repo: qrda-export-service
-reportID: REPORT-2024-11-24
-date_stampThisWeek: 2024-11-24
-date_stampLastWeek: 2024-11-24
+reportID: REPORT-2024-12-08
+date_stampThisWeek: 2024-12-08
+date_stampLastWeek: 2024-12-08
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
