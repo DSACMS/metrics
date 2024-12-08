@@ -138,7 +138,6 @@ function createProjectCards() {
     projectSectionsTemplate.className = 'project_section';
     templateDiv.append(projectSectionsTemplate);
   
-    // Add report heading for each org
     const reportHeading = document.createElement('div');
     reportHeading.className = "report_heading";
     reportHeading.innerHTML = DOMPurify.sanitize(orgHeading);
@@ -167,52 +166,108 @@ function createProjectCards() {
 function renderPaginationControls(totalProjectsCount) {
   const paginationDiv = document.getElementById('pagination-controls') || document.createElement('div');
   paginationDiv.id = 'pagination-controls';
-  paginationDiv.innerHTML = ''; 
+  paginationDiv.className = 'usa-pagination';
+  paginationDiv.innerHTML = '';
 
-  // Determine the total number of pages
-  // const totalProjects = Object.values(projects).flat().length; 
   const totalPages = Math.ceil(totalProjectsCount / itemsPerPage);
 
-  // Create Previous Button
-  const prevButton = document.createElement('button');
-  prevButton.textContent = 'Previous';
-  prevButton.disabled = currentPage === 1;
+  const paginationList = document.createElement('ul');
+  paginationList.className = 'usa-pagination__list';
+
+  const prevItem = document.createElement('li');
+  prevItem.className = 'usa-pagination__item usa-pagination__arrow';
+  const prevButton = document.createElement('a');
+  prevButton.href = 'javascript:void(0);';
+  prevButton.className = 'usa-pagination__link usa-pagination__previous-page';
+  prevButton.setAttribute('aria-label', 'Previous page');
+  if (currentPage === 1) prevButton.classList.add('usa-pagination__disabled');
+  prevButton.innerHTML = `
+    <svg class="usa-icon" aria-hidden="true" role="img">
+      <use xlink:href="/assets/img/sprite.svg#navigate_before"></use>
+    </svg>
+    <span class="usa-pagination__link-text">Previous</span>
+  `;
   prevButton.addEventListener('click', () => {
     if (currentPage > 1) {
       currentPage--;
-      createProjectCards(); 
+      createProjectCards();
     }
   });
-  paginationDiv.appendChild(prevButton);
+  prevItem.appendChild(prevButton);
+  paginationList.appendChild(prevItem);
 
-  // Create Page Number Indicators
-  for (let i = 1; i <= totalPages; i++) {
-    const pageButton = document.createElement('button');
-    pageButton.textContent = i;
-    pageButton.disabled = i === currentPage; 
-    pageButton.addEventListener('click', () => {
-      currentPage = i;
-      createProjectCards(); 
-    });
-    paginationDiv.appendChild(pageButton);
-  }
+  const pageRange = getPageRange(currentPage, totalPages, 3);
+  pageRange.forEach((page, index) => {
+    const pageItem = document.createElement('li');
+    pageItem.className = 'usa-pagination__item';
 
-  // Create Next Button
-  const nextButton = document.createElement('button');
-  nextButton.textContent = 'Next';
-  nextButton.disabled = currentPage === totalPages;
+    if (page === '...') {
+      pageItem.className += ' usa-pagination__overflow';
+      pageItem.innerHTML = `<span aria-label="ellipsis indicating non-visible pages">…</span>`;
+    } else {
+      pageItem.className += ' usa-pagination__page-no';
+      const pageButton = document.createElement('a');
+      pageButton.href = 'javascript:void(0);';
+      pageButton.className = `usa-pagination__button${page === currentPage ? ' usa-current' : ''}`;
+      pageButton.textContent = page;
+      pageButton.setAttribute('aria-label', `Page ${page}`);
+      if (page === currentPage) pageButton.setAttribute('aria-current', 'page');
+      pageButton.addEventListener('click', () => {
+        currentPage = page;
+        createProjectCards();
+      });
+      pageItem.appendChild(pageButton);
+    }
+    paginationList.appendChild(pageItem);
+  });
+
+  const nextItem = document.createElement('li');
+  nextItem.className = 'usa-pagination__item usa-pagination__arrow';
+  const nextButton = document.createElement('a');
+  nextButton.href = 'javascript:void(0);';
+  nextButton.className = 'usa-pagination__link usa-pagination__next-page';
+  nextButton.setAttribute('aria-label', 'Next page');
+  if (currentPage === totalPages) nextButton.classList.add('usa-pagination__disabled');
+  nextButton.innerHTML = `
+    <span class="usa-pagination__link-text">Next</span>
+    <svg class="usa-icon" aria-hidden="true" role="img">
+      <use xlink:href="/assets/img/sprite.svg#navigate_next"></use>
+    </svg>
+  `;
   nextButton.addEventListener('click', () => {
     if (currentPage < totalPages) {
       currentPage++;
-      createProjectCards(); // Re-render cards
+      createProjectCards();
     }
   });
-  paginationDiv.appendChild(nextButton);
+  nextItem.appendChild(nextButton);
+  paginationList.appendChild(nextItem);
 
-  // Append pagination controls to the DOM
+  paginationDiv.appendChild(paginationList);
+
   if (!document.body.contains(paginationDiv)) {
     templateDiv.parentElement.appendChild(paginationDiv);
   }
+}
+
+function getPageRange(currentPage, totalPages, visibleRange) {
+  const range = [];
+  const start = Math.max(2, currentPage - visibleRange);
+  const end = Math.min(totalPages - 1, currentPage + visibleRange);
+
+  range.push(1);
+
+  if (start > 2) range.push('...');
+
+  for (let i = start; i <= end; i++) {
+    range.push(i);
+  }
+
+  if (end < totalPages - 1) range.push('...');
+
+  if (totalPages > 1) range.push(totalPages); 
+
+  return range;
 }
 
 // Checks for Checkbox event and updates filters

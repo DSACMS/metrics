@@ -67,6 +67,36 @@ h1 {
   fill: #000;
 }
 
+.usa-nav__primary-navigation button {
+  text-decoration: none;
+}
+
+.usa-nav__primary-navigation button:hover{
+  text-decoration: none;
+}
+
+.usa-nav__primary-navigation button:active{
+  text-decoration: none;
+}
+
+.usa-nav__primary-navigation button:focus{
+  outline: none;
+}
+
+.usa-nav__submenu {
+  display: flex;
+  border: .5px solid #e4e4e4;
+  height: fit-content;
+  width: fit-content;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 0 15%;
+  border-radius: 30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
 
 /* Home page main */
 .grid-container {
@@ -326,35 +356,146 @@ a.usa-link:visited {
   margin-left: 5%;
 }
 
-/* .githubinformation {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-} */
+.filters-container {
+  margin-right: 5%;
+}
 
-/* .stat-container {
+.filter-heading {
+  border: none;
+}
+
+.filter-button {
+  display: flex;
+  background-color: #E0EAF8;
+  border-radius: 50px 50px 0 0;
+  border: none;
+  font-weight: 600; 
+  justify-content: center;
+  min-width: 215px;
+  padding: 7% 0 7% 0;
+}
+
+.filter-button:hover {
+  background-color: #ecdd90;
+}
+
+.filter-button[aria-expanded="false"] {
+  background-color: #E0EAF8;
+  border-radius: 50px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  min-width: 215px;
+}
+
+.filter-button[aria-expanded="false"]:focus {
+  outline: none;
+}
+
+.filter-button[aria-expanded="false"]:hover {
+  background-color: #ecdd90;
+}
+
+.filter-button:not([disabled]):focus {
+  outline: none;
+}
+
+.filter-content {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.search-and-sort {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sort-styling {
+  display: flex;
+  margin-top: -25px;
+  justify-content: space-evenly;
+}
+
+.project-search {
+  padding: 0;
+  margin: 0;
+}
+
+.select-sort {
+  height: 35px;
+  width: fit-content;
+  margin-right: 30px;
+  padding: 0 5% 0 5%;
+}
+
+.report_heading-title {
+  display: flex;
+}
+
+/* ORG REPORTS */
+.grid-container-org-report {
+  display: flex;
+  width: 80vw;
+  flex-direction: column;
+  align-items: center;
+}
+
+.report_heading {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+}
+
+.report-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.github-information {
+  display: flex;
+  justify-content: center;
+}
+
+.stat-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-} */
+  margin: 20%;
+}
+
+.repo-stats {
+  display: flex;
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+
+.post {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /* This is so that augur visualizations have the buttons cropped out. */
-/* .firstResponsePRCrop img {
+.firstResponsePRCrop img {
   width: 900px;
   height: 550px;
   object-fit: cover;
-} */
+}
 
-/* .main-tag {
+.main-tag {
   background-color: #1a4480;
   padding: 0.5rem;
   font-weight: bolder;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.25rem; Adjust the gap as needed
+  gap: 0.25rem; /*Adjust the gap as needed */
   border-radius: 0.25rem;
-} */
+}
+
+.graph-container {
+  width: 100%;
+}
 
 /* .tools-tag {
   background-color: green;

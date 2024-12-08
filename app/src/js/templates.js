@@ -12,6 +12,7 @@ export const reportHeadingTemplate = function(data) {
 }
 
 
+
 export function projectCardTemplate(data) {  
     const projectUrl = `${data.baseurl}/${ data.owner }/${ data.name }/`;
     const description = data.description !== null ? data.description : "";
