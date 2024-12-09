@@ -25,11 +25,11 @@ layout: base
   <div class="dashboard-container">
     <div class="filters-container">
       {% comment %} filter by organization {% endcomment %}
-      <div class="usa-accordion border-base-lighter border-2px">
-        <div class="usa-accordion__heading">
-          <button class="usa-accordion__button font-heading-md text-base-darker" aria-expanded="true" aria-controls="organization-content" id="organization">Organization</button>
+      <div class="usa-accordion">
+        <div class="usa-accordion__heading filter-heading">
+          <button class="usa-accordion__button filter-button" aria-expanded="true" aria-controls="organization-content" id="organization">Organization</button>
         </div>
-        <div id="organization-content" class="usa-accordion__content usa-prose border-top-1px border-base-lighter" hidden>
+        <div id="organization-content" class="usa-accordion__content filter-content usa-prose" hidden>
           <form class="usa-form">
             <fieldset class="usa-fieldset" aria-labelledby="organization-filter">
               <legend class="usa-sr-only" aria-labelledby="organization-filtering"></legend>
@@ -46,11 +46,11 @@ layout: base
         </div>
       </div>
       {% comment %} filter by maturity model tier {% endcomment %}
-      <div class="usa-accordion border-base-lighter border-2px">
-        <div class="usa-accordion__heading">
-          <button class="usa-accordion__button font-heading-md text-base-darker" aria-expanded="false" aria-controls="tier-content" id="mauturity-model-tier">Maturity Model Tier</button>
+      <div class="usa-accordion">
+        <div class="usa-accordion__heading filter-heading">
+          <button class="usa-accordion__button filter-button" aria-expanded="false" aria-controls="tier-content" id="mauturity-model-tier">Maturity Model Tier</button>
         </div>
-        <div id="tier-content" class="usa-accordion__content usa-prose border-top-1px border-base-lighter" hidden>
+        <div id="tier-content" class="usa-accordion__content filter-content usa-prose" hidden>
           <form class="usa-form">
             <fieldset class="usa-fieldset" aria-labelledby="tier-filter">
               <legend class="usa-sr-only" aria-labelledby="tier-filtering"></legend>
@@ -67,11 +67,11 @@ layout: base
         </div>
       </div>
       {% comment %} filter by fisma compliance level {% endcomment %}
-      <div class="usa-accordion border-base-lighter border-2px">
-        <div class="usa-accordion__heading">
-          <button class="usa-accordion__button font-heading-md text-base-darker" aria-expanded="false" aria-controls="fisma-level-content" id="fisma-level">FISMA Compliance Level</button>
+      <div class="usa-accordion">
+        <div class="usa-accordion__heading filter-heading">
+          <button class="usa-accordion__button filter-button" aria-expanded="false" aria-controls="fisma-level-content" id="fisma-level">FISMA Compliance Level</button>
         </div>
-        <div id="fisma-level-content" class="usa-accordion__content usa-prose border-top-1px border-base-lighter" hidden>
+        <div id="fisma-level-content" class="usa-accordion__content filter-content usa-prose" hidden>
           <form class="usa-form">
             <fieldset class="usa-fieldset" aria-labelledby="fisma-level-filter">
               <legend class="usa-sr-only" aria-labelledby="fisma-level-filtering"></legend>
@@ -88,11 +88,11 @@ layout: base
         </div>
       </div>
       {% comment %} filter by project type {% endcomment %}
-      <div class="usa-accordion border-base-lighter border-2px">
-        <div class="usa-accordion__heading">
-          <button class="usa-accordion__button font-heading-md text-base-darker" aria-expanded="false" aria-controls="project-type-content" id="project-type">Project Type</button>
+      <div class="usa-accordion">
+        <div class="usa-accordion__heading filter-heading">
+          <button class="usa-accordion__button filter-button" aria-expanded="false" aria-controls="project-type-content" id="project-type">Project Type</button>
         </div>
-        <div id="project-type-content" class="usa-accordion__content usa-prose border-top-1px border-base-lighter" hidden>
+        <div id="project-type-content" class="usa-accordion__content filter-content usa-prose" hidden>
           <form class="usa-form">
             <fieldset class="usa-fieldset" aria-labelledby="project-type-filter">
               <legend class="usa-sr-only" aria-labelledby="project-type-filtering"></legend>
@@ -115,7 +115,7 @@ layout: base
         <div class="search-and-sort">
 
           <section aria-label="Small search component">
-            <form class="usa-search usa-search--small" role="search" id="search-form">
+            <form class="usa-search usa-search--small project-search" role="search" id="search-form">
               <label class="usa-sr-only" for="search-input">Search</label>
               <input
                 class="usa-input"
@@ -134,34 +134,10 @@ layout: base
             </form>
           </section>
 
-          <!-- <section aria-label="Small search component" class="sort-dropdown">
-            <form class="usa-form usa-search usa-search--small" id="sort-selection-form">
-              <select class="usa-select border-base-light" id="sort-selection" name="sort-selection">
-                  <label class="usa-label" for="sort-selection">Sort by</label>
-                  <option valuer="" disabled selected>Sort By</option>
-                  <option value="name">Project Name</option>
-                  <option value="fisma_level">FISMA Compliance Level</option>
-                  <option value="project_type">Project Type</option>
-                  <option value="stargazers_count">Stars</option>
-                  <option value="maturity_model_tier">Maturity Model Tier</option>
-                  <option value="forks_count">Forks</option>
-              </select>
-              <button class="usa-button" type="submit">
-                <img
-                  src="/assets/img/usa-icons-bg/search--white.svg"
-                  class="usa-search__submit-icon"
-                  alt="Search"
-                />
-                  </button>
-            </form>
-          </section> -->
-
-
-
-          <div class="sort-dropdown">
-            <form class="usa-form" id="sort-selection-form">
-              <label class="usa-label" for="sort-selection">Sort by</label>
-              <select class="usa-select border-base-light" id="sort-selection" name="sort-selection">
+          <div class="sort-dropdown sort-styling">
+            <form class="usa-form sort-dropdown" id="sort-selection-form">
+              <label class="usa-label" for="sort-selection"></label>
+              <select class="usa-select select-sort" id="sort-selection" name="sort-selection">
                 <option valuer="" disabled selected>Sort By</option>
                 <option value="name">Project Name</option>
                 <option value="fisma_level">FISMA Compliance Level</option>
@@ -172,9 +148,9 @@ layout: base
               </select>
             </form>
 
-            <form class="usa-form" id="sort-direction-form">
-              <label class="usa-label" for="sort-direction">Sort Direction</label>
-              <select class="usa-select border-base-light" id="sort-direction" name="sort-direction">
+            <form class="usa-form project-search" id="sort-direction-form">
+              <label class="usa-label" for="sort-direction"></label>
+              <select class="usa-select select-sort" id="sort-direction" name="sort-direction">
                 <option valuer="" disabled selected>Sort Direction</option>
                 <option value="ascending">Ascending</option>
                 <option value="descending">Descending</option>

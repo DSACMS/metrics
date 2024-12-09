@@ -4,24 +4,40 @@ export function createNavigation() {
     const menu = document.querySelector(".usa-nav");
     const menuIcon = document.querySelector(".usa-accordion__button svg use");
 
-    if (toggleButton && closeButton && menu) {
+    function toggleMenu(e) {
+        e.preventDefault();
+        const isOpen = menu.classList.toggle("is-visible");
 
-        toggleButton.addEventListener("click", () => {
-            const isOpen = menu.classList.toggle("is-hidden");
+        toggleButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        menuIcon.setAttribute(
+            "href",
+            isOpen ? "/assets/img/sprite.svg#close" : "/assets/img/sprite.svg#menu"
+        );
+    }
 
-            menuIcon.setAttribute(
-                "xlink:href",
-                isOpen ? "/assets/img/sprite.svg#close" : "/assets/img/sprite.svg#menu"
-            );
-        });
+    function closeMenu() {
+        if(menu.classList.contains("is-visible")) {
+            menu.classList.remove("is-visible");
+            toggleButton.setAttribute("aria-expanded", "false");
+            menuIcon.setAttribute("href", "/assets/img/sprite.svg#menu");
+        }
+    }
 
-        closeButton.addEventListener("click", () => {
-            menu.classList.remove("is-hidden");
+    if(toggleButton && closeButton && menu) {
+        toggleButton.addEventListener("click", toggleMenu);
 
-            menuIcon.setAttribute("xlink:href", "/assets/img/sprite.svg#menu");
+        closeButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            closeMenu();
+        })
+
+        document.addEventListener("click", (e) => {
+            if(!menu.contains(e.target) && !toggleButton.contains(e.target)) {
+                closeMenu();
+            }
         });
     } else {
-        console.error("One or more elements is not found")
+        console.error("Some elements are not found");
     }
 }
 
