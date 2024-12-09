@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for madie-fhir-service | REPORT-2024-11-24
+title: Open Source at CMS Metrics Report for madie-fhir-service | REPORT-2024-12-08
 permalink: /measureauthoringtool/madie-fhir-service/
 
 org: measureauthoringtool
 repo: madie-fhir-service
-reportID: REPORT-2024-11-24
-date_stampThisWeek: 2024-11-24
-date_stampLastWeek: 2024-11-24
+reportID: REPORT-2024-12-08
+date_stampThisWeek: 2024-12-08
+date_stampLastWeek: 2024-12-08
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-11-24
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>683</td>
-        <td>667</td>
-        <td style="color: #45c527" >16</td>
-        <td style="color: #45c527" >2.4%</td>
+        <td>694</td>
+        <td>687</td>
+        <td style="color: #45c527" >7</td>
+        <td style="color: #45c527" >1%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -59,17 +59,17 @@ date_stampLastWeek: 2024-11-24
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>212</td>
-        <td>208</td>
-        <td style="color: #45c527" >4</td>
-        <td style="color: #45c527" >1.9%</td>
+        <td>217</td>
+        <td>214</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >1.4%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>32</td>
-        <td>31</td>
-        <td style="" >1</td>
-        <td style="" >3.2%</td>
+        <td>32</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
