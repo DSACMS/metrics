@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for madie-translator-commons | REPORT-2024-12-08
+title: Open Source at CMS Metrics Report for madie-translator-commons | REPORT-2024-12-15
 permalink: /measureauthoringtool/madie-translator-commons/
 
 org: measureauthoringtool
 repo: madie-translator-commons
-reportID: REPORT-2024-12-08
-date_stampThisWeek: 2024-12-08
-date_stampLastWeek: 2024-12-08
+reportID: REPORT-2024-12-15
+date_stampThisWeek: 2024-12-15
+date_stampLastWeek: 2024-12-15
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-12-08
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>57</td>
         <td>55</td>
-        <td>53</td>
         <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >3.7%</td>
+        <td style="color: #45c527" >3.6%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -59,10 +59,10 @@ date_stampLastWeek: 2024-12-08
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>24</td>
         <td>21</td>
-        <td>18</td>
         <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >15%</td>
+        <td style="color: #45c527" >13%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>

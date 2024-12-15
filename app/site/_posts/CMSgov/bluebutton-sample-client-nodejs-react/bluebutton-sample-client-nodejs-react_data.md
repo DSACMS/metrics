@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for bluebutton-sample-client-nodejs-react | REPORT-2024-12-08
+title: Open Source at CMS Metrics Report for bluebutton-sample-client-nodejs-react | REPORT-2024-12-15
 permalink: /CMSgov/bluebutton-sample-client-nodejs-react/
 
 org: CMSgov
 repo: bluebutton-sample-client-nodejs-react
-reportID: REPORT-2024-12-08
-date_stampThisWeek: 2024-12-08
-date_stampLastWeek: 2024-12-08
+reportID: REPORT-2024-12-15
+date_stampThisWeek: 2024-12-15
+date_stampLastWeek: 2024-12-15
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-12-08
       <tr>
         <th scope="row">Commits</th>
         <td>132</td>
-        <td>128</td>
-        <td style="color: #45c527" >4</td>
-        <td style="color: #45c527" >3.1%</td>
+        <td>132</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2024-12-08
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>4</td>
         <td>5</td>
-        <td style="color: #45c527" >-1</td>
-        <td style="color: #45c527" >22%</td>
+        <td>4</td>
+        <td style="" >1</td>
+        <td style="" >22%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>37</td>
-        <td>36</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >2.7%</td>
+        <td>37</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>23</td>
-        <td>21</td>
-        <td style="" >2</td>
-        <td style="" >9.1%</td>
+        <td>23</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

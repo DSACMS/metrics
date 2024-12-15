@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for packaging-utility | REPORT-2024-12-08
+title: Open Source at CMS Metrics Report for packaging-utility | REPORT-2024-12-15
 permalink: /measureauthoringtool/packaging-utility/
 
 org: measureauthoringtool
 repo: packaging-utility
-reportID: REPORT-2024-12-08
-date_stampThisWeek: 2024-12-08
-date_stampLastWeek: 2024-12-08
+reportID: REPORT-2024-12-15
+date_stampThisWeek: 2024-12-15
+date_stampLastWeek: 2024-12-15
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2024-12-08
       <tr>
         <th scope="row">Commits</th>
         <td>65</td>
-        <td>63</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >3.1%</td>
+        <td>65</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -60,9 +60,9 @@ date_stampLastWeek: 2024-12-08
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>27</td>
-        <td>26</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >3.8%</td>
+        <td>27</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for vsac-client-service | REPORT-2024-12-08
+title: Open Source at CMS Metrics Report for vsac-client-service | REPORT-2024-12-15
 permalink: /measureauthoringtool/vsac-client-service/
 
 org: measureauthoringtool
 repo: vsac-client-service
-reportID: REPORT-2024-12-08
-date_stampThisWeek: 2024-12-08
-date_stampLastWeek: 2024-12-08
+reportID: REPORT-2024-12-15
+date_stampThisWeek: 2024-12-15
+date_stampLastWeek: 2024-12-15
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for qrda-export-service | REPORT-2024-12-08
+title: Open Source at CMS Metrics Report for qrda-export-service | REPORT-2024-12-15
 permalink: /measureauthoringtool/qrda-export-service/
 
 org: measureauthoringtool
 repo: qrda-export-service
-reportID: REPORT-2024-12-08
-date_stampThisWeek: 2024-12-08
-date_stampLastWeek: 2024-12-08
+reportID: REPORT-2024-12-15
+date_stampThisWeek: 2024-12-15
+date_stampLastWeek: 2024-12-15
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-12-08
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>50</td>
         <td>48</td>
-        <td>48</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >4.1%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -59,10 +59,10 @@ date_stampLastWeek: 2024-12-08
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>17</td>
         <td>16</td>
-        <td>16</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >6.1%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
