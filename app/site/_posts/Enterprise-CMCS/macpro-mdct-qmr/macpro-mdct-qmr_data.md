@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-mdct-qmr | REPORT-2024-12-08
+title: Open Source at CMS Metrics Report for macpro-mdct-qmr | REPORT-2024-12-15
 permalink: /Enterprise-CMCS/macpro-mdct-qmr/
 
 org: Enterprise-CMCS
 repo: macpro-mdct-qmr
-reportID: REPORT-2024-12-08
-date_stampThisWeek: 2024-12-08
-date_stampLastWeek: 2024-12-08
+reportID: REPORT-2024-12-15
+date_stampThisWeek: 2024-12-15
+date_stampLastWeek: 2024-12-15
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-12-08
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>4613</td>
         <td>4576</td>
-        <td>4576</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >37</td>
+        <td style="color: #45c527" >0.81%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2024-12-08
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>12</td>
         <td>14</td>
-        <td>9</td>
-        <td style="" >5</td>
-        <td style="" >43%</td>
+        <td style="color: #45c527" >-2</td>
+        <td style="color: #45c527" >15%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>1561</td>
         <td>1549</td>
-        <td>1549</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >12</td>
+        <td style="color: #45c527" >0.77%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>260</td>
         <td>258</td>
-        <td>257</td>
-        <td style="" >1</td>
-        <td style="" >0.39%</td>
+        <td style="" >2</td>
+        <td style="" >0.77%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

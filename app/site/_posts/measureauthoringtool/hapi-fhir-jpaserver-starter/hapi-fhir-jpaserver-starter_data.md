@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for hapi-fhir-jpaserver-starter | REPORT-2024-12-08
+title: Open Source at CMS Metrics Report for hapi-fhir-jpaserver-starter | REPORT-2024-12-15
 permalink: /measureauthoringtool/hapi-fhir-jpaserver-starter/
 
 org: measureauthoringtool
 repo: hapi-fhir-jpaserver-starter
-reportID: REPORT-2024-12-08
-date_stampThisWeek: 2024-12-08
-date_stampLastWeek: 2024-12-08
+reportID: REPORT-2024-12-15
+date_stampThisWeek: 2024-12-15
+date_stampLastWeek: 2024-12-15
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-12-08
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>901</td>
         <td>896</td>
-        <td>465</td>
-        <td style="color: #45c527" >431</td>
-        <td style="color: #45c527" >63%</td>
+        <td style="color: #45c527" >5</td>
+        <td style="color: #45c527" >0.56%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2024-12-08
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>3</td>
         <td>12</td>
-        <td>12</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >-9</td>
+        <td style="color: #45c527" >120%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>10</td>
         <td>9</td>
-        <td>8</td>
         <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >12%</td>
+        <td style="color: #45c527" >11%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>21</td>
         <td>12</td>
-        <td>12</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >9</td>
+        <td style="" >55%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

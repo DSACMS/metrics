@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for madie-cql-library | REPORT-2024-12-08
+title: Open Source at CMS Metrics Report for madie-cql-library | REPORT-2024-12-15
 permalink: /measureauthoringtool/madie-cql-library/
 
 org: measureauthoringtool
 repo: madie-cql-library
-reportID: REPORT-2024-12-08
-date_stampThisWeek: 2024-12-08
-date_stampLastWeek: 2024-12-08
+reportID: REPORT-2024-12-15
+date_stampThisWeek: 2024-12-15
+date_stampLastWeek: 2024-12-15
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-12-08
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>445</td>
         <td>441</td>
-        <td>438</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >0.68%</td>
+        <td style="color: #45c527" >4</td>
+        <td style="color: #45c527" >0.9%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -59,8 +59,8 @@ date_stampLastWeek: 2024-12-08
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>131</td>
         <td>130</td>
-        <td>129</td>
         <td style="color: #45c527" >1</td>
         <td style="color: #45c527" >0.77%</td>
       </tr>
