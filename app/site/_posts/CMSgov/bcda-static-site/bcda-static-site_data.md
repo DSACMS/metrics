@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for bcda-static-site | REPORT-2024-12-15
+title: Open Source at CMS Metrics Report for bcda-static-site | REPORT-2024-12-22
 permalink: /CMSgov/bcda-static-site/
 
 org: CMSgov
 repo: bcda-static-site
-reportID: REPORT-2024-12-15
-date_stampThisWeek: 2024-12-15
-date_stampLastWeek: 2024-12-15
+reportID: REPORT-2024-12-22
+date_stampThisWeek: 2024-12-22
+date_stampLastWeek: 2024-12-22
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-12-15
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>225</td>
         <td>222</td>
-        <td>222</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >1.3%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -59,10 +59,10 @@ date_stampLastWeek: 2024-12-15
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>194</td>
         <td>191</td>
-        <td>191</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >1.6%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>

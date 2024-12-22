@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for hpt-validator-cli | REPORT-2024-12-15
+title: Open Source at CMS Metrics Report for hpt-validator-cli | REPORT-2024-12-22
 permalink: /CMSgov/hpt-validator-cli/
 
 org: CMSgov
 repo: hpt-validator-cli
-reportID: REPORT-2024-12-15
-date_stampThisWeek: 2024-12-15
-date_stampLastWeek: 2024-12-15
+reportID: REPORT-2024-12-22
+date_stampThisWeek: 2024-12-22
+date_stampLastWeek: 2024-12-22
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -67,9 +67,9 @@ date_stampLastWeek: 2024-12-15
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>7</td>
-        <td>6</td>
-        <td style="" >1</td>
-        <td style="" >15%</td>
+        <td>7</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
