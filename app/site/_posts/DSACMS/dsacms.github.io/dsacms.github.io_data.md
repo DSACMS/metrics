@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for dsacms.github.io | REPORT-2024-12-15
+title: Open Source at CMS Metrics Report for dsacms.github.io | REPORT-2024-12-22
 permalink: /DSACMS/dsacms.github.io/
 
 org: DSACMS
 repo: dsacms.github.io
-reportID: REPORT-2024-12-15
-date_stampThisWeek: 2024-12-15
-date_stampLastWeek: 2024-12-15
+reportID: REPORT-2024-12-22
+date_stampThisWeek: 2024-12-22
+date_stampLastWeek: 2024-12-22
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-12-15
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>5</td>
         <td>4</td>
-        <td>3</td>
         <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >29%</td>
+        <td style="color: #45c527" >22%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for mat_automation_cypress | REPORT-2024-12-15
+title: Open Source at CMS Metrics Report for mat_automation_cypress | REPORT-2024-12-22
 permalink: /measureauthoringtool/mat_automation_cypress/
 
 org: measureauthoringtool
 repo: mat_automation_cypress
-reportID: REPORT-2024-12-15
-date_stampThisWeek: 2024-12-15
-date_stampLastWeek: 2024-12-15
+reportID: REPORT-2024-12-22
+date_stampThisWeek: 2024-12-22
+date_stampLastWeek: 2024-12-22
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -52,10 +52,10 @@ date_stampLastWeek: 2024-12-15
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>39</td>
         <td>38</td>
-        <td>38</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >1</td>
+        <td style="" >2.6%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>

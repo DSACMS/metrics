@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for madie-java-models | REPORT-2024-12-15
+title: Open Source at CMS Metrics Report for madie-java-models | REPORT-2024-12-22
 permalink: /measureauthoringtool/madie-java-models/
 
 org: measureauthoringtool
 repo: madie-java-models
-reportID: REPORT-2024-12-15
-date_stampThisWeek: 2024-12-15
-date_stampLastWeek: 2024-12-15
+reportID: REPORT-2024-12-22
+date_stampThisWeek: 2024-12-22
+date_stampLastWeek: 2024-12-22
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -66,10 +66,10 @@ date_stampLastWeek: 2024-12-15
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>18</td>
         <td>17</td>
-        <td>17</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >1</td>
+        <td style="" >5.7%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

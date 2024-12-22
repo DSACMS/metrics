@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for virus-scan-service | REPORT-2024-12-15
+title: Open Source at CMS Metrics Report for virus-scan-service | REPORT-2024-12-22
 permalink: /measureauthoringtool/virus-scan-service/
 
 org: measureauthoringtool
 repo: virus-scan-service
-reportID: REPORT-2024-12-15
-date_stampThisWeek: 2024-12-15
-date_stampLastWeek: 2024-12-15
+reportID: REPORT-2024-12-22
+date_stampThisWeek: 2024-12-22
+date_stampLastWeek: 2024-12-22
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -52,10 +52,10 @@ date_stampLastWeek: 2024-12-15
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>24</td>
         <td>23</td>
-        <td>22</td>
         <td style="" >1</td>
-        <td style="" >4.4%</td>
+        <td style="" >4.3%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>

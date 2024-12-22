@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for seatool-compare | REPORT-2024-12-15
+title: Open Source at CMS Metrics Report for seatool-compare | REPORT-2024-12-22
 permalink: /Enterprise-CMCS/seatool-compare/
 
 org: Enterprise-CMCS
 repo: seatool-compare
-reportID: REPORT-2024-12-15
-date_stampThisWeek: 2024-12-15
-date_stampLastWeek: 2024-12-15
+reportID: REPORT-2024-12-22
+date_stampThisWeek: 2024-12-22
+date_stampLastWeek: 2024-12-22
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -52,10 +52,10 @@ date_stampLastWeek: 2024-12-15
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>9</td>
         <td>8</td>
-        <td>7</td>
         <td style="" >1</td>
-        <td style="" >13%</td>
+        <td style="" >12%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
@@ -66,10 +66,10 @@ date_stampLastWeek: 2024-12-15
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>17</td>
         <td>16</td>
-        <td>16</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >1</td>
+        <td style="" >6.1%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

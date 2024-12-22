@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for mint-app | REPORT-2024-12-15
+title: Open Source at CMS Metrics Report for mint-app | REPORT-2024-12-22
 permalink: /CMSgov/mint-app/
 
 org: CMSgov
 repo: mint-app
-reportID: REPORT-2024-12-15
-date_stampThisWeek: 2024-12-15
-date_stampLastWeek: 2024-12-15
+reportID: REPORT-2024-12-22
+date_stampThisWeek: 2024-12-22
+date_stampLastWeek: 2024-12-22
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-12-15
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>1167</td>
         <td>1162</td>
-        <td>1158</td>
-        <td style="color: #45c527" >4</td>
-        <td style="color: #45c527" >0.34%</td>
+        <td style="color: #45c527" >5</td>
+        <td style="color: #45c527" >0.43%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2024-12-15
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>2</td>
         <td>3</td>
-        <td>6</td>
-        <td style="color: #45c527" >-3</td>
-        <td style="color: #45c527" >67%</td>
+        <td style="color: #45c527" >-1</td>
+        <td style="color: #45c527" >40%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>1356</td>
         <td>1341</td>
-        <td>1332</td>
-        <td style="color: #45c527" >9</td>
-        <td style="color: #45c527" >0.67%</td>
+        <td style="color: #45c527" >15</td>
+        <td style="color: #45c527" >1.1%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>181</td>
-        <td>179</td>
-        <td style="" >2</td>
-        <td style="" >1.1%</td>
+        <td>181</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
