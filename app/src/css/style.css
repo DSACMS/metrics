@@ -52,15 +52,14 @@ h1 {
 
 .usa-nav__primary-item {
   display: flex;
-  justify-content: flex-end;
-  background-color: #fff;
+  justify-content: flex-start;
 }
 
 .usa-nav {
   display: none;
-  position: fixed;
+  position: relative;
   top: 4%;
-  right: 0;
+  right: -10%;
   background: #fff;
   z-index: 1000;
   height: fit-content;
@@ -78,36 +77,26 @@ h1 {
   height: 35%;
 }
 
-.usa-nav__close {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  cursor: pointer;
-  z-index: 1100;
-  background: none;
-  border: none;
-}
-
-.usa-nav__close svg {
-  width: 24px;
-  height: 24px;
-  fill: #000;
+.close-icon {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1%;
 }
 
 .usa-nav__submenu {
   padding: 1rem;
-  border: .5px solid #999999;
+  border-radius: 10px;
   width: fit-content;
   background-color: #fff;
   list-style: none;
   margin: 0;
   font-size: 1.5rem;
-  padding: 0 15%;
+  padding: 10% 15%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .usa-nav__submenu li {
-  margin-bottom: 1rem;
+  margin-bottom: .6rem;
 }
 
 .usa-nav__submenu a {
@@ -117,11 +106,25 @@ h1 {
 }
 
 .usa-nav__submenu a.usa-current {
+  color: #043884;
   font-weight: bold;
+}
+
+.usa-nav__submenu a:hover {
+  color: #E7C000;
 }
 
 .usa-icon {
   fill: #000;
+}
+
+.button-styling:hover {
+  cursor: pointer;
+}
+
+.usa-header--basic .usa-nav__primary-item > .usa-current::after, 
+.usa-header--basic .usa-nav__link:hover::after {
+  background-color: #fff
 }
 
 .usa-nav__primary-navigation button {
@@ -140,8 +143,16 @@ h1 {
   outline: none;
 }
 
+.usa-accordion__button.usa-nav__link.button-styling::after {
+  background-color: #fff;
+}
+
+.usa-nav__primary button[aria-expanded="true"] {
+  background-color: #fff;
+}
+
 /* Home page main */
-.grid-container {
+.grid-container{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -472,42 +483,41 @@ a.usa-link:visited {
 }
 
 /* ORG REPORTS */
-.grid-container-org-report {
+.grid-container-reports {
   display: flex;
-  width: 80vw;
+  width: 80%;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
-/* .report_heading {
-  display: flex;
-  width: 90%;
-  justify-content: center;
-} */
+.report_heading-reports {
+  margin: 0;
+}
 
-.report-container {
-  display: flex;
-  flex-direction: column;
+.report_heading-reports-title {
+  margin: 15% 0 5%;
   width: 100%;
-  align-items: center;
+  color: #000;
+}
+
+.report-link {
+  color: #000;
+}
+
+.report_container {
+  width: 95%;
 }
 
 .github-information {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  margin: 2% 0;
 }
 
 .stat-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20%;
-}
-
-.repo-stats {
-  display: flex;
-  font-size: 1.4rem;
-  margin-bottom: 0;
 }
 
 .post {
@@ -517,6 +527,17 @@ a.usa-link:visited {
   align-items: center;
 }
 
+.summary-table {
+  display: flex;
+  width: 75%;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* .usa-table-styling {
+  width: 70%;
+} */
+
 /* This is so that augur visualizations have the buttons cropped out. */
 .firstResponsePRCrop img {
   width: 900px;
@@ -524,7 +545,44 @@ a.usa-link:visited {
   object-fit: cover;
 }
 
-.main-tag {
+.graph-container {
+  width: 100%;
+}
+
+.all-graphs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.graph-box {
+  display: flex;
+  width: 100%;
+  background-color: #E0EAF8;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 5%;
+  border-radius: 30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.graph-section-title {
+  font-size: 2rem;
+  margin: 2%;
+}
+
+.graph-title {
+  font-size: 1.5rem;
+  margin: 3% 0 0 3%;
+}
+
+.usa-button-group {
+  margin: 2% 0 -5% 3%;;
+}
+
+
+
+/* .main-tag {
   background-color: #1a4480;
   padding: 0.5rem;
   font-weight: bolder;
@@ -532,12 +590,9 @@ a.usa-link:visited {
   align-items: center;
   justify-content: center;
   gap: 0.25rem; /*Adjust the gap as needed */
-  border-radius: 0.25rem;
-}
+  /* border-radius: 0.25rem; */
+/* } */ 
 
-.graph-container {
-  width: 100%;
-}
 
 /* .tools-tag {
   background-color: green;

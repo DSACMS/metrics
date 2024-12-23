@@ -103,7 +103,7 @@ date_stampLastWeek: {date_stamp}
 </div>
 <div class="graph-container">
   <br>
-  <h2>Activity Graphs</h2>
+  <h2 class="graph-section-title">Activity Graphs</h2>
   <div class="all-graphs">
     <!--- Issues/PRs Status Breakdown Graph -->
     {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_owner}_issue_gauge.svg", title: "Issues & PRs Status Breakdown" %}}

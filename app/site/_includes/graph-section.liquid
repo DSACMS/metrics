@@ -5,13 +5,15 @@
 
 {% if devPath | fileExists %}
   <div class="{{ className }}">
-    <h3>{{ title }}</h3>
-    <figure>
-      {% if fileExtension == 'svg' %}
-        <embed type="image/svg+xml" src="{{ distPath }}">
-      {% else %}
-        <img src="{{ distPath }}">
-      {% endif %}
-    </figure>
+    <div class="graph-box">
+      <h3 class="graph-title">{{ title }}</h3>
+      <figure>
+        {% if fileExtension == 'svg' %}
+          <embed type="image/svg+xml" src="{{ distPath }}">
+        {% else %}
+          <img src="{{ distPath }}">
+        {% endif %}
+      </figure>
+    </div>
   </div>
 {% endif %}

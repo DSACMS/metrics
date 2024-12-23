@@ -2,13 +2,13 @@
 layout: base
 ---
 <script src="{{ "/assets/js/graphs.js" | url }}"></script>
-<div class="grid-container-org-report">
+<div class="grid-container-reports">
   {% assign organization = organizations | findObject: org %}
 
-  <div class="report_heading">
-    <h1 class=report_heading-title>
+  <div class="report_heading report_heading-reports">
+    <h1 class=report_heading-reports-title>
       Report for
-      <a target="_blank" href="https://github.com/{{ org }}">{{ org }}</a>
+      <a target="_blank" href="https://github.com/{{ org }}" class="report-link">{{ org }}</a>
       <img
         src="{{organization.avatar_url}}"
         alt="Organization Avatar"
@@ -17,7 +17,7 @@ layout: base
     </h1>
   </div>
 
-  <div class="report-container">
+  <div class="report_container">
     {% if organization %}
       <h2>Organization Stats</h2>
       <div class="github-information">
