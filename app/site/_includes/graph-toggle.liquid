@@ -13,7 +13,7 @@
 
 {% comment %} Render components accordingly {% endcomment %}  
 {% if graphsCheck %}
-    <div class="graph-container">
+    <div class="graph-container-{{ title | slugify }}">
         <div class="graph-box">
             <h3 class="graph-title">{{ title }}</h3>
             <ul class="usa-button-group">

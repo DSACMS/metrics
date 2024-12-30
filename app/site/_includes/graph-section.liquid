@@ -1,4 +1,4 @@
-{% assign className = class | default: 'graph-container' %}
+{% assign className = class | default: 'graph-container-{{ title | slugify}}' %}
 {% assign devPath = 'site/_graphs' | append: path %}
 {% assign distPath = baseurl | append: '/assets/img/graphs' | append: path %}
 {% assign fileExtension = path | split: '.' | last %}

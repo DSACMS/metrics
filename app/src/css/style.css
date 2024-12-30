@@ -361,6 +361,56 @@ a.usa-link:visited {
   display: flex;
 }
 
+.search-styling {
+  border: 0.25px solid #bcbcbc;
+  border-radius: 50px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.usa-input {
+  background-color: #FFF;
+  border: none;
+  border-radius: 50px;
+  z-index: 10;
+}
+
+section:active {
+  border: #E7C000;
+}
+
+.usa-search--small [type=submit], .usa-search--small .usa-search__submit {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  min-width: 4rem;
+  margin-left: -12px;
+  border-radius: 0 50px 50px 0;
+  background-color: #e0eaf8;
+}
+
+.usa-search__submit-icon {
+  filter: invert(1);
+}
+
+.select-sort {
+  height: 35px;
+  width: fit-content;
+  margin-right: 60px;
+  margin-top: 0px;
+  padding: 0 5% 0 5%;
+  border-radius: 50px;
+  border: none
+}
+
+.sort-outer {
+  background-color: #E0EAF8;
+  border: 0.25px solid #bcbcbc;
+  height: 37px;
+  border-radius: 50px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  margin-left: 30px;
+}
+
+
 /* .search-and-sort {
   display: flex;
   justify-content: flex-end;
@@ -471,13 +521,6 @@ a.usa-link:visited {
   margin: 0;
 }
 
-.select-sort {
-  height: 35px;
-  width: fit-content;
-  margin-right: 30px;
-  padding: 0 5% 0 5%;
-}
-
 .report_heading-title {
   display: flex;
 }
@@ -540,8 +583,8 @@ a.usa-link:visited {
 
 /* This is so that augur visualizations have the buttons cropped out. */
 .firstResponsePRCrop img {
-  width: 900px;
-  height: 550px;
+  width: 500px;
+  height: 310px;
   object-fit: cover;
 }
 
@@ -552,14 +595,22 @@ a.usa-link:visited {
 .all-graphs {
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.all-graphs > .graph-container {
+  flex: 1 1 calc(50% - 1rem);
+  min-width: 300px;
 }
 
 .graph-box {
   display: flex;
   width: 100%;
+  height: 600px;
   background-color: #E0EAF8;
-  align-items: stretch;
-  justify-content: center;
+  /* align-items: stretch;
+  justify-content: center; */
   flex-direction: column;
   margin-bottom: 5%;
   border-radius: 30px;
@@ -577,7 +628,11 @@ a.usa-link:visited {
 }
 
 .usa-button-group {
-  margin: 2% 0 -5% 3%;;
+  margin: 2% 0 -15% 3%;;
+}
+
+embed {
+  min-width: 500px;
 }
 
 

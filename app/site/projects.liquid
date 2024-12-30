@@ -20,8 +20,6 @@ layout: base
     The Centers for Medicare and Medicaid Services develops and supports many open-source projects found in our various
     GitHub Organizations.
   </p>
-
-
   <div class="dashboard-container">
     <div class="filters-container">
       {% comment %} filter by organization {% endcomment %}
@@ -113,51 +111,56 @@ layout: base
     <div class="outer-search-block">
       <div class="search-block">
         <div class="search-and-sort">
-
           <section aria-label="Small search component">
             <form class="usa-search usa-search--small project-search" role="search" id="search-form">
-              <label class="usa-sr-only" for="search-input">Search</label>
-              <input
-                class="usa-input"
-                id="search-input"
-                type="search"
-                name="search-input"
-                placeholder="Search"
-              />
-              <button class="usa-button" type="submit">
-                <img
-                  src="{{ site.baseurl }}/assets/img/usa-icons-bg/search--white.svg"
-                  class="usa-search__submit-icon"
-                  alt="Search"
+              <div class="search-styling">
+                <label class="usa-sr-only" for="search-input">Search</label>
+                <input
+                  class="usa-input"
+                  id="search-input"
+                  type="search"
+                  name="search-input"
+                  placeholder="Search"
                 />
-              </button>
+                <button class="usa-button" type="submit">
+                  <img
+                    src="{{ site.baseurl }}/assets/img/usa-icons-bg/search--white.svg"
+                    class="usa-search__submit-icon"
+                    alt="Search"
+                  />
+                </button>
+              </div>
             </form>
           </section>
 
           <div class="sort-dropdown sort-styling">
             <form class="usa-form sort-dropdown" id="sort-selection-form">
               <label class="usa-label" for="sort-selection"></label>
-              <select class="usa-select select-sort" id="sort-selection" name="sort-selection">
-                <option valuer="" disabled selected>Sort By</option>
-                <option value="name">Project Name</option>
-                <option value="fisma_level">FISMA Compliance Level</option>
-                <option value="project_type">Project Type</option>
-                <option value="stargazers_count">Stars</option>
-                <option value="maturity_model_tier">Maturity Model Tier</option>
-                <option value="forks_count">Forks</option>
-              </select>
+              <div class="sort-outer">
+                <select class="usa-select select-sort" id="sort-selection" name="sort-selection">
+                  <option valuer="" disabled selected>Sort By</option>
+                  <option value="name">Project Name</option>
+                  <option value="fisma_level">FISMA Compliance Level</option>
+                  <option value="project_type">Project Type</option>
+                  <option value="stargazers_count">Stars</option>
+                  <option value="maturity_model_tier">Maturity Model Tier</option>
+                  <option value="forks_count">Forks</option>
+                </select>
+              </div>
             </form>
 
             <form class="usa-form project-search" id="sort-direction-form">
               <label class="usa-label" for="sort-direction"></label>
-              <select class="usa-select select-sort" id="sort-direction" name="sort-direction">
-                <option valuer="" disabled selected>Sort Direction</option>
-                <option value="ascending">Ascending</option>
-                <option value="descending">Descending</option>
-              </select>
+              <div class="sort-outer">
+                <select class="usa-select select-sort" id="sort-direction" name="sort-direction">
+                  <option valuer="" disabled selected>Sort Direction</option>
+                  <option value="ascending">Ascending</option>
+                  <option value="descending">Descending</option>
+                </select>
+              </div>
             </form>
           </div>
-          
+
         </div>
       <div class="padding-left-05" id="filter-tags"></div>
       <div id="content-container">
@@ -169,7 +172,6 @@ layout: base
             {% assign currentPage = pagination.pageNumber | default: 1 | minus: 1 %}
             {% assign startIndex = currentPage | times: itemsPerPage %}
             {% assign paginatedProjects = projects | slice: startIndex, itemsPerPage %}
-
             {% for project in paginatedProjects %}
               {% include "project-card.liquid" %}
             {% endfor %}
