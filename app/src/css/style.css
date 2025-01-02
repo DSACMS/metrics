@@ -637,8 +637,15 @@ embed {
 
 .usa-modal {
   display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
   opacity: 0;
   transition: opacity 0.3s ease;
+  border-radius: 25px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .usa-modal[aria-hidden="false"] {
@@ -682,7 +689,6 @@ iframe:focus, [href]:focus, [tabindex]:focus, [contentEditable=true]:focus {
   outline: none;
   outline-offset: 0rem;
 }
-
 
 
 

@@ -2,7 +2,7 @@
 {% assign devPath = 'site/_graphs' | append: path %}
 {% assign distPath = baseurl | append: '/assets/img/graphs' | append: path %}
 {% assign fileExtension = path | split: '.' | last %}
-{% assign modal_description = "This graph shows..." %}
+{% assign modal_description = modal_description %}
 
 {% if devPath | fileExists %}
   <div class="{{ className }}">
