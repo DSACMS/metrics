@@ -1,6 +1,7 @@
 {% assign graphName = name| append: "-graph" %}
 {% assign buttonName = name | append: "-button-" %}
 {% assign graphsCheck = true %}
+{% assign modal_description = "This graph shows..." %}
 
 {% comment %} Check for file existence of graphs {% endcomment %}
 {% for path in graphs %}
@@ -43,6 +44,17 @@
                     <img src="{{ distPath }}"/>
                 {% endif %}
                 </figure>
+                <div class="modal-button-styling">
+                    <a
+                    href="#{{ title | slugify }}-modal"
+                    class="usa-button modal-button"
+                    aria-controls="{{ title | slugify }}-modal"
+                    data-open-modal
+                    >
+                    Learn More
+                    </a>
+                </div>
+                {% render "modal-content", title: title, modal_description: modal_description %}
                 </div>
             {% endfor %}
         </div>

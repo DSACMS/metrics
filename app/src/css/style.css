@@ -635,6 +635,55 @@ embed {
   min-width: 500px;
 }
 
+.usa-modal {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.usa-modal[aria-hidden="false"] {
+  display: block;
+  opacity: 1;
+}
+
+.usa-modal--active {
+  display: block;
+  opacity: 1;
+}
+
+.modal-button-styling {
+  display: flex;
+  justify-content: flex-end;
+  width: 95%;
+}
+
+.modal-button {
+  border-radius: 30px;
+  background-color: #0A3F8D;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.modal-button:hover {
+  border-radius: 30px;
+  background-color: #E7C000;
+  color: #000;
+}
+
+.modal-button:active {
+  box-shadow: none;
+}
+
+.usa-modal__close {
+  border: none;
+  cursor: pointer;
+}
+
+iframe:focus, [href]:focus, [tabindex]:focus, [contentEditable=true]:focus {
+  outline: none;
+  outline-offset: 0rem;
+}
+
+
 
 
 /* .main-tag {

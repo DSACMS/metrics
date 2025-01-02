@@ -100,7 +100,7 @@ date_stampLastWeek: {date_stamp}
   <h2 class="graph-section-title">Activity Graphs</h2>
   <div class="all-graphs">
     <!--- Issues/PRs Status Breakdown Graph -->
-    {{% render "graph-section"  baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/issue_gauge_{repo_name}_data.svg", title: "Issues & PRs Status Breakdown" %}}
+    {{% render "graph-section"  baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/issue_gauge_{repo_name}_data.svg", title: "Issues & PRs Status Breakdown", modal_description: "This is a TEST IF THE DESCRIPTIONS OF ISSUES AND PRs STATUS DESCRIPTION" %}}
     <!--- Contributor Activity Line Graph -->
     {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/commit_sparklines_{repo_name}_data.svg", title: "Commits by Month" %}}
     <!--- First Response For Closed PR Scatterplot -->
