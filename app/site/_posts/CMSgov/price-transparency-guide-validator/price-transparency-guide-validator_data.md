@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for price-transparency-guide-validator | REPORT-2024-12-22
+title: Open Source at CMS Metrics Report for price-transparency-guide-validator | REPORT-2025-01-05
 permalink: /CMSgov/price-transparency-guide-validator/
 
 org: CMSgov
 repo: price-transparency-guide-validator
-reportID: REPORT-2024-12-22
-date_stampThisWeek: 2024-12-22
-date_stampLastWeek: 2024-12-22
+reportID: REPORT-2025-01-05
+date_stampThisWeek: 2025-01-05
+date_stampLastWeek: 2025-01-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -31,10 +31,10 @@ date_stampLastWeek: 2024-12-22
       </tr>
       <tr>
         <th scope="row">Issues</th>
+        <td>47</td>
         <td>45</td>
-        <td>45</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >4.3%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
@@ -45,10 +45,10 @@ date_stampLastWeek: 2024-12-22
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
+        <td>43</td>
         <td>41</td>
-        <td>41</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >4.8%</td>
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>

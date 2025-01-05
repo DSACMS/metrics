@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for model-info-parser | REPORT-2024-12-22
+title: Open Source at CMS Metrics Report for model-info-parser | REPORT-2025-01-05
 permalink: /measureauthoringtool/model-info-parser/
 
 org: measureauthoringtool
 repo: model-info-parser
-reportID: REPORT-2024-12-22
-date_stampThisWeek: 2024-12-22
-date_stampLastWeek: 2024-12-22
+reportID: REPORT-2025-01-05
+date_stampThisWeek: 2025-01-05
+date_stampLastWeek: 2025-01-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

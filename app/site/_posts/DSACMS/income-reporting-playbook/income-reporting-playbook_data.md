@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for income-reporting-playbook | REPORT-2024-12-22
+title: Open Source at CMS Metrics Report for income-reporting-playbook | REPORT-2025-01-05
 permalink: /DSACMS/income-reporting-playbook/
 
 org: DSACMS
 repo: income-reporting-playbook
-reportID: REPORT-2024-12-22
-date_stampThisWeek: 2024-12-22
-date_stampLastWeek: 2024-12-22
+reportID: REPORT-2025-01-05
+date_stampThisWeek: 2025-01-05
+date_stampLastWeek: 2025-01-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
