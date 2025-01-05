@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for design-system | REPORT-2024-12-22
+title: Open Source at CMS Metrics Report for design-system | REPORT-2025-01-05
 permalink: /CMSgov/design-system/
 
 org: CMSgov
 repo: design-system
-reportID: REPORT-2024-12-22
-date_stampThisWeek: 2024-12-22
-date_stampLastWeek: 2024-12-22
+reportID: REPORT-2025-01-05
+date_stampThisWeek: 2025-01-05
+date_stampLastWeek: 2025-01-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,24 +24,24 @@ date_stampLastWeek: 2024-12-22
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>2384</td>
         <td>2379</td>
-        <td>2374</td>
         <td style="color: #45c527" >5</td>
         <td style="color: #45c527" >0.21%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
+        <td>245</td>
         <td>244</td>
-        <td>243</td>
         <td style="color: #45c527" >1</td>
         <td style="color: #45c527" >0.41%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>8</td>
         <td>7</td>
-        <td>6</td>
         <td style="" >1</td>
-        <td style="" >15%</td>
+        <td style="" >13%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -53,14 +53,14 @@ date_stampLastWeek: 2024-12-22
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>8</td>
-        <td>7</td>
-        <td style="" >1</td>
-        <td style="" >13%</td>
+        <td>8</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>2273</td>
         <td>2268</td>
-        <td>2263</td>
         <td style="color: #45c527" >5</td>
         <td style="color: #45c527" >0.22%</td>
       </tr>
@@ -80,8 +80,8 @@ date_stampLastWeek: 2024-12-22
       </tr>
       <tr>
         <th scope="row">Stars</th>
+        <td>321</td>
         <td>320</td>
-        <td>319</td>
         <td style="color: #45c527" >1</td>
         <td style="color: #45c527" >0.31%</td>
       </tr>

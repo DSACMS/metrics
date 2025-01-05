@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for bcda-app | REPORT-2024-12-22
+title: Open Source at CMS Metrics Report for bcda-app | REPORT-2025-01-05
 permalink: /CMSgov/bcda-app/
 
 org: CMSgov
 repo: bcda-app
-reportID: REPORT-2024-12-22
-date_stampThisWeek: 2024-12-22
-date_stampLastWeek: 2024-12-22
+reportID: REPORT-2025-01-05
+date_stampThisWeek: 2025-01-05
+date_stampLastWeek: 2025-01-05
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2024-12-22
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>924</td>
         <td>920</td>
-        <td>915</td>
-        <td style="color: #45c527" >5</td>
-        <td style="color: #45c527" >0.54%</td>
+        <td style="color: #45c527" >4</td>
+        <td style="color: #45c527" >0.43%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,17 +52,17 @@ date_stampLastWeek: 2024-12-22
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>0</td>
         <td>2</td>
-        <td>1</td>
-        <td style="" >1</td>
-        <td style="" >67%</td>
+        <td style="color: #45c527" >-2</td>
+        <td style="color: #45c527" >200%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>927</td>
         <td>923</td>
-        <td>918</td>
-        <td style="color: #45c527" >5</td>
-        <td style="color: #45c527" >0.54%</td>
+        <td style="color: #45c527" >4</td>
+        <td style="color: #45c527" >0.43%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -80,10 +80,10 @@ date_stampLastWeek: 2024-12-22
       </tr>
       <tr>
         <th scope="row">Stars</th>
+        <td>46</td>
         <td>47</td>
-        <td>47</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >2.2%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
