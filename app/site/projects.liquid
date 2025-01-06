@@ -107,7 +107,6 @@ layout: base
         </div>
       </div>
     </div>
-
     <div class="outer-search-block">
       <div class="search-block">
         <div class="search-and-sort">
@@ -132,7 +131,6 @@ layout: base
               </div>
             </form>
           </section>
-
           <div class="sort-dropdown sort-styling">
             <form class="usa-form sort-dropdown" id="sort-selection-form">
               <label class="usa-label" for="sort-selection"></label>
@@ -146,9 +144,11 @@ layout: base
                   <option value="maturity_model_tier">Maturity Model Tier</option>
                   <option value="forks_count">Forks</option>
                 </select>
+                <svg class="usa-icon filter-icon" aria-hidden="true" focusable="false" role="img">
+                  <use href="{{ site.baseurl }}/assets/img/sprite.svg#filter_list"></use>
+                </svg>
               </div>
             </form>
-
             <form class="usa-form project-search" id="sort-direction-form">
               <label class="usa-label" for="sort-direction"></label>
               <div class="sort-outer">
@@ -157,6 +157,9 @@ layout: base
                   <option value="ascending">Ascending</option>
                   <option value="descending">Descending</option>
                 </select>
+                <svg class="usa-icon filter-icon" aria-hidden="true" focusable="false" role="img">
+                  <use href="{{ site.baseurl }}/assets/img/sprite.svg#sort_arrow"></use>
+                </svg>
               </div>
             </form>
           </div>

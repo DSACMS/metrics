@@ -344,6 +344,10 @@ a.usa-link:visited {
 }
 
 /* Projects */
+#content-container {
+  margin-top: 5%;
+}
+
 .grid-container-projects {
   display: flex;
   flex-direction: column;
@@ -402,27 +406,21 @@ section:active {
 }
 
 .sort-outer {
+  display: flex;
   background-color: #E0EAF8;
   border: 0.25px solid #bcbcbc;
   height: 37px;
   border-radius: 50px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   margin-left: 30px;
+  align-items: center;
+  max-width: 15rem;
+  min-width: 7rem;
 }
 
-
-/* .search-and-sort {
-  display: flex;
-  justify-content: flex-end;
+.filter-icon {
+  margin: 0 0 0 -20%;
 }
-
-.usa-search--small {
-  height: 100px; 
-}
-
-.sort-dropdown {
-  display: flex;
-} */
 
 .outer-project-template {
   height: fit-content;
@@ -431,10 +429,6 @@ section:active {
 
 .container-project-template {
   display: flex;
-  /* height: fit-content; */
-  /* flex-direction: column;
-  align-items: flex-start;
-  justify-content: center; */
 }
 
 .text-container-project-template {
@@ -577,10 +571,6 @@ section:active {
   align-items: stretch;
 }
 
-/* .usa-table-styling {
-  width: 70%;
-} */
-
 /* This is so that augur visualizations have the buttons cropped out. */
 .firstResponsePRCrop img {
   width: 500px;
@@ -689,131 +679,3 @@ iframe:focus, [href]:focus, [tabindex]:focus, [contentEditable=true]:focus {
   outline: none;
   outline-offset: 0rem;
 }
-
-
-
-/* .main-tag {
-  background-color: #1a4480;
-  padding: 0.5rem;
-  font-weight: bolder;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.25rem; /*Adjust the gap as needed */
-  /* border-radius: 0.25rem; */
-/* } */ 
-
-
-/* .tools-tag {
-  background-color: green;
-}
-
-.apis-tag {
-  background-color: #E52109;
-}
-
-.apps-tag {
-  background-color: #0076D6;
-}
-
-.data-tag {
-  background-color: #E66F0F;
-}
-
-.docs-tag {
-  background-color: #03C585;
-}
-
-.libraries-tag {
-  background-color: #D72D79;
-} */
-
-/* .standards-tag {
-  background-color: #FFBE2F;
-}
-
-.icon-tag {
-  padding: 0.35rem;
-} */
-
-/* .primary-tag-group {
-  padding-top-1
-  padding-top: 0.5rem;
-} */
-
-/* .secondary-tag-group {
-  padding-y-3
-  padding-top:1.5rem;
-  padding-bottom:1.5rem;
-} */
-
-/* .projects-container {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.block {
-  display: block;
-  width: 100%;
-} */
-
-/* .dashboard-container {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  padding-top: 5rem;
-} */
-
-/* .filters-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding-top: 3.4rem;
-}
-
-.search-container {
-  flex:1;
-  margin-bottom: 1rem;
-  box-sizing: border-box; 
-}
-
-.search-and-sort {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 3rem;
-} */
-
-/* .sort-dropdown {
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-  text-align: right;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-
-} */
-
-/* @media screen and (max-width: 1080px) {
-  .dashboard-container {
-    flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  .search-and-sort {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .search-container {
-    margin-bottom: 0;
-  }
-
-  .sort-dropdown {
-    text-align: left;
-  }
-} */
