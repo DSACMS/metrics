@@ -13,11 +13,6 @@
       </div>
     </div>
     <nav aria-label="Primary navigation" class="usa-nav nav-styling">
-      <button type="button" class="usa-nav__close">
-        <svg class="usa-icon--size-7 button-styling" aria-hidden="true" focusable="false" role="img">
-          <use href="{{ site.baseurl }}/assets/img/sprite.svg#close"></use>
-        </svg>
-      </button>
       <ul class="usa-nav__primary usa-accordion usa-nav__primary-navigation">
         <li class="usa-nav__primary-item">
           <button
@@ -36,6 +31,11 @@
             </svg>
           </button>
           <ul id="basic-nav-section-one" class="usa-nav__submenu">
+            <li class="close-icon">
+                <svg class="usa-icon--size-4 button-styling" aria-hidden="true" focusable="false" role="img">
+                  <use href="{{ site.baseurl }}/assets/img/sprite.svg#close"></use>
+                </svg>
+            </li>
             <li class="usa-nav__primary-item">
               <a href="{{ "/" | url}}" class="usa-nav-link {% if page.url == "/" %}usa-current{% endif %}">
                 <span>Home</span>
