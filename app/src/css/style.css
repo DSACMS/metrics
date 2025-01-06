@@ -1,5 +1,12 @@
 @import "@uswds/uswds/dist/css/uswds.css";
 
+html, body {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -35,13 +42,13 @@ main {
 
 h1 {
   color: #093f8e;
-  font-size: 1.9em;
-  margin: 3% 2% 0 2%;
+  font-size: 1.5rem;
+  margin: 1rem 0;
 }
 
 .logo {
-  width: 120px;
-  height: 40px;
+  width: 90px;
+  height: auto;
   margin-right: 10px;
 }
 
@@ -346,6 +353,7 @@ a.usa-link:visited {
 /* Projects */
 #content-container {
   margin-top: 5%;
+  width: 95vw;
 }
 
 .grid-container-projects {
@@ -363,6 +371,8 @@ a.usa-link:visited {
 
 .dashboard-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .search-styling {
@@ -424,7 +434,7 @@ section:active {
 
 .outer-project-template {
   height: fit-content;
-  width: 60vw;
+  width: 90vw;
 }
 
 .container-project-template {
@@ -501,13 +511,15 @@ section:active {
 
 .search-and-sort {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  margin: 10%;
 }
 
 .sort-styling {
   display: flex;
-  margin-top: -25px;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .project-search {
@@ -566,7 +578,6 @@ section:active {
 
 .summary-table {
   display: flex;
-  width: 75%;
   flex-direction: column;
   align-items: stretch;
 }
@@ -597,10 +608,7 @@ section:active {
 .graph-box {
   display: flex;
   width: 100%;
-  height: 600px;
   background-color: #E0EAF8;
-  /* align-items: stretch;
-  justify-content: center; */
   flex-direction: column;
   margin-bottom: 5%;
   border-radius: 30px;
@@ -618,11 +626,13 @@ section:active {
 }
 
 .usa-button-group {
-  margin: 2% 0 -15% 3%;;
+  display: flex;
+  flex-direction: row;
+  margin: 2%
 }
 
 embed {
-  min-width: 500px;
+  min-width: 315px;
 }
 
 .usa-modal {
@@ -658,6 +668,7 @@ embed {
   border-radius: 30px;
   background-color: #0A3F8D;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  width: fit-content;
 }
 
 .modal-button:hover {
@@ -678,4 +689,61 @@ embed {
 iframe:focus, [href]:focus, [tabindex]:focus, [contentEditable=true]:focus {
   outline: none;
   outline-offset: 0rem;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 1.9em;
+    margin: 3% 2% 0 2%;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .dashboard-container {
+    flex-direction: row;
+    align-items: normal;
+  }
+
+  .search-and-sort {
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .sort-styling {
+    flex-direction: row;
+    margin-top: -25px;
+    justify-content: space-evenly;
+  }
+
+  #content-container {
+    width: auto;
+  }
+
+  .outer-project-template {
+    width: 60vw;
+  }
+
+  .summary-table {
+    width: 75%;
+  }
+
+  .usa-button-group {
+    margin: 2% 0 -15% 3%;;
+  }
+
+  embed {
+    min-width: 500px;
+  }
+
+  .graph-box {
+    height: 600px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  
 }
