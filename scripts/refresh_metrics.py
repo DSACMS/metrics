@@ -3,8 +3,9 @@ Script to run all metrics collection and update operations
 """
 import os
 import argparse
-from fetch_public_metrics import get_all_data, parse_repos_and_orgs_into_objects
-from fetch_public_metrics import parse_tracked_repos_file, read_previous_metric_data
+from metrics_dash_backend_tools import get_all_data, parse_repos_and_orgs_into_objects
+from metrics_dash_backend_tools import parse_tracked_repos_file, read_previous_metric_data
+from constants import PATH_TO_METADATA, PATH_TO_METRICS_DATA, PATH_TO_GRAPHS_DATA
 
 
 
@@ -16,10 +17,10 @@ if __name__ == "__main__":
                     help='The GitHub Org to update data for.')
     args = parser.parse_args()
 
-    orgs_urls, repo_urls = parse_tracked_repos_file(args.org)
+    orgs_urls, repo_urls = parse_tracked_repos_file(PATH_TO_METADATA, org=args.org)
 
     all_orgs, all_repos = parse_repos_and_orgs_into_objects(orgs_urls, repo_urls)
 
     # Generate json data, report data, and graph data.
-    read_previous_metric_data(all_repos,all_orgs)
-    get_all_data(all_orgs, all_repos)
+    read_previous_metric_data(PATH_TO_METRICS_DATA,all_repos,all_orgs)
+    get_all_data(PATH_TO_METRICS_DATA, PATH_TO_GRAPHS_DATA,all_orgs, all_repos)
