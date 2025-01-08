@@ -10,11 +10,11 @@ TIMEOUT_IN_SECONDS = 120
 REQUEST_RETRIES = 5
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 # Folder Names to send over our projects tracked data
-PATH_TO_METRICS_DATA = (Path(__file__).parent /
+PATH_TO_METRICS_DATA = (Path(__file__) /
                         "../../app/site/_data").resolve()
-PATH_TO_REPORTS_DATA = (Path(__file__).parent /
+PATH_TO_REPORTS_DATA = (Path(__file__) /
                         "../../app/site/_posts").resolve()
-PATH_TO_GRAPHS_DATA = (Path(__file__).parent /
+PATH_TO_GRAPHS_DATA = (Path(__file__) /
                        "../../app/site/_graphs").resolve()
 
 PATH_TO_METADATA = Path("_metadata").resolve()
@@ -23,7 +23,7 @@ TOKEN = os.getenv("GITHUB_TOKEN")
 GH_GQL_ENDPOINT = "https://api.github.com/graphql"
 AUGUR_HOST = os.getenv("AUGUR_HOST")
 
-PATH_TO_TEMPLATES = (Path(__file__).parent / "../../templates").resolve()
+PATH_TO_TEMPLATES = (Path(__file__) / "../../templates").resolve()
 
 template_path = os.path.join(PATH_TO_TEMPLATES, "repo_report_template.md")
 with open(template_path, "r", encoding="utf-8") as file:
