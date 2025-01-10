@@ -71,6 +71,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({
     "src/img": "assets/img",
+    "src/js": "src/js",
     "site/img": "assets/img",
     "site/_includes/css": "css",
     "site/_includes/js": "assets/js",
@@ -88,7 +89,7 @@ module.exports = function (eleventyConfig) {
     "stroke-width": 2,
   })
 
-  const pathPrefix = process.env.NODE_ENV === "production" ? "/metrics" : ""
+  const pathPrefix = process.env.NODE_ENV.includes("production") ? "/metrics" : ""
 
   return {
     dir: {

@@ -1,28 +1,33 @@
 ---
 layout: base
 ---
+
 <script type="module" src="{{ "/assets/js/projects.js" | url }}"></script>
 <span style="display:none;" id="metrics">
-  {{projects | json }}
+  {{ projects | json }}
 </span>
 <span style="display:none;" id="org-data">
-  {{organizations | json }}
+  {{ organizations | json }}
 </span>
-<div class="grid-container ">
+<span style="display:none;" id="site-data">
+  {{ site | json }}
+</span>
+<div class="grid-container-projects">
+  <div class="description-styling">
+    <h2>Projects</h2>
+  </div>
   <p>
     The Centers for Medicare and Medicaid Services develops and supports many open-source projects found in our various
     GitHub Organizations.
   </p>
-
   <div class="dashboard-container">
     <div class="filters-container">
-
       {% comment %} filter by organization {% endcomment %}
-      <div class="usa-accordion border-base-lighter border-2px">
-        <div class="usa-accordion__heading">
-          <button class="usa-accordion__button font-heading-md text-base-darker" aria-expanded="true" aria-controls="organization-content" id="organization">Organization</button>
+      <div class="usa-accordion">
+        <div class="usa-accordion__heading filter-heading">
+          <button class="usa-accordion__button filter-button" aria-expanded="true" aria-controls="organization-content" id="organization">Organization</button>
         </div>
-        <div id="organization-content" class="usa-accordion__content usa-prose border-top-1px border-base-lighter" hidden>
+        <div id="organization-content" class="usa-accordion__content filter-content usa-prose" hidden>
           <form class="usa-form">
             <fieldset class="usa-fieldset" aria-labelledby="organization-filter">
               <legend class="usa-sr-only" aria-labelledby="organization-filtering"></legend>
@@ -38,13 +43,12 @@ layout: base
           </form>
         </div>
       </div>
-
       {% comment %} filter by maturity model tier {% endcomment %}
-      <div class="usa-accordion border-base-lighter border-2px">
-        <div class="usa-accordion__heading">
-          <button class="usa-accordion__button font-heading-md text-base-darker" aria-expanded="false" aria-controls="tier-content" id="mauturity-model-tier">Maturity Model Tier</button>
+      <div class="usa-accordion">
+        <div class="usa-accordion__heading filter-heading">
+          <button class="usa-accordion__button filter-button" aria-expanded="false" aria-controls="tier-content" id="mauturity-model-tier">Maturity Model Tier</button>
         </div>
-        <div id="tier-content" class="usa-accordion__content usa-prose border-top-1px border-base-lighter" hidden>
+        <div id="tier-content" class="usa-accordion__content filter-content usa-prose" hidden>
           <form class="usa-form">
             <fieldset class="usa-fieldset" aria-labelledby="tier-filter">
               <legend class="usa-sr-only" aria-labelledby="tier-filtering"></legend>
@@ -60,13 +64,12 @@ layout: base
           </form>
         </div>
       </div>
-
       {% comment %} filter by fisma compliance level {% endcomment %}
-      <div class="usa-accordion border-base-lighter border-2px">
-        <div class="usa-accordion__heading">
-          <button class="usa-accordion__button font-heading-md text-base-darker" aria-expanded="false" aria-controls="fisma-level-content" id="fisma-level">FISMA Compliance Level</button>
+      <div class="usa-accordion">
+        <div class="usa-accordion__heading filter-heading">
+          <button class="usa-accordion__button filter-button" aria-expanded="false" aria-controls="fisma-level-content" id="fisma-level">FISMA Compliance Level</button>
         </div>
-        <div id="fisma-level-content" class="usa-accordion__content usa-prose border-top-1px border-base-lighter" hidden>
+        <div id="fisma-level-content" class="usa-accordion__content filter-content usa-prose" hidden>
           <form class="usa-form">
             <fieldset class="usa-fieldset" aria-labelledby="fisma-level-filter">
               <legend class="usa-sr-only" aria-labelledby="fisma-level-filtering"></legend>
@@ -82,13 +85,12 @@ layout: base
           </form>
         </div>
       </div>
-
       {% comment %} filter by project type {% endcomment %}
-      <div class="usa-accordion border-base-lighter border-2px">
-        <div class="usa-accordion__heading">
-          <button class="usa-accordion__button font-heading-md text-base-darker" aria-expanded="false" aria-controls="project-type-content" id="project-type">Project Type</button>
+      <div class="usa-accordion">
+        <div class="usa-accordion__heading filter-heading">
+          <button class="usa-accordion__button filter-button" aria-expanded="false" aria-controls="project-type-content" id="project-type">Project Type</button>
         </div>
-        <div id="project-type-content" class="usa-accordion__content usa-prose border-top-1px border-base-lighter" hidden>
+        <div id="project-type-content" class="usa-accordion__content filter-content usa-prose" hidden>
           <form class="usa-form">
             <fieldset class="usa-fieldset" aria-labelledby="project-type-filter">
               <legend class="usa-sr-only" aria-labelledby="project-type-filtering"></legend>
@@ -105,44 +107,115 @@ layout: base
         </div>
       </div>
     </div>
-    
-    <div class="block">
-      <div class="search-and-sort">
-        <div class="search-container">
-          <label class="usa-label" for="filter-input">Search</label>
-          <div class="usa-input-group width-full maxw-none border-base-light">
-            <div class="usa-input-prefix" aria-hidden="true">
-              <svg aria-hidden="true" role="img" focusable="false" class="usa-icon">
-                <use xlink:href={{  "/assets/img/sprite.svg#search"| url }} ></use>
-              </svg>
-            </div>
-            <input class="usa-input--lg" id="filter-input" name="filter-input">
+    <div class="outer-search-block">
+      <div class="search-block">
+        <div class="search-and-sort">
+          <section aria-label="Small search component">
+            <form class="usa-search usa-search--small project-search" role="search" id="search-form">
+              <div class="search-styling">
+                <label class="usa-sr-only" for="search-input">Search</label>
+                <input
+                  class="usa-input"
+                  id="search-input"
+                  type="search"
+                  name="search-input"
+                  placeholder="Search"
+                />
+                <button class="usa-button" type="submit">
+                  <img
+                    src="{{ site.baseurl }}/assets/img/usa-icons-bg/search--white.svg"
+                    class="usa-search__submit-icon"
+                    alt="Search"
+                  />
+                </button>
+              </div>
+            </form>
+          </section>
+          <div class="sort-dropdown sort-styling">
+            <form class="usa-form sort-dropdown" id="sort-selection-form">
+              <label class="usa-label" for="sort-selection"></label>
+              <div class="sort-outer">
+                <select class="usa-select select-sort" id="sort-selection" name="sort-selection">
+                  <option valuer="" disabled selected>Sort By</option>
+                  <option value="name">Project Name</option>
+                  <option value="fisma_level">FISMA Compliance Level</option>
+                  <option value="project_type">Project Type</option>
+                  <option value="stargazers_count">Stars</option>
+                  <option value="maturity_model_tier">Maturity Model Tier</option>
+                  <option value="forks_count">Forks</option>
+                </select>
+                <svg class="usa-icon filter-icon" aria-hidden="true" focusable="false" role="img">
+                  <use href="{{ site.baseurl }}/assets/img/sprite.svg#filter_list"></use>
+                </svg>
+              </div>
+            </form>
+            <form class="usa-form project-search" id="sort-direction-form">
+              <label class="usa-label" for="sort-direction"></label>
+              <div class="sort-outer">
+                <select class="usa-select select-sort" id="sort-direction" name="sort-direction">
+                  <option valuer="" disabled selected>Sort Direction</option>
+                  <option value="ascending">Ascending</option>
+                  <option value="descending">Descending</option>
+                </select>
+                <svg class="usa-icon filter-icon" aria-hidden="true" focusable="false" role="img">
+                  <use href="{{ site.baseurl }}/assets/img/sprite.svg#sort_arrow"></use>
+                </svg>
+              </div>
+            </form>
           </div>
-        </div>
-        <div class="sort-dropdown">
-          <form class="usa-form" id="sort-selection-form">
-            <label class="usa-label" for="sort-selection">Sort by</label>
-            <select class="usa-select border-base-light" id="sort-selection" name="sort-selection">
-              <option value="name">Project Name</option>
-              <option value="fisma_level">FISMA Compliance Level</option>
-              <option value="project_type">Project Type</option>
-              <option value="stargazers_count">Stars</option>
-              <option value="maturity_model_tier">Maturity Model Tier</option>
-              <option value="forks_count">Forks</option>
-            </select>
-          </form>
 
-          <form class="usa-form" id="sort-direction-form">
-            <label class="usa-label" for="sort-direction">Sort Direction</label>
-            <select class="usa-select border-base-light" id="sort-direction" name="sort-direction">
-              <option value="ascending">Ascending</option>
-              <option value="descending">Descending</option>
-            </select>
-          </form>
         </div>
+      <div class="padding-left-05" id="filter-tags"></div>
+      <div id="content-container">
+        <div id="pagination-controls" class="usa-pagination">
+          <ul class="project-card-list">
+            {% assign itemsPerPage = 10 %}
+            {% assign totalProjects = projects | size %}
+            {% assign totalPages = totalPages | divided_by: itemsPerPage | ceil %}
+            {% assign currentPage = pagination.pageNumber | default: 1 | minus: 1 %}
+            {% assign startIndex = currentPage | times: itemsPerPage %}
+            {% assign paginatedProjects = projects | slice: startIndex, itemsPerPage %}
+            {% for project in paginatedProjects %}
+              {% include "project-card.liquid" %}
+            {% endfor %}
+          </ul>
       </div>
 
-      <div class="padding-left-05" id="filter-tags"></div>
-      <div id="content-container"></div>
+      <!-- <nav aria-label="Pagination" class="usa-pagination">
+        <ul class="usa-pagination__list">
+          {% if currentPage > 0 %}
+            <li class="usa-pagination__item usa-pagination__arrow">
+              <a href="/projects/page/{{ currentPage | minus: 1 }}/" class="usa-pagination__link usa-pagination__previous-page" aria-label="Previous page">
+                <svg class="usa-icon" aria-hidden="true" role="img">
+                  <use xlink:href="/assets/img/sprite.svg#navigate_before"></use>
+                </svg>
+                <span class="usa-pagination__link-text">Previous</span>
+              </a>
+            </li>
+          {% endif %}
+
+          {% for page in (1..totalPages) %}
+            <li class="usa-pagination__item usa-pagination__page-no">
+              {% assign adjustedCurrentPage = currentPage | plus: 1 %}
+              <a href="?page={{ page }}" class="usa-pagination__button {% if page == adjustedCurrentPage %}active{% endif %}" aria-label="Page {{ page }}" aria-current="{{ page }}">
+                {{ page }}
+              </a>
+            </li>
+          {% endfor %}
+
+          {% if currentPage < totalPages | minus: 1 %}
+            <li class="usa-pagination__item usa-pagination__arrow">
+              <a href="/projects/page/{{ currentPage | plus: 1 }}/" class="usa-pagination__link usa-pagination__next-page" aria-label="Next page">
+                <span class="usa-pagination__link-text">Next </span>
+                <svg class="usa-icon" aria-hidden="true" role="img">
+                  <use xlink:href="/assets/img/sprite.svg#navigate_next"></use>
+                </svg>
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+      </nav> -->
+
+    </div>
   </div>
 </div>

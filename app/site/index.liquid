@@ -2,57 +2,69 @@
 layout: base
 ---
 <div class="grid-container">
-  <div class="title">
-    <img src="{{ "/assets/img/cms-logo.jpg" | url }}" class="logo">
-    <h1>Metrics Website</h1>
-  </div>
-  <p>
-    {{ site.description }}
-  </p>
-  <ul class="usa-card-group">
+  <section class="home-page-description">
+    <div class="description-styling">
+      <h2>Metrics & Code.JSON</h2>
+    </div>
+    <p>
+      <strong>Metrics</strong> provides meaningful insights into project performance and code quality,
+      empowering teams to make informed decisions. By analyzing key data points such as contributor activity,
+      issue resolution times, code complexity and dependency health, Metrics transforms raw data into actionable visualizations.
+      With a focus on clarity and accessibility, Metrics enables organizations to monitor progress,
+      identify improvement opportunities and measure the impact of work.
+    </p>
+    <p>
+      <strong>Code.JSON</strong> serves as a powerful tool for open-source project transparency and compliance.
+      Code.JSON provides a standerdized metadata format that enables dicoverability, reuse and collaboration on governemnt open-source
+      projects. Using the <a href="https://github.com/DSACMS/codejson-generator" target="_blank" rel"noopener noreferrer">code.json generator,</a> organizations can effortlessly create and validate their code.json files,
+      ensuring alignment with federal guidelines while showcasing open-source contributions to the broader community. 
+    </p>
+    <p>
+      {{ site.description }}
+    </p>
+  </section>
+  <ul class="usa-card-group-home">
     <li class="usa-card tablet:grid-col-6">
-      <div class="usa-card__container">
-        <div class="usa-card__header">
-          <h2 class="usa-card__heading">
-            <svg class="usa-icon" aria-labelledby="organizations" role="img">
-              <title id="organizations-category"> Organizations </title>
-              {% lucide "building-2" %}
-            </svg>
-            <a href="{{ "/organizations/" | url}}" class="text-no-underline"
-              >Organizations
-              <span class="chevrons-right">
-                <svg class="usa-icon usa-icon--size-2" aria-hidden="true" focusable="false" role="img">
-                  <use xlink:href= {{ "/assets/img/sprite.svg#navigate_far_next" | url }}></use>
+      <div class="usa-card-outer">
+        <div class="usa-card-middle">
+          <a href="{{ "/organizations/" | url}}" class="href-home">
+            <div class="usa-card__container">
+              <div class="home-icon-container">
+                <svg class="usa-icon--size-5" aria-hidden="true" focusable="false" role="img">
+                  <use href="{{ site.baseurl }}/assets/img/sprite.svg#groups"></use>
                 </svg>
-              </span>
-            </a>
-          </h2>
-        </div>
-        <div class="usa-card__body">
-          <p>View Metrics on our GitHub Organizations</p>
+              </div>
+              <div class="usa-card__header">
+                <h2 class="usa-card__heading-home">
+                  Organizations
+                </h2>
+                <div class="usa-card__body">
+                  <p>View Metrics on our GitHub Organizations</p>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </li>
     <li class="usa-card tablet:grid-col-6">
-      <div class="usa-card__container">
-        <div class="usa-card__header">
-          <h2 class="usa-card__heading">
-            <svg class="usa-icon" aria-labelledby="projects" role="img">
-              <title id="projects-category"> Projects </title>
-              {% lucide "folder-git-2" %}
-            </svg>
-            <a href="{{ "/projects/" | url}}" class="text-no-underline"
-              >Projects
-              <span class="chevrons-right">
-                <svg class="usa-icon usa-icon--size-2" aria-hidden="true" focusable="false" role="img">
-                  <use xlink:href={{ "/assets/img/sprite.svg#navigate_far_next" | url }} ></use>
+      <div class="usa-card-outer">
+        <div class="usa-card-middle">
+          <a href="{{ "/projects/" | url}}" class="href-home">
+            <div class="usa-card__container">
+              <div class="home-icon-container">
+                <svg class="usa-icon--size-5" aria-hidden="true" focusable="false" role="img">
+                  <use href="{{ site.baseurl }}/assets/img/sprite.svg#folder_open"></use>
                 </svg>
-              </span>
-            </a>
-          </h2>
-        </div>
-        <div class="usa-card__body">
-          <p>View Metrics on our {{ projects.length }}+ Repositories</p>
+              </div>
+              <div class="usa-card__header">
+                <h2 class="usa-card__heading-home">Projects</h2>
+                <div class="usa-card__body">
+                  <p>View Metrics on our {{ projects.length }}+ Repositories</p>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </li>

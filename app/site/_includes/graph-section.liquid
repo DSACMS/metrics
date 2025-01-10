@@ -1,17 +1,31 @@
-{% assign className = class | default: 'graph-container' %}
+{% assign className = class | default: 'graph-container-{{ title | slugify}}' %}
 {% assign devPath = 'site/_graphs' | append: path %}
 {% assign distPath = baseurl | append: '/assets/img/graphs' | append: path %}
 {% assign fileExtension = path | split: '.' | last %}
+{% assign modal_description = modal_description %}
 
 {% if devPath | fileExists %}
   <div class="{{ className }}">
-    <h3>{{ title }}</h3>
-    <figure>
-      {% if fileExtension == 'svg' %}
-        <embed type="image/svg+xml" src="{{ distPath }}">
-      {% else %}
-        <img src="{{ distPath }}">
-      {% endif %}
-    </figure>
+    <div class="graph-box">
+      <h3 class="graph-title">{{ title }}</h3>
+      <figure>
+        {% if fileExtension == 'svg' %}
+          <embed type="image/svg+xml" src="{{ distPath }}">
+        {% else %}
+          <img src="{{ distPath }}">
+        {% endif %}
+      </figure>
+      <div class="modal-button-styling">
+        <a
+          href="#{{ title | slugify }}-modal"
+          class="usa-button modal-button"
+          aria-controls="{{ title | slugify }}-modal"
+          data-open-modal
+        >
+          Learn More
+        </a>
+      </div>
+      {% render "modal-content", title: title, modal_description: modal_description %}
+    </div>
   </div>
 {% endif %}
