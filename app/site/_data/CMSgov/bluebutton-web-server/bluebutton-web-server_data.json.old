@@ -7,8 +7,8 @@
     "issues_count": 26,
     "open_issues_count": 0,
     "closed_issues_count": 26,
-    "pull_requests_count": 1248,
-    "open_pull_requests_count": 7,
+    "pull_requests_count": 1249,
+    "open_pull_requests_count": 8,
     "merged_pull_requests_count": 1024,
     "closed_pull_requests_count": 217,
     "forks_count": 24,
@@ -27,22 +27,35 @@
         "2024/9": 9,
         "2024/8": 1
     },
-    "new_commit_contributors_by_day_over_last_month": [],
+    "new_commit_contributors_by_day_over_last_month": [
+        [
+            "2024-12-12T00:00:00.000Z",
+            1
+        ],
+        [
+            "2024-12-13T00:00:00.000Z",
+            1
+        ],
+        [
+            "2024-12-16T00:00:00.000Z",
+            1
+        ]
+    ],
     "new_commit_contributors_by_day_over_last_six_months": [
         [
-            "2024-07-11T00:00:00.000Z",
+            "2024-07-22T00:00:00.000Z",
             1
         ],
         [
-            "2024-07-15T00:00:00.000Z",
-            1
-        ],
-        [
-            "2024-07-16T00:00:00.000Z",
+            "2024-07-29T00:00:00.000Z",
             1
         ],
         [
             "2024-07-30T00:00:00.000Z",
+            1
+        ],
+        [
+            "2024-07-31T00:00:00.000Z",
             1
         ],
         [
@@ -69,16 +82,16 @@
     "nadia_badge_name": "club",
     "created_at": "2016-01-20T21:52:00Z",
     "ossf_scorecard": {
-        "date": "2024-12-22T09:07:18Z",
+        "date": "2025-01-05T09:13:01Z",
         "repo": {
             "name": "github.com/CMSgov/bluebutton-web-server",
             "commit": "356ba5872da98a3165879ea5a5aa07678f75d2bf"
         },
         "scorecard": {
-            "version": "v5.0.0-120-g5e90f2dd",
-            "commit": "5e90f2dd5f343abfbf4583135d729b8d4167c162"
+            "version": "v5.0.0-125-g975ee230",
+            "commit": "975ee2304ef7097c94a377fe95976604b4adcf22"
         },
-        "score": 6.9,
+        "score": 6.8,
         "checks": [
             {
                 "details": null,
@@ -86,7 +99,7 @@
                 "reason": "binaries present in source code",
                 "name": "Binary-Artifacts",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/5e90f2dd5f343abfbf4583135d729b8d4167c162/docs/checks.md#binary-artifacts",
+                    "url": "https://github.com/ossf/scorecard/blob/975ee2304ef7097c94a377fe95976604b4adcf22/docs/checks.md#binary-artifacts",
                     "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
                 }
             },
@@ -96,7 +109,7 @@
                 "reason": "branch protection is not maximal on development and all release branches",
                 "name": "Branch-Protection",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/5e90f2dd5f343abfbf4583135d729b8d4167c162/docs/checks.md#branch-protection",
+                    "url": "https://github.com/ossf/scorecard/blob/975ee2304ef7097c94a377fe95976604b4adcf22/docs/checks.md#branch-protection",
                     "short": "Determines if the default and release branches are protected with GitHub's branch protection settings."
                 }
             },
@@ -106,7 +119,7 @@
                 "reason": "30 out of 30 merged PRs checked by a CI test -- score normalized to 10",
                 "name": "CI-Tests",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/5e90f2dd5f343abfbf4583135d729b8d4167c162/docs/checks.md#ci-tests",
+                    "url": "https://github.com/ossf/scorecard/blob/975ee2304ef7097c94a377fe95976604b4adcf22/docs/checks.md#ci-tests",
                     "short": "Determines if the project runs tests before pull requests are merged."
                 }
             },
@@ -116,7 +129,7 @@
                 "reason": "no effort to earn an OpenSSF best practices badge detected",
                 "name": "CII-Best-Practices",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/5e90f2dd5f343abfbf4583135d729b8d4167c162/docs/checks.md#cii-best-practices",
+                    "url": "https://github.com/ossf/scorecard/blob/975ee2304ef7097c94a377fe95976604b4adcf22/docs/checks.md#cii-best-practices",
                     "short": "Determines if the project has an OpenSSF (formerly CII) Best Practices Badge."
                 }
             },
@@ -126,7 +139,7 @@
                 "reason": "all changesets reviewed",
                 "name": "Code-Review",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/5e90f2dd5f343abfbf4583135d729b8d4167c162/docs/checks.md#code-review",
+                    "url": "https://github.com/ossf/scorecard/blob/975ee2304ef7097c94a377fe95976604b4adcf22/docs/checks.md#code-review",
                     "short": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
                 }
             },
@@ -136,7 +149,7 @@
                 "reason": "project has 22 contributing companies or organizations",
                 "name": "Contributors",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/5e90f2dd5f343abfbf4583135d729b8d4167c162/docs/checks.md#contributors",
+                    "url": "https://github.com/ossf/scorecard/blob/975ee2304ef7097c94a377fe95976604b4adcf22/docs/checks.md#contributors",
                     "short": "Determines if the project has a set of contributors from multiple organizations (e.g., companies)."
                 }
             },
@@ -146,7 +159,7 @@
                 "reason": "no dangerous workflow patterns detected",
                 "name": "Dangerous-Workflow",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/5e90f2dd5f343abfbf4583135d729b8d4167c162/docs/checks.md#dangerous-workflow",
+                    "url": "https://github.com/ossf/scorecard/blob/975ee2304ef7097c94a377fe95976604b4adcf22/docs/checks.md#dangerous-workflow",
                     "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
                 }
             },
@@ -156,7 +169,7 @@
                 "reason": "update tool detected",
                 "name": "Dependency-Update-Tool",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/5e90f2dd5f343abfbf4583135d729b8d4167c162/docs/checks.md#dependency-update-tool",
+                    "url": "https://github.com/ossf/scorecard/blob/975ee2304ef7097c94a377fe95976604b4adcf22/docs/checks.md#dependency-update-tool",
                     "short": "Determines if the project uses a dependency update tool."
                 }
             },
@@ -166,7 +179,7 @@
                 "reason": "project is not fuzzed",
                 "name": "Fuzzing",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/5e90f2dd5f343abfbf4583135d729b8d4167c162/docs/checks.md#fuzzing",
+                    "url": "https://github.com/ossf/scorecard/blob/975ee2304ef7097c94a377fe95976604b4adcf22/docs/checks.md#fuzzing",
                     "short": "Determines if the project uses fuzzing."
                 }
             },
@@ -176,17 +189,17 @@
                 "reason": "license file detected",
                 "name": "License",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/5e90f2dd5f343abfbf4583135d729b8d4167c162/docs/checks.md#license",
+                    "url": "https://github.com/ossf/scorecard/blob/975ee2304ef7097c94a377fe95976604b4adcf22/docs/checks.md#license",
                     "short": "Determines if the project has defined a license."
                 }
             },
             {
                 "details": null,
                 "score": 10,
-                "reason": "23 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10",
+                "reason": "20 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10",
                 "name": "Maintained",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/5e90f2dd5f343abfbf4583135d729b8d4167c162/docs/checks.md#maintained",
+                    "url": "https://github.com/ossf/scorecard/blob/975ee2304ef7097c94a377fe95976604b4adcf22/docs/checks.md#maintained",
                     "short": "Determines if the project is \"actively maintained\"."
                 }
             },
@@ -196,7 +209,7 @@
                 "reason": "packaging workflow not detected",
                 "name": "Packaging",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/5e90f2dd5f343abfbf4583135d729b8d4167c162/docs/checks.md#packaging",
+                    "url": "https://github.com/ossf/scorecard/blob/975ee2304ef7097c94a377fe95976604b4adcf22/docs/checks.md#packaging",
                     "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
                 }
             },
@@ -206,7 +219,7 @@
                 "reason": "dependency not pinned by hash detected -- score normalized to 0",
                 "name": "Pinned-Dependencies",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/5e90f2dd5f343abfbf4583135d729b8d4167c162/docs/checks.md#pinned-dependencies",
+                    "url": "https://github.com/ossf/scorecard/blob/975ee2304ef7097c94a377fe95976604b4adcf22/docs/checks.md#pinned-dependencies",
                     "short": "Determines if the project has declared and pinned the dependencies of its build process."
                 }
             },
@@ -216,7 +229,7 @@
                 "reason": "SAST tool is run on all commits",
                 "name": "SAST",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/5e90f2dd5f343abfbf4583135d729b8d4167c162/docs/checks.md#sast",
+                    "url": "https://github.com/ossf/scorecard/blob/975ee2304ef7097c94a377fe95976604b4adcf22/docs/checks.md#sast",
                     "short": "Determines if the project uses static code analysis."
                 }
             },
@@ -226,7 +239,7 @@
                 "reason": "security policy file not detected",
                 "name": "Security-Policy",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/5e90f2dd5f343abfbf4583135d729b8d4167c162/docs/checks.md#security-policy",
+                    "url": "https://github.com/ossf/scorecard/blob/975ee2304ef7097c94a377fe95976604b4adcf22/docs/checks.md#security-policy",
                     "short": "Determines if the project has published a security policy."
                 }
             },
@@ -236,7 +249,7 @@
                 "reason": "no releases found",
                 "name": "Signed-Releases",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/5e90f2dd5f343abfbf4583135d729b8d4167c162/docs/checks.md#signed-releases",
+                    "url": "https://github.com/ossf/scorecard/blob/975ee2304ef7097c94a377fe95976604b4adcf22/docs/checks.md#signed-releases",
                     "short": "Determines if the project cryptographically signs release artifacts."
                 }
             },
@@ -246,17 +259,17 @@
                 "reason": "detected GitHub workflow tokens with excessive permissions",
                 "name": "Token-Permissions",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/5e90f2dd5f343abfbf4583135d729b8d4167c162/docs/checks.md#token-permissions",
+                    "url": "https://github.com/ossf/scorecard/blob/975ee2304ef7097c94a377fe95976604b4adcf22/docs/checks.md#token-permissions",
                     "short": "Determines if the project's workflows follow the principle of least privilege."
                 }
             },
             {
                 "details": null,
-                "score": 9,
-                "reason": "1 existing vulnerabilities detected",
+                "score": 7,
+                "reason": "3 existing vulnerabilities detected",
                 "name": "Vulnerabilities",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/5e90f2dd5f343abfbf4583135d729b8d4167c162/docs/checks.md#vulnerabilities",
+                    "url": "https://github.com/ossf/scorecard/blob/975ee2304ef7097c94a377fe95976604b4adcf22/docs/checks.md#vulnerabilities",
                     "short": "Determines if the project has open, known unfixed vulnerabilities."
                 }
             }
@@ -641,17 +654,17 @@
         [
             "This",
             -1,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "WARNING",
             -1,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "asgiref",
             1.2547945205,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "attrs",
@@ -664,6 +677,11 @@
             "2024-11-12T18:15:14.000"
         ],
         [
+            "attrs",
+            1.6684931507,
+            "2025-01-01T18:34:03.000"
+        ],
+        [
             "backports-zoneinfo",
             0,
             "2024-10-16T23:09:43.000"
@@ -671,7 +689,7 @@
         [
             "beautifulsoup4",
             0.7808219178,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "boto3",
@@ -694,6 +712,11 @@
             "2024-11-12T18:15:14.000"
         ],
         [
+            "boto3",
+            1.6328767123,
+            "2025-01-01T18:34:03.000"
+        ],
+        [
             "botocore",
             0.7835616438,
             "2024-04-13T01:23:56.000"
@@ -714,9 +737,14 @@
             "2024-11-12T18:15:14.000"
         ],
         [
+            "botocore",
+            1.495890411,
+            "2025-01-01T18:34:03.000"
+        ],
+        [
             "by",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "certifi",
@@ -727,6 +755,11 @@
             "certifi",
             0.1561643836,
             "2024-11-12T18:15:14.000"
+        ],
+        [
+            "certifi",
+            0.4465753425,
+            "2025-01-01T18:34:03.000"
         ],
         [
             "certifi",
@@ -746,7 +779,7 @@
         [
             "cffi",
             2.1835616438,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "charset-normalizer",
@@ -759,6 +792,11 @@
             "2024-11-12T18:15:14.000"
         ],
         [
+            "charset-normalizer",
+            1.8054794521,
+            "2025-01-01T18:34:03.000"
+        ],
+        [
             "configparser",
             1.5150684932,
             "2024-04-13T01:23:56.000"
@@ -766,7 +804,7 @@
         [
             "configparser",
             2,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "cryptography",
@@ -789,6 +827,11 @@
             "2024-11-12T18:15:14.000"
         ],
         [
+            "cryptography",
+            0.4794520548,
+            "2025-01-01T18:34:03.000"
+        ],
+        [
             "deprecated",
             1.7232876712,
             "2024-04-13T01:23:56.000"
@@ -806,7 +849,7 @@
         [
             "dj-database-url",
             1.4904109589,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "django",
@@ -820,13 +863,18 @@
         ],
         [
             "django",
+            0.3287671233,
+            "2025-01-01T18:34:03.000"
+        ],
+        [
+            "django",
             0.4219178082,
             "2024-04-13T01:23:56.000"
         ],
         [
             "django-axes",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "django-bootstrap-form",
@@ -836,22 +884,22 @@
         [
             "django-bootstrap-v5",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "django-cors-headers",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "django-filter",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "django-getenv",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "django-ipware",
@@ -861,32 +909,32 @@
         [
             "django-ipware",
             1.1260273973,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "django-localflavor",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "django-oauth-toolkit",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "django-ses",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "django-settings-export",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "django-storages",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "django-waffle",
@@ -894,14 +942,19 @@
             "2024-11-12T18:15:14.000"
         ],
         [
+            "django-waffle",
+            2.2136986301,
+            "2025-01-01T18:34:03.000"
+        ],
+        [
             "djangorestframework",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "djangorestframework-csv",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "djangorestframework-yaml",
@@ -911,7 +964,7 @@
         [
             "hash",
             -1,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "idna",
@@ -921,7 +974,7 @@
         [
             "idna",
             0.4301369863,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "idna",
@@ -941,7 +994,7 @@
         [
             "importlib-metadata",
             1.3917808219,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "importlib-resources",
@@ -956,22 +1009,22 @@
         [
             "importlib-resources",
             1.5589041096,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "jmespath",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "jsonschema",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "jwcrypto",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "newrelic",
@@ -989,9 +1042,14 @@
             "2024-11-12T18:15:14.000"
         ],
         [
+            "newrelic",
+            1.7068493151,
+            "2025-01-01T18:34:03.000"
+        ],
+        [
             "oauthlib",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "pillow",
@@ -1001,17 +1059,17 @@
         [
             "pillow",
             0.5397260274,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "pinned",
             -1,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "pip-compile",
             -1,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "pip-tools",
@@ -1021,7 +1079,7 @@
         [
             "pkgutil-resolve-name",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "psycopg2-binary",
@@ -1031,17 +1089,17 @@
         [
             "psycopg2-binary",
             1.5369863014,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "py",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "pycparser",
             2.397260274,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "pyjwt",
@@ -1054,19 +1112,24 @@
             "2024-11-12T18:15:14.000"
         ],
         [
+            "pyjwt",
+            1.5561643836,
+            "2025-01-01T18:34:03.000"
+        ],
+        [
             "pyrsistent",
             0.8219178082,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "python-dateutil",
             2.6328767123,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "python-dotenv",
             0.9095890411,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "python-openid",
@@ -1076,7 +1139,7 @@
         [
             "python-stdnum",
             1.3424657534,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "pytz",
@@ -1086,12 +1149,12 @@
         [
             "pytz",
             1.4547945205,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "pyyaml",
             1.0547945205,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "pyyaml",
@@ -1101,17 +1164,17 @@
         [
             "requests",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "requests-oauthlib",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "requirements",
             -1,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "requirements.in",
@@ -1121,17 +1184,17 @@
         [
             "s3transfer",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "satisfied",
             -1,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "setuptools",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "six",
@@ -1139,9 +1202,14 @@
             "2024-11-12T18:15:14.000"
         ],
         [
+            "six",
+            3.5863013699,
+            "2025-01-01T18:34:03.000"
+        ],
+        [
             "soupsieve",
             1.3260273973,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "sqlparse",
@@ -1152,6 +1220,11 @@
             "sqlparse",
             0.2547945205,
             "2024-11-12T18:15:14.000"
+        ],
+        [
+            "sqlparse",
+            0.6575342466,
+            "2025-01-01T18:34:03.000"
         ],
         [
             "trusted-host",
@@ -1166,12 +1239,12 @@
         [
             "typing-extensions",
             1.3095890411,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "unicodecsv",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "urllib3",
@@ -1189,9 +1262,14 @@
             "2024-04-13T01:23:56.000"
         ],
         [
+            "urllib3",
+            0.5123287671,
+            "2025-01-01T18:34:03.000"
+        ],
+        [
             "via",
             0,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "voluptuous",
@@ -1201,7 +1279,7 @@
         [
             "voluptuous",
             2.2383561644,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "wrapt",
@@ -1221,7 +1299,7 @@
         [
             "zipp",
             0.4328767123,
-            "2024-11-12T18:15:14.000"
+            "2025-01-01T18:34:03.000"
         ],
         [
             "zipp",
