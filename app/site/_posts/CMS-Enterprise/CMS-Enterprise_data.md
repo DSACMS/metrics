@@ -1,12 +1,12 @@
 ---
 layout: org-report
-title: Open Source at CMS Metrics Report for CMS-Enterprise | REPORT-2025-01-05
+title: Open Source at CMS Metrics Report for CMS-Enterprise | REPORT-2025-01-11
 permalink: /CMS-Enterprise/
 
 org: CMS-Enterprise
-reportID: REPORT-2025-01-05
-date_stampThisWeek: 2025-01-05
-date_stampLastWeek: 2025-01-05
+reportID: REPORT-2025-01-11
+date_stampThisWeek: 2025-01-11
+date_stampLastWeek: 2025-01-11
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -103,15 +103,15 @@ date_stampLastWeek: 2025-01-05
 </div>
 <div class="graph-container">
   <br>
-  <h2>Activity Graphs</h2>
+  <h2 class="graph-section-title">Activity Graphs</h2>
   <div class="all-graphs">
     <!--- Issues/PRs Status Breakdown Graph -->
-    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/CMS-Enterprise_issue_gauge.svg", title: "Issues & PRs Status Breakdown" %}
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/CMS-Enterprise_issue_gauge.svg", title: "Issues & PRs Status Breakdown", modal_description: "This graph provides an overview of the statuses of issues and pull requests in the organization. It categorizes them into open issues, open pull requests, and closed and merged pull requests, helping track progress and worklad distribution." %}
     <!-- New Issues over Last 6 Months -->
-    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/CMS-Enterprise_new_issues_by_day_over_last_six_months.svg", title: "New Issues over Last 6 Months" %}
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/CMS-Enterprise_new_issues_by_day_over_last_six_months.svg", title: "New Issues over Last 6 Months", modal_description: "These graphs illustrate the number of new contributors joining the organization over time. They show data for six-month intervals, providing insights into contributor growth and onboarding rates." %}
     <!-- Top Committers Bar Graph -->
-    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/CMS-Enterprise_top_committers.svg", title: "Top Committers" %}
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/CMS-Enterprise_top_committers.svg", title: "Top Committers", modal_description: "This graph highlights the top contributors with the organizations, ranked by the number of commits they have made. It provides insights into the most active members driving developement efforts and their relative contributions to the organization's repositories." %}
     <!-- Libyear Timeline Graph -->
-    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/CMS-Enterprise_libyear_timeline.svg", title: "Dependency Libyears" %}
+    {% render "graph-section" baseurl: site.baseurl, path: "/CMS-Enterprise/CMS-Enterprise_libyear_timeline.svg", title: "Dependency Libyears", modal_description: "This timeline graph visualizes the age of dependencies in the organization in terms of 'libyears.' It highlights how up-to-date the dependencies are and the potential risk of outdated libraries." %}
   </div>
 </div>

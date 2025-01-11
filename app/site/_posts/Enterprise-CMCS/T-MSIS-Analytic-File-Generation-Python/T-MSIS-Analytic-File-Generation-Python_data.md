@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for T-MSIS-Analytic-File-Generation-Python | REPORT-2025-01-05
+title: Open Source at CMS Metrics Report for T-MSIS-Analytic-File-Generation-Python | REPORT-2025-01-11
 permalink: /Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/
 
 org: Enterprise-CMCS
 repo: T-MSIS-Analytic-File-Generation-Python
-reportID: REPORT-2025-01-05
-date_stampThisWeek: 2025-01-05
-date_stampLastWeek: 2025-01-05
+reportID: REPORT-2025-01-11
+date_stampThisWeek: 2025-01-11
+date_stampLastWeek: 2025-01-11
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2025-01-05
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>606</td>
         <td>397</td>
-        <td>397</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >209</td>
+        <td style="color: #45c527" >42%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -59,10 +59,10 @@ date_stampLastWeek: 2025-01-05
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>221</td>
         <td>220</td>
-        <td>219</td>
         <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.46%</td>
+        <td style="color: #45c527" >0.45%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -81,9 +81,9 @@ date_stampLastWeek: 2025-01-05
       <tr>
         <th scope="row">Stars</th>
         <td>5</td>
-        <td>4</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >22%</td>
+        <td>5</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
@@ -95,36 +95,44 @@ date_stampLastWeek: 2025-01-05
     </tbody>
   </table>
 </div>
-<div class="graph-container">
+<div class="graph-section">
   <br>
-  <h2>Activity Graphs</h2>
+  <h2 class="graph-section-title">Activity Graphs</h2>
   <div class="all-graphs">
     <!--- Issues/PRs Status Breakdown Graph -->
-    {% render "graph-section"  baseurl: site.baseurl, path: "/Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/issue_gauge_T-MSIS-Analytic-File-Generation-Python_data.svg", title: "Issues & PRs Status Breakdown" %}
+    {% render "graph-section"  baseurl: site.baseurl, path: "/Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/issue_gauge_T-MSIS-Analytic-File-Generation-Python_data.svg", title: "Issues & PRs Status Breakdown", modal_description: "This graph provides an overview of the statuses of issues and pull requests in the repository. It categorizes them into open issues, open pull requests, and closed and merged pull requests, helping track progress and worklad distribution." %}
     <!--- Contributor Activity Line Graph -->
-    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/commit_sparklines_T-MSIS-Analytic-File-Generation-Python_data.svg", title: "Commits by Month" %}
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/commit_sparklines_T-MSIS-Analytic-File-Generation-Python_data.svg", title: "Commits by Month", modal_description: "This line graph represents contributor activity over time by showing the number of commits made each month. It provides insights into trends in developement and periods of high and low activity." %}
     <!--- First Response For Closed PR Scatterplot -->
-    {% render "graph-section" baseurl: site.baseurl, class: "firstResponsePRCrop", path: "/Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/firstResponseForClosedPR_T-MSIS-Analytic-File-Generation-Python_data.png", title: "First Response For Closed PR" %}
-    <!--- Line Complexity Graphs -->
-    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/total_line_makeup_T-MSIS-Analytic-File-Generation-Python_data.svg", title: "Line Complexity" %}
+    {% render "graph-section" baseurl: site.baseurl, class: "firstResponsePRCrop", path: "/Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/firstResponseForClosedPR_T-MSIS-Analytic-File-Generation-Python_data.png", title: "First Response For Closed PR", modal_description: "This scatterplot visualizes the time it takes for the first response on closed pull requests. Each point represents a pull request, helping analyze the response times and potential bottlenecks in the review process." %}
     <!--- New Commit Contributors by Day over Last Month and Last 6 Months -->
       {% assign optionsArray = '1 Month, 6 Month' | split: ',' %}
       {% assign graphsArray = '/Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/new_commit_contributors_by_day_over_last_month_T-MSIS-Analytic-File-Generation-Python_data.svg, /Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/new_commit_contributors_by_day_over_last_six_months_T-MSIS-Analytic-File-Generation-Python_data.svg' | split: ',' %}
-      {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval" %}
+      {% render "graph-toggle", baseurl: site.baseurl, name: "new-contributors" options: optionsArray, graphs: graphsArray, title: "Number of Contributors Joining per Interval", modal_description: "These graphs illustrate the number of new contributors joining the project over time. They show data for one-month and six-month intervals, providing insights into contributor growth and onboarding rates." %}
+  </div>
+</div>
+
+<div class="graph-section">
+  <br>
+  <h2 class="graph-section-title">COCOMO Graphs</h2>
+  <div class="all-graphs">
+    <!--- Line Complexity Graphs -->
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/total_line_makeup_T-MSIS-Analytic-File-Generation-Python_data.svg", title: "Line Complexity", modal_description: "This graph measures the complexity of the codebase over time by analyzing the number lines, blank line and commented lines." %}
     <!-- Languages Graphs - Summary + Predominant -->
     {% assign optionsArray = 'Summary, Predominant' | split: ',' %}
     {% assign graphsArray = "/Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/language_summary_T-MSIS-Analytic-File-Generation-Python_data.svg, /Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/predominant_langs_T-MSIS-Analytic-File-Generation-Python_data.svg" | split: ',' %}
     {% render "graph-toggle" baseurl: site.baseurl, name:"language-information" options: optionsArray, graphs: graphsArray, title: "Language Information" %}
     <!-- Average Issue Resolution Time -->
-    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/average_issue_resolution_time_T-MSIS-Analytic-File-Generation-Python_data.svg", title: "Average Issue Resolution Time" %}
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/average_issue_resolution_time_T-MSIS-Analytic-File-Generation-Python_data.svg", title: "Average Issue Resolution Time", modal_description: "This graph tracks the average time taken to resolve issues in the repository. It helps identify trends in issue resolution efficiency and areas for improvement." %}
     <!-- Libyear Timeline Graph -->
-    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/libyear_timeline_T-MSIS-Analytic-File-Generation-Python_data.svg", title: "Dependency Libyears" %}
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/libyear_timeline_T-MSIS-Analytic-File-Generation-Python_data.svg", title: "Dependency Libyears", modal_description: "This timeline graph visualizes the age of dependencies in the repository in terms of 'libyears.' It highlights how up-to-date the dependencies are and the potential risk of outdated libraries." %}
     <!-- DRYness Percentages Graph -->
-    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/DRYness_T-MSIS-Analytic-File-Generation-Python_data.svg", title: "DRYness Percentage Graph" %}
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/DRYness_T-MSIS-Analytic-File-Generation-Python_data.svg", title: "DRYness Percentage Graph", modal_description: "This graph measures the 'Don't Repeat Yourself' (DRY) principle compliance in the repository. It calculates the percentage of duplicate versus unique code, indicating the overall efficiency of the codebase." %}
     <!-- Cost Estimate Chart -->
-    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/estimated_project_costs_T-MSIS-Analytic-File-Generation-Python_data.svg", title: "Estimated Costs" %}
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/estimated_project_costs_T-MSIS-Analytic-File-Generation-Python_data.svg", title: "Estimated Costs", modal_description: "This graph provides an estimation of the developement cost and corresponding value of the project." %}
      <!-- Time Estimate Chart -->
-    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/estimated_project_time_T-MSIS-Analytic-File-Generation-Python_data.svg", title: "Estimated Time" %}
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/estimated_project_time_T-MSIS-Analytic-File-Generation-Python_data.svg", title: "Estimated Time", modal_description: "This graph estimates the time required to develop the project." %}
     <!-- Contributor Estimate Chart -->
-    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/estimated_people_contributing_T-MSIS-Analytic-File-Generation-Python_data.svg", title: "Estimated Individual Contributors" %}
+    {% render "graph-section" baseurl: site.baseurl, path: "/Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/estimated_people_contributing_T-MSIS-Analytic-File-Generation-Python_data.svg", title: "Estimated Individual Contributors", modal_description: "This graph visualizes the number of contributors required to complete a project, based on current scope." %}
+  </div>
 </div>
