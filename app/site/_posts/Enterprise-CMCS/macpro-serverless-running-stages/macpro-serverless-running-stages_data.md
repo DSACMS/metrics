@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-serverless-running-stages | REPORT-2025-01-11
+title: Open Source at CMS Metrics Report for macpro-serverless-running-stages | REPORT-2025-01-12
 permalink: /Enterprise-CMCS/macpro-serverless-running-stages/
 
 org: Enterprise-CMCS
 repo: macpro-serverless-running-stages
-reportID: REPORT-2025-01-11
-date_stampThisWeek: 2025-01-11
-date_stampLastWeek: 2025-01-11
+reportID: REPORT-2025-01-12
+date_stampThisWeek: 2025-01-12
+date_stampLastWeek: 2025-01-12
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -67,9 +67,9 @@ date_stampLastWeek: 2025-01-11
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>114</td>
-        <td>112</td>
-        <td style="" >2</td>
-        <td style="" >1.8%</td>
+        <td>114</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

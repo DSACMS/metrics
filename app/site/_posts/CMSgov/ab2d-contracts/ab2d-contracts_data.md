@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ab2d-contracts | REPORT-2025-01-11
+title: Open Source at CMS Metrics Report for ab2d-contracts | REPORT-2025-01-12
 permalink: /CMSgov/ab2d-contracts/
 
 org: CMSgov
 repo: ab2d-contracts
-reportID: REPORT-2025-01-11
-date_stampThisWeek: 2025-01-11
-date_stampLastWeek: 2025-01-11
+reportID: REPORT-2025-01-12
+date_stampThisWeek: 2025-01-12
+date_stampLastWeek: 2025-01-12
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

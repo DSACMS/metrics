@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for bluebutton-web-server | REPORT-2025-01-11
+title: Open Source at CMS Metrics Report for bluebutton-web-server | REPORT-2025-01-12
 permalink: /CMSgov/bluebutton-web-server/
 
 org: CMSgov
 repo: bluebutton-web-server
-reportID: REPORT-2025-01-11
-date_stampThisWeek: 2025-01-11
-date_stampLastWeek: 2025-01-11
+reportID: REPORT-2025-01-12
+date_stampThisWeek: 2025-01-12
+date_stampLastWeek: 2025-01-12
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2025-01-11
       <tr>
         <th scope="row">Commits</th>
         <td>3532</td>
-        <td>3528</td>
-        <td style="color: #45c527" >4</td>
-        <td style="color: #45c527" >0.11%</td>
+        <td>3532</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -60,9 +60,9 @@ date_stampLastWeek: 2025-01-11
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>1028</td>
-        <td>1024</td>
-        <td style="color: #45c527" >4</td>
-        <td style="color: #45c527" >0.39%</td>
+        <td>1028</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
