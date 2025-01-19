@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-security-hub-sync | REPORT-2025-01-12
+title: Open Source at CMS Metrics Report for macpro-security-hub-sync | REPORT-2025-01-19
 permalink: /Enterprise-CMCS/macpro-security-hub-sync/
 
 org: Enterprise-CMCS
 repo: macpro-security-hub-sync
-reportID: REPORT-2025-01-12
-date_stampThisWeek: 2025-01-12
-date_stampLastWeek: 2025-01-12
+reportID: REPORT-2025-01-19
+date_stampThisWeek: 2025-01-19
+date_stampLastWeek: 2025-01-19
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -66,10 +66,10 @@ date_stampLastWeek: 2025-01-12
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>166</td>
         <td>164</td>
-        <td>164</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >2</td>
+        <td style="" >1.2%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-mdct-carts | REPORT-2025-01-12
+title: Open Source at CMS Metrics Report for macpro-mdct-carts | REPORT-2025-01-19
 permalink: /Enterprise-CMCS/macpro-mdct-carts/
 
 org: Enterprise-CMCS
 repo: macpro-mdct-carts
-reportID: REPORT-2025-01-12
-date_stampThisWeek: 2025-01-12
-date_stampLastWeek: 2025-01-12
+reportID: REPORT-2025-01-19
+date_stampThisWeek: 2025-01-19
+date_stampLastWeek: 2025-01-19
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -52,10 +52,10 @@ date_stampLastWeek: 2025-01-12
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>16</td>
         <td>12</td>
-        <td>10</td>
-        <td style="" >2</td>
-        <td style="" >18%</td>
+        <td style="" >4</td>
+        <td style="" >29%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>

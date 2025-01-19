@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for iv-cbv-payroll | REPORT-2025-01-12
+title: Open Source at CMS Metrics Report for iv-cbv-payroll | REPORT-2025-01-19
 permalink: /DSACMS/iv-cbv-payroll/
 
 org: DSACMS
 repo: iv-cbv-payroll
-reportID: REPORT-2025-01-12
-date_stampThisWeek: 2025-01-12
-date_stampLastWeek: 2025-01-12
+reportID: REPORT-2025-01-19
+date_stampThisWeek: 2025-01-19
+date_stampLastWeek: 2025-01-19
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -53,9 +53,9 @@ date_stampLastWeek: 2025-01-12
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>7</td>
-        <td>6</td>
-        <td style="" >1</td>
-        <td style="" >15%</td>
+        <td>7</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
@@ -80,17 +80,17 @@ date_stampLastWeek: 2025-01-12
       </tr>
       <tr>
         <th scope="row">Stars</th>
+        <td>4</td>
         <td>2</td>
-        <td>2</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >67%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>4</td>
         <td>3</td>
-        <td>3</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >29%</td>
       </tr>
     </tbody>
   </table>

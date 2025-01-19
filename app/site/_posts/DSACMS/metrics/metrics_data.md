@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for metrics | REPORT-2025-01-12
+title: Open Source at CMS Metrics Report for metrics | REPORT-2025-01-19
 permalink: /DSACMS/metrics/
 
 org: DSACMS
 repo: metrics
-reportID: REPORT-2025-01-12
-date_stampThisWeek: 2025-01-12
-date_stampLastWeek: 2025-01-12
+reportID: REPORT-2025-01-19
+date_stampThisWeek: 2025-01-19
+date_stampLastWeek: 2025-01-19
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2025-01-12
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>1816</td>
         <td>1800</td>
-        <td>1784</td>
         <td style="color: #45c527" >16</td>
-        <td style="color: #45c527" >0.89%</td>
+        <td style="color: #45c527" >0.88%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
