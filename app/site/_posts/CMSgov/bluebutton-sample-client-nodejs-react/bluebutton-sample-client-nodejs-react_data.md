@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for bluebutton-sample-client-nodejs-react | REPORT-2025-01-19
+title: Open Source at CMS Metrics Report for bluebutton-sample-client-nodejs-react | REPORT-2025-01-26
 permalink: /CMSgov/bluebutton-sample-client-nodejs-react/
 
 org: CMSgov
 repo: bluebutton-sample-client-nodejs-react
-reportID: REPORT-2025-01-19
-date_stampThisWeek: 2025-01-19
-date_stampLastWeek: 2025-01-19
+reportID: REPORT-2025-01-26
+date_stampThisWeek: 2025-01-26
+date_stampLastWeek: 2025-01-26
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -52,10 +52,10 @@ date_stampLastWeek: 2025-01-19
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>5</td>
         <td>4</td>
-        <td>4</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >1</td>
+        <td style="" >22%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>

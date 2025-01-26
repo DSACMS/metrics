@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for cql-antlr-parser | REPORT-2025-01-19
+title: Open Source at CMS Metrics Report for cql-antlr-parser | REPORT-2025-01-26
 permalink: /measureauthoringtool/cql-antlr-parser/
 
 org: measureauthoringtool
 repo: cql-antlr-parser
-reportID: REPORT-2025-01-19
-date_stampThisWeek: 2025-01-19
-date_stampLastWeek: 2025-01-19
+reportID: REPORT-2025-01-26
+date_stampThisWeek: 2025-01-26
+date_stampLastWeek: 2025-01-26
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -52,10 +52,10 @@ date_stampLastWeek: 2025-01-19
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>15</td>
         <td>14</td>
-        <td>14</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >1</td>
+        <td style="" >6.9%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
@@ -66,10 +66,10 @@ date_stampLastWeek: 2025-01-19
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>152</td>
         <td>151</td>
-        <td>149</td>
-        <td style="" >2</td>
-        <td style="" >1.3%</td>
+        <td style="" >1</td>
+        <td style="" >0.66%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

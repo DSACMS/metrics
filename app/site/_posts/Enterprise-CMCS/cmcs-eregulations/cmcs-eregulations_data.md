@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for cmcs-eregulations | REPORT-2025-01-19
+title: Open Source at CMS Metrics Report for cmcs-eregulations | REPORT-2025-01-26
 permalink: /Enterprise-CMCS/cmcs-eregulations/
 
 org: Enterprise-CMCS
 repo: cmcs-eregulations
-reportID: REPORT-2025-01-19
-date_stampThisWeek: 2025-01-19
-date_stampLastWeek: 2025-01-19
+reportID: REPORT-2025-01-26
+date_stampThisWeek: 2025-01-26
+date_stampLastWeek: 2025-01-26
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2025-01-19
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>1226</td>
         <td>1219</td>
-        <td>1215</td>
-        <td style="color: #45c527" >4</td>
-        <td style="color: #45c527" >0.33%</td>
+        <td style="color: #45c527" >7</td>
+        <td style="color: #45c527" >0.57%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2025-01-19
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>6</td>
         <td>5</td>
-        <td>4</td>
         <td style="" >1</td>
-        <td style="" >22%</td>
+        <td style="" >18%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>1230</td>
         <td>1223</td>
-        <td>1219</td>
-        <td style="color: #45c527" >4</td>
-        <td style="color: #45c527" >0.33%</td>
+        <td style="color: #45c527" >7</td>
+        <td style="color: #45c527" >0.57%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>274</td>
         <td>271</td>
-        <td>270</td>
-        <td style="" >1</td>
-        <td style="" >0.37%</td>
+        <td style="" >3</td>
+        <td style="" >1.1%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

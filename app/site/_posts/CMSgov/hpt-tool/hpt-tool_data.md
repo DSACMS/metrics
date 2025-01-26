@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for hpt-tool | REPORT-2025-01-19
+title: Open Source at CMS Metrics Report for hpt-tool | REPORT-2025-01-26
 permalink: /CMSgov/hpt-tool/
 
 org: CMSgov
 repo: hpt-tool
-reportID: REPORT-2025-01-19
-date_stampThisWeek: 2025-01-19
-date_stampLastWeek: 2025-01-19
+reportID: REPORT-2025-01-26
+date_stampThisWeek: 2025-01-26
+date_stampLastWeek: 2025-01-26
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2025-01-19
       <tr>
         <th scope="row">Commits</th>
         <td>153</td>
-        <td>151</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >1.3%</td>
+        <td>153</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -60,9 +60,9 @@ date_stampLastWeek: 2025-01-19
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>41</td>
-        <td>40</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >2.5%</td>
+        <td>41</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
