@@ -52,9 +52,9 @@ h1 {
   margin-right: 10px;
 }
 
-.usa-logo {
-  font-size: 1.5em;
-  margin: 1% 0 1% 0;
+.usa-logo a {
+  color: #043884;
+  font-size: 1.1em;
 }
 
 .usa-nav__primary-item {
@@ -692,13 +692,9 @@ iframe:focus, [href]:focus, [tabindex]:focus, [contentEditable=true]:focus {
 }
 
 @media screen and (min-width: 768px) {
-  h1 {
-    font-size: 1.9em;
-    margin: 3% 2% 0 2%;
-  }
-
   .logo {
-    width: 120px;
+    height: 50px;
+    width: auto;
   }
 
   .dashboard-container {
@@ -745,5 +741,7 @@ iframe:focus, [href]:focus, [tabindex]:focus, [contentEditable=true]:focus {
 }
 
 @media screen and (min-width: 1024px) {
-  
+  .usa-logo a{
+    font-size: 1.5em;
+  }
 }
