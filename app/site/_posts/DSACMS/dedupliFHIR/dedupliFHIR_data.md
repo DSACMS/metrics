@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for dedupliFHIR | REPORT-2025-01-26
+title: Open Source at CMS Metrics Report for dedupliFHIR | REPORT-2025-02-02
 permalink: /DSACMS/dedupliFHIR/
 
 org: DSACMS
 repo: dedupliFHIR
-reportID: REPORT-2025-01-26
-date_stampThisWeek: 2025-01-26
-date_stampLastWeek: 2025-01-26
+reportID: REPORT-2025-02-02
+date_stampThisWeek: 2025-02-02
+date_stampLastWeek: 2025-02-02
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -66,10 +66,10 @@ date_stampLastWeek: 2025-01-26
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>71</td>
         <td>67</td>
-        <td>65</td>
-        <td style="" >2</td>
-        <td style="" >3%</td>
+        <td style="" >4</td>
+        <td style="" >5.8%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -87,10 +87,10 @@ date_stampLastWeek: 2025-01-26
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>3</td>
         <td>4</td>
-        <td>4</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >29%</td>
       </tr>
     </tbody>
   </table>

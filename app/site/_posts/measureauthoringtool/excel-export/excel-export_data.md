@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for excel-export | REPORT-2025-01-26
+title: Open Source at CMS Metrics Report for excel-export | REPORT-2025-02-02
 permalink: /measureauthoringtool/excel-export/
 
 org: measureauthoringtool
 repo: excel-export
-reportID: REPORT-2025-01-26
-date_stampThisWeek: 2025-01-26
-date_stampLastWeek: 2025-01-26
+reportID: REPORT-2025-02-02
+date_stampThisWeek: 2025-02-02
+date_stampLastWeek: 2025-02-02
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2025-01-26
       <tr>
         <th scope="row">Commits</th>
         <td>82</td>
-        <td>79</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >3.7%</td>
+        <td>82</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -60,9 +60,9 @@ date_stampLastWeek: 2025-01-26
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>19</td>
-        <td>18</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >5.4%</td>
+        <td>19</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>

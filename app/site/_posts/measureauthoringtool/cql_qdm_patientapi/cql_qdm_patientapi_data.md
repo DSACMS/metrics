@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for cql_qdm_patientapi | REPORT-2025-01-26
+title: Open Source at CMS Metrics Report for cql_qdm_patientapi | REPORT-2025-02-02
 permalink: /measureauthoringtool/cql_qdm_patientapi/
 
 org: measureauthoringtool
 repo: cql_qdm_patientapi
-reportID: REPORT-2025-01-26
-date_stampThisWeek: 2025-01-26
-date_stampLastWeek: 2025-01-26
+reportID: REPORT-2025-02-02
+date_stampThisWeek: 2025-02-02
+date_stampLastWeek: 2025-02-02
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

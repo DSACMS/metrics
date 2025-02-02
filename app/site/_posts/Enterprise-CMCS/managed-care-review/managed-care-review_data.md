@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for managed-care-review | REPORT-2025-01-26
+title: Open Source at CMS Metrics Report for managed-care-review | REPORT-2025-02-02
 permalink: /Enterprise-CMCS/managed-care-review/
 
 org: Enterprise-CMCS
 repo: managed-care-review
-reportID: REPORT-2025-01-26
-date_stampThisWeek: 2025-01-26
-date_stampLastWeek: 2025-01-26
+reportID: REPORT-2025-02-02
+date_stampThisWeek: 2025-02-02
+date_stampLastWeek: 2025-02-02
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2025-01-26
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>2308</td>
         <td>2296</td>
-        <td>2288</td>
-        <td style="color: #45c527" >8</td>
-        <td style="color: #45c527" >0.35%</td>
+        <td style="color: #45c527" >12</td>
+        <td style="color: #45c527" >0.52%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -53,23 +53,23 @@ date_stampLastWeek: 2025-01-26
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>4</td>
-        <td>1</td>
-        <td style="" >3</td>
-        <td style="" >120%</td>
+        <td>4</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>2276</td>
         <td>2264</td>
-        <td>2256</td>
-        <td style="color: #45c527" >8</td>
-        <td style="color: #45c527" >0.35%</td>
+        <td style="color: #45c527" >12</td>
+        <td style="color: #45c527" >0.53%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>847</td>
         <td>838</td>
-        <td>831</td>
-        <td style="" >7</td>
-        <td style="" >0.84%</td>
+        <td style="" >9</td>
+        <td style="" >1.1%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

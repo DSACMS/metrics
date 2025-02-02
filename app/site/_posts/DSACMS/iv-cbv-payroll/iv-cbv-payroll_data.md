@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for iv-cbv-payroll | REPORT-2025-01-26
+title: Open Source at CMS Metrics Report for iv-cbv-payroll | REPORT-2025-02-02
 permalink: /DSACMS/iv-cbv-payroll/
 
 org: DSACMS
 repo: iv-cbv-payroll
-reportID: REPORT-2025-01-26
-date_stampThisWeek: 2025-01-26
-date_stampLastWeek: 2025-01-26
+reportID: REPORT-2025-02-02
+date_stampThisWeek: 2025-02-02
+date_stampLastWeek: 2025-02-02
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2025-01-26
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>575</td>
         <td>568</td>
-        <td>559</td>
-        <td style="color: #45c527" >9</td>
-        <td style="color: #45c527" >1.6%</td>
+        <td style="color: #45c527" >7</td>
+        <td style="color: #45c527" >1.2%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,38 +52,38 @@ date_stampLastWeek: 2025-01-26
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>4</td>
         <td>2</td>
-        <td>7</td>
-        <td style="color: #45c527" >-5</td>
-        <td style="color: #45c527" >110%</td>
+        <td style="" >2</td>
+        <td style="" >67%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>391</td>
         <td>384</td>
-        <td>375</td>
-        <td style="color: #45c527" >9</td>
-        <td style="color: #45c527" >2.4%</td>
+        <td style="color: #45c527" >7</td>
+        <td style="color: #45c527" >1.8%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>34</td>
         <td>32</td>
-        <td>29</td>
-        <td style="" >3</td>
-        <td style="" >9.8%</td>
+        <td style="" >2</td>
+        <td style="" >6.1%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
         <td>2</td>
-        <td>1</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >67%</td>
+        <td>2</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
         <td>5</td>
-        <td>4</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >22%</td>
+        <td>5</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
