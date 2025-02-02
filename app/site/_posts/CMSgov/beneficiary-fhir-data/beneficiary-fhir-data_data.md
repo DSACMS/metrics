@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for beneficiary-fhir-data | REPORT-2025-01-26
+title: Open Source at CMS Metrics Report for beneficiary-fhir-data | REPORT-2025-02-02
 permalink: /CMSgov/beneficiary-fhir-data/
 
 org: CMSgov
 repo: beneficiary-fhir-data
-reportID: REPORT-2025-01-26
-date_stampThisWeek: 2025-01-26
-date_stampLastWeek: 2025-01-26
+reportID: REPORT-2025-02-02
+date_stampThisWeek: 2025-02-02
+date_stampLastWeek: 2025-02-02
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2025-01-26
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>5360</td>
         <td>5352</td>
-        <td>5345</td>
-        <td style="color: #45c527" >7</td>
-        <td style="color: #45c527" >0.13%</td>
+        <td style="color: #45c527" >8</td>
+        <td style="color: #45c527" >0.15%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2025-01-26
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>9</td>
         <td>8</td>
-        <td>12</td>
-        <td style="color: #45c527" >-4</td>
-        <td style="color: #45c527" >40%</td>
+        <td style="" >1</td>
+        <td style="" >12%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>2005</td>
         <td>1999</td>
-        <td>1992</td>
-        <td style="color: #45c527" >7</td>
-        <td style="color: #45c527" >0.35%</td>
+        <td style="color: #45c527" >6</td>
+        <td style="color: #45c527" >0.3%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>487</td>
-        <td>486</td>
-        <td style="" >1</td>
-        <td style="" >0.21%</td>
+        <td>487</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

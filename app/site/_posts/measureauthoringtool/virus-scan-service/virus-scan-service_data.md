@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for virus-scan-service | REPORT-2025-01-26
+title: Open Source at CMS Metrics Report for virus-scan-service | REPORT-2025-02-02
 permalink: /measureauthoringtool/virus-scan-service/
 
 org: measureauthoringtool
 repo: virus-scan-service
-reportID: REPORT-2025-01-26
-date_stampThisWeek: 2025-01-26
-date_stampLastWeek: 2025-01-26
+reportID: REPORT-2025-02-02
+date_stampThisWeek: 2025-02-02
+date_stampLastWeek: 2025-02-02
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2025-01-26
       <tr>
         <th scope="row">Commits</th>
         <td>400</td>
-        <td>397</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >0.75%</td>
+        <td>400</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -53,16 +53,16 @@ date_stampLastWeek: 2025-01-26
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>23</td>
-        <td>24</td>
-        <td style="color: #45c527" >-1</td>
-        <td style="color: #45c527" >4.3%</td>
+        <td>23</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>187</td>
-        <td>186</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.54%</td>
+        <td>187</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for madie-qdm-elm-translation | REPORT-2025-01-26
+title: Open Source at CMS Metrics Report for madie-qdm-elm-translation | REPORT-2025-02-02
 permalink: /measureauthoringtool/madie-qdm-elm-translation/
 
 org: measureauthoringtool
 repo: madie-qdm-elm-translation
-reportID: REPORT-2025-01-26
-date_stampThisWeek: 2025-01-26
-date_stampLastWeek: 2025-01-26
+reportID: REPORT-2025-02-02
+date_stampThisWeek: 2025-02-02
+date_stampLastWeek: 2025-02-02
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -52,10 +52,10 @@ date_stampLastWeek: 2025-01-26
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>93</td>
         <td>89</td>
-        <td>89</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >4</td>
+        <td style="" >4.4%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>

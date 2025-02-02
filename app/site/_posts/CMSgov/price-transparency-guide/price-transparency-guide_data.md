@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for price-transparency-guide | REPORT-2025-01-26
+title: Open Source at CMS Metrics Report for price-transparency-guide | REPORT-2025-02-02
 permalink: /CMSgov/price-transparency-guide/
 
 org: CMSgov
 repo: price-transparency-guide
-reportID: REPORT-2025-01-26
-date_stampThisWeek: 2025-01-26
-date_stampLastWeek: 2025-01-26
+reportID: REPORT-2025-02-02
+date_stampThisWeek: 2025-02-02
+date_stampLastWeek: 2025-02-02
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -73,24 +73,24 @@ date_stampLastWeek: 2025-01-26
       </tr>
       <tr>
         <th scope="row">Forks</th>
+        <td>116</td>
         <td>115</td>
-        <td>114</td>
         <td style="color: #45c527" >1</td>
         <td style="color: #45c527" >0.87%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
+        <td>376</td>
         <td>375</td>
-        <td>375</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.27%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>284</td>
         <td>283</td>
-        <td>283</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.35%</td>
       </tr>
     </tbody>
   </table>
