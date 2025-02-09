@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for price-transparency-guide | REPORT-2025-02-02
+title: Open Source at CMS Metrics Report for price-transparency-guide | REPORT-2025-02-09
 permalink: /CMSgov/price-transparency-guide/
 
 org: CMSgov
 repo: price-transparency-guide
-reportID: REPORT-2025-02-02
-date_stampThisWeek: 2025-02-02
-date_stampLastWeek: 2025-02-02
+reportID: REPORT-2025-02-09
+date_stampThisWeek: 2025-02-09
+date_stampLastWeek: 2025-02-09
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -31,17 +31,17 @@ date_stampLastWeek: 2025-02-02
       </tr>
       <tr>
         <th scope="row">Issues</th>
+        <td>85</td>
         <td>84</td>
-        <td>84</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >1.2%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>17</td>
         <td>16</td>
-        <td>16</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >1</td>
+        <td style="" >6.1%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -74,21 +74,21 @@ date_stampLastWeek: 2025-02-02
       <tr>
         <th scope="row">Forks</th>
         <td>116</td>
-        <td>115</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.87%</td>
+        <td>116</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
+        <td>378</td>
         <td>376</td>
-        <td>375</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.27%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >0.53%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>285</td>
         <td>284</td>
-        <td>283</td>
         <td style="color: #45c527" >1</td>
         <td style="color: #45c527" >0.35%</td>
       </tr>

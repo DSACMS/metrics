@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for design-system | REPORT-2025-02-02
+title: Open Source at CMS Metrics Report for design-system | REPORT-2025-02-09
 permalink: /CMSgov/design-system/
 
 org: CMSgov
 repo: design-system
-reportID: REPORT-2025-02-02
-date_stampThisWeek: 2025-02-02
-date_stampLastWeek: 2025-02-02
+reportID: REPORT-2025-02-09
+date_stampThisWeek: 2025-02-09
+date_stampLastWeek: 2025-02-09
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,24 +24,24 @@ date_stampLastWeek: 2025-02-02
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>2408</td>
         <td>2403</td>
-        <td>2397</td>
-        <td style="color: #45c527" >6</td>
-        <td style="color: #45c527" >0.25%</td>
+        <td style="color: #45c527" >5</td>
+        <td style="color: #45c527" >0.21%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
         <td>248</td>
-        <td>246</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >0.81%</td>
+        <td>248</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
         <td>11</td>
-        <td>9</td>
-        <td style="" >2</td>
-        <td style="" >20%</td>
+        <td>11</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2025-02-02
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>6</td>
         <td>7</td>
-        <td>8</td>
         <td style="color: #45c527" >-1</td>
-        <td style="color: #45c527" >13%</td>
+        <td style="color: #45c527" >15%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>2297</td>
         <td>2292</td>
-        <td>2286</td>
-        <td style="color: #45c527" >6</td>
-        <td style="color: #45c527" >0.26%</td>
+        <td style="color: #45c527" >5</td>
+        <td style="color: #45c527" >0.22%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>768</td>
         <td>763</td>
-        <td>754</td>
-        <td style="" >9</td>
-        <td style="" >1.2%</td>
+        <td style="" >5</td>
+        <td style="" >0.65%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -80,10 +80,10 @@ date_stampLastWeek: 2025-02-02
       </tr>
       <tr>
         <th scope="row">Stars</th>
+        <td>322</td>
         <td>321</td>
-        <td>321</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.31%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
