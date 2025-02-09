@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for bcda-static-site | REPORT-2025-02-02
+title: Open Source at CMS Metrics Report for bcda-static-site | REPORT-2025-02-09
 permalink: /CMSgov/bcda-static-site/
 
 org: CMSgov
 repo: bcda-static-site
-reportID: REPORT-2025-02-02
-date_stampThisWeek: 2025-02-02
-date_stampLastWeek: 2025-02-02
+reportID: REPORT-2025-02-09
+date_stampThisWeek: 2025-02-09
+date_stampLastWeek: 2025-02-09
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -87,10 +87,10 @@ date_stampLastWeek: 2025-02-02
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>18</td>
         <td>19</td>
-        <td>19</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >5.4%</td>
       </tr>
     </tbody>
   </table>
