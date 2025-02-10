@@ -6,57 +6,42 @@
         <img src="{{ "/assets/img/cms-logo.jpg" | url }}" class="logo" alt="CMS Logo">
         <div class="usa-logo">
           <em class="usa-logo__text">
-            <a href="{{ "/" | url}}" title="{{site.title}}">Open Source Respository Metrics Website</a>
+            <a href="{{ "/" | url}}" title="{{site.title}}">Open Source Repository Metrics Website</a>
           </em>
         </div>
+        <button class="usa-menu-btn menu-btn-styling">
+          <svg
+            class="usa-icon--size-5 toggle-icon"
+            aria-hidden="true"
+            focusable="false"
+            role="img"
+          >
+            <use href="{{ site.baseurl }}/assets/img/sprite.svg#menu">
+          </svg>
+        </button>
       </div>
     </div>
-    <nav aria-label="Primary navigation" class="usa-nav nav-styling">
-      <ul class="usa-nav__primary usa-accordion usa-nav__primary-navigation">
+    <nav aria-label="Primary navigation" class="usa-nav">
+      <button class="usa-nav__close">
+        <svg class="usa-icon--size-4 button-styling" aria-hidden="true" focusable="false" role="img">
+          <use href="{{ site.baseurl }}/assets/img/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <ul class="usa-nav__primary usa-accordion">
         <li class="usa-nav__primary-item">
-          <button
-            type="button"
-            class="usa-accordion__button usa-nav__link button-styling"
-            aria-expanded="false"
-            aria-controls="basic-nav-section-one"
-          >
-            <svg
-              class="usa-icon--size-7 toggle-icon"
-              aria-hidden="true"
-              focusable="false"
-              role="img"
-            >
-              <use href="{{ site.baseurl }}/assets/img/sprite.svg#menu">
-            </svg>
-          </button>
-          <ul id="basic-nav-section-one" class="usa-nav__submenu">
-            <li class="close-icon">
-                <svg class="usa-icon--size-4 button-styling" aria-hidden="true" focusable="false" role="img">
-                  <use href="{{ site.baseurl }}/assets/img/sprite.svg#close"></use>
-                </svg>
-            </li>
-            <li class="usa-nav__primary-item">
-              <a href="{{ "/" | url}}" class="usa-nav-link {% if page.url == "/" %}usa-current{% endif %}">
-                <span>Home</span>
-              </a>
-            </li>
-            <li class="usa-nav__primary-item">
-              <a
-                href="{{ "/organizations/" | url}}"
-                class="usa-nav-link {% if page.url contains "/organizations/" %}usa-current{% endif %}"
-              >
-                <span>Organizations</span>
-              </a>
-            </li>
-            <li class="usa-nav__primary-item">
-              <a
-                href="{{ "/projects/" | url}}"
-                class="usa-nav-link {% if page.url contains "/projects/" %}usa-current{% endif %}"
-              >
-                <span>Projects</span>
-              </a>
-            </li>
-          </ul>
+          <a href="{{ "/" | url}}" class="usa-nav-link {% if page.url == "/" %}usa-current{% endif %}">
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="{{ "/organizations/" | url}}" class="usa-nav-link {% if page.url contains "/organizations/" %}usa-current{% endif %}">
+            <span>Organizations</span>
+          </a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="{{ "/projects/" | url}}" class="usa-nav-link {% if page.url contains "/projects/" %}usa-current{% endif %}">
+            <span>Projects</span>
+          </a>
         </li>
       </ul>
     </nav>
