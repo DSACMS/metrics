@@ -57,104 +57,7 @@ h1 {
   font-size: 1.1em;
 }
 
-.usa-nav__primary-item {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.usa-nav {
-  display: none;
-  position: relative;
-  top: 4%;
-  right: -10%;
-  background: #fff;
-  z-index: 1000;
-  height: fit-content;
-}
-
-.usa-nav.is-visible {
-  display: block;
-}
-
-.nav-styling {
-  width: 5% !important;
-}
-
-.nav-styling.usa-nav.is-visible {
-  height: 35%;
-}
-
-.close-icon {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 1%;
-}
-
-.usa-nav__submenu {
-  padding: 1rem;
-  border-radius: 10px;
-  width: fit-content;
-  background-color: #fff;
-  list-style: none;
-  margin: 0;
-  font-size: 1.5rem;
-  padding: 10% 15%;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-}
-
-.usa-nav__submenu li {
-  margin-bottom: .6rem;
-}
-
-.usa-nav__submenu a {
-  text-decoration: none;
-  font-size: 1.125rem;
-  color: #000;
-}
-
-.usa-nav__submenu a.usa-current {
-  color: #043884;
-  font-weight: bold;
-}
-
-.usa-nav__submenu a:hover {
-  color: #E7C000;
-}
-
-.usa-icon {
-  fill: #000;
-}
-
-.button-styling:hover {
-  cursor: pointer;
-}
-
-.usa-header--basic .usa-nav__primary-item > .usa-current::after, 
-.usa-header--basic .usa-nav__link:hover::after {
-  background-color: #fff
-}
-
-.usa-nav__primary-navigation button {
-  text-decoration: none;
-}
-
-.usa-nav__primary-navigation button:hover {
-  text-decoration: none !important;
-}
-
-.usa-nav__primary-navigation button:active {
-  text-decoration: none;
-}
-
-.usa-nav__primary-navigation button:focus {
-  outline: none;
-}
-
-.usa-accordion__button.usa-nav__link.button-styling::after {
-  background-color: #fff;
-}
-
-.usa-nav__primary button[aria-expanded="true"] {
+.menu-btn-styling {
   background-color: #fff;
 }
 
@@ -180,21 +83,26 @@ h2 {
   margin-bottom: 0;
 }
 
+.home-paragraph {
+  font-size: 1.3rem;
+}
+
 /* Cards */
 .usa-card-group-home {
   display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  margin-left: -80px;
+  flex-direction: column;
+  width: 95vw;
+  align-items: center;
+  margin-left: -8%;
 }
 
 .usa-card-outer {
   display: flex;
   background-color: #043884;
   border: none;
-  border-radius: 70px;
-  height: 20vh;
-  width: 25vw;
+  border-radius: 100px;
+  height: 15vh;
+  width: 100%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
@@ -202,7 +110,7 @@ h2 {
   display: flex;
   background-color: #5C85C1;
   border: none;
-  border-radius: 70px;
+  border-radius: 100px;
   height: 100%;
   margin-left: -5px;
   width: 98%;
@@ -230,7 +138,7 @@ h2 {
   align-items: center;
   background-color: #E0EAF8;
   border: none;
-  border-radius: 70px;
+  border-radius: 100px;
   display: flex;
   flex-direction: row;
   height: 100%;
@@ -245,7 +153,7 @@ h2 {
   background-color: #fff;
   border-radius: 50%;
   display: flex;
-  height: 100px;
+  height: 75px;
   justify-content: center;
   margin-left: 6%;
   width: 100px;
@@ -691,7 +599,34 @@ iframe:focus, [href]:focus, [tabindex]:focus, [contentEditable=true]:focus {
   outline-offset: 0rem;
 }
 
-@media screen and (min-width: 768px) {
+@media (max-width: 767px) {
+  .usa-nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background: #fff;
+    padding: 1rem;
+  }
+  
+  .usa-nav.is-visible {
+    display: block;
+  }
+  
+  .usa-menu-btn {
+    display: block;
+  }
+  
+  .usa-nav__close {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) {
   .logo {
     height: 50px;
     width: auto;
@@ -738,10 +673,53 @@ iframe:focus, [href]:focus, [tabindex]:focus, [contentEditable=true]:focus {
   .graph-box {
     height: 600px;
   }
+
+  .home-icon-container {
+    height: 90px;
+  }
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .usa-logo a{
     font-size: 1.5em;
+  }
+
+  .usa-menu-btn,
+  .usa-nav__close {
+    display: none;
+  }
+
+  .usa-nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 30% !important;
+  }
+
+  .usa-nav__primary-item {
+    display: inline-block;
+  }
+
+  .usa-nav-link {
+    text-decoration: none;
+  }
+
+  .usa-card-group-home {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+  }
+
+  .usa-card-outer {
+    height: 20vh;
+  }
+
+  .usa-card-outer,
+  .usa-card-middle,
+  .usa-card__container {
+    border-radius: 80px;
+  }
+
+  .home-icon-container {
+    height: 100px;
   }
 }
