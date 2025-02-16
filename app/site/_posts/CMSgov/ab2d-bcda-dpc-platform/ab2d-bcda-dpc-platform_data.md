@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ab2d-bcda-dpc-platform | REPORT-2025-02-09
+title: Open Source at CMS Metrics Report for ab2d-bcda-dpc-platform | REPORT-2025-02-16
 permalink: /CMSgov/ab2d-bcda-dpc-platform/
 
 org: CMSgov
 repo: ab2d-bcda-dpc-platform
-reportID: REPORT-2025-02-09
-date_stampThisWeek: 2025-02-09
-date_stampLastWeek: 2025-02-09
+reportID: REPORT-2025-02-16
+date_stampThisWeek: 2025-02-16
+date_stampLastWeek: 2025-02-16
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2025-02-09
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>172</td>
         <td>165</td>
-        <td>161</td>
-        <td style="color: #45c527" >4</td>
-        <td style="color: #45c527" >2.5%</td>
+        <td style="color: #45c527" >7</td>
+        <td style="color: #45c527" >4.2%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -53,16 +53,16 @@ date_stampLastWeek: 2025-02-09
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>5</td>
-        <td>4</td>
-        <td style="" >1</td>
-        <td style="" >22%</td>
+        <td>5</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>163</td>
         <td>156</td>
-        <td>152</td>
-        <td style="color: #45c527" >4</td>
-        <td style="color: #45c527" >2.6%</td>
+        <td style="color: #45c527" >7</td>
+        <td style="color: #45c527" >4.4%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -88,9 +88,9 @@ date_stampLastWeek: 2025-02-09
       <tr>
         <th scope="row">Watchers</th>
         <td>11</td>
-        <td>12</td>
-        <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >8.7%</td>
+        <td>11</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>

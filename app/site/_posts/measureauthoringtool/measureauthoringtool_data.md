@@ -1,12 +1,12 @@
 ---
 layout: org-report
-title: Open Source at CMS Metrics Report for measureauthoringtool | REPORT-2025-02-09
+title: Open Source at CMS Metrics Report for measureauthoringtool | REPORT-2025-02-16
 permalink: /measureauthoringtool/
 
 org: measureauthoringtool
-reportID: REPORT-2025-02-09
-date_stampThisWeek: 2025-02-09
-date_stampLastWeek: 2025-02-09
+reportID: REPORT-2025-02-16
+date_stampThisWeek: 2025-02-16
+date_stampLastWeek: 2025-02-16
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -23,10 +23,10 @@ date_stampLastWeek: 2025-02-09
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>46048</td>
         <td>45874</td>
-        <td>45742</td>
-        <td style="color: #45c527" >132</td>
-        <td style="color: #45c527" >0.29%</td>
+        <td style="color: #45c527" >174</td>
+        <td style="color: #45c527" >0.38%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -51,31 +51,31 @@ date_stampLastWeek: 2025-02-09
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>640</td>
         <td>638</td>
-        <td>630</td>
-        <td style="" >8</td>
-        <td style="" >1.3%</td>
+        <td style="" >2</td>
+        <td style="" >0.31%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>10448</td>
         <td>10395</td>
-        <td>10362</td>
-        <td style="color: #45c527" >33</td>
-        <td style="color: #45c527" >0.32%</td>
+        <td style="color: #45c527" >53</td>
+        <td style="color: #45c527" >0.51%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>4103</td>
         <td>4099</td>
-        <td>4098</td>
-        <td style="" >1</td>
-        <td style="" >0.024%</td>
+        <td style="" >4</td>
+        <td style="" >0.098%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
         <td>206</td>
-        <td>197</td>
-        <td style="color: #45c527" >9</td>
-        <td style="color: #45c527" >4.5%</td>
+        <td>206</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
@@ -93,10 +93,10 @@ date_stampLastWeek: 2025-02-09
       </tr>
       <tr>
         <th scope="row">Followers</th>
+        <td>19</td>
         <td>18</td>
-        <td>17</td>
         <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >5.7%</td>
+        <td style="color: #45c527" >5.4%</td>
       </tr>
     </tbody>
   </table>

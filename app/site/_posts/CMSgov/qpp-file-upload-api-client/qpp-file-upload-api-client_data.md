@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for qpp-file-upload-api-client | REPORT-2025-02-09
+title: Open Source at CMS Metrics Report for qpp-file-upload-api-client | REPORT-2025-02-16
 permalink: /CMSgov/qpp-file-upload-api-client/
 
 org: CMSgov
 repo: qpp-file-upload-api-client
-reportID: REPORT-2025-02-09
-date_stampThisWeek: 2025-02-09
-date_stampLastWeek: 2025-02-09
+reportID: REPORT-2025-02-16
+date_stampThisWeek: 2025-02-16
+date_stampLastWeek: 2025-02-16
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -87,10 +87,10 @@ date_stampLastWeek: 2025-02-09
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>36</td>
         <td>35</td>
-        <td>35</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >2.8%</td>
       </tr>
     </tbody>
   </table>

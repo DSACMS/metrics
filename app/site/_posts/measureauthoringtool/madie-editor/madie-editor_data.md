@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for madie-editor | REPORT-2025-02-09
+title: Open Source at CMS Metrics Report for madie-editor | REPORT-2025-02-16
 permalink: /measureauthoringtool/madie-editor/
 
 org: measureauthoringtool
 repo: madie-editor
-reportID: REPORT-2025-02-09
-date_stampThisWeek: 2025-02-09
-date_stampLastWeek: 2025-02-09
+reportID: REPORT-2025-02-16
+date_stampThisWeek: 2025-02-16
+date_stampLastWeek: 2025-02-16
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2025-02-09
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>1076</td>
         <td>1060</td>
-        <td>1054</td>
-        <td style="color: #45c527" >6</td>
-        <td style="color: #45c527" >0.57%</td>
+        <td style="color: #45c527" >16</td>
+        <td style="color: #45c527" >1.5%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,17 +52,17 @@ date_stampLastWeek: 2025-02-09
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>22</td>
         <td>23</td>
-        <td>21</td>
-        <td style="" >2</td>
-        <td style="" >9.1%</td>
+        <td style="color: #45c527" >-1</td>
+        <td style="color: #45c527" >4.4%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>249</td>
         <td>247</td>
-        <td>246</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.41%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >0.81%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -74,9 +74,9 @@ date_stampLastWeek: 2025-02-09
       <tr>
         <th scope="row">Forks</th>
         <td>2</td>
-        <td>1</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >67%</td>
+        <td>2</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
