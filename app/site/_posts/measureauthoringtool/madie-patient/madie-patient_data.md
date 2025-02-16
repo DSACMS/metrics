@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for madie-patient | REPORT-2025-02-09
+title: Open Source at CMS Metrics Report for madie-patient | REPORT-2025-02-16
 permalink: /measureauthoringtool/madie-patient/
 
 org: measureauthoringtool
 repo: madie-patient
-reportID: REPORT-2025-02-09
-date_stampThisWeek: 2025-02-09
-date_stampLastWeek: 2025-02-09
+reportID: REPORT-2025-02-16
+date_stampThisWeek: 2025-02-16
+date_stampLastWeek: 2025-02-16
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -74,9 +74,9 @@ date_stampLastWeek: 2025-02-09
       <tr>
         <th scope="row">Forks</th>
         <td>3</td>
-        <td>2</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >40%</td>
+        <td>3</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>

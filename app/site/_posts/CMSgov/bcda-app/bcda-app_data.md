@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for bcda-app | REPORT-2025-02-09
+title: Open Source at CMS Metrics Report for bcda-app | REPORT-2025-02-16
 permalink: /CMSgov/bcda-app/
 
 org: CMSgov
 repo: bcda-app
-reportID: REPORT-2025-02-09
-date_stampThisWeek: 2025-02-09
-date_stampLastWeek: 2025-02-09
+reportID: REPORT-2025-02-16
+date_stampThisWeek: 2025-02-16
+date_stampLastWeek: 2025-02-16
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2025-02-09
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>940</td>
         <td>935</td>
-        <td>935</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >5</td>
+        <td style="color: #45c527" >0.53%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -53,23 +53,23 @@ date_stampLastWeek: 2025-02-09
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>10</td>
-        <td>1</td>
-        <td style="" >9</td>
-        <td style="" >160%</td>
-      </tr>
-      <tr>
-        <th scope="row">Merged Pull Requests</th>
-        <td>938</td>
-        <td>938</td>
+        <td>10</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
       <tr>
+        <th scope="row">Merged Pull Requests</th>
+        <td>943</td>
+        <td>938</td>
+        <td style="color: #45c527" >5</td>
+        <td style="color: #45c527" >0.53%</td>
+      </tr>
+      <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>87</td>
-        <td>85</td>
-        <td style="" >2</td>
-        <td style="" >2.3%</td>
+        <td>87</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -80,17 +80,17 @@ date_stampLastWeek: 2025-02-09
       </tr>
       <tr>
         <th scope="row">Stars</th>
+        <td>47</td>
         <td>46</td>
-        <td>46</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >2.2%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
         <td>25</td>
-        <td>26</td>
-        <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >3.9%</td>
+        <td>25</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>

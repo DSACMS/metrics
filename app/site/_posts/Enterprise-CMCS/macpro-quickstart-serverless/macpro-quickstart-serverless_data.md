@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-quickstart-serverless | REPORT-2025-02-09
+title: Open Source at CMS Metrics Report for macpro-quickstart-serverless | REPORT-2025-02-16
 permalink: /Enterprise-CMCS/macpro-quickstart-serverless/
 
 org: Enterprise-CMCS
 repo: macpro-quickstart-serverless
-reportID: REPORT-2025-02-09
-date_stampThisWeek: 2025-02-09
-date_stampLastWeek: 2025-02-09
+reportID: REPORT-2025-02-16
+date_stampThisWeek: 2025-02-16
+date_stampLastWeek: 2025-02-16
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -53,9 +53,9 @@ date_stampLastWeek: 2025-02-09
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>9</td>
-        <td>13</td>
-        <td style="color: #45c527" >-4</td>
-        <td style="color: #45c527" >36%</td>
+        <td>9</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
@@ -67,9 +67,9 @@ date_stampLastWeek: 2025-02-09
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>92</td>
-        <td>86</td>
-        <td style="" >6</td>
-        <td style="" >6.7%</td>
+        <td>92</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
