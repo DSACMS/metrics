@@ -12,6 +12,8 @@ const projects = setProjectsData(parsedProjectsData)
 const sortDirection = document.getElementById('sort-direction');
 const sortSelection = document.getElementById('sort-selection');
 
+
+const baseurl = siteData.baseurl
 let currentPage = 1;
 const itemsPerPage = 10;
 let filteredProjects = [...parsedProjectsData];
@@ -50,11 +52,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if(isMobile) {
         button.setAttribute("aria-expanded", "false");
         content.setAttribute("hidden", "true");
-        icon.setAttribute("href", "/assets/img/sprite.svg#expand_more");
+        icon.setAttribute("href", `${baseurl}/assets/img/sprite.svg#expand_more`);
       } else {
         button.setAttribute("aria-expanded", "true");
         content.removeAttribute("hidden");
-        icon.setAttribute("href", "/assets/img/sprite.svg#expand_less");
+        icon.setAttribute("href", `${baseurl}/assets/img/sprite.svg#expand_less`);
       }
     });
   }
@@ -68,13 +70,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const expanded = button.getAttribute("aria-expanded");
       const content = document.getElementById(button.getAttribute("id"));
       const icon = button.querySelector("svg use");
+      console.log("2", baseurl)
       
       if(expanded === 'false') {
         content.removeAttribute("hidden");
-        icon.setAttribute("href", "/assets/img/sprite.svg#expand_less");
+        icon.setAttribute("href", `${baseurl}/assets/img/sprite.svg#expand_less`);
       } else {
         content.setAttribute("hidden", "true");
-        icon.setAttribute("href", "/assets/img/sprite.svg#expand_more");
+        icon.setAttribute("href", `${baseurl}/assets/img/sprite.svg#expand_more`);
       }
     });
   });
@@ -228,7 +231,7 @@ function renderPaginationControls(totalProjectsCount) {
   if (currentPage === 1) prevButton.classList.add('usa-pagination__disabled');
   prevButton.innerHTML = `
     <svg class="usa-icon" aria-hidden="true" role="img">
-      <use xlink:href="/assets/img/sprite.svg#navigate_before"></use>
+      <use xlink:href="${baseurl}/assets/img/sprite.svg#navigate_before"></use>
     </svg>
     <span class="usa-pagination__link-text">Previous</span>
   `;
@@ -276,7 +279,7 @@ function renderPaginationControls(totalProjectsCount) {
   nextButton.innerHTML = `
     <span class="usa-pagination__link-text">Next</span>
     <svg class="usa-icon" aria-hidden="true" role="img">
-      <use xlink:href="/assets/img/sprite.svg#navigate_next"></use>
+      <use xlink:href="${baseurl}/assets/img/sprite.svg#navigate_next"></use>
     </svg>
   `;
   nextButton.addEventListener('click', () => {
