@@ -25,7 +25,12 @@ layout: base
       {% comment %} filter by organization {% endcomment %}
       <div class="usa-accordion">
         <div class="usa-accordion__heading filter-heading">
-          <button class="usa-accordion__button filter-button" aria-expanded="true" aria-controls="organization-content" id="organization">Organization</button>
+          <button class="usa-accordion__button filter-button" aria-expanded="true" aria-controls="organization-content" id="organization">
+            Organization 
+            <svg class="usa-icon--size-3" aria-hidden="true" focusable="false" role="img">
+              <use href="{{ site.baseurl }}/assets/img/sprite.svg#expand_less"></use>
+            </svg>
+          </button>
         </div>
         <div id="organization-content" class="usa-accordion__content filter-content usa-prose" hidden>
           <form class="usa-form">
@@ -46,7 +51,12 @@ layout: base
       {% comment %} filter by maturity model tier {% endcomment %}
       <div class="usa-accordion">
         <div class="usa-accordion__heading filter-heading">
-          <button class="usa-accordion__button filter-button" aria-expanded="false" aria-controls="tier-content" id="mauturity-model-tier">Maturity Model Tier</button>
+          <button class="usa-accordion__button filter-button" aria-expanded="true" aria-controls="tier-content" id="mauturity-model-tier">
+            Maturity Model Tier
+            <svg class="usa-icon--size-3" aria-hidden="true" focusable="false" role="img">
+              <use href="{{ site.baseurl }}/assets/img/sprite.svg#expand_less"></use>
+            </svg>
+          </button>
         </div>
         <div id="tier-content" class="usa-accordion__content filter-content usa-prose" hidden>
           <form class="usa-form">
@@ -67,7 +77,12 @@ layout: base
       {% comment %} filter by fisma compliance level {% endcomment %}
       <div class="usa-accordion">
         <div class="usa-accordion__heading filter-heading">
-          <button class="usa-accordion__button filter-button" aria-expanded="false" aria-controls="fisma-level-content" id="fisma-level">FISMA Compliance Level</button>
+          <button class="usa-accordion__button filter-button" aria-expanded="true" aria-controls="fisma-level-content" id="fisma-level">
+            FISMA Compliance Level
+            <svg class="usa-icon--size-3" aria-hidden="true" focusable="false" role="img">
+              <use href="{{ site.baseurl }}/assets/img/sprite.svg#expand_less"></use>
+            </svg>
+          </button>
         </div>
         <div id="fisma-level-content" class="usa-accordion__content filter-content usa-prose" hidden>
           <form class="usa-form">
@@ -88,7 +103,12 @@ layout: base
       {% comment %} filter by project type {% endcomment %}
       <div class="usa-accordion">
         <div class="usa-accordion__heading filter-heading">
-          <button class="usa-accordion__button filter-button" aria-expanded="false" aria-controls="project-type-content" id="project-type">Project Type</button>
+          <button class="usa-accordion__button filter-button" aria-expanded="true" aria-controls="project-type-content" id="project-type">
+            Project Type
+            <svg class="usa-icon--size-3" aria-hidden="true" focusable="false" role="img">
+              <use href="{{ site.baseurl }}/assets/img/sprite.svg#expand_less"></use>
+            </svg>
+          </button>
         </div>
         <div id="project-type-content" class="usa-accordion__content filter-content usa-prose" hidden>
           <form class="usa-form">

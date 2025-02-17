@@ -385,9 +385,10 @@ section:active {
   border-radius: 50px 50px 0 0;
   border: none;
   font-weight: 600; 
-  justify-content: center;
+  justify-content: space-between;
   min-width: 215px;
-  padding: 7% 0 7% 0;
+  padding: 10%;
+  align-items: center;
 }
 
 .filter-button:hover {
@@ -624,6 +625,8 @@ iframe:focus, [href]:focus, [tabindex]:focus, [contentEditable=true]:focus {
     border: none;
     cursor: pointer;
   }
+
+  
 }
 
 @media (min-width: 768px) {
