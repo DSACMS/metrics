@@ -20,7 +20,7 @@ let filteredProjects = [...parsedProjectsData];
 
 
 // Hide sort direction when sort is not selected
-document.getElementById("sort-direction-form").hidden = true;
+// document.getElementById("sort-direction-form").hidden = true;
 
 // Main Function to create project cards, filter buttons, and hide headings based on filters
 createProjectCards();
