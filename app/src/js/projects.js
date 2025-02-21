@@ -13,7 +13,7 @@ const sortDirection = document.getElementById('sort-direction');
 const sortSelection = document.getElementById('sort-selection');
 
 
-const baseurl = siteData.baseurl
+const baseurl = DOMPurify.sanitize(siteData.baseurl);
 let currentPage = 1;
 const itemsPerPage = 10;
 let filteredProjects = [...parsedProjectsData];
@@ -28,7 +28,7 @@ createProjectCards();
 // Listens for selection to sort by attribute
 sortSelection.addEventListener('change', () => {
   // Unhide sort direction once sort by is selected
-  document.getElementById("sort-direction-form").hidden = false;
+  // document.getElementById("sort-direction-form").hidden = false;
   sortCards();
 })
 

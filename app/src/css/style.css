@@ -61,6 +61,10 @@ h1 {
   background-color: #fff;
 }
 
+.menu-btn-styling:hover {
+  background-color: #fff;
+}
+
 /* Home page main */
 .grid-container{
   display: flex;
@@ -212,17 +216,18 @@ a.usa-link:visited {
 /* Orgs */
 .usa-card-group-orgs {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  list-style-type:none;
+  /* list-style-type:none; */
   justify-content: center;
+  width: 90vw;
 }
 
 .usa-card {
   display: flex;
   justify-content: center;
-  /* margin: 0 1% 0 1%; */
   margin: 2%;
+  /* width: 90%; */
 }
 
 .usa-card__media {
@@ -243,8 +248,7 @@ a.usa-link:visited {
 }
 
 .usa-card__header-orgs {
-  margin: 15% 1% 10% 5%;
-  padding: 0;
+  margin-left: 5%;
 }
 
 .usa-card__heading-orgs {
@@ -252,10 +256,17 @@ a.usa-link:visited {
 }
 
 .usa-card__footer {
+  display: flex;
   padding-bottom: 1.5rem;
   padding-left: 0;
   padding-right: 1.5rem;
   padding-top: 0.5rem;
+}
+
+.star-count,
+.fork-count {
+  display: flex;
+  align-items: center;
 }
 
 /* Projects */
@@ -668,7 +679,7 @@ iframe:focus, [href]:focus, [tabindex]:focus, [contentEditable=true]:focus {
   }
 
   .search-styling {
-    width: 65vw;
+    width: 58vw;
   }
 
   .sort-outer {
@@ -680,6 +691,10 @@ iframe:focus, [href]:focus, [tabindex]:focus, [contentEditable=true]:focus {
     margin-left: -21%;
     margin-right: 5%;
   }
+
+  /* .usa-card {
+    margin-left: -5%;
+  } */
 }
 
 @media (min-width: 768px) {
@@ -735,6 +750,16 @@ iframe:focus, [href]:focus, [tabindex]:focus, [contentEditable=true]:focus {
   }
 }
 
+@media (max-width: 1023px) {
+  .usa-card { 
+    width: 100%;
+  }
+
+  .usa-card-orgs {
+    margin-left: -5%;
+  }
+}
+
 @media (min-width: 1024px) {
   .usa-logo a{
     font-size: 1.5em;
@@ -777,5 +802,9 @@ iframe:focus, [href]:focus, [tabindex]:focus, [contentEditable=true]:focus {
 
   .home-icon-container {
     height: 100px;
+  }
+
+  .usa-card-group-orgs {
+    flex-direction: row;
   }
 }
