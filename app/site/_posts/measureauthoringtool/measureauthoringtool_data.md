@@ -1,12 +1,12 @@
 ---
 layout: org-report
-title: Open Source at CMS Metrics Report for measureauthoringtool | REPORT-2025-02-16
+title: Open Source at CMS Metrics Report for measureauthoringtool | REPORT-2025-02-23
 permalink: /measureauthoringtool/
 
 org: measureauthoringtool
-reportID: REPORT-2025-02-16
-date_stampThisWeek: 2025-02-16
-date_stampLastWeek: 2025-02-16
+reportID: REPORT-2025-02-23
+date_stampThisWeek: 2025-02-23
+date_stampLastWeek: 2025-02-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -23,10 +23,10 @@ date_stampLastWeek: 2025-02-16
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>46228</td>
         <td>46048</td>
-        <td>45874</td>
-        <td style="color: #45c527" >174</td>
-        <td style="color: #45c527" >0.38%</td>
+        <td style="color: #45c527" >180</td>
+        <td style="color: #45c527" >0.39%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -51,24 +51,24 @@ date_stampLastWeek: 2025-02-16
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>639</td>
         <td>640</td>
-        <td>638</td>
-        <td style="" >2</td>
-        <td style="" >0.31%</td>
+        <td style="color: #45c527" >-1</td>
+        <td style="color: #45c527" >0.16%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>10497</td>
         <td>10448</td>
-        <td>10395</td>
-        <td style="color: #45c527" >53</td>
-        <td style="color: #45c527" >0.51%</td>
+        <td style="color: #45c527" >49</td>
+        <td style="color: #45c527" >0.47%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>4107</td>
         <td>4103</td>
-        <td>4099</td>
         <td style="" >4</td>
-        <td style="" >0.098%</td>
+        <td style="" >0.097%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -94,9 +94,9 @@ date_stampLastWeek: 2025-02-16
       <tr>
         <th scope="row">Followers</th>
         <td>19</td>
-        <td>18</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >5.4%</td>
+        <td>19</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>

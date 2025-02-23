@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for madie-fhir-elm-translator | REPORT-2025-02-16
+title: Open Source at CMS Metrics Report for madie-fhir-elm-translator | REPORT-2025-02-23
 permalink: /measureauthoringtool/madie-fhir-elm-translator/
 
 org: measureauthoringtool
 repo: madie-fhir-elm-translator
-reportID: REPORT-2025-02-16
-date_stampThisWeek: 2025-02-16
-date_stampLastWeek: 2025-02-16
+reportID: REPORT-2025-02-23
+date_stampThisWeek: 2025-02-23
+date_stampLastWeek: 2025-02-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -52,10 +52,10 @@ date_stampLastWeek: 2025-02-16
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>5</td>
         <td>4</td>
-        <td>4</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >1</td>
+        <td style="" >22%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
