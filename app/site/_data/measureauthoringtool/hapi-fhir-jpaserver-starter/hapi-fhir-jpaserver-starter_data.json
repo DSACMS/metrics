@@ -330,14 +330,14 @@
     "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nJava                        78      6374     1089       299     4986        245\n(ULOC)                              3305\n-------------------------------------------------------------------------------\nYAML                        27      1997      119       701     1177          0\n(ULOC)                              1142\n-------------------------------------------------------------------------------\nJSON                        25    188142        1         0   188141          0\n(ULOC)                             16709\n-------------------------------------------------------------------------------\nHTML                         7       232       23         1      208          0\n(ULOC)                               152\n-------------------------------------------------------------------------------\nXML Schema                   5      4942      911         0     4031          0\n(ULOC)                              1805\n-------------------------------------------------------------------------------\nMarkdown                     3       787      194         0      593          0\n(ULOC)                               420\n-------------------------------------------------------------------------------\nXML                          3       799       56       179      564          0\n(ULOC)                               464\n-------------------------------------------------------------------------------\nBatch                        2         2        0         0        2          0\n(ULOC)                                 2\n-------------------------------------------------------------------------------\nDocker ignore                1        12        0         0       12          0\n(ULOC)                                12\n-------------------------------------------------------------------------------\nDockerfile                   1        60       15         9       36          9\n(ULOC)                                46\n-------------------------------------------------------------------------------\nJavaScript                   1         1        0         0        1          4\n(ULOC)                                 1\n-------------------------------------------------------------------------------\nLicense                      1       201       32         0      169          0\n(ULOC)                               168\n-------------------------------------------------------------------------------\nPlain Text                   1        22        0         0       22          0\n(ULOC)                                21\n-------------------------------------------------------------------------------\nProperties File              1       209        8       105       96          0\n(ULOC)                               165\n-------------------------------------------------------------------------------\nShell                        1         4        2         1        1          0\n(ULOC)                                 3\n-------------------------------------------------------------------------------\nSmarty Template              1       152       13         0      139         24\n(ULOC)                                78\n───────────────────────────────────────────────────────────────────────────────\nTotal                      158    203936     2463      1295   200178        282\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)        24417\nDRYness %                           0.12\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $7,048,269\nEstimated Schedule Effort (organic) 28.89 months\nEstimated People Required (organic) 21.68\n───────────────────────────────────────────────────────────────────────────────\nProcessed 47985424 bytes, 47.985 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
   },
   "ossf_scorecard": {
-    "date": "2025-02-16T13:44:30Z",
+    "date": "2025-02-23T17:36:29Z",
     "repo": {
       "name": "github.com/measureauthoringtool/hapi-fhir-jpaserver-starter",
       "commit": "0b00729c756cbb17affe4f2fc12346128a296bc8"
     },
     "scorecard": {
-      "version": "v5.1.0",
-      "commit": "b0143fc57d8d38748990027266de715052806f4b"
+      "version": "v5.1.1-5-g3b42b6e7",
+      "commit": "3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a"
     },
     "score": 3.7,
     "checks": [
@@ -347,7 +347,7 @@
         "reason": "no binaries found in the repo",
         "name": "Binary-Artifacts",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/b0143fc57d8d38748990027266de715052806f4b/docs/checks.md#binary-artifacts",
+          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#binary-artifacts",
           "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
         }
       },
@@ -357,7 +357,7 @@
         "reason": "branch protection is not maximal on development and all release branches",
         "name": "Branch-Protection",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/b0143fc57d8d38748990027266de715052806f4b/docs/checks.md#branch-protection",
+          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#branch-protection",
           "short": "Determines if the default and release branches are protected with GitHub's branch protection settings."
         }
       },
@@ -367,7 +367,7 @@
         "reason": "2 out of 2 merged PRs checked by a CI test -- score normalized to 10",
         "name": "CI-Tests",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/b0143fc57d8d38748990027266de715052806f4b/docs/checks.md#ci-tests",
+          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#ci-tests",
           "short": "Determines if the project runs tests before pull requests are merged."
         }
       },
@@ -377,7 +377,7 @@
         "reason": "no effort to earn an OpenSSF best practices badge detected",
         "name": "CII-Best-Practices",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/b0143fc57d8d38748990027266de715052806f4b/docs/checks.md#cii-best-practices",
+          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#cii-best-practices",
           "short": "Determines if the project has an OpenSSF (formerly CII) Best Practices Badge."
         }
       },
@@ -387,7 +387,7 @@
         "reason": "Found 2/23 approved changesets -- score normalized to 0",
         "name": "Code-Review",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/b0143fc57d8d38748990027266de715052806f4b/docs/checks.md#code-review",
+          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#code-review",
           "short": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
         }
       },
@@ -397,7 +397,7 @@
         "reason": "project has 12 contributing companies or organizations",
         "name": "Contributors",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/b0143fc57d8d38748990027266de715052806f4b/docs/checks.md#contributors",
+          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#contributors",
           "short": "Determines if the project has a set of contributors from multiple organizations (e.g., companies)."
         }
       },
@@ -407,7 +407,7 @@
         "reason": "no dangerous workflow patterns detected",
         "name": "Dangerous-Workflow",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/b0143fc57d8d38748990027266de715052806f4b/docs/checks.md#dangerous-workflow",
+          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#dangerous-workflow",
           "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
         }
       },
@@ -417,7 +417,7 @@
         "reason": "no update tool detected",
         "name": "Dependency-Update-Tool",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/b0143fc57d8d38748990027266de715052806f4b/docs/checks.md#dependency-update-tool",
+          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#dependency-update-tool",
           "short": "Determines if the project uses a dependency update tool."
         }
       },
@@ -427,7 +427,7 @@
         "reason": "project is not fuzzed",
         "name": "Fuzzing",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/b0143fc57d8d38748990027266de715052806f4b/docs/checks.md#fuzzing",
+          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#fuzzing",
           "short": "Determines if the project uses fuzzing."
         }
       },
@@ -437,17 +437,17 @@
         "reason": "license file detected",
         "name": "License",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/b0143fc57d8d38748990027266de715052806f4b/docs/checks.md#license",
+          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#license",
           "short": "Determines if the project has defined a license."
         }
       },
       {
         "details": null,
         "score": 5,
-        "reason": "7 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 5",
+        "reason": "6 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 5",
         "name": "Maintained",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/b0143fc57d8d38748990027266de715052806f4b/docs/checks.md#maintained",
+          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#maintained",
           "short": "Determines if the project is \"actively maintained\"."
         }
       },
@@ -457,7 +457,7 @@
         "reason": "packaging workflow not detected",
         "name": "Packaging",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/b0143fc57d8d38748990027266de715052806f4b/docs/checks.md#packaging",
+          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#packaging",
           "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
         }
       },
@@ -467,7 +467,7 @@
         "reason": "dependency not pinned by hash detected -- score normalized to 2",
         "name": "Pinned-Dependencies",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/b0143fc57d8d38748990027266de715052806f4b/docs/checks.md#pinned-dependencies",
+          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#pinned-dependencies",
           "short": "Determines if the project has declared and pinned the dependencies of its build process."
         }
       },
@@ -477,7 +477,7 @@
         "reason": "SAST tool is not run on all commits -- score normalized to 0",
         "name": "SAST",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/b0143fc57d8d38748990027266de715052806f4b/docs/checks.md#sast",
+          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#sast",
           "short": "Determines if the project uses static code analysis."
         }
       },
@@ -487,7 +487,7 @@
         "reason": "security policy file not detected",
         "name": "Security-Policy",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/b0143fc57d8d38748990027266de715052806f4b/docs/checks.md#security-policy",
+          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#security-policy",
           "short": "Determines if the project has published a security policy."
         }
       },
@@ -497,7 +497,7 @@
         "reason": "no releases found",
         "name": "Signed-Releases",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/b0143fc57d8d38748990027266de715052806f4b/docs/checks.md#signed-releases",
+          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#signed-releases",
           "short": "Determines if the project cryptographically signs release artifacts."
         }
       },
@@ -507,7 +507,7 @@
         "reason": "detected GitHub workflow tokens with excessive permissions",
         "name": "Token-Permissions",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/b0143fc57d8d38748990027266de715052806f4b/docs/checks.md#token-permissions",
+          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#token-permissions",
           "short": "Determines if the project's workflows follow the principle of least privilege."
         }
       },
@@ -517,7 +517,7 @@
         "reason": "19 existing vulnerabilities detected",
         "name": "Vulnerabilities",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/b0143fc57d8d38748990027266de715052806f4b/docs/checks.md#vulnerabilities",
+          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#vulnerabilities",
           "short": "Determines if the project has open, known unfixed vulnerabilities."
         }
       }
