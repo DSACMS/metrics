@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for iv-cbv-payroll | REPORT-2025-02-16
+title: Open Source at CMS Metrics Report for iv-cbv-payroll | REPORT-2025-02-23
 permalink: /DSACMS/iv-cbv-payroll/
 
 org: DSACMS
 repo: iv-cbv-payroll
-reportID: REPORT-2025-02-16
-date_stampThisWeek: 2025-02-16
-date_stampLastWeek: 2025-02-16
+reportID: REPORT-2025-02-23
+date_stampThisWeek: 2025-02-23
+date_stampLastWeek: 2025-02-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2025-02-16
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>635</td>
         <td>626</td>
-        <td>615</td>
-        <td style="color: #45c527" >11</td>
-        <td style="color: #45c527" >1.8%</td>
+        <td style="color: #45c527" >9</td>
+        <td style="color: #45c527" >1.4%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -53,23 +53,23 @@ date_stampLastWeek: 2025-02-16
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>4</td>
-        <td>2</td>
-        <td style="" >2</td>
-        <td style="" >67%</td>
+        <td>4</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>422</td>
         <td>414</td>
-        <td>403</td>
-        <td style="color: #45c527" >11</td>
-        <td style="color: #45c527" >2.7%</td>
+        <td style="color: #45c527" >8</td>
+        <td style="color: #45c527" >1.9%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>40</td>
         <td>37</td>
-        <td>34</td>
         <td style="" >3</td>
-        <td style="" >8.5%</td>
+        <td style="" >7.8%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

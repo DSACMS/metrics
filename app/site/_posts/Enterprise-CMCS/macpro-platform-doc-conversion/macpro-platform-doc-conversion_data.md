@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-platform-doc-conversion | REPORT-2025-02-16
+title: Open Source at CMS Metrics Report for macpro-platform-doc-conversion | REPORT-2025-02-23
 permalink: /Enterprise-CMCS/macpro-platform-doc-conversion/
 
 org: Enterprise-CMCS
 repo: macpro-platform-doc-conversion
-reportID: REPORT-2025-02-16
-date_stampThisWeek: 2025-02-16
-date_stampLastWeek: 2025-02-16
+reportID: REPORT-2025-02-23
+date_stampThisWeek: 2025-02-23
+date_stampLastWeek: 2025-02-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -67,9 +67,9 @@ date_stampLastWeek: 2025-02-16
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>28</td>
-        <td>27</td>
-        <td style="" >1</td>
-        <td style="" >3.6%</td>
+        <td>28</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

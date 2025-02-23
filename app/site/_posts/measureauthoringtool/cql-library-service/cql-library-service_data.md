@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for cql-library-service | REPORT-2025-02-16
+title: Open Source at CMS Metrics Report for cql-library-service | REPORT-2025-02-23
 permalink: /measureauthoringtool/cql-library-service/
 
 org: measureauthoringtool
 repo: cql-library-service
-reportID: REPORT-2025-02-16
-date_stampThisWeek: 2025-02-16
-date_stampLastWeek: 2025-02-16
+reportID: REPORT-2025-02-23
+date_stampThisWeek: 2025-02-23
+date_stampLastWeek: 2025-02-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2025-02-16
       <tr>
         <th scope="row">Commits</th>
         <td>295</td>
-        <td>293</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >0.68%</td>
+        <td>295</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -60,9 +60,9 @@ date_stampLastWeek: 2025-02-16
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>83</td>
-        <td>82</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >1.2%</td>
+        <td>83</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
