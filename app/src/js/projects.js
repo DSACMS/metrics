@@ -12,13 +12,15 @@ const projects = setProjectsData(parsedProjectsData)
 const sortDirection = document.getElementById('sort-direction');
 const sortSelection = document.getElementById('sort-selection');
 
+
+const baseurl = DOMPurify.sanitize(siteData.baseurl);
 let currentPage = 1;
 const itemsPerPage = 10;
 let filteredProjects = [...parsedProjectsData];
 
 
 // Hide sort direction when sort is not selected
-document.getElementById("sort-direction-form").hidden = true;
+// document.getElementById("sort-direction-form").hidden = true;
 
 // Main Function to create project cards, filter buttons, and hide headings based on filters
 createProjectCards();
@@ -26,7 +28,7 @@ createProjectCards();
 // Listens for selection to sort by attribute
 sortSelection.addEventListener('change', () => {
   // Unhide sort direction once sort by is selected
-  document.getElementById("sort-direction-form").hidden = false;
+  // document.getElementById("sort-direction-form").hidden = false;
   sortCards();
 })
 
@@ -35,6 +37,52 @@ sortDirection.addEventListener('change', () => {
   const isDescending = sortDirection.value === 'descending' ? true : false; 
   sortCards(isDescending);
 })
+
+// Controls filter menus open/closed state
+document.addEventListener("DOMContentLoaded", () => {
+  function updateFilterMenuState() {
+    const filterButtons = document.querySelectorAll(".usa-accordion__button");
+    const isMobile = window.innerWidth < 768;
+
+    filterButtons.forEach((button) => {
+      const contentId = button.getAttribute("aria-controls");
+      const content = document.getElementById(contentId);
+      const icon = button.querySelector("svg use");
+
+      if(isMobile) {
+        button.setAttribute("aria-expanded", "false");
+        content.setAttribute("hidden", "true");
+        icon.setAttribute("href", `${baseurl}/assets/img/sprite.svg#expand_more`);
+      } else {
+        button.setAttribute("aria-expanded", "true");
+        content.removeAttribute("hidden");
+        icon.setAttribute("href", `${baseurl}/assets/img/sprite.svg#expand_less`);
+      }
+    });
+  }
+
+  updateFilterMenuState()
+
+  window.addEventListener("resize", updateFilterMenuState)
+
+  document.querySelectorAll(".usa-accordion__button").forEach((button) => {
+    button.addEventListener("click", () => {
+      const expanded = button.getAttribute("aria-expanded");
+      const content = document.getElementById(button.getAttribute("id"));
+      const icon = button.querySelector("svg use");
+      console.log("2", baseurl)
+      
+      if(expanded === 'false') {
+        content.removeAttribute("hidden");
+        icon.setAttribute("href", `${baseurl}/assets/img/sprite.svg#expand_less`);
+      } else {
+        content.setAttribute("hidden", "true");
+        icon.setAttribute("href", `${baseurl}/assets/img/sprite.svg#expand_more`);
+      }
+    });
+  });
+});
+
 
 // Keep filters after navigating back
 window.addEventListener('pageshow', (event) => {
@@ -183,7 +231,7 @@ function renderPaginationControls(totalProjectsCount) {
   if (currentPage === 1) prevButton.classList.add('usa-pagination__disabled');
   prevButton.innerHTML = `
     <svg class="usa-icon" aria-hidden="true" role="img">
-      <use xlink:href="/assets/img/sprite.svg#navigate_before"></use>
+      <use xlink:href="${baseurl}/assets/img/sprite.svg#navigate_before"></use>
     </svg>
     <span class="usa-pagination__link-text">Previous</span>
   `;
@@ -231,7 +279,7 @@ function renderPaginationControls(totalProjectsCount) {
   nextButton.innerHTML = `
     <span class="usa-pagination__link-text">Next</span>
     <svg class="usa-icon" aria-hidden="true" role="img">
-      <use xlink:href="/assets/img/sprite.svg#navigate_next"></use>
+      <use xlink:href="${baseurl}/assets/img/sprite.svg#navigate_next"></use>
     </svg>
   `;
   nextButton.addEventListener('click', () => {
