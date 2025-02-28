@@ -524,14 +524,20 @@ a.usa-link:visited {
 
 .all-graphs {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  /* gap: 1rem; */
   justify-content: center;
 }
 
-.all-graphs > .graph-container {
+/* .all-graphs > .graph-container {
   flex: 1 1 calc(50% - 1rem);
   min-width: 300px;
+} */
+
+[class^="graph-container-"] {
+  width: 65vw;
 }
 
 .graph-box {
@@ -695,6 +701,10 @@ iframe:focus, [href]:focus, [tabindex]:focus, [contentEditable=true]:focus {
   /* .usa-card {
     margin-left: -5%;
   } */
+
+  [class^="graph-container-"] {
+    width: 90vw;
+  }
 }
 
 @media (min-width: 768px) {
@@ -741,9 +751,9 @@ iframe:focus, [href]:focus, [tabindex]:focus, [contentEditable=true]:focus {
     min-width: 500px;
   }
 
-  .graph-box {
+  /* .graph-box {
     height: 600px;
-  }
+  } */
 
   .home-icon-container {
     height: 90px;
