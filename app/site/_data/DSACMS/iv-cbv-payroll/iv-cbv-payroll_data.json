@@ -404,14 +404,14 @@
     "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nRuby                       222     11574     1731       903     8940        291\n(ULOC)                              6185\n-------------------------------------------------------------------------------\nTerraform                  133      5773      743      1160     3870        361\n(ULOC)                              2871\n-------------------------------------------------------------------------------\nMarkdown                    52      2817      927         0     1890          0\n(ULOC)                              1547\n-------------------------------------------------------------------------------\nRuby HTML                   49      1389      140         0     1249        106\n(ULOC)                               802\n-------------------------------------------------------------------------------\nYAML                        49      3242      254       330     2658          0\n(ULOC)                              2090\n-------------------------------------------------------------------------------\nBASH                        32      1543      206       450      887         74\n(ULOC)                               919\n-------------------------------------------------------------------------------\nJavaScript                  26       971      144        63      764         16\n(ULOC)                               581\n-------------------------------------------------------------------------------\nJSON                        19       894        1         0      893          0\n(ULOC)                               326\n-------------------------------------------------------------------------------\nShell                       10       220       46        22      152         20\n(ULOC)                               141\n-------------------------------------------------------------------------------\nTypeScript                   5       192       27         1      164         29\n(ULOC)                               130\n-------------------------------------------------------------------------------\nPython                       4       346       42        16      288         12\n(ULOC)                               225\n-------------------------------------------------------------------------------\nPlain Text                   3         3        0         0        3          0\n(ULOC)                                 3\n-------------------------------------------------------------------------------\nSass                         3       215       24        32      159          0\n(ULOC)                               134\n-------------------------------------------------------------------------------\nTypeScript Typings           3        34        4         0       30          3\n(ULOC)                                28\n-------------------------------------------------------------------------------\nGo                           2       129       18        14       97          3\n(ULOC)                                83\n-------------------------------------------------------------------------------\nMakefile                     2       484      103        72      309         12\n(ULOC)                               312\n-------------------------------------------------------------------------------\nRakefile                     2        10        2         3        5          0\n(ULOC)                                 9\n-------------------------------------------------------------------------------\nCSS                          1         5        0         1        4          0\n(ULOC)                                 5\n-------------------------------------------------------------------------------\nCSV                          1       444        0         0      444          0\n(ULOC)                               376\n-------------------------------------------------------------------------------\nDocker ignore                1         2        1         0        1          0\n(ULOC)                                 1\n-------------------------------------------------------------------------------\nDockerfile                   1       177       39        50       88         22\n(ULOC)                               118\n-------------------------------------------------------------------------------\nGemfile                      1       125       31        26       68          0\n(ULOC)                                92\n-------------------------------------------------------------------------------\nLicense                      1       121       12         0      109          0\n(ULOC)                               110\n-------------------------------------------------------------------------------\nSQL                          1         1        0         0        1          0\n(ULOC)                                 1\n───────────────────────────────────────────────────────────────────────────────\nTotal                      623     30711     4495      3143    23073        949\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)        16909\nDRYness %                           0.55\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $729,213\nEstimated Schedule Effort (organic) 12.20 months\nEstimated People Required (organic) 5.31\n───────────────────────────────────────────────────────────────────────────────\nProcessed 1204661 bytes, 1.205 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
   },
   "ossf_scorecard": {
-    "date": "2025-02-23T16:11:44Z",
+    "date": "2025-03-02T11:18:55Z",
     "repo": {
       "name": "github.com/DSACMS/iv-cbv-payroll",
-      "commit": "ab90d33ae75d843899ae2cf73be4742df73afb85"
+      "commit": "f3469b0d1579c611865b05a697eae080505f494e"
     },
     "scorecard": {
-      "version": "v5.1.1-5-g3b42b6e7",
-      "commit": "3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a"
+      "version": "v5.1.1-10-g4b11525f",
+      "commit": "4b11525f1925c2a14ac162cbe5cea1546ea50127"
     },
     "score": 4.9,
     "checks": [
@@ -421,7 +421,7 @@
         "reason": "no binaries found in the repo",
         "name": "Binary-Artifacts",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#binary-artifacts",
+          "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#binary-artifacts",
           "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
         }
       },
@@ -431,17 +431,17 @@
         "reason": "branch protection is not maximal on development and all release branches",
         "name": "Branch-Protection",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#branch-protection",
+          "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#branch-protection",
           "short": "Determines if the default and release branches are protected with GitHub's branch protection settings."
         }
       },
       {
         "details": null,
         "score": 10,
-        "reason": "25 out of 25 merged PRs checked by a CI test -- score normalized to 10",
+        "reason": "29 out of 29 merged PRs checked by a CI test -- score normalized to 10",
         "name": "CI-Tests",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#ci-tests",
+          "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#ci-tests",
           "short": "Determines if the project runs tests before pull requests are merged."
         }
       },
@@ -451,17 +451,17 @@
         "reason": "no effort to earn an OpenSSF best practices badge detected",
         "name": "CII-Best-Practices",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#cii-best-practices",
+          "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#cii-best-practices",
           "short": "Determines if the project has an OpenSSF (formerly CII) Best Practices Badge."
         }
       },
       {
         "details": null,
         "score": 8,
-        "reason": "Found 22/25 approved changesets -- score normalized to 8",
+        "reason": "Found 26/29 approved changesets -- score normalized to 8",
         "name": "Code-Review",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#code-review",
+          "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#code-review",
           "short": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
         }
       },
@@ -471,7 +471,7 @@
         "reason": "project has 14 contributing companies or organizations",
         "name": "Contributors",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#contributors",
+          "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#contributors",
           "short": "Determines if the project has a set of contributors from multiple organizations (e.g., companies)."
         }
       },
@@ -481,7 +481,7 @@
         "reason": "no dangerous workflow patterns detected",
         "name": "Dangerous-Workflow",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#dangerous-workflow",
+          "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#dangerous-workflow",
           "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
         }
       },
@@ -491,7 +491,7 @@
         "reason": "no update tool detected",
         "name": "Dependency-Update-Tool",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#dependency-update-tool",
+          "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#dependency-update-tool",
           "short": "Determines if the project uses a dependency update tool."
         }
       },
@@ -501,7 +501,7 @@
         "reason": "project is not fuzzed",
         "name": "Fuzzing",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#fuzzing",
+          "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#fuzzing",
           "short": "Determines if the project uses fuzzing."
         }
       },
@@ -511,7 +511,7 @@
         "reason": "license file detected",
         "name": "License",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#license",
+          "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#license",
           "short": "Determines if the project has defined a license."
         }
       },
@@ -521,7 +521,7 @@
         "reason": "30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10",
         "name": "Maintained",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#maintained",
+          "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#maintained",
           "short": "Determines if the project is \"actively maintained\"."
         }
       },
@@ -531,7 +531,7 @@
         "reason": "packaging workflow not detected",
         "name": "Packaging",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#packaging",
+          "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#packaging",
           "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
         }
       },
@@ -541,7 +541,7 @@
         "reason": "dependency not pinned by hash detected -- score normalized to 0",
         "name": "Pinned-Dependencies",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#pinned-dependencies",
+          "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#pinned-dependencies",
           "short": "Determines if the project has declared and pinned the dependencies of its build process."
         }
       },
@@ -551,7 +551,7 @@
         "reason": "SAST tool is not run on all commits -- score normalized to 0",
         "name": "SAST",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#sast",
+          "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#sast",
           "short": "Determines if the project uses static code analysis."
         }
       },
@@ -561,7 +561,7 @@
         "reason": "security policy file detected",
         "name": "Security-Policy",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#security-policy",
+          "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#security-policy",
           "short": "Determines if the project has published a security policy."
         }
       },
@@ -571,7 +571,7 @@
         "reason": "no releases found",
         "name": "Signed-Releases",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#signed-releases",
+          "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#signed-releases",
           "short": "Determines if the project cryptographically signs release artifacts."
         }
       },
@@ -581,17 +581,17 @@
         "reason": "detected GitHub workflow tokens with excessive permissions",
         "name": "Token-Permissions",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#token-permissions",
+          "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#token-permissions",
           "short": "Determines if the project's workflows follow the principle of least privilege."
         }
       },
       {
         "details": null,
         "score": 0,
-        "reason": "11 existing vulnerabilities detected",
+        "reason": "13 existing vulnerabilities detected",
         "name": "Vulnerabilities",
         "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/3b42b6e7d8c66543d10c7f5ac5d3ecc0d1e56e5a/docs/checks.md#vulnerabilities",
+          "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#vulnerabilities",
           "short": "Determines if the project has open, known unfixed vulnerabilities."
         }
       }
