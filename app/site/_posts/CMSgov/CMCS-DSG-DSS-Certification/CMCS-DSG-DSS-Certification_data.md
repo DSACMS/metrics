@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for CMCS-DSG-DSS-Certification | REPORT-2025-02-23
+title: Open Source at CMS Metrics Report for CMCS-DSG-DSS-Certification | REPORT-2025-03-02
 permalink: /CMSgov/CMCS-DSG-DSS-Certification/
 
 org: CMSgov
 repo: CMCS-DSG-DSS-Certification
-reportID: REPORT-2025-02-23
-date_stampThisWeek: 2025-02-23
-date_stampLastWeek: 2025-02-23
+reportID: REPORT-2025-03-02
+date_stampThisWeek: 2025-03-02
+date_stampLastWeek: 2025-03-02
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -80,10 +80,10 @@ date_stampLastWeek: 2025-02-23
       </tr>
       <tr>
         <th scope="row">Stars</th>
+        <td>11</td>
         <td>10</td>
-        <td>10</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >9.5%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
