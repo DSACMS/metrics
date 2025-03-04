@@ -218,7 +218,6 @@ a.usa-link:visited {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  /* list-style-type:none; */
   justify-content: center;
   width: 90vw;
 }
@@ -227,7 +226,6 @@ a.usa-link:visited {
   display: flex;
   justify-content: center;
   margin: 2%;
-  /* width: 90%; */
 }
 
 .usa-card__media {
@@ -306,10 +304,6 @@ a.usa-link:visited {
   border-radius: 50px;
   z-index: 10;
 }
-
-/* section:active {
-  border: #E7C000;
-} */
 
 .usa-search--small [type=submit], .usa-search--small .usa-search__submit {
   padding-left: 0.75rem;
@@ -512,9 +506,13 @@ a.usa-link:visited {
 }
 
 /* This is so that augur visualizations have the buttons cropped out. */
+.firstResponsePRCrop {
+  width: 100%;
+}
+
 .firstResponsePRCrop img {
-  width: 500px;
-  height: 310px;
+  width: 100%;
+  height: fit-content;
   object-fit: cover;
 }
 
@@ -524,14 +522,15 @@ a.usa-link:visited {
 
 .all-graphs {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  /* gap: 1rem; */
   justify-content: center;
 }
 
-.all-graphs > .graph-container {
-  flex: 1 1 calc(50% - 1rem);
-  min-width: 300px;
+[class^="graph-container-"] {
+  width: 65vw;
 }
 
 .graph-box {
@@ -561,7 +560,7 @@ a.usa-link:visited {
 }
 
 embed {
-  min-width: 315px;
+  min-width: -webkit-fill-available;
 }
 
 .usa-modal {
@@ -692,9 +691,27 @@ iframe:focus, [href]:focus, [tabindex]:focus, [contentEditable=true]:focus {
     margin-right: 5%;
   }
 
-  /* .usa-card {
-    margin-left: -5%;
-  } */
+  [class^="graph-container-"] {
+    width: 90vw;
+  }
+
+  .usa-button-group {
+    margin: 2% 0 -5% 3%;;
+  }
+
+  .grid-container-reports {
+    width: 100%;
+    align-items: center;
+  }
+
+  .github-information {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .stat-container {
+    margin: 0 3%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -734,15 +751,7 @@ iframe:focus, [href]:focus, [tabindex]:focus, [contentEditable=true]:focus {
   }
 
   .usa-button-group {
-    margin: 2% 0 -15% 3%;;
-  }
-
-  embed {
-    min-width: 500px;
-  }
-
-  .graph-box {
-    height: 600px;
+    margin: 2% 0 -5% 3%;;
   }
 
   .home-icon-container {
