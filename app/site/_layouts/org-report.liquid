@@ -20,7 +20,9 @@ layout: base
   <div class="report_container">
     {% if organization %}
       <h2>Organization Stats</h2>
-      <div class="github-information">
+
+      <div class="org-github-info">
+      <div class="github-information org-info">
         <div class="stat-container" id="projects">
           <div class="projects-heading">
             <h4 class=repo-stats>
@@ -56,6 +58,10 @@ layout: base
           <p>{{ organization.followers_count }}</p>
         </div>
       </div>
+      </div>
+
+
+
     {% else %}
       <p>Error Occurred: Object Not Found</p>
     {% endif %}
