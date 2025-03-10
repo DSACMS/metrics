@@ -480,6 +480,11 @@ a.usa-link:visited {
   width: 95%;
 }
 
+/* .org-github-info {
+  display: flex;
+  justify-content: center;
+} */
+
 .github-information {
   display: flex;
   justify-content: space-around;
@@ -524,8 +529,6 @@ a.usa-link:visited {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* flex-wrap: wrap; */
-  /* gap: 1rem; */
   justify-content: center;
 }
 
@@ -706,7 +709,11 @@ iframe:focus, [href]:focus, [tabindex]:focus, [contentEditable=true]:focus {
 
   .github-information {
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+  }
+
+  .org-info {
+    justify-content: space-evenly;
   }
 
   .stat-container {
@@ -756,6 +763,15 @@ iframe:focus, [href]:focus, [tabindex]:focus, [contentEditable=true]:focus {
 
   .home-icon-container {
     height: 90px;
+  }
+
+  .org-github-info {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .org-info {
+    width: 50%;
   }
 }
 
