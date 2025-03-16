@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macfc-security-scan-report | REPORT-2025-03-02
+title: Open Source at CMS Metrics Report for macfc-security-scan-report | REPORT-2025-03-16
 permalink: /Enterprise-CMCS/macfc-security-scan-report/
 
 org: Enterprise-CMCS
 repo: macfc-security-scan-report
-reportID: REPORT-2025-03-02
-date_stampThisWeek: 2025-03-02
-date_stampLastWeek: 2025-03-02
+reportID: REPORT-2025-03-16
+date_stampThisWeek: 2025-03-16
+date_stampLastWeek: 2025-03-16
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -66,10 +66,10 @@ date_stampLastWeek: 2025-03-02
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>16</td>
         <td>14</td>
-        <td>13</td>
-        <td style="" >1</td>
-        <td style="" >7.4%</td>
+        <td style="" >2</td>
+        <td style="" >13%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

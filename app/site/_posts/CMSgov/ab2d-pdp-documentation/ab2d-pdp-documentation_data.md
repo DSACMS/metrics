@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ab2d-pdp-documentation | REPORT-2025-03-02
+title: Open Source at CMS Metrics Report for ab2d-pdp-documentation | REPORT-2025-03-16
 permalink: /CMSgov/ab2d-pdp-documentation/
 
 org: CMSgov
 repo: ab2d-pdp-documentation
-reportID: REPORT-2025-03-02
-date_stampThisWeek: 2025-03-02
-date_stampLastWeek: 2025-03-02
+reportID: REPORT-2025-03-16
+date_stampThisWeek: 2025-03-16
+date_stampLastWeek: 2025-03-16
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -80,17 +80,17 @@ date_stampLastWeek: 2025-03-02
       </tr>
       <tr>
         <th scope="row">Stars</th>
+        <td>4</td>
         <td>3</td>
-        <td>3</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >29%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>12</td>
         <td>13</td>
-        <td>13</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >8%</td>
       </tr>
     </tbody>
   </table>

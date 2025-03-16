@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for hpt-validator | REPORT-2025-03-02
+title: Open Source at CMS Metrics Report for hpt-validator | REPORT-2025-03-16
 permalink: /CMSgov/hpt-validator/
 
 org: CMSgov
 repo: hpt-validator
-reportID: REPORT-2025-03-02
-date_stampThisWeek: 2025-03-02
-date_stampLastWeek: 2025-03-02
+reportID: REPORT-2025-03-16
+date_stampThisWeek: 2025-03-16
+date_stampLastWeek: 2025-03-16
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2025-03-02
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>168</td>
         <td>165</td>
-        <td>165</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >1.8%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2025-03-02
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>2</td>
         <td>4</td>
-        <td>4</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >-2</td>
+        <td style="color: #45c527" >67%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>51</td>
         <td>48</td>
-        <td>48</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >6.1%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>8</td>
         <td>7</td>
-        <td>7</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >1</td>
+        <td style="" >13%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

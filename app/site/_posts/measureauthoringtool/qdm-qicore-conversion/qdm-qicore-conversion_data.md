@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for qdm-qicore-conversion | REPORT-2025-03-02
+title: Open Source at CMS Metrics Report for qdm-qicore-conversion | REPORT-2025-03-16
 permalink: /measureauthoringtool/qdm-qicore-conversion/
 
 org: measureauthoringtool
 repo: qdm-qicore-conversion
-reportID: REPORT-2025-03-02
-date_stampThisWeek: 2025-03-02
-date_stampLastWeek: 2025-03-02
+reportID: REPORT-2025-03-16
+date_stampThisWeek: 2025-03-16
+date_stampLastWeek: 2025-03-16
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -87,10 +87,10 @@ date_stampLastWeek: 2025-03-02
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>7</td>
         <td>8</td>
-        <td>8</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #d31c08" >-1</td>
+        <td style="color: #d31c08" >13%</td>
       </tr>
     </tbody>
   </table>

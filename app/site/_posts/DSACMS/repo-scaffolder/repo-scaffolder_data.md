@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for repo-scaffolder | REPORT-2025-03-02
+title: Open Source at CMS Metrics Report for repo-scaffolder | REPORT-2025-03-16
 permalink: /DSACMS/repo-scaffolder/
 
 org: DSACMS
 repo: repo-scaffolder
-reportID: REPORT-2025-03-02
-date_stampThisWeek: 2025-03-02
-date_stampLastWeek: 2025-03-02
+reportID: REPORT-2025-03-16
+date_stampThisWeek: 2025-03-16
+date_stampLastWeek: 2025-03-16
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,24 +24,24 @@ date_stampLastWeek: 2025-03-02
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>767</td>
         <td>761</td>
-        <td>755</td>
         <td style="color: #45c527" >6</td>
         <td style="color: #45c527" >0.79%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
+        <td>61</td>
         <td>59</td>
-        <td>59</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >3.3%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>31</td>
         <td>29</td>
-        <td>29</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >2</td>
+        <td style="" >6.7%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -52,15 +52,15 @@ date_stampLastWeek: 2025-03-02
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>13</td>
         <td>8</td>
-        <td>4</td>
-        <td style="" >4</td>
-        <td style="" >67%</td>
+        <td style="" >5</td>
+        <td style="" >48%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>159</td>
         <td>157</td>
-        <td>155</td>
         <td style="color: #45c527" >2</td>
         <td style="color: #45c527" >1.3%</td>
       </tr>
