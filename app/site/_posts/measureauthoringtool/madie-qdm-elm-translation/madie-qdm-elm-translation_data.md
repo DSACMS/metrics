@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for madie-qdm-elm-translation | REPORT-2025-03-02
+title: Open Source at CMS Metrics Report for madie-qdm-elm-translation | REPORT-2025-03-16
 permalink: /measureauthoringtool/madie-qdm-elm-translation/
 
 org: measureauthoringtool
 repo: madie-qdm-elm-translation
-reportID: REPORT-2025-03-02
-date_stampThisWeek: 2025-03-02
-date_stampLastWeek: 2025-03-02
+reportID: REPORT-2025-03-16
+date_stampThisWeek: 2025-03-16
+date_stampLastWeek: 2025-03-16
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2025-03-02
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>614</td>
         <td>610</td>
-        <td>607</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >0.49%</td>
+        <td style="color: #45c527" >4</td>
+        <td style="color: #45c527" >0.65%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -53,23 +53,23 @@ date_stampLastWeek: 2025-03-02
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>99</td>
-        <td>95</td>
-        <td style="" >4</td>
-        <td style="" >4.1%</td>
+        <td>99</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>160</td>
         <td>158</td>
-        <td>157</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.63%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >1.3%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>59</td>
         <td>57</td>
-        <td>57</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >2</td>
+        <td style="" >3.4%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
