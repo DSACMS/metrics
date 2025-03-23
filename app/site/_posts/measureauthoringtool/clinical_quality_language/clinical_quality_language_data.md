@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for clinical_quality_language | REPORT-2025-03-16
+title: Open Source at CMS Metrics Report for clinical_quality_language | REPORT-2025-03-23
 permalink: /measureauthoringtool/clinical_quality_language/
 
 org: measureauthoringtool
 repo: clinical_quality_language
-reportID: REPORT-2025-03-16
-date_stampThisWeek: 2025-03-16
-date_stampLastWeek: 2025-03-16
+reportID: REPORT-2025-03-23
+date_stampThisWeek: 2025-03-23
+date_stampLastWeek: 2025-03-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -88,9 +88,9 @@ date_stampLastWeek: 2025-03-16
       <tr>
         <th scope="row">Watchers</th>
         <td>4</td>
-        <td>5</td>
-        <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >22%</td>
+        <td>4</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>

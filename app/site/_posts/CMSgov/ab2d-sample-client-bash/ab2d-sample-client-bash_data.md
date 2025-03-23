@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ab2d-sample-client-bash | REPORT-2025-03-16
+title: Open Source at CMS Metrics Report for ab2d-sample-client-bash | REPORT-2025-03-23
 permalink: /CMSgov/ab2d-sample-client-bash/
 
 org: CMSgov
 repo: ab2d-sample-client-bash
-reportID: REPORT-2025-03-16
-date_stampThisWeek: 2025-03-16
-date_stampLastWeek: 2025-03-16
+reportID: REPORT-2025-03-23
+date_stampThisWeek: 2025-03-23
+date_stampLastWeek: 2025-03-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -81,16 +81,16 @@ date_stampLastWeek: 2025-03-16
       <tr>
         <th scope="row">Stars</th>
         <td>3</td>
-        <td>2</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >40%</td>
+        <td>3</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
         <td>17</td>
-        <td>18</td>
-        <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >5.7%</td>
+        <td>17</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>

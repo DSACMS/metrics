@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for madie-rest-commons | REPORT-2025-03-16
+title: Open Source at CMS Metrics Report for madie-rest-commons | REPORT-2025-03-23
 permalink: /measureauthoringtool/madie-rest-commons/
 
 org: measureauthoringtool
 repo: madie-rest-commons
-reportID: REPORT-2025-03-16
-date_stampThisWeek: 2025-03-16
-date_stampLastWeek: 2025-03-16
+reportID: REPORT-2025-03-23
+date_stampThisWeek: 2025-03-23
+date_stampLastWeek: 2025-03-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2025-03-16
       <tr>
         <th scope="row">Commits</th>
         <td>37</td>
-        <td>36</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >2.7%</td>
+        <td>37</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -60,9 +60,9 @@ date_stampLastWeek: 2025-03-16
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>16</td>
-        <td>15</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >6.5%</td>
+        <td>16</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
