@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for newrelic_mysql_java_plugin | REPORT-2025-03-16
+title: Open Source at CMS Metrics Report for newrelic_mysql_java_plugin | REPORT-2025-03-23
 permalink: /CMSgov/newrelic_mysql_java_plugin/
 
 org: CMSgov
 repo: newrelic_mysql_java_plugin
-reportID: REPORT-2025-03-16
-date_stampThisWeek: 2025-03-16
-date_stampLastWeek: 2025-03-16
+reportID: REPORT-2025-03-23
+date_stampThisWeek: 2025-03-23
+date_stampLastWeek: 2025-03-23
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -88,9 +88,9 @@ date_stampLastWeek: 2025-03-16
       <tr>
         <th scope="row">Watchers</th>
         <td>31</td>
-        <td>32</td>
-        <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >3.2%</td>
+        <td>31</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>
