@@ -14,12 +14,12 @@
     "forks_count": 3,
     "stargazers_count": 8,
     "watchers_count": 3,
-    "total_project_lines": 4615,
-    "average_project_lines": 82,
+    "total_project_lines": 4484,
+    "average_project_lines": 79,
     "total_project_comment_lines": 370,
-    "average_project_comment_lines": 7,
-    "total_project_blank_lines": 589,
-    "average_blank_lines": 11,
+    "average_project_comment_lines": 6,
+    "total_project_blank_lines": 583,
+    "average_blank_lines": 10,
     "commits_by_month": {
         "2025/2": 4,
         "2024/11": 14,
@@ -28,16 +28,16 @@
     "new_commit_contributors_by_day_over_last_month": [],
     "new_commit_contributors_by_day_over_last_six_months": [
         [
-            "2024-09-16T05:00:00.000Z",
-            4
-        ],
-        [
-            "2024-09-17T05:00:00.000Z",
+            "2024-09-30T05:00:00.000Z",
             1
         ],
         [
-            "2024-09-19T05:00:00.000Z",
-            2
+            "2024-10-30T05:00:00.000Z",
+            1
+        ],
+        [
+            "2024-11-07T06:00:00.000Z",
+            1
         ]
     ],
     "new_issues_by_day_over_last_month": [],
@@ -278,16 +278,16 @@
     },
     "created_at": "2023-06-22T17:08:19Z",
     "ossf_scorecard": {
-        "date": "2025-03-02T11:18:38Z",
+        "date": "2025-03-16T09:43:00Z",
         "repo": {
             "name": "github.com/DSACMS/dedupliFHIR",
             "commit": "369e45cc14e6c6729ab21be0a10c26d2f1f864d9"
         },
         "scorecard": {
-            "version": "v5.1.1-10-g4b11525f",
-            "commit": "4b11525f1925c2a14ac162cbe5cea1546ea50127"
+            "version": "v5.1.1-19-ga16e0f9e",
+            "commit": "a16e0f9eb245274f08512e33dc7afa78d21c460c"
         },
-        "score": 5.2,
+        "score": 5.1,
         "checks": [
             {
                 "details": null,
@@ -295,7 +295,7 @@
                 "reason": "no binaries found in the repo",
                 "name": "Binary-Artifacts",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#binary-artifacts",
+                    "url": "https://github.com/ossf/scorecard/blob/a16e0f9eb245274f08512e33dc7afa78d21c460c/docs/checks.md#binary-artifacts",
                     "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
                 }
             },
@@ -305,7 +305,7 @@
                 "reason": "branch protection is not maximal on development and all release branches",
                 "name": "Branch-Protection",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#branch-protection",
+                    "url": "https://github.com/ossf/scorecard/blob/a16e0f9eb245274f08512e33dc7afa78d21c460c/docs/checks.md#branch-protection",
                     "short": "Determines if the default and release branches are protected with GitHub's branch protection settings."
                 }
             },
@@ -315,7 +315,7 @@
                 "reason": "6 out of 10 merged PRs checked by a CI test -- score normalized to 6",
                 "name": "CI-Tests",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#ci-tests",
+                    "url": "https://github.com/ossf/scorecard/blob/a16e0f9eb245274f08512e33dc7afa78d21c460c/docs/checks.md#ci-tests",
                     "short": "Determines if the project runs tests before pull requests are merged."
                 }
             },
@@ -325,7 +325,7 @@
                 "reason": "no effort to earn an OpenSSF best practices badge detected",
                 "name": "CII-Best-Practices",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#cii-best-practices",
+                    "url": "https://github.com/ossf/scorecard/blob/a16e0f9eb245274f08512e33dc7afa78d21c460c/docs/checks.md#cii-best-practices",
                     "short": "Determines if the project has an OpenSSF (formerly CII) Best Practices Badge."
                 }
             },
@@ -335,7 +335,7 @@
                 "reason": "Found 1/5 approved changesets -- score normalized to 2",
                 "name": "Code-Review",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#code-review",
+                    "url": "https://github.com/ossf/scorecard/blob/a16e0f9eb245274f08512e33dc7afa78d21c460c/docs/checks.md#code-review",
                     "short": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
                 }
             },
@@ -345,7 +345,7 @@
                 "reason": "project has 5 contributing companies or organizations",
                 "name": "Contributors",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#contributors",
+                    "url": "https://github.com/ossf/scorecard/blob/a16e0f9eb245274f08512e33dc7afa78d21c460c/docs/checks.md#contributors",
                     "short": "Determines if the project has a set of contributors from multiple organizations (e.g., companies)."
                 }
             },
@@ -355,7 +355,7 @@
                 "reason": "no dangerous workflow patterns detected",
                 "name": "Dangerous-Workflow",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#dangerous-workflow",
+                    "url": "https://github.com/ossf/scorecard/blob/a16e0f9eb245274f08512e33dc7afa78d21c460c/docs/checks.md#dangerous-workflow",
                     "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
                 }
             },
@@ -365,7 +365,7 @@
                 "reason": "update tool detected",
                 "name": "Dependency-Update-Tool",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#dependency-update-tool",
+                    "url": "https://github.com/ossf/scorecard/blob/a16e0f9eb245274f08512e33dc7afa78d21c460c/docs/checks.md#dependency-update-tool",
                     "short": "Determines if the project uses a dependency update tool."
                 }
             },
@@ -375,7 +375,7 @@
                 "reason": "project is not fuzzed",
                 "name": "Fuzzing",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#fuzzing",
+                    "url": "https://github.com/ossf/scorecard/blob/a16e0f9eb245274f08512e33dc7afa78d21c460c/docs/checks.md#fuzzing",
                     "short": "Determines if the project uses fuzzing."
                 }
             },
@@ -385,7 +385,7 @@
                 "reason": "license file detected",
                 "name": "License",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#license",
+                    "url": "https://github.com/ossf/scorecard/blob/a16e0f9eb245274f08512e33dc7afa78d21c460c/docs/checks.md#license",
                     "short": "Determines if the project has defined a license."
                 }
             },
@@ -395,7 +395,7 @@
                 "reason": "4 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 3",
                 "name": "Maintained",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#maintained",
+                    "url": "https://github.com/ossf/scorecard/blob/a16e0f9eb245274f08512e33dc7afa78d21c460c/docs/checks.md#maintained",
                     "short": "Determines if the project is \"actively maintained\"."
                 }
             },
@@ -405,7 +405,7 @@
                 "reason": "packaging workflow not detected",
                 "name": "Packaging",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#packaging",
+                    "url": "https://github.com/ossf/scorecard/blob/a16e0f9eb245274f08512e33dc7afa78d21c460c/docs/checks.md#packaging",
                     "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
                 }
             },
@@ -415,7 +415,7 @@
                 "reason": "dependency not pinned by hash detected -- score normalized to 0",
                 "name": "Pinned-Dependencies",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#pinned-dependencies",
+                    "url": "https://github.com/ossf/scorecard/blob/a16e0f9eb245274f08512e33dc7afa78d21c460c/docs/checks.md#pinned-dependencies",
                     "short": "Determines if the project has declared and pinned the dependencies of its build process."
                 }
             },
@@ -425,7 +425,7 @@
                 "reason": "SAST tool is run on all commits",
                 "name": "SAST",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#sast",
+                    "url": "https://github.com/ossf/scorecard/blob/a16e0f9eb245274f08512e33dc7afa78d21c460c/docs/checks.md#sast",
                     "short": "Determines if the project uses static code analysis."
                 }
             },
@@ -435,7 +435,7 @@
                 "reason": "security policy file detected",
                 "name": "Security-Policy",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#security-policy",
+                    "url": "https://github.com/ossf/scorecard/blob/a16e0f9eb245274f08512e33dc7afa78d21c460c/docs/checks.md#security-policy",
                     "short": "Determines if the project has published a security policy."
                 }
             },
@@ -445,7 +445,7 @@
                 "reason": "Project has not signed or included provenance with any releases.",
                 "name": "Signed-Releases",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#signed-releases",
+                    "url": "https://github.com/ossf/scorecard/blob/a16e0f9eb245274f08512e33dc7afa78d21c460c/docs/checks.md#signed-releases",
                     "short": "Determines if the project cryptographically signs release artifacts."
                 }
             },
@@ -455,17 +455,17 @@
                 "reason": "detected GitHub workflow tokens with excessive permissions",
                 "name": "Token-Permissions",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#token-permissions",
+                    "url": "https://github.com/ossf/scorecard/blob/a16e0f9eb245274f08512e33dc7afa78d21c460c/docs/checks.md#token-permissions",
                     "short": "Determines if the project's workflows follow the principle of least privilege."
                 }
             },
             {
                 "details": null,
-                "score": 5,
-                "reason": "5 existing vulnerabilities detected",
+                "score": 4,
+                "reason": "6 existing vulnerabilities detected",
                 "name": "Vulnerabilities",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/4b11525f1925c2a14ac162cbe5cea1546ea50127/docs/checks.md#vulnerabilities",
+                    "url": "https://github.com/ossf/scorecard/blob/a16e0f9eb245274f08512e33dc7afa78d21c460c/docs/checks.md#vulnerabilities",
                     "short": "Determines if the project has open, known unfixed vulnerabilities."
                 }
             }
@@ -499,288 +499,288 @@
     "repo_dependency_libyear_list": [
         [
             "@electron-toolkit/eslint-config-prettier",
-            0.0,
-            "2024-11-07T06:10:02.000"
+            1.1534246575,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "@playwright/test",
-            -0.0356164384,
-            "2024-11-07T06:10:02.000"
+            -0.0219178082,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "@uswds/uswds",
-            0.0,
-            "2024-11-07T06:10:02.000"
+            0.4191780822,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "altair",
-            0.4082191781,
-            "2024-11-07T06:10:02.000"
+            0.6520547945,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "astroid",
-            0.2082191781,
-            "2024-11-07T06:10:02.000"
+            0.4547945205,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "attrs",
-            0.6,
-            "2024-11-07T06:10:02.000"
+            1.2,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "black",
-            0.4493150685,
-            "2024-11-07T06:10:02.000"
+            0.3095890411,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "click",
-            0.0,
-            "2024-11-07T06:10:02.000"
+            1.3479452055,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "colorama",
             0.0,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "dill",
             0.6712328767,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "duckdb",
-            0.4219178082,
-            "2024-11-07T06:10:02.000"
+            0.7534246575,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "electron",
-            0.0,
-            "2024-11-07T06:10:02.000"
+            -0.0109589041,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "electron-builder",
             0.0,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "eslint",
             0.0,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "et-xmlfile",
             3.501369863,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "exceptiongroup",
             0.0,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "faker",
-            0.1561643836,
-            "2024-11-07T06:10:02.000"
+            0.3452054795,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "flake8",
-            0.1342465753,
-            "2024-11-07T06:10:02.000"
+            0.5342465753,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "fs-extra",
             0.0,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "igraph",
             0.304109589,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "iniconfig",
             0.0,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "isort",
-            0.0,
-            "2024-11-07T06:10:02.000"
+            1.2082191781,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "jinja2",
-            0.0,
-            "2024-11-07T06:10:02.000"
+            0.8301369863,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "jsonschema",
             0.0,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "jsonschema-specifications",
             0.7863013699,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "lxml",
-            0.0,
-            "2024-11-07T06:10:02.000"
+            0.501369863,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "markupsafe",
             0.7068493151,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "mccabe",
             0.0,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "mypy-extensions",
             0.0,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "numpy",
-            0.2849315068,
-            "2024-11-07T06:10:02.000"
+            0.5671232877,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "openpyxl",
             0.0,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "packaging",
-            0.0,
-            "2024-11-07T06:10:02.000"
+            0.4136986301,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "pandas",
             0.4438356164,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "pathspec",
             0.0,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "platformdirs",
             0.3424657534,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "pluggy",
             0.0,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "prettier",
             0.0,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "pyarrow",
-            0.2794520548,
-            "2024-11-07T06:10:02.000"
+            0.5917808219,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "pycodestyle",
             0.1342465753,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "pyflakes",
             0.0,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "pylint",
-            0.1753424658,
-            "2024-11-07T06:10:02.000"
+            0.4520547945,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "pytest",
-            0.0,
-            "2024-11-07T06:10:02.000"
+            0.4739726027,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "python-dateutil",
             0.0,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "python-shell",
             0.0,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "pytz",
-            0.6082191781,
-            "2024-11-07T06:10:02.000"
+            0.997260274,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "referencing",
-            0.0,
-            "2024-11-07T06:10:02.000"
+            0.7342465753,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "rpds-py",
-            0.2876712329,
-            "2024-11-07T06:10:02.000"
+            0.5808219178,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "six",
-            0.0,
-            "2024-11-07T06:10:02.000"
+            3.5863013699,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "splink",
-            0.1671232877,
-            "2024-11-07T06:10:02.000"
+            0.3232876712,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "sqlglot",
-            0.2684931507,
-            "2024-11-07T06:10:02.000"
+            0.6191780822,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "text2num",
             0.0,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "texttable",
             0.0,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "tomli",
-            2.6465753425,
-            "2024-11-07T06:10:02.000"
+            2.802739726,
+            "2025-03-14T03:22:06.000"
         ],
         [
             "tomlkit",
             0.0,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "toolz",
             0.695890411,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "typing-extensions",
             0.0,
-            "2024-11-07T06:10:02.000"
+            "2025-03-14T03:22:06.000"
         ],
         [
             "tzdata",
-            0.6136986301,
-            "2024-11-07T06:10:02.000"
+            0.9424657534,
+            "2025-03-14T03:22:06.000"
         ]
     ]
 }
