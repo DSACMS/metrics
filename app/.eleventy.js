@@ -89,7 +89,7 @@ module.exports = function (eleventyConfig) {
     "stroke-width": 2,
   })
 
-  const pathPrefix = process.env.NODE_ENV.includes("production") ? "/metrics" : ""
+  const pathPrefix = process.env.ELEVENTY_ENV.includes("production") ? "/metrics" : ""
 
   return {
     dir: {

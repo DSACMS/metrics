@@ -16,12 +16,6 @@ export function createNavigation() {
     if(menuButton && closeButton && menu) {
         menuButton.addEventListener("click", toggleMenu);
         closeButton.addEventListener("click", closeMenu);
-
-        document.activeElement("click", (e) => {
-            if(!menu.contains(e.target) && !menuButton.contains(e.target)) {
-                closeMenu
-            }
-        });
     }
 }
 
