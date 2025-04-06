@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ospo-guide | REPORT-2025-03-30
+title: Open Source at CMS Metrics Report for ospo-guide | REPORT-2025-04-06
 permalink: /DSACMS/ospo-guide/
 
 org: DSACMS
 repo: ospo-guide
-reportID: REPORT-2025-03-30
-date_stampThisWeek: 2025-03-30
-date_stampLastWeek: 2025-03-30
+reportID: REPORT-2025-04-06
+date_stampThisWeek: 2025-04-06
+date_stampLastWeek: 2025-04-06
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2025-03-30
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>196</td>
         <td>191</td>
-        <td>179</td>
-        <td style="color: #45c527" >12</td>
-        <td style="color: #45c527" >6.5%</td>
+        <td style="color: #45c527" >5</td>
+        <td style="color: #45c527" >2.6%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,17 +52,17 @@ date_stampLastWeek: 2025-03-30
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>2</td>
         <td>1</td>
-        <td style="" >1</td>
-        <td style="" >67%</td>
+        <td>2</td>
+        <td style="color: #45c527" >-1</td>
+        <td style="color: #45c527" >67%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>44</td>
         <td>42</td>
-        <td>40</td>
         <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >4.9%</td>
+        <td style="color: #45c527" >4.7%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>

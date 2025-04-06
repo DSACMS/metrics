@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for beneficiary-fhir-data | REPORT-2025-03-30
+title: Open Source at CMS Metrics Report for beneficiary-fhir-data | REPORT-2025-04-06
 permalink: /CMSgov/beneficiary-fhir-data/
 
 org: CMSgov
 repo: beneficiary-fhir-data
-reportID: REPORT-2025-03-30
-date_stampThisWeek: 2025-03-30
-date_stampLastWeek: 2025-03-30
+reportID: REPORT-2025-04-06
+date_stampThisWeek: 2025-04-06
+date_stampLastWeek: 2025-04-06
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2025-03-30
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>5468</td>
         <td>5451</td>
-        <td>5432</td>
-        <td style="color: #45c527" >19</td>
-        <td style="color: #45c527" >0.35%</td>
+        <td style="color: #45c527" >17</td>
+        <td style="color: #45c527" >0.31%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,17 +52,17 @@ date_stampLastWeek: 2025-03-30
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>16</td>
         <td>13</td>
-        <td>11</td>
-        <td style="" >2</td>
-        <td style="" >17%</td>
+        <td style="" >3</td>
+        <td style="" >21%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>2073</td>
         <td>2066</td>
-        <td>2055</td>
-        <td style="color: #45c527" >11</td>
-        <td style="color: #45c527" >0.53%</td>
+        <td style="color: #45c527" >7</td>
+        <td style="color: #45c527" >0.34%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -74,16 +74,16 @@ date_stampLastWeek: 2025-03-30
       <tr>
         <th scope="row">Forks</th>
         <td>32</td>
-        <td>33</td>
-        <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >3.1%</td>
+        <td>32</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>
         <td>62</td>
-        <td>61</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >1.6%</td>
+        <td>62</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>

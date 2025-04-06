@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for design-system | REPORT-2025-03-30
+title: Open Source at CMS Metrics Report for design-system | REPORT-2025-04-06
 permalink: /CMSgov/design-system/
 
 org: CMSgov
 repo: design-system
-reportID: REPORT-2025-03-30
-date_stampThisWeek: 2025-03-30
-date_stampLastWeek: 2025-03-30
+reportID: REPORT-2025-04-06
+date_stampThisWeek: 2025-04-06
+date_stampLastWeek: 2025-04-06
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,17 +24,17 @@ date_stampLastWeek: 2025-03-30
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>2451</td>
         <td>2446</td>
-        <td>2437</td>
-        <td style="color: #45c527" >9</td>
-        <td style="color: #45c527" >0.37%</td>
+        <td style="color: #45c527" >5</td>
+        <td style="color: #45c527" >0.2%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
         <td>251</td>
-        <td>250</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.4%</td>
+        <td>251</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
@@ -46,30 +46,30 @@ date_stampLastWeek: 2025-03-30
       <tr>
         <th scope="row">Closed Issues</th>
         <td>241</td>
-        <td>240</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.42%</td>
+        <td>241</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>8</td>
         <td>7</td>
-        <td>6</td>
         <td style="" >1</td>
-        <td style="" >15%</td>
+        <td style="" >13%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>2344</td>
         <td>2337</td>
-        <td>2328</td>
-        <td style="color: #45c527" >9</td>
-        <td style="color: #45c527" >0.39%</td>
+        <td style="color: #45c527" >7</td>
+        <td style="color: #45c527" >0.3%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>802</td>
         <td>792</td>
-        <td>792</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >10</td>
+        <td style="" >1.3%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
