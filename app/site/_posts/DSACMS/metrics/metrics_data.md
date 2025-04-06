@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for metrics | REPORT-2025-03-30
+title: Open Source at CMS Metrics Report for metrics | REPORT-2025-04-06
 permalink: /DSACMS/metrics/
 
 org: DSACMS
 repo: metrics
-reportID: REPORT-2025-03-30
-date_stampThisWeek: 2025-03-30
-date_stampLastWeek: 2025-03-30
+reportID: REPORT-2025-04-06
+date_stampThisWeek: 2025-04-06
+date_stampLastWeek: 2025-04-06
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,24 +24,24 @@ date_stampLastWeek: 2025-03-30
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>1988</td>
         <td>1972</td>
-        <td>1956</td>
         <td style="color: #45c527" >16</td>
         <td style="color: #45c527" >0.81%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
+        <td>74</td>
         <td>71</td>
-        <td>71</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >4.1%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>44</td>
         <td>41</td>
-        <td>41</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >3</td>
+        <td style="" >7.1%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -59,17 +59,17 @@ date_stampLastWeek: 2025-03-30
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>197</td>
         <td>195</td>
-        <td>195</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >1%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>62</td>
         <td>61</td>
-        <td>61</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >1</td>
+        <td style="" >1.6%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

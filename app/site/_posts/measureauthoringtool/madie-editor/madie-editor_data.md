@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for madie-editor | REPORT-2025-03-30
+title: Open Source at CMS Metrics Report for madie-editor | REPORT-2025-04-06
 permalink: /measureauthoringtool/madie-editor/
 
 org: measureauthoringtool
 repo: madie-editor
-reportID: REPORT-2025-03-30
-date_stampThisWeek: 2025-03-30
-date_stampLastWeek: 2025-03-30
+reportID: REPORT-2025-04-06
+date_stampThisWeek: 2025-04-06
+date_stampLastWeek: 2025-04-06
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -52,10 +52,10 @@ date_stampLastWeek: 2025-03-30
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>27</td>
         <td>26</td>
-        <td>25</td>
         <td style="" >1</td>
-        <td style="" >3.9%</td>
+        <td style="" >3.8%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>

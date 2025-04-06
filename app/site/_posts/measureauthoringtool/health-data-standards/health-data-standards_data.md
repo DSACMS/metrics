@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for health-data-standards | REPORT-2025-03-30
+title: Open Source at CMS Metrics Report for health-data-standards | REPORT-2025-04-06
 permalink: /measureauthoringtool/health-data-standards/
 
 org: measureauthoringtool
 repo: health-data-standards
-reportID: REPORT-2025-03-30
-date_stampThisWeek: 2025-03-30
-date_stampLastWeek: 2025-03-30
+reportID: REPORT-2025-04-06
+date_stampThisWeek: 2025-04-06
+date_stampLastWeek: 2025-04-06
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -81,9 +81,9 @@ date_stampLastWeek: 2025-03-30
       <tr>
         <th scope="row">Stars</th>
         <td>93</td>
-        <td>94</td>
-        <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >1.1%</td>
+        <td>93</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Watchers</th>
