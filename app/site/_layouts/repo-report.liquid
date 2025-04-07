@@ -23,7 +23,7 @@ layout: base
   <div class="report_heading report_heading-reports">
     <h1 class=report_heading-reports-title>
       Report for
-      <a target="_blank" href="https://github.com/{{ org }}/{{ repo }}" class="report-link">{{ repo }}</a>
+      <a target="_blank" href="{{ site.baseurl }}/{{ org }}/{{ repo }}" class="report-link">{{ repo }}</a>
     </h1>
   </div>
 
@@ -170,7 +170,24 @@ layout: base
           </div>
           <p>{{ project.pull_requests_count }}</p>
         </div>
-        <div class="stat-container" id="project-age" onclick="toggleDateAge(this)" style="cursor: pointer;">
+        <div class="stat-container" id="project-created">
+          <div class="project-age-heading">
+            <h4>
+              <span>
+                <svg
+                  class="usa-icon"
+                  aria-labelledby="project-created"
+                  role="img"
+                >
+                  {% lucide "calendar" %}
+                </svg>
+              </span>
+              Project Creation Date
+            </h4>
+          </div>
+          <p>{{ project.created_at | date: '%B %d, %Y' }}</p>
+        </div>
+        <div class="stat-container" id="project-age">
           <div class="project-age-heading">
             <h4>
               <span>
@@ -182,26 +199,20 @@ layout: base
                   {% lucide "calendar" %}
                 </svg>
               </span>
-              <span class="date">Project Creation Date</span>
-              <span class="age" style="display: none;">Age of Project</span>
+              Age of Project
             </h4>
           </div>
-          <p style="text-decoration: underline;">
-            <span class="date">
-              {{ project.created_at | date: '%B %d, %Y' }}
-            </span>
-            <span class="age" style="display: none;">
-              {% comment %} takes project created + todays date and turns it into seconds {% endcomment %}
-              {% assign created_date = project.created_at | date: '%s' | plus: 0 %}
-              {% assign current_date = 'now' | date: '%s' | plus: 0 %}
+          <p>
+            {% comment %} takes project created + todays date and turns it into seconds {% endcomment %}
+            {% assign created_date = project.created_at | date: '%s' | plus: 0 %}
+            {% assign current_date = 'now' | date: '%s' | plus: 0 %}
 
-              {% assign age_seconds = current_date | minus: created_date %}
+            {% assign age_seconds = current_date | minus: created_date %}
 
-              {% comment %} divide by how many seconds are in a day to convert back into days {% endcomment %}
-              {% assign age_days = age_seconds | divided_by: 86400.0 | round %}
+            {% comment %} divide by how many seconds are in a day to convert back into days {% endcomment %}
+            {% assign age_days = age_seconds | divided_by: 86400.0 | round %}
 
-              {{ age_days }} day{% if age_days != 1 %}s{% endif %}
-            </span>
+            {{ age_days }} day{% if age_days != 1 %}s{% endif %}
           </p>
         </div>
       </div>

@@ -7,15 +7,24 @@ export function operateModal() {
         if(modal) {
             modal.classList.add("usa-modal--active");
             modal.setAttribute("aria-hidden", "false");
-            console.log("Modal is open")
+
+            let overlay = document.querySelector(".usa-modal-overlay");
+            if(!overlay) {
+                overlay = document.createElement("div");
+                overlay.className = "usa-modal-overlay";
+                overlay.setAttribute("data-close-modal", "");
+                document.body.appendChild(overlay);
+            }
         }
     };
 
     const closeModal = (modal) => {
+        const overlay = document.querySelector(".usa-modal-overlay");
+
         if(modal) {
             modal.classList.remove("usa-modal--active");
             modal.setAttribute("aria-hidden", "true");
-            console.log("modal is closed")
+            document.body.removeChild(overlay)
         }
     };
 

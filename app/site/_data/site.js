@@ -1,10 +1,10 @@
-const isProduction = process.env.NODE_ENV.includes("production")
-const isTest = process.env.NODE_ENV.includes("test")
+const isProduction = process.env.ELEVENTY_ENV.includes("production")
+const isTest = process.env.ELEVENTY_ENV.includes("test")
 
 const host = (isProduction && !isTest) ? "https://dsacms.github.io" : "http://localhost:8080"
 
 // For modifying the <base> tag
-const baseurl = isProduction ? "/metrics" : ""
+const baseurl = isProduction ? "/metrics" : "" 
 
 module.exports = {
   name: "CMS Metrics Website",

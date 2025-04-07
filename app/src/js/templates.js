@@ -1,4 +1,4 @@
-export const reportHeadingTemplate = function(data) {  
+export const reportHeadingTemplate = function(data) { 
     return `
           <h2>
             ${ data.name }

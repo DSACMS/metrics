@@ -8,7 +8,7 @@ layout: base
   <div class="report_heading report_heading-reports">
     <h1 class=report_heading-reports-title>
       Report for
-      <a target="_blank" href="https://github.com/{{ org }}" class="report-link">{{ org }}</a>
+      <a target="_blank" href="{{ site.baseurl }}/{{ org }}" class="report-link">{{ org }}</a>
       <img
         src="{{organization.avatar_url}}"
         alt="Organization Avatar"
@@ -16,44 +16,45 @@ layout: base
       >
     </h1>
   </div>
-
   <div class="report_container">
     {% if organization %}
       <h2>Organization Stats</h2>
-      <div class="github-information">
-        <div class="stat-container" id="projects">
-          <div class="projects-heading">
-            <h4 class=repo-stats>
-              <span>
-                <svg
-                  class="usa-icon"
-                  aria-labelledby="projects-count"
-                  role="img"
-                >
-                  {% lucide "folder-git-2" %}
-                </svg>
-              </span>
-              Repositories
-            </h4>
+      <div class="org-github-info">
+        <div class="github-information org-info">
+          <div class="stat-container" id="projects">
+            <div class="projects-heading">
+              <h4 class="repo-stats">
+                <span>
+                  <svg
+                    class="usa-icon"
+                    aria-labelledby="projects-count"
+                    role="img"
+                  >
+                    {% lucide "folder-git-2" %}
+                  </svg>
+                </span>
+                Repositories
+              </h4>
+            </div>
+            <p>{{ organization.repo_count }}</p>
           </div>
-          <p>{{ organization.repo_count }}</p>
-        </div>
-        <div class="stat-container" id="followers">
-          <div class="followers-heading">
-            <h4 class=repo-stats>
-              <span>
-                <svg
-                  class="usa-icon"
-                  aria-labelledby="followers-count"
-                  role="img"
-                >
-                  {% lucide "users-2" %}
-                </svg>
-              </span>
-              Followers
-            </h4>
+          <div class="stat-container" id="followers">
+            <div class="followers-heading">
+              <h4 class="repo-stats">
+                <span>
+                  <svg
+                    class="usa-icon"
+                    aria-labelledby="followers-count"
+                    role="img"
+                  >
+                    {% lucide "users-2" %}
+                  </svg>
+                </span>
+                Followers
+              </h4>
+            </div>
+            <p>{{ organization.followers_count }}</p>
           </div>
-          <p>{{ organization.followers_count }}</p>
         </div>
       </div>
     {% else %}
