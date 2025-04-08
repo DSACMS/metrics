@@ -1,6 +1,6 @@
 import { reportHeadingTemplate, projectCardTemplate } from "../templates";
 import { templateDiv, parsedProjectsData, orgsData, siteData, findObject, baseurl } from "./data";
-import { updateFilters } from "./filters";
+import { getFilteredProjects, updateFilters } from "./filters";
 import { getPageRange, updateHeadingVisibility } from "./utilities";
 import DOMPurify from 'dompurify';
 
@@ -9,11 +9,10 @@ const parsedOrgsData = orgsData
 let currentPage = 1
 const itemsPerPage = 10;
 
-export function createProjectCards() {
-    let filteredProjects = [...parsedProjectsData];
+export function createProjectCards(projects = getFilteredProjects()) {
     templateDiv.innerHTML = ''
   
-    const allProjects = (filteredProjects || parsedProjectsData).map((project) => ({
+    const allProjects = (projects || parsedProjectsData).map((project) => ({
       ...project,
       org: project.owner
     }));
