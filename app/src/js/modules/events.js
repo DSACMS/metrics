@@ -1,10 +1,9 @@
 import { sortDirection, sortSelection, parsedProjectsData } from "./data";
-import { updateFilters } from "./filters";
+import { getFilteredProjects, setFilteredProjects, updateFilters, updateFilteredProjects } from "./filters";
 import { sortCards } from "./sorting";
-import { createProjectCards } from "./rendering";
+import { renderPaginatedProjects } from "./rendering";
 
 let currentPage;
-let filteredProjects = [...parsedProjectsData];
 
 export function setupEventListeners() {
   sortSelection.addEventListener('change', () => sortCards());
@@ -34,9 +33,15 @@ document.addEventListener("DOMContentLoaded", () => {
   
   searchBox.addEventListener("input", () => {
     const query = searchBox.value.toLowerCase();
-    filteredProjects = parsedProjectsData.filter((project) => project.name.toLowerCase().includes(query.toLowerCase()));
-    currentPage = 1
-    createProjectCards()
+    if(query === '') {
+      updateFilteredProjects();
+    } else {
+      const newFilteredProjects = parsedProjectsData.filter((project) =>
+        project.name.toLowerCase().includes(query.toLowerCase())
+      );
+      setFilteredProjects(newFilteredProjects)
+      currentPage = 1
+      renderPaginatedProjects(getFilteredProjects());
+    }
   })
-  createProjectCards()
-})
+});
