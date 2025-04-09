@@ -4,7 +4,16 @@ import { renderPaginatedProjects, renderPaginationControls } from "./rendering";
 import { sortCards } from "./sorting";
 
 
-export let filteredProjects = [...parsedProjectsData];
+let filteredProjects = [...parsedProjectsData];
+
+export function getFilteredProjects() {
+  return filteredProjects;
+}
+
+export function setFilteredProjects(projects) {
+  filteredProjects = projects;
+}
+
 let currentPage = 1
 const itemsPerPage = 10;
 
