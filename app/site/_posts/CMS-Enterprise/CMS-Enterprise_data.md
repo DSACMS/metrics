@@ -1,12 +1,12 @@
 ---
 layout: org-report
-title: Open Source at CMS Metrics Report for CMS-Enterprise | REPORT-2025-04-06
+title: Open Source at CMS Metrics Report for CMS-Enterprise | REPORT-2025-04-13
 permalink: /CMS-Enterprise/
 
 org: CMS-Enterprise
-reportID: REPORT-2025-04-06
-date_stampThisWeek: 2025-04-06
-date_stampLastWeek: 2025-04-06
+reportID: REPORT-2025-04-13
+date_stampThisWeek: 2025-04-13
+date_stampLastWeek: 2025-04-13
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -87,9 +87,9 @@ date_stampLastWeek: 2025-04-06
       <tr>
         <th scope="row">Watchers</th>
         <td>229</td>
-        <td>227</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >0.88%</td>
+        <td>229</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Followers</th>

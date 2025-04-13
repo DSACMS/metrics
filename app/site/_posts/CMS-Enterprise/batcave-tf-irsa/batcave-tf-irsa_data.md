@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-tf-irsa | REPORT-2025-04-06
+title: Open Source at CMS Metrics Report for batcave-tf-irsa | REPORT-2025-04-13
 permalink: /CMS-Enterprise/batcave-tf-irsa/
 
 org: CMS-Enterprise
 repo: batcave-tf-irsa
-reportID: REPORT-2025-04-06
-date_stampThisWeek: 2025-04-06
-date_stampLastWeek: 2025-04-06
+reportID: REPORT-2025-04-13
+date_stampThisWeek: 2025-04-13
+date_stampLastWeek: 2025-04-13
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -88,9 +88,9 @@ date_stampLastWeek: 2025-04-06
       <tr>
         <th scope="row">Watchers</th>
         <td>9</td>
-        <td>7</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >25%</td>
+        <td>9</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
     </tbody>
   </table>
