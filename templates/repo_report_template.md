@@ -99,7 +99,7 @@ date_stampLastWeek: {date_stamp}
   <h2 class="graph-section-title">Activity Graphs</h2>
   <div class="all-graphs">
     {% Issues/PRs Status Breakdown Graph %}
-    {{% render "graph-section"  baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/issue_gauge_{repo_name}_data.svg", title: "Issues & PRs Status Breakdown", modal_description: "This graph provides an overview of the statuses of issues and pull requests in the repository. It categorizes them into open issues, open pull requests, and closed and merged pull requests, helping track progress and worklad distribution." %}}
+    {{% render "graph-section"  baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/issue_gauge_{repo_name}_data.svg", title: "Issues & PRs Status Breakdown", modal_description: "This graph provides an overview of the statuses of issues and pull requests in the repository. It categorizes them into open issues, open pull requests, and closed and merged pull requests, helping track progress and workload distribution." %}}
     {% Contributor Activity Line Graph %}
     {{% render "graph-section" baseurl: site.baseurl, path: "/{repo_owner}/{repo_name}/commit_sparklines_{repo_name}_data.svg", title: "Commits by Month", modal_description: "This line graph represents contributor activity over time by showing the number of commits made each month. It provides insights into trends in developement and periods of high and low activity." %}}
     {% First Response For Closed PR Scatterplot %}
