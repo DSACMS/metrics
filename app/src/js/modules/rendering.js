@@ -5,185 +5,121 @@ import { getPageRange, updateHeadingVisibility } from "./utilities";
 import DOMPurify from 'dompurify';
 
 const parsedOrgsData = orgsData
-
 let currentPage = 1
 const itemsPerPage = 10;
 
-export function createProjectCards(projects = getFilteredProjects()) {
-    templateDiv.innerHTML = ''
-  
-    const allProjects = (projects || parsedProjectsData).map((project) => ({
-      ...project,
-      org: project.owner
-    }));
-
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-    const paginatedProjects = allProjects.slice(startIndex, endIndex);
-  
-    const groupedByOrg = paginatedProjects.reduce((acc, curr) => {
-      if(!acc[curr.org]) {
-        acc[curr.org] = []
-      }
-      acc[curr.org].push(curr);
-      return acc
-    }, {});
-  
-    for (const org in groupedByOrg) {
-      const orgProject = findObject(parsedOrgsData, org);
-      const orgHeading = reportHeadingTemplate(orgProject);
-      const projectSectionsTemplate = document.createElement('div');
-      projectSectionsTemplate.className = 'project_section';
-      templateDiv.append(projectSectionsTemplate);
-    
-      const reportHeading = document.createElement('div');
-      reportHeading.className = "report_heading";
-      reportHeading.innerHTML = DOMPurify.sanitize(orgHeading);
-      projectSectionsTemplate.appendChild(reportHeading);
-    
-      const projectCards = document.createElement('ul');
-      projectCards.className = "usa-card-group flex-align-stretch";
-    
-      projectSectionsTemplate.appendChild(projectCards);
-  
-      groupedByOrg[org].forEach(repoData => {
-        repoData.baseurl = siteData.baseurl;
-        const projectCard = document.createElement('li');
-        projectCard.className = 'usa-card project-card tablet:grid-col-12';
-        projectCard.id = repoData.name;
-        projectCard.setAttribute('org-name', repoData.owner);
-        projectCard.innerHTML = DOMPurify.sanitize(projectCardTemplate(repoData));
-        projectCards.appendChild(projectCard);
-      })
+function renderProjectGroups(projects, groupByKey = 'org') {
+  const groupedByOrg = projects.reduce((acc, curr) => {
+    const groupKey = curr[groupByKey];
+    if(!acc[groupKey]) {
+      acc[groupKey] = [];
     }
-    updateFilters();
-    updateHeadingVisibility();
-    renderPaginationControls(allProjects.length)
-  }
+    acc[groupKey].push(curr);
+        return acc
+      }, {});
+    
+      for (const org in groupedByOrg) {
+        const orgProject = findObject(parsedOrgsData, org);
+        const orgHeading = reportHeadingTemplate(orgProject);
+        const projectSectionsTemplate = document.createElement('div');
+        projectSectionsTemplate.className = 'project_section';
+        templateDiv.append(projectSectionsTemplate);
+    
+        const reportHeading = document.createElement('div');
+        reportHeading.className = "report_heading";
+        reportHeading.innerHTML = DOMPurify.sanitize(orgHeading);
+        projectSectionsTemplate.appendChild(reportHeading);
+    
+        const projectCards = document.createElement('ul');
+        projectCards.className = "usa-card-group flex-align-stretch";
+        projectSectionsTemplate.appendChild(projectCards);
 
-export function renderPaginatedProjects(projects = parsedProjectsData) {
+        groupedByOrg[org].forEach(repoData => {
+          repoData.baseurl = siteData.baseurl;
+          const projectCard = document.createElement('li');
+          projectCard.className = 'usa-card project-card tablet:grid-col-12';
+          projectCard.id = repoData.name;
+          projectCard.setAttribute('org-name', repoData.owner);
+          projectCard.innerHTML = DOMPurify.sanitize(projectCardTemplate(repoData));
+          projectCards.appendChild(projectCard);
+        });
+  }
+}
+
+export function createProjectCards(projects = getFilteredProjects()) {
+  templateDiv.innerHTML = ''
+  
+  const allProjects = (projects || parsedProjectsData).map((project) => ({
+    ...project,
+    org: project.owner
+  }));
+  
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-  const paginatedProjects = projects.slice(startIndex, endIndex);
+  const paginatedProjects = allProjects.slice(startIndex, endIndex);
 
-  templateDiv.innerHTML = '';
-
-  const groupedByOrg = paginatedProjects.reduce((acc, curr) => {
-    if(!acc[curr.owner]) {
-      acc[curr.owner] = []
-    }
-    acc[curr.owner].push(curr);
-    return acc
-  }, {});
-
-  for (const org in groupedByOrg) {
-    const orgProject = findObject(parsedOrgsData, org);
-    const orgHeading = reportHeadingTemplate(orgProject);
-    const projectSectionsTemplate = document.createElement('div');
-    projectSectionsTemplate.className = 'project_section';
-  
-    const reportHeading = document.createElement('div');
-    reportHeading.className = "report_heading";
-    reportHeading.innerHTML = DOMPurify.sanitize(orgHeading);
-    projectSectionsTemplate.appendChild(reportHeading);
-  
-    const projectCards = document.createElement('ul');
-    projectCards.className = "usa-card-group flex-align-stretch";
-
-    groupedByOrg[org].forEach(repoData => {
-      repoData.baseurl = siteData.baseurl;
-      const projectCard = document.createElement('li');
-      projectCard.className = 'usa-card project-card tablet:grid-col-12';
-      projectCard.id = repoData.name;
-      projectCard.setAttribute('org-name', repoData.owner);
-      projectCard.innerHTML = DOMPurify.sanitize(projectCardTemplate(repoData));
-      projectCards.appendChild(projectCard);
-    });
-
-    projectSectionsTemplate.appendChild(projectCards);
-    templateDiv.append(projectSectionsTemplate);
-  }
+  renderProjectGroups(paginatedProjects);
+  updateFilters();
   updateHeadingVisibility();
+  renderPaginationControls(allProjects.length);
 }
+
+export const renderPaginatedProjects = createProjectCards;
 
 export function renderPaginationControls(totalProjectsCount) {
   const paginationDiv = document.getElementById('pagination-controls') || document.createElement('div');
   paginationDiv.id = 'pagination-controls';
   paginationDiv.className = 'usa-pagination';
   paginationDiv.innerHTML = '';
-
+  
   const totalPages = Math.ceil(totalProjectsCount / itemsPerPage);
-
+  currentPage = Math.max(1, Math.min(currentPage, totalPages || 1));
+  
   const paginationList = document.createElement('ul');
   paginationList.className = 'usa-pagination__list';
 
-  const prevItem = document.createElement('li');
-  prevItem.className = 'usa-pagination__item usa-pagination__arrow';
-  const prevButton = document.createElement('a');
-  prevButton.href = 'javascript:void(0);';
-  prevButton.className = 'usa-pagination__link usa-pagination__previous-page';
-  prevButton.setAttribute('aria-label', 'Previous page');
-  if (currentPage === 1) prevButton.classList.add('usa-pagination__disabled');
-  prevButton.innerHTML = `
-    <svg class="usa-icon" aria-hidden="true" role="img">
-      <use xlink:href="${baseurl}/assets/img/sprite.svg#navigate_before"></use>
-    </svg>
-    <span class="usa-pagination__link-text">Previous</span>
-  `;
-  prevButton.addEventListener('click', () => {
-    if (currentPage > 1) {
-      currentPage--;
-      createProjectCards();
-    }
+  const prevItem = createPaginationButton({
+    className: 'usa-pagination__previous-page',
+    label: 'Previous page',
+    disabled: currentPage === 1,
+    icon: 'navigate_before',
+    text: 'Previous',
+    onclick: () => navigateToPage(currentPage - 1)
   });
-  prevItem.appendChild(prevButton);
   paginationList.appendChild(prevItem);
 
   const pageRange = getPageRange(currentPage, totalPages, 3);
-  pageRange.forEach((page, index) => {
+  pageRange.forEach((page) => {
+    const isEllipsis = page === '...';
     const pageItem = document.createElement('li');
-    pageItem.className = 'usa-pagination__item';
+    pageItem.className = `usa-pagination__item ${isEllipsis ? 'usa-pagination__overflow' :
+      'usa-pagination__page-no'}`;
 
-    if (page === '...') {
-      pageItem.className += ' usa-pagination__overflow';
+    if (isEllipsis) {
       pageItem.innerHTML = `<span aria-label="ellipsis indicating non-visible pages">…</span>`;
     } else {
-      pageItem.className += ' usa-pagination__page-no';
+      const isCurrent = page === currentPage;
       const pageButton = document.createElement('a');
       pageButton.href = 'javascript:void(0);';
-      pageButton.className = `usa-pagination__button${page === currentPage ? ' usa-current' : ''}`;
+      pageButton.className = `usa-pagination__button${isCurrent ? ' usa-current' : ''}`;
       pageButton.textContent = page;
       pageButton.setAttribute('aria-label', `Page ${page}`);
-      if (page === currentPage) pageButton.setAttribute('aria-current', 'page');
-      pageButton.addEventListener('click', () => {
-        currentPage = page;
-        createProjectCards();
-      });
-      pageItem.appendChild(pageButton);
+
+      if (isCurrent) pageButton.setAttribute('aria-current', 'page');
+        pageButton.addEventListener('click', () => navigateToPage(page));
+        pageItem.appendChild(pageButton);
     }
     paginationList.appendChild(pageItem);
   });
 
-  const nextItem = document.createElement('li');
-  nextItem.className = 'usa-pagination__item usa-pagination__arrow';
-  const nextButton = document.createElement('a');
-  nextButton.href = 'javascript:void(0);';
-  nextButton.className = 'usa-pagination__link usa-pagination__next-page';
-  nextButton.setAttribute('aria-label', 'Next page');
-  if (currentPage === totalPages) nextButton.classList.add('usa-pagination__disabled');
-  nextButton.innerHTML = `
-    <span class="usa-pagination__link-text">Next</span>
-    <svg class="usa-icon" aria-hidden="true" role="img">
-      <use xlink:href="${baseurl}/assets/img/sprite.svg#navigate_next"></use>
-    </svg>
-  `;
-  nextButton.addEventListener('click', () => {
-    if (currentPage < totalPages) {
-      currentPage++;
-      createProjectCards();
-    }
+  const nextItem = createPaginationButton({
+    className: 'usa-pagination__next-page',
+    label: 'Next page',
+    disabled: currentPage === totalPages,
+    icon: 'navigate_next',
+    text: 'Next',
+    onclick: () => navigateToPage(currentPage + 1)
   });
-  nextItem.appendChild(nextButton);
   paginationList.appendChild(nextItem);
 
   paginationDiv.appendChild(paginationList);
@@ -191,4 +127,47 @@ export function renderPaginationControls(totalProjectsCount) {
   if (!document.body.contains(paginationDiv)) {
     templateDiv.parentElement.appendChild(paginationDiv);
   }
+}
+
+function navigateToPage(page) {
+  if(page >= 1 && page <= Math.ceil(getFilteredProjects().length / itemsPerPage)) {
+    currentPage = page;
+    createProjectCards();
+  }
+}
+
+function createPaginationButton({
+  className,
+  label,
+  disabled,
+  icon,
+  text,
+  iconPosition = 'before',
+  onclick
+}) {
+  const item = document.createElement('li');
+  item.className = 'usa-pagination__item usa-pagination__arrow';
+
+  const button = document.createElement('a');
+  button.href = 'javascript:void(0);';
+  button.className = `usa-pagination__link ${className}`;
+  button.setAttribute('aria-label', label);
+  if(disabled) button.classList.add('usa-pagination__disabled');
+
+  const iconHtml = `
+    <svg class="usa-icon" aria-hidden="true" role="img">
+      <use xlink:href="${baseurl}/assets/img/sprite.svg#${icon}"></use>
+    </svg>
+  `;
+
+  button.innerHTML = iconPosition === 'before'
+    ? `${iconHtml}<span class="usa-pagination__link-text">${text}</span>`
+    : `<span class="usa-pagination__link-text">${text}</span>${iconHtml}`;
+
+  if(!disabled) {
+    button.addEventListener('click', onclick);
+  }
+
+  item.appendChild(button);
+  return item;
 }
