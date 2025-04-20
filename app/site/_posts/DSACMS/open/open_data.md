@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for open | REPORT-2025-04-13
+title: Open Source at CMS Metrics Report for open | REPORT-2025-04-20
 permalink: /DSACMS/open/
 
 org: DSACMS
 repo: open
-reportID: REPORT-2025-04-13
-date_stampThisWeek: 2025-04-13
-date_stampLastWeek: 2025-04-13
+reportID: REPORT-2025-04-20
+date_stampThisWeek: 2025-04-20
+date_stampLastWeek: 2025-04-20
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -39,16 +39,16 @@ date_stampLastWeek: 2025-04-13
       <tr>
         <th scope="row">Open Issues</th>
         <td>24</td>
-        <td>25</td>
-        <td style="color: #45c527" >-1</td>
-        <td style="color: #45c527" >4.1%</td>
+        <td>24</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
         <td>17</td>
-        <td>16</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >6.1%</td>
+        <td>17</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>

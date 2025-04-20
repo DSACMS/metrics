@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for design-system | REPORT-2025-04-13
+title: Open Source at CMS Metrics Report for design-system | REPORT-2025-04-20
 permalink: /CMSgov/design-system/
 
 org: CMSgov
 repo: design-system
-reportID: REPORT-2025-04-13
-date_stampThisWeek: 2025-04-13
-date_stampLastWeek: 2025-04-13
+reportID: REPORT-2025-04-20
+date_stampThisWeek: 2025-04-20
+date_stampLastWeek: 2025-04-20
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2025-04-13
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>2456</td>
         <td>2452</td>
-        <td>2451</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.041%</td>
+        <td style="color: #45c527" >4</td>
+        <td style="color: #45c527" >0.16%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2025-04-13
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>11</td>
         <td>8</td>
-        <td>8</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >3</td>
+        <td style="" >32%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>2349</td>
         <td>2345</td>
-        <td>2344</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.043%</td>
+        <td style="color: #45c527" >4</td>
+        <td style="color: #45c527" >0.17%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>817</td>
         <td>811</td>
-        <td>802</td>
-        <td style="" >9</td>
-        <td style="" >1.1%</td>
+        <td style="" >6</td>
+        <td style="" >0.74%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

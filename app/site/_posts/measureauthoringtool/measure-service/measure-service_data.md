@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for measure-service | REPORT-2025-04-13
+title: Open Source at CMS Metrics Report for measure-service | REPORT-2025-04-20
 permalink: /measureauthoringtool/measure-service/
 
 org: measureauthoringtool
 repo: measure-service
-reportID: REPORT-2025-04-13
-date_stampThisWeek: 2025-04-13
-date_stampLastWeek: 2025-04-13
+reportID: REPORT-2025-04-20
+date_stampThisWeek: 2025-04-20
+date_stampLastWeek: 2025-04-20
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2025-04-13
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>2545</td>
         <td>2535</td>
-        <td>2515</td>
-        <td style="color: #45c527" >20</td>
-        <td style="color: #45c527" >0.79%</td>
+        <td style="color: #45c527" >10</td>
+        <td style="color: #45c527" >0.39%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2025-04-13
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>7</td>
         <td>8</td>
-        <td>16</td>
-        <td style="color: #45c527" >-8</td>
-        <td style="color: #45c527" >67%</td>
+        <td style="color: #45c527" >-1</td>
+        <td style="color: #45c527" >13%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>593</td>
         <td>589</td>
-        <td>584</td>
-        <td style="color: #45c527" >5</td>
-        <td style="color: #45c527" >0.85%</td>
+        <td style="color: #45c527" >4</td>
+        <td style="color: #45c527" >0.68%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>254</td>
-        <td>243</td>
-        <td style="" >11</td>
-        <td style="" >4.4%</td>
+        <td>254</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
