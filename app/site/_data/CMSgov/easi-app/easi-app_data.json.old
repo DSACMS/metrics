@@ -3,14 +3,14 @@
     "owner": "CMSgov",
     "name": "easi-app",
     "description": "EASi App",
-    "commits_count": 9046,
+    "commits_count": 9048,
     "issues_count": 1,
     "open_issues_count": 0,
     "closed_issues_count": 1,
-    "pull_requests_count": 3084,
+    "pull_requests_count": 3091,
     "open_pull_requests_count": 6,
-    "merged_pull_requests_count": 2728,
-    "closed_pull_requests_count": 350,
+    "merged_pull_requests_count": 2734,
+    "closed_pull_requests_count": 351,
     "forks_count": 0,
     "stargazers_count": 3,
     "watchers_count": 2,
@@ -21,19 +21,15 @@
     "total_project_blank_lines": 38066,
     "average_blank_lines": 16,
     "commits_by_month": {
-        "2025/4": 1,
+        "2025/4": 3,
         "2025/3": 20,
-        "2025/2": 9
+        "2025/2": 7
     },
     "new_commit_contributors_by_day_over_last_month": [],
     "new_commit_contributors_by_day_over_last_six_months": [
         [
-            "2024-10-22T05:00:00.000Z",
-            2
-        ],
-        [
             "2024-10-28T05:00:00.000Z",
-            1
+            2
         ],
         [
             "2024-10-29T05:00:00.000Z",
@@ -63,14 +59,14 @@
     "nadia_badge_name": "midsize",
     "created_at": "2019-10-17T17:29:28Z",
     "ossf_scorecard": {
-        "date": "2025-04-06T12:40:02Z",
+        "date": "2025-04-13T09:39:09Z",
         "repo": {
             "name": "github.com/CMSgov/easi-app",
-            "commit": "40d3cb3e068368fe4a38dd440ee9928e50629163"
+            "commit": "9dd44ce937fc3b39166389fd005765f5278c8215"
         },
         "scorecard": {
-            "version": "v5.1.1-30-g29760499",
-            "commit": "29760499f3efe7ec2178d0afbc1ff16d730770f2"
+            "version": "v5.1.1-37-g0592fdea",
+            "commit": "0592fdea7c858b1c7ce2eebb2315768e3a7b5add"
         },
         "score": 6.0,
         "checks": [
@@ -80,7 +76,7 @@
                 "reason": "no binaries found in the repo",
                 "name": "Binary-Artifacts",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/29760499f3efe7ec2178d0afbc1ff16d730770f2/docs/checks.md#binary-artifacts",
+                    "url": "https://github.com/ossf/scorecard/blob/0592fdea7c858b1c7ce2eebb2315768e3a7b5add/docs/checks.md#binary-artifacts",
                     "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
                 }
             },
@@ -90,7 +86,7 @@
                 "reason": "branch protection is not maximal on development and all release branches",
                 "name": "Branch-Protection",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/29760499f3efe7ec2178d0afbc1ff16d730770f2/docs/checks.md#branch-protection",
+                    "url": "https://github.com/ossf/scorecard/blob/0592fdea7c858b1c7ce2eebb2315768e3a7b5add/docs/checks.md#branch-protection",
                     "short": "Determines if the default and release branches are protected with GitHub's branch protection settings."
                 }
             },
@@ -100,7 +96,7 @@
                 "reason": "30 out of 30 merged PRs checked by a CI test -- score normalized to 10",
                 "name": "CI-Tests",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/29760499f3efe7ec2178d0afbc1ff16d730770f2/docs/checks.md#ci-tests",
+                    "url": "https://github.com/ossf/scorecard/blob/0592fdea7c858b1c7ce2eebb2315768e3a7b5add/docs/checks.md#ci-tests",
                     "short": "Determines if the project runs tests before pull requests are merged."
                 }
             },
@@ -110,7 +106,7 @@
                 "reason": "no effort to earn an OpenSSF best practices badge detected",
                 "name": "CII-Best-Practices",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/29760499f3efe7ec2178d0afbc1ff16d730770f2/docs/checks.md#cii-best-practices",
+                    "url": "https://github.com/ossf/scorecard/blob/0592fdea7c858b1c7ce2eebb2315768e3a7b5add/docs/checks.md#cii-best-practices",
                     "short": "Determines if the project has an OpenSSF (formerly CII) Best Practices Badge."
                 }
             },
@@ -120,7 +116,7 @@
                 "reason": "all changesets reviewed",
                 "name": "Code-Review",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/29760499f3efe7ec2178d0afbc1ff16d730770f2/docs/checks.md#code-review",
+                    "url": "https://github.com/ossf/scorecard/blob/0592fdea7c858b1c7ce2eebb2315768e3a7b5add/docs/checks.md#code-review",
                     "short": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
                 }
             },
@@ -130,7 +126,7 @@
                 "reason": "project has 6 contributing companies or organizations",
                 "name": "Contributors",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/29760499f3efe7ec2178d0afbc1ff16d730770f2/docs/checks.md#contributors",
+                    "url": "https://github.com/ossf/scorecard/blob/0592fdea7c858b1c7ce2eebb2315768e3a7b5add/docs/checks.md#contributors",
                     "short": "Determines if the project has a set of contributors from multiple organizations (e.g., companies)."
                 }
             },
@@ -140,7 +136,7 @@
                 "reason": "no dangerous workflow patterns detected",
                 "name": "Dangerous-Workflow",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/29760499f3efe7ec2178d0afbc1ff16d730770f2/docs/checks.md#dangerous-workflow",
+                    "url": "https://github.com/ossf/scorecard/blob/0592fdea7c858b1c7ce2eebb2315768e3a7b5add/docs/checks.md#dangerous-workflow",
                     "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
                 }
             },
@@ -150,7 +146,7 @@
                 "reason": "update tool detected",
                 "name": "Dependency-Update-Tool",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/29760499f3efe7ec2178d0afbc1ff16d730770f2/docs/checks.md#dependency-update-tool",
+                    "url": "https://github.com/ossf/scorecard/blob/0592fdea7c858b1c7ce2eebb2315768e3a7b5add/docs/checks.md#dependency-update-tool",
                     "short": "Determines if the project uses a dependency update tool."
                 }
             },
@@ -160,7 +156,7 @@
                 "reason": "project is not fuzzed",
                 "name": "Fuzzing",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/29760499f3efe7ec2178d0afbc1ff16d730770f2/docs/checks.md#fuzzing",
+                    "url": "https://github.com/ossf/scorecard/blob/0592fdea7c858b1c7ce2eebb2315768e3a7b5add/docs/checks.md#fuzzing",
                     "short": "Determines if the project uses fuzzing."
                 }
             },
@@ -170,7 +166,7 @@
                 "reason": "license file detected",
                 "name": "License",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/29760499f3efe7ec2178d0afbc1ff16d730770f2/docs/checks.md#license",
+                    "url": "https://github.com/ossf/scorecard/blob/0592fdea7c858b1c7ce2eebb2315768e3a7b5add/docs/checks.md#license",
                     "short": "Determines if the project has defined a license."
                 }
             },
@@ -180,7 +176,7 @@
                 "reason": "30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10",
                 "name": "Maintained",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/29760499f3efe7ec2178d0afbc1ff16d730770f2/docs/checks.md#maintained",
+                    "url": "https://github.com/ossf/scorecard/blob/0592fdea7c858b1c7ce2eebb2315768e3a7b5add/docs/checks.md#maintained",
                     "short": "Determines if the project is \"actively maintained\"."
                 }
             },
@@ -190,7 +186,7 @@
                 "reason": "packaging workflow detected",
                 "name": "Packaging",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/29760499f3efe7ec2178d0afbc1ff16d730770f2/docs/checks.md#packaging",
+                    "url": "https://github.com/ossf/scorecard/blob/0592fdea7c858b1c7ce2eebb2315768e3a7b5add/docs/checks.md#packaging",
                     "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
                 }
             },
@@ -200,7 +196,7 @@
                 "reason": "dependency not pinned by hash detected -- score normalized to 0",
                 "name": "Pinned-Dependencies",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/29760499f3efe7ec2178d0afbc1ff16d730770f2/docs/checks.md#pinned-dependencies",
+                    "url": "https://github.com/ossf/scorecard/blob/0592fdea7c858b1c7ce2eebb2315768e3a7b5add/docs/checks.md#pinned-dependencies",
                     "short": "Determines if the project has declared and pinned the dependencies of its build process."
                 }
             },
@@ -210,7 +206,7 @@
                 "reason": "SAST tool is not run on all commits -- score normalized to 0",
                 "name": "SAST",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/29760499f3efe7ec2178d0afbc1ff16d730770f2/docs/checks.md#sast",
+                    "url": "https://github.com/ossf/scorecard/blob/0592fdea7c858b1c7ce2eebb2315768e3a7b5add/docs/checks.md#sast",
                     "short": "Determines if the project uses static code analysis."
                 }
             },
@@ -220,7 +216,7 @@
                 "reason": "security policy file not detected",
                 "name": "Security-Policy",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/29760499f3efe7ec2178d0afbc1ff16d730770f2/docs/checks.md#security-policy",
+                    "url": "https://github.com/ossf/scorecard/blob/0592fdea7c858b1c7ce2eebb2315768e3a7b5add/docs/checks.md#security-policy",
                     "short": "Determines if the project has published a security policy."
                 }
             },
@@ -230,7 +226,7 @@
                 "reason": "no releases found",
                 "name": "Signed-Releases",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/29760499f3efe7ec2178d0afbc1ff16d730770f2/docs/checks.md#signed-releases",
+                    "url": "https://github.com/ossf/scorecard/blob/0592fdea7c858b1c7ce2eebb2315768e3a7b5add/docs/checks.md#signed-releases",
                     "short": "Determines if the project cryptographically signs release artifacts."
                 }
             },
@@ -240,17 +236,17 @@
                 "reason": "detected GitHub workflow tokens with excessive permissions",
                 "name": "Token-Permissions",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/29760499f3efe7ec2178d0afbc1ff16d730770f2/docs/checks.md#token-permissions",
+                    "url": "https://github.com/ossf/scorecard/blob/0592fdea7c858b1c7ce2eebb2315768e3a7b5add/docs/checks.md#token-permissions",
                     "short": "Determines if the project's workflows follow the principle of least privilege."
                 }
             },
             {
                 "details": null,
                 "score": 0,
-                "reason": "28 existing vulnerabilities detected",
+                "reason": "26 existing vulnerabilities detected",
                 "name": "Vulnerabilities",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/29760499f3efe7ec2178d0afbc1ff16d730770f2/docs/checks.md#vulnerabilities",
+                    "url": "https://github.com/ossf/scorecard/blob/0592fdea7c858b1c7ce2eebb2315768e3a7b5add/docs/checks.md#vulnerabilities",
                     "short": "Determines if the project has open, known unfixed vulnerabilities."
                 }
             }
@@ -572,6 +568,11 @@
     ],
     "repo_dependency_libyear_list": [
         [
+            "apollo",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
             "@apollo/client",
             -0.0739726027,
             "2024-10-16T10:04:15.000"
@@ -579,7 +580,7 @@
         [
             "@apollo/client",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "@apollo/client",
@@ -592,631 +593,6 @@
             "2024-07-01T00:36:18.000"
         ],
         [
-            "@babel/core",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@babel/plugin-syntax-class-properties",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@babel/preset-env",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@craco/craco",
-            0.0,
-            "2023-09-14T09:02:31.000"
-        ],
-        [
-            "@cypress/code-coverage",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@cypress/webpack-preprocessor",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@cypress/webpack-preprocessor",
-            2.1780821918,
-            "2023-09-14T09:02:31.000"
-        ],
-        [
-            "@graphql-codegen/cli",
-            -0.098630137,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@graphql-codegen/cli",
-            0.0,
-            "2024-10-16T10:04:15.000"
-        ],
-        [
-            "@graphql-codegen/client-preset",
-            -0.0520547945,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@graphql-codegen/client-preset",
-            -0.0246575342,
-            "2024-10-16T10:04:15.000"
-        ],
-        [
-            "@graphql-codegen/typed-document-node",
-            -0.0520547945,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@graphql-codegen/typed-document-node",
-            0.2657534247,
-            "2024-10-16T10:04:15.000"
-        ],
-        [
-            "@graphql-codegen/typescript-react-apollo",
-            -0.5397260274,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@graphql-codegen/typescript-react-apollo",
-            0.0,
-            "2024-10-16T10:04:15.000"
-        ],
-        [
-            "@hookform/error-message",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@hookform/resolvers",
-            0.8712328767,
-            "2023-09-14T09:02:31.000"
-        ],
-        [
-            "@hookform/resolvers",
-            1.2219178082,
-            "2024-04-10T03:36:47.000"
-        ],
-        [
-            "@hookform/resolvers",
-            1.6438356164,
-            "2024-07-01T00:36:18.000"
-        ],
-        [
-            "@hookform/resolvers",
-            1.7260273973,
-            "2024-10-16T10:04:15.000"
-        ],
-        [
-            "@hookform/resolvers",
-            2.3835616438,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@okta/okta-auth-js",
-            0.0,
-            "2024-10-16T10:04:15.000"
-        ],
-        [
-            "@okta/okta-auth-js",
-            0.2849315068,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@okta/okta-auth-js",
-            0.9342465753,
-            "2023-09-14T09:02:31.000"
-        ],
-        [
-            "@okta/okta-auth-js",
-            1.3452054795,
-            "2024-04-10T03:36:47.000"
-        ],
-        [
-            "@okta/okta-auth-js",
-            1.6657534247,
-            "2024-07-01T00:36:18.000"
-        ],
-        [
-            "@okta/okta-react",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@okta/okta-signin-widget",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@okta/okta-signin-widget",
-            0.6273972603,
-            "2024-04-10T03:36:47.000"
-        ],
-        [
-            "@okta/okta-signin-widget",
-            0.8630136986,
-            "2023-09-14T09:02:31.000"
-        ],
-        [
-            "@storybook/addon-actions",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@storybook/addon-actions",
-            0.4712328767,
-            "2023-09-14T09:02:31.000"
-        ],
-        [
-            "@storybook/addon-controls",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@storybook/addon-controls",
-            0.4712328767,
-            "2023-09-14T09:02:31.000"
-        ],
-        [
-            "@storybook/addon-essentials",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@storybook/addon-essentials",
-            0.4712328767,
-            "2023-09-14T09:02:31.000"
-        ],
-        [
-            "@storybook/addon-links",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@storybook/addon-links",
-            0.4712328767,
-            "2023-09-14T09:02:31.000"
-        ],
-        [
-            "@storybook/node-logger",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@storybook/node-logger",
-            0.4712328767,
-            "2023-09-14T09:02:31.000"
-        ],
-        [
-            "@storybook/react",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@storybook/react",
-            0.4712328767,
-            "2023-09-14T09:02:31.000"
-        ],
-        [
-            "@testing-library/jest-dom",
-            0.1342465753,
-            "2023-09-14T09:02:31.000"
-        ],
-        [
-            "@testing-library/jest-dom",
-            0.5534246575,
-            "2024-04-10T03:36:47.000"
-        ],
-        [
-            "@testing-library/jest-dom",
-            0.898630137,
-            "2024-07-01T00:36:18.000"
-        ],
-        [
-            "@testing-library/jest-dom",
-            1.101369863,
-            "2024-10-16T10:04:15.000"
-        ],
-        [
-            "@testing-library/jest-dom",
-            1.2904109589,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@testing-library/react",
-            1.6931506849,
-            "2023-09-14T09:02:31.000"
-        ],
-        [
-            "@testing-library/react",
-            2.8356164384,
-            "2024-04-10T03:36:47.000"
-        ],
-        [
-            "@testing-library/react",
-            2.9890410959,
-            "2024-07-01T00:36:18.000"
-        ],
-        [
-            "@testing-library/react",
-            3.2246575342,
-            "2024-10-16T10:04:15.000"
-        ],
-        [
-            "@testing-library/react",
-            3.6082191781,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@testing-library/user-event",
-            0.8054794521,
-            "2023-09-14T09:02:31.000"
-        ],
-        [
-            "@testing-library/user-event",
-            2.1945205479,
-            "2024-10-16T10:04:15.000"
-        ],
-        [
-            "@testing-library/user-event",
-            3.2602739726,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@tiptap/core",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@tiptap/extension-document",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@tiptap/extension-mention",
-            0.2712328767,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@tiptap/extension-paragraph",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@tiptap/extension-text",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@tiptap/pm",
-            0.2712328767,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@tiptap/react",
-            0.2712328767,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@tiptap/suggestion",
-            0.2712328767,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@toast-ui/react-editor",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@trussworks/react-uswds",
-            1.402739726,
-            "2023-09-14T09:02:31.000"
-        ],
-        [
-            "@trussworks/react-uswds",
-            1.9178082192,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@trussworks/react-uswds",
-            1.9369863014,
-            "2024-07-01T00:36:18.000"
-        ],
-        [
-            "@trussworks/react-uswds",
-            2.3726027397,
-            "2024-10-16T10:04:15.000"
-        ],
-        [
-            "@types/apollo-upload-client",
-            0.0,
-            "2023-09-14T09:02:31.000"
-        ],
-        [
-            "@types/apollo-upload-client",
-            0.1452054795,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@types/dompurify",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@types/enzyme",
-            1.7753424658,
-            "2023-09-14T09:02:31.000"
-        ],
-        [
-            "@types/enzyme",
-            2.4136986301,
-            "2024-10-16T10:04:15.000"
-        ],
-        [
-            "@types/jest",
-            2.3232876712,
-            "2023-09-14T09:02:31.000"
-        ],
-        [
-            "@types/jest",
-            2.7698630137,
-            "2024-07-01T00:36:18.000"
-        ],
-        [
-            "@types/jest",
-            3.3835616438,
-            "2024-10-16T10:04:15.000"
-        ],
-        [
-            "@types/jest",
-            3.4931506849,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@types/lodash",
-            0.0,
-            "2024-07-01T00:36:18.000"
-        ],
-        [
-            "@types/lodash",
-            0.0246575342,
-            "2024-10-16T10:04:15.000"
-        ],
-        [
-            "@types/lodash",
-            0.4328767123,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@types/luxon",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@types/no-scroll",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@types/node",
-            2.2,
-            "2023-09-14T09:02:31.000"
-        ],
-        [
-            "@types/node",
-            2.7863013699,
-            "2024-04-10T03:36:47.000"
-        ],
-        [
-            "@types/node",
-            2.997260274,
-            "2024-07-01T00:36:18.000"
-        ],
-        [
-            "@types/node",
-            3.2821917808,
-            "2024-10-16T10:04:15.000"
-        ],
-        [
-            "@types/node",
-            3.7424657534,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@types/react",
-            2.202739726,
-            "2023-09-14T09:02:31.000"
-        ],
-        [
-            "@types/react",
-            2.8328767123,
-            "2024-04-10T03:36:47.000"
-        ],
-        [
-            "@types/react",
-            2.9561643836,
-            "2024-07-01T00:36:18.000"
-        ],
-        [
-            "@types/react",
-            3.3178082192,
-            "2024-10-16T10:04:15.000"
-        ],
-        [
-            "@types/react",
-            3.7780821918,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@types/react-autosuggest",
-            0.0,
-            "2023-09-14T09:02:31.000"
-        ],
-        [
-            "@types/react-autosuggest",
-            0.1397260274,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@types/react-csv",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@types/react-csv",
-            0.0547945205,
-            "2024-04-10T03:36:47.000"
-        ],
-        [
-            "@types/react-dom",
-            2.0657534247,
-            "2023-09-14T09:02:31.000"
-        ],
-        [
-            "@types/react-dom",
-            2.7945205479,
-            "2024-04-10T03:36:47.000"
-        ],
-        [
-            "@types/react-dom",
-            2.8547945205,
-            "2024-07-01T00:36:18.000"
-        ],
-        [
-            "@types/react-dom",
-            3.3178082192,
-            "2024-10-16T10:04:15.000"
-        ],
-        [
-            "@types/react-dom",
-            3.6712328767,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@types/react-modal",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@types/react-redux",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@types/react-router-dom",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@types/react-router-hash-link",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@types/react-table",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@types/react-test-renderer",
-            -0.002739726,
-            "2024-04-10T03:36:47.000"
-        ],
-        [
-            "@types/react-test-renderer",
-            0.4246575342,
-            "2024-10-16T10:04:15.000"
-        ],
-        [
-            "@types/react-test-renderer",
-            1.0383561644,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@types/redux-mock-store",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@types/redux-saga-routines",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@types/text-encoding",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@types/uuid",
-            1.6465753425,
-            "2023-09-14T09:02:31.000"
-        ],
-        [
-            "@types/uuid",
-            2.0520547945,
-            "2024-04-10T03:36:47.000"
-        ],
-        [
-            "@types/uuid",
-            2.4547945205,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@types/yup",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@uswds/uswds",
-            0.0,
-            "2024-10-16T10:04:15.000"
-        ],
-        [
-            "@uswds/uswds",
-            0.4191780822,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@vitejs/plugin-react",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@vitest/coverage-v8",
-            0.3232876712,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "@vitest/coverage-v8",
-            0.4602739726,
-            "2024-04-10T03:36:47.000"
-        ],
-        [
-            "@vitest/coverage-v8",
-            0.5945205479,
-            "2024-07-01T00:36:18.000"
-        ],
-        [
-            "@vitest/coverage-v8",
-            1.0438356164,
-            "2024-10-16T10:04:15.000"
-        ],
-        [
-            "@wojtekmaj/enzyme-adapter-react-17",
-            0.0,
-            "2024-10-16T10:04:15.000"
-        ],
-        [
-            "apollo",
-            0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
             "apollo-upload-client",
             0.0,
             "2023-09-14T09:02:31.000"
@@ -1224,22 +600,27 @@
         [
             "apollo-upload-client",
             1.8767123288,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "autoprefixer",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "axios",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "axios",
             1.3315068493,
             "2023-09-14T09:02:31.000"
+        ],
+        [
+            "@babel/core",
+            0.0,
+            "2025-04-09T00:25:35.000"
         ],
         [
             "babel-loader",
@@ -1249,7 +630,7 @@
         [
             "babel-loader",
             0.4493150685,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "babel-loader",
@@ -1257,14 +638,29 @@
             "2023-09-14T09:02:31.000"
         ],
         [
+            "@babel/plugin-syntax-class-properties",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@babel/preset-env",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
             "classnames",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@craco/craco",
+            0.0,
+            "2023-09-14T09:02:31.000"
         ],
         [
             "cross-fetch",
             -0.002739726,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "cross-fetch",
@@ -1283,8 +679,8 @@
         ],
         [
             "cypress",
-            0.2328767123,
-            "2025-03-26T06:50:31.000"
+            0.3068493151,
+            "2025-04-09T00:25:35.000"
         ],
         [
             "cypress",
@@ -1292,24 +688,39 @@
             "2023-09-14T09:02:31.000"
         ],
         [
+            "@cypress/code-coverage",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
             "cypress-file-upload",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "cypress-otp",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@cypress/webpack-preprocessor",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@cypress/webpack-preprocessor",
+            2.1780821918,
+            "2023-09-14T09:02:31.000"
         ],
         [
             "detect-browser",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "dompurify",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "enzyme",
@@ -1318,8 +729,8 @@
         ],
         [
             "eslint",
-            0.5095890411,
-            "2025-03-26T06:50:31.000"
+            0.5479452055,
+            "2025-04-09T00:25:35.000"
         ],
         [
             "eslint",
@@ -1344,7 +755,7 @@
         [
             "eslint-config-airbnb",
             1.1315068493,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "eslint-config-prettier",
@@ -1359,12 +770,12 @@
         [
             "eslint-config-prettier",
             1.5945205479,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "eslint-config-react-app",
             -2.8493150685,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "eslint-config-react-app",
@@ -1384,7 +795,7 @@
         [
             "eslint-plugin-cypress",
             0.402739726,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "eslint-plugin-cypress",
@@ -1409,7 +820,7 @@
         [
             "eslint-plugin-prettier",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "eslint-plugin-prettier",
@@ -1449,12 +860,12 @@
         [
             "eslint-plugin-react-hooks",
             0.8410958904,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "eslint-plugin-simple-import-sort",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "eslint-plugin-simple-import-sort",
@@ -1479,17 +890,87 @@
         [
             "font-awesome",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "formik",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@graphql-codegen/cli",
+            -0.1506849315,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@graphql-codegen/cli",
+            0.0,
+            "2024-10-16T10:04:15.000"
+        ],
+        [
+            "@graphql-codegen/client-preset",
+            -0.0246575342,
+            "2024-10-16T10:04:15.000"
+        ],
+        [
+            "@graphql-codegen/client-preset",
+            -0.0054794521,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@graphql-codegen/typed-document-node",
+            -0.0054794521,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@graphql-codegen/typed-document-node",
+            0.2657534247,
+            "2024-10-16T10:04:15.000"
+        ],
+        [
+            "@graphql-codegen/typescript-react-apollo",
+            -0.5780821918,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@graphql-codegen/typescript-react-apollo",
+            0.0,
+            "2024-10-16T10:04:15.000"
         ],
         [
             "graphql-schema-linter",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@hookform/error-message",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@hookform/resolvers",
+            0.8712328767,
+            "2023-09-14T09:02:31.000"
+        ],
+        [
+            "@hookform/resolvers",
+            1.2219178082,
+            "2024-04-10T03:36:47.000"
+        ],
+        [
+            "@hookform/resolvers",
+            1.6438356164,
+            "2024-07-01T00:36:18.000"
+        ],
+        [
+            "@hookform/resolvers",
+            1.7260273973,
+            "2024-10-16T10:04:15.000"
+        ],
+        [
+            "@hookform/resolvers",
+            2.4657534247,
+            "2025-04-09T00:25:35.000"
         ],
         [
             "i18next",
@@ -1514,7 +995,7 @@
         [
             "i18next",
             4.0136986301,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "i18next-browser-languagedetector",
@@ -1534,12 +1015,12 @@
         [
             "i18next-browser-languagedetector",
             4.5452054795,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "istanbul-lib-coverage",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "jest-canvas-mock",
@@ -1549,7 +1030,7 @@
         [
             "jest-launchdarkly-mock",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "js-base64",
@@ -1574,37 +1055,42 @@
         [
             "jsdom",
             1.6219178082,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "launchdarkly-react-client-sdk",
+            -0.1753424658,
+            "2025-04-09T00:25:35.000"
         ],
         [
             "launchdarkly-react-client-sdk",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2024-10-16T10:04:15.000"
         ],
         [
             "lodash",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "luxon",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "markdown-spellcheck",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "md5",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "no-scroll",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "nyc",
@@ -1619,12 +1105,57 @@
         [
             "nyc",
             4.304109589,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@okta/okta-auth-js",
+            0.0,
+            "2024-10-16T10:04:15.000"
+        ],
+        [
+            "@okta/okta-auth-js",
+            0.3369863014,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@okta/okta-auth-js",
+            0.9342465753,
+            "2023-09-14T09:02:31.000"
+        ],
+        [
+            "@okta/okta-auth-js",
+            1.3452054795,
+            "2024-04-10T03:36:47.000"
+        ],
+        [
+            "@okta/okta-auth-js",
+            1.6657534247,
+            "2024-07-01T00:36:18.000"
+        ],
+        [
+            "@okta/okta-react",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@okta/okta-signin-widget",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@okta/okta-signin-widget",
+            0.6273972603,
+            "2024-04-10T03:36:47.000"
+        ],
+        [
+            "@okta/okta-signin-widget",
+            0.8630136986,
+            "2023-09-14T09:02:31.000"
         ],
         [
             "prettier",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "prettier",
@@ -1658,18 +1189,18 @@
         ],
         [
             "react",
-            3.7068493151,
-            "2025-03-26T06:50:31.000"
+            4.0164383562,
+            "2025-04-09T00:25:35.000"
         ],
         [
             "react-autosuggest",
             2.0109589041,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "react-csv",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "react-dom",
@@ -1683,23 +1214,18 @@
         ],
         [
             "react-dom",
-            3.7068493151,
-            "2025-03-26T06:50:31.000"
+            4.0164383562,
+            "2025-04-09T00:25:35.000"
         ],
         [
             "react-ga4",
             0.0,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
-            "react-hook-form",
-            -0.2383561644,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "react-hook-form",
             0.0,
-            "2024-10-16T10:04:15.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "react-i18next",
@@ -1724,22 +1250,22 @@
         [
             "react-i18next",
             3.7397260274,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "react-idle-timer",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "react-media",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "react-modal",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "react-redux",
@@ -1759,7 +1285,7 @@
         [
             "react-redux",
             2.2164383562,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "react-router-dom",
@@ -1783,13 +1309,13 @@
         ],
         [
             "react-router-dom",
-            2.4602739726,
-            "2025-03-26T06:50:31.000"
+            2.5068493151,
+            "2025-04-09T00:25:35.000"
         ],
         [
             "react-router-hash-link",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "react-scripts",
@@ -1804,17 +1330,17 @@
         [
             "react-select",
             0.2219178082,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "react-select-event",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "react-table",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "react-test-renderer",
@@ -1828,8 +1354,8 @@
         ],
         [
             "react-test-renderer",
-            4.1424657534,
-            "2025-03-26T06:50:31.000"
+            4.4547945205,
+            "2025-04-09T00:25:35.000"
         ],
         [
             "react-to-print",
@@ -1844,7 +1370,7 @@
         [
             "react-to-print",
             0.9534246575,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "redux",
@@ -1854,7 +1380,7 @@
         [
             "redux",
             0.898630137,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "redux-actions",
@@ -1864,37 +1390,37 @@
         [
             "redux-actions",
             5.3835616438,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "redux-devtools-extension",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "redux-mock-store",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "redux-saga",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "redux-saga-routines",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "regenerator-runtime",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "sass",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "sass-loader",
@@ -1919,12 +1445,12 @@
         [
             "sass-loader",
             1.1397260274,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "sass-resources-loader",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "start-server-and-test",
@@ -1937,14 +1463,204 @@
             "2024-04-10T03:36:47.000"
         ],
         [
+            "@storybook/addon-actions",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@storybook/addon-actions",
+            0.4712328767,
+            "2023-09-14T09:02:31.000"
+        ],
+        [
+            "@storybook/addon-controls",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@storybook/addon-controls",
+            0.4712328767,
+            "2023-09-14T09:02:31.000"
+        ],
+        [
+            "@storybook/addon-essentials",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@storybook/addon-essentials",
+            0.4712328767,
+            "2023-09-14T09:02:31.000"
+        ],
+        [
+            "@storybook/addon-links",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@storybook/addon-links",
+            0.4712328767,
+            "2023-09-14T09:02:31.000"
+        ],
+        [
+            "@storybook/node-logger",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@storybook/node-logger",
+            0.4712328767,
+            "2023-09-14T09:02:31.000"
+        ],
+        [
+            "@storybook/react",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@storybook/react",
+            0.4712328767,
+            "2023-09-14T09:02:31.000"
+        ],
+        [
+            "@testing-library/jest-dom",
+            0.1342465753,
+            "2023-09-14T09:02:31.000"
+        ],
+        [
+            "@testing-library/jest-dom",
+            0.5534246575,
+            "2024-04-10T03:36:47.000"
+        ],
+        [
+            "@testing-library/jest-dom",
+            0.898630137,
+            "2024-07-01T00:36:18.000"
+        ],
+        [
+            "@testing-library/jest-dom",
+            1.101369863,
+            "2024-10-16T10:04:15.000"
+        ],
+        [
+            "@testing-library/jest-dom",
+            1.2904109589,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@testing-library/react",
+            1.6931506849,
+            "2023-09-14T09:02:31.000"
+        ],
+        [
+            "@testing-library/react",
+            2.8356164384,
+            "2024-04-10T03:36:47.000"
+        ],
+        [
+            "@testing-library/react",
+            2.9890410959,
+            "2024-07-01T00:36:18.000"
+        ],
+        [
+            "@testing-library/react",
+            3.2246575342,
+            "2024-10-16T10:04:15.000"
+        ],
+        [
+            "@testing-library/react",
+            3.8191780822,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@testing-library/user-event",
+            0.8054794521,
+            "2023-09-14T09:02:31.000"
+        ],
+        [
+            "@testing-library/user-event",
+            2.1945205479,
+            "2024-10-16T10:04:15.000"
+        ],
+        [
+            "@testing-library/user-event",
+            3.2602739726,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
             "text-encoding",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "tippy.js",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@tiptap/core",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@tiptap/extension-document",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@tiptap/extension-mention",
+            0.4301369863,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@tiptap/extension-paragraph",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@tiptap/extension-text",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@tiptap/pm",
+            0.4301369863,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@tiptap/react",
+            0.4301369863,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@tiptap/suggestion",
+            0.4301369863,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@toast-ui/react-editor",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@trussworks/react-uswds",
+            1.402739726,
+            "2023-09-14T09:02:31.000"
+        ],
+        [
+            "@trussworks/react-uswds",
+            1.9178082192,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@trussworks/react-uswds",
+            1.9369863014,
+            "2024-07-01T00:36:18.000"
+        ],
+        [
+            "@trussworks/react-uswds",
+            2.3726027397,
+            "2024-10-16T10:04:15.000"
         ],
         [
             "ts-loader",
@@ -1959,7 +1675,17 @@
         [
             "ts-loader",
             4.6383561644,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@types/apollo-upload-client",
+            0.0,
+            "2023-09-14T09:02:31.000"
+        ],
+        [
+            "@types/apollo-upload-client",
+            0.1452054795,
+            "2025-04-09T00:25:35.000"
         ],
         [
             "typescript",
@@ -1983,8 +1709,248 @@
         ],
         [
             "typescript",
-            2.0794520548,
-            "2025-03-26T06:50:31.000"
+            2.1780821918,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@types/dompurify",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@types/enzyme",
+            1.7753424658,
+            "2023-09-14T09:02:31.000"
+        ],
+        [
+            "@types/enzyme",
+            2.4136986301,
+            "2024-10-16T10:04:15.000"
+        ],
+        [
+            "@types/jest",
+            2.3232876712,
+            "2023-09-14T09:02:31.000"
+        ],
+        [
+            "@types/jest",
+            2.7698630137,
+            "2024-07-01T00:36:18.000"
+        ],
+        [
+            "@types/jest",
+            3.3835616438,
+            "2024-10-16T10:04:15.000"
+        ],
+        [
+            "@types/jest",
+            3.4931506849,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@types/lodash",
+            0.0,
+            "2024-07-01T00:36:18.000"
+        ],
+        [
+            "@types/lodash",
+            0.0246575342,
+            "2024-10-16T10:04:15.000"
+        ],
+        [
+            "@types/lodash",
+            0.4328767123,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@types/luxon",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@types/node",
+            2.2,
+            "2023-09-14T09:02:31.000"
+        ],
+        [
+            "@types/node",
+            2.7863013699,
+            "2024-04-10T03:36:47.000"
+        ],
+        [
+            "@types/node",
+            2.997260274,
+            "2024-07-01T00:36:18.000"
+        ],
+        [
+            "@types/node",
+            3.2821917808,
+            "2024-10-16T10:04:15.000"
+        ],
+        [
+            "@types/node",
+            3.7671232877,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@types/no-scroll",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@types/react",
+            2.202739726,
+            "2023-09-14T09:02:31.000"
+        ],
+        [
+            "@types/react",
+            2.8328767123,
+            "2024-04-10T03:36:47.000"
+        ],
+        [
+            "@types/react",
+            2.9561643836,
+            "2024-07-01T00:36:18.000"
+        ],
+        [
+            "@types/react",
+            3.3178082192,
+            "2024-10-16T10:04:15.000"
+        ],
+        [
+            "@types/react",
+            3.8136986301,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@types/react-autosuggest",
+            0.0,
+            "2023-09-14T09:02:31.000"
+        ],
+        [
+            "@types/react-autosuggest",
+            0.1397260274,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@types/react-csv",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@types/react-csv",
+            0.0547945205,
+            "2024-04-10T03:36:47.000"
+        ],
+        [
+            "@types/react-dom",
+            2.0657534247,
+            "2023-09-14T09:02:31.000"
+        ],
+        [
+            "@types/react-dom",
+            2.7945205479,
+            "2024-04-10T03:36:47.000"
+        ],
+        [
+            "@types/react-dom",
+            2.8547945205,
+            "2024-07-01T00:36:18.000"
+        ],
+        [
+            "@types/react-dom",
+            3.3178082192,
+            "2024-10-16T10:04:15.000"
+        ],
+        [
+            "@types/react-dom",
+            3.7917808219,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@types/react-modal",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@types/react-redux",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@types/react-router-dom",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@types/react-router-hash-link",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@types/react-table",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@types/react-test-renderer",
+            -0.002739726,
+            "2024-04-10T03:36:47.000"
+        ],
+        [
+            "@types/react-test-renderer",
+            0.4246575342,
+            "2024-10-16T10:04:15.000"
+        ],
+        [
+            "@types/react-test-renderer",
+            1.3616438356,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@types/redux-mock-store",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@types/redux-saga-routines",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@types/text-encoding",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@types/uuid",
+            1.6465753425,
+            "2023-09-14T09:02:31.000"
+        ],
+        [
+            "@types/uuid",
+            2.0520547945,
+            "2024-04-10T03:36:47.000"
+        ],
+        [
+            "@types/uuid",
+            2.4547945205,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@types/yup",
+            0.0,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@uswds/uswds",
+            0.0,
+            "2024-10-16T10:04:15.000"
+        ],
+        [
+            "@uswds/uswds",
+            0.4191780822,
+            "2025-04-09T00:25:35.000"
         ],
         [
             "uuid",
@@ -1999,7 +1965,7 @@
         [
             "uuid",
             4.2,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "vite",
@@ -2018,13 +1984,18 @@
         ],
         [
             "vite",
-            0.4383561644,
-            "2025-03-26T06:50:31.000"
+            0.4657534247,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@vitejs/plugin-react",
+            0.0,
+            "2025-04-09T00:25:35.000"
         ],
         [
             "vite-plugin-svgr",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "vite-plugin-svgr",
@@ -2032,24 +2003,9 @@
             "2024-10-16T10:04:15.000"
         ],
         [
-            "vite-tsconfig-paths",
-            0.0,
-            "2024-07-01T00:36:18.000"
-        ],
-        [
-            "vite-tsconfig-paths",
-            0.402739726,
-            "2024-10-16T10:04:15.000"
-        ],
-        [
-            "vite-tsconfig-paths",
-            0.7315068493,
-            "2025-03-26T06:50:31.000"
-        ],
-        [
             "vitest",
-            0.3232876712,
-            "2025-03-26T06:50:31.000"
+            0.3616438356,
+            "2025-04-09T00:25:35.000"
         ],
         [
             "vitest",
@@ -2067,6 +2023,41 @@
             "2024-10-16T10:04:15.000"
         ],
         [
+            "@vitest/coverage-v8",
+            0.3616438356,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@vitest/coverage-v8",
+            0.4602739726,
+            "2024-04-10T03:36:47.000"
+        ],
+        [
+            "@vitest/coverage-v8",
+            0.5945205479,
+            "2024-07-01T00:36:18.000"
+        ],
+        [
+            "@vitest/coverage-v8",
+            1.0438356164,
+            "2024-10-16T10:04:15.000"
+        ],
+        [
+            "vite-tsconfig-paths",
+            0.0,
+            "2024-07-01T00:36:18.000"
+        ],
+        [
+            "vite-tsconfig-paths",
+            0.402739726,
+            "2024-10-16T10:04:15.000"
+        ],
+        [
+            "vite-tsconfig-paths",
+            0.7315068493,
+            "2025-04-09T00:25:35.000"
+        ],
+        [
             "wait-on",
             1.7479452055,
             "2023-09-14T09:02:31.000"
@@ -2079,12 +2070,17 @@
         [
             "webpack",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ],
         [
             "wildcard-mock-link",
             0.0,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
+        ],
+        [
+            "@wojtekmaj/enzyme-adapter-react-17",
+            0.0,
+            "2024-10-16T10:04:15.000"
         ],
         [
             "yup",
@@ -2099,7 +2095,7 @@
         [
             "yup",
             3.1835616438,
-            "2025-03-26T06:50:31.000"
+            "2025-04-09T00:25:35.000"
         ]
     ]
 }
