@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for T-MSIS-Analytic-File-Generation-Python | REPORT-2025-04-13
+title: Open Source at CMS Metrics Report for T-MSIS-Analytic-File-Generation-Python | REPORT-2025-04-20
 permalink: /Enterprise-CMCS/T-MSIS-Analytic-File-Generation-Python/
 
 org: Enterprise-CMCS
 repo: T-MSIS-Analytic-File-Generation-Python
-reportID: REPORT-2025-04-13
-date_stampThisWeek: 2025-04-13
-date_stampLastWeek: 2025-04-13
+reportID: REPORT-2025-04-20
+date_stampThisWeek: 2025-04-20
+date_stampLastWeek: 2025-04-20
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -59,17 +59,17 @@ date_stampLastWeek: 2025-04-13
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>238</td>
         <td>237</td>
-        <td>233</td>
-        <td style="color: #45c527" >4</td>
-        <td style="color: #45c527" >1.7%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.42%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>13</td>
         <td>12</td>
-        <td>12</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >1</td>
+        <td style="" >8%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

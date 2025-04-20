@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for automated-codejson-generator | REPORT-2025-04-13
+title: Open Source at CMS Metrics Report for automated-codejson-generator | REPORT-2025-04-20
 permalink: /DSACMS/automated-codejson-generator/
 
 org: DSACMS
 repo: automated-codejson-generator
-reportID: REPORT-2025-04-13
-date_stampThisWeek: 2025-04-13
-date_stampLastWeek: 2025-04-13
+reportID: REPORT-2025-04-20
+date_stampThisWeek: 2025-04-20
+date_stampLastWeek: 2025-04-20
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -66,10 +66,10 @@ date_stampLastWeek: 2025-04-13
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>13</td>
         <td>12</td>
-        <td>12</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >1</td>
+        <td style="" >8%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
