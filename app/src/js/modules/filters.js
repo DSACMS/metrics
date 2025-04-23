@@ -3,7 +3,8 @@ import { addGlobalEventListener, updateHeadingVisibility } from "./utilities";
 import { renderPaginatedProjects, renderPaginationControls } from "./rendering";
 import { sortCards } from "./sorting";
 
-
+let currentPage = 1
+const itemsPerPage = 10;
 let filteredProjects = [...parsedProjectsData];
 
 export function getFilteredProjects() {
@@ -13,9 +14,6 @@ export function getFilteredProjects() {
 export function setFilteredProjects(projects) {
   filteredProjects = projects;
 }
-
-let currentPage = 1
-const itemsPerPage = 10;
 
 export function updateFilteredProjects() {
   const selectedFiltersObject = {
@@ -140,7 +138,6 @@ export function checkFilterCriteria(card, selectedFiltersObject) {
 export function updatePagination() {
   const totalProjects = (filteredProjects || parsedProjectsData).length;
   const totalPages = Math.ceil(totalProjects / itemsPerPage);
-
   currentPage = Math.min(currentPage, totalPages || 1);
   renderPaginationControls(totalPages);
 }

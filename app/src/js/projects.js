@@ -1,12 +1,18 @@
 import { createProjectCards } from "./modules/rendering";
+import { updateFilteredProjects } from "./modules/filters";
 import { setupEventListeners } from './modules/events';
 import { baseurl } from './modules/data';
 
-createProjectCards();
-setupEventListeners()
+// createProjectCards();
+// setupEventListeners();
 
 // Controls filter menus open/closed state
 document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    createProjectCards();
+    setupEventListeners();
+  }, 50);
+
   function updateFilterMenuState() {
     const filterButtons = document.querySelectorAll(".usa-accordion__button");
     const isMobile = window.innerWidth < 768;
@@ -37,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const expanded = button.getAttribute("aria-expanded");
       const content = document.getElementById(button.getAttribute("id"));
       const icon = button.querySelector("svg use");
-      console.log("2", baseurl)
       
       if(expanded === 'false') {
         content.removeAttribute("hidden");

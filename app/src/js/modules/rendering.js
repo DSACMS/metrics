@@ -1,5 +1,5 @@
 import { reportHeadingTemplate, projectCardTemplate } from "../templates";
-import { templateDiv, parsedProjectsData, orgsData, siteData, findObject, baseurl } from "./data";
+import { templateDiv, parsedProjectsData, orgsData, siteData, findObject, baseurl, setProjectsData } from "./data";
 import { getFilteredProjects, updateFilters } from "./filters";
 import { getPageRange, updateHeadingVisibility } from "./utilities";
 import DOMPurify from 'dompurify';
@@ -8,7 +8,26 @@ const parsedOrgsData = orgsData
 let currentPage = 1
 const itemsPerPage = 10;
 
+function ensureReadyData() {
+  return new Promise(resolve => {
+    if(parsedProjectsData && parsedProjectsData.length) {
+      resolve();
+    } else {
+      const checkData = setInterval(() => {
+        if(parsedProjectsData && parsedProjectsData.length) {
+          clearInterval(checkData);
+          resolve();
+        }
+      }, 50);
+    }
+  });
+}
+
 function renderProjectGroups(projects, groupByKey = 'org') {
+  if(!projects || !projects.length) {
+    templateDiv.innerHTML = '<p>No Projects Found</p>'
+  }
+
   const groupedByOrg = projects.reduce((acc, curr) => {
     const groupKey = curr[groupByKey];
     if(!acc[groupKey]) {
@@ -44,15 +63,21 @@ function renderProjectGroups(projects, groupByKey = 'org') {
           projectCards.appendChild(projectCard);
         });
   }
+  console.log({groupedByOrg})
 }
 
-export function createProjectCards(projects = getFilteredProjects()) {
+export async function createProjectCards(projects = getFilteredProjects()) {
+  await ensureReadyData();
   templateDiv.innerHTML = ''
   
   const allProjects = (projects || parsedProjectsData).map((project) => ({
     ...project,
     org: project.owner
   }));
+
+  if(currentPage < 1 || currentPage > Math.ceil(allProjects.length / itemsPerPage)) {
+    currentPage = 1;
+  }
   
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
