@@ -1,6 +1,6 @@
 import { reportHeadingTemplate, projectCardTemplate } from "../templates";
-import { templateDiv, parsedProjectsData, orgsData, siteData, findObject, baseurl, setProjectsData } from "./data";
-import { getFilteredProjects, updateFilters } from "./filters";
+import { templateDiv, parsedProjectsData, orgsData, siteData, findObject, baseurl } from "./data";
+import { getFilteredProjects } from "./filters";
 import { getPageRange, updateHeadingVisibility } from "./utilities";
 import DOMPurify from 'dompurify';
 
@@ -63,28 +63,28 @@ function renderProjectGroups(projects, groupByKey = 'org') {
           projectCards.appendChild(projectCard);
         });
   }
-  console.log({groupedByOrg})
 }
 
-export async function createProjectCards(projects = getFilteredProjects()) {
+export async function createProjectCards(projects) {
   await ensureReadyData();
   templateDiv.innerHTML = ''
-  
-  const allProjects = (projects || parsedProjectsData).map((project) => ({
-    ...project,
-    org: project.owner
-  }));
 
-  if(currentPage < 1 || currentPage > Math.ceil(allProjects.length / itemsPerPage)) {
+  const displayProjects = (projects || getFilteredProjects()).slice().sort((a, b) => a.owner.localeCompare(b.owner));
+
+  const allProjects = displayProjects.map((project) => ({
+    ...project,
+    org: project.owner || project.owner
+  }))
+
+  const totalPages = Math.ceil(allProjects.length / itemsPerPage);
+  if(currentPage < 1 || currentPage > totalPages) {
     currentPage = 1;
   }
   
   const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const paginatedProjects = allProjects.slice(startIndex, endIndex);
+  const paginatedProjects = allProjects.slice(startIndex, startIndex + itemsPerPage);
 
   renderProjectGroups(paginatedProjects);
-  updateFilters();
   updateHeadingVisibility();
   renderPaginationControls(allProjects.length);
 }

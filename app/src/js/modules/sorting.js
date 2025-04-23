@@ -1,14 +1,12 @@
-import { sortSelection, parsedProjectsData, filtersContainer } from "./data";
+import { sortSelection, filtersContainer } from "./data";
 import { addGlobalEventListener } from "./utilities";
-import { updateFilters, updateFilteredProjects, updatePagination } from "./filters";
+import { updateFilters, updateFilteredProjects, getFilteredProjects, setFilteredProjects } from "./filters";
 import { renderPaginatedProjects } from "./rendering";
-
-let filteredProjects = [...parsedProjectsData]
 
 export function sortCards(isDescending = false) {
   const selection = sortSelection.value;
 
-  let targetProjects = filteredProjects || parsedOrgsData
+  const targetProjects = getFilteredProjects();
 
   if(["maturity_model_tier", "stargazers_count", "forks_count"].includes(selection)) {
     sortByNumberAttribute(targetProjects, selection, isDescending);
@@ -16,8 +14,8 @@ export function sortCards(isDescending = false) {
     sortByStringAttribute(targetProjects, selection, isDescending);
   }
 
-  updatePagination();
-  renderPaginatedProjects(filteredProjects);
+  setFilteredProjects(targetProjects);
+  renderPaginatedProjects();
 }
 
 export function sortByNumberAttribute(data, attribute, isDescending) {

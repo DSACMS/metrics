@@ -119,6 +119,7 @@ export function updateFilters() {
     })
   })
 
+  addFilterButtonGroup(selectedFiltersObject);
   updateHeadingVisibility();
 }
 
