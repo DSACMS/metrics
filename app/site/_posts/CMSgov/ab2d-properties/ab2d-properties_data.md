@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ab2d-properties | REPORT-2025-03-23
+title: Open Source at CMS Metrics Report for ab2d-properties | REPORT-2025-04-20
 permalink: /CMSgov/ab2d-properties/
 
 org: CMSgov
 repo: ab2d-properties
-reportID: REPORT-2025-03-23
-date_stampThisWeek: 2025-03-23
-date_stampLastWeek: 2025-03-23
+reportID: REPORT-2025-04-20
+date_stampThisWeek: 2025-04-20
+date_stampLastWeek: 2025-04-20
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,8 +24,8 @@ date_stampLastWeek: 2025-03-23
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>82</td>
-        <td>82</td>
+        <td>83</td>
+        <td>83</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
@@ -52,15 +52,15 @@ date_stampLastWeek: 2025-03-23
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>0</td>
-        <td>0</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td>2</td>
+        <td>1</td>
+        <td style="" >1</td>
+        <td style="" >67%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>48</td>
-        <td>48</td>
+        <td>49</td>
+        <td>49</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>

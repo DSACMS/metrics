@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-mdct-mfp | REPORT-2025-03-23
+title: Open Source at CMS Metrics Report for macpro-mdct-mfp | REPORT-2025-04-20
 permalink: /Enterprise-CMCS/macpro-mdct-mfp/
 
 org: Enterprise-CMCS
 repo: macpro-mdct-mfp
-reportID: REPORT-2025-03-23
-date_stampThisWeek: 2025-03-23
-date_stampLastWeek: 2025-03-23
+reportID: REPORT-2025-04-20
+date_stampThisWeek: 2025-04-20
+date_stampLastWeek: 2025-04-20
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2025-03-23
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>734</td>
-        <td>731</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >0.41%</td>
+        <td>744</td>
+        <td>743</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.13%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -53,23 +53,23 @@ date_stampLastWeek: 2025-03-23
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>3</td>
-        <td>7</td>
-        <td style="color: #45c527" >-4</td>
-        <td style="color: #45c527" >80%</td>
+        <td>4</td>
+        <td style="color: #45c527" >-1</td>
+        <td style="color: #45c527" >29%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>740</td>
-        <td>736</td>
-        <td style="color: #45c527" >4</td>
-        <td style="color: #45c527" >0.54%</td>
+        <td>751</td>
+        <td>750</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.13%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
-        <td>152</td>
-        <td>149</td>
-        <td style="" >3</td>
-        <td style="" >2%</td>
+        <td>154</td>
+        <td>154</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

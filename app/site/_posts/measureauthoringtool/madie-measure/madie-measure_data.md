@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for madie-measure | REPORT-2025-03-23
+title: Open Source at CMS Metrics Report for madie-measure | REPORT-2025-04-20
 permalink: /measureauthoringtool/madie-measure/
 
 org: measureauthoringtool
 repo: madie-measure
-reportID: REPORT-2025-03-23
-date_stampThisWeek: 2025-03-23
-date_stampLastWeek: 2025-03-23
+reportID: REPORT-2025-04-20
+date_stampThisWeek: 2025-04-20
+date_stampLastWeek: 2025-04-20
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2025-03-23
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>3621</td>
-        <td>3591</td>
-        <td style="color: #45c527" >30</td>
-        <td style="color: #45c527" >0.83%</td>
+        <td>3909</td>
+        <td>3824</td>
+        <td style="color: #45c527" >85</td>
+        <td style="color: #45c527" >2.2%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,24 +52,24 @@ date_stampLastWeek: 2025-03-23
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>28</td>
-        <td>28</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td>7</td>
+        <td>11</td>
+        <td style="color: #45c527" >-4</td>
+        <td style="color: #45c527" >44%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>759</td>
-        <td>754</td>
-        <td style="color: #45c527" >5</td>
-        <td style="color: #45c527" >0.66%</td>
+        <td>809</td>
+        <td>798</td>
+        <td style="color: #45c527" >11</td>
+        <td style="color: #45c527" >1.4%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
-        <td>55</td>
-        <td>55</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td>76</td>
+        <td>75</td>
+        <td style="" >1</td>
+        <td style="" >1.3%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

@@ -1,12 +1,12 @@
 ---
 layout: org-report
-title: Open Source at CMS Metrics Report for measureauthoringtool | REPORT-2025-03-23
+title: Open Source at CMS Metrics Report for measureauthoringtool | REPORT-2025-04-20
 permalink: /measureauthoringtool/
 
 org: measureauthoringtool
-reportID: REPORT-2025-03-23
-date_stampThisWeek: 2025-03-23
-date_stampLastWeek: 2025-03-23
+reportID: REPORT-2025-04-20
+date_stampThisWeek: 2025-04-20
+date_stampLastWeek: 2025-04-20
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -23,10 +23,10 @@ date_stampLastWeek: 2025-03-23
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>46924</td>
-        <td>46743</td>
-        <td style="color: #45c527" >181</td>
-        <td style="color: #45c527" >0.39%</td>
+        <td>47782</td>
+        <td>47514</td>
+        <td style="color: #45c527" >268</td>
+        <td style="color: #45c527" >0.56%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -51,24 +51,24 @@ date_stampLastWeek: 2025-03-23
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>622</td>
-        <td>639</td>
-        <td style="color: #45c527" >-17</td>
-        <td style="color: #45c527" >2.7%</td>
+        <td>582</td>
+        <td>589</td>
+        <td style="color: #45c527" >-7</td>
+        <td style="color: #45c527" >1.2%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>10723</td>
-        <td>10670</td>
-        <td style="color: #45c527" >53</td>
-        <td style="color: #45c527" >0.5%</td>
+        <td>10971</td>
+        <td>10890</td>
+        <td style="color: #45c527" >81</td>
+        <td style="color: #45c527" >0.74%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
-        <td>4182</td>
-        <td>4153</td>
-        <td style="" >29</td>
-        <td style="" >0.7%</td>
+        <td>4260</td>
+        <td>4255</td>
+        <td style="" >5</td>
+        <td style="" >0.12%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
@@ -79,8 +79,8 @@ date_stampLastWeek: 2025-03-23
       </tr>
       <tr>
         <th scope="row">Stars</th>
-        <td>185</td>
-        <td>185</td>
+        <td>184</td>
+        <td>184</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>

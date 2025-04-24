@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for madie-qdm-service | REPORT-2025-03-23
+title: Open Source at CMS Metrics Report for madie-qdm-service | REPORT-2025-04-20
 permalink: /measureauthoringtool/madie-qdm-service/
 
 org: measureauthoringtool
 repo: madie-qdm-service
-reportID: REPORT-2025-03-23
-date_stampThisWeek: 2025-03-23
-date_stampLastWeek: 2025-03-23
+reportID: REPORT-2025-04-20
+date_stampThisWeek: 2025-04-20
+date_stampLastWeek: 2025-04-20
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,8 +24,8 @@ date_stampLastWeek: 2025-03-23
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>335</td>
-        <td>335</td>
+        <td>339</td>
+        <td>339</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
@@ -52,15 +52,15 @@ date_stampLastWeek: 2025-03-23
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>1</td>
-        <td>0</td>
-        <td style="" >1</td>
-        <td style="" >200%</td>
+        <td>2</td>
+        <td>2</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>106</td>
-        <td>106</td>
+        <td>108</td>
+        <td>108</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>

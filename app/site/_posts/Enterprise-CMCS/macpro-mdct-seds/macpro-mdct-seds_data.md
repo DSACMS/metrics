@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-mdct-seds | REPORT-2025-03-23
+title: Open Source at CMS Metrics Report for macpro-mdct-seds | REPORT-2025-04-20
 permalink: /Enterprise-CMCS/macpro-mdct-seds/
 
 org: Enterprise-CMCS
 repo: macpro-mdct-seds
-reportID: REPORT-2025-03-23
-date_stampThisWeek: 2025-03-23
-date_stampLastWeek: 2025-03-23
+reportID: REPORT-2025-04-20
+date_stampThisWeek: 2025-04-20
+date_stampLastWeek: 2025-04-20
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,8 +24,8 @@ date_stampLastWeek: 2025-03-23
     <tbody>
       <tr>
         <th scope="row">Commits</th>
-        <td>2787</td>
-        <td>2787</td>
+        <td>2789</td>
+        <td>2789</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
@@ -52,22 +52,22 @@ date_stampLastWeek: 2025-03-23
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>15</td>
-        <td>15</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td>4</td>
+        <td>3</td>
+        <td style="" >1</td>
+        <td style="" >29%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
-        <td>919</td>
-        <td>919</td>
+        <td>922</td>
+        <td>922</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
-        <td>203</td>
-        <td>203</td>
+        <td>216</td>
+        <td>216</td>
         <td style="" >0</td>
         <td style="" >0%</td>
       </tr>

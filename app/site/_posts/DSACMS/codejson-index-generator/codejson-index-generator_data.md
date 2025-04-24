@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for codejson-index-generator | REPORT-2025-03-23
+title: Open Source at CMS Metrics Report for codejson-index-generator | REPORT-2025-04-20
 permalink: /DSACMS/codejson-index-generator/
 
 org: DSACMS
 repo: codejson-index-generator
-reportID: REPORT-2025-03-23
-date_stampThisWeek: 2025-03-23
-date_stampLastWeek: 2025-03-23
+reportID: REPORT-2025-04-20
+date_stampThisWeek: 2025-04-20
+date_stampLastWeek: 2025-04-20
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,24 +24,24 @@ date_stampLastWeek: 2025-03-23
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>26</td>
         <td>25</td>
-        <td>19</td>
-        <td style="color: #45c527" >6</td>
-        <td style="color: #45c527" >27%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >3.9%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
         <td>3</td>
-        <td>2</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >40%</td>
+        <td>3</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
         <td>3</td>
-        <td>2</td>
-        <td style="" >1</td>
-        <td style="" >40%</td>
+        <td>3</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -60,9 +60,9 @@ date_stampLastWeek: 2025-03-23
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>3</td>
-        <td>2</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >40%</td>
+        <td>3</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
