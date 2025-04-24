@@ -6,6 +6,8 @@ import argparse
 from metrics_dash_backend_tools import get_all_data, parse_repos_and_orgs_into_objects
 from metrics_dash_backend_tools import parse_tracked_repos_file, read_previous_metric_data
 from constants import PATH_TO_METADATA, PATH_TO_METRICS_DATA, PATH_TO_GRAPHS_DATA
+from metrics_dash_backend_tools.metrics_definitions import SIMPLE_METRICS, ORG_METRICS, ADVANCED_METRICS
+from metrics_dash_backend_tools.metrics_definitions import PERIODIC_METRICS, RESOURCE_METRICS
 
 
 
@@ -23,4 +25,7 @@ if __name__ == "__main__":
 
     # Generate json data, report data, and graph data.
     read_previous_metric_data(PATH_TO_METRICS_DATA,all_repos,all_orgs)
-    get_all_data(PATH_TO_METRICS_DATA, PATH_TO_GRAPHS_DATA,all_orgs, all_repos)
+
+    list_of_all_metrics_lists = [SIMPLE_METRICS,ORG_METRICS,ADVANCED_METRICS,PERIODIC_METRICS]
+
+    get_all_data(PATH_TO_METRICS_DATA, PATH_TO_GRAPHS_DATA,all_orgs, all_repos,list_of_all_metrics_lists,RESOURCE_METRICS)
