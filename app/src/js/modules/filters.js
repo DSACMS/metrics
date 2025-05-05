@@ -3,7 +3,8 @@ import { addGlobalEventListener, updateHeadingVisibility } from "./utilities";
 import { renderPaginatedProjects, renderPaginationControls } from "./rendering";
 import { sortCards } from "./sorting";
 
-
+let currentPage = 1
+const itemsPerPage = 10;
 let filteredProjects = [...parsedProjectsData];
 
 export function getFilteredProjects() {
@@ -14,10 +15,7 @@ export function setFilteredProjects(projects) {
   filteredProjects = projects;
 }
 
-let currentPage = 1
-const itemsPerPage = 10;
-
-export function updateFilteredProjects() {
+function getSelectedFilters() {
   const selectedFiltersObject = {
     organization: [],
     maturityModelTier: [],
@@ -38,12 +36,18 @@ export function updateFilteredProjects() {
     selectedFiltersObject.projectType.push(checkbox.value);
   });
 
+  return selectedFiltersObject;
+}
+
+export function updateFilteredProjects() {
+  const selected = getSelectedFilters();
+ 
   const allProjects = Object.keys(projects).flatMap((org) => projects[org].map((project) => ({...project, org})))
   filteredProjects = allProjects.filter((project) => {
-    const matchesOrg = selectedFiltersObject.organization.length === 0 || selectedFiltersObject.organization.includes(project.org);
-    const matchesTier = selectedFiltersObject.maturityModelTier.length === 0 || selectedFiltersObject.maturityModelTier.includes("Tier" + project.maturityModelTier);
-    const matchesFisma = selectedFiltersObject.fismaLevel.length === 0 || selectedFiltersObject.fismaLevel.includes(project.fismaLevel);
-    const matchesType = selectedFiltersObject.projectType.length === 0 || selectedFiltersObject.projectType.includes(project.projectType);
+    const matchesOrg = selected.organization.length === 0 || selected.organization.includes(project.org);
+    const matchesTier = selected.maturityModelTier.length === 0 || selected.maturityModelTier.includes("Tier" + project.maturityModelTier);
+    const matchesFisma = selected.fismaLevel.length === 0 || selected.fismaLevel.includes(project.fismaLevel);
+    const matchesType = selected.projectType.length === 0 || selected.projectType.includes(project.projectType);
     return  matchesOrg && matchesTier && matchesFisma && matchesType;
   });
  
@@ -90,37 +94,20 @@ export function addFilterButtonGroup(selectedFiltersObject) {
 }
 
 export function updateFilters() {
-  const selectedFiltersObject = {
-    organization: [],
-    maturityModelTier: [],
-    fismaLevel: [],
-    projectType: []
-  }
+  const selected = getSelectedFilters();
 
-  document.querySelectorAll('input[name="org-filter"]:checked').forEach(checkbox => {
-    selectedFiltersObject.organization.push(checkbox.value);
-  });
-  document.querySelectorAll('input[name="tier-filter"]:checked').forEach(checkbox => {
-    selectedFiltersObject.maturityModelTier.push(checkbox.value);
-  });
-  document.querySelectorAll('input[name="fisma-level-filter"]:checked').forEach(checkbox => {
-    selectedFiltersObject.fismaLevel.push(checkbox.value);
-  });
-  document.querySelectorAll('input[name="project-type-filter"]:checked').forEach(checkbox => {
-    selectedFiltersObject.projectType.push(checkbox.value);
-  });
-
-  addFilterButtonGroup(selectedFiltersObject)
+  addFilterButtonGroup(selected)
   const projectSections = document.querySelectorAll(".project_section");
 
   projectSections.forEach((section) => {
     const projectCards = section.querySelectorAll(".project-card");
     
     projectCards.forEach((card) => {
-      checkFilterCriteria(card, selectedFiltersObject);
+      checkFilterCriteria(card, selected);
     })
   })
 
+  addFilterButtonGroup(selected);
   updateHeadingVisibility();
 }
 
@@ -140,7 +127,6 @@ export function checkFilterCriteria(card, selectedFiltersObject) {
 export function updatePagination() {
   const totalProjects = (filteredProjects || parsedProjectsData).length;
   const totalPages = Math.ceil(totalProjects / itemsPerPage);
-
   currentPage = Math.min(currentPage, totalPages || 1);
   renderPaginationControls(totalPages);
 }

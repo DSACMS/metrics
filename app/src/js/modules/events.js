@@ -1,5 +1,5 @@
 import { sortDirection, sortSelection, parsedProjectsData } from "./data";
-import { getFilteredProjects, setFilteredProjects, updateFilters, updateFilteredProjects } from "./filters";
+import { setFilteredProjects, updateFilters, updateFilteredProjects } from "./filters";
 import { sortCards } from "./sorting";
 import { renderPaginatedProjects } from "./rendering";
 
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       setFilteredProjects(newFilteredProjects)
       currentPage = 1
-      renderPaginatedProjects(getFilteredProjects());
+      renderPaginatedProjects();
     }
   })
 });
