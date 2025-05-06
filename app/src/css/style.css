@@ -1,6 +1,7 @@
 @import "./tokens.css";
 @import "@uswds/uswds/dist/css/uswds.css";
 
+/* Base Styles */
 html, body {
   width: 100vw;
   margin: 0;
@@ -181,7 +182,7 @@ h2 {
 .usa-identifier {
   display: flex;
   background-color: var(--primary-light-color);
-  color: #000;
+  color: var(--default-black);
 }
 
 .usa-identifier__logo-img {
@@ -212,6 +213,13 @@ a.usa-link {
 
 a.usa-link:visited {
   color: var(--default-dark-gray);
+}
+
+.usa-identifier__identity-disclaimer a {
+  color: var(--default-black);
+  &:visited {
+    color: var(--default-dark-gray);
+  }
 }
 
 /* Orgs */
@@ -823,7 +831,7 @@ iframe:focus, [href]:focus, [tabindex]:focus, [contentEditable=true]:focus {
   .usa-card-outer,
   .usa-card-middle,
   .usa-card__container {
-    border-radius: 80px;
+    border-radius: 80rem;
   }
 
   .home-icon-container {
