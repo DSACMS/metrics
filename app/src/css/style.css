@@ -1,22 +1,5 @@
+@import "./tokens.css";
 @import "@uswds/uswds/dist/css/uswds.css";
-
-/* ROOT VARIABLES */
-:root {
-  /* Colors */
-  --primary-dark-color: #043884;
-  --primary-medium-color: #5C85C1;
-  --primary-light-color: #E0EAF8;
-  --primary-accent-color: #E7C000;
-  --secondary-accent-color: #ECDD90;
-  --default-white: #FFF;
-  --default-black: #000;
-  --default-dark-gray: #494949;
-  --default-light-gray: #BCBCBC;
-
-  /* Shadows */
-  --default-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;;
-
-}
 
 html, body {
   width: 100vw;
@@ -60,7 +43,6 @@ main {
 
 h1 {
   color: var(--primary-dark-color);
-  /* color: #093f8e; */
   font-size: 1.5rem;
   margin: 1rem 0;
 }
@@ -429,9 +411,9 @@ a.usa-link:visited {
 }
 
 .filter-button[aria-expanded="false"] {
-  background-color: #E0EAF8;
+  background-color: var(--primary-light-color);
   border-radius: 50px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: var(--default-shadow);
   min-width: 215px;
 }
 
@@ -616,7 +598,7 @@ embed {
 
 .modal-button {
   border-radius: 30px;
-  background-color: #0A3F8D;
+  background-color: var(--primary-dark-color);
   box-shadow: var(--default-shadow);
   width: fit-content;
 }
