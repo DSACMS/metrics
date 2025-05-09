@@ -1,5 +1,7 @@
+@import "./tokens.css";
 @import "@uswds/uswds/dist/css/uswds.css";
 
+/* Base Styles */
 html, body {
   width: 100vw;
   margin: 0;
@@ -41,7 +43,7 @@ main {
 }
 
 h1 {
-  color: #093f8e;
+  color: var(--primary-dark-color);
   font-size: 1.5rem;
   margin: 1rem 0;
 }
@@ -53,7 +55,7 @@ h1 {
 }
 
 .usa-logo a {
-  color: #043884;
+  color: var(--primary-dark-color);
   font-size: 1.1em;
 }
 
@@ -102,17 +104,17 @@ h2 {
 
 .usa-card-outer {
   display: flex;
-  background-color: #043884;
+  background-color: var(--primary-dark-color);
   border: none;
   border-radius: 100px;
   height: 15vh;
   width: 100%;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: var(--default-shadow);
 }
 
 .usa-card-middle {
   display: flex;
-  background-color: #5C85C1;
+  background-color: var(--primary-medium-color);
   border: none;
   border-radius: 100px;
   height: 100%;
@@ -121,7 +123,7 @@ h2 {
 }
 
 .usa-card-middle:hover {
-  background-color: #E7C000;
+  background-color: var(--primary-accent-color);
 }
 
 .usa-card-outer:active {
@@ -140,7 +142,7 @@ h2 {
 
 .usa-card__container {
   align-items: center;
-  background-color: #E0EAF8;
+  background-color: var(--primary-light-color);
   border: none;
   border-radius: 100px;
   display: flex;
@@ -154,7 +156,7 @@ h2 {
 
 .home-icon-container {
   align-items: center;
-  background-color: #fff;
+  background-color: var(--default-white);
   border-radius: 50%;
   display: flex;
   height: 75px;
@@ -179,8 +181,8 @@ h2 {
 /* Footer */
 .usa-identifier {
   display: flex;
-  background-color: #E0EAF8;
-  color: #000;
+  background-color: var(--primary-light-color);
+  color: var(--default-black);
 }
 
 .usa-identifier__logo-img {
@@ -188,29 +190,36 @@ h2 {
 }
 
 .usa-identifier__identity-domain {
-  color: #000;
+  color: var(--default-black);
 }
 
 .usa-identifier__identity-disclaimer a:visited {
-  color: #494949;
+  color: var(--default-dark-gray);
 }
 
 .usa-identifier__required-link,
 .usa-identifier__required-link.usa-link{
-  color:#000;
+  color: var(--default-black);
   display:inline-block;
 }
 .usa-identifier__required-link:visited,
 .usa-identifier__required-link.usa-link:visited{
-  color:#494949;
+  color: var(--default-dark-gray);
 }
 
 a.usa-link {
-  color: #000;
+  color: var(--default-black);
 }
 
 a.usa-link:visited {
-  color: #494949;
+  color: var(--default-dark-gray);
+}
+
+.usa-identifier__identity-disclaimer a {
+  color: var(--default-black);
+  &:visited {
+    color: var(--default-dark-gray);
+  }
 }
 
 /* Orgs */
@@ -230,7 +239,7 @@ a.usa-link:visited {
 
 .usa-card__media {
   align-items: center;
-  background-color: #fff;
+  background-color: var(--default-white);
   border-radius: 50%;
   display: flex;
   height: 100px;
@@ -250,7 +259,7 @@ a.usa-link:visited {
 }
 
 .usa-card__heading-orgs {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .usa-card__footer {
@@ -293,13 +302,13 @@ a.usa-link:visited {
 }
 
 .search-styling {
-  border: 0.25px solid #bcbcbc;
+  border: 0.25px solid var(--default-light-gray);
   border-radius: 50px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: var(--default-shadow);
 }
 
 .usa-input {
-  background-color: #FFF;
+  background-color: var(--default-white);
   border: none;
   border-radius: 50px;
   z-index: 10;
@@ -311,7 +320,7 @@ a.usa-link:visited {
   min-width: 4rem;
   margin-left: -12px;
   border-radius: 0 50px 50px 0;
-  background-color: #e0eaf8;
+  background-color: var(--primary-light-color);
 }
 
 .usa-search__submit-icon {
@@ -334,11 +343,11 @@ a.usa-link:visited {
 
 .sort-outer {
   display: flex;
-  background-color: #E0EAF8;
-  border: 0.25px solid #bcbcbc;
+  background-color: var(--primary-light-color);
+  border: 0.25px solid var(--default-light-gray);
   height: 37px;
   border-radius: 50px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: var(--default-shadow);
   margin-left: 30px;
   align-items: center;
   max-width: 15rem;
@@ -395,7 +404,7 @@ a.usa-link:visited {
 
 .filter-button {
   display: flex;
-  background-color: #E0EAF8;
+  background-color: var(--primary-light-color);
   border-radius: 50px 50px 0 0;
   border: none;
   font-weight: 600; 
@@ -406,13 +415,13 @@ a.usa-link:visited {
 }
 
 .filter-button:hover {
-  background-color: #ecdd90;
+  background-color: var(--secondary-accent-color);
 }
 
 .filter-button[aria-expanded="false"] {
-  background-color: #E0EAF8;
+  background-color: var(--primary-light-color);
   border-radius: 50px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: var(--default-shadow);
   min-width: 215px;
 }
 
@@ -421,7 +430,7 @@ a.usa-link:visited {
 }
 
 .filter-button[aria-expanded="false"]:hover {
-  background-color: #ecdd90;
+  background-color: var(--secondary-accent-color);
 }
 
 .filter-button:not([disabled]):focus {
@@ -429,7 +438,7 @@ a.usa-link:visited {
 }
 
 .filter-content {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: var(--default-shadow);
 }
 
 .search-and-sort {
@@ -469,11 +478,11 @@ a.usa-link:visited {
 .report_heading-reports-title {
   margin: 15% 0 5%;
   width: 100%;
-  color: #000;
+  color: var(--default-black);
 }
 
 .report-link {
-  color: #000;
+  color: var(--default-black);
 }
 
 .report_container {
@@ -539,11 +548,11 @@ a.usa-link:visited {
 .graph-box {
   display: flex;
   width: 100%;
-  background-color: #E0EAF8;
+  background-color: var(--primary-light-color);
   flex-direction: column;
   margin-bottom: 5%;
   border-radius: 30px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: var(--default-shadow);
 }
 
 .graph-section-title {
@@ -576,7 +585,7 @@ embed {
   opacity: 0;
   transition: opacity 0.3s ease;
   border-radius: 25px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: var(--default-shadow);
 }
 
 .usa-modal[aria-hidden="false"] {
@@ -597,15 +606,15 @@ embed {
 
 .modal-button {
   border-radius: 30px;
-  background-color: #0A3F8D;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background-color: var(--primary-dark-color);
+  box-shadow: var(--default-shadow);
   width: fit-content;
 }
 
 .modal-button:hover {
   border-radius: 30px;
-  background-color: #E7C000;
-  color: #000;
+  background-color: var(--primary-accent-color);
+  color: var(--default-black);
 }
 
 .modal-button:active {
@@ -636,7 +645,7 @@ iframe:focus, [href]:focus, [tabindex]:focus, [contentEditable=true]:focus {
     top: 0;
     right: 0;
     width: 100%;
-    background: #fff;
+    background: var(--default-white);
     padding: 1rem;
   }
   
@@ -765,6 +774,10 @@ iframe:focus, [href]:focus, [tabindex]:focus, [contentEditable=true]:focus {
     height: 90px;
   }
 
+  .usa-card__heading-orgs {
+    font-size: 1.7em;
+  }
+
   .org-github-info {
     display: flex;
     justify-content: center;
@@ -822,7 +835,7 @@ iframe:focus, [href]:focus, [tabindex]:focus, [contentEditable=true]:focus {
   .usa-card-outer,
   .usa-card-middle,
   .usa-card__container {
-    border-radius: 80px;
+    border-radius: 80rem;
   }
 
   .home-icon-container {
