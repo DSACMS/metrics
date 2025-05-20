@@ -26,6 +26,10 @@ if __name__ == "__main__":
     # Generate json data, report data, and graph data.
     read_previous_metric_data(PATH_TO_METRICS_DATA,all_repos,all_orgs)
 
-    list_of_all_metrics_lists = [SIMPLE_METRICS,ORG_METRICS,ADVANCED_METRICS,PERIODIC_METRICS]
+    metrics_lists = {
+        "REPO_METRICS" : SIMPLE_METRICS + ADVANCED_METRICS + PERIODIC_METRICS,
+        "ORG_METRICS" : ORG_METRICS,
+        "RESOURCE_METRICS": RESOURCE_METRICS
+    }
 
-    get_all_data(PATH_TO_METRICS_DATA, PATH_TO_GRAPHS_DATA,all_orgs, all_repos,list_of_all_metrics_lists,RESOURCE_METRICS)
+    get_all_data(PATH_TO_METRICS_DATA, PATH_TO_GRAPHS_DATA,all_orgs, all_repos, metrics_lists)
