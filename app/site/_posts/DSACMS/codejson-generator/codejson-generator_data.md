@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for codejson-generator | REPORT-2025-04-20
+title: Open Source at CMS Metrics Report for codejson-generator | REPORT-2025-05-25
 permalink: /DSACMS/codejson-generator/
 
 org: DSACMS
 repo: codejson-generator
-reportID: REPORT-2025-04-20
-date_stampThisWeek: 2025-04-20
-date_stampLastWeek: 2025-04-20
+reportID: REPORT-2025-05-25
+date_stampThisWeek: 2025-05-25
+date_stampLastWeek: 2025-05-25
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,24 +24,24 @@ date_stampLastWeek: 2025-04-20
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>120</td>
         <td>97</td>
-        <td>92</td>
-        <td style="color: #45c527" >5</td>
-        <td style="color: #45c527" >5.3%</td>
+        <td style="color: #45c527" >23</td>
+        <td style="color: #45c527" >21%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
+        <td>10</td>
         <td>6</td>
-        <td>5</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >18%</td>
+        <td style="color: #45c527" >4</td>
+        <td style="color: #45c527" >50%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>9</td>
         <td>5</td>
-        <td>4</td>
-        <td style="" >1</td>
-        <td style="" >22%</td>
+        <td style="" >4</td>
+        <td style="" >57%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -52,17 +52,17 @@ date_stampLastWeek: 2025-04-20
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>16</td>
         <td>10</td>
-        <td>10</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >6</td>
+        <td style="" >46%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>27</td>
         <td>24</td>
-        <td>22</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >8.7%</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >12%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -73,10 +73,10 @@ date_stampLastWeek: 2025-04-20
       </tr>
       <tr>
         <th scope="row">Forks</th>
+        <td>5</td>
         <td>4</td>
-        <td>4</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >22%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>

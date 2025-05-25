@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for cms-bb2-node-sdk | REPORT-2025-04-20
+title: Open Source at CMS Metrics Report for cms-bb2-node-sdk | REPORT-2025-05-25
 permalink: /CMSgov/cms-bb2-node-sdk/
 
 org: CMSgov
 repo: cms-bb2-node-sdk
-reportID: REPORT-2025-04-20
-date_stampThisWeek: 2025-04-20
-date_stampLastWeek: 2025-04-20
+reportID: REPORT-2025-05-25
+date_stampThisWeek: 2025-05-25
+date_stampLastWeek: 2025-05-25
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2025-04-20
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>182</td>
         <td>170</td>
-        <td>170</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >12</td>
+        <td style="color: #45c527" >6.8%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -52,31 +52,31 @@ date_stampLastWeek: 2025-04-20
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>1</td>
         <td>2</td>
-        <td>2</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >-1</td>
+        <td style="color: #45c527" >67%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>49</td>
         <td>47</td>
-        <td>47</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >2</td>
+        <td style="color: #45c527" >4.2%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>17</td>
         <td>15</td>
-        <td>15</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >2</td>
+        <td style="" >12%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
+        <td>2</td>
         <td>1</td>
-        <td>1</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >67%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for easi-shared | REPORT-2025-04-20
+title: Open Source at CMS Metrics Report for easi-shared | REPORT-2025-05-25
 permalink: /CMSgov/easi-shared/
 
 org: CMSgov
 repo: easi-shared
-reportID: REPORT-2025-04-20
-date_stampThisWeek: 2025-04-20
-date_stampLastWeek: 2025-04-20
+reportID: REPORT-2025-05-25
+date_stampThisWeek: 2025-05-25
+date_stampLastWeek: 2025-05-25
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -87,10 +87,10 @@ date_stampLastWeek: 2025-04-20
       </tr>
       <tr>
         <th scope="row">Watchers</th>
+        <td>7</td>
         <td>6</td>
-        <td>6</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >15%</td>
       </tr>
     </tbody>
   </table>
