@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for batcave-wt-sdl-reporting | REPORT-2025-05-25
+title: Open Source at CMS Metrics Report for batcave-wt-sdl-reporting | REPORT-2025-06-01
 permalink: /CMS-Enterprise/batcave-wt-sdl-reporting/
 
 org: CMS-Enterprise
 repo: batcave-wt-sdl-reporting
-reportID: REPORT-2025-05-25
-date_stampThisWeek: 2025-05-25
-date_stampLastWeek: 2025-05-25
+reportID: REPORT-2025-06-01
+date_stampThisWeek: 2025-06-01
+date_stampLastWeek: 2025-06-01
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

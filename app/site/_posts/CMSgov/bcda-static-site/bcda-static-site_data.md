@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for bcda-static-site | REPORT-2025-05-25
+title: Open Source at CMS Metrics Report for bcda-static-site | REPORT-2025-06-01
 permalink: /CMSgov/bcda-static-site/
 
 org: CMSgov
 repo: bcda-static-site
-reportID: REPORT-2025-05-25
-date_stampThisWeek: 2025-05-25
-date_stampLastWeek: 2025-05-25
+reportID: REPORT-2025-06-01
+date_stampThisWeek: 2025-06-01
+date_stampLastWeek: 2025-06-01
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2025-05-25
       <tr>
         <th scope="row">Commits</th>
         <td>237</td>
-        <td>235</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >0.85%</td>
+        <td>237</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -60,9 +60,9 @@ date_stampLastWeek: 2025-05-25
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>223</td>
-        <td>216</td>
-        <td style="color: #45c527" >7</td>
-        <td style="color: #45c527" >3.2%</td>
+        <td>223</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>

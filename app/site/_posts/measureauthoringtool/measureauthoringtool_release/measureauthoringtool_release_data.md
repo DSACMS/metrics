@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for measureauthoringtool_release | REPORT-2025-05-25
+title: Open Source at CMS Metrics Report for measureauthoringtool_release | REPORT-2025-06-01
 permalink: /measureauthoringtool/measureauthoringtool_release/
 
 org: measureauthoringtool
 repo: measureauthoringtool_release
-reportID: REPORT-2025-05-25
-date_stampThisWeek: 2025-05-25
-date_stampLastWeek: 2025-05-25
+reportID: REPORT-2025-06-01
+date_stampThisWeek: 2025-06-01
+date_stampLastWeek: 2025-06-01
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
