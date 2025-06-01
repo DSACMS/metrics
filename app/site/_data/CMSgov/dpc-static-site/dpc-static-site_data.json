@@ -50,16 +50,16 @@
   "nadia_badge_name": "midsize",
   "created_at": "2020-03-31T20:05:10Z",
   "ossf_scorecard": {
-    "date": "2025-05-25T09:52:46Z",
+    "date": "2025-06-01T10:05:21Z",
     "repo": {
       "name": "github.com/CMSgov/dpc-static-site",
-      "commit": "3047fba651a25c88e124a3145a2b98dfab0e5c03"
+      "commit": "02659c5ec7ca246664967aba163e494b93c5cba0"
     },
     "scorecard": {
       "version": "v5.1.1-45-g40bbc9c9",
       "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
     },
-    "score": 5.3,
+    "score": 5.2,
     "checks": [
       {
         "details": null,
@@ -83,8 +83,8 @@
       },
       {
         "details": null,
-        "score": 8,
-        "reason": "26 out of 30 merged PRs checked by a CI test -- score normalized to 8",
+        "score": -1,
+        "reason": "internal error: internal error: Client.Repositories.ListStatuses: internal error: ListStatuses: GET https://api.github.com/repos/CMSgov/dpc-static-site/commits/f68427be363ff51d83ade495aa5c0c9ce665d5c1/statuses: 401 Bad credentials []",
         "name": "CI-Tests",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#ci-tests",
@@ -163,8 +163,8 @@
       },
       {
         "details": null,
-        "score": 6,
-        "reason": "8 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 6",
+        "score": 5,
+        "reason": "6 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 5",
         "name": "Maintained",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#maintained",
