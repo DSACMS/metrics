@@ -159,7 +159,7 @@
     "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nJava                       203      8708     1241        52     7415        181\n(ULOC)                              2396\n-------------------------------------------------------------------------------\nXML                          3       282       25        18      239          0\n(ULOC)                               203\n-------------------------------------------------------------------------------\nMarkdown                     2        42        9         0       33          0\n(ULOC)                                33\n-------------------------------------------------------------------------------\nYAML                         2        79       10         2       67          0\n(ULOC)                                47\n───────────────────────────────────────────────────────────────────────────────\nTotal                      210      9111     1285        72     7754        181\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)         2674\nDRYness %                           0.29\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $232,058\nEstimated Schedule Effort (organic) 7.89 months\nEstimated People Required (organic) 2.61\n───────────────────────────────────────────────────────────────────────────────\nProcessed 290439 bytes, 0.290 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
   },
   "ossf_scorecard": {
-    "date": "2025-05-25T10:42:53Z",
+    "date": "2025-06-01T10:51:22Z",
     "repo": {
       "name": "github.com/measureauthoringtool/madie-java-models",
       "commit": "fadcc0c485aff4cef616d521858f3084f0b4805d"
@@ -168,7 +168,7 @@
       "version": "v5.1.1-45-g40bbc9c9",
       "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
     },
-    "score": 6.4,
+    "score": 6.3,
     "checks": [
       {
         "details": null,
@@ -192,8 +192,8 @@
       },
       {
         "details": null,
-        "score": 10,
-        "reason": "11 out of 11 merged PRs checked by a CI test -- score normalized to 10",
+        "score": -1,
+        "reason": "internal error: internal error: Client.Repositories.ListStatuses: internal error: ListStatuses: GET https://api.github.com/repos/MeasureAuthoringTool/madie-java-models/commits/4852c9965847413338b20e9ad6e96faaaedcef5a/statuses: 401 Bad credentials []",
         "name": "CI-Tests",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#ci-tests",
