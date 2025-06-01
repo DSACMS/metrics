@@ -3,14 +3,14 @@
     "owner": "CMSgov",
     "name": "bcda-app",
     "description": "Beneficiary Claims Data API",
-    "commits_count": 972,
+    "commits_count": 995,
     "issues_count": 7,
     "open_issues_count": 0,
     "closed_issues_count": 7,
-    "pull_requests_count": 1083,
-    "open_pull_requests_count": 8,
-    "merged_pull_requests_count": 976,
-    "closed_pull_requests_count": 99,
+    "pull_requests_count": 1119,
+    "open_pull_requests_count": 11,
+    "merged_pull_requests_count": 1001,
+    "closed_pull_requests_count": 107,
     "forks_count": 15,
     "stargazers_count": 47,
     "watchers_count": 23,
@@ -21,19 +21,14 @@
     "total_project_blank_lines": 7094,
     "average_blank_lines": 19,
     "commits_by_month": {
-        "2025/4": 11,
-        "2025/3": 14,
-        "2025/2": 5
+        "2025/5": 19,
+        "2025/4": 11
     },
     "new_commit_contributors_by_day_over_last_month": [],
     "new_commit_contributors_by_day_over_last_six_months": [
         [
-            "2024-11-07T06:00:00.000Z",
-            1
-        ],
-        [
-            "2024-11-18T06:00:00.000Z",
-            1
+            "2024-12-12T06:00:00.000Z",
+            2
         ],
         [
             "2024-12-17T06:00:00.000Z",
@@ -47,14 +42,14 @@
     "nadia_badge_name": "club",
     "created_at": "2018-07-20T15:04:55Z",
     "ossf_scorecard": {
-        "date": "2025-04-20T09:19:01Z",
+        "date": "2025-05-25T09:48:36Z",
         "repo": {
             "name": "github.com/CMSgov/bcda-app",
-            "commit": "7d307e997f10efad6e51dabab67ebd5d243875c4"
+            "commit": "e86d346c1e167041527c34c01ee599417970f1f2"
         },
         "scorecard": {
-            "version": "v5.1.1-42-g1e72b3ac",
-            "commit": "1e72b3ac6e297e29c63156145f945a464f087675"
+            "version": "v5.1.1-45-g40bbc9c9",
+            "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
         },
         "score": 5.9,
         "checks": [
@@ -64,7 +59,7 @@
                 "reason": "no binaries found in the repo",
                 "name": "Binary-Artifacts",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/1e72b3ac6e297e29c63156145f945a464f087675/docs/checks.md#binary-artifacts",
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#binary-artifacts",
                     "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
                 }
             },
@@ -74,17 +69,17 @@
                 "reason": "branch protection is not maximal on development and all release branches",
                 "name": "Branch-Protection",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/1e72b3ac6e297e29c63156145f945a464f087675/docs/checks.md#branch-protection",
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#branch-protection",
                     "short": "Determines if the default and release branches are protected with GitHub's branch protection settings."
                 }
             },
             {
                 "details": null,
-                "score": 10,
-                "reason": "30 out of 30 merged PRs checked by a CI test -- score normalized to 10",
+                "score": 8,
+                "reason": "25 out of 30 merged PRs checked by a CI test -- score normalized to 8",
                 "name": "CI-Tests",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/1e72b3ac6e297e29c63156145f945a464f087675/docs/checks.md#ci-tests",
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#ci-tests",
                     "short": "Determines if the project runs tests before pull requests are merged."
                 }
             },
@@ -94,7 +89,7 @@
                 "reason": "no effort to earn an OpenSSF best practices badge detected",
                 "name": "CII-Best-Practices",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/1e72b3ac6e297e29c63156145f945a464f087675/docs/checks.md#cii-best-practices",
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#cii-best-practices",
                     "short": "Determines if the project has an OpenSSF (formerly CII) Best Practices Badge."
                 }
             },
@@ -104,7 +99,7 @@
                 "reason": "all changesets reviewed",
                 "name": "Code-Review",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/1e72b3ac6e297e29c63156145f945a464f087675/docs/checks.md#code-review",
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#code-review",
                     "short": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
                 }
             },
@@ -114,7 +109,7 @@
                 "reason": "project has 11 contributing companies or organizations",
                 "name": "Contributors",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/1e72b3ac6e297e29c63156145f945a464f087675/docs/checks.md#contributors",
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#contributors",
                     "short": "Determines if the project has a set of contributors from multiple organizations (e.g., companies)."
                 }
             },
@@ -124,7 +119,7 @@
                 "reason": "no dangerous workflow patterns detected",
                 "name": "Dangerous-Workflow",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/1e72b3ac6e297e29c63156145f945a464f087675/docs/checks.md#dangerous-workflow",
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#dangerous-workflow",
                     "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
                 }
             },
@@ -134,7 +129,7 @@
                 "reason": "update tool detected",
                 "name": "Dependency-Update-Tool",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/1e72b3ac6e297e29c63156145f945a464f087675/docs/checks.md#dependency-update-tool",
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#dependency-update-tool",
                     "short": "Determines if the project uses a dependency update tool."
                 }
             },
@@ -144,7 +139,7 @@
                 "reason": "project is not fuzzed",
                 "name": "Fuzzing",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/1e72b3ac6e297e29c63156145f945a464f087675/docs/checks.md#fuzzing",
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#fuzzing",
                     "short": "Determines if the project uses fuzzing."
                 }
             },
@@ -154,7 +149,7 @@
                 "reason": "license file detected",
                 "name": "License",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/1e72b3ac6e297e29c63156145f945a464f087675/docs/checks.md#license",
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#license",
                     "short": "Determines if the project has defined a license."
                 }
             },
@@ -164,7 +159,7 @@
                 "reason": "30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10",
                 "name": "Maintained",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/1e72b3ac6e297e29c63156145f945a464f087675/docs/checks.md#maintained",
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#maintained",
                     "short": "Determines if the project is \"actively maintained\"."
                 }
             },
@@ -174,7 +169,7 @@
                 "reason": "packaging workflow not detected",
                 "name": "Packaging",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/1e72b3ac6e297e29c63156145f945a464f087675/docs/checks.md#packaging",
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#packaging",
                     "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
                 }
             },
@@ -184,7 +179,7 @@
                 "reason": "dependency not pinned by hash detected -- score normalized to 0",
                 "name": "Pinned-Dependencies",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/1e72b3ac6e297e29c63156145f945a464f087675/docs/checks.md#pinned-dependencies",
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#pinned-dependencies",
                     "short": "Determines if the project has declared and pinned the dependencies of its build process."
                 }
             },
@@ -194,7 +189,7 @@
                 "reason": "SAST tool is not run on all commits -- score normalized to 0",
                 "name": "SAST",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/1e72b3ac6e297e29c63156145f945a464f087675/docs/checks.md#sast",
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#sast",
                     "short": "Determines if the project uses static code analysis."
                 }
             },
@@ -204,7 +199,7 @@
                 "reason": "security policy file not detected",
                 "name": "Security-Policy",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/1e72b3ac6e297e29c63156145f945a464f087675/docs/checks.md#security-policy",
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#security-policy",
                     "short": "Determines if the project has published a security policy."
                 }
             },
@@ -214,7 +209,7 @@
                 "reason": "no releases found",
                 "name": "Signed-Releases",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/1e72b3ac6e297e29c63156145f945a464f087675/docs/checks.md#signed-releases",
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#signed-releases",
                     "short": "Determines if the project cryptographically signs release artifacts."
                 }
             },
@@ -224,7 +219,7 @@
                 "reason": "detected GitHub workflow tokens with excessive permissions",
                 "name": "Token-Permissions",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/1e72b3ac6e297e29c63156145f945a464f087675/docs/checks.md#token-permissions",
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#token-permissions",
                     "short": "Determines if the project's workflows follow the principle of least privilege."
                 }
             },
@@ -234,7 +229,7 @@
                 "reason": "6 existing vulnerabilities detected",
                 "name": "Vulnerabilities",
                 "documentation": {
-                    "url": "https://github.com/ossf/scorecard/blob/1e72b3ac6e297e29c63156145f945a464f087675/docs/checks.md#vulnerabilities",
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#vulnerabilities",
                     "short": "Determines if the project has open, known unfixed vulnerabilities."
                 }
             }
@@ -245,14 +240,14 @@
         "languageSummary": [
             {
                 "Name": "Go",
-                "Bytes": 1378626,
+                "Bytes": 1492042,
                 "CodeBytes": 0,
-                "Lines": 44013,
-                "Code": 34557,
-                "Comment": 2873,
-                "Blank": 6583,
-                "Complexity": 4948,
-                "Count": 208,
+                "Lines": 47012,
+                "Code": 36904,
+                "Comment": 3188,
+                "Blank": 6920,
+                "Complexity": 5141,
+                "Count": 217,
                 "WeightedComplexity": 0,
                 "Files": [],
                 "LineLength": null,
@@ -275,14 +270,14 @@
             },
             {
                 "Name": "YAML",
-                "Bytes": 121598,
+                "Bytes": 127058,
                 "CodeBytes": 0,
-                "Lines": 3380,
-                "Code": 3148,
-                "Comment": 62,
-                "Blank": 170,
+                "Lines": 3590,
+                "Code": 3343,
+                "Comment": 68,
+                "Blank": 179,
                 "Complexity": 0,
-                "Count": 58,
+                "Count": 64,
                 "WeightedComplexity": 0,
                 "Files": [],
                 "LineLength": null,
@@ -290,14 +285,14 @@
             },
             {
                 "Name": "Markdown",
-                "Bytes": 41807,
+                "Bytes": 44149,
                 "CodeBytes": 0,
-                "Lines": 1054,
-                "Code": 729,
+                "Lines": 1107,
+                "Code": 767,
                 "Comment": 0,
-                "Blank": 325,
+                "Blank": 340,
                 "Complexity": 0,
-                "Count": 28,
+                "Count": 29,
                 "WeightedComplexity": 0,
                 "Files": [],
                 "LineLength": null,
@@ -305,14 +300,14 @@
             },
             {
                 "Name": "JSON",
-                "Bytes": 663601,
+                "Bytes": 671985,
                 "CodeBytes": 0,
-                "Lines": 15791,
-                "Code": 15788,
+                "Lines": 15862,
+                "Code": 15859,
                 "Comment": 0,
                 "Blank": 3,
                 "Complexity": 0,
-                "Count": 22,
+                "Count": 23,
                 "WeightedComplexity": 0,
                 "Files": [],
                 "LineLength": null,
@@ -335,14 +330,14 @@
             },
             {
                 "Name": "Shell",
-                "Bytes": 12680,
+                "Bytes": 16415,
                 "CodeBytes": 0,
-                "Lines": 338,
-                "Code": 238,
-                "Comment": 44,
-                "Blank": 56,
-                "Complexity": 39,
-                "Count": 9,
+                "Lines": 487,
+                "Code": 340,
+                "Comment": 60,
+                "Blank": 87,
+                "Complexity": 61,
+                "Count": 10,
                 "WeightedComplexity": 0,
                 "Files": [],
                 "LineLength": null,
@@ -410,12 +405,12 @@
             },
             {
                 "Name": "Makefile",
-                "Bytes": 13808,
+                "Bytes": 14899,
                 "CodeBytes": 0,
-                "Lines": 246,
-                "Code": 166,
-                "Comment": 34,
-                "Blank": 46,
+                "Lines": 271,
+                "Code": 185,
+                "Comment": 37,
+                "Blank": 49,
                 "Complexity": 8,
                 "Count": 1,
                 "WeightedComplexity": 0,
@@ -454,19 +449,19 @@
                 "ULOC": 0
             }
         ],
-        "estimatedCost_low": 6775101.065020419,
-        "estimatedScheduleMonths_low": 29.46963910523795,
-        "estimatedPeople_low": 22.397031905975627,
-        "estimatedCost_high": 21114173.976071347,
-        "estimatedScheduleMonths_high": 29.46963910523795,
-        "estimatedPeople_high": 22.397031905975627,
-        "dryness_table": "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nGo                         208     44013     6583      2873    34557       4948\n(ULOC)                             18345\n-------------------------------------------------------------------------------\nSQL                         88    155634      559       589   154486          9\n(ULOC)                            113586\n-------------------------------------------------------------------------------\nYAML                        58      3380      170        62     3148          0\n(ULOC)                              1270\n-------------------------------------------------------------------------------\nMarkdown                    28      1054      325         0      729          0\n(ULOC)                               469\n-------------------------------------------------------------------------------\nJSON                        22     15791        3         0    15788          0\n(ULOC)                              2471\n-------------------------------------------------------------------------------\nSVG                         14      1262        0        81     1181          0\n(ULOC)                              1037\n-------------------------------------------------------------------------------\nShell                        9       338       56        44      238         39\n(ULOC)                               220\n-------------------------------------------------------------------------------\nCSV                          7        24        0         0       24          0\n(ULOC)                                22\n-------------------------------------------------------------------------------\nBASH                         1       102       13        23       66          7\n(ULOC)                                77\n-------------------------------------------------------------------------------\nDocker ignore                1        13        0         0       13          0\n(ULOC)                                13\n-------------------------------------------------------------------------------\nJavaScript                   1        21        0         0       21          0\n(ULOC)                                21\n-------------------------------------------------------------------------------\nMakefile                     1       246       46        34      166          8\n(ULOC)                               182\n-------------------------------------------------------------------------------\nPython                       1        61       13         0       48          4\n(ULOC)                                45\n-------------------------------------------------------------------------------\nTOML                         1         9        2         0        7          0\n(ULOC)                                 8\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nTotal                      440    221948     7770      3706   210472       5015\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nUnique Lines of Code (ULOC)       137709\nDRYness %                           0.62\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nEstimated Cost to Develop (organic) $7,429,325\nEstimated Schedule Effort (organic) 29.47 months\nEstimated People Required (organic) 22.40\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProcessed 15599267 bytes, 15.599 megabytes (SI)\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n"
+        "estimatedCost_low": 6868824.102434029,
+        "estimatedScheduleMonths_low": 29.623893099070237,
+        "estimatedPeople_low": 22.588623731397295,
+        "estimatedCost_high": 21406255.894632496,
+        "estimatedScheduleMonths_high": 29.623893099070237,
+        "estimatedPeople_high": 22.588623731397295,
+        "dryness_table": "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nGo                         217     47012     6920      3188    36904       5141\n(ULOC)                             19423\n-------------------------------------------------------------------------------\nSQL                         88    155634      559       589   154486          9\n(ULOC)                            113586\n-------------------------------------------------------------------------------\nYAML                        64      3590      179        68     3343          0\n(ULOC)                              1345\n-------------------------------------------------------------------------------\nMarkdown                    29      1107      340         0      767          0\n(ULOC)                               501\n-------------------------------------------------------------------------------\nJSON                        23     15862        3         0    15859          0\n(ULOC)                              2514\n-------------------------------------------------------------------------------\nSVG                         14      1262        0        81     1181          0\n(ULOC)                              1037\n-------------------------------------------------------------------------------\nShell                       10       487       87        60      340         61\n(ULOC)                               302\n-------------------------------------------------------------------------------\nCSV                          7        24        0         0       24          0\n(ULOC)                                22\n-------------------------------------------------------------------------------\nBASH                         1       102       13        23       66          7\n(ULOC)                                77\n-------------------------------------------------------------------------------\nDocker ignore                1        13        0         0       13          0\n(ULOC)                                13\n-------------------------------------------------------------------------------\nJavaScript                   1        21        0         0       21          0\n(ULOC)                                21\n-------------------------------------------------------------------------------\nMakefile                     1       271       49        37      185          8\n(ULOC)                               199\n-------------------------------------------------------------------------------\nPython                       1        61       13         0       48          4\n(ULOC)                                45\n-------------------------------------------------------------------------------\nTOML                         1         9        2         0        7          0\n(ULOC)                                 8\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nTotal                      458    225455     8165      4046   213244       5230\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nUnique Lines of Code (ULOC)       139035\nDRYness %                           0.62\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nEstimated Cost to Develop (organic) $7,532,098\nEstimated Schedule Effort (organic) 29.62 months\nEstimated People Required (organic) 22.59\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProcessed 15733695 bytes, 15.734 megabytes (SI)\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n"
     },
     "predominant_langs": {
         "PLpgSQL": 1665233,
-        "Go": 1351147,
-        "Shell": 15090,
-        "Makefile": 13808,
+        "Go": 1390963,
+        "Shell": 18825,
+        "Makefile": 14899,
         "Python": 1530,
         "JavaScript": 914
     },
