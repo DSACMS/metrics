@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for hapi-fhir-jpaserver-starter | REPORT-2025-05-25
+title: Open Source at CMS Metrics Report for hapi-fhir-jpaserver-starter | REPORT-2025-06-01
 permalink: /measureauthoringtool/hapi-fhir-jpaserver-starter/
 
 org: measureauthoringtool
 repo: hapi-fhir-jpaserver-starter
-reportID: REPORT-2025-05-25
-date_stampThisWeek: 2025-05-25
-date_stampLastWeek: 2025-05-25
+reportID: REPORT-2025-06-01
+date_stampThisWeek: 2025-06-01
+date_stampLastWeek: 2025-06-01
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -67,9 +67,9 @@ date_stampLastWeek: 2025-05-25
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>32</td>
-        <td>29</td>
-        <td style="" >3</td>
-        <td style="" >9.8%</td>
+        <td>32</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

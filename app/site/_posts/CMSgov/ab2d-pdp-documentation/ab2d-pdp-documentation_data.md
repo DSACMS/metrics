@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for ab2d-pdp-documentation | REPORT-2025-05-25
+title: Open Source at CMS Metrics Report for ab2d-pdp-documentation | REPORT-2025-06-01
 permalink: /CMSgov/ab2d-pdp-documentation/
 
 org: CMSgov
 repo: ab2d-pdp-documentation
-reportID: REPORT-2025-05-25
-date_stampThisWeek: 2025-05-25
-date_stampLastWeek: 2025-05-25
+reportID: REPORT-2025-06-01
+date_stampThisWeek: 2025-06-01
+date_stampLastWeek: 2025-06-01
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

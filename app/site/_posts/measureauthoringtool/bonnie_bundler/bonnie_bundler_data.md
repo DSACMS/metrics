@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for bonnie_bundler | REPORT-2025-05-25
+title: Open Source at CMS Metrics Report for bonnie_bundler | REPORT-2025-06-01
 permalink: /measureauthoringtool/bonnie_bundler/
 
 org: measureauthoringtool
 repo: bonnie_bundler
-reportID: REPORT-2025-05-25
-date_stampThisWeek: 2025-05-25
-date_stampLastWeek: 2025-05-25
+reportID: REPORT-2025-06-01
+date_stampThisWeek: 2025-06-01
+date_stampLastWeek: 2025-06-01
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for metrics-dash-backend-tools | REPORT-2025-05-25
+title: Open Source at CMS Metrics Report for metrics-dash-backend-tools | REPORT-2025-06-01
 permalink: /DSACMS/metrics-dash-backend-tools/
 
 org: DSACMS
 repo: metrics-dash-backend-tools
-reportID: REPORT-2025-05-25
-date_stampThisWeek: 2025-05-25
-date_stampLastWeek: 2025-05-25
+reportID: REPORT-2025-06-01
+date_stampThisWeek: 2025-06-01
+date_stampLastWeek: 2025-06-01
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2025-05-25
       <tr>
         <th scope="row">Commits</th>
         <td>33</td>
-        <td>27</td>
-        <td style="color: #45c527" >6</td>
-        <td style="color: #45c527" >20%</td>
+        <td>33</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -53,16 +53,16 @@ date_stampLastWeek: 2025-05-25
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>1</td>
-        <td>0</td>
-        <td style="" >1</td>
-        <td style="" >200%</td>
+        <td>1</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>5</td>
-        <td>3</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >50%</td>
+        <td>5</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
@@ -74,9 +74,9 @@ date_stampLastWeek: 2025-05-25
       <tr>
         <th scope="row">Forks</th>
         <td>1</td>
-        <td>0</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >200%</td>
+        <td>1</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>

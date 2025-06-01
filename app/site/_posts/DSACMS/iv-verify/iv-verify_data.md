@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for iv-verify | REPORT-2025-05-25
+title: Open Source at CMS Metrics Report for iv-verify | REPORT-2025-06-01
 permalink: /DSACMS/iv-verify/
 
 org: DSACMS
 repo: iv-verify
-reportID: REPORT-2025-05-25
-date_stampThisWeek: 2025-05-25
-date_stampLastWeek: 2025-05-25
+reportID: REPORT-2025-06-01
+date_stampThisWeek: 2025-06-01
+date_stampLastWeek: 2025-06-01
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -52,10 +52,10 @@ date_stampLastWeek: 2025-05-25
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
+        <td>13</td>
         <td>12</td>
-        <td>10</td>
-        <td style="" >2</td>
-        <td style="" >18%</td>
+        <td style="" >1</td>
+        <td style="" >8%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>

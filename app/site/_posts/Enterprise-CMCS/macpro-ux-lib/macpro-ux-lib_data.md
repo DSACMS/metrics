@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for macpro-ux-lib | REPORT-2025-05-25
+title: Open Source at CMS Metrics Report for macpro-ux-lib | REPORT-2025-06-01
 permalink: /Enterprise-CMCS/macpro-ux-lib/
 
 org: Enterprise-CMCS
 repo: macpro-ux-lib
-reportID: REPORT-2025-05-25
-date_stampThisWeek: 2025-05-25
-date_stampLastWeek: 2025-05-25
+reportID: REPORT-2025-06-01
+date_stampThisWeek: 2025-06-01
+date_stampLastWeek: 2025-06-01
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -53,9 +53,9 @@ date_stampLastWeek: 2025-05-25
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>18</td>
-        <td>16</td>
-        <td style="" >2</td>
-        <td style="" >12%</td>
+        <td>18</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>

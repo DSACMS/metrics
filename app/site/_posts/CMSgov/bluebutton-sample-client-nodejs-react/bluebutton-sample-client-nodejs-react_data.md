@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for bluebutton-sample-client-nodejs-react | REPORT-2025-05-25
+title: Open Source at CMS Metrics Report for bluebutton-sample-client-nodejs-react | REPORT-2025-06-01
 permalink: /CMSgov/bluebutton-sample-client-nodejs-react/
 
 org: CMSgov
 repo: bluebutton-sample-client-nodejs-react
-reportID: REPORT-2025-05-25
-date_stampThisWeek: 2025-05-25
-date_stampLastWeek: 2025-05-25
+reportID: REPORT-2025-06-01
+date_stampThisWeek: 2025-06-01
+date_stampLastWeek: 2025-06-01
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2025-05-25
       <tr>
         <th scope="row">Commits</th>
         <td>145</td>
-        <td>134</td>
-        <td style="color: #45c527" >11</td>
-        <td style="color: #45c527" >7.9%</td>
+        <td>145</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -53,30 +53,30 @@ date_stampLastWeek: 2025-05-25
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>5</td>
-        <td>6</td>
-        <td style="color: #45c527" >-1</td>
-        <td style="color: #45c527" >18%</td>
+        <td>5</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>42</td>
-        <td>39</td>
-        <td style="color: #45c527" >3</td>
-        <td style="color: #45c527" >7.4%</td>
+        <td>42</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>24</td>
-        <td>23</td>
-        <td style="" >1</td>
-        <td style="" >4.3%</td>
+        <td>24</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
         <td>2</td>
-        <td>0</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >200%</td>
+        <td>2</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>

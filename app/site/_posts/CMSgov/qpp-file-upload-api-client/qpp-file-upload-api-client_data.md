@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for qpp-file-upload-api-client | REPORT-2025-05-25
+title: Open Source at CMS Metrics Report for qpp-file-upload-api-client | REPORT-2025-06-01
 permalink: /CMSgov/qpp-file-upload-api-client/
 
 org: CMSgov
 repo: qpp-file-upload-api-client
-reportID: REPORT-2025-05-25
-date_stampThisWeek: 2025-05-25
-date_stampLastWeek: 2025-05-25
+reportID: REPORT-2025-06-01
+date_stampThisWeek: 2025-06-01
+date_stampLastWeek: 2025-06-01
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -25,9 +25,9 @@ date_stampLastWeek: 2025-05-25
       <tr>
         <th scope="row">Commits</th>
         <td>426</td>
-        <td>425</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.24%</td>
+        <td>426</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -53,23 +53,23 @@ date_stampLastWeek: 2025-05-25
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>2</td>
-        <td>8</td>
-        <td style="color: #45c527" >-6</td>
-        <td style="color: #45c527" >120%</td>
+        <td>2</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
         <td>140</td>
-        <td>138</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >1.4%</td>
+        <td>140</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
         <td>62</td>
-        <td>53</td>
-        <td style="" >9</td>
-        <td style="" >16%</td>
+        <td>62</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
