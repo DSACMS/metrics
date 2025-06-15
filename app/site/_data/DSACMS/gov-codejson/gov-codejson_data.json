@@ -119,16 +119,16 @@
     "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nMarkdown                    15      1485      327         0     1158          0\n(ULOC)                               789\n-------------------------------------------------------------------------------\nJSON                         7      1288        1         0     1287          0\n(ULOC)                               452\n-------------------------------------------------------------------------------\nYAML                         6       259       54         8      197          0\n(ULOC)                               160\n-------------------------------------------------------------------------------\nLicense                      1       121       12         0      109          0\n(ULOC)                               110\n-------------------------------------------------------------------------------\nPython                       1       132       33        20       79         18\n(ULOC)                               100\n───────────────────────────────────────────────────────────────────────────────\nTotal                       30      3285      427        28     2830         18\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)         1566\nDRYness %                           0.48\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $80,532\nEstimated Schedule Effort (organic) 5.28 months\nEstimated People Required (organic) 1.35\n───────────────────────────────────────────────────────────────────────────────\nProcessed 134432 bytes, 0.134 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
   },
   "ossf_scorecard": {
-    "date": "2025-06-01T09:34:48Z",
+    "date": "2025-06-15T09:33:24Z",
     "repo": {
       "name": "github.com/DSACMS/gov-codejson",
-      "commit": "b0151f76dac588502cd987bd00e41719cd69c194"
+      "commit": "c5cae0c6f77d6fbf40f74b175d782492523a71bf"
     },
     "scorecard": {
       "version": "v5.1.1-45-g40bbc9c9",
       "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
     },
-    "score": 5.9,
+    "score": 5.5,
     "checks": [
       {
         "details": null,
@@ -153,7 +153,7 @@
       {
         "details": null,
         "score": 10,
-        "reason": "8 out of 8 merged PRs checked by a CI test -- score normalized to 10",
+        "reason": "7 out of 7 merged PRs checked by a CI test -- score normalized to 10",
         "name": "CI-Tests",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#ci-tests",
@@ -172,8 +172,8 @@
       },
       {
         "details": null,
-        "score": 7,
-        "reason": "Found 7/9 approved changesets -- score normalized to 7",
+        "score": 4,
+        "reason": "Found 5/11 approved changesets -- score normalized to 4",
         "name": "Code-Review",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#code-review",
@@ -233,7 +233,7 @@
       {
         "details": null,
         "score": 10,
-        "reason": "30 commit(s) and 1 issue activity found in the last 90 days -- score normalized to 10",
+        "reason": "30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10",
         "name": "Maintained",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#maintained",
@@ -262,8 +262,8 @@
       },
       {
         "details": null,
-        "score": 10,
-        "reason": "SAST tool is run on all commits",
+        "score": 8,
+        "reason": "SAST tool is not run on all commits -- score normalized to 8",
         "name": "SAST",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#sast",
