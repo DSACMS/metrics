@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for cms-ars-5.0-apache-2.4-unix-server-stig-overlay | REPORT-2025-06-01
+title: Open Source at CMS Metrics Report for cms-ars-5.0-apache-2.4-unix-server-stig-overlay | REPORT-2025-06-15
 permalink: /CMS-Enterprise/cms-ars-5.0-apache-2.4-unix-server-stig-overlay/
 
 org: CMS-Enterprise
 repo: cms-ars-5.0-apache-2.4-unix-server-stig-overlay
-reportID: REPORT-2025-06-01
-date_stampThisWeek: 2025-06-01
-date_stampLastWeek: 2025-06-01
+reportID: REPORT-2025-06-15
+date_stampThisWeek: 2025-06-15
+date_stampLastWeek: 2025-06-15
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

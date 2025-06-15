@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for CMCS-DSG-DSS-Certification-Staging | REPORT-2025-06-01
+title: Open Source at CMS Metrics Report for CMCS-DSG-DSS-Certification-Staging | REPORT-2025-06-15
 permalink: /CMSgov/CMCS-DSG-DSS-Certification-Staging/
 
 org: CMSgov
 repo: CMCS-DSG-DSS-Certification-Staging
-reportID: REPORT-2025-06-01
-date_stampThisWeek: 2025-06-01
-date_stampLastWeek: 2025-06-01
+reportID: REPORT-2025-06-15
+date_stampThisWeek: 2025-06-15
+date_stampLastWeek: 2025-06-15
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -38,24 +38,24 @@ date_stampLastWeek: 2025-06-01
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
+        <td>1</td>
         <td>9</td>
-        <td>9</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >-8</td>
+        <td style="color: #45c527" >160%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
+        <td>63</td>
         <td>55</td>
-        <td>55</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >8</td>
+        <td style="color: #45c527" >14%</td>
       </tr>
       <tr>
         <th scope="row">Open Pull Requests</th>
-        <td>2</td>
         <td>1</td>
-        <td style="" >1</td>
-        <td style="" >67%</td>
+        <td>2</td>
+        <td style="color: #45c527" >-1</td>
+        <td style="color: #45c527" >67%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
@@ -66,10 +66,10 @@ date_stampLastWeek: 2025-06-01
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>26</td>
         <td>25</td>
-        <td>25</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="" >1</td>
+        <td style="" >3.9%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for design-system | REPORT-2025-06-01
+title: Open Source at CMS Metrics Report for design-system | REPORT-2025-06-15
 permalink: /CMSgov/design-system/
 
 org: CMSgov
 repo: design-system
-reportID: REPORT-2025-06-01
-date_stampThisWeek: 2025-06-01
-date_stampLastWeek: 2025-06-01
+reportID: REPORT-2025-06-15
+date_stampThisWeek: 2025-06-15
+date_stampLastWeek: 2025-06-15
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,24 +24,24 @@ date_stampLastWeek: 2025-06-01
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>2501</td>
         <td>2494</td>
-        <td>2487</td>
         <td style="color: #45c527" >7</td>
         <td style="color: #45c527" >0.28%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
         <td>253</td>
-        <td>252</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >0.4%</td>
+        <td>253</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Open Issues</th>
         <td>10</td>
-        <td>9</td>
-        <td style="" >1</td>
-        <td style="" >11%</td>
+        <td>10</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Closed Issues</th>
@@ -53,30 +53,30 @@ date_stampLastWeek: 2025-06-01
       <tr>
         <th scope="row">Open Pull Requests</th>
         <td>7</td>
-        <td>8</td>
-        <td style="color: #45c527" >-1</td>
-        <td style="color: #45c527" >13%</td>
+        <td>7</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>2398</td>
         <td>2391</td>
-        <td>2384</td>
         <td style="color: #45c527" >7</td>
         <td style="color: #45c527" >0.29%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
+        <td>870</td>
         <td>860</td>
-        <td>848</td>
-        <td style="" >12</td>
-        <td style="" >1.4%</td>
+        <td style="" >10</td>
+        <td style="" >1.2%</td>
       </tr>
       <tr>
         <th scope="row">Forks</th>
         <td>92</td>
-        <td>93</td>
-        <td style="color: #d31c08" >-1</td>
-        <td style="color: #d31c08" >1.1%</td>
+        <td>92</td>
+        <td style="" >0</td>
+        <td style="" >0%</td>
       </tr>
       <tr>
         <th scope="row">Stars</th>

@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for madie-util | REPORT-2025-06-01
+title: Open Source at CMS Metrics Report for madie-util | REPORT-2025-06-15
 permalink: /measureauthoringtool/madie-util/
 
 org: measureauthoringtool
 repo: madie-util
-reportID: REPORT-2025-06-01
-date_stampThisWeek: 2025-06-01
-date_stampLastWeek: 2025-06-01
+reportID: REPORT-2025-06-15
+date_stampThisWeek: 2025-06-15
+date_stampLastWeek: 2025-06-15
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2025-06-01
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>326</td>
         <td>321</td>
-        <td>319</td>
-        <td style="color: #45c527" >2</td>
-        <td style="color: #45c527" >0.62%</td>
+        <td style="color: #45c527" >5</td>
+        <td style="color: #45c527" >1.5%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -59,10 +59,10 @@ date_stampLastWeek: 2025-06-01
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>93</td>
         <td>90</td>
-        <td>89</td>
-        <td style="color: #45c527" >1</td>
-        <td style="color: #45c527" >1.1%</td>
+        <td style="color: #45c527" >3</td>
+        <td style="color: #45c527" >3.3%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
