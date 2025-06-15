@@ -153,16 +153,16 @@
     "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nMarkdown                     8       480      158         0      322          0\n(ULOC)                               292\n-------------------------------------------------------------------------------\nTypeScript                   7       398       44        15      339         21\n(ULOC)                               296\n-------------------------------------------------------------------------------\nJSON                         5       198        0         0      198          0\n(ULOC)                               163\n-------------------------------------------------------------------------------\nTypeScript Typings           5        78        0         6       72          2\n(ULOC)                                67\n-------------------------------------------------------------------------------\nYAML                         5       227       32         4      191          0\n(ULOC)                               149\n-------------------------------------------------------------------------------\nJavaScript                   2     58510     6778      7104    44628       5837\n(ULOC)                             24182\n-------------------------------------------------------------------------------\nLicense                      1       121       12         0      109          0\n(ULOC)                               110\n───────────────────────────────────────────────────────────────────────────────\nTotal                       33     60012     7024      7129    45859       5860\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)        25160\nDRYness %                           0.42\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $1,499,999\nEstimated Schedule Effort (organic) 16.04 months\nEstimated People Required (organic) 8.31\n───────────────────────────────────────────────────────────────────────────────\nProcessed 2130756 bytes, 2.131 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
   },
   "ossf_scorecard": {
-    "date": "2025-06-01T09:34:03Z",
+    "date": "2025-06-15T09:32:41Z",
     "repo": {
       "name": "github.com/DSACMS/automated-codejson-generator",
-      "commit": "e15b5994c8c5cdb964fc653538a628d241193d55"
+      "commit": "b92b9aadf8c3fe9ca3fbde5b98de7cb03861fff6"
     },
     "scorecard": {
       "version": "v5.1.1-45-g40bbc9c9",
       "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
     },
-    "score": 4.5,
+    "score": 4.7,
     "checks": [
       {
         "details": null,
@@ -186,8 +186,8 @@
       },
       {
         "details": null,
-        "score": 6,
-        "reason": "4 out of 6 merged PRs checked by a CI test -- score normalized to 6",
+        "score": 10,
+        "reason": "3 out of 3 merged PRs checked by a CI test -- score normalized to 10",
         "name": "CI-Tests",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#ci-tests",
@@ -207,7 +207,7 @@
       {
         "details": null,
         "score": 0,
-        "reason": "Found 2/23 approved changesets -- score normalized to 0",
+        "reason": "Found 0/24 approved changesets -- score normalized to 0",
         "name": "Code-Review",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#code-review",
@@ -266,8 +266,8 @@
       },
       {
         "details": null,
-        "score": 9,
-        "reason": "9 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 9",
+        "score": 10,
+        "reason": "12 commit(s) and 3 issue activity found in the last 90 days -- score normalized to 10",
         "name": "Maintained",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#maintained",
@@ -337,7 +337,7 @@
       {
         "details": null,
         "score": 0,
-        "reason": "28 existing vulnerabilities detected",
+        "reason": "29 existing vulnerabilities detected",
         "name": "Vulnerabilities",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#vulnerabilities",
