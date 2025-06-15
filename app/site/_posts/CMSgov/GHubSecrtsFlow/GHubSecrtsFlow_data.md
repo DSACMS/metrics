@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for GHubSecrtsFlow | REPORT-2025-06-01
+title: Open Source at CMS Metrics Report for GHubSecrtsFlow | REPORT-2025-06-15
 permalink: /CMSgov/GHubSecrtsFlow/
 
 org: CMSgov
 repo: GHubSecrtsFlow
-reportID: REPORT-2025-06-01
-date_stampThisWeek: 2025-06-01
-date_stampLastWeek: 2025-06-01
+reportID: REPORT-2025-06-15
+date_stampThisWeek: 2025-06-15
+date_stampLastWeek: 2025-06-15
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">

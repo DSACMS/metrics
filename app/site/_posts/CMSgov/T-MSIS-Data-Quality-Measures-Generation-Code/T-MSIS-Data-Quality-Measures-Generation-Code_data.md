@@ -1,13 +1,13 @@
 ---
 layout: repo-report
-title: Open Source at CMS Metrics Report for T-MSIS-Data-Quality-Measures-Generation-Code | REPORT-2025-06-01
+title: Open Source at CMS Metrics Report for T-MSIS-Data-Quality-Measures-Generation-Code | REPORT-2025-06-15
 permalink: /CMSgov/T-MSIS-Data-Quality-Measures-Generation-Code/
 
 org: CMSgov
 repo: T-MSIS-Data-Quality-Measures-Generation-Code
-reportID: REPORT-2025-06-01
-date_stampThisWeek: 2025-06-01
-date_stampLastWeek: 2025-06-01
+reportID: REPORT-2025-06-15
+date_stampThisWeek: 2025-06-15
+date_stampLastWeek: 2025-06-15
 ---
 <div class="summary-table">
   <table class="usa-table usa-table--borderless">
@@ -24,10 +24,10 @@ date_stampLastWeek: 2025-06-01
     <tbody>
       <tr>
         <th scope="row">Commits</th>
+        <td>193</td>
         <td>192</td>
-        <td>192</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >0.52%</td>
       </tr>
       <tr>
         <th scope="row">Issues</th>
@@ -59,10 +59,10 @@ date_stampLastWeek: 2025-06-01
       </tr>
       <tr>
         <th scope="row">Merged Pull Requests</th>
+        <td>14</td>
         <td>13</td>
-        <td>13</td>
-        <td style="" >0</td>
-        <td style="" >0%</td>
+        <td style="color: #45c527" >1</td>
+        <td style="color: #45c527" >7.4%</td>
       </tr>
       <tr>
         <th scope="row">Closed Pull Requests</th>
