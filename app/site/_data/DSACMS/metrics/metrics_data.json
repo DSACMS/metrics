@@ -328,16 +328,16 @@
   },
   "created_at": "2023-07-18T14:10:58Z",
   "ossf_scorecard": {
-    "date": "2025-06-15T09:31:01Z",
+    "date": "2025-06-22T14:31:46Z",
     "repo": {
       "name": "github.com/DSACMS/metrics",
-      "commit": "7cc3c98ad1938067ae6c88ab220b3212ac152b35"
+      "commit": "59a3473d3625601033624aea3ed89e34311fc947"
     },
     "scorecard": {
       "version": "v5.1.1-45-g40bbc9c9",
       "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
     },
-    "score": 5.8,
+    "score": 5.9,
     "checks": [
       {
         "details": null,
@@ -361,8 +361,8 @@
       },
       {
         "details": null,
-        "score": -1,
-        "reason": "no pull request found",
+        "score": 10,
+        "reason": "2 out of 2 merged PRs checked by a CI test -- score normalized to 10",
         "name": "CI-Tests",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#ci-tests",
@@ -382,7 +382,7 @@
       {
         "details": null,
         "score": 0,
-        "reason": "Found 0/30 approved changesets -- score normalized to 0",
+        "reason": "Found 1/19 approved changesets -- score normalized to 0",
         "name": "Code-Review",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#code-review",
@@ -472,7 +472,7 @@
       {
         "details": null,
         "score": 10,
-        "reason": "SAST tool detected: CodeQL",
+        "reason": "SAST tool is run on all commits",
         "name": "SAST",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#sast",
