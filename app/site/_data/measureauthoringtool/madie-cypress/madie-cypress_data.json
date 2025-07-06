@@ -372,16 +372,16 @@
     "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nTypeScript                 248     87772    14904      6733    66135       2620\n(ULOC)                             19661\n-------------------------------------------------------------------------------\nPlain Text                  56      1726      311         0     1415          0\n(ULOC)                               625\n-------------------------------------------------------------------------------\nXML                         41      1626       41         7     1578          0\n(ULOC)                               932\n-------------------------------------------------------------------------------\nJSON                        29      7275        7         0     7268          0\n(ULOC)                               951\n-------------------------------------------------------------------------------\nHTML                         5       827       11        17      799          0\n(ULOC)                               286\n-------------------------------------------------------------------------------\nYAML                         3       101        9         0       92          0\n(ULOC)                                86\n-------------------------------------------------------------------------------\nDockerfile                   1        33        7         5       21          8\n(ULOC)                                26\n-------------------------------------------------------------------------------\nJavaScript                   1        71        8        12       51          0\n(ULOC)                                53\n───────────────────────────────────────────────────────────────────────────────\nTotal                      384     99431    15298      6774    77359       2628\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)        22527\nDRYness %                           0.23\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $2,597,357\nEstimated Schedule Effort (organic) 19.77 months\nEstimated People Required (organic) 11.67\n───────────────────────────────────────────────────────────────────────────────\nProcessed 6221192 bytes, 6.221 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
   },
   "ossf_scorecard": {
-    "date": "2025-06-22T15:56:54Z",
+    "date": "2025-07-06T09:32:10Z",
     "repo": {
       "name": "github.com/measureauthoringtool/madie-cypress",
-      "commit": "87fa0fc9bba235d1df4bd77c633ab1b7426ed5be"
+      "commit": "cbdc4863c23f22584ada1c094d3a3f06467b1ee6"
     },
     "scorecard": {
       "version": "v5.1.1-45-g40bbc9c9",
       "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
     },
-    "score": 4.8,
+    "score": 4.7,
     "checks": [
       {
         "details": null,
@@ -426,7 +426,7 @@
       {
         "details": null,
         "score": 8,
-        "reason": "Found 12/14 approved changesets -- score normalized to 8",
+        "reason": "Found 12/15 approved changesets -- score normalized to 8",
         "name": "Code-Review",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#code-review",
@@ -555,8 +555,8 @@
       },
       {
         "details": null,
-        "score": 3,
-        "reason": "7 existing vulnerabilities detected",
+        "score": 1,
+        "reason": "9 existing vulnerabilities detected",
         "name": "Vulnerabilities",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#vulnerabilities",
