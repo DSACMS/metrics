@@ -3,13 +3,13 @@
     "owner": "CMSgov",
     "name": "ab2d-sample-client-python",
     "description": null,
-    "commits_count": 43,
+    "commits_count": 52,
     "issues_count": 0,
     "open_issues_count": 0,
     "closed_issues_count": 0,
-    "pull_requests_count": 15,
+    "pull_requests_count": 16,
     "open_pull_requests_count": 3,
-    "merged_pull_requests_count": 11,
+    "merged_pull_requests_count": 12,
     "closed_pull_requests_count": 1,
     "forks_count": 0,
     "stargazers_count": 2,
@@ -21,14 +21,14 @@
     "total_project_blank_lines": 343,
     "average_blank_lines": 49,
     "commits_by_month": {
+        "2025/7": 4,
+        "2025/6": 5,
         "2025/2": 12,
         "2024/10": 1,
         "2024/8": 3,
         "2024/7": 2,
         "2024/6": 2,
-        "2023/5": 8,
-        "2022/5": 1,
-        "2022/4": 1
+        "2023/5": 1
     },
     "new_commit_contributors_by_day_over_last_month": [],
     "new_commit_contributors_by_day_over_last_six_months": [
@@ -52,16 +52,16 @@
     "nadia_badge_name": "midsize",
     "created_at": "2020-11-03T16:43:27Z",
     "ossf_scorecard": {
-        "date": "2025-06-22T15:09:53Z",
+        "date": "2025-07-06T08:43:12Z",
         "repo": {
             "name": "github.com/CMSgov/ab2d-sample-client-python",
-            "commit": "0e7fb26274a89f2d1aae140adfccd3faa0fad7a3"
+            "commit": "c7c16a195690c8858b8ba77028a07b9fb727f574"
         },
         "scorecard": {
             "version": "v5.1.1-45-g40bbc9c9",
             "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
         },
-        "score": 5.0,
+        "score": 6.2,
         "checks": [
             {
                 "details": null,
@@ -85,8 +85,8 @@
             },
             {
                 "details": null,
-                "score": 4,
-                "reason": "3 out of 7 merged PRs checked by a CI test -- score normalized to 4",
+                "score": 8,
+                "reason": "4 out of 5 merged PRs checked by a CI test -- score normalized to 8",
                 "name": "CI-Tests",
                 "documentation": {
                     "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#ci-tests",
@@ -165,8 +165,8 @@
             },
             {
                 "details": null,
-                "score": 0,
-                "reason": "0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0",
+                "score": 7,
+                "reason": "9 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 7",
                 "name": "Maintained",
                 "documentation": {
                     "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#maintained",
@@ -195,7 +195,7 @@
             },
             {
                 "details": null,
-                "score": 8,
+                "score": 9,
                 "reason": "SAST tool detected but not run on all commits",
                 "name": "SAST",
                 "documentation": {
@@ -205,8 +205,8 @@
             },
             {
                 "details": null,
-                "score": 0,
-                "reason": "security policy file not detected",
+                "score": 10,
+                "reason": "security policy file detected",
                 "name": "Security-Policy",
                 "documentation": {
                     "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#security-policy",
@@ -250,14 +250,14 @@
         "languageSummary": [
             {
                 "Name": "Markdown",
-                "Bytes": 19137,
+                "Bytes": 50218,
                 "CodeBytes": 0,
-                "Lines": 620,
-                "Code": 396,
+                "Lines": 1306,
+                "Code": 850,
                 "Comment": 0,
-                "Blank": 224,
+                "Blank": 456,
                 "Complexity": 0,
-                "Count": 3,
+                "Count": 12,
                 "WeightedComplexity": 0,
                 "Files": [],
                 "LineLength": null,
@@ -273,6 +273,21 @@
                 "Blank": 13,
                 "Complexity": 0,
                 "Count": 2,
+                "WeightedComplexity": 0,
+                "Files": [],
+                "LineLength": null,
+                "ULOC": 0
+            },
+            {
+                "Name": "JSON",
+                "Bytes": 1638,
+                "CodeBytes": 0,
+                "Lines": 71,
+                "Code": 71,
+                "Comment": 0,
+                "Blank": 0,
+                "Complexity": 0,
+                "Count": 1,
                 "WeightedComplexity": 0,
                 "Files": [],
                 "LineLength": null,
@@ -309,17 +324,31 @@
                 "ULOC": 0
             }
         ],
-        "estimatedCost_low": 18952.917153613074,
-        "estimatedScheduleMonths_low": 3.1560489186112917,
-        "estimatedPeople_low": 0.5850349964955743,
-        "estimatedCost_high": 59065.56762696017,
-        "estimatedScheduleMonths_high": 3.1560489186112917,
-        "estimatedPeople_high": 0.5850349964955743,
-        "dryness_table": "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nMarkdown                     3       620      224         0      396          0\n(ULOC)                               255\n-------------------------------------------------------------------------------\nYAML                         2        91       13        30       48          0\n(ULOC)                                71\n-------------------------------------------------------------------------------\nLicense                      1       121       12         0      109          0\n(ULOC)                               110\n-------------------------------------------------------------------------------\nPython                       1       386       94        66      226         46\n(ULOC)                               250\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nTotal                        7      1218      343        96      779         46\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nUnique Lines of Code (ULOC)          682\nDRYness %                           0.56\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nEstimated Cost to Develop (organic) $20,783\nEstimated Schedule Effort (organic) 3.16 months\nEstimated People Required (organic) 0.59\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProcessed 43087 bytes, 0.043 megabytes (SI)\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n"
+        "estimatedCost_low": 32553.91346061068,
+        "estimatedScheduleMonths_low": 3.8762880245492526,
+        "estimatedPeople_low": 0.8181570427750625,
+        "estimatedCost_high": 101452.21241909744,
+        "estimatedScheduleMonths_high": 3.8762880245492526,
+        "estimatedPeople_high": 0.8181570427750625,
+        "dryness_table": "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nMarkdown                    12      1306      456         0      850          0\n(ULOC)                               652\n-------------------------------------------------------------------------------\nYAML                         2        91       13        30       48          0\n(ULOC)                                71\n-------------------------------------------------------------------------------\nJSON                         1        71        0         0       71          0\n(ULOC)                                62\n-------------------------------------------------------------------------------\nLicense                      1       121       12         0      109          0\n(ULOC)                               110\n-------------------------------------------------------------------------------\nPython                       1       386       94        66      226         46\n(ULOC)                               250\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nTotal                       17      1975      575        96     1304         46\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nUnique Lines of Code (ULOC)         1136\nDRYness %                           0.58\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nEstimated Cost to Develop (organic) $35,697\nEstimated Schedule Effort (organic) 3.88 months\nEstimated People Required (organic) 0.82\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProcessed 75806 bytes, 0.076 megabytes (SI)\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n"
     },
     "predominant_langs": {
         "Python": 13771
     },
     "average_issue_resolution_time": [],
-    "repo_dependency_libyear_list": []
+    "repo_dependency_libyear_list": [],
+    "userInput": "Yes",
+    "fismaLevel": "Low",
+    "group": "CMS",
+    "subsetInHealthcare": [
+        "Policy",
+        "Operational",
+        "Medicare",
+        "Medicaid"
+    ],
+    "userType": [
+        "Providers"
+    ],
+    "repositoryHost": "github.com/CMSgov",
+    "maturityModelTier": 3
 }
