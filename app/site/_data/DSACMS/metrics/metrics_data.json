@@ -304,16 +304,16 @@
   },
   "created_at": "2023-07-18T14:10:58Z",
   "ossf_scorecard": {
-    "date": "2025-07-06T08:06:41Z",
+    "date": "2025-07-13T09:55:37Z",
     "repo": {
       "name": "github.com/DSACMS/metrics",
-      "commit": "673c27da597f66d2e8d13b8f9b8feeebe5ce9de1"
+      "commit": "a312f2d1b7d23b045189b16dea9360c97456d62a"
     },
     "scorecard": {
       "version": "v5.1.1-45-g40bbc9c9",
       "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
     },
-    "score": 5.9,
+    "score": 5.8,
     "checks": [
       {
         "details": null,
@@ -337,8 +337,8 @@
       },
       {
         "details": null,
-        "score": 10,
-        "reason": "1 out of 1 merged PRs checked by a CI test -- score normalized to 10",
+        "score": -1,
+        "reason": "no pull request found",
         "name": "CI-Tests",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#ci-tests",
@@ -358,7 +358,7 @@
       {
         "details": null,
         "score": 0,
-        "reason": "Found 0/28 approved changesets -- score normalized to 0",
+        "reason": "Found 0/30 approved changesets -- score normalized to 0",
         "name": "Code-Review",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#code-review",
@@ -418,7 +418,7 @@
       {
         "details": null,
         "score": 10,
-        "reason": "30 commit(s) and 28 issue activity found in the last 90 days -- score normalized to 10",
+        "reason": "30 commit(s) and 16 issue activity found in the last 90 days -- score normalized to 10",
         "name": "Maintained",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#maintained",
@@ -448,7 +448,7 @@
       {
         "details": null,
         "score": 10,
-        "reason": "SAST tool is run on all commits",
+        "reason": "SAST tool detected: CodeQL",
         "name": "SAST",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#sast",
