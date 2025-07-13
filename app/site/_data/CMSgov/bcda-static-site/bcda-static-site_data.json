@@ -43,16 +43,16 @@
   "nadia_badge_name": "midsize",
   "created_at": "2019-07-18T16:03:39Z",
   "ossf_scorecard": {
-    "date": "2025-07-06T08:38:50Z",
+    "date": "2025-07-13T10:29:07Z",
     "repo": {
       "name": "github.com/CMSgov/bcda-static-site",
-      "commit": "dc81f9b9c8db751537e9de393d4e7851c2b81065"
+      "commit": "e0a51f9261d05918b7d449f549c2a04ea06a559c"
     },
     "scorecard": {
       "version": "v5.1.1-45-g40bbc9c9",
       "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
     },
-    "score": 5.1,
+    "score": 5.2,
     "checks": [
       {
         "details": null,
@@ -66,8 +66,8 @@
       },
       {
         "details": null,
-        "score": 8,
-        "reason": "branch protection is not maximal on development and all release branches",
+        "score": 10,
+        "reason": "branch protection is fully enabled on development and all release branches",
         "name": "Branch-Protection",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#branch-protection",
@@ -76,8 +76,8 @@
       },
       {
         "details": null,
-        "score": 10,
-        "reason": "30 out of 30 merged PRs checked by a CI test -- score normalized to 10",
+        "score": -1,
+        "reason": "internal error: internal error: Client.Repositories.ListStatuses: internal error: ListStatuses: GET https://api.github.com/repos/CMSgov/bcda-static-site/commits/24aa28d44ad2592f202582ac6458a701240a7972/statuses: 401 Bad credentials []",
         "name": "CI-Tests",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#ci-tests",
@@ -156,8 +156,8 @@
       },
       {
         "details": null,
-        "score": 5,
-        "reason": "6 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 5",
+        "score": 6,
+        "reason": "8 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 6",
         "name": "Maintained",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#maintained",
