@@ -1,441 +1,437 @@
 {
-  "url": "https://github.com/measureauthoringtool/measure-service",
-  "owner": "measureauthoringtool",
-  "name": "measure-service",
-  "description": "Template for creating Spring-Boot Microservices",
-  "commits_count": 2737,
-  "issues_count": 0,
-  "open_issues_count": 0,
-  "closed_issues_count": 0,
-  "pull_requests_count": 908,
-  "open_pull_requests_count": 8,
-  "merged_pull_requests_count": 642,
-  "closed_pull_requests_count": 258,
-  "forks_count": 2,
-  "stargazers_count": 0,
-  "watchers_count": 5,
-  "created_at": "2021-09-21T17:51:59Z",
-  "total_project_lines": 52867,
-  "average_project_lines": 174,
-  "total_project_comment_lines": 929,
-  "average_project_comment_lines": 3,
-  "total_project_blank_lines": 4926,
-  "average_blank_lines": 16,
-  "predominant_langs": {
-    "Java": 1882615,
-    "Dockerfile": 670,
-    "JavaScript": 593
-  },
-  "commits_by_month": {
-    "2025/7": 6,
-    "2025/6": 24
-  },
-  "average_issue_resolution_time": [],
-  "new_commit_contributors_by_day_over_last_month": [],
-  "new_commit_contributors_by_day_over_last_six_months": [
-    [
-      "2025-01-27T06:00:00.000Z",
-      4
-    ],
-    [
-      "2025-01-28T06:00:00.000Z",
-      3
-    ],
-    [
-      "2025-02-03T06:00:00.000Z",
-      1
-    ]
-  ],
-  "new_issues_by_day_over_last_month": [],
-  "new_issues_by_day_over_last_six_months": [],
-  "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=midsize&color=ff0000",
-  "nadia_color": "ff0000",
-  "nadia_badge_name": "midsize",
-  "repo_dependency_libyear_list": [],
-  "cocomo": {
-    "languageSummary": [
-      {
-        "Name": "Java",
-        "Bytes": 1887557,
-        "CodeBytes": 0,
-        "Lines": 46437,
-        "Code": 39986,
-        "Comment": 984,
-        "Blank": 5467,
-        "Complexity": 1381,
-        "Count": 286,
-        "WeightedComplexity": 0,
-        "Files": [],
-        "LineLength": null,
-        "ULOC": 0
-      },
-      {
-        "Name": "JSON",
-        "Bytes": 3685201,
-        "CodeBytes": 0,
-        "Lines": 12409,
-        "Code": 12404,
-        "Comment": 0,
-        "Blank": 5,
-        "Complexity": 0,
-        "Count": 21,
-        "WeightedComplexity": 0,
-        "Files": [],
-        "LineLength": null,
-        "ULOC": 0
-      },
-      {
-        "Name": "YAML",
-        "Bytes": 7066,
-        "CodeBytes": 0,
-        "Lines": 222,
-        "Code": 189,
-        "Comment": 3,
-        "Blank": 30,
-        "Complexity": 0,
-        "Count": 9,
-        "WeightedComplexity": 0,
-        "Files": [],
-        "LineLength": null,
-        "ULOC": 0
-      },
-      {
-        "Name": "XML",
-        "Bytes": 23174,
-        "CodeBytes": 0,
-        "Lines": 659,
-        "Code": 596,
-        "Comment": 29,
-        "Blank": 34,
-        "Complexity": 0,
-        "Count": 4,
-        "WeightedComplexity": 0,
-        "Files": [],
-        "LineLength": null,
-        "ULOC": 0
-      },
-      {
-        "Name": "Plain Text",
-        "Bytes": 1826,
-        "CodeBytes": 0,
-        "Lines": 74,
-        "Code": 49,
-        "Comment": 0,
-        "Blank": 25,
-        "Complexity": 0,
-        "Count": 3,
-        "WeightedComplexity": 0,
-        "Files": [],
-        "LineLength": null,
-        "ULOC": 0
-      },
-      {
-        "Name": "Markdown",
-        "Bytes": 2516,
-        "CodeBytes": 0,
-        "Lines": 57,
-        "Code": 38,
-        "Comment": 0,
-        "Blank": 19,
-        "Complexity": 0,
-        "Count": 2,
-        "WeightedComplexity": 0,
-        "Files": [],
-        "LineLength": null,
-        "ULOC": 0
-      },
-      {
-        "Name": "Batch",
-        "Bytes": 6608,
-        "CodeBytes": 0,
-        "Lines": 182,
-        "Code": 147,
-        "Comment": 0,
-        "Blank": 35,
-        "Complexity": 30,
-        "Count": 1,
-        "WeightedComplexity": 0,
-        "Files": [],
-        "LineLength": null,
-        "ULOC": 0
-      },
-      {
-        "Name": "Dockerfile",
-        "Bytes": 670,
-        "CodeBytes": 0,
-        "Lines": 21,
-        "Code": 8,
-        "Comment": 6,
-        "Blank": 7,
-        "Complexity": 1,
-        "Count": 1,
-        "WeightedComplexity": 0,
-        "Files": [],
-        "LineLength": null,
-        "ULOC": 0
-      },
-      {
-        "Name": "JavaScript",
-        "Bytes": 593,
-        "CodeBytes": 0,
-        "Lines": 27,
-        "Code": 20,
-        "Comment": 0,
-        "Blank": 7,
-        "Complexity": 0,
-        "Count": 1,
-        "WeightedComplexity": 0,
-        "Files": [],
-        "LineLength": null,
-        "ULOC": 0
-      },
-      {
-        "Name": "Properties File",
-        "Bytes": 218,
-        "CodeBytes": 0,
-        "Lines": 2,
-        "Code": 2,
-        "Comment": 0,
-        "Blank": 0,
-        "Complexity": 0,
-        "Count": 1,
-        "WeightedComplexity": 0,
-        "Files": [],
-        "LineLength": null,
-        "ULOC": 0
-      },
-      {
-        "Name": "Shell",
-        "Bytes": 10070,
-        "CodeBytes": 0,
-        "Lines": 310,
-        "Code": 230,
-        "Comment": 54,
-        "Blank": 26,
-        "Complexity": 34,
-        "Count": 1,
-        "WeightedComplexity": 0,
-        "Files": [],
-        "LineLength": null,
-        "ULOC": 0
-      },
-      {
-        "Name": "TOML",
-        "Bytes": 152,
-        "CodeBytes": 0,
-        "Lines": 4,
-        "Code": 4,
-        "Comment": 0,
-        "Blank": 0,
-        "Complexity": 0,
-        "Count": 1,
-        "WeightedComplexity": 0,
-        "Files": [],
-        "LineLength": null,
-        "ULOC": 0
-      }
-    ],
-    "estimatedCost_low": 1613635.3433537213,
-    "estimatedScheduleMonths_low": 17.08413020992583,
-    "estimatedPeople_low": 9.201572087393174,
-    "estimatedCost_high": 5028792.492766367,
-    "estimatedScheduleMonths_high": 17.08413020992583,
-    "estimatedPeople_high": 9.201572087393174,
-    "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nJava                       286     46437     5467       984    39986       1381\n(ULOC)                             15928\n-------------------------------------------------------------------------------\nJSON                        21     12409        5         0    12404          0\n(ULOC)                              3434\n-------------------------------------------------------------------------------\nYAML                         9       222       30         3      189          0\n(ULOC)                               172\n-------------------------------------------------------------------------------\nXML                          4       659       34        29      596          0\n(ULOC)                               399\n-------------------------------------------------------------------------------\nPlain Text                   3        74       25         0       49          0\n(ULOC)                                35\n-------------------------------------------------------------------------------\nMarkdown                     2        57       19         0       38          0\n(ULOC)                                34\n-------------------------------------------------------------------------------\nBatch                        1       182       35         0      147         30\n(ULOC)                               128\n-------------------------------------------------------------------------------\nDockerfile                   1        21        7         6        8          1\n(ULOC)                                15\n-------------------------------------------------------------------------------\nJavaScript                   1        27        7         0       20          0\n(ULOC)                                15\n-------------------------------------------------------------------------------\nProperties File              1         2        0         0        2          0\n(ULOC)                                 2\n-------------------------------------------------------------------------------\nShell                        1       310       26        54      230         34\n(ULOC)                               212\n-------------------------------------------------------------------------------\nTOML                         1         4        0         0        4          0\n(ULOC)                                 4\n───────────────────────────────────────────────────────────────────────────────\nTotal                      331     60404     5655      1076    53673       1446\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)        20337\nDRYness %                           0.34\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $1,769,452\nEstimated Schedule Effort (organic) 17.08 months\nEstimated People Required (organic) 9.20\n───────────────────────────────────────────────────────────────────────────────\nProcessed 5625651 bytes, 5.626 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
-  },
-  "ossf_scorecard": {
-    "date": "2025-07-13T10:54:29Z",
-    "repo": {
-      "name": "github.com/measureauthoringtool/measure-service",
-      "commit": "52960c8dabd82c7ee99f076069429bc709089249"
+    "url": "https://github.com/measureauthoringtool/measure-service",
+    "owner": "measureauthoringtool",
+    "name": "measure-service",
+    "description": "Template for creating Spring-Boot Microservices",
+    "commits_count": 2744,
+    "issues_count": 0,
+    "open_issues_count": 0,
+    "closed_issues_count": 0,
+    "pull_requests_count": 913,
+    "open_pull_requests_count": 11,
+    "merged_pull_requests_count": 644,
+    "closed_pull_requests_count": 258,
+    "forks_count": 2,
+    "stargazers_count": 0,
+    "watchers_count": 5,
+    "created_at": "2021-09-21T17:51:59Z",
+    "total_project_lines": 52867,
+    "average_project_lines": 174,
+    "total_project_comment_lines": 929,
+    "average_project_comment_lines": 3,
+    "total_project_blank_lines": 4926,
+    "average_blank_lines": 16,
+    "predominant_langs": {
+        "Java": 1885278,
+        "Dockerfile": 670,
+        "JavaScript": 593
     },
-    "scorecard": {
-      "version": "v5.1.1-45-g40bbc9c9",
-      "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
+    "commits_by_month": {
+        "2025/7": 13,
+        "2025/6": 17
     },
-    "score": 5.4,
-    "checks": [
-      {
-        "details": null,
-        "score": 9,
-        "reason": "binaries present in source code",
-        "name": "Binary-Artifacts",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#binary-artifacts",
-          "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
-        }
-      },
-      {
-        "details": null,
-        "score": 8,
-        "reason": "branch protection is not maximal on development and all release branches",
-        "name": "Branch-Protection",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#branch-protection",
-          "short": "Determines if the default and release branches are protected with GitHub's branch protection settings."
-        }
-      },
-      {
-        "details": null,
-        "score": 10,
-        "reason": "9 out of 9 merged PRs checked by a CI test -- score normalized to 10",
-        "name": "CI-Tests",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#ci-tests",
-          "short": "Determines if the project runs tests before pull requests are merged."
-        }
-      },
-      {
-        "details": null,
-        "score": 0,
-        "reason": "no effort to earn an OpenSSF best practices badge detected",
-        "name": "CII-Best-Practices",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#cii-best-practices",
-          "short": "Determines if the project has an OpenSSF (formerly CII) Best Practices Badge."
-        }
-      },
-      {
-        "details": null,
-        "score": 10,
-        "reason": "all changesets reviewed",
-        "name": "Code-Review",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#code-review",
-          "short": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
-        }
-      },
-      {
-        "details": null,
-        "score": 10,
-        "reason": "project has 3 contributing companies or organizations -- score normalized to 10",
-        "name": "Contributors",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#contributors",
-          "short": "Determines if the project has a set of contributors from multiple organizations (e.g., companies)."
-        }
-      },
-      {
-        "details": null,
-        "score": 10,
-        "reason": "no dangerous workflow patterns detected",
-        "name": "Dangerous-Workflow",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#dangerous-workflow",
-          "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
-        }
-      },
-      {
-        "details": null,
-        "score": 0,
-        "reason": "no update tool detected",
-        "name": "Dependency-Update-Tool",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#dependency-update-tool",
-          "short": "Determines if the project uses a dependency update tool."
-        }
-      },
-      {
-        "details": null,
-        "score": 0,
-        "reason": "project is not fuzzed",
-        "name": "Fuzzing",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#fuzzing",
-          "short": "Determines if the project uses fuzzing."
-        }
-      },
-      {
-        "details": null,
-        "score": 0,
-        "reason": "license file not detected",
-        "name": "License",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#license",
-          "short": "Determines if the project has defined a license."
-        }
-      },
-      {
-        "details": null,
-        "score": 10,
-        "reason": "30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10",
-        "name": "Maintained",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#maintained",
-          "short": "Determines if the project is \"actively maintained\"."
-        }
-      },
-      {
-        "details": null,
-        "score": -1,
-        "reason": "packaging workflow not detected",
-        "name": "Packaging",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#packaging",
-          "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
-        }
-      },
-      {
-        "details": null,
-        "score": 0,
-        "reason": "dependency not pinned by hash detected -- score normalized to 0",
-        "name": "Pinned-Dependencies",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#pinned-dependencies",
-          "short": "Determines if the project has declared and pinned the dependencies of its build process."
-        }
-      },
-      {
-        "details": null,
-        "score": 0,
-        "reason": "SAST tool is not run on all commits -- score normalized to 0",
-        "name": "SAST",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#sast",
-          "short": "Determines if the project uses static code analysis."
-        }
-      },
-      {
-        "details": null,
-        "score": 0,
-        "reason": "security policy file not detected",
-        "name": "Security-Policy",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#security-policy",
-          "short": "Determines if the project has published a security policy."
-        }
-      },
-      {
-        "details": null,
-        "score": -1,
-        "reason": "no releases found",
-        "name": "Signed-Releases",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#signed-releases",
-          "short": "Determines if the project cryptographically signs release artifacts."
-        }
-      },
-      {
-        "details": null,
-        "score": 0,
-        "reason": "detected GitHub workflow tokens with excessive permissions",
-        "name": "Token-Permissions",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#token-permissions",
-          "short": "Determines if the project's workflows follow the principle of least privilege."
-        }
-      },
-      {
-        "details": null,
-        "score": 10,
-        "reason": "0 existing vulnerabilities detected",
-        "name": "Vulnerabilities",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#vulnerabilities",
-          "short": "Determines if the project has open, known unfixed vulnerabilities."
-        }
-      }
+    "average_issue_resolution_time": [],
+    "new_commit_contributors_by_day_over_last_month": [],
+    "new_commit_contributors_by_day_over_last_six_months": [
+        [
+            "2025-02-03T06:00:00.000Z",
+            3
+        ],
+        [
+            "2025-02-06T06:00:00.000Z",
+            2
+        ]
     ],
-    "metadata": null
-  }
+    "new_issues_by_day_over_last_month": [],
+    "new_issues_by_day_over_last_six_months": [],
+    "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=midsize&color=ff0000",
+    "nadia_color": "ff0000",
+    "nadia_badge_name": "midsize",
+    "repo_dependency_libyear_list": [],
+    "cocomo": {
+        "languageSummary": [
+            {
+                "Name": "Java",
+                "Bytes": 1887557,
+                "CodeBytes": 0,
+                "Lines": 46437,
+                "Code": 39986,
+                "Comment": 984,
+                "Blank": 5467,
+                "Complexity": 1381,
+                "Count": 286,
+                "WeightedComplexity": 0,
+                "Files": [],
+                "LineLength": null,
+                "ULOC": 0
+            },
+            {
+                "Name": "JSON",
+                "Bytes": 3685201,
+                "CodeBytes": 0,
+                "Lines": 12409,
+                "Code": 12404,
+                "Comment": 0,
+                "Blank": 5,
+                "Complexity": 0,
+                "Count": 21,
+                "WeightedComplexity": 0,
+                "Files": [],
+                "LineLength": null,
+                "ULOC": 0
+            },
+            {
+                "Name": "YAML",
+                "Bytes": 7066,
+                "CodeBytes": 0,
+                "Lines": 222,
+                "Code": 189,
+                "Comment": 3,
+                "Blank": 30,
+                "Complexity": 0,
+                "Count": 9,
+                "WeightedComplexity": 0,
+                "Files": [],
+                "LineLength": null,
+                "ULOC": 0
+            },
+            {
+                "Name": "XML",
+                "Bytes": 23174,
+                "CodeBytes": 0,
+                "Lines": 659,
+                "Code": 596,
+                "Comment": 29,
+                "Blank": 34,
+                "Complexity": 0,
+                "Count": 4,
+                "WeightedComplexity": 0,
+                "Files": [],
+                "LineLength": null,
+                "ULOC": 0
+            },
+            {
+                "Name": "Plain Text",
+                "Bytes": 1826,
+                "CodeBytes": 0,
+                "Lines": 74,
+                "Code": 49,
+                "Comment": 0,
+                "Blank": 25,
+                "Complexity": 0,
+                "Count": 3,
+                "WeightedComplexity": 0,
+                "Files": [],
+                "LineLength": null,
+                "ULOC": 0
+            },
+            {
+                "Name": "Markdown",
+                "Bytes": 2516,
+                "CodeBytes": 0,
+                "Lines": 57,
+                "Code": 38,
+                "Comment": 0,
+                "Blank": 19,
+                "Complexity": 0,
+                "Count": 2,
+                "WeightedComplexity": 0,
+                "Files": [],
+                "LineLength": null,
+                "ULOC": 0
+            },
+            {
+                "Name": "Batch",
+                "Bytes": 6608,
+                "CodeBytes": 0,
+                "Lines": 182,
+                "Code": 147,
+                "Comment": 0,
+                "Blank": 35,
+                "Complexity": 30,
+                "Count": 1,
+                "WeightedComplexity": 0,
+                "Files": [],
+                "LineLength": null,
+                "ULOC": 0
+            },
+            {
+                "Name": "Dockerfile",
+                "Bytes": 670,
+                "CodeBytes": 0,
+                "Lines": 21,
+                "Code": 8,
+                "Comment": 6,
+                "Blank": 7,
+                "Complexity": 1,
+                "Count": 1,
+                "WeightedComplexity": 0,
+                "Files": [],
+                "LineLength": null,
+                "ULOC": 0
+            },
+            {
+                "Name": "JavaScript",
+                "Bytes": 593,
+                "CodeBytes": 0,
+                "Lines": 27,
+                "Code": 20,
+                "Comment": 0,
+                "Blank": 7,
+                "Complexity": 0,
+                "Count": 1,
+                "WeightedComplexity": 0,
+                "Files": [],
+                "LineLength": null,
+                "ULOC": 0
+            },
+            {
+                "Name": "Properties File",
+                "Bytes": 218,
+                "CodeBytes": 0,
+                "Lines": 2,
+                "Code": 2,
+                "Comment": 0,
+                "Blank": 0,
+                "Complexity": 0,
+                "Count": 1,
+                "WeightedComplexity": 0,
+                "Files": [],
+                "LineLength": null,
+                "ULOC": 0
+            },
+            {
+                "Name": "Shell",
+                "Bytes": 10070,
+                "CodeBytes": 0,
+                "Lines": 310,
+                "Code": 230,
+                "Comment": 54,
+                "Blank": 26,
+                "Complexity": 34,
+                "Count": 1,
+                "WeightedComplexity": 0,
+                "Files": [],
+                "LineLength": null,
+                "ULOC": 0
+            },
+            {
+                "Name": "TOML",
+                "Bytes": 152,
+                "CodeBytes": 0,
+                "Lines": 4,
+                "Code": 4,
+                "Comment": 0,
+                "Blank": 0,
+                "Complexity": 0,
+                "Count": 1,
+                "WeightedComplexity": 0,
+                "Files": [],
+                "LineLength": null,
+                "ULOC": 0
+            }
+        ],
+        "estimatedCost_low": 1613635.3433537213,
+        "estimatedScheduleMonths_low": 17.08413020992583,
+        "estimatedPeople_low": 9.201572087393174,
+        "estimatedCost_high": 5028792.492766367,
+        "estimatedScheduleMonths_high": 17.08413020992583,
+        "estimatedPeople_high": 9.201572087393174,
+        "dryness_table": "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nJava                       286     46437     5467       984    39986       1381\n(ULOC)                             15928\n-------------------------------------------------------------------------------\nJSON                        21     12409        5         0    12404          0\n(ULOC)                              3434\n-------------------------------------------------------------------------------\nYAML                         9       222       30         3      189          0\n(ULOC)                               172\n-------------------------------------------------------------------------------\nXML                          4       659       34        29      596          0\n(ULOC)                               399\n-------------------------------------------------------------------------------\nPlain Text                   3        74       25         0       49          0\n(ULOC)                                35\n-------------------------------------------------------------------------------\nMarkdown                     2        57       19         0       38          0\n(ULOC)                                34\n-------------------------------------------------------------------------------\nBatch                        1       182       35         0      147         30\n(ULOC)                               128\n-------------------------------------------------------------------------------\nDockerfile                   1        21        7         6        8          1\n(ULOC)                                15\n-------------------------------------------------------------------------------\nJavaScript                   1        27        7         0       20          0\n(ULOC)                                15\n-------------------------------------------------------------------------------\nProperties File              1         2        0         0        2          0\n(ULOC)                                 2\n-------------------------------------------------------------------------------\nShell                        1       310       26        54      230         34\n(ULOC)                               212\n-------------------------------------------------------------------------------\nTOML                         1         4        0         0        4          0\n(ULOC)                                 4\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nTotal                      331     60404     5655      1076    53673       1446\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nUnique Lines of Code (ULOC)        20337\nDRYness %                           0.34\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nEstimated Cost to Develop (organic) $1,769,452\nEstimated Schedule Effort (organic) 17.08 months\nEstimated People Required (organic) 9.20\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProcessed 5625651 bytes, 5.626 megabytes (SI)\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n"
+    },
+    "ossf_scorecard": {
+        "date": "2025-07-13T10:54:29Z",
+        "repo": {
+            "name": "github.com/measureauthoringtool/measure-service",
+            "commit": "52960c8dabd82c7ee99f076069429bc709089249"
+        },
+        "scorecard": {
+            "version": "v5.1.1-45-g40bbc9c9",
+            "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
+        },
+        "score": 5.4,
+        "checks": [
+            {
+                "details": null,
+                "score": 9,
+                "reason": "binaries present in source code",
+                "name": "Binary-Artifacts",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#binary-artifacts",
+                    "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
+                }
+            },
+            {
+                "details": null,
+                "score": 8,
+                "reason": "branch protection is not maximal on development and all release branches",
+                "name": "Branch-Protection",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#branch-protection",
+                    "short": "Determines if the default and release branches are protected with GitHub's branch protection settings."
+                }
+            },
+            {
+                "details": null,
+                "score": 10,
+                "reason": "9 out of 9 merged PRs checked by a CI test -- score normalized to 10",
+                "name": "CI-Tests",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#ci-tests",
+                    "short": "Determines if the project runs tests before pull requests are merged."
+                }
+            },
+            {
+                "details": null,
+                "score": 0,
+                "reason": "no effort to earn an OpenSSF best practices badge detected",
+                "name": "CII-Best-Practices",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#cii-best-practices",
+                    "short": "Determines if the project has an OpenSSF (formerly CII) Best Practices Badge."
+                }
+            },
+            {
+                "details": null,
+                "score": 10,
+                "reason": "all changesets reviewed",
+                "name": "Code-Review",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#code-review",
+                    "short": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
+                }
+            },
+            {
+                "details": null,
+                "score": 10,
+                "reason": "project has 3 contributing companies or organizations -- score normalized to 10",
+                "name": "Contributors",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#contributors",
+                    "short": "Determines if the project has a set of contributors from multiple organizations (e.g., companies)."
+                }
+            },
+            {
+                "details": null,
+                "score": 10,
+                "reason": "no dangerous workflow patterns detected",
+                "name": "Dangerous-Workflow",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#dangerous-workflow",
+                    "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
+                }
+            },
+            {
+                "details": null,
+                "score": 0,
+                "reason": "no update tool detected",
+                "name": "Dependency-Update-Tool",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#dependency-update-tool",
+                    "short": "Determines if the project uses a dependency update tool."
+                }
+            },
+            {
+                "details": null,
+                "score": 0,
+                "reason": "project is not fuzzed",
+                "name": "Fuzzing",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#fuzzing",
+                    "short": "Determines if the project uses fuzzing."
+                }
+            },
+            {
+                "details": null,
+                "score": 0,
+                "reason": "license file not detected",
+                "name": "License",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#license",
+                    "short": "Determines if the project has defined a license."
+                }
+            },
+            {
+                "details": null,
+                "score": 10,
+                "reason": "30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10",
+                "name": "Maintained",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#maintained",
+                    "short": "Determines if the project is \"actively maintained\"."
+                }
+            },
+            {
+                "details": null,
+                "score": -1,
+                "reason": "packaging workflow not detected",
+                "name": "Packaging",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#packaging",
+                    "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
+                }
+            },
+            {
+                "details": null,
+                "score": 0,
+                "reason": "dependency not pinned by hash detected -- score normalized to 0",
+                "name": "Pinned-Dependencies",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#pinned-dependencies",
+                    "short": "Determines if the project has declared and pinned the dependencies of its build process."
+                }
+            },
+            {
+                "details": null,
+                "score": 0,
+                "reason": "SAST tool is not run on all commits -- score normalized to 0",
+                "name": "SAST",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#sast",
+                    "short": "Determines if the project uses static code analysis."
+                }
+            },
+            {
+                "details": null,
+                "score": 0,
+                "reason": "security policy file not detected",
+                "name": "Security-Policy",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#security-policy",
+                    "short": "Determines if the project has published a security policy."
+                }
+            },
+            {
+                "details": null,
+                "score": -1,
+                "reason": "no releases found",
+                "name": "Signed-Releases",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#signed-releases",
+                    "short": "Determines if the project cryptographically signs release artifacts."
+                }
+            },
+            {
+                "details": null,
+                "score": 0,
+                "reason": "detected GitHub workflow tokens with excessive permissions",
+                "name": "Token-Permissions",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#token-permissions",
+                    "short": "Determines if the project's workflows follow the principle of least privilege."
+                }
+            },
+            {
+                "details": null,
+                "score": 10,
+                "reason": "0 existing vulnerabilities detected",
+                "name": "Vulnerabilities",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#vulnerabilities",
+                    "short": "Determines if the project has open, known unfixed vulnerabilities."
+                }
+            }
+        ],
+        "metadata": null
+    }
 }
