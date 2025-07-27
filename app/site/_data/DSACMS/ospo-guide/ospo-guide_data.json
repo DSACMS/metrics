@@ -189,16 +189,16 @@
     "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nMarkdown                    43      3067      824         0     2243          0\n(ULOC)                              1764\n-------------------------------------------------------------------------------\nHTML                        26      1007       66       104      837          0\n(ULOC)                               636\n-------------------------------------------------------------------------------\nSVG                         12      1115        2         3     1110          0\n(ULOC)                               543\n-------------------------------------------------------------------------------\nJavaScript                  11       788       86        81      621         39\n(ULOC)                               576\n-------------------------------------------------------------------------------\nSass                        10       790      122        95      573          0\n(ULOC)                               482\n-------------------------------------------------------------------------------\nYAML                         9       420       58        28      334          0\n(ULOC)                               263\n-------------------------------------------------------------------------------\nJSON                         5       191        0         0      191          0\n(ULOC)                               166\n-------------------------------------------------------------------------------\nBASH                         1        22        2        13        7          1\n(ULOC)                                18\n-------------------------------------------------------------------------------\nLicense                      1       121       12         0      109          0\n(ULOC)                               110\n-------------------------------------------------------------------------------\nPlain Text                   1         9        2         0        7          0\n(ULOC)                                 7\n───────────────────────────────────────────────────────────────────────────────\nTotal                      119      7530     1174       324     6032         40\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)         4517\nDRYness %                           0.60\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $178,270\nEstimated Schedule Effort (organic) 7.14 months\nEstimated People Required (organic) 2.22\n───────────────────────────────────────────────────────────────────────────────\nProcessed 416412 bytes, 0.416 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
   },
   "ossf_scorecard": {
-    "date": "2025-07-20T09:43:41Z",
+    "date": "2025-07-27T08:09:41Z",
     "repo": {
       "name": "github.com/DSACMS/ospo-guide",
-      "commit": "458b70712859ba892dae37797431b63c02185b01"
+      "commit": "a23a2d9fbad032735387baca3e42a7886fc3f4b4"
     },
     "scorecard": {
       "version": "v5.1.1-45-g40bbc9c9",
       "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
     },
-    "score": 4.0,
+    "score": 4.2,
     "checks": [
       {
         "details": null,
@@ -223,7 +223,7 @@
       {
         "details": null,
         "score": 0,
-        "reason": "0 out of 5 merged PRs checked by a CI test -- score normalized to 0",
+        "reason": "0 out of 6 merged PRs checked by a CI test -- score normalized to 0",
         "name": "CI-Tests",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#ci-tests",
@@ -242,8 +242,8 @@
       },
       {
         "details": null,
-        "score": 3,
-        "reason": "Found 4/11 approved changesets -- score normalized to 3",
+        "score": 5,
+        "reason": "Found 5/10 approved changesets -- score normalized to 5",
         "name": "Code-Review",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#code-review",
@@ -373,7 +373,7 @@
       {
         "details": null,
         "score": 0,
-        "reason": "12 existing vulnerabilities detected",
+        "reason": "13 existing vulnerabilities detected",
         "name": "Vulnerabilities",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#vulnerabilities",
