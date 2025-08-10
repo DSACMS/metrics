@@ -29,16 +29,16 @@
   "new_issues_by_day_over_last_six_months": [],
   "created_at": "2024-01-31T16:37:22Z",
   "ossf_scorecard": {
-    "date": "2025-07-27T08:51:56Z",
+    "date": "2025-08-10T08:49:32Z",
     "repo": {
       "name": "github.com/CMSgov/Medicaid-Information-Technology-Architecture-MITA",
-      "commit": "3d005783406f1cb2ed8c081b2f4470f679bd53a6"
+      "commit": "85802758dc81ef3328713441d779b489402878d4"
     },
     "scorecard": {
       "version": "v5.1.1-45-g40bbc9c9",
       "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
     },
-    "score": 3.6,
+    "score": 4.5,
     "checks": [
       {
         "details": null,
@@ -62,8 +62,8 @@
       },
       {
         "details": null,
-        "score": 0,
-        "reason": "0 out of 5 merged PRs checked by a CI test -- score normalized to 0",
+        "score": -1,
+        "reason": "no pull request found",
         "name": "CI-Tests",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#ci-tests",
@@ -83,7 +83,7 @@
       {
         "details": null,
         "score": 0,
-        "reason": "Found 0/25 approved changesets -- score normalized to 0",
+        "reason": "Found 0/30 approved changesets -- score normalized to 0",
         "name": "Code-Review",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#code-review",
@@ -142,8 +142,8 @@
       },
       {
         "details": null,
-        "score": 0,
-        "reason": "0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0",
+        "score": 10,
+        "reason": "30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10",
         "name": "Maintained",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#maintained",
@@ -173,7 +173,7 @@
       {
         "details": null,
         "score": 0,
-        "reason": "SAST tool is not run on all commits -- score normalized to 0",
+        "reason": "no SAST tool detected",
         "name": "SAST",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#sast",

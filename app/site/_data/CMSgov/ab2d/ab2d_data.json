@@ -33,21 +33,21 @@
   "nadia_badge_name": "midsize",
   "created_at": "2019-09-25T17:41:43Z",
   "ossf_scorecard": {
-    "date": "2025-07-27T08:43:55Z",
+    "date": "2025-08-10T08:41:33Z",
     "repo": {
       "name": "github.com/CMSgov/ab2d",
-      "commit": "cab306d981fb313bcbdbeb0b04687b940fcbe528"
+      "commit": "38caaf0a3a1043734905f53a2f38debd0000df4c"
     },
     "scorecard": {
       "version": "v5.1.1-45-g40bbc9c9",
       "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
     },
-    "score": 7.4,
+    "score": 6.9,
     "checks": [
       {
         "details": null,
-        "score": 10,
-        "reason": "no binaries found in the repo",
+        "score": 8,
+        "reason": "binaries present in source code",
         "name": "Binary-Artifacts",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#binary-artifacts",
@@ -56,8 +56,8 @@
       },
       {
         "details": null,
-        "score": 10,
-        "reason": "branch protection is fully enabled on development and all release branches",
+        "score": 5,
+        "reason": "branch protection is not maximal on development and all release branches",
         "name": "Branch-Protection",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#branch-protection",
@@ -66,8 +66,8 @@
       },
       {
         "details": null,
-        "score": 8,
-        "reason": "25 out of 30 merged PRs checked by a CI test -- score normalized to 8",
+        "score": 9,
+        "reason": "27 out of 30 merged PRs checked by a CI test -- score normalized to 9",
         "name": "CI-Tests",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#ci-tests",
@@ -87,7 +87,7 @@
       {
         "details": null,
         "score": 9,
-        "reason": "Found 29/30 approved changesets -- score normalized to 9",
+        "reason": "Found 28/29 approved changesets -- score normalized to 9",
         "name": "Code-Review",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#code-review",
