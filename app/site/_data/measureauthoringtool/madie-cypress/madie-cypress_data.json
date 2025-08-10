@@ -357,16 +357,16 @@
     "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nTypeScript                 253     87767    14754      6870    66143       2484\n(ULOC)                             20186\n-------------------------------------------------------------------------------\nPlain Text                  55      1714      307         0     1407          0\n(ULOC)                               623\n-------------------------------------------------------------------------------\nJSON                        30      7429        7         0     7422          0\n(ULOC)                              1047\n-------------------------------------------------------------------------------\nYAML                         3       101        9         0       92          0\n(ULOC)                                86\n-------------------------------------------------------------------------------\nDockerfile                   1        29        7         5       17          8\n(ULOC)                                23\n-------------------------------------------------------------------------------\nHTML                         1       282        2        16      264          0\n(ULOC)                                80\n-------------------------------------------------------------------------------\nJavaScript                   1        71        8        12       51          0\n(ULOC)                                53\n───────────────────────────────────────────────────────────────────────────────\nTotal                      344     97393    15094      6903    75396       2492\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)        21985\nDRYness %                           0.23\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $2,528,197\nEstimated Schedule Effort (organic) 19.57 months\nEstimated People Required (organic) 11.48\n───────────────────────────────────────────────────────────────────────────────\nProcessed 6119802 bytes, 6.120 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
   },
   "ossf_scorecard": {
-    "date": "2025-07-27T09:35:39Z",
+    "date": "2025-08-10T09:34:00Z",
     "repo": {
       "name": "github.com/measureauthoringtool/madie-cypress",
-      "commit": "8b0249f9880b1f7ed859cfcfab0a6ce6bc0d8f84"
+      "commit": "340a412d3566d25bfc0e5d3167c24b53195d6618"
     },
     "scorecard": {
       "version": "v5.1.1-45-g40bbc9c9",
       "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
     },
-    "score": 4.8,
+    "score": 5.2,
     "checks": [
       {
         "details": null,
@@ -391,7 +391,7 @@
       {
         "details": null,
         "score": 10,
-        "reason": "13 out of 13 merged PRs checked by a CI test -- score normalized to 10",
+        "reason": "17 out of 17 merged PRs checked by a CI test -- score normalized to 10",
         "name": "CI-Tests",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#ci-tests",
@@ -410,8 +410,8 @@
       },
       {
         "details": null,
-        "score": 10,
-        "reason": "all changesets reviewed",
+        "score": 9,
+        "reason": "Found 16/17 approved changesets -- score normalized to 9",
         "name": "Code-Review",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#code-review",
@@ -540,8 +540,8 @@
       },
       {
         "details": null,
-        "score": 1,
-        "reason": "9 existing vulnerabilities detected",
+        "score": 7,
+        "reason": "3 existing vulnerabilities detected",
         "name": "Vulnerabilities",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#vulnerabilities",
