@@ -117,16 +117,16 @@
     "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nMarkdown                    15      1703      354         0     1349          0\n(ULOC)                               773\n-------------------------------------------------------------------------------\nJSON                        13      2178        1         0     2177          0\n(ULOC)                               812\n-------------------------------------------------------------------------------\nYAML                         7       297       61         9      227          0\n(ULOC)                               179\n-------------------------------------------------------------------------------\nLicense                      1       121       12         0      109          0\n(ULOC)                               110\n-------------------------------------------------------------------------------\nPython                       1       132       33        20       79         18\n(ULOC)                               100\n───────────────────────────────────────────────────────────────────────────────\nTotal                       37      4431      461        29     3941         18\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)         1934\nDRYness %                           0.44\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $114,020\nEstimated Schedule Effort (organic) 6.03 months\nEstimated People Required (organic) 1.68\n───────────────────────────────────────────────────────────────────────────────\nProcessed 178805 bytes, 0.179 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
   },
   "ossf_scorecard": {
-    "date": "2025-08-10T08:11:43Z",
+    "date": "2025-08-24T08:37:14Z",
     "repo": {
       "name": "github.com/DSACMS/gov-codejson",
-      "commit": "cb886e45eb9647a033566e44635bb46416c11124"
+      "commit": "76d7e95fbd9f135fa57d3924f7ec3aee8d8b7014"
     },
     "scorecard": {
       "version": "v5.1.1-45-g40bbc9c9",
       "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
     },
-    "score": 5.4,
+    "score": 6.1,
     "checks": [
       {
         "details": null,
@@ -170,8 +170,8 @@
       },
       {
         "details": null,
-        "score": 2,
-        "reason": "Found 4/15 approved changesets -- score normalized to 2",
+        "score": 10,
+        "reason": "all changesets reviewed",
         "name": "Code-Review",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#code-review",
@@ -260,8 +260,8 @@
       },
       {
         "details": null,
-        "score": 8,
-        "reason": "SAST tool is not run on all commits -- score normalized to 8",
+        "score": 10,
+        "reason": "SAST tool is run on all commits",
         "name": "SAST",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#sast",
