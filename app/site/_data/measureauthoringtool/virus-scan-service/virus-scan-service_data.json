@@ -471,7 +471,7 @@
     "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nTypeScript                  54      2854      316       243     2295         53\n(ULOC)                              1526\n-------------------------------------------------------------------------------\nJSON                         5       136        0         0      136          0\n(ULOC)                               122\n-------------------------------------------------------------------------------\nYAML                         4       212       34         8      170          0\n(ULOC)                               143\n-------------------------------------------------------------------------------\nDocker ignore                1         7        0         0        7          0\n(ULOC)                                 7\n-------------------------------------------------------------------------------\nDockerfile                   1        23        6         3       14          4\n(ULOC)                                18\n-------------------------------------------------------------------------------\nJavaScript                   1        23        0         0       23          0\n(ULOC)                                21\n-------------------------------------------------------------------------------\nLicense                      1       121       12         0      109          0\n(ULOC)                               110\n-------------------------------------------------------------------------------\nMarkdown                     1        40       13         0       27          0\n(ULOC)                                24\n-------------------------------------------------------------------------------\nPlain Text                   1         1        0         0        1          0\n(ULOC)                                 1\n-------------------------------------------------------------------------------\nTypeScript Typings           1        26        5         0       21          0\n(ULOC)                                20\n───────────────────────────────────────────────────────────────────────────────\nTotal                       70      3443      386       254     2803         57\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)         1978\nDRYness %                           0.57\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $79,725\nEstimated Schedule Effort (organic) 5.26 months\nEstimated People Required (organic) 1.35\n───────────────────────────────────────────────────────────────────────────────\nProcessed 111584 bytes, 0.112 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
   },
   "ossf_scorecard": {
-    "date": "2025-08-10T08:58:19Z",
+    "date": "2025-08-24T09:47:44Z",
     "repo": {
       "name": "github.com/measureauthoringtool/virus-scan-service",
       "commit": "ae8e553a08b2c87e9e26b14a61ab2bed2d16323a"
@@ -480,7 +480,7 @@
       "version": "v5.1.1-45-g40bbc9c9",
       "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
     },
-    "score": 6.0,
+    "score": 6.2,
     "checks": [
       {
         "details": null,
@@ -504,8 +504,8 @@
       },
       {
         "details": null,
-        "score": -1,
-        "reason": "internal error: internal error: Client.Repositories.ListStatuses: internal error: ListStatuses: GET https://api.github.com/repos/MeasureAuthoringTool/virus-scan-service/commits/9cabfec023b69fb89d1dd28d6deec46763718bad/statuses: 401 Bad credentials []",
+        "score": 9,
+        "reason": "9 out of 10 merged PRs checked by a CI test -- score normalized to 9",
         "name": "CI-Tests",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#ci-tests",
@@ -534,8 +534,8 @@
       },
       {
         "details": null,
-        "score": 3,
-        "reason": "project has 1 contributing companies or organizations -- score normalized to 3",
+        "score": 10,
+        "reason": "project has 3 contributing companies or organizations -- score normalized to 10",
         "name": "Contributors",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#contributors",
