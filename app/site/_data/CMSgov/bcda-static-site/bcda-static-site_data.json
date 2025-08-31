@@ -33,16 +33,16 @@
   "nadia_badge_name": "midsize",
   "created_at": "2019-07-18T16:03:39Z",
   "ossf_scorecard": {
-    "date": "2025-08-24T09:09:58Z",
+    "date": "2025-08-31T09:21:30Z",
     "repo": {
       "name": "github.com/CMSgov/bcda-static-site",
-      "commit": "68fd69e44ba5637f990a31eb9c2d3e8825515add"
+      "commit": "9a90760562e08e5acd2f8f175387188589afcbd7"
     },
     "scorecard": {
       "version": "v5.1.1-45-g40bbc9c9",
       "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
     },
-    "score": 5.9,
+    "score": 6.1,
     "checks": [
       {
         "details": null,
@@ -66,8 +66,8 @@
       },
       {
         "details": null,
-        "score": 0,
-        "reason": "0 out of 4 merged PRs checked by a CI test -- score normalized to 0",
+        "score": -1,
+        "reason": "internal error: internal error: Client.Repositories.ListStatuses: internal error: ListStatuses: GET https://api.github.com/repos/CMSgov/bcda-static-site/commits/99dbd5cd7f7af9d4ea271bf9ececf3870e7202d2/statuses: 401 Bad credentials []",
         "name": "CI-Tests",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#ci-tests",
@@ -87,7 +87,7 @@
       {
         "details": null,
         "score": 1,
-        "reason": "Found 3/30 approved changesets -- score normalized to 1",
+        "reason": "Found 4/30 approved changesets -- score normalized to 1",
         "name": "Code-Review",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#code-review",
@@ -97,7 +97,7 @@
       {
         "details": null,
         "score": 10,
-        "reason": "project has 7 contributing companies or organizations",
+        "reason": "project has 8 contributing companies or organizations",
         "name": "Contributors",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#contributors",
@@ -166,8 +166,8 @@
       },
       {
         "details": null,
-        "score": 0,
-        "reason": "dependency not pinned by hash detected -- score normalized to 0",
+        "score": 1,
+        "reason": "dependency not pinned by hash detected -- score normalized to 1",
         "name": "Pinned-Dependencies",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#pinned-dependencies",
