@@ -347,16 +347,16 @@
     "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nTypeScript                 255     90280    14788      6803    68689       2534\n(ULOC)                             21171\n-------------------------------------------------------------------------------\nPlain Text                  55      1714      307         0     1407          0\n(ULOC)                               623\n-------------------------------------------------------------------------------\nJSON                        30      7429        7         0     7422          0\n(ULOC)                              1047\n-------------------------------------------------------------------------------\nYAML                         3       101        9         0       92          0\n(ULOC)                                86\n-------------------------------------------------------------------------------\nDockerfile                   1        29        7         5       17          8\n(ULOC)                                23\n-------------------------------------------------------------------------------\nHTML                         1       282        2        16      264          0\n(ULOC)                                80\n-------------------------------------------------------------------------------\nJavaScript                   1        71        8        12       51          0\n(ULOC)                                53\n───────────────────────────────────────────────────────────────────────────────\nTotal                      346     99906    15128      6836    77942       2542\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)        22872\nDRYness %                           0.23\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $2,617,914\nEstimated Schedule Effort (organic) 19.83 months\nEstimated People Required (organic) 11.73\n───────────────────────────────────────────────────────────────────────────────\nProcessed 6258899 bytes, 6.259 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
   },
   "ossf_scorecard": {
-    "date": "2025-08-24T09:51:07Z",
+    "date": "2025-08-31T09:57:42Z",
     "repo": {
       "name": "github.com/measureauthoringtool/madie-cypress",
-      "commit": "5eb3002d9f9ff2cf6dda0bd6342e3cecf28d6325"
+      "commit": "46f4c858f0e3013dde4d56947073b7d3753a2bbc"
     },
     "scorecard": {
       "version": "v5.1.1-45-g40bbc9c9",
       "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
     },
-    "score": 5.1,
+    "score": 5.3,
     "checks": [
       {
         "details": null,
@@ -380,8 +380,8 @@
       },
       {
         "details": null,
-        "score": 9,
-        "reason": "15 out of 16 merged PRs checked by a CI test -- score normalized to 9",
+        "score": 10,
+        "reason": "14 out of 14 merged PRs checked by a CI test -- score normalized to 10",
         "name": "CI-Tests",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#ci-tests",
@@ -400,8 +400,8 @@
       },
       {
         "details": null,
-        "score": 8,
-        "reason": "Found 14/16 approved changesets -- score normalized to 8",
+        "score": 10,
+        "reason": "all changesets reviewed",
         "name": "Code-Review",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#code-review",

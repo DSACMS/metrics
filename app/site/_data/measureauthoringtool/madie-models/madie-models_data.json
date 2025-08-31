@@ -128,7 +128,7 @@
     "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nTypeScript                  23       703       58         0      645         11\n(ULOC)                               446\n-------------------------------------------------------------------------------\nJSON                         2       134        8         0      126          0\n(ULOC)                               123\n-------------------------------------------------------------------------------\nMarkdown                     2        52       15         0       37          0\n(ULOC)                                36\n-------------------------------------------------------------------------------\nYAML                         2       121       21        14       86          0\n(ULOC)                                76\n-------------------------------------------------------------------------------\nJavaScript                   1         6        0         1        5          0\n(ULOC)                                 6\n───────────────────────────────────────────────────────────────────────────────\nTotal                       30      1016      102        15      899         11\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)          681\nDRYness %                           0.67\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $24,157\nEstimated Schedule Effort (organic) 3.34 months\nEstimated People Required (organic) 0.64\n───────────────────────────────────────────────────────────────────────────────\nProcessed 34943 bytes, 0.035 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
   },
   "ossf_scorecard": {
-    "date": "2025-08-24T09:54:55Z",
+    "date": "2025-08-31T10:01:39Z",
     "repo": {
       "name": "github.com/measureauthoringtool/madie-models",
       "commit": "e9706f8716f64b8d8d9c3fcb1800ba7b0281add7"
@@ -137,7 +137,7 @@
       "version": "v5.1.1-45-g40bbc9c9",
       "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
     },
-    "score": 5.7,
+    "score": 5.8,
     "checks": [
       {
         "details": null,
@@ -221,8 +221,8 @@
       },
       {
         "details": null,
-        "score": 0,
-        "reason": "project is not fuzzed",
+        "score": -1,
+        "reason": "internal error: cannot get langs of repo: error during languagesHandler.setup: response for repo languages failed with GET https://api.github.com/repos/MeasureAuthoringTool/madie-models/languages: 401 Bad credentials []",
         "name": "Fuzzing",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#fuzzing",
@@ -251,8 +251,8 @@
       },
       {
         "details": null,
-        "score": 10,
-        "reason": "packaging workflow detected",
+        "score": -1,
+        "reason": "internal error: Client.Actions.ListWorkflowRunsByFileName: internal error: ListWorkflowRunsByFileName: GET https://api.github.com/repos/MeasureAuthoringTool/madie-models/actions/workflows/npm-publish.yml/runs?status=success: 401 Bad credentials []",
         "name": "Packaging",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#packaging",
