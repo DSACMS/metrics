@@ -34,16 +34,16 @@
   "nadia_badge_name": "midsize",
   "created_at": "2023-04-04T12:40:46Z",
   "ossf_scorecard": {
-    "date": "2025-09-07T09:36:02Z",
+    "date": "2025-09-14T09:57:48Z",
     "repo": {
       "name": "github.com/CMSgov/ab2d-bcda-dpc-platform",
-      "commit": "a59e580569f509e268d9368125c7326dee90ab72"
+      "commit": "81c810bc000fe088d56bc95fd7b87ec7100b6b00"
     },
     "scorecard": {
       "version": "v5.1.1-45-g40bbc9c9",
       "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
     },
-    "score": 6.0,
+    "score": 6.3,
     "checks": [
       {
         "details": null,
@@ -67,8 +67,8 @@
       },
       {
         "details": null,
-        "score": 7,
-        "reason": "21 out of 30 merged PRs checked by a CI test -- score normalized to 7",
+        "score": -1,
+        "reason": "internal error: internal error: Client.Repositories.ListStatuses: internal error: ListStatuses: GET https://api.github.com/repos/CMSgov/cdap/commits/701f38b4194d52d4ef8aa1d349235815f01d2a3b/statuses: 401 Bad credentials []",
         "name": "CI-Tests",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#ci-tests",
@@ -167,8 +167,8 @@
       },
       {
         "details": null,
-        "score": 1,
-        "reason": "dependency not pinned by hash detected -- score normalized to 1",
+        "score": 6,
+        "reason": "dependency not pinned by hash detected -- score normalized to 6",
         "name": "Pinned-Dependencies",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#pinned-dependencies",

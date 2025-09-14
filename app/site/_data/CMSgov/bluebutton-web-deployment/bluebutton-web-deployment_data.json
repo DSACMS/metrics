@@ -44,16 +44,16 @@
   "nadia_badge_name": "midsize",
   "created_at": "2017-03-15T15:25:57Z",
   "ossf_scorecard": {
-    "date": "2025-09-07T09:28:49Z",
+    "date": "2025-09-14T09:49:55Z",
     "repo": {
       "name": "github.com/CMSgov/bluebutton-web-deployment",
-      "commit": "6ca36d4573e7370b3863bcb0da81a52966451e62"
+      "commit": "240f48e1e8cd54255b21a551641c4fd701cf8268"
     },
     "scorecard": {
       "version": "v5.1.1-45-g40bbc9c9",
       "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
     },
-    "score": 4.3,
+    "score": 5.2,
     "checks": [
       {
         "details": null,
@@ -117,8 +117,8 @@
       },
       {
         "details": null,
-        "score": -1,
-        "reason": "no workflows found",
+        "score": 10,
+        "reason": "no dangerous workflow patterns detected",
         "name": "Dangerous-Workflow",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#dangerous-workflow",
@@ -157,8 +157,8 @@
       },
       {
         "details": null,
-        "score": 1,
-        "reason": "2 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 1",
+        "score": 2,
+        "reason": "3 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 2",
         "name": "Maintained",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#maintained",
@@ -197,8 +197,8 @@
       },
       {
         "details": null,
-        "score": 0,
-        "reason": "security policy file not detected",
+        "score": 10,
+        "reason": "security policy file detected",
         "name": "Security-Policy",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#security-policy",
@@ -217,8 +217,8 @@
       },
       {
         "details": null,
-        "score": -1,
-        "reason": "No tokens found",
+        "score": 0,
+        "reason": "detected GitHub workflow tokens with excessive permissions",
         "name": "Token-Permissions",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#token-permissions",

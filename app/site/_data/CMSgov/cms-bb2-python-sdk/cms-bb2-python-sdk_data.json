@@ -50,16 +50,16 @@
   "nadia_badge_name": "midsize",
   "created_at": "2022-01-20T22:07:51Z",
   "ossf_scorecard": {
-    "date": "2025-09-07T09:29:18Z",
+    "date": "2025-09-14T09:50:27Z",
     "repo": {
       "name": "github.com/CMSgov/cms-bb2-python-sdk",
-      "commit": "12181c077dd77f5de182f35ca5686b61675acaa2"
+      "commit": "7fca77c5a7c5f6fe8f766ea4804d6b8164c8476f"
     },
     "scorecard": {
       "version": "v5.1.1-45-g40bbc9c9",
       "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
     },
-    "score": 4.6,
+    "score": 5.2,
     "checks": [
       {
         "details": null,
@@ -84,7 +84,7 @@
       {
         "details": null,
         "score": 0,
-        "reason": "0 out of 10 merged PRs checked by a CI test -- score normalized to 0",
+        "reason": "1 out of 11 merged PRs checked by a CI test -- score normalized to 0",
         "name": "CI-Tests",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#ci-tests",
@@ -123,8 +123,8 @@
       },
       {
         "details": null,
-        "score": -1,
-        "reason": "no workflows found",
+        "score": 10,
+        "reason": "no dangerous workflow patterns detected",
         "name": "Dangerous-Workflow",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#dangerous-workflow",
@@ -163,8 +163,8 @@
       },
       {
         "details": null,
-        "score": 0,
-        "reason": "0 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 0",
+        "score": 1,
+        "reason": "2 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 1",
         "name": "Maintained",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#maintained",
@@ -183,8 +183,8 @@
       },
       {
         "details": null,
-        "score": -1,
-        "reason": "no dependencies found",
+        "score": 0,
+        "reason": "dependency not pinned by hash detected -- score normalized to 0",
         "name": "Pinned-Dependencies",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#pinned-dependencies",
@@ -203,8 +203,8 @@
       },
       {
         "details": null,
-        "score": 0,
-        "reason": "security policy file not detected",
+        "score": 10,
+        "reason": "security policy file detected",
         "name": "Security-Policy",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#security-policy",
@@ -223,8 +223,8 @@
       },
       {
         "details": null,
-        "score": -1,
-        "reason": "No tokens found",
+        "score": 0,
+        "reason": "detected GitHub workflow tokens with excessive permissions",
         "name": "Token-Permissions",
         "documentation": {
           "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#token-permissions",
