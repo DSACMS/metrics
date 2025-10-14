@@ -5,7 +5,7 @@ async function resizeImage(src, sizes, outputFormat = "png") {
   const stats = await Image(src, {
     widths: [+sizes.split("x")[0]],
     formats: [outputFormat],
-    outputDir: "./site/img",
+    outputDir: "./site/img", //this needs to be updated after testing
   })
 
   const props = stats[outputFormat].slice(-1)[0]
@@ -70,12 +70,11 @@ module.exports = function (eleventyConfig) {
   )
 
   eleventyConfig.addPassthroughCopy({
-    "src/img": "assets/img",
-    "src/js": "src/js",
-    "site/img": "assets/img",
-    "site/_includes/css": "css",
-    "site/_includes/js": "assets/js",
-    "site/_graphs": "assets/img/graphs",
+    "frontend/src/img": "assets/img",
+    "frontend/src/js": "src/js",
+    "frontend/_includes/css": "css",
+    "frontend/_includes/js": "assets/js",
+    "frontend/_graphs": "assets/img/graphs",
     "node_modules/@uswds/uswds/dist/img": "assets/img",
     "node_modules/@uswds/uswds/dist/fonts": "fonts",
   })
