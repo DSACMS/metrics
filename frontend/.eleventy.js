@@ -1,11 +1,12 @@
 const Image = require("@11ty/eleventy-img")
 const lucideIcons = require("@grimlink/eleventy-plugin-lucide-icons")
+const path = require("path")
 
 async function resizeImage(src, sizes, outputFormat = "png") {
   const stats = await Image(src, {
     widths: [+sizes.split("x")[0]],
     formats: [outputFormat],
-    outputDir: "./site/img", //this needs to be updated after testing
+    outputDir: "frontend/img", //this needs to be updated after testing
   })
 
   const props = stats[outputFormat].slice(-1)[0]
@@ -73,8 +74,8 @@ module.exports = function (eleventyConfig) {
     "frontend/src/img": "assets/img",
     "frontend/src/js": "src/js",
     "frontend/_includes/css": "css",
-    "frontend/_includes/js": "assets/js",
-    "frontend/_graphs": "assets/img/graphs",
+    "frontend/site/_includes/js": "assets/js",
+    "frontend/site/_graphs": "assets/img/graphs",
     "node_modules/@uswds/uswds/dist/img": "assets/img",
     "node_modules/@uswds/uswds/dist/fonts": "fonts",
   })
@@ -88,17 +89,27 @@ module.exports = function (eleventyConfig) {
     "stroke-width": 2,
   })
 
+  const siteTarget = process.env.SITE_TARGET || "site";
+
+  const inputDir = path.join(__dirname, `frontend/site-${siteTarget}`);
+  fallbackDir = path.join(__dirname, "frontend/site");
+
+  const fs = require("fs");
+  const finalInput = fs.existsSync(inputDir) ? `frontend/site-${siteTarget}` : `frontend/site`;
+
+  console.log(`Building Eleventy site using input folder: ${finalInput}`);
+
   const pathPrefix = process.env.ELEVENTY_ENV.includes("production") ? "/metrics" : ""
 
   return {
     dir: {
-      input: "site/",
-      output: "dist",
+      input: finalInput,
+      output: `dist-${siteTarget}`,
       includes: "_includes",
       layouts: "_layouts",
     },
     templateFormats: ["html", "md", "liquid", "11ty.js"],
     passthroughFileCopy: true,
     pathPrefix,
-  }
-}
+  };
+};

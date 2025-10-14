@@ -25,7 +25,7 @@ module.exports = function (eleventyConfig) {
             input: inputDir,
             includes: "../frontend/_includes",
             layouts: "../frontend/_layouts",
-            data: "_data",
+            // data: "_data",
             output: outputDir
         },
         templateFormats: ["html", "md", "liquid", "11ty.js"],
