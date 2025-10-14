@@ -1,5 +1,15 @@
 {
+  "name": "metrics-frontend-site",
+  "private": true,
+  "scripts": {
+    "build:external": "SITE_TARGET=external npx @11ty/eleventy",
+    "build:internal": "SITE_TARGET=internal npx @11ty/eleventy",
+    "serve:external": "SITE_TARGET=external npx @11ty/eleventy --serve",
+    "serve:internal": "SITE_TARGET=internal npx @11ty/eleventy --serve"
+
+  },
   "devDependencies": {
+    "@11ty/eleventy": "3.1.2",
     "@types/dompurify": "^3.0.5"
   }
 }
