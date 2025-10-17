@@ -62,8 +62,8 @@ for repo_path in $repo_paths; do
 		jq --argjson dryness_table "$dryness_content" '. + {dryness_table: $dryness_table}' ../../scc_reports/cmsgov_${repo_name}_combined.json >../../scc_reports/cmsgov_${repo_name}_full.json
 
 		# combine scc results with repo metadata
-		jq -s '.[0] + {cocomo: .[1]}' "../../../app/site/_data/$organization/$repo_name/${repo_name}_data.json" "../../scc_reports/cmsgov_${repo_name}_full.json" >"../../../app/site/_data/$organization/$repo_name/${repo_name}_scc.json"
-		mv "../../../app/site/_data/$organization/$repo_name/${repo_name}_scc.json" "../../../app/site/_data/$organization/$repo_name/${repo_name}_data.json"
+		jq -s '.[0] + {cocomo: .[1]}' "../../../frontend/app/site/_data/$organization/$repo_name/${repo_name}_data.json" "../../scc_reports/cmsgov_${repo_name}_full.json" >"../../..//$organization/$repo_name/${repo_name}_scc.json"
+		mv "../../../frontend/app/site/_data/$organization/$repo_name/${repo_name}_scc.json" "../../../frontend/app/site/_data/$organization/$repo_name/${repo_name}_data.json"
 		cd ..
 	else
 		echo "Error! Something went wrong while cloning repo $repo_name"
