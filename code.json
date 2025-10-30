@@ -1,27 +1,31 @@
 {
   "name": "metrics",
+  "version": "",
   "description": "CMS Open Source Repository Metrics Website",
   "longDescription": "The CMS Repository Metrics Website shows an overview of software development activity across open source projects within a specified organization. It is designed for developers and program managers interested in monitoring health and activity of CMS open source repositories.",
   "status": "Production",
   "permissions": {
-    "license": [
+    "licenses": [
       {
-        "name": "CC0 1.0 Universal",
+        "name": "CC0-1.0",
         "URL": "https://github.com/DSACMS/metrics/blob/main/LICENSE.md"
       }
     ],
-    "usageType": "openSource",
+    "usageType": ["openSource"],
     "exemptionText": ""
   },
   "organization": "Centers for Medicare & Medicaid Services",
   "repositoryURL": "https://github.com/DSACMS/metrics",
-  "projectURL": "https://dsacms.github.io/metrics/",
   "repositoryHost": "github.com/DSACMS",
   "repositoryVisibility": "public",
+  "homepageURL": "https://dsacms.github.io/metrics/",
+  "downloadURL": "",
+  "disclaimerURL": "",
+  "disclaimerText": "",
   "vcs": "git",
-  "laborHours": 20722,
+  "laborHours": 20729,
   "reuseFrequency": {
-    "forks": 4,
+    "forks": 5,
     "clones": 0
   },
   "platforms": [
@@ -40,38 +44,48 @@
     "Shell"
   ],
   "maintenance": "internal",
-  "contractNumber": "",
+  "contractNumber": [],
+  "SBOM": "https://github.com/DSACMS/metrics/network/dependencies",
+  "relatedCode": [],
+  "reusedCode": [],
+  "partners": [],
   "date": {
     "created": "2023-07-18T14:10:58Z",
-    "lastModified": "2025-06-01T11:36:12Z",
-    "metaDataLastUpdated": "2025-06-06T16:36:38.949Z"
+    "lastModified": "2025-10-26T14:08:45Z",
+    "metadataLastUpdated": "2025-10-30T20:02:22.547Z"
   },
   "tags": [
+    "cmsgov",
+    "data-collection",
+    "data-visualization",
+    "git",
+    "github",
+    "github-pages",
+    "health",
+    "html-css-javascript",
     "metrics",
-    "ospo",
-    "repository",
-    "featured"
+    "opensource",
+    "python",
+    "website"
   ],
   "contact": {
     "email": "opensource@cms.hhs.gov",
     "name": "CMS/OA/DSAC/OSPO"
   },
-  "feedbackMechanisms": [
-    "https://github.com/DSACMS/metrics/issues"
-  ],
+  "feedbackMechanism": "https://github.com/DSACMS/metrics/issues",
+  "AIUseCaseID": "0",
   "localisation": false,
   "repositoryType": "website",
-  "userInput": "No",
-  "fismaLevel": "Low",
+  "userInput": false,
+  "fismaLevel": "low",
   "group": "CMS/OA/DSAC",
   "projects": [],
   "systems": [],
-  "upstream": "https://github.com/DSACMS/metrics/network/dependencies",
   "subsetInHealthcare": [
-    "Operational"
+    "operational"
   ],
   "userType": [
-    "Government"
+    "government"
   ],
   "maturityModelTier": 3
 }
