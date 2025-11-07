@@ -1,789 +1,759 @@
 {
-  "url": "https://github.com/measureauthoringtool/madie-editor",
-  "owner": "measureauthoringtool",
-  "name": "madie-editor",
-  "description": "This is a single-spa Application responsible for the MADiE application's editor",
-  "commits_count": 1140,
-  "issues_count": 1,
-  "open_issues_count": 0,
-  "closed_issues_count": 1,
-  "pull_requests_count": 496,
-  "open_pull_requests_count": 21,
-  "merged_pull_requests_count": 268,
-  "closed_pull_requests_count": 207,
-  "forks_count": 2,
-  "stargazers_count": 2,
-  "watchers_count": 4,
-  "created_at": "2021-08-31T22:30:47Z",
-  "total_project_lines": 22082,
-  "average_project_lines": 143,
-  "total_project_comment_lines": 324,
-  "average_project_comment_lines": 2,
-  "total_project_blank_lines": 1603,
-  "average_blank_lines": 10,
-  "predominant_langs": {
-    "TypeScript": 637412,
-    "SCSS": 13386,
-    "JavaScript": 5900,
-    "CSS": 404,
-    "Shell": 116
-  },
-  "commits_by_month": {
-    "2025/6": 2,
-    "2025/4": 28
-  },
-  "average_issue_resolution_time": [
-    [
-      "madie-editor",
-      "4 days 17:41:23"
-    ]
-  ],
-  "new_commit_contributors_by_day_over_last_month": [],
-  "new_commit_contributors_by_day_over_last_six_months": [
-    [
-      "2024-12-30T06:00:00.000Z",
-      5
-    ],
-    [
-      "2024-12-31T06:00:00.000Z",
-      3
-    ],
-    [
-      "2025-01-02T06:00:00.000Z",
-      2
-    ],
-    [
-      "2025-01-07T06:00:00.000Z",
-      2
-    ],
-    [
-      "2025-01-10T06:00:00.000Z",
-      1
-    ],
-    [
-      "2025-01-17T06:00:00.000Z",
-      1
-    ],
-    [
-      "2025-01-20T06:00:00.000Z",
-      1
-    ],
-    [
-      "2025-01-22T06:00:00.000Z",
-      1
-    ]
-  ],
-  "new_issues_by_day_over_last_month": [],
-  "new_issues_by_day_over_last_six_months": [],
-  "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=midsize&color=ff0000",
-  "nadia_color": "ff0000",
-  "nadia_badge_name": "midsize",
-  "repo_dependency_libyear_list": [
-    [
-      "ace-builds",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "allotment",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "autoprefixer",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "axios",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@babel/core",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@babel/eslint-parser",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "babel-jest",
-      1.5890410959,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@babel/plugin-transform-react-jsx",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@babel/plugin-transform-runtime",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@babel/preset-env",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@babel/preset-react",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@babel/preset-typescript",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@babel/runtime",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "concurrently",
-      2.1123287671,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "cross-env",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "eslint",
-      0.5479452055,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "eslint-config-prettier",
-      1.704109589,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "eslint-config-ts-react-important-stuff",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "eslint-plugin-prettier",
-      2.7589041096,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "formik",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "husky",
-      1.8767123288,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "identity-obj-proxy",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "jest",
-      1.5890410959,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "jest-cli",
-      1.5890410959,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "lodash",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@madie/cql-antlr-parser",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@madie/madie-design-system",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@material-ui/core",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "moment",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@mui/icons-material",
-      2.8219178082,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@mui/lab",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@mui/material",
-      2.6876712329,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@mui/styles",
-      2.6246575342,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "node-polyfill-webpack-plugin",
-      3.4328767123,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "postcss",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "postcss-loader",
-      2.2547945205,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "postcss-preset-env",
-      2.2794520548,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "prettier",
-      1.8602739726,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "pretty-quick",
-      1.1287671233,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "react",
-      4.0164383562,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "react-ace",
-      2.8,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "react-dom",
-      4.0164383562,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "sass",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "sass-loader",
-      3.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "single-spa",
-      1.2904109589,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "single-spa-react",
-      2.6684931507,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "styled-components",
-      2.0547945205,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "tailwindcss",
-      0.2931506849,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@tanstack/react-table",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@testing-library/jest-dom",
-      1.2904109589,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@testing-library/react",
-      2.9753424658,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@testing-library/user-event",
-      3.2602739726,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "ts-config-single-spa",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "twin.macro",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "typescript",
-      2.1780821918,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@types/fhir",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@types/jest",
-      2.3945205479,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@types/react",
-      0.0410958904,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@types/react-dom",
-      0.3287671233,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@types/styled-components",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@types/systemjs",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@types/testing-library__jest-dom",
-      0.0575342466,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "@types/webpack-env",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "util",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "webpack",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "webpack-cli",
-      2.9068493151,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "webpack-config-single-spa-react-ts",
-      1.2410958904,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "webpack-dev-server",
-      2.7424657534,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "webpack-merge",
-      1.1150684932,
-      "2025-04-14T03:59:28.000"
-    ],
-    [
-      "yup",
-      0.0,
-      "2025-04-14T03:59:28.000"
-    ]
-  ],
-  "cocomo": {
-    "languageSummary": [
-      {
-        "Name": "TypeScript",
-        "Bytes": 637412,
-        "CodeBytes": 0,
-        "Lines": 20069,
-        "Code": 18316,
-        "Comment": 276,
-        "Blank": 1477,
-        "Complexity": 824,
-        "Count": 119,
-        "WeightedComplexity": 0,
-        "Files": [],
-        "LineLength": null,
-        "ULOC": 0
-      },
-      {
-        "Name": "Sass",
-        "Bytes": 13386,
-        "CodeBytes": 0,
-        "Lines": 688,
-        "Code": 628,
-        "Comment": 10,
-        "Blank": 50,
-        "Complexity": 0,
-        "Count": 13,
-        "WeightedComplexity": 0,
-        "Files": [],
-        "LineLength": null,
-        "ULOC": 0
-      },
-      {
-        "Name": "JSON",
-        "Bytes": 36045,
-        "CodeBytes": 0,
-        "Lines": 728,
-        "Code": 728,
-        "Comment": 0,
-        "Blank": 0,
-        "Complexity": 0,
-        "Count": 7,
-        "WeightedComplexity": 0,
-        "Files": [],
-        "LineLength": null,
-        "ULOC": 0
-      },
-      {
-        "Name": "JavaScript",
-        "Bytes": 5900,
-        "CodeBytes": 0,
-        "Lines": 254,
-        "Code": 240,
-        "Comment": 4,
-        "Blank": 10,
-        "Complexity": 2,
-        "Count": 5,
-        "WeightedComplexity": 0,
-        "Files": [],
-        "LineLength": null,
-        "ULOC": 0
-      },
-      {
-        "Name": "YAML",
-        "Bytes": 6454,
-        "CodeBytes": 0,
-        "Lines": 222,
-        "Code": 179,
-        "Comment": 8,
-        "Blank": 35,
-        "Complexity": 0,
-        "Count": 4,
-        "WeightedComplexity": 0,
-        "Files": [],
-        "LineLength": null,
-        "ULOC": 0
-      },
-      {
-        "Name": "TypeScript Typings",
-        "Bytes": 2155,
-        "CodeBytes": 0,
-        "Lines": 98,
-        "Code": 63,
-        "Comment": 22,
-        "Blank": 13,
-        "Complexity": 0,
-        "Count": 3,
-        "WeightedComplexity": 0,
-        "Files": [],
-        "LineLength": null,
-        "ULOC": 0
-      },
-      {
-        "Name": "Markdown",
-        "Bytes": 2019,
-        "CodeBytes": 0,
-        "Lines": 61,
-        "Code": 44,
-        "Comment": 0,
-        "Blank": 17,
-        "Complexity": 0,
-        "Count": 2,
-        "WeightedComplexity": 0,
-        "Files": [],
-        "LineLength": null,
-        "ULOC": 0
-      },
-      {
-        "Name": "CSS",
-        "Bytes": 404,
-        "CodeBytes": 0,
-        "Lines": 24,
-        "Code": 20,
-        "Comment": 0,
-        "Blank": 4,
-        "Complexity": 0,
-        "Count": 1,
-        "WeightedComplexity": 0,
-        "Files": [],
-        "LineLength": null,
-        "ULOC": 0
-      },
-      {
-        "Name": "License",
-        "Bytes": 7048,
-        "CodeBytes": 0,
-        "Lines": 121,
-        "Code": 109,
-        "Comment": 0,
-        "Blank": 12,
-        "Complexity": 0,
-        "Count": 1,
-        "WeightedComplexity": 0,
-        "Files": [],
-        "LineLength": null,
-        "ULOC": 0
-      },
-      {
-        "Name": "Shell",
-        "Bytes": 116,
-        "CodeBytes": 0,
-        "Lines": 4,
-        "Code": 2,
-        "Comment": 1,
-        "Blank": 1,
-        "Complexity": 1,
-        "Count": 1,
-        "WeightedComplexity": 0,
-        "Files": [],
-        "LineLength": null,
-        "ULOC": 0
-      }
-    ],
-    "estimatedCost_low": 582215.2145879923,
-    "estimatedScheduleMonths_low": 11.597344840432847,
-    "estimatedPeople_low": 4.8907390079994935,
-    "estimatedCost_high": 1814436.8939077274,
-    "estimatedScheduleMonths_high": 11.597344840432847,
-    "estimatedPeople_high": 4.8907390079994935,
-    "dryness_table": "───────────────────────────────────────────────────────────────────────────────\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n───────────────────────────────────────────────────────────────────────────────\nTypeScript                 119     20069     1477       276    18316        824\n(ULOC)                              8418\n-------------------------------------------------------------------------------\nSass                        13       688       50        10      628          0\n(ULOC)                               349\n-------------------------------------------------------------------------------\nJSON                         7       728        0         0      728          0\n(ULOC)                               428\n-------------------------------------------------------------------------------\nJavaScript                   5       254       10         4      240          2\n(ULOC)                               208\n-------------------------------------------------------------------------------\nYAML                         4       222       35         8      179          0\n(ULOC)                               122\n-------------------------------------------------------------------------------\nTypeScript Typings           3        98       13        22       63          0\n(ULOC)                                60\n-------------------------------------------------------------------------------\nMarkdown                     2        61       17         0       44          0\n(ULOC)                                45\n-------------------------------------------------------------------------------\nCSS                          1        24        4         0       20          0\n(ULOC)                                17\n-------------------------------------------------------------------------------\nLicense                      1       121       12         0      109          0\n(ULOC)                               110\n-------------------------------------------------------------------------------\nShell                        1         4        1         1        2          1\n(ULOC)                                 4\n───────────────────────────────────────────────────────────────────────────────\nTotal                      156     22269     1619       321    20329        827\n───────────────────────────────────────────────────────────────────────────────\nUnique Lines of Code (ULOC)         9705\nDRYness %                           0.44\n───────────────────────────────────────────────────────────────────────────────\nEstimated Cost to Develop (organic) $638,435\nEstimated Schedule Effort (organic) 11.60 months\nEstimated People Required (organic) 4.89\n───────────────────────────────────────────────────────────────────────────────\nProcessed 710939 bytes, 0.711 megabytes (SI)\n───────────────────────────────────────────────────────────────────────────────\n"
-  },
-  "ossf_scorecard": {
-    "date": "2025-06-15T10:48:09Z",
-    "repo": {
-      "name": "github.com/measureauthoringtool/madie-editor",
-      "commit": "7cf4071b512ea6dd2e96644345b61fdfe01f20ea"
+    "url": "https://github.com/measureauthoringtool/madie-editor",
+    "owner": "measureauthoringtool",
+    "name": "madie-editor",
+    "description": "This is a single-spa Application responsible for the MADiE application's editor",
+    "commits_count": 1161,
+    "issues_count": 1,
+    "open_issues_count": 0,
+    "closed_issues_count": 1,
+    "pull_requests_count": 518,
+    "open_pull_requests_count": 24,
+    "merged_pull_requests_count": 274,
+    "closed_pull_requests_count": 220,
+    "forks_count": 2,
+    "stargazers_count": 2,
+    "watchers_count": 3,
+    "created_at": "2021-08-31T22:30:47Z",
+    "total_project_lines": 22082,
+    "average_project_lines": 143,
+    "total_project_comment_lines": 324,
+    "average_project_comment_lines": 2,
+    "total_project_blank_lines": 1603,
+    "average_blank_lines": 10,
+    "predominant_langs": {
+        "TypeScript": 656646,
+        "SCSS": 13386,
+        "JavaScript": 5900,
+        "CSS": 404,
+        "Shell": 116
     },
-    "scorecard": {
-      "version": "v5.1.1-45-g40bbc9c9",
-      "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
+    "commits_by_month": {
+        "2025/9": 11,
+        "2025/8": 8,
+        "2025/7": 2,
+        "2025/6": 2,
+        "2025/4": 7
     },
-    "score": 6.4,
-    "checks": [
-      {
-        "details": null,
-        "score": 10,
-        "reason": "no binaries found in the repo",
-        "name": "Binary-Artifacts",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#binary-artifacts",
-          "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
-        }
-      },
-      {
-        "details": null,
-        "score": 8,
-        "reason": "branch protection is not maximal on development and all release branches",
-        "name": "Branch-Protection",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#branch-protection",
-          "short": "Determines if the default and release branches are protected with GitHub's branch protection settings."
-        }
-      },
-      {
-        "details": null,
-        "score": 10,
-        "reason": "10 out of 10 merged PRs checked by a CI test -- score normalized to 10",
-        "name": "CI-Tests",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#ci-tests",
-          "short": "Determines if the project runs tests before pull requests are merged."
-        }
-      },
-      {
-        "details": null,
-        "score": 0,
-        "reason": "no effort to earn an OpenSSF best practices badge detected",
-        "name": "CII-Best-Practices",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#cii-best-practices",
-          "short": "Determines if the project has an OpenSSF (formerly CII) Best Practices Badge."
-        }
-      },
-      {
-        "details": null,
-        "score": 10,
-        "reason": "all changesets reviewed",
-        "name": "Code-Review",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#code-review",
-          "short": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
-        }
-      },
-      {
-        "details": null,
-        "score": 10,
-        "reason": "project has 3 contributing companies or organizations -- score normalized to 10",
-        "name": "Contributors",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#contributors",
-          "short": "Determines if the project has a set of contributors from multiple organizations (e.g., companies)."
-        }
-      },
-      {
-        "details": null,
-        "score": 10,
-        "reason": "no dangerous workflow patterns detected",
-        "name": "Dangerous-Workflow",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#dangerous-workflow",
-          "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
-        }
-      },
-      {
-        "details": null,
-        "score": 10,
-        "reason": "update tool detected",
-        "name": "Dependency-Update-Tool",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#dependency-update-tool",
-          "short": "Determines if the project uses a dependency update tool."
-        }
-      },
-      {
-        "details": null,
-        "score": 0,
-        "reason": "project is not fuzzed",
-        "name": "Fuzzing",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#fuzzing",
-          "short": "Determines if the project uses fuzzing."
-        }
-      },
-      {
-        "details": null,
-        "score": 10,
-        "reason": "license file detected",
-        "name": "License",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#license",
-          "short": "Determines if the project has defined a license."
-        }
-      },
-      {
-        "details": null,
-        "score": 10,
-        "reason": "30 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10",
-        "name": "Maintained",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#maintained",
-          "short": "Determines if the project is \"actively maintained\"."
-        }
-      },
-      {
-        "details": null,
-        "score": -1,
-        "reason": "packaging workflow not detected",
-        "name": "Packaging",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#packaging",
-          "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
-        }
-      },
-      {
-        "details": null,
-        "score": 1,
-        "reason": "dependency not pinned by hash detected -- score normalized to 1",
-        "name": "Pinned-Dependencies",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#pinned-dependencies",
-          "short": "Determines if the project has declared and pinned the dependencies of its build process."
-        }
-      },
-      {
-        "details": null,
-        "score": 0,
-        "reason": "SAST tool is not run on all commits -- score normalized to 0",
-        "name": "SAST",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#sast",
-          "short": "Determines if the project uses static code analysis."
-        }
-      },
-      {
-        "details": null,
-        "score": 0,
-        "reason": "security policy file not detected",
-        "name": "Security-Policy",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#security-policy",
-          "short": "Determines if the project has published a security policy."
-        }
-      },
-      {
-        "details": null,
-        "score": -1,
-        "reason": "no releases found",
-        "name": "Signed-Releases",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#signed-releases",
-          "short": "Determines if the project cryptographically signs release artifacts."
-        }
-      },
-      {
-        "details": null,
-        "score": 0,
-        "reason": "detected GitHub workflow tokens with excessive permissions",
-        "name": "Token-Permissions",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#token-permissions",
-          "short": "Determines if the project's workflows follow the principle of least privilege."
-        }
-      },
-      {
-        "details": null,
-        "score": 7,
-        "reason": "3 existing vulnerabilities detected",
-        "name": "Vulnerabilities",
-        "documentation": {
-          "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#vulnerabilities",
-          "short": "Determines if the project has open, known unfixed vulnerabilities."
-        }
-      }
+    "average_issue_resolution_time": [
+        [
+            "madie-editor",
+            "4 days 17:41:23"
+        ]
     ],
-    "metadata": null
-  }
+    "new_commit_contributors_by_day_over_last_month": [],
+    "new_commit_contributors_by_day_over_last_six_months": [],
+    "new_issues_by_day_over_last_month": [],
+    "new_issues_by_day_over_last_six_months": [],
+    "nadia_shields_badge_url": "https://img.shields.io/static/v1?label=project+type&message=midsize&color=ff0000",
+    "nadia_color": "ff0000",
+    "nadia_badge_name": "midsize",
+    "repo_dependency_libyear_list": [
+        [
+            "ace-builds",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "allotment",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "autoprefixer",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "axios",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@babel/core",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@babel/eslint-parser",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "babel-jest",
+            1.5890410959,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@babel/plugin-transform-react-jsx",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@babel/plugin-transform-runtime",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@babel/preset-env",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@babel/preset-react",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@babel/preset-typescript",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@babel/runtime",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "concurrently",
+            2.1123287671,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "cross-env",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "eslint",
+            0.5479452055,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "eslint-config-prettier",
+            1.704109589,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "eslint-config-ts-react-important-stuff",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "eslint-plugin-prettier",
+            2.7589041096,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "formik",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "husky",
+            1.8767123288,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "identity-obj-proxy",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "jest",
+            1.5890410959,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "jest-cli",
+            1.5890410959,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "lodash",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@madie/cql-antlr-parser",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@madie/madie-design-system",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@material-ui/core",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "moment",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@mui/icons-material",
+            2.8219178082,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@mui/lab",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@mui/material",
+            2.6876712329,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@mui/styles",
+            2.6246575342,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "node-polyfill-webpack-plugin",
+            3.4328767123,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "postcss",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "postcss-loader",
+            2.2547945205,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "postcss-preset-env",
+            2.2794520548,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "prettier",
+            1.8602739726,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "pretty-quick",
+            1.1287671233,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "react",
+            4.0164383562,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "react-ace",
+            2.8,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "react-dom",
+            4.0164383562,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "sass",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "sass-loader",
+            3.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "single-spa",
+            1.2904109589,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "single-spa-react",
+            2.6684931507,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "styled-components",
+            2.0547945205,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "tailwindcss",
+            0.2931506849,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@tanstack/react-table",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@testing-library/jest-dom",
+            1.2904109589,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@testing-library/react",
+            2.9753424658,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@testing-library/user-event",
+            3.2602739726,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "ts-config-single-spa",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "twin.macro",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "typescript",
+            2.1780821918,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@types/fhir",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@types/jest",
+            2.3945205479,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@types/react",
+            0.0410958904,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@types/react-dom",
+            0.3287671233,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@types/styled-components",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@types/systemjs",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@types/testing-library__jest-dom",
+            0.0575342466,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "@types/webpack-env",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "util",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "webpack",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "webpack-cli",
+            2.9068493151,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "webpack-config-single-spa-react-ts",
+            1.2410958904,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "webpack-dev-server",
+            2.7424657534,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "webpack-merge",
+            1.1150684932,
+            "2025-04-14T03:59:28.000"
+        ],
+        [
+            "yup",
+            0.0,
+            "2025-04-14T03:59:28.000"
+        ]
+    ],
+    "cocomo": {
+        "languageSummary": [
+            {
+                "Name": "TypeScript",
+                "Bytes": 645398,
+                "CodeBytes": 0,
+                "Lines": 20303,
+                "Code": 18500,
+                "Comment": 285,
+                "Blank": 1518,
+                "Complexity": 839,
+                "Count": 121,
+                "WeightedComplexity": 0,
+                "Files": [],
+                "LineLength": null,
+                "ULOC": 0
+            },
+            {
+                "Name": "Sass",
+                "Bytes": 13386,
+                "CodeBytes": 0,
+                "Lines": 688,
+                "Code": 628,
+                "Comment": 10,
+                "Blank": 50,
+                "Complexity": 0,
+                "Count": 13,
+                "WeightedComplexity": 0,
+                "Files": [],
+                "LineLength": null,
+                "ULOC": 0
+            },
+            {
+                "Name": "JSON",
+                "Bytes": 36045,
+                "CodeBytes": 0,
+                "Lines": 728,
+                "Code": 728,
+                "Comment": 0,
+                "Blank": 0,
+                "Complexity": 0,
+                "Count": 7,
+                "WeightedComplexity": 0,
+                "Files": [],
+                "LineLength": null,
+                "ULOC": 0
+            },
+            {
+                "Name": "JavaScript",
+                "Bytes": 5900,
+                "CodeBytes": 0,
+                "Lines": 254,
+                "Code": 240,
+                "Comment": 4,
+                "Blank": 10,
+                "Complexity": 2,
+                "Count": 5,
+                "WeightedComplexity": 0,
+                "Files": [],
+                "LineLength": null,
+                "ULOC": 0
+            },
+            {
+                "Name": "YAML",
+                "Bytes": 6454,
+                "CodeBytes": 0,
+                "Lines": 222,
+                "Code": 179,
+                "Comment": 8,
+                "Blank": 35,
+                "Complexity": 0,
+                "Count": 4,
+                "WeightedComplexity": 0,
+                "Files": [],
+                "LineLength": null,
+                "ULOC": 0
+            },
+            {
+                "Name": "TypeScript Typings",
+                "Bytes": 2155,
+                "CodeBytes": 0,
+                "Lines": 98,
+                "Code": 63,
+                "Comment": 22,
+                "Blank": 13,
+                "Complexity": 0,
+                "Count": 3,
+                "WeightedComplexity": 0,
+                "Files": [],
+                "LineLength": null,
+                "ULOC": 0
+            },
+            {
+                "Name": "Markdown",
+                "Bytes": 2019,
+                "CodeBytes": 0,
+                "Lines": 61,
+                "Code": 44,
+                "Comment": 0,
+                "Blank": 17,
+                "Complexity": 0,
+                "Count": 2,
+                "WeightedComplexity": 0,
+                "Files": [],
+                "LineLength": null,
+                "ULOC": 0
+            },
+            {
+                "Name": "CSS",
+                "Bytes": 404,
+                "CodeBytes": 0,
+                "Lines": 24,
+                "Code": 20,
+                "Comment": 0,
+                "Blank": 4,
+                "Complexity": 0,
+                "Count": 1,
+                "WeightedComplexity": 0,
+                "Files": [],
+                "LineLength": null,
+                "ULOC": 0
+            },
+            {
+                "Name": "License",
+                "Bytes": 7048,
+                "CodeBytes": 0,
+                "Lines": 121,
+                "Code": 109,
+                "Comment": 0,
+                "Blank": 12,
+                "Complexity": 0,
+                "Count": 1,
+                "WeightedComplexity": 0,
+                "Files": [],
+                "LineLength": null,
+                "ULOC": 0
+            },
+            {
+                "Name": "Shell",
+                "Bytes": 116,
+                "CodeBytes": 0,
+                "Lines": 4,
+                "Code": 2,
+                "Comment": 1,
+                "Blank": 1,
+                "Complexity": 1,
+                "Count": 1,
+                "WeightedComplexity": 0,
+                "Files": [],
+                "LineLength": null,
+                "ULOC": 0
+            }
+        ],
+        "estimatedCost_low": 587749.6412418544,
+        "estimatedScheduleMonths_low": 11.639114038052533,
+        "estimatedPeople_low": 4.919511242389165,
+        "estimatedCost_high": 1831684.584548206,
+        "estimatedScheduleMonths_high": 11.639114038052533,
+        "estimatedPeople_high": 4.919511242389165,
+        "dryness_table": "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nLanguage                 Files     Lines   Blanks  Comments     Code Complexity\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nTypeScript                 121     20303     1518       285    18500        839\n(ULOC)                              8570\n-------------------------------------------------------------------------------\nSass                        13       688       50        10      628          0\n(ULOC)                               349\n-------------------------------------------------------------------------------\nJSON                         7       728        0         0      728          0\n(ULOC)                               428\n-------------------------------------------------------------------------------\nJavaScript                   5       254       10         4      240          2\n(ULOC)                               208\n-------------------------------------------------------------------------------\nYAML                         4       222       35         8      179          0\n(ULOC)                               122\n-------------------------------------------------------------------------------\nTypeScript Typings           3        98       13        22       63          0\n(ULOC)                                60\n-------------------------------------------------------------------------------\nMarkdown                     2        61       17         0       44          0\n(ULOC)                                45\n-------------------------------------------------------------------------------\nCSS                          1        24        4         0       20          0\n(ULOC)                                17\n-------------------------------------------------------------------------------\nLicense                      1       121       12         0      109          0\n(ULOC)                               110\n-------------------------------------------------------------------------------\nShell                        1         4        1         1        2          1\n(ULOC)                                 4\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nTotal                      158     22503     1660       330    20513        842\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nUnique Lines of Code (ULOC)         9857\nDRYness %                           0.44\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nEstimated Cost to Develop (organic) $644,504\nEstimated Schedule Effort (organic) 11.64 months\nEstimated People Required (organic) 4.92\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProcessed 718925 bytes, 0.719 megabytes (SI)\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n"
+    },
+    "ossf_scorecard": {
+        "date": "2025-09-14T10:37:53Z",
+        "repo": {
+            "name": "github.com/measureauthoringtool/madie-editor",
+            "commit": "abffd1ffaa48082da0629da36c297fc890ff42f3"
+        },
+        "scorecard": {
+            "version": "v5.1.1-45-g40bbc9c9",
+            "commit": "40bbc9c958aa66327fb026b2136f1951298ca0f8"
+        },
+        "score": 6.2,
+        "checks": [
+            {
+                "details": null,
+                "score": 10,
+                "reason": "no binaries found in the repo",
+                "name": "Binary-Artifacts",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#binary-artifacts",
+                    "short": "Determines if the project has generated executable (binary) artifacts in the source repository."
+                }
+            },
+            {
+                "details": null,
+                "score": 8,
+                "reason": "branch protection is not maximal on development and all release branches",
+                "name": "Branch-Protection",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#branch-protection",
+                    "short": "Determines if the default and release branches are protected with GitHub's branch protection settings."
+                }
+            },
+            {
+                "details": null,
+                "score": 10,
+                "reason": "10 out of 10 merged PRs checked by a CI test -- score normalized to 10",
+                "name": "CI-Tests",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#ci-tests",
+                    "short": "Determines if the project runs tests before pull requests are merged."
+                }
+            },
+            {
+                "details": null,
+                "score": 0,
+                "reason": "no effort to earn an OpenSSF best practices badge detected",
+                "name": "CII-Best-Practices",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#cii-best-practices",
+                    "short": "Determines if the project has an OpenSSF (formerly CII) Best Practices Badge."
+                }
+            },
+            {
+                "details": null,
+                "score": 10,
+                "reason": "all changesets reviewed",
+                "name": "Code-Review",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#code-review",
+                    "short": "Determines if the project requires human code review before pull requests (aka merge requests) are merged."
+                }
+            },
+            {
+                "details": null,
+                "score": 10,
+                "reason": "project has 3 contributing companies or organizations -- score normalized to 10",
+                "name": "Contributors",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#contributors",
+                    "short": "Determines if the project has a set of contributors from multiple organizations (e.g., companies)."
+                }
+            },
+            {
+                "details": null,
+                "score": 10,
+                "reason": "no dangerous workflow patterns detected",
+                "name": "Dangerous-Workflow",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#dangerous-workflow",
+                    "short": "Determines if the project's GitHub Action workflows avoid dangerous patterns."
+                }
+            },
+            {
+                "details": null,
+                "score": 10,
+                "reason": "update tool detected",
+                "name": "Dependency-Update-Tool",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#dependency-update-tool",
+                    "short": "Determines if the project uses a dependency update tool."
+                }
+            },
+            {
+                "details": null,
+                "score": 0,
+                "reason": "project is not fuzzed",
+                "name": "Fuzzing",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#fuzzing",
+                    "short": "Determines if the project uses fuzzing."
+                }
+            },
+            {
+                "details": null,
+                "score": 10,
+                "reason": "license file detected",
+                "name": "License",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#license",
+                    "short": "Determines if the project has defined a license."
+                }
+            },
+            {
+                "details": null,
+                "score": 10,
+                "reason": "13 commit(s) and 0 issue activity found in the last 90 days -- score normalized to 10",
+                "name": "Maintained",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#maintained",
+                    "short": "Determines if the project is \"actively maintained\"."
+                }
+            },
+            {
+                "details": null,
+                "score": -1,
+                "reason": "packaging workflow not detected",
+                "name": "Packaging",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#packaging",
+                    "short": "Determines if the project is published as a package that others can easily download, install, easily update, and uninstall."
+                }
+            },
+            {
+                "details": null,
+                "score": 1,
+                "reason": "dependency not pinned by hash detected -- score normalized to 1",
+                "name": "Pinned-Dependencies",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#pinned-dependencies",
+                    "short": "Determines if the project has declared and pinned the dependencies of its build process."
+                }
+            },
+            {
+                "details": null,
+                "score": 0,
+                "reason": "SAST tool is not run on all commits -- score normalized to 0",
+                "name": "SAST",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#sast",
+                    "short": "Determines if the project uses static code analysis."
+                }
+            },
+            {
+                "details": null,
+                "score": 0,
+                "reason": "security policy file not detected",
+                "name": "Security-Policy",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#security-policy",
+                    "short": "Determines if the project has published a security policy."
+                }
+            },
+            {
+                "details": null,
+                "score": -1,
+                "reason": "no releases found",
+                "name": "Signed-Releases",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#signed-releases",
+                    "short": "Determines if the project cryptographically signs release artifacts."
+                }
+            },
+            {
+                "details": null,
+                "score": 0,
+                "reason": "detected GitHub workflow tokens with excessive permissions",
+                "name": "Token-Permissions",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#token-permissions",
+                    "short": "Determines if the project's workflows follow the principle of least privilege."
+                }
+            },
+            {
+                "details": null,
+                "score": 4,
+                "reason": "6 existing vulnerabilities detected",
+                "name": "Vulnerabilities",
+                "documentation": {
+                    "url": "https://github.com/ossf/scorecard/blob/40bbc9c958aa66327fb026b2136f1951298ca0f8/docs/checks.md#vulnerabilities",
+                    "short": "Determines if the project has open, known unfixed vulnerabilities."
+                }
+            }
+        ],
+        "metadata": null
+    }
 }
