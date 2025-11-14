@@ -38,7 +38,9 @@ jobs:
         run: npm ci --prefer-offline --no-audit
 
       - name: Build project
-        run: npm run build
+        run: |
+          ./copy_data_to_submodule.sh
+          npm run build
 
       - name: Setup GitHub pages
         uses: actions/configure-pages@v5
