@@ -1,6 +1,6 @@
 # List of Metrics
 
-## Simple Metrics 
+## Simple Metrics
 
 These are metrics that basically just fetch simple counts of things.
     
