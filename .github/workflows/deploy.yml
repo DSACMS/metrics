@@ -49,40 +49,96 @@ jobs:
           ./copy_data_to_submodule.sh
 
       - name: Validate and remove invalid JSON files
-        working-directory: ./frontend/app
         run: |
-          echo "🔍 Validating all JSON files in site/_data..."
+          cd frontend/app
+          
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "🔍 JSON Validation Starting..."
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
           echo ""
           
-          invalid_count=0
-          valid_count=0
+          # Check if the data directory exists
+          if [ ! -d "./site/_data" ]; then
+            echo "❌ Directory ./site/_data does not exist!"
+            exit 1
+          fi
           
-          # Find and validate all .json files
-          find ./site/_data -name "
-          *.json" -type f | while read -r file; do
+          echo "📁 Scanning directory: $(pwd)/site/_data"
+          echo ""
+          
+          # Count files before validation
+          total_files=$(find ./site/_data -name "
+          *.json" -type f | wc -l)
+          echo "📊 Found $total_files JSON files to validate"
+          echo ""
+          
+          # Process each JSON file
+          invalid_files=()
+          valid_count=0
+          invalid_count=0
+          
+          while IFS= read -r file; do
             echo "Checking: $file"
             
-            # Try to parse the JSON file with Python
+            # Check if file exists and is readable
+            if [ ! -r "$file" ]; then
+              echo "  ⚠️  File not readable, skipping"
+              continue
+            fi
+            
+            # Try to parse the JSON file
             if python3 -m json.tool "$file" > /dev/null 2>&1; then
               echo "  ✅ Valid JSON"
-              valid_count=$((valid_count + 1))
+              ((valid_count++))
             else
-              echo "  ❌ Invalid JSON detected"
-              echo "  First 5 lines of problematic file:"
-              head -n 5 "$file" 2>/dev/null || echo "  (unable to read file)"
-              echo "  Removing: $file"
-              rm "$file"
-              invalid_count=$((invalid_count + 1))
+              echo "  ❌ INVALID JSON - REMOVING FILE"
+              echo "  📄 File contents (first 10 lines):"
+              head -n 10 "$file" | sed 's/^/     /'
+              
+              # Store the filename for reporting
+              invalid_files+=("$file")
+              
+              # Remove the invalid file
+              rm -f "$file"
+              
+              # Verify deletion
+              if [ ! -f "$file" ]; then
+                echo "  
+              ✓ File successfully removed"
+              else
+                echo "  ✗ WARNING: File still exists after deletion attempt!"
+              fi
+              
+              ((invalid_count++))
             fi
             echo ""
-          done
+          done < <(find ./site/_data -name "
+          *.json" -type f)
           
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-          echo "📊 JSON Validation Summary"
+          echo "📊 Validation Complete"
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-          echo "Note: Counts are approximate due to subshell execution"
-          echo "Check logs above for detailed validation results"
+          echo "✅ Valid files:   $valid_count"
+          echo "❌ Invalid files: $invalid_count"
+          
+          if [ $invalid_count -gt 0 ]; then
+            echo ""
+            echo "⚠️  The following files were removed:"
+            printf '%s\n' "${invalid_files[@]}"
+          fi
+          
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo ""
+          
+          # Verify the problematic file is gone
+          if [ -f "./site/_data/measureauthoringtool/clyde/clyde_data.json" ]; then
+            echo "❌ ERROR: clyde_data.json still exists!"
+            echo "Attempting force removal..."
+            rm -f ./site/_data/measureauthoringtool/clyde/clyde_data.json
+          else
+            echo "
+            ✓ Confirmed: clyde_data.json has been removed"
+          fi
 
       - name: Build project
         working-directory: ./frontend/app
@@ -98,4 +154,3 @@ jobs:
 
       - name: Deploy to GitHub pages
         uses: actions/deploy-pages@v4
-        
