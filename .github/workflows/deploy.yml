@@ -16,9 +16,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
-    defaults:
-      run:
-        working-directory: ./app
     steps:
       - uses: actions/checkout@v4
 
@@ -35,10 +32,12 @@ jobs:
             npm-
 
       - name: Install dependencies
+        working-directory: ./app
         run: npm ci --prefer-offline --no-audit
 
       - name: Build project
         run: |
+          chmod +x ./copy_data_to_submodule.sh
           ./copy_data_to_submodule.sh
           npm run build
 
