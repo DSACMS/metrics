@@ -48,6 +48,39 @@ jobs:
           chmod +x ./copy_data_to_submodule.sh
           ./copy_data_to_submodule.sh
 
+      - name: Validate and clean invalid JSON files
+        working-directory: ./frontend/app
+        run: |
+          echo "🔍 Validating JSON files in site/_data..."
+          
+          invalid_count=0
+          valid_count=0
+          
+          # Find all .json files in the data directory
+          find ./site/_data -name "
+          *.json" -type f | while read file; do
+            echo "Checking: $file"
+            
+            # Try to parse the JSON file
+            if python3 -m json.tool "$file" > /dev/null 2>&1; then
+              echo "  ✅ Valid JSON"
+              valid_count=$((valid_count + 1))
+            else
+              echo "  ❌ Invalid JSON detected"
+              echo "  First 10 lines of file:"
+              cat "$file" | head -n 10 || echo "  (unable to read file)"
+              echo "  Removing invalid file: $file"
+              rm "$file"
+              invalid_count=$((invalid_count + 1))
+            fi
+          done
+          
+          echo ""
+          echo "📊 Validation Summary:"
+          echo "  Valid files: $valid_count"
+          echo "  Invalid files removed: $invalid_count"
+          echo "✅ JSON validation complete"
+
       - name: Build project
         working-directory: ./frontend/app
         run: npm run build
@@ -62,4 +95,3 @@ jobs:
 
       - name: Deploy to GitHub pages
         uses: actions/deploy-pages@v4
-        
