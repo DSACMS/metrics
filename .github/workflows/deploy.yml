@@ -32,7 +32,7 @@ jobs:
             npm-
 
       - name: Install dependencies
-        working-directory: ./app
+        working-directory: ./frontend/app
         run: npm ci --prefer-offline --no-audit
 
       - name: Create required directories
@@ -44,7 +44,7 @@ jobs:
           ./copy_data_to_submodule.sh
 
       - name: Build project
-        working-directory: ./app
+        working-directory: ./frontend/app
         run: npm run build
 
       - name: Setup GitHub pages
@@ -53,7 +53,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: app/dist
+          path: frontend/app/dist
 
       - name: Deploy to GitHub pages
         uses: actions/deploy-pages@v4
