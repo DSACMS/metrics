@@ -35,11 +35,17 @@ jobs:
         working-directory: ./app
         run: npm ci --prefer-offline --no-audit
 
-      - name: Build project
+      - name: Create required directories
+        run: mkdir -p frontend/app/site
+
+      - name: Run data copy script
         run: |
           chmod +x ./copy_data_to_submodule.sh
           ./copy_data_to_submodule.sh
-          npm run build
+
+      - name: Build project
+        working-directory: ./app
+        run: npm run build
 
       - name: Setup GitHub pages
         uses: actions/configure-pages@v5
@@ -51,4 +57,4 @@ jobs:
 
       - name: Deploy to GitHub pages
         uses: actions/deploy-pages@v4
-  
+        
