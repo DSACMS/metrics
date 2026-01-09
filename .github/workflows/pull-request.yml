@@ -38,6 +38,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          submodules: recursive
       - name: Use Node
         uses: actions/setup-node@v3
         with:
@@ -84,11 +86,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          submodules: recursive
       - name: Use Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
       - name: Install node dependencies
         run: npm install
+        working-directory: ./app
       - name: Run eslint
         run: npm run lint
+        working-directory: ./app
