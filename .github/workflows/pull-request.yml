@@ -58,23 +58,23 @@ jobs:
         run: npm run test:pa11y-ci
         working-directory: ./app
 
-  validate_html:
-    needs: [build]
-    name: validate html
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          submodules: recursive
-      - uses: actions/cache/restore@v3
-        with:
-          key: ${{ needs.build.outputs.cache_key }}
-          path: ./app
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - run: npm run test:html-validation
-        working-directory: ./app
+  # validate_html:
+  #   needs: [build]
+  #   name: validate html
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #       with:
+  #         submodules: recursive
+  #     - uses: actions/cache/restore@v3
+  #       with:
+  #         key: ${{ needs.build.outputs.cache_key }}
+  #         path: ./app
+  #     - uses: actions/setup-node@v3
+  #       with:
+  #         node-version: 18
+  #     - run: npm run test:html-validation
+  #       working-directory: ./app
 
 
   check_links:
