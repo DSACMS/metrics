@@ -46,10 +46,13 @@ jobs:
           node-version: '18.x'
       - name: Install node dependencies
         run: npm install
+        working-directory: ./app
       - name: Refresh assets
         run: npm run assets:refresh
+        working-directory: ./app
       - name: Accessibility scan
         run: npm run test:pa11y-ci
+        working-directory: ./app
 
   validate_html:
     needs: [build]
