@@ -14,8 +14,13 @@ jobs:
     name: Tier 3 Checks
     needs: resolve-repolinter-json
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
     env:
       RAW_JSON: ${{ needs.resolve-repolinter-json.outputs.raw-json}}
+      github_token: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
       - uses: actions/checkout@v4
       - run: echo $RAW_JSON > repolinter.json
