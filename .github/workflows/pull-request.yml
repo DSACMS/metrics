@@ -51,9 +51,14 @@ jobs:
       - name: Install node dependencies
         run: npm install
         working-directory: ./app
-      - name: Refresh assets
-        run: npm run assets:refresh
+      - name: Build site
+        run: npm run build
         working-directory: ./app
+      - name: Start server in background
+        run: npx serve dist -l 8080 &
+        working-directory: ./app
+      - name: Wait for server
+        run: sleep 5
       - name: Accessibility scan
         run: npm run test:pa11y-ci
         working-directory: ./app
@@ -92,6 +97,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: Start server in background
+        run: npx serve dist -l 8080 &
+        working-directory: ./app
+      - name: Wait for server
+        run: sleep 5
       - name: Test all links
         run: npm run test:links
         working-directory: ./app
