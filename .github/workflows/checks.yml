@@ -11,6 +11,7 @@ jobs:
       url_to_json: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier3/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
   
   repolinter-checks:
+    if: github.event.pull_request.head.repo.full_name == github.repository
     name: Tier 3 Checks
     needs: resolve-repolinter-json
     runs-on: ubuntu-latest
