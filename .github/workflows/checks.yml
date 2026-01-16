@@ -15,11 +15,11 @@ jobs:
     needs: resolve-repolinter-json
     runs-on: ubuntu-latest
     permissions:
-      issues: write
       contents: read
+      issues: write
     env:
       RAW_JSON: ${{ needs.resolve-repolinter-json.outputs.raw-json}}
-      github_token: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
       - uses: actions/checkout@v4
