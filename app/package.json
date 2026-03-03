@@ -24,7 +24,7 @@
     "prettier": "prettier --check ./**.{js,css,liquid}",
     "prettier:fix": "prettier --write ./**.{js,css,liquid}",
     "assets:refresh": "npm run build:rollup && npm run build:postcss",
-    "test:pa11y-ci": "pa11y-ci --config .pa11y.js",
+    "test:pa11y-ci": "pa11y-ci --config .pa11yci.js",
     "test:html-validation": "echo 'HTML validation skipped -using 11ty build validation instead'",
     "test:links": "blc http://localhost:8080 -ro --exclude external || exit 0"
   },
