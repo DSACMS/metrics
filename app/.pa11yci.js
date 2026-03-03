@@ -8,10 +8,8 @@ module.exports = {
     hideElements:
       "iframe, div[style*='display: none;'], [data-pa11y-ignore], a[href*='/TODO/']",
     chromeLaunchConfig: {
-      executablePath: "/usr/bin/google-chrome"
-    }
+      executablePath: "/usr/bin/google-chrome",
+    },
   },
-  urls: [
-    "http://localhost:8080"
-  ]
+  urls: ["http://localhost:8080"],
 }
