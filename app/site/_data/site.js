@@ -1,5 +1,6 @@
 const isProduction = process.env.ELEVENTY_ENV.includes("production")
 const isTest = process.env.ELEVENTY_ENV.includes("test")
+const isPrivate = process.env.GITHUB_PRIVATE_REPO === "true"
 
 const host = (isProduction && !isTest) ? "https://dsacms.github.io" : "http://localhost:8080"
 
@@ -7,7 +8,7 @@ const host = (isProduction && !isTest) ? "https://dsacms.github.io" : "http://lo
 const baseurl = isProduction ? "/metrics" : "" 
 
 // For modification between public and private repos
-const githubBaseUrl = isProduction ? "https://github.cms.gov" : "https://github.com"
+const githubBaseUrl = isPrivate ? "https://github.cms.gov" : "https://github.com"
 
 module.exports = {
   name: "CMS Metrics Website",
