@@ -2,6 +2,7 @@ name: "run-linting-checks"
 on:
   pull_request:
     branches: [main, dev]
+  workflow_dispatch: {}
 
 
 jobs:
@@ -57,7 +58,7 @@ jobs:
           # This option will be ignored if output_type != "issue".
           #
           # Default: "repolinter"
-          label_name: 'Tier 3 Remediation'
+          label_name: 'Tier3'
 
           # The color to use for the issue label created by repolinter-action. The value
           # for this option should be an unprefixed RRGGBB hex string (ex. ff568a).
