@@ -31,8 +31,8 @@ for repo_path in $repo_paths; do
 	docker run -e GITHUB_TOKEN gcr.io/openssf/scorecard:stable --repo=$repo_path --format=json >"ossf_reports/${repo_name}.json"
 
 	# combine OSSF CLI results with repo metadata
-	jq -s '.[0] + {ossf_scorecard: .[1]}' "../app/site/_data/$organization/$repo_name/${repo_name}_data.json" "ossf_reports/${repo_name}.json" >"../app/site/_data/$organization/$repo_name/${repo_name}_ossf.json"
-	mv "../app/site/_data/$organization/$repo_name/${repo_name}_ossf.json" "../app/site/_data/$organization/$repo_name/${repo_name}_data.json"
+	jq -s '.[0] + {ossf_scorecard: .[1]}' "../frontend/app/site/_data/$organization/$repo_name/${repo_name}_data.json" "ossf_reports/${repo_name}.json" >"../frontend/app/site/_data/$organization/$repo_name/${repo_name}_ossf.json"
+	mv "../frontend/app/site/_data/$organization/$repo_name/${repo_name}_ossf.json" "../frontend/app/site/_data/$organization/$repo_name/${repo_name}_data.json"
 
 	[ "$VERBOSE" -eq 1 ] && echo "Done processing repository: $repo_path"
 done

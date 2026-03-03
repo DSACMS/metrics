@@ -11,11 +11,11 @@ REQUEST_RETRIES = 5
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 # Folder Names to send over our projects tracked data
 PATH_TO_METRICS_DATA = (Path(__file__) /
-                        "../../app/site/_data").resolve()
+                        "../../data/_data").resolve()
 PATH_TO_REPORTS_DATA = (Path(__file__) /
-                        "../../app/site/_posts").resolve()
+                        "../../data/_posts").resolve()
 PATH_TO_GRAPHS_DATA = (Path(__file__) /
-                       "../../app/site/_graphs").resolve()
+                       "../../data/_graphs").resolve()
 
 PATH_TO_METADATA = Path("_metadata").resolve()
 DATESTAMP = datetime.datetime.now().date().isoformat()

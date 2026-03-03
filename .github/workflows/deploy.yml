@@ -16,13 +16,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
-    defaults:
-      run:
-        working-directory: ./app
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository with submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: 'recursive'
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: "19.x"
 
@@ -30,14 +32,116 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.npm
-          key: npm-${{ hashFiles('**/package-lock.json') }}
+          key: npm-${{ hashFiles('frontend/app/package-lock.json') }}
           restore-keys: |
             npm-
 
       - name: Install dependencies
+        working-directory: ./frontend/app
         run: npm ci --prefer-offline --no-audit
 
+      - name: Create required directories
+        run: mkdir -p frontend/app/site
+
+      - name: Run data copy script
+        run: |
+          chmod +x ./copy_data_to_submodule.sh
+          ./copy_data_to_submodule.sh
+
+      - name: Validate and remove invalid JSON files
+        run: |
+          cd frontend/app
+          
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "🔍 JSON Validation Starting..."
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo ""
+          
+          # Check if the data directory exists
+          if [ ! -d "./site/_data" ]; then
+            echo "❌ Directory ./site/_data does not exist!"
+            exit 1
+          fi
+          
+          echo "📁 Scanning directory: $(pwd)/site/_data"
+          echo ""
+          
+          # Count files before validation
+          total_files=$(find ./site/_data -name "
+          *.json" -type f | wc -l)
+          echo "📊 Found $total_files JSON files to validate"
+          echo ""
+          
+          # Process each JSON file
+          invalid_files=()
+          valid_count=0
+          invalid_count=0
+          
+          while IFS= read -r file; do
+            echo "Checking: $file"
+            
+            # Check if file exists and is readable
+            if [ ! -r "$file" ]; then
+              echo "  ⚠️  File not readable, skipping"
+              continue
+            fi
+            
+            # Try to parse the JSON file
+            if python3 -m json.tool "$file" > /dev/null 2>&1; then
+              echo "  ✅ Valid JSON"
+              ((valid_count++))
+            else
+              echo "  ❌ INVALID JSON - REMOVING FILE"
+              echo "  📄 File contents (first 10 lines):"
+              head -n 10 "$file" | sed 's/^/     /'
+              
+              # Store the filename for reporting
+              invalid_files+=("$file")
+              
+              # Remove the invalid file
+              rm -f "$file"
+              
+              # Verify deletion
+              if [ ! -f "$file" ]; then
+                echo "  
+              ✓ File successfully removed"
+              else
+                echo "  ✗ WARNING: File still exists after deletion attempt!"
+              fi
+              
+              ((invalid_count++))
+            fi
+            echo ""
+          done < <(find ./site/_data -name "
+          *.json" -type f)
+          
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "📊 Validation Complete"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "✅ Valid files:   $valid_count"
+          echo "❌ Invalid files: $invalid_count"
+          
+          if [ $invalid_count -gt 0 ]; then
+            echo ""
+            echo "⚠️  The following files were removed:"
+            printf '%s\n' "${invalid_files[@]}"
+          fi
+          
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo ""
+          
+          # Verify the problematic file is gone
+          if [ -f "./site/_data/measureauthoringtool/clyde/clyde_data.json" ]; then
+            echo "❌ ERROR: clyde_data.json still exists!"
+            echo "Attempting force removal..."
+            rm -f ./site/_data/measureauthoringtool/clyde/clyde_data.json
+          else
+            echo "
+            ✓ Confirmed: clyde_data.json has been removed"
+          fi
+
       - name: Build project
+        working-directory: ./frontend/app
         run: npm run build
 
       - name: Setup GitHub pages
@@ -46,8 +150,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: app/dist
+          path: frontend/app/dist
 
       - name: Deploy to GitHub pages
         uses: actions/deploy-pages@v4
-  
